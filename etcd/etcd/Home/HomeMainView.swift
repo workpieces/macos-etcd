@@ -37,6 +37,7 @@ struct HomeMainView: View {
 }
 
 struct BottomMainContentView: View {
+    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     @EnvironmentObject var homeData: HomeViewModel
     var body: some View {
         ZStack(alignment: .topLeading){
@@ -49,6 +50,10 @@ struct BottomMainContentView: View {
                     }
                 }
                 .padding(15)
+            }
+            .onReceive(timer) { time in
+                print("timer: Check Etcd Health")
+                homeData.WatchListenEtcdClient()
             }
         }
     }
