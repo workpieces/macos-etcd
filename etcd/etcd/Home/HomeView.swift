@@ -25,9 +25,7 @@ struct HomeView: View {
                     }
                     Spacer()
                     Text("Version: 1.0.0")
-                        .fontWeight(.semibold)
-                        .font(.system(size: 16))
-                        .foregroundColor(.white)
+                        .withDefaultContentTitle()
                         .padding(.bottom,30)
                 }
                 .padding()

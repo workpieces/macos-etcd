@@ -10,7 +10,6 @@ import SwiftUI
 
 func showOpenPanel() -> URL? {
     let openPanel = NSOpenPanel()
-//    openPanel.allowedContentTypes = ["txt"]
     openPanel.allowsMultipleSelection = false
     openPanel.canChooseDirectories = false
     openPanel.canCreateDirectories = false;

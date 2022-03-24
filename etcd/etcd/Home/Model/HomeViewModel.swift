@@ -167,19 +167,22 @@ class HomeViewModel: ObservableObject {
             let data = try? c.all()
             print(data as Any)
             return []
-        }catch  {
+        } catch {
+            print(error)
             return []
         }
     }
     
     // 检测etcd是否健康
     func Ping(c: EtcdKVClient) -> Bool {
+        var ok : Bool = true
         do {
-            try? c.endPointHealth()
-            return true
-        } catch  {
-            return false
+            try c.endPointHealth()
+        } catch {
+            print(error)
+            ok = false
         }
+        return ok
     }
     
     // 关闭指定的etcd客户端服务

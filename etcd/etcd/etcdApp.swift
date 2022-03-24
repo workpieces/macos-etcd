@@ -6,7 +6,6 @@
 //
 // App icon: https://appicon.co/
 // Macos Icon https://icons8.com/icons/set/mac-app
-// [@StateObject、@ObservedObject和@EnvironmentObject的联系和区别] https://blog.csdn.net/Forever_wj/article/details/121981007
 import SwiftUI
 
 struct EtcdCommands: Commands {
