@@ -25,7 +25,7 @@ struct DefaultTabarButtonViewModifier: ViewModifier{
 }
 
 extension View {
-    func withDefaultTabarButton(imageName: String,title: String,imageSize: CGFloat = 18,fontSize: CGFloat = 12) -> some View {
+    func withDefaultTabarButton(imageName: String,title: String,imageSize: CGFloat = 18,fontSize: CGFloat = 13) -> some View {
         modifier(DefaultTabarButtonViewModifier(imageName: imageName, title: title, imageSize: imageSize, titleFontSize: fontSize))
     }
 }
