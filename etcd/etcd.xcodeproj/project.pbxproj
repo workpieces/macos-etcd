@@ -17,7 +17,7 @@
 		5C33944527DA1EBB00196D65 /* etcdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33944427DA1EBB00196D65 /* etcdUITestsLaunchTests.swift */; };
 		5C33945B27DA1F2B00196D65 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945827DA1F2B00196D65 /* HomeView.swift */; };
 		5C33945F27DA290B00196D65 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945E27DA290B00196D65 /* HomeViewModel.swift */; };
-		5C6FDE0227EE040900977612 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6FDE0127EE040900977612 /* MacosEtcd.framework */; };
+		5C6FDE0427EE04BB00977612 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */; };
 		5CE15D5227DB7D5F0015977B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D5127DB7D5F0015977B /* LogoView.swift */; };
 		5CE15D5427DB7ECA0015977B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D5327DB7ECA0015977B /* BlurView.swift */; };
 		5CE15D5827DB80EB0015977B /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D5727DB80EB0015977B /* HomeMainView.swift */; };
@@ -76,7 +76,7 @@
 		5C33945827DA1F2B00196D65 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5C33945D27DA20DD00196D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C33945E27DA290B00196D65 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		5C6FDE0127EE040900977612 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		5CE15D5127DB7D5F0015977B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		5CE15D5327DB7ECA0015977B /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		5CE15D5727DB80EB0015977B /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			files = (
 				D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */,
 				D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */,
-				5C6FDE0227EE040900977612 /* MacosEtcd.framework in Frameworks */,
+				5C6FDE0427EE04BB00977612 /* MacosEtcd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +131,7 @@
 		5C33941A27DA1EBB00196D65 = {
 			isa = PBXGroup;
 			children = (
-				5C6FDE0127EE040900977612 /* MacosEtcd.framework */,
+				5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */,
 				5C33942527DA1EBB00196D65 /* etcd */,
 				5C33943727DA1EBB00196D65 /* etcdTests */,
 				5C33944127DA1EBB00196D65 /* etcdUITests */,

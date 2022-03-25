@@ -41,13 +41,12 @@ struct HomeView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .frame(minWidth:720.0,maxWidth: .infinity,maxHeight: .infinity)
-            .background()
         }
         .environmentObject(homeData)
         .ignoresSafeArea(.all,edges: .all)
         .frame(minWidth: screen.width/1.7, minHeight: screen.height/1.2)
         .background(Color(hex: "#375B7E"))
-        .navigationViewStyle(.automatic)      //  .navigationViewStyle(.stack)
+        .navigationViewStyle(.automatic)
     }
 }
 
