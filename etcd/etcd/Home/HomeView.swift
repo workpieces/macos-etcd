@@ -25,7 +25,7 @@ struct HomeView: View {
                     Spacer()
                     Text("Version: 1.0.0")
                         .withDefaultContentTitle()
-                        .padding(.bottom,DefaultBottomSpace)
+                        .padding(.bottom,30)
                 }
                 .padding()
                 
