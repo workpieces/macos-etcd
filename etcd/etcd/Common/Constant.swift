@@ -6,6 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+// 版本号
+let MacosEtcdVersion = "Version: 1.0.0"
 
 // 导航距离文字距离顶端的高度
 let NavagationPaddingHeight = 70.0
@@ -18,4 +22,8 @@ let DefaultRadius = 15.0
 
 // 距离底部间距
 let DefaultBottomSpace = 15.0
+
+// tabbar item 的高度.
+let DefaultTabbarButtonHeight = 70.0
+
 

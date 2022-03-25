@@ -17,7 +17,7 @@
 		5C33944527DA1EBB00196D65 /* etcdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33944427DA1EBB00196D65 /* etcdUITestsLaunchTests.swift */; };
 		5C33945B27DA1F2B00196D65 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945827DA1F2B00196D65 /* HomeView.swift */; };
 		5C33945F27DA290B00196D65 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945E27DA290B00196D65 /* HomeViewModel.swift */; };
-		5CE15D5027DB76CD0015977B /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D4F27DB76CD0015977B /* TabButton.swift */; };
+		5C6FDE0227EE040900977612 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6FDE0127EE040900977612 /* MacosEtcd.framework */; };
 		5CE15D5227DB7D5F0015977B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D5127DB7D5F0015977B /* LogoView.swift */; };
 		5CE15D5427DB7ECA0015977B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D5327DB7ECA0015977B /* BlurView.swift */; };
 		5CE15D5827DB80EB0015977B /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE15D5727DB80EB0015977B /* HomeMainView.swift */; };
@@ -31,7 +31,6 @@
 		5CE89A9E27E6DB3D007E45B4 /* LeftCreateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9D27E6DB3D007E45B4 /* LeftCreateContentView.swift */; };
 		5CE89AA027E6DB6D007E45B4 /* MiddleClientCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9F27E6DB6D007E45B4 /* MiddleClientCreateView.swift */; };
 		5CE89AA227E727A3007E45B4 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AA127E727A3007E45B4 /* OpenPan.swift */; };
-		5CE89AE727ECA789007E45B4 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE89AE627ECA789007E45B4 /* MacosEtcd.framework */; };
 		5CE89AEA27ECB192007E45B4 /* Navagation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AE927ECB192007E45B4 /* Navagation.swift */; };
 		5CE89AEC27ECB249007E45B4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AEB27ECB249007E45B4 /* Constant.swift */; };
 		5CE89AEE27ECB2E5007E45B4 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AED27ECB2E5007E45B4 /* ColorHex.swift */; };
@@ -77,7 +76,7 @@
 		5C33945827DA1F2B00196D65 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5C33945D27DA20DD00196D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C33945E27DA290B00196D65 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		5CE15D4F27DB76CD0015977B /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		5C6FDE0127EE040900977612 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		5CE15D5127DB7D5F0015977B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		5CE15D5327DB7ECA0015977B /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		5CE15D5727DB80EB0015977B /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
@@ -91,7 +90,6 @@
 		5CE89A9D27E6DB3D007E45B4 /* LeftCreateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftCreateContentView.swift; sourceTree = "<group>"; };
 		5CE89A9F27E6DB6D007E45B4 /* MiddleClientCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleClientCreateView.swift; sourceTree = "<group>"; };
 		5CE89AA127E727A3007E45B4 /* OpenPan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
-		5CE89AE627ECA789007E45B4 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		5CE89AE927ECB192007E45B4 /* Navagation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navagation.swift; sourceTree = "<group>"; };
 		5CE89AEB27ECB249007E45B4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5CE89AED27ECB2E5007E45B4 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
@@ -109,7 +107,7 @@
 			files = (
 				D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */,
 				D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */,
-				5CE89AE727ECA789007E45B4 /* MacosEtcd.framework in Frameworks */,
+				5C6FDE0227EE040900977612 /* MacosEtcd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +131,7 @@
 		5C33941A27DA1EBB00196D65 = {
 			isa = PBXGroup;
 			children = (
-				5CE89AE627ECA789007E45B4 /* MacosEtcd.framework */,
+				5C6FDE0127EE040900977612 /* MacosEtcd.framework */,
 				5C33942527DA1EBB00196D65 /* etcd */,
 				5C33943727DA1EBB00196D65 /* etcdTests */,
 				5C33944127DA1EBB00196D65 /* etcdUITests */,
@@ -219,7 +217,6 @@
 		5CE15D5527DB80B40015977B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5CE15D4F27DB76CD0015977B /* TabButton.swift */,
 				5CE15D5127DB7D5F0015977B /* LogoView.swift */,
 				5CE15D5327DB7ECA0015977B /* BlurView.swift */,
 				5CE15D5F27DB92050015977B /* CardItemView.swift */,
@@ -441,7 +438,6 @@
 				5CE15D6027DB92050015977B /* CardItemView.swift in Sources */,
 				5CE89AF427ECBBE1007E45B4 /* TabbarButton.swift in Sources */,
 				5CE89AF027ECB76B007E45B4 /* Content.swift in Sources */,
-				5CE15D5027DB76CD0015977B /* TabButton.swift in Sources */,
 				5CF9A40427DD945300E5366F /* EtcdViewModel.swift in Sources */,
 				5CE89AEC27ECB249007E45B4 /* Constant.swift in Sources */,
 				5CE15D5827DB80EB0015977B /* HomeMainView.swift in Sources */,

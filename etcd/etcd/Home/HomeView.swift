@@ -20,16 +20,18 @@ struct HomeView: View {
                         .padding(.top,44.0)
                         .padding(.bottom,22.0)
                     ForEach(options,id: \.self) {item in
-                        TabButton(image: item.image, title: item.title, selectTab: $homeData.selectTab)
+                        withDefaultTabarButton(
+                            imageName: item.image,
+                            title: item.title,
+                            selectTab: $homeData.selectTab)
                     }
                     Spacer()
-                    Text("Version: 1.0.0")
+                    Text(MacosEtcdVersion)
                         .withDefaultContentTitle()
                         .padding(.bottom,DefaultBottomSpace)
                 }
                 .padding()
                 
-                // right view
                 ZStack(alignment: .top){
                     switch homeData.selectTab{
                     case "Home": HomeMainView()
@@ -39,7 +41,7 @@ struct HomeView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .frame(minWidth:720.0,maxWidth: .infinity,maxHeight: .infinity)
-            .background(Color(hex: "#375B7E"))
+            .background()
         }
         .environmentObject(homeData)
         .ignoresSafeArea(.all,edges: .all)

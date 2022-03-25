@@ -14,18 +14,21 @@ struct KVView: View {
             HStack{
                 VStack{
                     Text("ETCD CLUSTER")
-                        .fontWeight(.semibold)
-                        .font(.system(size: 12))
-                        .foregroundColor(.white)
-                        .padding(15)
+                        .withDefaultContentTitle()
+                        .padding(.top,44.0)
+                        .padding(.bottom,22.0)
                     
                     ForEach(etcds,id: \.self) {item in
-                        TabButton(image: item.image, title: item.title, selectTab:  $homeData.etcdTab)
+                        withDefaultTabarButton(
+                            imageName: item.image,
+                            title: item.title,
+                            selectTab: $homeData.selectTab)
                     }
                     Spacer()
                 }
                 .padding()
-                .padding(.top)
+                
+                
                 ZStack(alignment: .top){
                     switch homeData.etcdTab{
                     case "KV": KVContentView()

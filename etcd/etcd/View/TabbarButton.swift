@@ -8,24 +8,36 @@
 import SwiftUI
 
 struct DefaultTabarButtonViewModifier: ViewModifier{
-    let imageName: String
-    let title: String
-    let imageSize : CGFloat
-    let titleFontSize: CGFloat
+    var image: String
+    var title: String
+    @Binding var selectTab : String
     
     func body(content: Content) -> some View {
-        VStack(spacing: 8.0){
-            Image(systemName: imageName)
-                .font(.system(size: imageSize, weight: .semibold))
-            Text(title)
-                .fontWeight(.semibold)
-                .font(.system(size: titleFontSize))
+        Button {
+            withAnimation {
+                selectTab = title
+            }
+        } label: {
+            VStack(spacing: 8.0){
+                Image(systemName: image)
+                    .withDefaultContentTitle()
+                    .foregroundColor(selectTab == title ? .white : .gray)
+                Text(title)
+                    .withDefaultSubContentTitle()
+                    .foregroundColor(selectTab == title ? .white : .gray)
+            }
         }
+        .padding(.vertical,8.0)
+        .frame(width: DefaultTabbarButtonHeight)
+        .contentShape(Rectangle())
+        .buttonStyle(PlainButtonStyle())
+        .background(Color.primary.opacity(selectTab == title ? 0.15 : 0))
+        .cornerRadius(DefaultRadius)
     }
 }
 
 extension View {
-    func withDefaultTabarButton(imageName: String,title: String,imageSize: CGFloat = 18,fontSize: CGFloat = 13) -> some View {
-        modifier(DefaultTabarButtonViewModifier(imageName: imageName, title: title, imageSize: imageSize, titleFontSize: fontSize))
+    func withDefaultTabarButton(imageName: String,title: String,selectTab: Binding<String>) -> some View {
+        modifier(DefaultTabarButtonViewModifier(image: imageName, title: title, selectTab: selectTab))
     }
 }
