@@ -1,23 +1,25 @@
 {
-  "pins" : [
-    {
-      "identity" : "popupview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/PopupView.git",
-      "state" : {
-        "revision" : "77c04cef5651a07ab795f8b4edeb39cb231b2411",
-        "version" : "1.0.7"
+  "object": {
+    "pins": [
+      {
+        "package": "PopupView",
+        "repositoryURL": "https://github.com/exyte/PopupView.git",
+        "state": {
+          "branch": "master",
+          "revision": "77c04cef5651a07ab795f8b4edeb39cb231b2411",
+          "version": null
+        }
+      },
+      {
+        "package": "NavigationStack",
+        "repositoryURL": "https://github.com/matteopuc/swiftui-navigation-stack",
+        "state": {
+          "branch": null,
+          "revision": "be0db68ed0d84ed543bf8f7600a1f84de015f753",
+          "version": "1.0.4"
+        }
       }
-    },
-    {
-      "identity" : "swiftui-navigation-stack",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/matteopuc/swiftui-navigation-stack",
-      "state" : {
-        "revision" : "be0db68ed0d84ed543bf8f7600a1f84de015f753",
-        "version" : "1.0.4"
-      }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }

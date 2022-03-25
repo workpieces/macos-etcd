@@ -7,44 +7,44 @@
 
 import SwiftUI
 
+struct ButtonIcon: View {
+    var imageName:String = ""
+    var titile:String = ""
+    var callback:() -> Void = {}
+    var body: some View {
+        HStack(){
+            Image(systemName: imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 30, height: 30)
+                .clipped()
+            Text(titile)
+        }.frame(height: 30)
+            .padding([.leading, .trailing], 10)
+            .onTapGesture{
+                callback()
+            }
+    }
+}
+
 struct AboutView: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("About Us")
-                    .withDefaultNavagationTitle()
-                Spacer()
-            }
-            .padding(.top,NavagationPaddingHeight)
-            
-            ZStack(alignment: .topLeading){
-                ScrollView(.vertical, showsIndicators: true) {
-                    LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 1), alignment: .center, spacing: 15.0) {
-                        ForEach(abouts) { item in
-                            ZStack {
-                                Color.orange
-                                    .cornerRadius(GridItemRadius)
-                                
-                                VStack {
-                                    Text(item.title)
-                                        .withDefaultContentTitle()
-                                        .padding(20)
-                                    
-                                    Text(item.desc)
-                                        .withDefaultContentTitle()
-                                        .padding(20)
-                                }
-                            }
-                            .frame(height:240.0)
-                            .onTapGesture {
-                                
-                            }
-                        }
-                    }
-                    .padding(GriditemPaddingSpace)
+        VStack(alignment:.leading){
+            ZStack(){
+                Image("etc_bg_icon")
+                    .resizable()
+                    .aspectRatio(contentMode:.fill)
+            }.frame(height: 350)
+                .clipped()
+            Spacer()
+            HStack(){
+                ForEach(abouts,id: \.self) { item in
+                    ButtonIcon(imageName: item.image, titile:item.title) {
+                        NSWorkspace.shared.open(URL.init(string: item.link)!)
+                    }.padding(.leading ,40)
                 }
-            }
-        }
+            }.padding(.bottom, 40)
+        }.frame(maxWidth: .infinity,maxHeight: .infinity)
     }
 }
 
