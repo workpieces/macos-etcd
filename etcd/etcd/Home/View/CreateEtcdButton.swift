@@ -29,7 +29,7 @@ struct CreateEtcdButton: View {
                 }
                 .frame(width: 180.0,height: 60.0)
                 .buttonStyle(PlainButtonStyle())
-                .background(Capsule().fill(Color(hex:"#00FFFF").opacity(0.75)))
+                .background(Capsule().fill(Color(hex:"#00FFFF").opacity(0.30)))
             }
             .buttonStyle(PlainButtonStyle())
         }
