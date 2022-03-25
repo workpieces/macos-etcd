@@ -19,19 +19,18 @@ struct TabButton: View {
         } label: {
             VStack(spacing: 8.0){
                 Image(systemName: image)
-                    .font(.system(size: 18, weight: .semibold))
+                    .withDefaultContentTitle()
                     .foregroundColor(selectTab == title ? .white : .gray)
                 Text(title)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 12))
+                    .withDefaultSubContentTitle()
                     .foregroundColor(selectTab == title ? .white : .gray)
             }
         }
         .padding(.vertical,8.0)
         .frame(width: 70.0)
         .contentShape(Rectangle())
+        .buttonStyle(PlainButtonStyle())
         .background(Color.primary.opacity(selectTab == title ? 0.15 : 0))
-        .cornerRadius(10.0)
-        .buttonStyle(PlainButtonStyle()) 
+        .cornerRadius(DefaultRadius)
     }
 }

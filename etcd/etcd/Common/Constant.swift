@@ -14,5 +14,8 @@ let NavagationPaddingHeight = 70.0
 let GriditemPaddingSpace = 15.0
 
 // 圆角角度
-let GridItemRadius = 15.0
+let DefaultRadius = 15.0
+
+// 距离底部间距
+let DefaultBottomSpace = 15.0
 

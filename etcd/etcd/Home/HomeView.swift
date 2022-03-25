@@ -15,21 +15,19 @@ struct HomeView: View {
     var body: some View {
         return  NavigationStackView(transitionType: .custom(.opacity)){
             HStack{
-                // left view
                 VStack{
                     LogoView()
-                        .padding(.top,20)
-                        .padding(.bottom,20.0)
+                        .padding(.top,44.0)
+                        .padding(.bottom,22.0)
                     ForEach(options,id: \.self) {item in
                         TabButton(image: item.image, title: item.title, selectTab: $homeData.selectTab)
                     }
                     Spacer()
                     Text("Version: 1.0.0")
                         .withDefaultContentTitle()
-                        .padding(.bottom,30)
+                        .padding(.bottom,DefaultBottomSpace)
                 }
                 .padding()
-                .padding(.top)
                 
                 // right view
                 ZStack(alignment: .top){

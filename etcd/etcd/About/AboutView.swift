@@ -23,7 +23,7 @@ struct AboutView: View {
                         ForEach(abouts) { item in
                             ZStack {
                                 Color.orange
-                                    .cornerRadius(GridItemRadius)
+                                    .cornerRadius(DefaultRadius)
                                 
                                 VStack {
                                     Text(item.title)
@@ -35,7 +35,7 @@ struct AboutView: View {
                                         .padding(20)
                                 }
                             }
-                            .frame(height:240.0)
+                            .frame(height:280.0)
                             .onTapGesture {
                                 
                             }
