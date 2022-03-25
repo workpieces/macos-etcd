@@ -24,6 +24,7 @@ struct KVView: View {
                             title: item.title,
                             selectTab: $homeData.selectTab)
                     }
+                    
                     Spacer()
                 }
                 .padding()

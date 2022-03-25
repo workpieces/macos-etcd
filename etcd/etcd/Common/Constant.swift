@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 
+// 本软件名称
+let MacEtcdName = "etcdWp"
+
 // 版本号
 let MacosEtcdVersion = "Version: 1.0.0"
 
@@ -25,5 +28,8 @@ let DefaultBottomSpace = 15.0
 
 // tabbar item 的高度.
 let DefaultTabbarButtonHeight = 70.0
+
+// default Space
+let DefaultSpacePadding = 18.0
 
 

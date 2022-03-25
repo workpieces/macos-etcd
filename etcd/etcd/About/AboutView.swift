@@ -7,44 +7,73 @@
 
 import SwiftUI
 
-struct ButtonIcon: View {
-    var imageName:String = ""
-    var titile:String = ""
-    var callback:() -> Void = {}
-    var body: some View {
-        HStack(){
-            Image(systemName: imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
-                .clipped()
-            Text(titile)
-        }.frame(height: 30)
-            .padding([.leading, .trailing], 10)
-            .onTapGesture{
-                callback()
-            }
-    }
-}
-
 struct AboutView: View {
     var body: some View {
-        VStack(alignment:.leading){
-            ZStack(){
-                Image("etc_bg_icon")
-                    .resizable()
-                    .aspectRatio(contentMode:.fill)
-            }.frame(height: 350)
-                .clipped()
-            Spacer()
-            HStack(){
-                ForEach(abouts,id: \.self) { item in
-                    ButtonIcon(imageName: item.image, titile:item.title) {
-                        NSWorkspace.shared.open(URL.init(string: item.link)!)
-                    }.padding(.leading ,40)
+        VStack {
+            HStack {
+                Text("About Us")
+                    .withDefaultNavagationTitle()
+                Spacer()
+            }
+            .padding(.top,NavagationPaddingHeight)
+            
+            ZStack(alignment: .topLeading){
+                ScrollView(.vertical, showsIndicators: true) {
+                    // todo 介绍其他产品轮播图
+                    Color.green
+                        .frame(height: 120.0)
+                        .cornerRadius(DefaultRadius)
+                        .padding()
+                    
+                    LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), alignment: .center, spacing: GriditemPaddingSpace) {
+                        ForEach(abouts) { item in
+                            ZStack {
+                                Color(hex:"#00FFFF").opacity(0.3)
+                                    .cornerRadius(DefaultRadius)
+                                VStack {
+                                    Text(item.title)
+                                        .withDefaultContentTitle(fontSize: 22.0)
+                                        .padding(.all,DefaultSpacePadding)
+                                    
+                                    Text(item.desc)
+                                        .withDefaultSubContentTitle(fontSize: 14.0)
+                                    
+                                    switch item.type {
+                                    case .Contact:
+                                        Image(item.image)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .foregroundColor(.white)
+                                            .frame(width: 44.0)
+                                            .padding(.top,DefaultSpacePadding)
+                                    case .Download:
+                                        Text("Download")
+                                            .withDefaultContentTitle(fontColor: .white)
+                                            .padding(.all,DefaultSpacePadding)
+                                            .background(.orange)
+                                            .cornerRadius(10.0)
+                                            .offset(y: DefaultSpacePadding)
+                                    case .Documentation:
+                                        Text("Documentation")
+                                            .withDefaultContentTitle(fontColor: .white)
+                                            .padding(.all,DefaultSpacePadding)
+                                            .background(.orange)
+                                            .cornerRadius(10.0)
+                                            .offset(y: DefaultSpacePadding)
+                                    }
+                                    Spacer()
+                                }
+                            }
+                            .frame(height:210.0)
+                            .onTapGesture {
+                                NSWorkspace.shared.open(URL.init(string: item.link)!)
+                            }
+                        }
+                    }
+                    .padding(GriditemPaddingSpace)
                 }
-            }.padding(.bottom, 40)
-        }.frame(maxWidth: .infinity,maxHeight: .infinity)
+            }
+        }
     }
 }
 

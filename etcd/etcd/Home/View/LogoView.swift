@@ -15,7 +15,7 @@ struct LogoView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.white)
                 .frame(width: 30)
-            Text("etcd")
+            Text("etcdWp")
                 .fontWeight(.semibold)
                 .font(.system(size: 25))
                 .foregroundColor(.white)

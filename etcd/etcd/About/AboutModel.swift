@@ -7,15 +7,38 @@
 
 import Foundation
 
+enum AboutType {
+    case Contact
+    case Download
+    case Documentation
+}
+
 struct AboutModel: Identifiable,Hashable {
     var id = UUID()
     var image: String
     var title: String
     var desc: String
     var link: String
+    var type: AboutType
 }
 
 let abouts: [AboutModel] = [
-    AboutModel(image: "person.crop.circle.badge.questionmark", title: "使用文档", desc: "如何使用",link: "https://github.com/workpieces/Karma/wiki"),
-    AboutModel(image: "questionmark.circle", title: "Github地址", desc: "可以提issus或者意见",link: "https://github.com/workpieces/Karma"),
+    AboutModel(
+        image: "github",
+        title: "Contact Us",
+        desc: "If you have feature requests, custom app requirements or bugs, contact us :",
+        link: "https://github.com/workpieces/Karma/wiki",
+        type: .Contact),
+    AboutModel(
+        image: "questionmark.circle",
+        title: "Download",
+        desc: "App for Mac,Window and Linux",
+        link: "https://github.com/workpieces/Karma",
+        type: .Download),
+    AboutModel(
+        image: "questionmark.circle",
+        title: "Documentation",
+        desc: "Learn more about etcdWp features and turorials.",
+        link: "https://github.com/workpieces/Karma",
+        type: .Documentation),
 ]
