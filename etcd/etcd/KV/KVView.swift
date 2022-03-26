@@ -17,18 +17,18 @@ struct KVView: View {
                         .withDefaultContentTitle()
                         .padding(.top,44.0)
                         .padding(.bottom,22.0)
-                    
+
                     ForEach(etcds,id: \.self) {item in
                         withDefaultTabarButton(
                             imageName: item.image,
                             title: item.title,
                             selectTab: $homeData.selectTab)
                     }
-                    
+
                     Spacer()
                 }
                 .padding()
-                                
+
                 ZStack(alignment: .top){
                     switch homeData.etcdTab{
                     case "KV": KVContentView()

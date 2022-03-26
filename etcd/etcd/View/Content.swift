@@ -26,10 +26,10 @@ struct DefaultSubContentModifier: ViewModifier{
         content
             .foregroundColor(fontColor)
             .font(.system(size: fontSize,weight: .semibold))
+            .lineSpacing(8.0)
             .truncationMode(.middle)
     }
 }
-
 
 extension View {
     func withDefaultContentTitle(fontColor: Color = .white,fontSize: CGFloat = 16.0) -> some View {
@@ -39,4 +39,14 @@ extension View {
     func withDefaultSubContentTitle(fontColor: Color = .white,fontSize: CGFloat = 12.0) -> some View {
         modifier(DefaultSubContentModifier(fontColor: fontColor, fontSize: fontSize))
     }
+}
+
+extension Image {
+    func withDefaultImage(foreColor: Color = .white,width: CGFloat = 30.0) -> some View {
+        self
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .foregroundColor(foreColor)
+            .frame(width: width)
+   }
 }

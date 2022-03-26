@@ -8,12 +8,6 @@
 import Foundation
 import MacosEtcd
 
-let etcds:[Option] = [
-    Option.init(title: "KV", image: "antenna.radiowaves.left.and.right"),
-    Option.init(title: "Authorize", image: "lock.icloud.fill"),
-    Option.init(title: "Members", image: "person.3"),
-]
-
 struct EtcdClientOption: Identifiable,Codable {
     var id = UUID()
     var endpoints: [String]
@@ -32,7 +26,6 @@ struct EtcdClientOption: Identifiable,Codable {
     var status: Bool = false
     @NotCoded var etcdClient: EtcdKVClient?
 }
-
 
 @propertyWrapper
 public struct NotCoded<Value> {
@@ -56,20 +49,5 @@ extension NotCoded: Codable {
     public init(from decoder: Decoder) throws {
         // The wrapped value is simply initialised to nil when decoded.
         self.value = nil
-    }
-}
-
-
-struct EtcdKvItem:  Hashable, Identifiable, CustomStringConvertible {
-    var id: Self { self }
-    var name: String
-    var children: [EtcdKvItem]? = nil
-    var description: String {
-        switch children {
-        case nil:
-            return "📄 \(name)"
-        case .some(let children):
-            return children.isEmpty ? "📂 \(name)" : "📁 \(name)"
-        }
     }
 }

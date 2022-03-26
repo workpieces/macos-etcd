@@ -18,10 +18,7 @@ struct NavBackView: View {
                     self.isPopView.toggle()
                 } label: {
                     Image(systemName: "arrow.backward")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 25)
-                        .foregroundColor(.white)
+                        .withDefaultImage(width: 25.0)
                 }
                 .buttonStyle(PlainButtonStyle())
             }

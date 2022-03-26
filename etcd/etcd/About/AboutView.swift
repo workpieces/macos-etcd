@@ -33,25 +33,21 @@ struct AboutView: View {
                                 VStack {
                                     Text(item.title)
                                         .withDefaultContentTitle(fontSize: 22.0)
-                                        .padding(.all,DefaultSpacePadding)
+                                        .padding(.vertical,DefaultSpacePadding)
                                     
                                     Text(item.desc)
+                                        .multilineTextAlignment(.leading)
                                         .withDefaultSubContentTitle(fontSize: 14.0)
+                                        .padding(.horizontal,DefaultSpacePadding)
                                     
                                     switch item.type {
                                     case .Contact:
                                         HStack(spacing: 20.0){
                                             Image(item.image)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .foregroundColor(.white)
-                                                .frame(width: 44.0)
+                                                .withDefaultImage(width: 44.0)
                                                 .padding(.top,DefaultSpacePadding)
                                             Image("email")
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .foregroundColor(.white)
-                                                .frame(width: 40.0)
+                                                .withDefaultImage(width: 40.0)
                                                 .padding(.top,DefaultSpacePadding)
                                         }
                                     case .Download:

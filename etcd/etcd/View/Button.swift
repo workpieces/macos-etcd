@@ -49,10 +49,8 @@ struct DefaultAddButtonViewModifier: ViewModifier{
                 Button {  self.isLinkActive.toggle() } label: {
                     HStack {
                         Image(systemName: imageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 16)
-                            .foregroundColor(.white)
+                            .withDefaultImage(width: 16.0)
+                        
                         Text(title)
                             .withDefaultContentTitle()
                     }

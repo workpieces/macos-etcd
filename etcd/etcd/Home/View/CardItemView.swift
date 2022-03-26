@@ -20,10 +20,7 @@ struct CardItemView: View {
                     self.showAlert.toggle()
                 } label: {
                     Image(systemName: "ellipsis")
-                        .resizable()
-                        .foregroundColor(.white)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 18.0)
+                        .withDefaultImage(width: 18.0)
                 }
                 .padding(.vertical,DefaultSpacePadding)
                 .padding(.horizontal,DefaultSpacePadding)

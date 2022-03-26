@@ -9,10 +9,13 @@ import Foundation
 import SwiftUI
 
 // 本软件名称
-let MacEtcdName = "etcdWp"
+let MacEtcdName = "ETCDWP"
+
+// logo 名称
+let MacosLogoName = "logo"
 
 // 版本号
-let MacosEtcdVersion = "Version: 1.0.0"
+let MacosEtcdVersion = "Version: 1.0.1"
 
 // 导航距离文字距离顶端的高度
 let NavagationPaddingHeight = 70.0
