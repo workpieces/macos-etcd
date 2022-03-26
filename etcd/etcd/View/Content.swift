@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+// 全局设置导航栏文字及其高度
+struct DefaultNavagationModifier: ViewModifier{
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 30.0,weight: .semibold))
+            .foregroundColor(.white)
+            .frame(height: 40.0, alignment: .leading)
+            .lineLimit(1)
+    }
+}
+
 // 默认文本主题字体设置
 struct DefaultContentModifier: ViewModifier{
     let fontColor : Color
@@ -32,6 +43,10 @@ struct DefaultSubContentModifier: ViewModifier{
 }
 
 extension View {
+    func withDefaultNavagationTitle() -> some View {
+        modifier(DefaultNavagationModifier())
+    }
+    
     func withDefaultContentTitle(fontColor: Color = .white,fontSize: CGFloat = 16.0) -> some View {
         modifier(DefaultContentModifier(fontColor: fontColor, fontSize: fontSize))
     }

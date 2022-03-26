@@ -34,7 +34,7 @@ struct HomeView: View {
                     Spacer()
                     Text(MacosEtcdVersion)
                         .withDefaultContentTitle()
-                        .padding(.bottom,30)
+                        .padding(.bottom,DefaultSpacePadding)
                 }
                 .padding()
                 
