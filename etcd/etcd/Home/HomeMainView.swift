@@ -14,10 +14,8 @@ struct HomeMainView: View {
     @State var isLinkActive = false
     var body: some View {
         VStack {
-            CreateEtcdButton(isLinkActive: $isLinkActive)
-                .padding(.top,25.0)
-                .padding(.trailing,25.0)
-            
+            withDefaultAddButton(imageName: "plus", title: "Create Etcd Client", link: $isLinkActive)
+                .padding(DefaultSpacePadding)
             HStack {
                 Text("Services")
                     .fontWeight(.semibold)

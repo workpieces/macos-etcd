@@ -27,7 +27,6 @@
 		5CE89A9427E63AEA007E45B4 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9327E63AEA007E45B4 /* AuthView.swift */; };
 		5CE89A9627E63AF3007E45B4 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9527E63AF3007E45B4 /* MembersView.swift */; };
 		5CE89A9827E64059007E45B4 /* NavBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9727E64059007E45B4 /* NavBackView.swift */; };
-		5CE89A9A27E64262007E45B4 /* CreateEtcdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9927E64262007E45B4 /* CreateEtcdButton.swift */; };
 		5CE89A9E27E6DB3D007E45B4 /* LeftCreateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9D27E6DB3D007E45B4 /* LeftCreateContentView.swift */; };
 		5CE89AA027E6DB6D007E45B4 /* MiddleClientCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89A9F27E6DB6D007E45B4 /* MiddleClientCreateView.swift */; };
 		5CE89AA227E727A3007E45B4 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AA127E727A3007E45B4 /* OpenPan.swift */; };
@@ -36,7 +35,7 @@
 		5CE89AEE27ECB2E5007E45B4 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AED27ECB2E5007E45B4 /* ColorHex.swift */; };
 		5CE89AF027ECB76B007E45B4 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AEF27ECB76B007E45B4 /* Content.swift */; };
 		5CE89AF227ECB90B007E45B4 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AF127ECB90B007E45B4 /* AboutModel.swift */; };
-		5CE89AF427ECBBE1007E45B4 /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AF327ECBBE1007E45B4 /* TabbarButton.swift */; };
+		5CE89AF427ECBBE1007E45B4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AF327ECBBE1007E45B4 /* Button.swift */; };
 		5CF9A40427DD945300E5366F /* EtcdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40327DD945300E5366F /* EtcdViewModel.swift */; };
 		5CF9A40727DD9DEA00E5366F /* KVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40627DD9DEA00E5366F /* KVContentView.swift */; };
 		D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D032D0ED27DD87E00070A338 /* NavigationStack */; };
@@ -86,7 +85,6 @@
 		5CE89A9327E63AEA007E45B4 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		5CE89A9527E63AF3007E45B4 /* MembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
 		5CE89A9727E64059007E45B4 /* NavBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBackView.swift; sourceTree = "<group>"; };
-		5CE89A9927E64262007E45B4 /* CreateEtcdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEtcdButton.swift; sourceTree = "<group>"; };
 		5CE89A9D27E6DB3D007E45B4 /* LeftCreateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftCreateContentView.swift; sourceTree = "<group>"; };
 		5CE89A9F27E6DB6D007E45B4 /* MiddleClientCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleClientCreateView.swift; sourceTree = "<group>"; };
 		5CE89AA127E727A3007E45B4 /* OpenPan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
@@ -95,7 +93,7 @@
 		5CE89AED27ECB2E5007E45B4 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
 		5CE89AEF27ECB76B007E45B4 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		5CE89AF127ECB90B007E45B4 /* AboutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
-		5CE89AF327ECBBE1007E45B4 /* TabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
+		5CE89AF327ECBBE1007E45B4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5CF9A40327DD945300E5366F /* EtcdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcdViewModel.swift; sourceTree = "<group>"; };
 		5CF9A40627DD9DEA00E5366F /* KVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,7 +220,6 @@
 				5CE15D5F27DB92050015977B /* CardItemView.swift */,
 				5CE89A8D27E62D89007E45B4 /* TopToastView.swift */,
 				5CE89A9727E64059007E45B4 /* NavBackView.swift */,
-				5CE89A9927E64262007E45B4 /* CreateEtcdButton.swift */,
 				5CE89A9D27E6DB3D007E45B4 /* LeftCreateContentView.swift */,
 				5CE89A9F27E6DB6D007E45B4 /* MiddleClientCreateView.swift */,
 			);
@@ -267,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				5CE89AE927ECB192007E45B4 /* Navagation.swift */,
-				5CE89AF327ECBBE1007E45B4 /* TabbarButton.swift */,
+				5CE89AF327ECBBE1007E45B4 /* Button.swift */,
 				5CE89AEF27ECB76B007E45B4 /* Content.swift */,
 				5CE89AED27ECB2E5007E45B4 /* ColorHex.swift */,
 			);
@@ -429,14 +426,13 @@
 				5C33942727DA1EBB00196D65 /* etcdApp.swift in Sources */,
 				5C16803E27DC34E000459883 /* HomeClientCreateView.swift in Sources */,
 				5CE89AA227E727A3007E45B4 /* OpenPan.swift in Sources */,
-				5CE89A9A27E64262007E45B4 /* CreateEtcdButton.swift in Sources */,
 				5CE89AEE27ECB2E5007E45B4 /* ColorHex.swift in Sources */,
 				5C33945B27DA1F2B00196D65 /* HomeView.swift in Sources */,
 				5CE89A8E27E62D89007E45B4 /* TopToastView.swift in Sources */,
 				5CE15D5C27DB81990015977B /* AboutView.swift in Sources */,
 				5CE89A9827E64059007E45B4 /* NavBackView.swift in Sources */,
 				5CE15D6027DB92050015977B /* CardItemView.swift in Sources */,
-				5CE89AF427ECBBE1007E45B4 /* TabbarButton.swift in Sources */,
+				5CE89AF427ECBBE1007E45B4 /* Button.swift in Sources */,
 				5CE89AF027ECB76B007E45B4 /* Content.swift in Sources */,
 				5CF9A40427DD945300E5366F /* EtcdViewModel.swift in Sources */,
 				5CE89AEC27ECB249007E45B4 /* Constant.swift in Sources */,

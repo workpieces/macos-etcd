@@ -26,7 +26,6 @@ struct DefaultSubContentModifier: ViewModifier{
         content
             .foregroundColor(fontColor)
             .font(.system(size: fontSize,weight: .semibold))
-            .minimumScaleFactor(0.5)
             .truncationMode(.middle)
     }
 }

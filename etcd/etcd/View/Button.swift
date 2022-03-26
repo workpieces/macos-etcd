@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 // 设置默认左侧点击按钮
 struct DefaultTabarButtonViewModifier: ViewModifier{
     var image: String
     var title: String
     @Binding var selectTab : String
-    
     func body(content: Content) -> some View {
         Button {
             withAnimation {
@@ -37,8 +37,40 @@ struct DefaultTabarButtonViewModifier: ViewModifier{
     }
 }
 
+// 创建客户端按钮
+struct DefaultAddButtonViewModifier: ViewModifier{
+    var imageName: String
+    var title: String
+    @Binding var isLinkActive : Bool
+    func body(content: Content) -> some View {
+        HStack {
+            Spacer()
+            PushView(destination: HomeClientCreateView(), isActive: $isLinkActive) {
+                Button {  self.isLinkActive.toggle() } label: {
+                    HStack {
+                        Image(systemName: imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 16)
+                            .foregroundColor(.white)
+                        Text(title)
+                            .withDefaultContentTitle()
+                    }
+                    .padding(DefaultSpacePadding)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .background(Capsule().fill(Color(hex:"#00FFFF").opacity(0.30)))
+            }
+        }
+    }
+}
+
 extension View {
     func withDefaultTabarButton(imageName: String,title: String,selectTab: Binding<String>) -> some View {
         modifier(DefaultTabarButtonViewModifier(image: imageName, title: title, selectTab: selectTab))
+    }
+    
+    func withDefaultAddButton(imageName: String,title: String,link: Binding<Bool>) -> some View {
+        modifier(DefaultAddButtonViewModifier(imageName: imageName, title: title, isLinkActive: link))
     }
 }

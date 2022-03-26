@@ -15,7 +15,7 @@ struct CardItemView: View {
     var idx : Int
     var body: some View {
         VStack {
-            ZStack(alignment: .topLeading) {
+            HStack(alignment: .top) {
                 Button {
                     self.showAlert.toggle()
                 } label: {
@@ -23,16 +23,16 @@ struct CardItemView: View {
                         .resizable()
                         .foregroundColor(.white)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 25)
+                        .frame(width: 18.0)
                 }
-                .padding(.vertical,15.0)
-                .padding(.horizontal,15.0)
+                .padding(.vertical,DefaultSpacePadding)
+                .padding(.horizontal,DefaultSpacePadding)
                 .contentShape(Rectangle())
                 .buttonStyle(PlainButtonStyle())
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Want to modify etcd service data?"),
-                        message: Text("The connection to the server was lost."),                    
+                        message: Text("The connection to the server was lost."),
                         primaryButton: .default(
                             Text("Edit"),
                             action: {
@@ -48,60 +48,36 @@ struct CardItemView: View {
                     )
                 }
                 
-                HStack {
-                    Spacer()
-                    VStack(spacing: 8.0){
-                        Text("Service Name")
-                            .foregroundColor(Color.orange)
-                            .fontWeight(.semibold)
-                            .font(.system(size: 16))
-                            .bold()
-                        
-                        Text(options.serviceName)
-                            .foregroundColor(Color.white)
-                            .fontWeight(.semibold)
-                            .font(.system(size: 14))
-                            .bold()
-                            .minimumScaleFactor(0.5)
-                            .truncationMode(.middle)
-                        
-                        Spacer()
-                    }
+                Spacer()
+                
+                VStack(spacing: 8.0){
+                    Text("Service Name")
+                        .withDefaultContentTitle(fontColor: Color.orange)
+                    
+                    Text(options.serviceName)
+                        .withDefaultSubContentTitle()
                 }
-                .padding()
+                .padding(DefaultSpacePadding)
             }
             
-            VStack(alignment: .center,spacing: 10.0) {
+            VStack(alignment: .center,spacing: 8.0) {
                 Text("Endpoints")
-                    .foregroundColor(Color.orange)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 16))
-                    .bold()
+                    .withDefaultContentTitle(fontColor: Color.orange)
+                
                 Text(options.endpoints.first!)
-                    .foregroundColor(Color.white)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 14))
-                    .lineLimit(1)
-                    .truncationMode(.middle)
+                    .withDefaultSubContentTitle()
                 
                 Text("Connection Status")
-                    .foregroundColor(Color.orange)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 16))
-                    .bold()
-                    .padding(.top,15)
+                    .withDefaultContentTitle(fontColor: Color.orange)
+                
                 Text(options.status == true ? "Scuess" : "Failed")
-                    .foregroundColor(options.status == true ? Color(hex:"#00FF7F") : Color.red)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 14))
-                    .lineLimit(1)
-                    .truncationMode(.middle)
+                    .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#00FF7F") : Color.red)
+                
                 Spacer()
             }
-            .offset(x: -10, y: -15)
         }
         .frame(minHeight: 210, maxHeight: 260)
-        .background(Color(hex: "#5B9BD4").opacity(0.25))
-        .cornerRadius(10.0)
+        .background(Color(hex: "#5B9BD4").opacity(0.30))
+        .cornerRadius(DefaultRadius)
     }
 }
