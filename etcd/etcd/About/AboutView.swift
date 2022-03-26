@@ -68,6 +68,8 @@ struct AboutView: View {
                                             .background(.orange)
                                             .cornerRadius(10.0)
                                             .offset(y: DefaultSpacePadding)
+                                    case .Empty:
+                                        EmptyView()
                                     }
                                     Spacer()
                                 }

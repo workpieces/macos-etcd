@@ -11,15 +11,16 @@ enum AboutType {
     case Contact
     case Download
     case Documentation
+    case Empty
 }
 
-struct AboutModel: Identifiable,Hashable {
+struct AboutModel : Identifiable,Hashable {
     var id = UUID()
     var image: String
     var title: String
     var desc: String
     var link: String
-    var type: AboutType
+    var type: AboutType = .Empty
 }
 
 let abouts: [AboutModel] = [
@@ -42,3 +43,12 @@ let abouts: [AboutModel] = [
         link: "https://github.com/workpieces/etcdWp/wiki",
         type: .Documentation),
 ]
+
+let advertise: [AboutModel] = [
+    AboutModel(
+        image: "",
+        title: "Karma",
+        desc: "",
+        link: "")
+]
+
