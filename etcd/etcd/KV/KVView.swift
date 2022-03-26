@@ -28,8 +28,7 @@ struct KVView: View {
                     Spacer()
                 }
                 .padding()
-                
-                
+                                
                 ZStack(alignment: .top){
                     switch homeData.etcdTab{
                     case "KV": KVContentView()

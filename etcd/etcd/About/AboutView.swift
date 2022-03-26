@@ -40,12 +40,20 @@ struct AboutView: View {
                                     
                                     switch item.type {
                                     case .Contact:
-                                        Image(item.image)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .foregroundColor(.white)
-                                            .frame(width: 44.0)
-                                            .padding(.top,DefaultSpacePadding)
+                                        HStack(spacing: 20.0){
+                                            Image(item.image)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .foregroundColor(.white)
+                                                .frame(width: 44.0)
+                                                .padding(.top,DefaultSpacePadding)
+                                            Image("email")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .foregroundColor(.white)
+                                                .frame(width: 40.0)
+                                                .padding(.top,DefaultSpacePadding)
+                                        }
                                     case .Download:
                                         Text("Download")
                                             .withDefaultContentTitle(fontColor: .white)

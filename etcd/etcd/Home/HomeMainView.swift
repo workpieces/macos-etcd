@@ -14,12 +14,10 @@ struct HomeMainView: View {
     @State var isLinkActive = false
     var body: some View {
         VStack {
-            // nav add etcd button
             CreateEtcdButton(isLinkActive: $isLinkActive)
                 .padding(.top,25.0)
                 .padding(.trailing,25.0)
             
-            // nav title
             HStack {
                 Text("Services")
                     .fontWeight(.semibold)
@@ -30,7 +28,6 @@ struct HomeMainView: View {
             .offset(x: 15.0, y: -20.0)
             .padding(.bottom,-20)
             
-            // bottom view
             BottomMainContentView()
         }
     }
@@ -38,6 +35,7 @@ struct HomeMainView: View {
 
 struct BottomMainContentView: View {
     let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    
     @EnvironmentObject var homeData: HomeViewModel
     var body: some View {
         ZStack(alignment: .topLeading){

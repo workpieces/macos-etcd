@@ -141,14 +141,14 @@ class HomeViewModel: ObservableObject {
         for (idx,item) in self.ectdClientList.enumerated() {
             if item.etcdClient == nil{
                 let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
-                                        item.username,
-                                        item.password,
-                                        item.cert,
-                                        item.certKey,
-                                        item.requestTimeout,
-                                        item.dialTimeout,
-                                        item.dialKeepAliveTime,
-                                        item.dialKeepAliveTimeout, item.autoSyncInterval, nil)
+                                         item.username,
+                                         item.password,
+                                         item.cert,
+                                         item.certKey,
+                                         item.requestTimeout,
+                                         item.dialTimeout,
+                                         item.dialKeepAliveTime,
+                                         item.dialKeepAliveTimeout, item.autoSyncInterval, nil)
                 self.ectdClientList[idx].etcdClient = c
             }else{
                 let ok =  self.Ping(c: item.etcdClient!)

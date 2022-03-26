@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// 打开文件目录
 func showOpenPanel() -> URL? {
     let openPanel = NSOpenPanel()
     openPanel.allowsMultipleSelection = false
