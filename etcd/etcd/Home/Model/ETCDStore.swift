@@ -44,7 +44,7 @@ extension HomeViewModel {
             print(error)
             ok = false
         }
-//        List(c: c)
+        List(c: c)
         return ok
     }
     
@@ -69,14 +69,11 @@ extension HomeViewModel {
         do {
             let data = try? c.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
-            let root  = Tree.init(value: "/")
             for key in pairs {
                 let dir = key.key.components(separatedBy: "/")
-                if !dir.isEmpty {
-                    for item in dir {
-                        root.insert(Tree.init(value: item))
-                    }
-                    print(root)
+                let etcdRoot = ETCDItem.init(value: dir.first!)
+                if dir.count > 1{
+                    etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1))
                 }
             }
             return []
@@ -87,18 +84,13 @@ extension HomeViewModel {
     }
 }
 
-class Tree<Value> {
-    let value: Value
-    weak var parent: Tree?
-    var children: [Tree]
-    
-    init(value: Value,children: [Tree] = []) {
-        self.value = value
-        self.children = children
+func coverItem(etcdRoot:ETCDItem ,dir: [String], count:Int)->ETCDItem {
+    if count >= (dir.count - 1) {
+        let root = ETCDItem.init(value: dir[count])
+      return root
     }
-    
-    func insert(_ child: Tree) {
-        children.append(child)
-        child.parent = self
-    }
+    let root = ETCDItem.init(value: dir[count])
+    root.add(child: coverItem(etcdRoot: root, dir: dir, count: count+1))
+    return root
 }
+

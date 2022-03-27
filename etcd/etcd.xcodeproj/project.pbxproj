@@ -47,6 +47,7 @@
 		D00253BA27F0515200890E71 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */; };
 		D00253BC27F0519200890E71 /* ETCDControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BB27F0519200890E71 /* ETCDControlView.swift */; };
 		D00253BE27F051AB00890E71 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */; };
+		D00253C027F08AD300890E71 /* ETCDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BF27F08AD300890E71 /* ETCDItem.swift */; };
 		D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D032D0ED27DD87E00070A338 /* NavigationStack */; };
 		D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D08615CE27E5BE76000BE9E1 /* PopupView */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,7 @@
 		D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
 		D00253BB27F0519200890E71 /* ETCDControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDControlView.swift; sourceTree = "<group>"; };
 		D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
+		D00253BF27F08AD300890E71 /* ETCDItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				5C72898F27EF6FDF00FE9B5B /* ETCDClientStore.swift */,
 				5CF9A40327DD945300E5366F /* ETCDOptionStore.swift */,
 				5C72899127EF714600FE9B5B /* ETCDTabarStore.swift */,
+				D00253BF27F08AD300890E71 /* ETCDItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				5CE89A8E27E62D89007E45B4 /* TopToastView.swift in Sources */,
 				5CE15D5C27DB81990015977B /* AboutView.swift in Sources */,
 				5CE89A9827E64059007E45B4 /* NavBackView.swift in Sources */,
+				D00253C027F08AD300890E71 /* ETCDItem.swift in Sources */,
 				5CE15D6027DB92050015977B /* CardItemView.swift in Sources */,
 				5CE89AF427ECBBE1007E45B4 /* Button.swift in Sources */,
 				5C0A764027F024A20094D510 /* KVStore.swift in Sources */,
