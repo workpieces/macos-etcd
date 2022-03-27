@@ -43,12 +43,3 @@ let abouts: [AboutModel] = [
         link: "https://github.com/workpieces/etcdWp/wiki",
         type: .Documentation),
 ]
-
-let advertise: [AboutModel] = [
-    AboutModel(
-        image: "",
-        title: "Karma",
-        desc: "",
-        link: "")
-]
-
