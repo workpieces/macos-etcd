@@ -44,7 +44,7 @@ extension HomeViewModel {
             print(error)
             ok = false
         }
-//        List(c: c)
+        List(c: c)
         return ok
     }
     
@@ -67,11 +67,19 @@ extension HomeViewModel {
     // 获取所有etcd的key和value列表
     func List(c: EtcdKVClient) -> [String] {
         do {
-            let data = (try?  c.all())!
-            let pairs = try JSONDecoder().decode([PairStore].self, from: data)
-            for item in pairs {
-                print(item.key)
-                print(item.value)
+            let data = try? c.all()
+            let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
+            
+            for key in pairs {
+                let dir = key.key.components(separatedBy: "/")
+                if !dir.isEmpty {
+                    var temp  = Tree(value: "/")
+                    for i in (0...dir.count-1) {
+                        let node  = Tree(value: dir[i])
+                        temp.children.append(node)
+                    }
+                    print(temp)
+                }
             }
             return []
         } catch  {
@@ -79,4 +87,9 @@ extension HomeViewModel {
             return []
         }
     }
+}
+
+struct Tree<Value: Hashable>: Hashable {
+    var value: Value
+    var children: [Tree] = []
 }
