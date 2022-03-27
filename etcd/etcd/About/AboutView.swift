@@ -21,7 +21,6 @@ struct AboutView: View {
             
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
-                    // todo 介绍其他产品轮播图
                     CarouselView(items: $items,second: 10).frame(height: 180.0)
                         .cornerRadius(DefaultRadius)
                         .padding()
