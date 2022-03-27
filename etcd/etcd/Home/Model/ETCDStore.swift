@@ -69,13 +69,14 @@ extension HomeViewModel {
         do {
             let data = try? c.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
+            let etcdRoot = ETCDItem.init(value: "/")
             for key in pairs {
                 let dir = key.key.components(separatedBy: "/")
-                let etcdRoot = ETCDItem.init(value: dir.first!)
                 if dir.count > 1{
                     etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1))
                 }
             }
+            print(etcdRoot)
             return []
         } catch  {
             print(error)
@@ -87,7 +88,7 @@ extension HomeViewModel {
 func coverItem(etcdRoot:ETCDItem ,dir: [String], count:Int)->ETCDItem {
     if count >= (dir.count - 1) {
         let root = ETCDItem.init(value: dir[count])
-      return root
+        return root
     }
     let root = ETCDItem.init(value: dir[count])
     root.add(child: coverItem(etcdRoot: root, dir: dir, count: count+1))
