@@ -22,7 +22,16 @@ struct ETCDControlView: View {
     
     var body: some View {
         ZStack {
-           Text("\(selection)")
+            switch selection {
+            case 0:
+                Text("\(selection)")
+            case 1:
+                Text("\(selection)")
+            case 2:
+                Text("\(selection)")
+            default:
+                EmptyView()
+            }
         }
         .tabItem(tag: tag, normal: {
             ETCDTabBarItem(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName,systemTitle: systemTitle)
@@ -30,6 +39,5 @@ struct ETCDControlView: View {
             ETCDTabBarItem(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName,systemTitle: systemTitle)
         })
     }
-    
 }
 

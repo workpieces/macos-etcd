@@ -69,16 +69,14 @@ extension HomeViewModel {
         do {
             let data = try? c.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
-            var items = [ETCDItem]()
-            for key  in pairs {
+            let etcdRoot = ETCDItem.init(value: "/")
+            for key in pairs {
                 let dir = key.key.components(separatedBy: "/")
-                let etcdRoot = ETCDItem.init(value: dir.first!)
                 if dir.count > 1{
                     etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1,value:   key.value ))
                 }
-                items.append(etcdRoot)
             }
-            print("items------------\(items)")
+            print(etcdRoot)
             return []
         } catch  {
             print(error)
