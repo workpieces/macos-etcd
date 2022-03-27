@@ -18,8 +18,7 @@ struct EtcdCommands: Commands {
 struct etcdApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
-//            ETCDDetailTabBarView()
+            ETCDHomeContentView()
         }
         // hide window title
         .windowStyle(HiddenTitleBarWindowStyle())

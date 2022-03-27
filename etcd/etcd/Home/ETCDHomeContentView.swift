@@ -10,7 +10,7 @@ import NavigationStack
 
 var screen = NSScreen.main!.visibleFrame
 
-struct HomeView: View {
+struct ETCDHomeContentView: View {
     @StateObject var homeData = HomeViewModel.init()
     var body: some View {
         return  NavigationStackView(transitionType: .custom(.opacity)){
@@ -58,6 +58,6 @@ struct HomeView: View {
 
 struct HomeController_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ETCDHomeContentView()
     }
 }

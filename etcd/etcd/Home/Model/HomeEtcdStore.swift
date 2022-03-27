@@ -44,7 +44,7 @@ extension HomeViewModel {
             print(error)
             ok = false
         }
-        List(c: c)
+//        List(c: c)
         return ok
     }
     
