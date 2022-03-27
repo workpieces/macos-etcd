@@ -18,7 +18,7 @@ class ItemStore: ObservableObject {
 
 extension ItemStore {
     
-    static func List(c: EtcdKVClient) throws -> ItemStore {
+    static func List(c: EtcdKVClient) throws -> ItemStore? {
         do {
             let data = try? c.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
@@ -32,9 +32,9 @@ extension ItemStore {
                 }
             }
             return ItemStore(items: etcdRoot)
-        } catch {
+        } catch let error {
             print(error)
-            return 
         }
+        return nil
     }
 }
