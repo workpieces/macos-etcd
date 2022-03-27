@@ -11,18 +11,16 @@ public struct CarouselItemlView: View {
     @State var item: String
     var height: CGFloat
     var borderRadius: CGFloat
-    
+    var width: CGFloat
+
     public var body: some View {
         GeometryReader { geo in
-            HStack (alignment: .center){
-                Image(item)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geo.size.width, height: self.height)
-                    .clipped()
-                    .cornerRadius(borderRadius)
-                
-            }
+            Image(item)
+                .resizable()
+                .scaledToFill()
+                .frame(width:self.width, height: self.height)
+                .clipped()
+                .cornerRadius(borderRadius)
         }
     }
 }
