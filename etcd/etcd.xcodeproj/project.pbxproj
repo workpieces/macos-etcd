@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,9 @@
 		5CF9A40427DD945300E5366F /* EtcdOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40327DD945300E5366F /* EtcdOptionStore.swift */; };
 		5CF9A40727DD9DEA00E5366F /* KVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40627DD9DEA00E5366F /* KVContentView.swift */; };
 		D002539F27F011D800890E71 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D002539E27F011D800890E71 /* AxisTabView */; };
+		D00253BA27F0515200890E71 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */; };
+		D00253BC27F0519200890E71 /* ETCDControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BB27F0519200890E71 /* ETCDControlView.swift */; };
+		D00253BE27F051AB00890E71 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */; };
 		D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D032D0ED27DD87E00070A338 /* NavigationStack */; };
 		D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D08615CE27E5BE76000BE9E1 /* PopupView */; };
 /* End PBXBuildFile section */
@@ -109,6 +112,9 @@
 		5CE89AF327ECBBE1007E45B4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5CF9A40327DD945300E5366F /* EtcdOptionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcdOptionStore.swift; sourceTree = "<group>"; };
 		5CF9A40627DD9DEA00E5366F /* KVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVContentView.swift; sourceTree = "<group>"; };
+		D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
+		D00253BB27F0519200890E71 /* ETCDControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDControlView.swift; sourceTree = "<group>"; };
+		D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,9 @@
 				5C33945827DA1F2B00196D65 /* HomeView.swift */,
 				5CE15D5727DB80EB0015977B /* HomeMainView.swift */,
 				5C16803D27DC34E000459883 /* HomeClientCreateView.swift */,
+				D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */,
+				D00253BB27F0519200890E71 /* ETCDControlView.swift */,
+				D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -392,8 +401,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = ETCD;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = Workpiece;
 				TargetAttributes = {
 					5C33942227DA1EBB00196D65 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -409,7 +420,7 @@
 				};
 			};
 			buildConfigurationList = 5C33941E27DA1EBB00196D65 /* Build configuration list for PBXProject "etcd" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -467,10 +478,13 @@
 				5CE89A9E27E6DB3D007E45B4 /* LeftCreateContentView.swift in Sources */,
 				5CE89AF227ECB90B007E45B4 /* AboutModel.swift in Sources */,
 				5CE89AA027E6DB6D007E45B4 /* MiddleClientCreateView.swift in Sources */,
+				D00253BA27F0515200890E71 /* ETCDDetailTabBarView.swift in Sources */,
 				5C0A764F27F034500094D510 /* Carousel.swift in Sources */,
 				5CF9A40727DD9DEA00E5366F /* KVContentView.swift in Sources */,
 				5C33942727DA1EBB00196D65 /* etcdApp.swift in Sources */,
 				5C0A764E27F034500094D510 /* CarouselItemlView.swift in Sources */,
+				D00253BE27F051AB00890E71 /* ETCDTabBarItem.swift in Sources */,
+				D00253BC27F0519200890E71 /* ETCDControlView.swift in Sources */,
 				5C16803E27DC34E000459883 /* HomeClientCreateView.swift in Sources */,
 				5C72899227EF714600FE9B5B /* HomeTabarStore.swift in Sources */,
 				5CE89AA227E727A3007E45B4 /* OpenPan.swift in Sources */,

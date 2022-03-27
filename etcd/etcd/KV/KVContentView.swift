@@ -11,27 +11,7 @@ import NavigationStack
 struct KVContentView: View {
     @State private var isPopView = false
     var body: some View {
-        ZStack(alignment: .topLeading, content: {
-            Color
-                .clear
-                .ignoresSafeArea(.all,edges: .all)
-            VStack {
-                NavBackView(isPopView: $isPopView,title: "ETCD CLUSTER V3")
-                .padding(.vertical,44)
-                                
-                GeometryReader { geometry in
-                    HStack(spacing: 0.0){
-                        Color
-                            .red
-                            .frame(width: geometry.size.width/2, height: geometry.size.height)
-                        
-                        Color
-                            .yellow
-                            .frame(width: geometry.size.width/2, height: geometry.size.height)
-                    }
-                }
-            }
-        })
+       ETCDDetailTabBarView()
     }
 }
 
