@@ -15,7 +15,7 @@ struct EtcdCommands: Commands {
 }
 
 @main
-struct etcdApp: App {
+struct ETCDApp: App {
     var body: some Scene {
         WindowGroup {
             ETCDHomeContentView()

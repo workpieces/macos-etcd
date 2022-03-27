@@ -14,7 +14,7 @@
 		5C0A765027F034500094D510 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764D27F034500094D510 /* CarouselView.swift */; };
 		5C16803E27DC34E000459883 /* ETCDHomeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16803D27DC34E000459883 /* ETCDHomeCreateView.swift */; };
 		5C16805627DC83F400459883 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16805527DC83F400459883 /* ETCDKVContentView.swift */; };
-		5C33942727DA1EBB00196D65 /* etcdApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33942627DA1EBB00196D65 /* etcdApp.swift */; };
+		5C33942727DA1EBB00196D65 /* ETCDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33942627DA1EBB00196D65 /* ETCDApp.swift */; };
 		5C33942B27DA1EBB00196D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33942A27DA1EBB00196D65 /* Assets.xcassets */; };
 		5C33942E27DA1EBB00196D65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33942D27DA1EBB00196D65 /* Preview Assets.xcassets */; };
 		5C33943927DA1EBB00196D65 /* etcdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33943827DA1EBB00196D65 /* etcdTests.swift */; };
@@ -77,7 +77,7 @@
 		5C16803D27DC34E000459883 /* ETCDHomeCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeCreateView.swift; sourceTree = "<group>"; };
 		5C16805527DC83F400459883 /* ETCDKVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVContentView.swift; sourceTree = "<group>"; };
 		5C33942327DA1EBB00196D65 /* etcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C33942627DA1EBB00196D65 /* etcdApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdApp.swift; sourceTree = "<group>"; };
+		5C33942627DA1EBB00196D65 /* ETCDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDApp.swift; sourceTree = "<group>"; };
 		5C33942A27DA1EBB00196D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C33942D27DA1EBB00196D65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C33942F27DA1EBB00196D65 /* etcd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = etcd.entitlements; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 				5C33945D27DA20DD00196D65 /* Info.plist */,
 				5C33945C27DA20AB00196D65 /* Common */,
 				5C33945127DA1F0300196D65 /* Home */,
-				5C33942627DA1EBB00196D65 /* etcdApp.swift */,
+				5C33942627DA1EBB00196D65 /* ETCDApp.swift */,
 				5C33942A27DA1EBB00196D65 /* Assets.xcassets */,
 				5C33942F27DA1EBB00196D65 /* etcd.entitlements */,
 				5C33942C27DA1EBB00196D65 /* Preview Content */,
@@ -477,7 +477,7 @@
 				5CE89AA027E6DB6D007E45B4 /* MiddleClientCreateView.swift in Sources */,
 				D00253BA27F0515200890E71 /* ETCDDetailTabBarView.swift in Sources */,
 				5C0A764F27F034500094D510 /* Carousel.swift in Sources */,
-				5C33942727DA1EBB00196D65 /* etcdApp.swift in Sources */,
+				5C33942727DA1EBB00196D65 /* ETCDApp.swift in Sources */,
 				5C0A764E27F034500094D510 /* CarouselItemlView.swift in Sources */,
 				D00253BE27F051AB00890E71 /* ETCDTabBarItem.swift in Sources */,
 				D00253BC27F0519200890E71 /* ETCDControlView.swift in Sources */,
