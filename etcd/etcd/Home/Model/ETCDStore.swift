@@ -74,6 +74,8 @@ extension HomeViewModel {
                 let dir = key.key.components(separatedBy: "/")
                 if dir.count > 1{
                     etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1,value:   key.value ))
+                }else{
+                    etcdRoot.value = key.value
                 }
             }
             print(etcdRoot)
