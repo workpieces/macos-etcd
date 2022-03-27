@@ -13,6 +13,7 @@
 		5C0A765027F034500094D510 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764D27F034500094D510 /* CarouselView.swift */; };
 		5C16803E27DC34E000459883 /* ETCDHomeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16803D27DC34E000459883 /* ETCDHomeCreateView.swift */; };
 		5C16805627DC83F400459883 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16805527DC83F400459883 /* ETCDKVContentView.swift */; };
+		5C2F3A2427F0B2FE00BCAA96 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2F3A2327F0B2FE00BCAA96 /* MacosEtcd.framework */; };
 		5C33942727DA1EBB00196D65 /* ETCDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33942627DA1EBB00196D65 /* ETCDApp.swift */; };
 		5C33942B27DA1EBB00196D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33942A27DA1EBB00196D65 /* Assets.xcassets */; };
 		5C33942E27DA1EBB00196D65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33942D27DA1EBB00196D65 /* Preview Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		5C33944527DA1EBB00196D65 /* etcdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33944427DA1EBB00196D65 /* etcdUITestsLaunchTests.swift */; };
 		5C33945B27DA1F2B00196D65 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945827DA1F2B00196D65 /* ETCDHomeContentView.swift */; };
 		5C33945F27DA290B00196D65 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945E27DA290B00196D65 /* HomeViewModel.swift */; };
-		5C6FDE0427EE04BB00977612 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */; };
 		5C72898C27EF6DB900FE9B5B /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898B27EF6DB900FE9B5B /* ETCDKVItemStore.swift */; };
 		5C72898E27EF6FA100FE9B5B /* ETCDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898D27EF6FA100FE9B5B /* ETCDStore.swift */; };
 		5C72899027EF6FDF00FE9B5B /* ETCDClientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898F27EF6FDF00FE9B5B /* ETCDClientStore.swift */; };
@@ -75,6 +75,7 @@
 		5C0A764D27F034500094D510 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		5C16803D27DC34E000459883 /* ETCDHomeCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeCreateView.swift; sourceTree = "<group>"; };
 		5C16805527DC83F400459883 /* ETCDKVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVContentView.swift; sourceTree = "<group>"; };
+		5C2F3A2327F0B2FE00BCAA96 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		5C33942327DA1EBB00196D65 /* etcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33942627DA1EBB00196D65 /* ETCDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDApp.swift; sourceTree = "<group>"; };
 		5C33942A27DA1EBB00196D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		5C33945827DA1F2B00196D65 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
 		5C33945D27DA20DD00196D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C33945E27DA290B00196D65 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		5C72898B27EF6DB900FE9B5B /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
 		5C72898D27EF6FA100FE9B5B /* ETCDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDStore.swift; sourceTree = "<group>"; };
 		5C72898F27EF6FDF00FE9B5B /* ETCDClientStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDClientStore.swift; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 			files = (
 				D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */,
 				D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */,
+				5C2F3A2427F0B2FE00BCAA96 /* MacosEtcd.framework in Frameworks */,
 				D002539F27F011D800890E71 /* AxisTabView in Frameworks */,
-				5C6FDE0427EE04BB00977612 /* MacosEtcd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +175,7 @@
 		5C33941A27DA1EBB00196D65 = {
 			isa = PBXGroup;
 			children = (
-				5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */,
+				5C2F3A2327F0B2FE00BCAA96 /* MacosEtcd.framework */,
 				5C33942527DA1EBB00196D65 /* etcd */,
 				5C33943727DA1EBB00196D65 /* etcdTests */,
 				5C33944127DA1EBB00196D65 /* etcdUITests */,
