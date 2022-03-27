@@ -20,12 +20,6 @@ struct ETCDControlView: View {
     let systemTitle:String
     let safeArea: EdgeInsets
     
-    private var backgroundColor: Color {
-        let colors = [Color(hex: "#0295A76"), Color(hex: "#7FACAA"), Color(hex: "#EBF4CC"), Color(hex: "#E79875"), Color(hex: "#BA523C"), Color(hex: "#295A76")]
-        guard selection <= colors.count - 1 else { return Color(hex: "#295A76")}
-        return colors[selection].opacity(0.2)
-    }
-    
     var body: some View {
         ZStack {
            Text("\(selection)")
