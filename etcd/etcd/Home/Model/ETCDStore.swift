@@ -44,7 +44,6 @@ extension HomeViewModel {
             print(error)
             ok = false
         }
-        List(c: c)
         return ok
     }
     
@@ -63,38 +62,5 @@ extension HomeViewModel {
             }
         }
     }
-    
-    // 获取所有etcd的key和value列表
-    func List(c: EtcdKVClient) -> [String] {
-        do {
-            let data = try? c.all()
-            let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
-            let etcdRoot = ETCDItem.init(directory: "/")
-            for key in pairs {
-                let dir = key.key.components(separatedBy: "/")
-                if dir.count > 1{
-                    etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1,value:   key.value ))
-                }else{
-                    etcdRoot.fileValue = key.value
-                }
-            }
-            print(etcdRoot)
-            return []
-        } catch  {
-            print(error)
-            return []
-        }
-    }
-}
-
-func coverItem(etcdRoot:ETCDItem ,dir: [String], count:Int ,value:String)->ETCDItem {
-    if count >= (dir.count - 1) {
-        let root = ETCDItem.init(directory: dir[count])
-        root.fileValue = value
-      return root
-    }
-    let root = ETCDItem.init(directory: dir[count])
-    root.add(child: coverItem(etcdRoot: root, dir: dir, count: count+1,value: value))
-    return root
 }
 
