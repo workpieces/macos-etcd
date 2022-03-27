@@ -21,7 +21,8 @@ struct CardItemView: View {
                 } label: {
                     Image(systemName: "ellipsis")
                         .withDefaultImage(width: 18.0)
-                }.frame(width: 50, height: 20, alignment: .center)
+                }
+                .frame(width: 20, height: 20, alignment: .leading)
                 .padding(.vertical,DefaultSpacePadding)
                 .padding(.horizontal,DefaultSpacePadding)
                 .contentShape(Rectangle())
