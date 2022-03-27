@@ -10,6 +10,7 @@ import NavigationStack
 
 struct ETCDKVContentView: View {
     @StateObject var homeData = HomeViewModel()
+    @State var client:EtcdClientOption
     @State private var isPopView = false
     var body: some View {
         ZStack(alignment: .topLeading, content: {
@@ -30,8 +31,3 @@ struct ETCDKVContentView: View {
 }
 
 
-struct HomeConnectView_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDKVContentView()
-    }
-}

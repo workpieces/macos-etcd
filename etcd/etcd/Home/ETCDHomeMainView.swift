@@ -25,11 +25,12 @@ struct HomeMainView: View {
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
-                        PushView(destination: ETCDKVContentView()){
-                            ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
+                        ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
+                            PushView(destination: ETCDKVContentView(client: self.homeData.ectdClientList[item])){
                                 CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }
+                       
                     }
                     .padding(GriditemPaddingSpace)
                 }
