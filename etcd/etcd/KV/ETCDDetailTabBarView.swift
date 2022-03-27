@@ -11,7 +11,7 @@ import AxisTabView
 
 struct ETCDDetailTabBarView: View {
     @State private var selection: Int = 0
-    @State private var constant = ATConstant(axisMode: .top, screen: .init(activeSafeArea: true), tab: .init(selectWidth: 130))
+    @State private var constant = ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init(selectWidth: 130))
     @State private var color: Color = .orange
     var body: some View {
         GeometryReader { proxy in
