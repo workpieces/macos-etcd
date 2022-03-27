@@ -22,20 +22,3 @@ final class ItemStore: ObservableObject {
         self.items = items
     }
 }
-
-//extension ItemStore {
-//    static func mock(c: EtcdKVClient) -> ItemStore {
-//
-//        return ItemStore(items: mockItems)
-//    }
-//
-//    // 获取所有etcd的key和value列表
-//    func List(c: EtcdKVClient) -> [String] {
-//        do {
-//           let data = try  c.all()
-//            try! decoder.decode([EtcdClientOption].self, from: data as! Data)
-//        } catch  {
-//            print(error)
-//        }
-//    }
-//}
