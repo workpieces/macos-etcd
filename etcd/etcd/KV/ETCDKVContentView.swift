@@ -18,13 +18,13 @@ struct ETCDKVContentView: View {
                 .ignoresSafeArea(.all,edges: .all)
             VStack {
                 NavBackView(isPopView: $isPopView,title: "ETCD CLUSTER V3")
-                .padding(.vertical,44)
-                .padding(.leading ,20)
+                    .padding(.vertical,44)
+                    .padding(.leading ,20)
                 ETCDDetailTabBarView()
             }
         })
-
-    
+        
+        
     }
     
 }
