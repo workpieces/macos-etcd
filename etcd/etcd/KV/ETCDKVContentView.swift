@@ -10,9 +10,23 @@ import NavigationStack
 
 struct ETCDKVContentView: View {
     @StateObject var homeData = HomeViewModel()
+    @State private var isPopView = false
     var body: some View {
-        ETCDDetailTabBarView()
+        ZStack(alignment: .topLeading, content: {
+            Color
+                .clear
+                .ignoresSafeArea(.all,edges: .all)
+            VStack {
+                NavBackView(isPopView: $isPopView,title: "ETCD CLUSTER V3")
+                .padding(.vertical,44)
+                .padding(.leading ,20)
+                ETCDDetailTabBarView()
+            }
+        })
+
+    
     }
+    
 }
 
 
