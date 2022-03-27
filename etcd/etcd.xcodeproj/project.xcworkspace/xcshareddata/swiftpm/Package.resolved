@@ -1,39 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "axistabview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jasudev/AxisTabView",
-      "state" : {
-        "revision" : "1ff84bd19e5351f0761b9d5f07d4ba98d0117088",
-        "version" : "0.5.0"
-      }
-    },
-    {
-      "identity" : "carouselview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/phuhuynh2411/CarouselView",
-      "state" : {
-        "revision" : "605707f77fb70ec39681c748d39ff60180cd2196",
-        "version" : "1.0.0"
-      }
-    },
-    {
       "identity" : "popupview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/exyte/PopupView.git",
       "state" : {
         "revision" : "77c04cef5651a07ab795f8b4edeb39cb231b2411",
         "version" : "1.0.7"
-      }
-    },
-    {
-      "identity" : "remoteimageview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/phuhuynh2411/RemoteImageView.git",
-      "state" : {
-        "revision" : "9bdaa0a08fb40c030785b6555698cd29db98d161",
-        "version" : "1.0.5"
       }
     },
     {

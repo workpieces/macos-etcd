@@ -15,27 +15,6 @@ let etcds:[TabbarOption] = [
 ]
 
 
-enum Item: Hashable, Equatable {
-    case file(name: String)
-    case directory(name: String, items: [Item])
-}
-
-extension Item {
-    var name: String {
-        switch self {
-        case let .file(name), let .directory(name, _):
-            return name
-        }
-    }
-
-    var children: [Item]? {
-        guard case let Item.directory(_, items) = self else {
-            return nil
-        }
-        return items
-    }
-}
-
 final class ItemStore: ObservableObject {
     @Published private(set) var items: [Item]
 
@@ -53,12 +32,10 @@ final class ItemStore: ObservableObject {
 //    // 获取所有etcd的key和value列表
 //    func List(c: EtcdKVClient) -> [String] {
 //        do {
-//            let data = try? c.all()
-//            print(data as Any)
-//            return []
-//        } catch {
+//           let data = try  c.all()
+//            try! decoder.decode([EtcdClientOption].self, from: data as! Data)
+//        } catch  {
 //            print(error)
-//            return []
 //        }
 //    }
 //}

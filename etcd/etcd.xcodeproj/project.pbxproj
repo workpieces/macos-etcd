@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0A764027F024A20094D510 /* KVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A763F27F024A20094D510 /* KVStore.swift */; };
+		5C0A764227F026210094D510 /* KVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764127F026210094D510 /* KVItem.swift */; };
 		5C16803E27DC34E000459883 /* HomeClientCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16803D27DC34E000459883 /* HomeClientCreateView.swift */; };
 		5C16805627DC83F400459883 /* KVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16805527DC83F400459883 /* KVView.swift */; };
 		5C33942727DA1EBB00196D65 /* etcdApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33942627DA1EBB00196D65 /* etcdApp.swift */; };
@@ -18,7 +20,7 @@
 		5C33945B27DA1F2B00196D65 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945827DA1F2B00196D65 /* HomeView.swift */; };
 		5C33945F27DA290B00196D65 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33945E27DA290B00196D65 /* HomeViewModel.swift */; };
 		5C6FDE0427EE04BB00977612 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */; };
-		5C72898C27EF6DB900FE9B5B /* KvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898B27EF6DB900FE9B5B /* KvModel.swift */; };
+		5C72898C27EF6DB900FE9B5B /* KVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898B27EF6DB900FE9B5B /* KVItemStore.swift */; };
 		5C72898E27EF6FA100FE9B5B /* HomeEtcdStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898D27EF6FA100FE9B5B /* HomeEtcdStore.swift */; };
 		5C72899027EF6FDF00FE9B5B /* HomeClientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72898F27EF6FDF00FE9B5B /* HomeClientStore.swift */; };
 		5C72899227EF714600FE9B5B /* HomeTabarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72899127EF714600FE9B5B /* HomeTabarStore.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0A763F27F024A20094D510 /* KVStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVStore.swift; sourceTree = "<group>"; };
+		5C0A764127F026210094D510 /* KVItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVItem.swift; sourceTree = "<group>"; };
 		5C16803D27DC34E000459883 /* HomeClientCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeClientCreateView.swift; sourceTree = "<group>"; };
 		5C16805527DC83F400459883 /* KVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVView.swift; sourceTree = "<group>"; };
 		5C33942327DA1EBB00196D65 /* etcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +83,7 @@
 		5C33945D27DA20DD00196D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C33945E27DA290B00196D65 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5C6FDE0327EE04BB00977612 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
-		5C72898B27EF6DB900FE9B5B /* KvModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KvModel.swift; sourceTree = "<group>"; };
+		5C72898B27EF6DB900FE9B5B /* KVItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVItemStore.swift; sourceTree = "<group>"; };
 		5C72898D27EF6FA100FE9B5B /* HomeEtcdStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEtcdStore.swift; sourceTree = "<group>"; };
 		5C72898F27EF6FDF00FE9B5B /* HomeClientStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeClientStore.swift; sourceTree = "<group>"; };
 		5C72899127EF714600FE9B5B /* HomeTabarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabarStore.swift; sourceTree = "<group>"; };
@@ -132,6 +136,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0A763E27F0247B0094D510 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C0A763F27F024A20094D510 /* KVStore.swift */,
+				5C0A764127F026210094D510 /* KVItem.swift */,
+				5C72898B27EF6DB900FE9B5B /* KVItemStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5C33941A27DA1EBB00196D65 = {
 			isa = PBXGroup;
 			children = (
@@ -280,9 +294,9 @@
 		5CF9A40527DD9B0100E5366F /* KV */ = {
 			isa = PBXGroup;
 			children = (
+				5C0A763E27F0247B0094D510 /* Model */,
 				5C16805527DC83F400459883 /* KVView.swift */,
 				5CF9A40627DD9DEA00E5366F /* KVContentView.swift */,
-				5C72898B27EF6DB900FE9B5B /* KvModel.swift */,
 			);
 			path = KV;
 			sourceTree = "<group>";
@@ -445,14 +459,16 @@
 				5CE89A9827E64059007E45B4 /* NavBackView.swift in Sources */,
 				5CE15D6027DB92050015977B /* CardItemView.swift in Sources */,
 				5CE89AF427ECBBE1007E45B4 /* Button.swift in Sources */,
+				5C0A764027F024A20094D510 /* KVStore.swift in Sources */,
 				5CE89AF027ECB76B007E45B4 /* Content.swift in Sources */,
 				5CF9A40427DD945300E5366F /* EtcdOptionStore.swift in Sources */,
 				5CE89AEC27ECB249007E45B4 /* Constant.swift in Sources */,
 				5CE15D5827DB80EB0015977B /* HomeMainView.swift in Sources */,
 				5CE89A9627E63AF3007E45B4 /* MembersView.swift in Sources */,
 				5CE89A9427E63AEA007E45B4 /* AuthView.swift in Sources */,
+				5C0A764227F026210094D510 /* KVItem.swift in Sources */,
 				5C16805627DC83F400459883 /* KVView.swift in Sources */,
-				5C72898C27EF6DB900FE9B5B /* KvModel.swift in Sources */,
+				5C72898C27EF6DB900FE9B5B /* KVItemStore.swift in Sources */,
 				5C33945F27DA290B00196D65 /* HomeViewModel.swift in Sources */,
 				5C72898E27EF6FA100FE9B5B /* HomeEtcdStore.swift in Sources */,
 			);

@@ -44,6 +44,7 @@ extension HomeViewModel {
             print(error)
             ok = false
         }
+        List(c: c)
         return ok
     }
     
@@ -60,6 +61,22 @@ extension HomeViewModel {
             for item in self.ectdClientList {
                 try? item.etcdClient?.close()
             }
+        }
+    }
+    
+    // 获取所有etcd的key和value列表
+    func List(c: EtcdKVClient) -> [String] {
+        do {
+            let data = (try?  c.all())!
+            let pairs = try JSONDecoder().decode([PairStore].self, from: data)
+            for item in pairs {
+                print(item.key)
+                print(item.value)
+            }
+            return []
+        } catch  {
+            print(error)
+            return []
         }
     }
 }
