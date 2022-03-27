@@ -94,6 +94,6 @@ extension HomeViewModel {
         }
         let js = try! decoder.decode([EtcdClientOption].self, from: data as! Data)
         print(" Get UserDefault Object length:",js.count)
-        return []
+        return js
     }
 }
