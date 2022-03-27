@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C0A764027F024A20094D510 /* KVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A763F27F024A20094D510 /* KVStore.swift */; };
-		5C0A764227F026210094D510 /* KVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764127F026210094D510 /* KVItem.swift */; };
 		5C0A764E27F034500094D510 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764B27F034500094D510 /* CarouselItemlView.swift */; };
 		5C0A764F27F034500094D510 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764C27F034500094D510 /* Carousel.swift */; };
 		5C0A765027F034500094D510 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764D27F034500094D510 /* CarouselView.swift */; };
@@ -71,7 +70,6 @@
 
 /* Begin PBXFileReference section */
 		5C0A763F27F024A20094D510 /* KVStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVStore.swift; sourceTree = "<group>"; };
-		5C0A764127F026210094D510 /* KVItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVItem.swift; sourceTree = "<group>"; };
 		5C0A764B27F034500094D510 /* CarouselItemlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemlView.swift; sourceTree = "<group>"; };
 		5C0A764C27F034500094D510 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		5C0A764D27F034500094D510 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				5C0A763F27F024A20094D510 /* KVStore.swift */,
-				5C0A764127F026210094D510 /* KVItem.swift */,
 				5C72898B27EF6DB900FE9B5B /* KVItemStore.swift */,
 			);
 			path = Model;
@@ -503,7 +500,6 @@
 				5CE15D5827DB80EB0015977B /* ETCDHomeMainView.swift in Sources */,
 				5CE89A9627E63AF3007E45B4 /* MembersView.swift in Sources */,
 				5CE89A9427E63AEA007E45B4 /* AuthView.swift in Sources */,
-				5C0A764227F026210094D510 /* KVItem.swift in Sources */,
 				5C0A765027F034500094D510 /* CarouselView.swift in Sources */,
 				5C16805627DC83F400459883 /* ETCDKVContentView.swift in Sources */,
 				5C72898C27EF6DB900FE9B5B /* KVItemStore.swift in Sources */,
