@@ -21,11 +21,14 @@ struct CardItemView: View {
                 } label: {
                     Image(systemName: "ellipsis")
                         .withDefaultImage(width: 18.0)
-                }
+                }.frame(width: 50, height: 20, alignment: .center)
                 .padding(.vertical,DefaultSpacePadding)
                 .padding(.horizontal,DefaultSpacePadding)
                 .contentShape(Rectangle())
                 .buttonStyle(PlainButtonStyle())
+                .onTapGesture {
+                    self.showAlert.toggle()
+                }
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Want to modify etcd service data?"),
