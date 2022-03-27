@@ -52,7 +52,6 @@ extension HomeViewModel {
                 self.ectdClientList.remove(at: idx)
             }
         }
-        print("Delete Object length:",self.ectdClientList.count)
         self.SetUserDefaults()
     }
     
@@ -92,11 +91,10 @@ extension HomeViewModel {
         guard let data = UserDefaults.standard.object(forKey: userDefaultsKey) else {
             return [EtcdClientOption]()
         }
-        var js = try? decoder.decode([EtcdClientOption].self, from: data as! Data)
+        let js = try? decoder.decode([EtcdClientOption].self, from: data as! Data)
         if js == nil{
             return []
         }
-        print(" Get UserDefault Object length:",js!.count)
         return js!
     }
 }

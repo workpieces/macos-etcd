@@ -44,7 +44,7 @@ extension HomeViewModel {
             print(error)
             ok = false
         }
-//        List(c: c)
+        List(c: c)
         return ok
     }
     
@@ -68,15 +68,17 @@ extension HomeViewModel {
     func List(c: EtcdKVClient) -> [String] {
         do {
             let data = try? c.all()
-            let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
-            let root  = Tree.init(value: "/")
-            for key in pairs {
-                let dir = key.key.components(separatedBy: "/")
-                if !dir.isEmpty {
-                    for item in dir {
-                        root.insert(Tree.init(value: item))
+            if !data!.isEmpty {
+                let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
+                let root  = Tree.init(value: "/")
+                for key in pairs {
+                    let dir = key.key.components(separatedBy: "/")
+                    if !dir.isEmpty {
+                        for item in dir {
+                            root.insert(Tree.init(value: item))
+                        }
+                        print(root)
                     }
-                    print(root)
                 }
             }
             return []
