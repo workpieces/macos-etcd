@@ -15,11 +15,11 @@ public struct CarouselItemlView: View {
     public var body: some View {
         GeometryReader { geo in
             HStack (alignment: .center){
-                Image(systemName: item)
+                Image(item)
+                    .resizable()
                     .scaledToFill()
-                    .frame(width: geo.size.width, height: self.height, alignment: .top)
+                    .frame(width: geo.size.width, height: self.height)
                     .clipped()
-                    .background(Color.secondary)
                     .cornerRadius(borderRadius)
                 
             }

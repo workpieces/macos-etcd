@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AboutView: View {
+    
+    @State var items = ["logo","github","email"]
     var body: some View {
         VStack {
             HStack {
@@ -20,11 +22,9 @@ struct AboutView: View {
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
                     // todo 介绍其他产品轮播图
-                    Color.green
-                        .frame(height: 120.0)
+                    CarouselView(items: $items).frame(height: 120.0)
                         .cornerRadius(DefaultRadius)
                         .padding()
-                    
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(abouts) { item in
                             ZStack {
