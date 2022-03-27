@@ -9,12 +9,13 @@
 import Foundation
 
 class ETCDItem {
-  var value: String
+  var directory: String
+  var fileValue: String?
   var children: [ETCDItem] = []
   weak var parent: ETCDItem?
 
-  init(value: String) {
-    self.value = value
+  init(directory: String) {
+    self.directory = directory
   }
     
   func add(child: ETCDItem) {
