@@ -69,16 +69,14 @@ extension HomeViewModel {
         do {
             let data = try? c.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
-            
+            let root  = Tree.init(value: "/")
             for key in pairs {
                 let dir = key.key.components(separatedBy: "/")
                 if !dir.isEmpty {
-                    var temp  = Tree(value: "/")
-                    for i in (0...dir.count-1) {
-                        let node  = Tree(value: dir[i])
-                        temp.children.append(node)
+                    for item in dir {
+                        root.insert(Tree.init(value: item))
                     }
-                    print(temp)
+                    print(root)
                 }
             }
             return []
@@ -89,7 +87,18 @@ extension HomeViewModel {
     }
 }
 
-struct Tree<Value: Hashable>: Hashable {
-    var value: Value
-    var children: [Tree] = []
+class Tree<Value> {
+    let value: Value
+    weak var parent: Tree?
+    var children: [Tree]
+    
+    init(value: Value,children: [Tree] = []) {
+        self.value = value
+        self.children = children
+    }
+    
+    func insert(_ child: Tree) {
+        children.append(child)
+        child.parent = self
+    }
 }
