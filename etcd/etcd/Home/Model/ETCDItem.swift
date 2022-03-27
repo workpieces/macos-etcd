@@ -9,16 +9,16 @@
 import Foundation
 
 class ETCDItem {
-  var value: String
-  var children: [ETCDItem] = []
-  weak var parent: ETCDItem?
-
-  init(value: String) {
-    self.value = value
-  }
+    var value: String
+    var children: [ETCDItem] = []
+    weak var parent: ETCDItem?
     
-  func add(child: ETCDItem) {
-    children.append(child)
-    child.parent = self
-  }
+    init(value: String) {
+        self.value = value
+    }
+    
+    func add(child: ETCDItem) {
+        children.append(child)
+        child.parent = self
+    }
 }

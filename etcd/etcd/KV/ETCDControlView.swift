@@ -24,7 +24,11 @@ struct ETCDControlView: View {
         ZStack {
             switch selection {
             case 0:
-                Text("\(selection)")
+//                List(items, id: \.self, children: \.children, selection: $selection) { item in
+//
+//                }
+//                .listStyle(SidebarListStyle())
+                EmptyView()
             case 1:
                 Text("\(selection)")
             case 2:
