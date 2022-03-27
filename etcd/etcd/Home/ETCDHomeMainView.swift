@@ -34,7 +34,6 @@ struct HomeMainView: View {
                     .padding(GriditemPaddingSpace)
                 }
                 .onReceive(timer) { time in
-                    print("timer: Check Etcd Health")
                     homeData.WatchListenEtcdClient()
                 }
             }
