@@ -92,8 +92,11 @@ extension HomeViewModel {
         guard let data = UserDefaults.standard.object(forKey: userDefaultsKey) else {
             return [EtcdClientOption]()
         }
-        let js = try! decoder.decode([EtcdClientOption].self, from: data as! Data)
-        print(" Get UserDefault Object length:",js.count)
-        return js
+        var js = try? decoder.decode([EtcdClientOption].self, from: data as! Data)
+        if js == nil{
+            return []
+        }
+        print(" Get UserDefault Object length:",js!.count)
+        return js!
     }
 }
