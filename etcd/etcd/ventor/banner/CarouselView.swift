@@ -96,6 +96,18 @@ public struct CarouselView: View {
                     // Add drag events to the scrollview
                     .gesture(drag)
                 }
+                // Show slide indicators
+                if self.slideIndicator {
+                    HStack {
+                        //Spacer()
+                        ForEach((1...items.count - 2), id: \.self) { i in
+                            Circle()
+                                .foregroundColor(i == self.index ? Color("carouselSelectedIndicatorBg") : Color("carouselIndicatorBg") )
+                                .frame(width: 7, height: 7)
+                                .padding(.bottom)
+                        }
+                    }
+                }
             }
             .frame(height: self.height)
             
