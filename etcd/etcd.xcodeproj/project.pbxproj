@@ -42,7 +42,6 @@
 		5CF9A40427DD945300E5366F /* EtcdOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40327DD945300E5366F /* EtcdOptionStore.swift */; };
 		5CF9A40727DD9DEA00E5366F /* KVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40627DD9DEA00E5366F /* KVContentView.swift */; };
 		D002539F27F011D800890E71 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D002539E27F011D800890E71 /* AxisTabView */; };
-		D00253A227F0122700890E71 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = D00253A127F0122700890E71 /* CarouselView */; };
 		D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D032D0ED27DD87E00070A338 /* NavigationStack */; };
 		D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D08615CE27E5BE76000BE9E1 /* PopupView */; };
 /* End PBXBuildFile section */
@@ -115,7 +114,6 @@
 				D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */,
 				D002539F27F011D800890E71 /* AxisTabView in Frameworks */,
 				5C6FDE0427EE04BB00977612 /* MacosEtcd.framework in Frameworks */,
-				D00253A227F0122700890E71 /* CarouselView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +319,6 @@
 				D032D0ED27DD87E00070A338 /* NavigationStack */,
 				D08615CE27E5BE76000BE9E1 /* PopupView */,
 				D002539E27F011D800890E71 /* AxisTabView */,
-				D00253A127F0122700890E71 /* CarouselView */,
 			);
 			productName = etcd;
 			productReference = 5C33942327DA1EBB00196D65 /* etcd.app */;
@@ -399,7 +396,6 @@
 				D032D0EC27DD87E00070A338 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */,
 				D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */,
-				D00253A027F0122700890E71 /* XCRemoteSwiftPackageReference "CarouselView" */,
 			);
 			productRefGroup = 5C33942427DA1EBB00196D65 /* Products */;
 			projectDirPath = "";
@@ -814,14 +810,6 @@
 				version = 0.5.0;
 			};
 		};
-		D00253A027F0122700890E71 /* XCRemoteSwiftPackageReference "CarouselView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/phuhuynh2411/CarouselView";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
-			};
-		};
 		D032D0EC27DD87E00070A338 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
@@ -845,11 +833,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */;
 			productName = AxisTabView;
-		};
-		D00253A127F0122700890E71 /* CarouselView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D00253A027F0122700890E71 /* XCRemoteSwiftPackageReference "CarouselView" */;
-			productName = CarouselView;
 		};
 		D032D0ED27DD87E00070A338 /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;
