@@ -73,7 +73,9 @@ extension HomeViewModel {
             for key in pairs {
                 let dir = key.key.components(separatedBy: "/")
                 if dir.count > 1{
-                    etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1))
+                    etcdRoot.add(child: coverItem(etcdRoot: etcdRoot, dir: dir,count: 1,value:   key.value ))
+                }else{
+                    etcdRoot.value = key.value
                 }
             }
             print(etcdRoot)
@@ -85,13 +87,13 @@ extension HomeViewModel {
     }
 }
 
-func coverItem(etcdRoot:ETCDItem ,dir: [String], count:Int)->ETCDItem {
+func coverItem(etcdRoot:ETCDItem ,dir: [String], count:Int ,value:String)->ETCDItem {
     if count >= (dir.count - 1) {
-        let root = ETCDItem.init(value: dir[count])
-        return root
+        let root = ETCDItem.init(value: value)
+      return root
     }
     let root = ETCDItem.init(value: dir[count])
-    root.add(child: coverItem(etcdRoot: root, dir: dir, count: count+1))
+    root.add(child: coverItem(etcdRoot: root, dir: dir, count: count+1,value: value))
     return root
 }
 
