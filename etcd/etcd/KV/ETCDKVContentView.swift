@@ -47,26 +47,35 @@ struct ETCDKVContentView: View {
     var address : String = "0.0.0.0:2379"
     var body: some View {
         ZStack {
-            List{
-                Section {
-                    ForEach(storeObj.all(),id: \.key) { item in
+            HStack {
+                List{
+                    Section {
+                        ForEach(storeObj.all(),id: \.key) { item in
+                            HStack {
+                                Text(item.key)
+                                    .withDefaultSubContentTitle(fontColor: .black, fontSize: 12.0)
+                                    .padding(10.0)
+                            }
+                        }
+                    } header: {
                         HStack {
-                            Text(item.key)
-                                .withDefaultSubContentTitle(fontColor: .black, fontSize: 12.0)
-                                .padding(10.0)
+                            withDefaultHeaderLabelView(title: address)
+                            Spacer()
+                            withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
+                            withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
+                            withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
+                            withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
                         }
                     }
-                } header: {
-                    HStack {
-                        withDefaultHeaderLabelView(title: address)
-                        Spacer()
-                        withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
-                        withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
-                        withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
-                        withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
-                    }
+                }
+                
+                VStack {
+                    Color.red
+                    Color.yellow
                 }
             }
+            .padding(.leading,10)
+            .padding(.trailing,10)
         }
     }
 }
