@@ -12,9 +12,8 @@ struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         List{
-            ForEach(storeObj.all()) { item in
+            ForEach(storeObj.all(),id: \.key) { item in
                 Text(item.key)
-                Text(item.value)
             }
         }
     }
