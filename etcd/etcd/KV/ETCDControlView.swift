@@ -14,7 +14,7 @@ struct ETCDControlView: View {
     @Binding var selection: Int
     @Binding var constant: ATConstant
     @Binding var color: Color
-    
+    @State var client:EtcdClientOption
     let tag: Int
     let systemName: String
     let systemTitle:String
@@ -24,11 +24,7 @@ struct ETCDControlView: View {
         ZStack {
             switch selection {
             case 0:
-//                List(items, id: \.self, children: \.children, selection: $selection) { item in
-//
-//                }
-//                .listStyle(SidebarListStyle())
-                EmptyView()
+                ETCDKVContentView(client: $client)
             case 1:
                 Text("\(selection)")
             case 2:

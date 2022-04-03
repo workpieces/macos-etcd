@@ -26,7 +26,7 @@ struct HomeMainView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
-                            PushView(destination: ETCDKVContentView(client: self.homeData.ectdClientList[item])){
+                            PushView(destination: ETCDTabBarContentView(client: self.homeData.ectdClientList[item])){
                                 CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }

@@ -1,33 +1,20 @@
 //
-//  HomeConnectView.swift
+//  ETCDKVContentView.swift
 //  etcd
 //
-//  Created by taoshumin_vendor on 2022/3/12.
+//  Created by FaceBook on 2022/4/3.
+//  Copyright © 2022 Workpiece. All rights reserved.
 //
 
 import SwiftUI
-import NavigationStack
 
 struct ETCDKVContentView: View {
-    @StateObject var homeData = HomeViewModel()
-    @State var client:EtcdClientOption
-    @State private var isPopView = false
+    @Binding var client:EtcdClientOption
     var body: some View {
-        ZStack(alignment: .topLeading, content: {
-            Color
-                .clear
-                .ignoresSafeArea(.all,edges: .all)
-            VStack {
-                NavBackView(isPopView: $isPopView,title: "ETCD CLUSTER V3")
-                    .padding(.vertical,44)
-                    .padding(.leading ,20)
-                ETCDDetailTabBarView()
-            }
-        })
-        
-        
+        Text("hello world")
+//        List(ItemStore.List(c:client.etcdClient).items!, children: \.children) { item in
+//           Image(systemName: item.icon)
+//           Text(item.name)
+//         }
     }
-    
 }
-
-

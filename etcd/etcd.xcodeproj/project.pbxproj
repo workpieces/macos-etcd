@@ -12,7 +12,7 @@
 		5C0A764F27F034500094D510 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764C27F034500094D510 /* Carousel.swift */; };
 		5C0A765027F034500094D510 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764D27F034500094D510 /* CarouselView.swift */; };
 		5C16803E27DC34E000459883 /* ETCDHomeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16803D27DC34E000459883 /* ETCDHomeCreateView.swift */; };
-		5C16805627DC83F400459883 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16805527DC83F400459883 /* ETCDKVContentView.swift */; };
+		5C16805627DC83F400459883 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16805527DC83F400459883 /* ETCDTabBarContentView.swift */; };
 		5C2F3A2427F0B2FE00BCAA96 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2F3A2327F0B2FE00BCAA96 /* MacosEtcd.framework */; };
 		5C33942727DA1EBB00196D65 /* ETCDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33942627DA1EBB00196D65 /* ETCDApp.swift */; };
 		5C33942B27DA1EBB00196D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33942A27DA1EBB00196D65 /* Assets.xcassets */; };
@@ -48,6 +48,7 @@
 		D00253BE27F051AB00890E71 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */; };
 		D00253C027F08AD300890E71 /* ETCDKVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BF27F08AD300890E71 /* ETCDKVItem.swift */; };
 		D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D032D0ED27DD87E00070A338 /* NavigationStack */; };
+		D07985D027F9CFCB002D5307 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07985CF27F9CFCB002D5307 /* ETCDKVContentView.swift */; };
 		D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D08615CE27E5BE76000BE9E1 /* PopupView */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +75,7 @@
 		5C0A764C27F034500094D510 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		5C0A764D27F034500094D510 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		5C16803D27DC34E000459883 /* ETCDHomeCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeCreateView.swift; sourceTree = "<group>"; };
-		5C16805527DC83F400459883 /* ETCDKVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVContentView.swift; sourceTree = "<group>"; };
+		5C16805527DC83F400459883 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
 		5C2F3A2327F0B2FE00BCAA96 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		5C33942327DA1EBB00196D65 /* etcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33942627DA1EBB00196D65 /* ETCDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDApp.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		D00253BB27F0519200890E71 /* ETCDControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDControlView.swift; sourceTree = "<group>"; };
 		D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
 		D00253BF27F08AD300890E71 /* ETCDKVItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItem.swift; sourceTree = "<group>"; };
+		D07985CF27F9CFCB002D5307 /* ETCDKVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,10 +324,11 @@
 			isa = PBXGroup;
 			children = (
 				5C0A763E27F0247B0094D510 /* Model */,
-				5C16805527DC83F400459883 /* ETCDKVContentView.swift */,
+				5C16805527DC83F400459883 /* ETCDTabBarContentView.swift */,
 				D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */,
 				D00253BB27F0519200890E71 /* ETCDControlView.swift */,
 				D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */,
+				D07985CF27F9CFCB002D5307 /* ETCDKVContentView.swift */,
 			);
 			path = KV;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				5C0A764E27F034500094D510 /* CarouselItemlView.swift in Sources */,
 				D00253BE27F051AB00890E71 /* ETCDTabBarItem.swift in Sources */,
 				D00253BC27F0519200890E71 /* ETCDControlView.swift in Sources */,
+				D07985D027F9CFCB002D5307 /* ETCDKVContentView.swift in Sources */,
 				5C16803E27DC34E000459883 /* ETCDHomeCreateView.swift in Sources */,
 				5C72899227EF714600FE9B5B /* ETCDTabarStore.swift in Sources */,
 				5CE89AA227E727A3007E45B4 /* OpenPan.swift in Sources */,
@@ -501,7 +505,7 @@
 				5CE89A9627E63AF3007E45B4 /* MembersView.swift in Sources */,
 				5CE89A9427E63AEA007E45B4 /* AuthView.swift in Sources */,
 				5C0A765027F034500094D510 /* CarouselView.swift in Sources */,
-				5C16805627DC83F400459883 /* ETCDKVContentView.swift in Sources */,
+				5C16805627DC83F400459883 /* ETCDTabBarContentView.swift in Sources */,
 				5C72898C27EF6DB900FE9B5B /* ETCDKVItemStore.swift in Sources */,
 				5C33945F27DA290B00196D65 /* HomeViewModel.swift in Sources */,
 				5C72898E27EF6FA100FE9B5B /* ETCDStore.swift in Sources */,
