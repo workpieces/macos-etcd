@@ -9,15 +9,15 @@ import SwiftUI
 import MacosEtcd
 
 class ItemStore: ObservableObject {
-    @Published  var c : EtcdKVClient
+    @Published  var c : EtcdKVClient?
     
-    init(c: EtcdKVClient) {
+    init(c: EtcdKVClient?) {
         self.c  = c
     }
     
     func list() -> ETCDItem {
         do {
-            let data = try? c.all()
+            let data = try? c?.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
             let etcdRoot = ETCDItem.init(directory: "/")
             for key in pairs {
