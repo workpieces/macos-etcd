@@ -18,16 +18,13 @@ struct ETCDTabBarContentView: View {
                 .clear
                 .ignoresSafeArea(.all,edges: .all)
             VStack {
-                NavBackView(isPopView: $isPopView,title: "ETCD CLUSTER V3")
+                withDefaultNavagationBack(title: "ETCD CLUSTER V3", isPop: $isPopView)
                     .padding(.vertical,44)
                     .padding(.leading ,20)
                 ETCDDetailTabBarView(client:client)
             }
         })
-        
-        
     }
-    
 }
 
 

@@ -36,8 +36,9 @@ struct HomeClientCreateView: View {
                 .ignoresSafeArea(.all,edges: .all)
             VStack {
                 // nav back view
-                NavBackView(isPopView: $isPopView,title: "Settings")
-                    .padding(.horizontal,44)
+                withDefaultNavagationBack(title: "Settings", isPop: $isPopView)
+                    .padding(.vertical,44)
+                    .padding(.leading ,20)
                 
                 HStack {
                     // left view

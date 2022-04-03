@@ -63,6 +63,30 @@ struct DefaultAddButtonViewModifier: ViewModifier{
     }
 }
 
+struct DefaultNavagationBackViewModifier: ViewModifier {
+    @Binding var isPopView: Bool
+    var title : String
+    var size : CGFloat
+    func body(content: Content) -> some View {
+        HStack {
+            PopView(isActive: $isPopView ) {
+                Button {
+                    self.isPopView.toggle()
+                } label: {
+                    Image(systemName: "arrow.backward")
+                        .withDefaultImage(width: 25.0)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+            Spacer()
+            Text(title)
+                .withDefaultContentTitle(fontSize: size)
+            Spacer()
+        }
+    }
+}
+
+
 extension View {
     func withDefaultTabarButton(imageName: String,title: String,selectTab: Binding<String>) -> some View {
         modifier(DefaultTabarButtonViewModifier(image: imageName, title: title, selectTab: selectTab))
@@ -70,5 +94,9 @@ extension View {
     
     func withDefaultAddButton(imageName: String,title: String,link: Binding<Bool>) -> some View {
         modifier(DefaultAddButtonViewModifier(imageName: imageName, title: title, isLinkActive: link))
+    }
+    
+    func withDefaultNavagationBack(title: String,size: CGFloat = 30.0,isPop: Binding<Bool>) -> some View {
+        modifier(DefaultNavagationBackViewModifier(isPopView: isPop, title: title,size: size))
     }
 }
