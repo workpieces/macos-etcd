@@ -8,7 +8,8 @@
 
 import Foundation
 
-class ETCDItem {
+class ETCDItem : Identifiable{
+    var id = UUID()
     var directory: String
     var fileValue: String?
     var children: [ETCDItem] = []

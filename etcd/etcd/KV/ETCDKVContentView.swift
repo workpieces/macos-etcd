@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct ETCDKVContentView: View {
-    
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
-        Text("hello world")
-//        List(ItemStore.List(c:client.etcdClient).items!, children: \.children) { item in
-//           Image(systemName: item.icon)
-//           Text(item.name)
-//         }
+        List{
+            ForEach(storeObj.all()) { item in
+                Text(item.key)
+                Text(item.value)
+            }
+        }
     }
 }

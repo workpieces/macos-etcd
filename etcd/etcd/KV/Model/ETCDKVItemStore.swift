@@ -34,4 +34,15 @@ class ItemStore: ObservableObject {
             return  ETCDItem.init(directory: "/")
         }
     }
+    
+    func all() -> [PairStore] {
+        do {
+            let data = try? c?.all()
+            let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
+            return pairs
+        } catch  {
+            print(error)
+            return [PairStore]()
+        }        
+    }
 }
