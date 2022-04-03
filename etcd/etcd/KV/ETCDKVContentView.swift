@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ETCDKVContentView: View {
-    @Binding var client:EtcdClientOption
+    
     var body: some View {
         Text("hello world")
 //        List(ItemStore.List(c:client.etcdClient).items!, children: \.children) { item in

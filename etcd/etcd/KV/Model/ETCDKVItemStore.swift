@@ -9,16 +9,13 @@ import SwiftUI
 import MacosEtcd
 
 class ItemStore: ObservableObject {
-    @Published private(set) var items: ETCDItem
+    @Published  var c : EtcdKVClient
     
-    init(items: ETCDItem) {
-        self.items = items
+    init(c: EtcdKVClient) {
+        self.c  = c
     }
-}
-
-extension ItemStore {
     
-    static func List(c: EtcdKVClient) throws -> ItemStore? {
+    func list() -> ETCDItem {
         do {
             let data = try? c.all()
             let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
@@ -31,10 +28,10 @@ extension ItemStore {
                     etcdRoot.fileValue = key.value
                 }
             }
-            return ItemStore(items: etcdRoot)
+            return etcdRoot
         } catch let error {
             print(error)
+            return  ETCDItem.init(directory: "/")
         }
-        return nil
     }
 }
