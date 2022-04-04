@@ -11,7 +11,7 @@ import NavigationStack
 struct HomeMainView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State var isLinkActive = false
-    let timer = Timer.publish(every: 1.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 3.0, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             withDefaultAddButton(imageName: "plus", title: "Create Etcd Client", link: $isLinkActive)

@@ -40,8 +40,11 @@ class ItemStore: ObservableObject {
     func all() -> [PairStore] {
         do {
             let data = try? c?.all()
-            let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
-            return pairs
+            if ((data?.isEmpty) != nil) {
+                let pairs = try JSONDecoder().decode([PairStore].self, from: data!)
+                return pairs
+            }
+            return [PairStore]()
         } catch  {
             print(error)
             return [PairStore]()
