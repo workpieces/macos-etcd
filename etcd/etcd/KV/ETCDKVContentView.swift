@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+
 /*
  Circle()
      .fill(.red)
@@ -41,50 +42,48 @@ extension View {
     }
 }
 
-extension NSTableView {
-  open override func viewDidMoveToWindow() {
-    super.viewDidMoveToWindow()
-    backgroundColor = NSColor.red
-    enclosingScrollView!.drawsBackground = false
-  }
-}
-
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var address : String = "0.0.0.0:2379"
     var body: some View {
-        ZStack {
-            HStack {
-                List{
-                    Section {
-                        ForEach(storeObj.all(),id: \.key) { item in
-                            HStack() {
-                                Text(item.key)
-                                    .withDefaultSubContentTitle(fontColor: .black, fontSize: 12.0)
-                                    .padding(10.0).listRowBackground(Color.red)
-                                    .frame(height: 30)
-                                    .frame(maxWidth: .infinity,alignment:.leading)
+        GeometryReader { geometry in
+            ZStack {
+                HStack {
+                    List{
+                        Section {
+                            ForEach(storeObj.all(),id: \.key) { item in
+                                HStack {
+                                    Text(item.key)
+                                        .withDefaultSubContentTitle(fontColor: .black, fontSize: 12.0)
+                                        .padding(3.0)
+                                    Spacer()
+                                }
+                                .background(.pink)
+                                .frame(width:  geometry.size.width / 2.0, height: 44.0, alignment: .leading)
+                            }
+                        } header: {
+                            HStack {
+                                withDefaultHeaderLabelView(title: address)
+                                Spacer()
+                                withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
+                                withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
+                                withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
+                                withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
                             }
                         }
-                       
-                    } header: {
-                        HStack {
-                            withDefaultHeaderLabelView(title: address)
-                            Spacer()
-                            withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
-                            withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
-                            withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
-                            withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
-                        }
                     }
-                }.listStyle(.plain)
-                VStack {
-                    Color.red
-                    Color.yellow
+                    .frame(width: geometry.size.width / 2.0, height: geometry.size.height)
+                    
+                    VStack {
+                        Color.red
+                            .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
+                        Color.yellow
+                            .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
+                    }
                 }
+                .padding(.leading,10)
+                .padding(.trailing,10)
             }
-            .padding(.leading,10)
-            .padding(.trailing,10)
         }
     }
 }
