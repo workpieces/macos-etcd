@@ -45,7 +45,7 @@ extension View {
 extension NSTableView {
   open override func viewDidMoveToWindow() {
     super.viewDidMoveToWindow()
-    backgroundColor = NSColor.red
+      backgroundColor = NSColor.clear.withAlphaComponent(0.35)
     enclosingScrollView!.drawsBackground = false
   }
 }
@@ -53,7 +53,6 @@ extension NSTableView {
 
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
-    var address : String = "0.0.0.0:2379"
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -62,17 +61,18 @@ struct ETCDKVContentView: View {
                         Section {
                             ForEach(storeObj.all(),id: \.key) { item in
                                 HStack {
+                                    Image(systemName: "key.icloud")
+                                        .withDefaultImage(width: 18.0)
+                                    
                                     Text(item.key)
-                                        .withDefaultSubContentTitle(fontColor: .black, fontSize: 12.0)
-                                        .padding(3.0)
+                                        .withDefaultSubContentTitle(fontColor: .white, fontSize: 13.0)
                                     Spacer()
                                 }
-                                .background(.pink)
                                 .frame(width:  geometry.size.width / 2.0, height: 44.0, alignment: .leading)
                             }
                         } header: {
                             HStack {
-                                withDefaultHeaderLabelView(title: address)
+                                withDefaultHeaderLabelView(title: storeObj.address)
                                 Spacer()
                                 withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
                                 withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)

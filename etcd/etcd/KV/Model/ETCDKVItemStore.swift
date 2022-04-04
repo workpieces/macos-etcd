@@ -9,10 +9,12 @@ import SwiftUI
 import MacosEtcd
 
 class ItemStore: ObservableObject {
-    @Published  var c : EtcdKVClient?
+    @Published var c : EtcdKVClient?
+    @Published var address: String
     
-    init(c: EtcdKVClient?) {
+    init(c: EtcdKVClient?,address: String) {
         self.c  = c
+        self.address = address
     }
     
     func list() -> ETCDItem {

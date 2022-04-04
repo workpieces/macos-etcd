@@ -27,7 +27,8 @@ struct HomeMainView: View {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
                             PushView(destination: ETCDTabBarContentView()
-                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item].etcdClient))){
+                                .environmentObject(ItemStore.init(
+                                    c: self.homeData.ectdClientList[item].etcdClient,address: self.homeData.ectdClientList[item].endpoints.first!))){
                                 CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }
