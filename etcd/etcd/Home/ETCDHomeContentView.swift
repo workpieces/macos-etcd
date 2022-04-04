@@ -44,9 +44,7 @@ struct ETCDHomeContentView: View {
                     case "About": AboutView()
                         default: HomeMainView() }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .frame(minWidth:720.0,maxWidth: .infinity,maxHeight: .infinity)
         }
         .environmentObject(homeData)
         .ignoresSafeArea(.all,edges: .all)
