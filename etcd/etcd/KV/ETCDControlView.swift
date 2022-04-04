@@ -14,6 +14,7 @@ struct ETCDControlView: View {
     @Binding var selection: Int
     @Binding var constant: ATConstant
     @Binding var color: Color
+    @EnvironmentObject var storeObj : ItemStore
     let tag: Int
     let systemName: String
     let systemTitle:String
@@ -23,7 +24,7 @@ struct ETCDControlView: View {
         ZStack {
             switch selection {
             case 0:
-                ETCDKVContentView().background(Color.clear)
+                ETCDKVContentView( selecteItem: storeObj.all().first).background(Color.clear)
             case 1:
                 Text("\(selection)")
             case 2:

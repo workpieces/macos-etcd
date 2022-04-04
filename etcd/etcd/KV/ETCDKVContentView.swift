@@ -62,7 +62,9 @@ struct SingleKVView: View {
                 .withDefaultSubContentTitle()
             Spacer()
         }
-        .frame(height:18.0)
+        .contentShape(Rectangle())
+        .frame(height:30)
+        .frame(maxWidth: .infinity)
         .cornerRadius(3.0)
     }
 }
@@ -70,6 +72,7 @@ struct SingleKVView: View {
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State var jsonIndex: Int = 0
+    @State var selecteItem:PairStore?
     let json = ["JSON","TEXT"]
     var body: some View {
         GeometryReader { geometry in
@@ -80,6 +83,9 @@ struct ETCDKVContentView: View {
                             ForEach(storeObj.all(),id: \.key) { item in
                                 SingleKVView(title: item.key)
                                     .padding(4.0)
+                                    .onTapGesture{
+                                        self.selecteItem  = item
+                                    }
                             }
                         } header: {
                             HStack {
@@ -93,7 +99,6 @@ struct ETCDKVContentView: View {
                         }
                     }
                     .frame(width: geometry.size.width / 2.0, height: geometry.size.height)
-                    
                     VStack {
                         HStack {
                             Text("Value (represented as JSON object) Size: 13 bytes")
@@ -114,8 +119,8 @@ struct ETCDKVContentView: View {
                         }
                         .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
                         
-                        Color.yellow
-                            .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
+                        Text(selecteItem!.value)
+                            .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
                     }
                 }
                 .padding(.leading,10)
