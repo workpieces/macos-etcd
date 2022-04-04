@@ -40,6 +40,23 @@ extension View {
         }
         .buttonStyle(PlainButtonStyle())
     }
+    
+    func withDefaultVHImageButton(name: String, title: String,textColor: Color = .white,color: Color = .white,size: CGFloat = 13) -> some View {
+        Button {
+            
+        } label: {
+            VStack(alignment: .center, spacing: 2.0) {
+                Image(systemName: name)
+                    .withDefaultImage(foreColor: color, width: size)
+                
+                Text(title)
+                    .font(.subheadline)
+                    .foregroundColor(textColor)
+                    
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
 }
 
 extension NSTableView {
@@ -99,29 +116,41 @@ struct ETCDKVContentView: View {
                         }
                     }
                     .frame(width: geometry.size.width / 2.0, height: geometry.size.height)
+                    
                     VStack {
                         HStack {
-                            Text("Value (represented as JSON object) Size: 13 bytes")
+                            Text("Value Size: 13 bytes")
                                 .foregroundColor(.white)
                                 .font(.subheadline)
+                                .padding(.leading,10.0)
                             
                             Picker("View as: ", selection: $jsonIndex) {
                                 ForEach(json.indices , id: \.self){ i in
                                     Text(self.json[i])
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.black)
                                         .font(.subheadline)
                                 }
                             }
-                            .frame(height: 25.0)
+                            .frame(width: 160.0,height: 20.0)
                             .pickerStyle(.menu)
                             
+                            Spacer()
                             
+                            withDefaultVHImageButton(name: "highlighter", title: "write",size: 14.0)
+                            withDefaultVHImageButton(name: "highlighter", title: "copy",size: 14.0)
+                            withDefaultVHImageButton(name: "highlighter", title: "save",size: 14.0)
+                            .padding(.trailing,10.0)
                         }
-                        .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
+                        .frame(height: 44.0)
+                        .cornerRadius(DefaultRadius)
+                        .background(Color(hex: "#5B9BD4").opacity(0.45))
+                        .padding(.trailing,15.0)
+                        .padding(.bottom,15.0)
                         
                         Text(selecteItem!.value)
                             .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
                     }
+                    
                 }
                 .padding(.leading,10)
                 .padding(.trailing,10)
