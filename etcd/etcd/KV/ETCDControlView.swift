@@ -23,7 +23,7 @@ struct ETCDControlView: View {
         ZStack {
             switch selection {
             case 0:
-                ETCDKVContentView()
+                ETCDKVContentView().background(Color.clear)
             case 1:
                 Text("\(selection)")
             case 2:

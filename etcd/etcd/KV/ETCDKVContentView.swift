@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-
 /*
  Circle()
      .fill(.red)
@@ -42,6 +41,14 @@ extension View {
     }
 }
 
+extension NSTableView {
+  open override func viewDidMoveToWindow() {
+    super.viewDidMoveToWindow()
+    backgroundColor = NSColor.red
+    enclosingScrollView!.drawsBackground = false
+  }
+}
+
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var address : String = "0.0.0.0:2379"
@@ -51,12 +58,15 @@ struct ETCDKVContentView: View {
                 List{
                     Section {
                         ForEach(storeObj.all(),id: \.key) { item in
-                            HStack {
+                            HStack() {
                                 Text(item.key)
                                     .withDefaultSubContentTitle(fontColor: .black, fontSize: 12.0)
-                                    .padding(10.0)
+                                    .padding(10.0).listRowBackground(Color.red)
+                                    .frame(height: 30)
+                                    .frame(maxWidth: .infinity,alignment:.leading)
                             }
                         }
+                       
                     } header: {
                         HStack {
                             withDefaultHeaderLabelView(title: address)
@@ -67,8 +77,7 @@ struct ETCDKVContentView: View {
                             withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
                         }
                     }
-                }
-                
+                }.listStyle(.plain)
                 VStack {
                     Color.red
                     Color.yellow
