@@ -69,6 +69,8 @@ struct SingleKVView: View {
 
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
+    @State var jsonIndex: Int = 0
+    let json = ["JSON","TEXT"]
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -93,8 +95,25 @@ struct ETCDKVContentView: View {
                     .frame(width: geometry.size.width / 2.0, height: geometry.size.height)
                     
                     VStack {
-                        Color.red
-                            .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
+                        HStack {
+                            Text("Value (represented as JSON object) Size: 13 bytes")
+                                .foregroundColor(.white)
+                                .font(.subheadline)
+                            
+                            Picker("View as: ", selection: $jsonIndex) {
+                                ForEach(json.indices , id: \.self){ i in
+                                    Text(self.json[i])
+                                        .foregroundColor(.white)
+                                        .font(.subheadline)
+                                }
+                            }
+                            .frame(height: 25.0)
+                            .pickerStyle(.menu)
+                            
+                            
+                        }
+                        .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
+                        
                         Color.yellow
                             .frame(width: geometry.size.width / 2.0, height: geometry.size.height/2.0)
                     }
