@@ -42,6 +42,15 @@ extension View {
     }
 }
 
+extension NSTableView {
+  open override func viewDidMoveToWindow() {
+    super.viewDidMoveToWindow()
+    backgroundColor = NSColor.red
+    enclosingScrollView!.drawsBackground = false
+  }
+}
+
+
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var address : String = "0.0.0.0:2379"
