@@ -10,9 +10,9 @@ import SwiftUI
 
 /*
  Circle()
-     .fill(.red)
-     .frame(width: 44, height: 44, alignment: .center)
-     .overlay(Text("Hello").foregroundColor(.white))
+ .fill(.red)
+ .frame(width: 44, height: 44, alignment: .center)
+ .overlay(Text("Hello").foregroundColor(.white))
  */
 
 
@@ -22,7 +22,7 @@ extension View {
             Text(title)
                 .withDefaultContentTitle(fontColor: color,fontSize: fontSize)
         } icon: {
-           Image(systemName: "books.vertical.circle")
+            Image(systemName: "books.vertical.circle")
                 .withDefaultImage(foreColor: color, width: 22.0)
                 .padding(.leading,4.0)
                 .padding(.top,8.0)
@@ -36,20 +36,36 @@ extension View {
             
         } label: {
             Image(systemName: name)
-                 .withDefaultImage(foreColor: color, width: size)
+                .withDefaultImage(foreColor: color, width: size)
         }
         .buttonStyle(PlainButtonStyle())
     }
 }
 
 extension NSTableView {
-  open override func viewDidMoveToWindow() {
-    super.viewDidMoveToWindow()
-      backgroundColor = NSColor.clear.withAlphaComponent(0.35)
-    enclosingScrollView!.drawsBackground = false
-  }
+    open override func viewDidMoveToWindow() {
+        super.viewDidMoveToWindow()
+        backgroundColor = NSColor.clear.withAlphaComponent(0.35)
+        enclosingScrollView!.drawsBackground = false
+    }
 }
 
+
+struct SingleKVView: View {
+    var title: String
+    var body: some View {
+        HStack(alignment: .center, spacing: 8.0){
+            Image(systemName: "key.icloud")
+                .withDefaultImage(foreColor: .white,width: 18.0)
+            
+            Text(title)
+                .withDefaultSubContentTitle()
+            Spacer()
+        }
+        .frame(height:18.0)
+        .cornerRadius(3.0)
+    }
+}
 
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
@@ -60,15 +76,8 @@ struct ETCDKVContentView: View {
                     List{
                         Section {
                             ForEach(storeObj.all(),id: \.key) { item in
-                                HStack {
-                                    Image(systemName: "key.icloud")
-                                        .withDefaultImage(width: 18.0)
-                                    
-                                    Text(item.key)
-                                        .withDefaultSubContentTitle(fontColor: .white, fontSize: 13.0)
-                                    Spacer()
-                                }
-                                .frame(width:  geometry.size.width / 2.0, height: 44.0, alignment: .leading)
+                                SingleKVView(title: item.key)
+                                    .padding(4.0)
                             }
                         } header: {
                             HStack {
