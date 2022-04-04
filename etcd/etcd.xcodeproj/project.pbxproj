@@ -429,6 +429,7 @@
 				D032D0EC27DD87E00070A338 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */,
 				D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */,
+				5C0EA8CE27FB3A55002F58B8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 5C33942427DA1EBB00196D65 /* Products */;
 			projectDirPath = "";
@@ -840,6 +841,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C0EA8CE27FB3A55002F58B8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
