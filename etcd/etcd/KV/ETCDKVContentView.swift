@@ -8,6 +8,14 @@
 
 import SwiftUI
 
+/*
+ Circle()
+ .fill(.red)
+ .frame(width: 44, height: 44, alignment: .center)
+ .overlay(Text("Hello").foregroundColor(.white))
+ */
+
+
 extension View {
     func withDefaultHeaderLabelView(title: String,fontSize: CGFloat = 13,color: Color =  Color(hex: "#375B7E")) -> some View {
         Label {
@@ -44,7 +52,7 @@ extension View {
                 Text(title)
                     .font(.subheadline)
                     .foregroundColor(textColor)
-                    
+                
             }
         }
         .buttonStyle(PlainButtonStyle())
@@ -80,7 +88,7 @@ struct SingleKVView: View {
 
 struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
-    @State var jsonIndex: Int = 1
+    @State var jsonIndex: Int = 0
     @State var selecteItem:PairStore?
     let json = ["JSON","TEXT"]
     var body: some View {
@@ -131,7 +139,7 @@ struct ETCDKVContentView: View {
                             withDefaultVHImageButton(name: "highlighter", title: "write",size: 14.0)
                             withDefaultVHImageButton(name: "highlighter", title: "copy",size: 14.0)
                             withDefaultVHImageButton(name: "highlighter", title: "save",size: 14.0)
-                            .padding(.trailing,10.0)
+                                .padding(.trailing,10.0)
                         }
                         .frame(height: 44.0)
                         .cornerRadius(DefaultRadius)
@@ -139,15 +147,18 @@ struct ETCDKVContentView: View {
                         .padding(.trailing,15.0)
                         .padding(.bottom,15.0)
                         
-                        if jsonIndex == 1{
-                            Text( selecteItem!.value)
-                                .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+                        if ((selecteItem?.value.isEmpty) != nil) {
+                            if jsonIndex == 1{
+                                Text( selecteItem!.value)
+                                    .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+                            }else{
+                                Text("{\(selecteItem!.value)}")
+                                    .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+                            }
+                            
                         }else{
-                            Text("{\(selecteItem!.value)}")
-                                .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+                            EmptyView()
                         }
-                        
-                       
                     }
                     
                 }
