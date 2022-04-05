@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447A594042AF1247290FB8ED /* libPods-etcdTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4CC4298C1CE4B03DCD12C2 /* libPods-etcdTests.a */; };
 		5C0A764027F024A20094D510 /* ETCDKVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A763F27F024A20094D510 /* ETCDKVStore.swift */; };
 		5C0A764E27F034500094D510 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764B27F034500094D510 /* CarouselItemlView.swift */; };
 		5C0A764F27F034500094D510 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A764C27F034500094D510 /* Carousel.swift */; };
@@ -41,6 +42,8 @@
 		5CE89AF227ECB90B007E45B4 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AF127ECB90B007E45B4 /* AboutModel.swift */; };
 		5CE89AF427ECBBE1007E45B4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE89AF327ECBBE1007E45B4 /* Button.swift */; };
 		5CF9A40427DD945300E5366F /* ETCDOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9A40327DD945300E5366F /* ETCDOptionStore.swift */; };
+		96C911FEC2CF210D290429E6 /* libPods-etcd-etcdUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 481075CB129EB15EFC20ED5D /* libPods-etcd-etcdUITests.a */; };
+		B18BF16C552D9409B7D6DE32 /* libPods-etcd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2DF3AD8024FF72EA9BE2F5 /* libPods-etcd.a */; };
 		D002539F27F011D800890E71 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D002539E27F011D800890E71 /* AxisTabView */; };
 		D00253BA27F0515200890E71 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */; };
 		D00253BC27F0519200890E71 /* ETCDControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00253BB27F0519200890E71 /* ETCDControlView.swift */; };
@@ -69,6 +72,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09BFFF864CC501D549321393 /* Pods-etcd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcd.release.xcconfig"; path = "Target Support Files/Pods-etcd/Pods-etcd.release.xcconfig"; sourceTree = "<group>"; };
+		0C2DF3AD8024FF72EA9BE2F5 /* libPods-etcd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-etcd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4CC4298C1CE4B03DCD12C2 /* libPods-etcdTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-etcdTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1742CD867813CCEC853CEB2A /* Pods-etcd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcd.debug.xcconfig"; path = "Target Support Files/Pods-etcd/Pods-etcd.debug.xcconfig"; sourceTree = "<group>"; };
+		1EF9318A0CC130535A35F530 /* Pods-etcdTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdTests.release.xcconfig"; path = "Target Support Files/Pods-etcdTests/Pods-etcdTests.release.xcconfig"; sourceTree = "<group>"; };
+		2749322E2CB02FDA015F0A96 /* Pods-etcd-etcdUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcd-etcdUITests.release.xcconfig"; path = "Target Support Files/Pods-etcd-etcdUITests/Pods-etcd-etcdUITests.release.xcconfig"; sourceTree = "<group>"; };
+		481075CB129EB15EFC20ED5D /* libPods-etcd-etcdUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-etcd-etcdUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F03BBC9CFCD7B557262E230 /* Pods-etcd-etcdUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcd-etcdUITests.debug.xcconfig"; path = "Target Support Files/Pods-etcd-etcdUITests/Pods-etcd-etcdUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0A763F27F024A20094D510 /* ETCDKVStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVStore.swift; sourceTree = "<group>"; };
 		5C0A764B27F034500094D510 /* CarouselItemlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemlView.swift; sourceTree = "<group>"; };
 		5C0A764C27F034500094D510 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -108,6 +119,7 @@
 		5CE89AF127ECB90B007E45B4 /* AboutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
 		5CE89AF327ECBBE1007E45B4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5CF9A40327DD945300E5366F /* ETCDOptionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDOptionStore.swift; sourceTree = "<group>"; };
+		BC04B8DB3053C7427F4A3956 /* Pods-etcdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdTests.debug.xcconfig"; path = "Target Support Files/Pods-etcdTests/Pods-etcdTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D00253B927F0515200890E71 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
 		D00253BB27F0519200890E71 /* ETCDControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDControlView.swift; sourceTree = "<group>"; };
 		D00253BD27F051AB00890E71 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
@@ -124,6 +136,7 @@
 				D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */,
 				5C2F3A2427F0B2FE00BCAA96 /* MacosEtcd.framework in Frameworks */,
 				D002539F27F011D800890E71 /* AxisTabView in Frameworks */,
+				B18BF16C552D9409B7D6DE32 /* libPods-etcd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447A594042AF1247290FB8ED /* libPods-etcdTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C911FEC2CF210D290429E6 /* libPods-etcd-etcdUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +195,8 @@
 				5C33943727DA1EBB00196D65 /* etcdTests */,
 				5C33944127DA1EBB00196D65 /* etcdUITests */,
 				5C33942427DA1EBB00196D65 /* Products */,
+				8A584D49E79708A2E2B3B1A2 /* Pods */,
+				928158D78927DBBCA639A836 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,6 +347,30 @@
 			path = KV;
 			sourceTree = "<group>";
 		};
+		8A584D49E79708A2E2B3B1A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1742CD867813CCEC853CEB2A /* Pods-etcd.debug.xcconfig */,
+				09BFFF864CC501D549321393 /* Pods-etcd.release.xcconfig */,
+				4F03BBC9CFCD7B557262E230 /* Pods-etcd-etcdUITests.debug.xcconfig */,
+				2749322E2CB02FDA015F0A96 /* Pods-etcd-etcdUITests.release.xcconfig */,
+				BC04B8DB3053C7427F4A3956 /* Pods-etcdTests.debug.xcconfig */,
+				1EF9318A0CC130535A35F530 /* Pods-etcdTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		928158D78927DBBCA639A836 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C2DF3AD8024FF72EA9BE2F5 /* libPods-etcd.a */,
+				481075CB129EB15EFC20ED5D /* libPods-etcd-etcdUITests.a */,
+				0E4CC4298C1CE4B03DCD12C2 /* libPods-etcdTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,6 +378,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C33944827DA1EBB00196D65 /* Build configuration list for PBXNativeTarget "etcd" */;
 			buildPhases = (
+				9AC080E6BAF71B3F3D14C1DB /* [CP] Check Pods Manifest.lock */,
 				5C33941F27DA1EBB00196D65 /* Sources */,
 				5C33942027DA1EBB00196D65 /* Frameworks */,
 				5C33942127DA1EBB00196D65 /* Resources */,
@@ -359,6 +401,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C33944B27DA1EBB00196D65 /* Build configuration list for PBXNativeTarget "etcdTests" */;
 			buildPhases = (
+				63D78FBFC520F9114690E4BB /* [CP] Check Pods Manifest.lock */,
 				5C33943027DA1EBB00196D65 /* Sources */,
 				5C33943127DA1EBB00196D65 /* Frameworks */,
 				5C33943227DA1EBB00196D65 /* Resources */,
@@ -377,6 +420,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C33944E27DA1EBB00196D65 /* Build configuration list for PBXNativeTarget "etcdUITests" */;
 			buildPhases = (
+				BD1098CF43D78571890B4A8D /* [CP] Check Pods Manifest.lock */,
 				5C33943A27DA1EBB00196D65 /* Sources */,
 				5C33943B27DA1EBB00196D65 /* Frameworks */,
 				5C33943C27DA1EBB00196D65 /* Resources */,
@@ -427,9 +471,8 @@
 			mainGroup = 5C33941A27DA1EBB00196D65;
 			packageReferences = (
 				D032D0EC27DD87E00070A338 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
-				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */,
+				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView.git" */,
 				D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */,
-				5C0EA8CE27FB3A55002F58B8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 5C33942427DA1EBB00196D65 /* Products */;
 			projectDirPath = "";
@@ -467,6 +510,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63D78FBFC520F9114690E4BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etcdTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC080E6BAF71B3F3D14C1DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etcd-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD1098CF43D78571890B4A8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etcd-etcdUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C33941F27DA1EBB00196D65 /* Sources */ = {
@@ -659,6 +771,7 @@
 		};
 		5C33944927DA1EBB00196D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1742CD867813CCEC853CEB2A /* Pods-etcd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -694,6 +807,7 @@
 		};
 		5C33944A27DA1EBB00196D65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09BFFF864CC501D549321393 /* Pods-etcd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -729,6 +843,7 @@
 		};
 		5C33944C27DA1EBB00196D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC04B8DB3053C7427F4A3956 /* Pods-etcdTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -748,6 +863,7 @@
 		};
 		5C33944D27DA1EBB00196D65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EF9318A0CC130535A35F530 /* Pods-etcdTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -767,6 +883,7 @@
 		};
 		5C33944F27DA1EBB00196D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F03BBC9CFCD7B557262E230 /* Pods-etcd-etcdUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -784,6 +901,7 @@
 		};
 		5C33945027DA1EBB00196D65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2749322E2CB02FDA015F0A96 /* Pods-etcd-etcdUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -841,14 +959,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C0EA8CE27FB3A55002F58B8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
@@ -865,7 +975,7 @@
 				version = 1.0.4;
 			};
 		};
-		D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+		D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
 			requirement = {
@@ -888,7 +998,7 @@
 		};
 		D08615CE27E5BE76000BE9E1 /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */;
+			package = D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView.git" */;
 			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */

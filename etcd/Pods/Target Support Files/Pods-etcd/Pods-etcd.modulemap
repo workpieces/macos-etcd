@@ -1,0 +1,6 @@
+module Pods_etcd {
+  umbrella header "Pods-etcd-umbrella.h"
+
+  export *
+  module * { export * }
+}
