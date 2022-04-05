@@ -46,13 +46,12 @@ extension View {
             
         } label: {
             VStack(alignment: .center, spacing: 2.0) {
-                Image(systemName: name)
+                Image(name)
                     .withDefaultImage(foreColor: color, width: size)
                 
                 Text(title)
                     .font(.subheadline)
                     .foregroundColor(textColor)
-                
             }
         }
         .buttonStyle(PlainButtonStyle())
@@ -136,9 +135,9 @@ struct ETCDKVContentView: View {
                             
                             Spacer()
                             
-                            withDefaultVHImageButton(name: "highlighter", title: "write",size: 14.0)
-                            withDefaultVHImageButton(name: "highlighter", title: "copy",size: 14.0)
-                            withDefaultVHImageButton(name: "highlighter", title: "save",size: 14.0)
+                            withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
+                            withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0)
+                            withDefaultVHImageButton(name: "save", title: "save",size: 14.0)
                                 .padding(.trailing,10.0)
                         }
                         .frame(height: 44.0)
@@ -157,6 +156,7 @@ struct ETCDKVContentView: View {
                             }
                             
                         }else{
+                            Spacer()
                             EmptyView()
                         }
                     }
