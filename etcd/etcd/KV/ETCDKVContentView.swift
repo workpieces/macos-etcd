@@ -91,7 +91,7 @@ struct ETCDKVContentView: View {
     @State var selecteItem:PairStore?
     let json = ["JSON","TEXT"]
     
-    fileprivate func TextFunction(_ string: String? ,_ geometry:GeometryProxy) -> some View {
+    fileprivate func TextContentView(_ string: String? ,_ geometry:GeometryProxy) -> some View {
         return Text(string ?? "")
             .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
             .foregroundColor(.white)
@@ -155,12 +155,12 @@ struct ETCDKVContentView: View {
                         
                         if ((selecteItem?.value.isEmpty) != nil) {
                             if jsonIndex == 1{
-                                TextFunction(selecteItem!.value,geometry)
+                                TextContentView(selecteItem!.value,geometry)
                             }else{
                                 
                                 let representation  = selecteItem?.toJSON();
                                 let string = JSON(representation!).rawString()
-                                TextFunction(string,geometry)
+                                TextContentView(string,geometry)
                             }
                             
                         }else{
