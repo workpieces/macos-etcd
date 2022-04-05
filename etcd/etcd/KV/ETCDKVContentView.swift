@@ -42,19 +42,14 @@ extension View {
     }
     
     func withDefaultVHImageButton(name: String, title: String,textColor: Color = .white,color: Color = .white,size: CGFloat = 13) -> some View {
-        Button {
+        VStack(alignment: .center, spacing: 2.0) {
+            Image(name)
+                .withDefaultImage(foreColor: color, width: size)
             
-        } label: {
-            VStack(alignment: .center, spacing: 2.0) {
-                Image(name)
-                    .withDefaultImage(foreColor: color, width: size)
-                
-                Text(title)
-                    .font(.subheadline)
-                    .foregroundColor(textColor)
-            }
+            Text(title)
+                .font(.subheadline)
+                .foregroundColor(textColor)
         }
-        .buttonStyle(PlainButtonStyle())
     }
 }
 
@@ -91,7 +86,7 @@ struct ETCDKVContentView: View {
     @State var selecteItem:PairStore?
     let json = ["JSON","TEXT"]
     
-    fileprivate func TextContentView(_ string: String? ,_ geometry:GeometryProxy) -> some View {
+    fileprivate   func TextContentView(_ string: String? ,_ geometry:GeometryProxy) -> some View {
         return Text(string ?? "")
             .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
             .foregroundColor(.white)
@@ -143,7 +138,18 @@ struct ETCDKVContentView: View {
                             Spacer()
                             
                             withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
-                            withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0)
+                            withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0).onTapGesture {
+                                var text = ""
+                                if jsonIndex == 1{
+                                    text = selecteItem!.value
+                                }else{
+                                    let representation  = selecteItem?.toJSON();
+                                    text = JSON(representation!).rawString()!
+                                }
+                                let pasteboard = NSPasteboard.general
+                                pasteboard.declareTypes([.string], owner: nil)
+                                pasteboard.setString(text, forType: .string)
+                            }
                             withDefaultVHImageButton(name: "save", title: "save",size: 14.0)
                                 .padding(.trailing,10.0)
                         }
