@@ -90,6 +90,13 @@ struct ETCDKVContentView: View {
     @State var jsonIndex: Int = 0
     @State var selecteItem:PairStore?
     let json = ["JSON","TEXT"]
+    
+    fileprivate func TextFunction(_ string: String? ,_ geometry:GeometryProxy) -> some View {
+        return Text(string ?? "")
+            .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+            .foregroundColor(.white)
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -148,14 +155,12 @@ struct ETCDKVContentView: View {
                         
                         if ((selecteItem?.value.isEmpty) != nil) {
                             if jsonIndex == 1{
-                                Text( selecteItem!.value)
-                                    .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+                                TextFunction(selecteItem!.value,geometry)
                             }else{
                                 
                                 let representation  = selecteItem?.toJSON();
                                 let string = JSON(representation!).rawString()
-                                Text(string ?? "")
-                                    .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
+                                TextFunction(string,geometry)
                             }
                             
                         }else{
