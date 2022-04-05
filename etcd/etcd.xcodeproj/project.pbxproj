@@ -357,7 +357,6 @@
 				BC04B8DB3053C7427F4A3956 /* Pods-etcdTests.debug.xcconfig */,
 				1EF9318A0CC130535A35F530 /* Pods-etcdTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -471,7 +470,7 @@
 			mainGroup = 5C33941A27DA1EBB00196D65;
 			packageReferences = (
 				D032D0EC27DD87E00070A338 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
-				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView.git" */,
+				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */,
 				D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 			);
 			productRefGroup = 5C33942427DA1EBB00196D65 /* Products */;
@@ -782,7 +781,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"etcd/Preview Content\"";
-				DEVELOPMENT_TEAM = 3NJC3EGBWR;
+				DEVELOPMENT_TEAM = 93C2552H5C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -818,7 +817,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"etcd/Preview Content\"";
-				DEVELOPMENT_TEAM = 3NJC3EGBWR;
+				DEVELOPMENT_TEAM = 93C2552H5C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -975,7 +974,7 @@
 				version = 1.0.4;
 			};
 		};
-		D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView.git" */ = {
+		D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
 			requirement = {
@@ -998,7 +997,7 @@
 		};
 		D08615CE27E5BE76000BE9E1 /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView.git" */;
+			package = D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */

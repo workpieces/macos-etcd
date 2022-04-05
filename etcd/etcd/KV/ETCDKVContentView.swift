@@ -90,7 +90,6 @@ struct ETCDKVContentView: View {
     @State var jsonIndex: Int = 0
     @State var selecteItem:PairStore?
     let json = ["JSON","TEXT"]
-    var js = JSON
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -152,7 +151,10 @@ struct ETCDKVContentView: View {
                                 Text( selecteItem!.value)
                                     .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
                             }else{
-                                Text(JSON)
+                                
+                                let representation  = selecteItem?.toJSON();
+                                let string = JSON(representation!).rawString()
+                                Text(string ?? "")
                                     .frame(minWidth: geometry.size.width / 2.0, maxWidth: .infinity, maxHeight: .infinity)
                             }
                             
