@@ -32,13 +32,8 @@ extension View {
     }
     
     func withDefaultOnlyImageButton(name: String, color: Color = Color(hex: "#375B7E") ,size: CGFloat = 13) -> some View {
-        Button {
-            
-        } label: {
-            Image(systemName: name)
-                .withDefaultImage(foreColor: color, width: size)
-        }
-        .buttonStyle(PlainButtonStyle())
+        Image(systemName: name)
+            .withDefaultImage(foreColor: color, width: size)
     }
     
     func withDefaultVHImageButton(name: String, title: String,textColor: Color = .white,color: Color = .white,size: CGFloat = 13) -> some View {

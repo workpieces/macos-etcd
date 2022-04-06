@@ -52,6 +52,7 @@
 		D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D032D0ED27DD87E00070A338 /* NavigationStack */; };
 		D07985D027F9CFCB002D5307 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07985CF27F9CFCB002D5307 /* ETCDKVContentView.swift */; };
 		D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D08615CE27E5BE76000BE9E1 /* PopupView */; };
+		D098F9E727FD2F3B00502414 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D098F9E627FD2F3B00502414 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D098F9E727FD2F3B00502414 /* SwiftyJSON in Frameworks */,
 				D08615CF27E5BE76000BE9E1 /* PopupView in Frameworks */,
 				D032D0EE27DD87E00070A338 /* NavigationStack in Frameworks */,
 				5C2F3A2427F0B2FE00BCAA96 /* MacosEtcd.framework in Frameworks */,
@@ -391,6 +393,7 @@
 				D032D0ED27DD87E00070A338 /* NavigationStack */,
 				D08615CE27E5BE76000BE9E1 /* PopupView */,
 				D002539E27F011D800890E71 /* AxisTabView */,
+				D098F9E627FD2F3B00502414 /* SwiftyJSON */,
 			);
 			productName = etcd;
 			productReference = 5C33942327DA1EBB00196D65 /* etcd.app */;
@@ -472,6 +475,7 @@
 				D032D0EC27DD87E00070A338 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */,
 				D002539D27F011D700890E71 /* XCRemoteSwiftPackageReference "AxisTabView" */,
+				D098F9E527FD2F3B00502414 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 5C33942427DA1EBB00196D65 /* Products */;
 			projectDirPath = "";
@@ -982,6 +986,15 @@
 				version = 1.0.7;
 			};
 		};
+		D098F9E527FD2F3B00502414 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -999,6 +1012,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D08615CD27E5BE76000BE9E1 /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
+		};
+		D098F9E627FD2F3B00502414 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D098F9E527FD2F3B00502414 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
