@@ -35,15 +35,15 @@ struct CardItemView: View {
                         title: Text("Want to modify etcd service data?"),
                         message: Text("The connection to the server was lost."),
                         primaryButton: .default(
-                            Text("Edit"),
-                            action: {
-                                self.pushEdit.toggle()
-                            }
-                        ),
-                        secondaryButton: .destructive(
                             Text("Delete"),
                             action: {
                                 self.homeData.Delete(id:self.homeData.GetUUID(idx: idx))
+                            }
+                        ),
+                        secondaryButton: .destructive(
+                            Text("Cancle"),
+                            action: {
+                             
                             }
                         )
                     )

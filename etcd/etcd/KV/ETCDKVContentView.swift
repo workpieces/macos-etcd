@@ -104,10 +104,9 @@ struct ETCDKVContentView: View {
                             HStack {
                                 withDefaultHeaderLabelView(title: storeObj.address)
                                 Spacer()
-                                withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
-                                withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
-                                withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
-                                withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
+//                                withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
+//                                withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
+//                                withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
                             }
                         }
                     }
@@ -132,7 +131,7 @@ struct ETCDKVContentView: View {
                             
                             Spacer()
                             
-                            withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
+//                            withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
                             withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0).onTapGesture {
                                 var text = ""
                                 if jsonIndex == 1{
@@ -145,7 +144,7 @@ struct ETCDKVContentView: View {
                                 pasteboard.declareTypes([.string], owner: nil)
                                 pasteboard.setString(text, forType: .string)
                             }
-                            withDefaultVHImageButton(name: "save", title: "save",size: 14.0)
+//                            withDefaultVHImageButton(name: "save", title: "save",size: 14.0)
                                 .padding(.trailing,10.0)
                         }
                         .frame(height: 44.0)
