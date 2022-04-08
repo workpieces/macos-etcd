@@ -21,9 +21,9 @@ struct AboutView: View {
             
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
-                    CarouselView(items: $items,second: 10).frame(height: 200.0)
-                        .cornerRadius(DefaultRadius)
-                        .padding()
+//                    CarouselView(items: $items,second: 10).frame(height: 200.0)
+//                        .cornerRadius(DefaultRadius)
+//                        .padding()
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(abouts) { item in
                             ZStack {
