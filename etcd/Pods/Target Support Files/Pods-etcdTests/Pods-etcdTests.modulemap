@@ -1,6 +1,0 @@
-framework module Pods_etcdTests {
-  umbrella header "Pods-etcdTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

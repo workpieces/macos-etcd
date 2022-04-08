@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "axistabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisTabView",
+      "state" : {
+        "revision" : "5677e874634a2ccf890a1a5ed9258b4d5d9a3d7a",
+        "version" : "0.5.1"
+      }
+    },
+    {
+      "identity" : "popupview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/PopupView.git",
+      "state" : {
+        "revision" : "77c04cef5651a07ab795f8b4edeb39cb231b2411",
+        "version" : "1.0.7"
+      }
+    },
+    {
+      "identity" : "swiftui-navigation-stack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/matteopuc/swiftui-navigation-stack",
+      "state" : {
+        "revision" : "be0db68ed0d84ed543bf8f7600a1f84de015f753",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON",
+      "state" : {
+        "revision" : "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+        "version" : "5.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
