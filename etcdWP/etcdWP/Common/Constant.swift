@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 // 本软件名称
-let MacEtcdName = "ETCDWP"
+let MacEtcdName = "etcdWP"
 
 // logo 名称
 let MacosLogoName = "logo"
