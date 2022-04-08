@@ -21,16 +21,13 @@ struct MiddleClientCreateView: View {
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.white)
                     .bold().font(.headline)
-                
                 HStack {
                     Text("v3.14")
                         .font(.system(size: 12.0, weight: .semibold))
                         .padding(.leading,10.0)
                         .frame(height: 22.0)
                     Spacer()
-                }
-                .cornerRadius(10.0)
-                .background(.white)
+                }.background(Color.white.cornerRadius(8))
             }
             .frame(maxWidth: 260)
             
@@ -46,11 +43,9 @@ struct MiddleClientCreateView: View {
                     text: $endpoints)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-                .border(Color.gray)
                 .font(.system(size: 12.0, weight: .semibold))
                 .foregroundColor(Color(hex: "#375B7E"))
-                .textFieldStyle(.roundedBorder)
-            }
+            }.cornerRadius(8)
             .frame(maxWidth: 260)
             
             if protocalSelection == 1 {
@@ -97,11 +92,10 @@ struct MiddleClientCreateView: View {
                     text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-                .border(Color.gray)
                 .font(.system(size: 12.0, weight: .semibold))
                 .foregroundColor(Color(hex: "#375B7E"))
-                .textFieldStyle(.roundedBorder)
-            }
+
+            }.cornerRadius(8)
             .frame(maxWidth: 260)
             
             
@@ -116,11 +110,10 @@ struct MiddleClientCreateView: View {
                     value:$dialTimeout,format: .number)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-                .border(Color.gray)
                 .font(.system(size: 12.0, weight: .semibold))
                 .foregroundColor(Color(hex: "#375B7E"))
-                .textFieldStyle(.roundedBorder)
-            }
+
+            }.cornerRadius(8)
             .frame(maxWidth: 260)
         }
     }

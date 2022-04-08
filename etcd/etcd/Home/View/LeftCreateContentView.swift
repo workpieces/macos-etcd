@@ -23,12 +23,10 @@ struct EtcdClientTimeTextFiledView: View {
                 value:$value,format: .number)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .disableAutocorrection(true)
-            .border(Color.gray)
             .font(.system(size: 12.0, weight: .semibold))
             .foregroundColor(Color(hex: "#375B7E"))
-            .textFieldStyle(.roundedBorder)
-        }
-        .frame(maxWidth: 260)
+        }.cornerRadius(8)
+         .frame(maxWidth: 260,minHeight:44)
     }
 }
 
@@ -47,17 +45,14 @@ struct LeftCreateContentView: View {
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.white)
                     .bold().font(.headline)
-                
                 TextField(
                     "Client Name",
                     text: $clientName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-                .border(Color.gray)
                 .font(.system(size: 12.0, weight: .semibold))
                 .foregroundColor(Color(hex: "#375B7E"))
-                .textFieldStyle(.roundedBorder)
-            }
+            }.cornerRadius(8)
             .frame(maxWidth: 260)
             
             
@@ -124,11 +119,9 @@ struct LeftCreateContentView: View {
                     text: $username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-                .border(Color.gray)
                 .font(.system(size: 12.0, weight: .semibold))
                 .foregroundColor(Color(hex: "#375B7E"))
-                .textFieldStyle(.roundedBorder)
-            }
+            }.cornerRadius(8)
             .frame(maxWidth: 260)
             
             
@@ -143,11 +136,9 @@ struct LeftCreateContentView: View {
                     value:$requestTimeout,format: .number)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
-                .border(Color.gray)
                 .font(.system(size: 12.0, weight: .semibold))
                 .foregroundColor(Color(hex: "#375B7E"))
-                .textFieldStyle(.roundedBorder)
-            }
+            }.cornerRadius(8)
             .frame(maxWidth: 260)
         }
     }
