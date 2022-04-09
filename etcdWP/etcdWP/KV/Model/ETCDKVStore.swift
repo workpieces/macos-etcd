@@ -10,6 +10,11 @@ import SwiftUI
 struct PairStore: Codable {
     var key: String
     var value: String
+    var create_revision: String
+    var mod_revision: String
+    var version: String
+    var size: Int
+    var pairs: [PairStore]? = nil
 }
 
 extension PairStore {
