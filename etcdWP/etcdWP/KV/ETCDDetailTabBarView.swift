@@ -19,8 +19,8 @@ struct ETCDDetailTabBarView: View {
                 ATBasicStyle(state, color:Color(hex: "#375B7E"))
             } content: {
                 ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 0, systemName: "antenna.radiowaves.left.and.right",systemTitle:"KV" ,safeArea: proxy.safeAreaInsets)
-//                ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 1, systemName: "lock.icloud.fill",systemTitle:"Authorize", safeArea: proxy.safeAreaInsets)
-//                ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 2, systemName: "person.3",systemTitle:"Members", safeArea: proxy.safeAreaInsets)
+                ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 1, systemName: "lock.icloud.fill",systemTitle:"Authorize", safeArea: proxy.safeAreaInsets)
+                ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 2, systemName: "person.3",systemTitle:"Members", safeArea: proxy.safeAreaInsets)
             }
         }
         .animation(.easeInOut, value: constant)

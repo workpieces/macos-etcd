@@ -102,8 +102,10 @@ struct ETCDKVContentView: View {
                             }
                         } header: {
                             HStack {
+
                                 withDefaultHeaderLabelView(title: storeObj.address)
                                 Spacer()
+                                withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
                                 withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
                                 withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
                                 withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
