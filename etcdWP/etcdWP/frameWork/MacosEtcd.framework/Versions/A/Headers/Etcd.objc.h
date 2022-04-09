@@ -23,6 +23,7 @@
 - (NSData* _Nullable)all:(NSError* _Nullable* _Nullable)error;
 - (BOOL)authEnable:(BOOL)enable error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)authGrant:(NSString* _Nullable)user role:(NSString* _Nullable)role error:(NSError* _Nullable* _Nullable)error;
+- (NSData* _Nullable)chidren:(NSError* _Nullable* _Nullable)error;
 - (BOOL)close:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)clusterStatus:(NSError* _Nullable* _Nullable)error;
 - (BOOL)delete:(NSString* _Nullable)key error:(NSError* _Nullable* _Nullable)error;
