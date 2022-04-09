@@ -135,6 +135,11 @@ struct ETCDKVContentView: View {
                             
                             withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
                             withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0).onTapGesture {
+                                
+                                guard selecteItem != nil else{
+                                    return
+                                }
+                                
                                 var text = ""
                                 if jsonIndex == 1{
                                     text = selecteItem!.value
