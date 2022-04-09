@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C65B4D52801276700130117 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C65B4D42801276700130117 /* MacosEtcd.framework */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46928006EAA0068CBB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46828006EAA0068CBB3 /* ContentView.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		D00ED49628006F490068CBB3 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49528006F490068CBB3 /* PopupView */; };
 		D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49828006F600068CBB3 /* AxisTabView */; };
 		D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49B28006F6E0068CBB3 /* SwiftyJSON */; };
-		D00ED4A028006FD90068CBB3 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00ED49F28006FD90068CBB3 /* MacosEtcd.framework */; };
 		D00ED4A42800702E0068CBB3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4A22800702E0068CBB3 /* AboutView.swift */; };
 		D00ED4A52800702E0068CBB3 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4A32800702E0068CBB3 /* AboutModel.swift */; };
 		D00ED4A8280070410068CBB3 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4A7280070400068CBB3 /* AuthView.swift */; };
@@ -71,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C65B4D42801276700130117 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D00ED46828006EAA0068CBB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		D00ED48228006EAC0068CBB3 /* etcdWPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPUITests.swift; sourceTree = "<group>"; };
 		D00ED48428006EAC0068CBB3 /* etcdWPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D00ED49D28006F900068CBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D00ED49F28006FD90068CBB3 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED4A22800702E0068CBB3 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D00ED4A32800702E0068CBB3 /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
 		D00ED4A7280070400068CBB3 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */,
-				D00ED4A028006FD90068CBB3 /* MacosEtcd.framework in Frameworks */,
+				5C65B4D52801276700130117 /* MacosEtcd.framework in Frameworks */,
 				D00ED49328006F350068CBB3 /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +218,7 @@
 		D00ED49E28006FD90068CBB3 /* frameWork */ = {
 			isa = PBXGroup;
 			children = (
-				D00ED49F28006FD90068CBB3 /* MacosEtcd.framework */,
+				5C65B4D42801276700130117 /* MacosEtcd.framework */,
 			);
 			path = frameWork;
 			sourceTree = "<group>";
