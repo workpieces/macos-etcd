@@ -10,9 +10,9 @@ import SwiftUI
 struct PairStore: Codable {
     var key: String
     var value: String
-//    var create_revision: String
-//    var mod_revision: String?
-//    var version: String?
+    var create_revision: Int64
+    var mod_revision: Int64
+    var version: Int64
     var pairs: [PairStore]?
 }
 
@@ -20,7 +20,7 @@ extension PairStore {
     func toJSON() -> Dictionary<String, String> {
         return [
             "key": self.key,
-            "value": self.value
+            "value": self.value,
         ]
     }
 }
