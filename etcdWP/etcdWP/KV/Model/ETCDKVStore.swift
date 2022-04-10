@@ -8,8 +8,8 @@
 import SwiftUI
 
 import ObjectMapper
-struct PairStore:Codable,Mappable {
-
+struct PairStore:Codable,Mappable,Identifiable {
+    var id : String?
     var key: String
     var value: String
     var create_revision: Int64?
@@ -24,6 +24,7 @@ struct PairStore:Codable,Mappable {
          self.mod_revision = try? map.value("mod_revision")
          self.version = try? map.value("version")
          self.pairs = try? map.value("pairs")
+         self.id = UUID().uuidString
     }
     mutating func mapping(map: Map) {
         key                 <- map["key"]
@@ -32,6 +33,7 @@ struct PairStore:Codable,Mappable {
         mod_revision           <- map["mod_revision"]
         version           <- map["version"]
         pairs            <- map["pairs"]
+        id = UUID().uuidString
     }
     
 
