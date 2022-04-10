@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import AppKit
 import NavigationStack
 
 var screen = NSScreen.main!.visibleFrame
 
 struct ETCDHomeContentView: View {
     @StateObject var homeData = HomeViewModel.init()
+    let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {
         return  NavigationStackView(transitionType: .custom(.opacity)){
             HStack{
@@ -51,6 +53,10 @@ struct ETCDHomeContentView: View {
         .frame(minWidth: screen.width/1.7, minHeight: screen.height/1.2)
         .background(Color(hex: "#375B7E"))
         .navigationViewStyle(.automatic)
+        .onReceive(closePublisher) { _ in
+            print("Application will Terminate Notification")
+            self.homeData.ectdClientList.removeAll()
+        }
     }
 }
 
