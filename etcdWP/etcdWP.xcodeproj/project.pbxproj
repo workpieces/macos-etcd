@@ -51,6 +51,7 @@
 		D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D4280070730068CBB3 /* ETCDControlView.swift */; };
 		D00ED4EB280070730068CBB3 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D5280070730068CBB3 /* ETCDKVContentView.swift */; };
 		D00ED4EC280070730068CBB3 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D7280070730068CBB3 /* MembersView.swift */; };
+		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */,
@@ -364,6 +366,7 @@
 				D00ED49528006F490068CBB3 /* PopupView */,
 				D00ED49828006F600068CBB3 /* AxisTabView */,
 				D00ED49B28006F6E0068CBB3 /* SwiftyJSON */,
+				D07D78692802827500F72CF7 /* ObjectMapper */,
 			);
 			productName = etcdWP;
 			productReference = D00ED46328006EAA0068CBB3 /* etcdWP.app */;
@@ -442,6 +445,7 @@
 				D00ED49428006F490068CBB3 /* XCRemoteSwiftPackageReference "PopupView" */,
 				D00ED49728006F600068CBB3 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D00ED49A28006F6E0068CBB3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
 			productRefGroup = D00ED46428006EAA0068CBB3 /* Products */;
 			projectDirPath = "";
@@ -880,6 +884,14 @@
 				version = 5.0.1;
 			};
 		};
+		D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -902,6 +914,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D00ED49A28006F6E0068CBB3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		D07D78692802827500F72CF7 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
