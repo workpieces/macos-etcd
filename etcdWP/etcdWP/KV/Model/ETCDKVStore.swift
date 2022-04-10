@@ -8,7 +8,7 @@
 import SwiftUI
 
 import ObjectMapper
-struct PairStore:Codable,Mappable,Identifiable {
+struct PairStore:Codable,Mappable,Identifiable,Hashable {
     var id : String?
     var key: String
     var value: String

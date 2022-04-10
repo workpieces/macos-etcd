@@ -11,7 +11,6 @@ import MacosEtcd
 class ItemStore: ObservableObject {
     @Published var c : EtcdKVClient?
     @Published var address: String
-    
     init(c: EtcdKVClient?,address: String) {
         self.c  = c
         self.address = address
@@ -37,17 +36,17 @@ class ItemStore: ObservableObject {
         }
     }
     
-    func children() -> PairStore? {
+    func children() -> [PairStore]? {
         do {
             let data = try? c?.children()
             if ((data?.isEmpty) != nil) {
                 let pairs = try JSONDecoder().decode(PairStore.self, from: data!)
-                return pairs
+                return  [pairs]
             }
-            return nil
+            return []
         } catch  {
             print(error)
-            return nil
+            return []
         }
     }
     

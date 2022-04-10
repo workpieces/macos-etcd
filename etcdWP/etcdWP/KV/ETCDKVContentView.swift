@@ -61,7 +61,7 @@ struct SingleKVView: View {
     var title: String
     var body: some View {
         HStack(alignment: .center, spacing: 8.0){
-            Image(systemName: "key.icloud")
+            Image(systemName: "folder")
                 .withDefaultImage(foreColor: .white,width: 18.0)
             
             Text(title)
@@ -79,6 +79,7 @@ struct ETCDKVContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State var jsonIndex: Int = 0
     @State var selecteItem:PairStore?
+    @State var items:[PairStore]
     let json = ["JSON","TEXT"]
     
     fileprivate   func TextContentView(_ string: String? ,_ geometry:GeometryProxy) -> some View {
@@ -91,29 +92,26 @@ struct ETCDKVContentView: View {
         GeometryReader { geometry in
             ZStack {
                 HStack {
-                    List{
-                        Section {
-                            ForEach(storeObj.all(),id: \.key) { item in
-                                SingleKVView(title: item.key)
-                                    .padding(4.0)
-                                    .onTapGesture{
-                                        self.selecteItem  = item
-                                    }
-                            }
-                        } header: {
-                            HStack {
-
-                                withDefaultHeaderLabelView(title: storeObj.address)
-                                Spacer()
-                                withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
-                                withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
-                                withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
-                                withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
-                            }
+                    VStack{
+                        HStack {
+                            withDefaultHeaderLabelView(title: storeObj.address)
+                            Spacer()
+                            withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
+                            withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
+                            withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
+                            withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
                         }
+                        .frame(width:  geometry.size.width / 2.0, height: 44)
+                        List(items, id: \.self ,children:\.pairs){ item in
+                            SingleKVView(title: item.key)
+                                .padding(4.0)
+                                .onTapGesture{
+                                    self.selecteItem  = item
+                                }
+                        }
+                        .frame(width: geometry.size.width / 2.0, height: geometry.size.height - 44)
+                        
                     }
-                    .frame(width: geometry.size.width / 2.0, height: geometry.size.height)
-                    
                     VStack {
                         HStack {
                             Text("Value Size: 13 bytes")
