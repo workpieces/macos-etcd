@@ -54,6 +54,7 @@ struct ETCDHomeContentView: View {
         .background(Color(hex: "#375B7E"))
         .navigationViewStyle(.automatic)
         .onReceive(closePublisher) { _ in
+            print("Application will Terminate Notification")
             self.homeData.ectdClientList.removeAll()
         }
     }
