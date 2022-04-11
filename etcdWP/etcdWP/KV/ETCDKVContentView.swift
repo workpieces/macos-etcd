@@ -63,7 +63,6 @@ struct SingleKVView: View {
         HStack(alignment: .center, spacing: 8.0){
             Image(systemName: "folder")
                 .withDefaultImage(foreColor: .white,width: 18.0)
-            
             Text(title)
                 .withDefaultSubContentTitle()
             Spacer()
@@ -108,7 +107,8 @@ struct ETCDKVContentView: View {
                                 .onTapGesture{
                                     self.selecteItem  = item
                                 }
-                        }
+                        }.listStyle(PlainListStyle())
+                            .background(Color.clear)
                         .frame(width: geometry.size.width / 2.0, height: geometry.size.height - 44)
                         
                     }
