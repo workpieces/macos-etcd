@@ -51,7 +51,7 @@ extension View {
 extension NSTableView {
     open override func viewDidMoveToWindow() {
         super.viewDidMoveToWindow()
-        backgroundColor = NSColor.clear.withAlphaComponent(0.35)
+        backgroundColor = NSColor.clear.withAlphaComponent(0)
         enclosingScrollView!.drawsBackground = false
     }
 }

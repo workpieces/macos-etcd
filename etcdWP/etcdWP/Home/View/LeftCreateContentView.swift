@@ -20,7 +20,7 @@ struct EtcdClientTimeTextFiledView: View {
             
             TextField(
                 place,
-                value:$value,format: .number)
+                value:$value,formatter:NumberFormatter())
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .disableAutocorrection(true)
             .font(.system(size: 12.0, weight: .semibold))
@@ -133,7 +133,7 @@ struct LeftCreateContentView: View {
                 
                 TextField(
                     "Request Timeout",
-                    value:$requestTimeout,format: .number)
+                    value:$requestTimeout,formatter: NumberFormatter())
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
                 .font(.system(size: 12.0, weight: .semibold))

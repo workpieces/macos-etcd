@@ -21,8 +21,8 @@ struct EtcdClientOption: Identifiable,Codable {
     var dialKeepAliveTime: Int = 5
     var dialKeepAliveTimeout: Int = 3
     var autoSyncInterval:Int = 3
-    var createAt: Date = Date.now
-    var updateAt: Date = Date.now
+    var createAt: Date = Date()
+    var updateAt: Date = Date()
     var status: Bool = false
     @NotCoded var etcdClient: EtcdKVClient?
 }

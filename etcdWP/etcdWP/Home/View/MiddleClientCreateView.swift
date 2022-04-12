@@ -107,7 +107,7 @@ struct MiddleClientCreateView: View {
                 
                 TextField(
                     "Dial Timeout",
-                    value:$dialTimeout,format: .number)
+                    value:$dialTimeout, formatter: NumberFormatter())
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .disableAutocorrection(true)
                 .font(.system(size: 12.0, weight: .semibold))

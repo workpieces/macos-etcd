@@ -21,7 +21,7 @@ struct TopToastView: View {
             }
             .padding()
         }
-        .background(.red)
+        .background(Color.red)
         .frame(height: 50.0)
     }
 }

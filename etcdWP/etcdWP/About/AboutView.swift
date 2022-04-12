@@ -53,14 +53,14 @@ struct AboutView: View {
                                         Text("Download")
                                             .withDefaultContentTitle(fontColor: .white)
                                             .padding(.all,DefaultSpacePadding)
-                                            .background(.orange)
+                                            .background(Color.orange)
                                             .cornerRadius(10.0)
                                             .offset(y: DefaultSpacePadding)
                                     case .Documentation:
                                         Text("Documentation")
                                             .withDefaultContentTitle(fontColor: .white)
                                             .padding(.all,DefaultSpacePadding)
-                                            .background(.orange)
+                                            .background(Color.orange)
                                             .cornerRadius(10.0)
                                             .offset(y: DefaultSpacePadding)
                                     case .Empty:

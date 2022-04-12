@@ -29,8 +29,8 @@ class HomeViewModel: ObservableObject {
                 dialKeepAliveTime: data.dialKeepAliveTime,
                 dialKeepAliveTimeout: data.dialKeepAliveTimeout,
                 autoSyncInterval: data.autoSyncInterval,
-                createAt: Date.now,
-                updateAt: Date.now,
+                createAt: Date(),
+                updateAt: Date(),
                 status: data.status)
             self.ectdClientList.append(client)
         }

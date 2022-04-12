@@ -22,8 +22,8 @@ extension HomeViewModel {
             dialTimeout: data.dialTimeout,
             dialKeepAliveTime: data.dialKeepAliveTime,
             autoSyncInterval: data.autoSyncInterval,
-            createAt: Date.now,
-            updateAt: Date.now,
+            createAt: Date(),
+            updateAt: Date(),
             status: data.status)
         self.ectdClientList.append(client)
         self.SetUserDefaults()
@@ -69,7 +69,7 @@ extension HomeViewModel {
                 self.ectdClientList[idx].dialKeepAliveTimeout = newData.dialKeepAliveTimeout
                 self.ectdClientList[idx].autoSyncInterval = newData.autoSyncInterval
                 self.ectdClientList[idx].serviceName = newData.serviceName
-                self.ectdClientList[idx].updateAt = Date.now
+                self.ectdClientList[idx].updateAt = Date()
                 self.ectdClientList[idx].status = newData.status
             }
         }
