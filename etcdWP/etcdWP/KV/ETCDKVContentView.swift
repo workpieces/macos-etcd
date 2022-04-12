@@ -51,10 +51,11 @@ extension View {
 extension NSTableView {
     open override func viewDidMoveToWindow() {
         super.viewDidMoveToWindow()
-        backgroundColor = NSColor.clear.withAlphaComponent(0)
+        backgroundColor = NSColor.clear
         enclosingScrollView!.drawsBackground = false
     }
 }
+
 
 
 struct SingleKVView: View {
@@ -108,10 +109,9 @@ struct ETCDKVContentView: View {
                                     self.selecteItem  = item
                                 }
                         }.listStyle(PlainListStyle())
-                            .background(Color.clear)
                         .frame(width: geometry.size.width / 2.0, height: geometry.size.height - 44)
                         
-                    }
+                    }.background(Color.black.opacity(0.2))
                     VStack {
                         HStack {
                             Text("Value Size: 13 bytes")
