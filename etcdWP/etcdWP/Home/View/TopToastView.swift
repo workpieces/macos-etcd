@@ -21,7 +21,7 @@ struct TopToastView: View {
             }
             .padding()
         }
-        .background(Color.red)
+        .background(Color.red.ignoresSafeArea())
         .frame(height: 50.0)
     }
 }
