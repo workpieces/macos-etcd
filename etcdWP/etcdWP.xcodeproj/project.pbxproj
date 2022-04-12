@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5CCCE1012801620E00CFD36F /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCCE1002801620E00CFD36F /* MacosEtcd.framework */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
-		D00ED46928006EAA0068CBB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46828006EAA0068CBB3 /* ContentView.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
 		D00ED46E28006EAB0068CBB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */; };
 		D00ED47928006EAC0068CBB3 /* etcdWPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED47828006EAC0068CBB3 /* etcdWPTests.swift */; };
@@ -75,7 +74,6 @@
 		5CCCE1002801620E00CFD36F /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
-		D00ED46828006EAA0068CBB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D00ED46A28006EAB0068CBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D00ED46F28006EAB0068CBB3 /* etcdWP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = etcdWP.entitlements; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 				D00ED49E28006FD90068CBB3 /* frameWork */,
 				D00ED49D28006F900068CBB3 /* Info.plist */,
 				D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */,
-				D00ED46828006EAA0068CBB3 /* ContentView.swift */,
 				D00ED46A28006EAB0068CBB3 /* Assets.xcassets */,
 				D00ED46F28006EAB0068CBB3 /* etcdWP.entitlements */,
 				D00ED46C28006EAB0068CBB3 /* Preview Content */,
@@ -496,7 +493,6 @@
 				D00ED4B9280070610068CBB3 /* CarouselView.swift in Sources */,
 				D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */,
 				D00ED4E7280070730068CBB3 /* ETCDKVItem.swift in Sources */,
-				D00ED46928006EAA0068CBB3 /* ContentView.swift in Sources */,
 				D00ED4A8280070410068CBB3 /* AuthView.swift in Sources */,
 				D00ED4BA280070610068CBB3 /* Content.swift in Sources */,
 				D00ED4E3280070730068CBB3 /* MiddleClientCreateView.swift in Sources */,
