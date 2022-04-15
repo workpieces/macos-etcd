@@ -15,6 +15,7 @@ struct PairStore:Codable,Mappable,Identifiable,Hashable {
     var create_revision: Int64?
     var mod_revision: Int64?
     var version: Int64?
+    var size: Int64?
     var pairs: [PairStore]?
     
      init?(map: Map){
@@ -24,6 +25,7 @@ struct PairStore:Codable,Mappable,Identifiable,Hashable {
          self.mod_revision = try? map.value("mod_revision")
          self.version = try? map.value("version")
          self.pairs = try? map.value("pairs")
+         self.size = try? map.value("size")
          self.id = UUID().uuidString
     }
     mutating func mapping(map: Map) {
@@ -33,6 +35,7 @@ struct PairStore:Codable,Mappable,Identifiable,Hashable {
         mod_revision           <- map["mod_revision"]
         version           <- map["version"]
         pairs            <- map["pairs"]
+        size             <- map["size"]
         id = UUID().uuidString
     }
     

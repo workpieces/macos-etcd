@@ -8,13 +8,6 @@
 
 import SwiftUI
 import SwiftyJSON
-/*
- Circle()
- .fill(.red)
- .frame(width: 44, height: 44, alignment: .center)
- .overlay(Text("Hello").foregroundColor(.white))
- */
-
 
 extension View {
     func withDefaultHeaderLabelView(title: String,fontSize: CGFloat = 13,color: Color =  Color(hex: "#375B7E")) -> some View {
@@ -114,7 +107,7 @@ struct ETCDKVContentView: View {
                     }.background(Color.black.opacity(0.2))
                     VStack {
                         HStack {
-                            Text("Value Size: 13 bytes")
+                            Text("Value Size: \(self.selecteItem.size) bytes")
                                 .foregroundColor(.white)
                                 .font(.subheadline)
                                 .padding(.leading,10.0)
