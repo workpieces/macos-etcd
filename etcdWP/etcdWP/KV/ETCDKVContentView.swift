@@ -132,7 +132,7 @@ struct ETCDKVContentView: View {
                                     text = selecteItem?.value ?? ""
                                 }else{
                                     let representation  = selecteItem?.toJSON();
-                                    text = JSON(representation).rawString()!
+                                    text = JSON(representation as Any).rawString()!
                                 }
                                 let pasteboard = NSPasteboard.general
                                 pasteboard.declareTypes([.string], owner: nil)
@@ -149,9 +149,8 @@ struct ETCDKVContentView: View {
                         if jsonIndex == 1{
                             TextContentView(selecteItem?.value,geometry)
                         }else{
-                            
                             let representation  = selecteItem?.toJSON();
-                            let string = JSON(representation).rawString()
+                            let string = JSON(representation as Any).rawString()
                             TextContentView(string,geometry)
                         }
                     }
