@@ -107,7 +107,7 @@ struct ETCDKVContentView: View {
                     }.background(Color.black.opacity(0.2))
                     VStack {
                         HStack {
-                            Text("Value Size:13 bytes")
+                            Text("Value Size:\(selecteItem?.size ?? 0) bytes")
                                 .foregroundColor(.white)
                                 .font(.subheadline)
                                 .padding(.leading,10.0)
