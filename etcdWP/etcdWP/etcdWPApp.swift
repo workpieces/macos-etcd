@@ -35,7 +35,6 @@ struct ETCDApp: App {
         }
         // hide window title
         .windowStyle(.hiddenTitleBar)
-        .windowToolbarStyle(.automatic)
         .commands {
             EtcdCommands()
         }

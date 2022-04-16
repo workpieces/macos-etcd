@@ -15,7 +15,8 @@ struct HomeMainView: View {
     var body: some View {
         VStack {
             withDefaultAddButton(imageName: "plus", title: "Create Etcd Client", link: $isLinkActive)
-                .padding(DefaultSpacePadding)
+                .padding(.top ,40)
+                .padding(.trailing,18)
             HStack {
                 Text("Services")
                     .withDefaultContentTitle(fontSize: 30.0)
