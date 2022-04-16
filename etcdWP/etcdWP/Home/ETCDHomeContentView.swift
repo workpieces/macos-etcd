@@ -51,7 +51,6 @@ struct ETCDHomeContentView: View {
         .environmentObject(homeData)
         .ignoresSafeArea(.all,edges: .all)
         .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
-        .background(Color(hex: "#375B7E"))
         .navigationViewStyle(.automatic)
         .onReceive(closePublisher) { _ in
             print("Application will Terminate Notification")
