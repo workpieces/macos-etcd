@@ -11,6 +11,7 @@
 		5C10A33E280A995D0055215E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A33D280A995D0055215E /* Button.swift */; };
 		5C10A345280A99DF0055215E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A344280A99DF0055215E /* AuthView.swift */; };
 		5CCCE1012801620E00CFD36F /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCCE1002801620E00CFD36F /* MacosEtcd.framework */; };
+		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
 		D00ED46E28006EAB0068CBB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */; };
@@ -127,6 +128,7 @@
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
+				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
 				D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */,
 				5CCCE1012801620E00CFD36F /* MacosEtcd.framework in Frameworks */,
 				D00ED49328006F350068CBB3 /* NavigationStack in Frameworks */,
@@ -367,6 +369,7 @@
 				D00ED49828006F600068CBB3 /* AxisTabView */,
 				D00ED49B28006F6E0068CBB3 /* SwiftyJSON */,
 				D07D78692802827500F72CF7 /* ObjectMapper */,
+				5CDD9589280AA1180040BD53 /* FilePicker */,
 			);
 			productName = etcdWP;
 			productReference = D00ED46328006EAA0068CBB3 /* etcdWP.app */;
@@ -446,6 +449,7 @@
 				D00ED49728006F600068CBB3 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D00ED49A28006F6E0068CBB3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */,
 			);
 			productRefGroup = D00ED46428006EAA0068CBB3 /* Products */;
 			projectDirPath = "";
@@ -852,6 +856,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markrenaud/FilePicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D00ED49128006F350068CBB3 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
@@ -895,6 +907,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5CDD9589280AA1180040BD53 /* FilePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */;
+			productName = FilePicker;
+		};
 		D00ED49228006F350068CBB3 /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D00ED49128006F350068CBB3 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;

@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import PopupView
+import NavigationStack
+import FilePicker
 
 // 默认用户配置表单
 struct UserConfigFormView: View {
-    @State private var clientInput = "etcd-name"
+    @State private var clientInput = "etcd-wp-"
+    @State private var clientuuidInput =  UUID().uuidString
     @State private var usernameInput = ""
     @State private var passwordInput = ""
     var body: some View {
         Section(header: Text("Default User Information Configuration：")) {
             TextField("Client Name：", text: $clientInput)
+            TextField("Client ID：", text: $clientuuidInput)
             TextField("User Name：", text: $usernameInput)
             SecureField("Password：", text: $passwordInput)
         }
@@ -25,19 +30,36 @@ struct UserConfigFormView: View {
 struct ClusterNetworkConfigFormView: View {
     @State private var networkInputUnit = 0
     @State private var endpointInput = "localhost:2379"
+    @State private var certificateFileInput = ""
+    @State private var keyFileInput = ""
     var networks = ["HTTP","HTTPS"]
     var body: some View {
         Section(header: Text("Cluster Network Configuration：")) {
             Picker("Network Protocol：", selection: $networkInputUnit) {
-                ForEach(networks.indices) {
+                ForEach(networks.indices,id: \.self) {
                     Text("\(networks[$0])")
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
             
             if networkInputUnit == 1 {
-                TextField("Client certificate file：", text: $endpointInput)
-                TextField("Client key file：", text: $endpointInput)
+                FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
+                    self.certificateFileInput = urls[0].path
+                } label: {
+                    HStack {
+                        Image(systemName: "doc.on.doc")
+                        certificateFileInput.isEmpty ?  Text("Client certificate file:  未选择任何文件"): Text("Client certificate file: \(self.certificateFileInput)")
+                    }
+                }
+                
+                FilePicker(types: [.plainText,.text,.json], allowMultiple: true) { urls in
+                    self.keyFileInput = urls[0].path
+                } label: {
+                    HStack {
+                        Image(systemName: "doc.on.doc")
+                        keyFileInput.isEmpty ?  Text("Client key file:  未选择任何文件"):    Text("Client key file:  \(self.keyFileInput)")
+                    }
+                }
             }
             
             TextField("Cluster Endpoint：", text: $endpointInput)
@@ -82,6 +104,7 @@ struct OtherConfigFormView: View {
     }
 }
 struct ETCDConfigView: View {
+    @EnvironmentObject var homeData: HomeViewModel
     @State private var isPopView = false
     var body: some View {
         VStack {
@@ -96,6 +119,22 @@ struct ETCDConfigView: View {
                 OtherConfigFormView()
             }
             .padding(.all,44)
+            
+            PopView(isActive: $isPopView ) {
+                Button {
+                    
+                } label: {
+                    Text("Save")
+                        .fontWeight(.semibold)
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                .frame(width: 120.0,height: 44.0)
+                .buttonStyle(PlainButtonStyle())
+                .background(Color(hex:"#00FFFF").opacity(0.75))
+                .cornerRadius(10.0)
+            }
             
             Spacer()
             
