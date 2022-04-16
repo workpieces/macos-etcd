@@ -45,7 +45,7 @@ struct DefaultAddButtonViewModifier: ViewModifier{
     func body(content: Content) -> some View {
         HStack {
             Spacer()
-            PushView(destination: HomeClientCreateView(), isActive: $isLinkActive) {
+            PushView(destination: ETCDConfigView(), isActive: $isLinkActive) {
                 Button {  self.isLinkActive.toggle() } label: {
                     HStack {
                         Image(systemName: imageName)
