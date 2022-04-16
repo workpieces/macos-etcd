@@ -17,12 +17,14 @@ extension HomeViewModel {
                 let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                          item.username,
                                          item.password,
-                                         item.cert,
+                                         item.certificate,
                                          item.certKey,
-                                         item.requestTimeout,
-                                         item.dialTimeout,
-                                         item.dialKeepAliveTime,
-                                         item.dialKeepAliveTimeout, item.autoSyncInterval, nil)
+                                         item.requestTimeout ?? 5,
+                                         item.dialTimeout ?? 5,
+                                         item.dialKeepAliveTime ?? 5,
+                                         item.dialKeepAliveTimeout ?? 5,
+                                         item.autoSyncInterval ?? 5,
+                                         nil)
                 self.ectdClientList[idx].etcdClient = c
             }else{
                 let ok =  self.Ping(c: item.etcdClient!)

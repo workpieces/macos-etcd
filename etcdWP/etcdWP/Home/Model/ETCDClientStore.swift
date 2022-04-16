@@ -13,10 +13,11 @@ var decoder = JSONDecoder()
 extension HomeViewModel {
     func Append(data: EtcdClientOption) {
         let client = EtcdClientOption(
-            endpoints: data.endpoints, serviceName: data.serviceName,
+            endpoints: data.endpoints,
+            clientName: data.clientName,
             username: data.username,
             password: data.password,
-            cert: data.cert,
+            certificate: data.certificate,
             certKey: data.certKey,
             requestTimeout: data.requestTimeout,
             dialTimeout: data.dialTimeout,
@@ -31,7 +32,7 @@ extension HomeViewModel {
     
     func FindByName(serviceName: String) ->Bool {
         for item in self.ectdClientList {
-            if item.serviceName == serviceName {
+            if item.clientName == serviceName {
                 return true
             }
         }
@@ -61,14 +62,14 @@ extension HomeViewModel {
                 self.ectdClientList[idx].endpoints = newData.endpoints
                 self.ectdClientList[idx].username = newData.username
                 self.ectdClientList[idx].password = newData.password
-                self.ectdClientList[idx].cert = newData.cert
+                self.ectdClientList[idx].certificate = newData.certificate
                 self.ectdClientList[idx].certKey = newData.certKey
                 self.ectdClientList[idx].requestTimeout = newData.requestTimeout
                 self.ectdClientList[idx].dialTimeout = newData.dialTimeout
                 self.ectdClientList[idx].dialKeepAliveTime = newData.dialKeepAliveTime
                 self.ectdClientList[idx].dialKeepAliveTimeout = newData.dialKeepAliveTimeout
                 self.ectdClientList[idx].autoSyncInterval = newData.autoSyncInterval
-                self.ectdClientList[idx].serviceName = newData.serviceName
+                self.ectdClientList[idx].clientName = newData.clientName
                 self.ectdClientList[idx].updateAt = Date()
                 self.ectdClientList[idx].status = newData.status
             }

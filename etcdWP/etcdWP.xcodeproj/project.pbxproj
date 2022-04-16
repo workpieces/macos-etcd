@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5C10A33C280A78F20055215E /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A33B280A78F20055215E /* ETCDConfigView.swift */; };
+		5C10A33E280A995D0055215E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A33D280A995D0055215E /* Button.swift */; };
+		5C10A345280A99DF0055215E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A344280A99DF0055215E /* AuthView.swift */; };
 		5CCCE1012801620E00CFD36F /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCCE1002801620E00CFD36F /* MacosEtcd.framework */; };
+		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
 		D00ED46E28006EAB0068CBB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */; };
@@ -21,7 +24,6 @@
 		D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49B28006F6E0068CBB3 /* SwiftyJSON */; };
 		D00ED4A42800702E0068CBB3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4A22800702E0068CBB3 /* AboutView.swift */; };
 		D00ED4A52800702E0068CBB3 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4A32800702E0068CBB3 /* AboutModel.swift */; };
-		D00ED4A8280070410068CBB3 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4A7280070400068CBB3 /* AuthView.swift */; };
 		D00ED4AC280070470068CBB3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4AA280070470068CBB3 /* Constant.swift */; };
 		D00ED4AD280070470068CBB3 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4AB280070470068CBB3 /* OpenPan.swift */; };
 		D00ED4B7280070610068CBB3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4B0280070610068CBB3 /* Carousel.swift */; };
@@ -29,19 +31,15 @@
 		D00ED4B9280070610068CBB3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4B2280070610068CBB3 /* CarouselView.swift */; };
 		D00ED4BA280070610068CBB3 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4B4280070610068CBB3 /* Content.swift */; };
 		D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4B5280070610068CBB3 /* ColorHex.swift */; };
-		D00ED4BC280070610068CBB3 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4B6280070610068CBB3 /* Button.swift */; };
 		D00ED4D8280070730068CBB3 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4BE280070730068CBB3 /* ETCDHomeContentView.swift */; };
 		D00ED4D9280070730068CBB3 /* ETCDHomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4BF280070730068CBB3 /* ETCDHomeMainView.swift */; };
-		D00ED4DA280070730068CBB3 /* ETCDHomeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C0280070730068CBB3 /* ETCDHomeCreateView.swift */; };
 		D00ED4DB280070730068CBB3 /* ETCDClientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C2280070730068CBB3 /* ETCDClientStore.swift */; };
 		D00ED4DC280070730068CBB3 /* ETCDTabarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C3280070730068CBB3 /* ETCDTabarStore.swift */; };
 		D00ED4DD280070730068CBB3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C4280070730068CBB3 /* HomeViewModel.swift */; };
 		D00ED4DE280070730068CBB3 /* ETCDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C5280070730068CBB3 /* ETCDStore.swift */; };
 		D00ED4DF280070730068CBB3 /* ETCDOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C6280070730068CBB3 /* ETCDOptionStore.swift */; };
-		D00ED4E0280070730068CBB3 /* LeftCreateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C8280070730068CBB3 /* LeftCreateContentView.swift */; };
 		D00ED4E1280070730068CBB3 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C9280070730068CBB3 /* CardItemView.swift */; };
 		D00ED4E2280070730068CBB3 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CA280070730068CBB3 /* TopToastView.swift */; };
-		D00ED4E3280070730068CBB3 /* MiddleClientCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CB280070730068CBB3 /* MiddleClientCreateView.swift */; };
 		D00ED4E4280070730068CBB3 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */; };
 		D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */; };
 		D00ED4E6280070730068CBB3 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */; };
@@ -73,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		5C10A33B280A78F20055215E /* ETCDConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDConfigView.swift; sourceTree = "<group>"; };
+		5C10A33D280A995D0055215E /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5C10A344280A99DF0055215E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		5CCCE1002801620E00CFD36F /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 		D00ED49D28006F900068CBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D00ED4A22800702E0068CBB3 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D00ED4A32800702E0068CBB3 /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
-		D00ED4A7280070400068CBB3 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		D00ED4AA280070470068CBB3 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D00ED4AB280070470068CBB3 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D00ED4B0280070610068CBB3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -95,19 +94,15 @@
 		D00ED4B2280070610068CBB3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		D00ED4B4280070610068CBB3 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D00ED4B5280070610068CBB3 /* ColorHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
-		D00ED4B6280070610068CBB3 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		D00ED4BE280070730068CBB3 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
 		D00ED4BF280070730068CBB3 /* ETCDHomeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeMainView.swift; sourceTree = "<group>"; };
-		D00ED4C0280070730068CBB3 /* ETCDHomeCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeCreateView.swift; sourceTree = "<group>"; };
 		D00ED4C2280070730068CBB3 /* ETCDClientStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDClientStore.swift; sourceTree = "<group>"; };
 		D00ED4C3280070730068CBB3 /* ETCDTabarStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabarStore.swift; sourceTree = "<group>"; };
 		D00ED4C4280070730068CBB3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D00ED4C5280070730068CBB3 /* ETCDStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDStore.swift; sourceTree = "<group>"; };
 		D00ED4C6280070730068CBB3 /* ETCDOptionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDOptionStore.swift; sourceTree = "<group>"; };
-		D00ED4C8280070730068CBB3 /* LeftCreateContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCreateContentView.swift; sourceTree = "<group>"; };
 		D00ED4C9280070730068CBB3 /* CardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		D00ED4CA280070730068CBB3 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
-		D00ED4CB280070730068CBB3 /* MiddleClientCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddleClientCreateView.swift; sourceTree = "<group>"; };
 		D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
 		D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
 		D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
@@ -127,6 +122,7 @@
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
+				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
 				D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */,
 				5CCCE1012801620E00CFD36F /* MacosEtcd.framework in Frameworks */,
 				D00ED49328006F350068CBB3 /* NavigationStack in Frameworks */,
@@ -150,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C10A343280A99C50055215E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5C10A344280A99DF0055215E /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		D00ED45A28006EAA0068CBB3 = {
 			isa = PBXGroup;
 			children = (
@@ -173,13 +177,13 @@
 		D00ED46528006EAA0068CBB3 /* etcdWP */ = {
 			isa = PBXGroup;
 			children = (
+				5C10A343280A99C50055215E /* Auth */,
 				D00ED4BD280070730068CBB3 /* Home */,
 				D00ED4CC280070730068CBB3 /* KV */,
 				D00ED4D6280070730068CBB3 /* Members */,
 				D00ED4AE280070610068CBB3 /* ventor */,
 				D00ED4B3280070610068CBB3 /* View */,
 				D00ED4A9280070470068CBB3 /* Common */,
-				D00ED4A6280070400068CBB3 /* Auth */,
 				D00ED4A12800702E0068CBB3 /* About */,
 				D00ED49E28006FD90068CBB3 /* frameWork */,
 				D00ED49D28006F900068CBB3 /* Info.plist */,
@@ -233,14 +237,6 @@
 			path = About;
 			sourceTree = "<group>";
 		};
-		D00ED4A6280070400068CBB3 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				D00ED4A7280070400068CBB3 /* AuthView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
 		D00ED4A9280070470068CBB3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,9 +267,9 @@
 		D00ED4B3280070610068CBB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5C10A33D280A995D0055215E /* Button.swift */,
 				D00ED4B4280070610068CBB3 /* Content.swift */,
 				D00ED4B5280070610068CBB3 /* ColorHex.swift */,
-				D00ED4B6280070610068CBB3 /* Button.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,7 +279,6 @@
 			children = (
 				D00ED4BE280070730068CBB3 /* ETCDHomeContentView.swift */,
 				D00ED4BF280070730068CBB3 /* ETCDHomeMainView.swift */,
-				D00ED4C0280070730068CBB3 /* ETCDHomeCreateView.swift */,
 				5C10A33B280A78F20055215E /* ETCDConfigView.swift */,
 				D00ED4C1280070730068CBB3 /* Model */,
 				D00ED4C7280070730068CBB3 /* View */,
@@ -306,10 +301,8 @@
 		D00ED4C7280070730068CBB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D00ED4C8280070730068CBB3 /* LeftCreateContentView.swift */,
 				D00ED4C9280070730068CBB3 /* CardItemView.swift */,
 				D00ED4CA280070730068CBB3 /* TopToastView.swift */,
-				D00ED4CB280070730068CBB3 /* MiddleClientCreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +360,7 @@
 				D00ED49828006F600068CBB3 /* AxisTabView */,
 				D00ED49B28006F6E0068CBB3 /* SwiftyJSON */,
 				D07D78692802827500F72CF7 /* ObjectMapper */,
+				5CDD9589280AA1180040BD53 /* FilePicker */,
 			);
 			productName = etcdWP;
 			productReference = D00ED46328006EAA0068CBB3 /* etcdWP.app */;
@@ -446,6 +440,7 @@
 				D00ED49728006F600068CBB3 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D00ED49A28006F6E0068CBB3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */,
 			);
 			productRefGroup = D00ED46428006EAA0068CBB3 /* Products */;
 			projectDirPath = "";
@@ -489,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C10A33E280A995D0055215E /* Button.swift in Sources */,
 				D00ED4DD280070730068CBB3 /* HomeViewModel.swift in Sources */,
 				D00ED4E9280070730068CBB3 /* ETCDKVStore.swift in Sources */,
 				D00ED4E4280070730068CBB3 /* ETCDDetailTabBarView.swift in Sources */,
@@ -496,9 +492,7 @@
 				D00ED4B9280070610068CBB3 /* CarouselView.swift in Sources */,
 				D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */,
 				D00ED4E7280070730068CBB3 /* ETCDKVItem.swift in Sources */,
-				D00ED4A8280070410068CBB3 /* AuthView.swift in Sources */,
 				D00ED4BA280070610068CBB3 /* Content.swift in Sources */,
-				D00ED4E3280070730068CBB3 /* MiddleClientCreateView.swift in Sources */,
 				D00ED4A42800702E0068CBB3 /* AboutView.swift in Sources */,
 				D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */,
 				5C10A33C280A78F20055215E /* ETCDConfigView.swift in Sources */,
@@ -514,14 +508,12 @@
 				D00ED4E2280070730068CBB3 /* TopToastView.swift in Sources */,
 				D00ED4DC280070730068CBB3 /* ETCDTabarStore.swift in Sources */,
 				D00ED4AD280070470068CBB3 /* OpenPan.swift in Sources */,
-				D00ED4DA280070730068CBB3 /* ETCDHomeCreateView.swift in Sources */,
+				5C10A345280A99DF0055215E /* AuthView.swift in Sources */,
 				D00ED4EC280070730068CBB3 /* MembersView.swift in Sources */,
 				D00ED4D8280070730068CBB3 /* ETCDHomeContentView.swift in Sources */,
-				D00ED4E0280070730068CBB3 /* LeftCreateContentView.swift in Sources */,
 				D00ED4E8280070730068CBB3 /* ETCDKVItemStore.swift in Sources */,
 				D00ED4DB280070730068CBB3 /* ETCDClientStore.swift in Sources */,
 				D00ED4D9280070730068CBB3 /* ETCDHomeMainView.swift in Sources */,
-				D00ED4BC280070610068CBB3 /* Button.swift in Sources */,
 				D00ED4B7280070610068CBB3 /* Carousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -852,6 +844,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markrenaud/FilePicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D00ED49128006F350068CBB3 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
@@ -895,6 +895,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5CDD9589280AA1180040BD53 /* FilePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */;
+			productName = FilePicker;
+		};
 		D00ED49228006F350068CBB3 /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D00ED49128006F350068CBB3 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;

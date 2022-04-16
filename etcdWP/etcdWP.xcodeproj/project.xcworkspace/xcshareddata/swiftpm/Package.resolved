@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "axistabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisTabView",
+      "state" : {
+        "revision" : "5677e874634a2ccf890a1a5ed9258b4d5d9a3d7a",
+        "version" : "0.5.1"
+      }
+    },
+    {
+      "identity" : "filepicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/markrenaud/FilePicker",
+      "state" : {
+        "revision" : "720f8cb5ca0c0efc982ed381afc84ba3e8b3214e",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "objectmapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tristanhimmelman/ObjectMapper.git",
+      "state" : {
+        "revision" : "0b96a734de3ea1c87374ae677064f86adb0716ec",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "popupview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/PopupView.git",
+      "state" : {
+        "revision" : "77c04cef5651a07ab795f8b4edeb39cb231b2411",
+        "version" : "1.0.7"
+      }
+    },
+    {
+      "identity" : "swiftui-navigation-stack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/matteopuc/swiftui-navigation-stack",
+      "state" : {
+        "revision" : "be0db68ed0d84ed543bf8f7600a1f84de015f753",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON",
+      "state" : {
+        "revision" : "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+        "version" : "5.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

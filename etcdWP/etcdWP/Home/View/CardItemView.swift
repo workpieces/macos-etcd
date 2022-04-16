@@ -55,7 +55,7 @@ struct CardItemView: View {
                     Text("Service Name")
                         .withDefaultContentTitle(fontColor: Color.orange)
                     
-                    Text(options.serviceName)
+                    Text(options.clientName)
                         .withDefaultSubContentTitle()
                 }
                 .padding(DefaultSpacePadding)
