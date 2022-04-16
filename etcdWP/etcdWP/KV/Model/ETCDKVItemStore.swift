@@ -16,6 +16,7 @@ class ItemStore: ObservableObject {
         self.address = address
     }
     
+    // 树形展示
     func children() -> [PairStore] {
         do {
             let data = try? c?.children()
@@ -29,4 +30,10 @@ class ItemStore: ObservableObject {
             return []
         }
     }
+    
+    // 删除所有键值
+    func deleteAll() throws {
+        try self.c?.deleteAll()
+    }
+    
 }

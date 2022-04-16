@@ -27,6 +27,7 @@
 - (BOOL)close:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)clusterStatus:(NSError* _Nullable* _Nullable)error;
 - (BOOL)delete:(NSString* _Nullable)key error:(NSError* _Nullable* _Nullable)error;
+- (BOOL)deleteAll:(NSError* _Nullable* _Nullable)error;
 - (BOOL)deletePrefix:(NSString* _Nullable)prefix error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)deleteRole:(NSString* _Nullable)role error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)deleteUser:(NSString* _Nullable)user error:(NSError* _Nullable* _Nullable)error;
