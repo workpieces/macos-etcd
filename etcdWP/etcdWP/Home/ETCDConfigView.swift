@@ -94,6 +94,8 @@ struct ETCDConfigView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var config = EtcdClientOption()
     @State private var isPopView = false
+    @State private var isToast = false
+    
     var body: some View {
         VStack {
             withDefaultNavagationBack(title: "General Settings", isPop: $isPopView)
@@ -108,10 +110,14 @@ struct ETCDConfigView: View {
             }
             .padding(.all,44)
             
-            PopView(isActive: $isPopView ) {
+            PopView {
                 Button {
-                    self.homeData.Append(data: config)
-                    self.isPopView.toggle()
+                    if self.homeData.Register(item: config) {
+                        self.homeData.Append(data: config)
+                        self.isPopView.toggle()
+                    }else{
+                        self.isToast.toggle()
+                    }
                 } label: {
                     Text("Save")
                         .fontWeight(.semibold)
@@ -126,7 +132,9 @@ struct ETCDConfigView: View {
             }
             
             Spacer()
-            
+        }
+        .popup(isPresented: $isToast, type: .toast, position: .top, animation: .spring(), autohideIn: 15) {
+            TopToastView()
         }
     }
 }

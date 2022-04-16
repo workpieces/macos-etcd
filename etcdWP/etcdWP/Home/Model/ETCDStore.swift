@@ -19,11 +19,11 @@ extension HomeViewModel {
                                          item.password,
                                          item.certificate,
                                          item.certKey,
-                                         item.requestTimeout ?? 5,
-                                         item.dialTimeout ?? 5,
-                                         item.dialKeepAliveTime ?? 5,
-                                         item.dialKeepAliveTimeout ?? 5,
-                                         item.autoSyncInterval ?? 5,
+                                         item.requestTimeout ,
+                                         item.dialTimeout ,
+                                         item.dialKeepAliveTime ,
+                                         item.dialKeepAliveTimeout ,
+                                         item.autoSyncInterval ,
                                          nil)
                 self.ectdClientList[idx].etcdClient = c
             }else{
@@ -35,6 +35,24 @@ extension HomeViewModel {
                 }
             }
         }
+    }
+    
+    func Register(item : EtcdClientOption) -> Bool {
+        let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                 item.username,
+                                 item.password,
+                                 item.certificate,
+                                 item.certKey,
+                                 item.requestTimeout ,
+                                 item.dialTimeout ,
+                                 item.dialKeepAliveTime ,
+                                 item.dialKeepAliveTimeout ,
+                                 item.autoSyncInterval ,
+                                 nil)
+        if c == nil {
+            return false
+        }
+        return self.Ping(c: c!)
     }
     
     // 检测etcd是否健康
