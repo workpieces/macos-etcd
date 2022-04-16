@@ -16,7 +16,7 @@ class ItemStore: ObservableObject {
         self.address = address
     }
     
-    func children() -> [PairStore]? {
+    func children() -> [PairStore] {
         do {
             let data = try? c?.children()
             if ((data?.isEmpty) != nil) {

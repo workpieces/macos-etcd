@@ -107,7 +107,7 @@ struct ETCDKVContentView: View {
                     }.background(Color.black.opacity(0.2))
                     VStack {
                         HStack {
-                            Text("Value Size: \(self.selecteItem.size) bytes")
+                            Text("Value Size:13 bytes")
                                 .foregroundColor(.white)
                                 .font(.subheadline)
                                 .padding(.leading,10.0)
@@ -126,17 +126,13 @@ struct ETCDKVContentView: View {
                             
                             withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
                             withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0).onTapGesture {
-                                
-                                guard selecteItem != nil else{
-                                    return
-                                }
-                                
+                        
                                 var text = ""
                                 if jsonIndex == 1{
-                                    text = selecteItem!.value
+                                    text = selecteItem?.value ?? ""
                                 }else{
                                     let representation  = selecteItem?.toJSON();
-                                    text = JSON(representation!).rawString()!
+                                    text = JSON(representation).rawString()!
                                 }
                                 let pasteboard = NSPasteboard.general
                                 pasteboard.declareTypes([.string], owner: nil)
@@ -150,20 +146,13 @@ struct ETCDKVContentView: View {
                         .background(Color(hex: "#5B9BD4").opacity(0.45))
                         .padding(.trailing,15.0)
                         .padding(.bottom,15.0)
-                        
-                        if ((selecteItem?.value.isEmpty) != nil) {
-                            if jsonIndex == 1{
-                                TextContentView(selecteItem!.value,geometry)
-                            }else{
-                                
-                                let representation  = selecteItem?.toJSON();
-                                let string = JSON(representation!).rawString()
-                                TextContentView(string,geometry)
-                            }
-                            
+                        if jsonIndex == 1{
+                            TextContentView(selecteItem?.value,geometry)
                         }else{
-                            Spacer()
-                            EmptyView()
+                            
+                            let representation  = selecteItem?.toJSON();
+                            let string = JSON(representation).rawString()
+                            TextContentView(string,geometry)
                         }
                     }
                     

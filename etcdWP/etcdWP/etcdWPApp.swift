@@ -31,6 +31,7 @@ struct ETCDApp: App {
     var body: some Scene {
         WindowGroup {
             ETCDHomeContentView()
+                .preferredColorScheme(.dark)
         }
         // hide window title
         .windowStyle(.hiddenTitleBar)
