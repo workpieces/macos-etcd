@@ -33,16 +33,13 @@
 		D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4B5280070610068CBB3 /* ColorHex.swift */; };
 		D00ED4D8280070730068CBB3 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4BE280070730068CBB3 /* ETCDHomeContentView.swift */; };
 		D00ED4D9280070730068CBB3 /* ETCDHomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4BF280070730068CBB3 /* ETCDHomeMainView.swift */; };
-		D00ED4DA280070730068CBB3 /* ETCDHomeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C0280070730068CBB3 /* ETCDHomeCreateView.swift */; };
 		D00ED4DB280070730068CBB3 /* ETCDClientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C2280070730068CBB3 /* ETCDClientStore.swift */; };
 		D00ED4DC280070730068CBB3 /* ETCDTabarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C3280070730068CBB3 /* ETCDTabarStore.swift */; };
 		D00ED4DD280070730068CBB3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C4280070730068CBB3 /* HomeViewModel.swift */; };
 		D00ED4DE280070730068CBB3 /* ETCDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C5280070730068CBB3 /* ETCDStore.swift */; };
 		D00ED4DF280070730068CBB3 /* ETCDOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C6280070730068CBB3 /* ETCDOptionStore.swift */; };
-		D00ED4E0280070730068CBB3 /* LeftCreateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C8280070730068CBB3 /* LeftCreateContentView.swift */; };
 		D00ED4E1280070730068CBB3 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C9280070730068CBB3 /* CardItemView.swift */; };
 		D00ED4E2280070730068CBB3 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CA280070730068CBB3 /* TopToastView.swift */; };
-		D00ED4E3280070730068CBB3 /* MiddleClientCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CB280070730068CBB3 /* MiddleClientCreateView.swift */; };
 		D00ED4E4280070730068CBB3 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */; };
 		D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */; };
 		D00ED4E6280070730068CBB3 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */; };
@@ -99,16 +96,13 @@
 		D00ED4B5280070610068CBB3 /* ColorHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
 		D00ED4BE280070730068CBB3 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
 		D00ED4BF280070730068CBB3 /* ETCDHomeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeMainView.swift; sourceTree = "<group>"; };
-		D00ED4C0280070730068CBB3 /* ETCDHomeCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeCreateView.swift; sourceTree = "<group>"; };
 		D00ED4C2280070730068CBB3 /* ETCDClientStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDClientStore.swift; sourceTree = "<group>"; };
 		D00ED4C3280070730068CBB3 /* ETCDTabarStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabarStore.swift; sourceTree = "<group>"; };
 		D00ED4C4280070730068CBB3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D00ED4C5280070730068CBB3 /* ETCDStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDStore.swift; sourceTree = "<group>"; };
 		D00ED4C6280070730068CBB3 /* ETCDOptionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDOptionStore.swift; sourceTree = "<group>"; };
-		D00ED4C8280070730068CBB3 /* LeftCreateContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCreateContentView.swift; sourceTree = "<group>"; };
 		D00ED4C9280070730068CBB3 /* CardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		D00ED4CA280070730068CBB3 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
-		D00ED4CB280070730068CBB3 /* MiddleClientCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddleClientCreateView.swift; sourceTree = "<group>"; };
 		D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
 		D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
 		D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
@@ -285,7 +279,6 @@
 			children = (
 				D00ED4BE280070730068CBB3 /* ETCDHomeContentView.swift */,
 				D00ED4BF280070730068CBB3 /* ETCDHomeMainView.swift */,
-				D00ED4C0280070730068CBB3 /* ETCDHomeCreateView.swift */,
 				5C10A33B280A78F20055215E /* ETCDConfigView.swift */,
 				D00ED4C1280070730068CBB3 /* Model */,
 				D00ED4C7280070730068CBB3 /* View */,
@@ -308,10 +301,8 @@
 		D00ED4C7280070730068CBB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D00ED4C8280070730068CBB3 /* LeftCreateContentView.swift */,
 				D00ED4C9280070730068CBB3 /* CardItemView.swift */,
 				D00ED4CA280070730068CBB3 /* TopToastView.swift */,
-				D00ED4CB280070730068CBB3 /* MiddleClientCreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,7 +493,6 @@
 				D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */,
 				D00ED4E7280070730068CBB3 /* ETCDKVItem.swift in Sources */,
 				D00ED4BA280070610068CBB3 /* Content.swift in Sources */,
-				D00ED4E3280070730068CBB3 /* MiddleClientCreateView.swift in Sources */,
 				D00ED4A42800702E0068CBB3 /* AboutView.swift in Sources */,
 				D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */,
 				5C10A33C280A78F20055215E /* ETCDConfigView.swift in Sources */,
@@ -519,10 +509,8 @@
 				D00ED4DC280070730068CBB3 /* ETCDTabarStore.swift in Sources */,
 				D00ED4AD280070470068CBB3 /* OpenPan.swift in Sources */,
 				5C10A345280A99DF0055215E /* AuthView.swift in Sources */,
-				D00ED4DA280070730068CBB3 /* ETCDHomeCreateView.swift in Sources */,
 				D00ED4EC280070730068CBB3 /* MembersView.swift in Sources */,
 				D00ED4D8280070730068CBB3 /* ETCDHomeContentView.swift in Sources */,
-				D00ED4E0280070730068CBB3 /* LeftCreateContentView.swift in Sources */,
 				D00ED4E8280070730068CBB3 /* ETCDKVItemStore.swift in Sources */,
 				D00ED4DB280070730068CBB3 /* ETCDClientStore.swift in Sources */,
 				D00ED4D9280070730068CBB3 /* ETCDHomeMainView.swift in Sources */,

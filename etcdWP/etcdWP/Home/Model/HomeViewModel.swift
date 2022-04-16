@@ -19,10 +19,10 @@ class HomeViewModel: ObservableObject {
         for data in item {
             let client = EtcdClientOption(
                 endpoints: data.endpoints,
-                serviceName: data.serviceName,
+                clientName: data.clientName,
                 username: data.username,
                 password: data.password,
-                cert: data.cert,
+                certificate: data.certificate,
                 certKey: data.certKey,
                 requestTimeout: data.requestTimeout,
                 dialTimeout: data.dialTimeout,

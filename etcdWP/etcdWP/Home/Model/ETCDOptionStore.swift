@@ -10,22 +10,27 @@ import MacosEtcd
 
 struct EtcdClientOption: Identifiable,Codable {
     var id = UUID()
-    var endpoints: [String]
-    var serviceName: String
+    var endpoints: [String] = ["localhost:2379"]
+    var clientName: String = "etcd-wp-"
     var username: String = ""
     var password: String = ""
-    var cert: String = ""
+    var certificate: String = ""
     var certKey: String = ""
     var requestTimeout: Int = 5
     var dialTimeout: Int = 5
-    var dialKeepAliveTime: Int = 5
+    var dialKeepAliveTime: Int = 10
     var dialKeepAliveTimeout: Int = 3
-    var autoSyncInterval:Int = 3
+    var autoSyncInterval:Int = 5
+    var autoPing: Bool = true
+    var autoName: Bool = true
+    var autoSession: Bool = true
+    var autoConnect: Bool = true
     var createAt: Date = Date()
     var updateAt: Date = Date()
     var status: Bool = false
     @NotCoded var etcdClient: EtcdKVClient?
 }
+
 
 @propertyWrapper
 public struct NotCoded<Value> {

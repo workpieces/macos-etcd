@@ -40,7 +40,6 @@ struct HomeMainView: View {
                 .onReceive(timer, perform: {
                     _ in
                     homeData.WatchListenEtcdClient()
-                    print("------")
                 }).onDisappear {
                     self.timer.upstream.connect().cancel()
                 }

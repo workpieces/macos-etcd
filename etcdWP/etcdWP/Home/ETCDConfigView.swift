@@ -12,16 +12,12 @@ import FilePicker
 
 // 默认用户配置表单
 struct UserConfigFormView: View {
-    @State private var clientInput = "etcd-wp-"
-    @State private var clientuuidInput =  UUID().uuidString
-    @State private var usernameInput = ""
-    @State private var passwordInput = ""
+    @Binding var config : EtcdClientOption
     var body: some View {
         Section(header: Text("Default User Information Configuration：")) {
-            TextField("Client Name：", text: $clientInput)
-            TextField("Client ID：", text: $clientuuidInput)
-            TextField("User Name：", text: $usernameInput)
-            SecureField("Password：", text: $passwordInput)
+            TextField("Client Name：", text: $config.clientName)
+            TextField("User Name：", text: $config.username)
+            SecureField("Password：", text: $config.password)
         }
     }
 }
@@ -29,9 +25,7 @@ struct UserConfigFormView: View {
 // 集群网络表单
 struct ClusterNetworkConfigFormView: View {
     @State private var networkInputUnit = 0
-    @State private var endpointInput = "localhost:2379"
-    @State private var certificateFileInput = ""
-    @State private var keyFileInput = ""
+    @Binding var config : EtcdClientOption
     var networks = ["HTTP","HTTPS"]
     var body: some View {
         Section(header: Text("Cluster Network Configuration：")) {
@@ -44,67 +38,61 @@ struct ClusterNetworkConfigFormView: View {
             
             if networkInputUnit == 1 {
                 FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
-                    self.certificateFileInput = urls[0].path
+                    self.config.certificate = urls[0].path
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        certificateFileInput.isEmpty ?  Text("Client certificate file:  未选择任何文件"): Text("Client certificate file: \(self.certificateFileInput)")
+                        self.config.certificate.isEmpty ?  Text("Client certificate file:  未选择任何文件"): Text("Client certificate file: \(self.config.certificate)")
                     }
                 }
                 
                 FilePicker(types: [.plainText,.text,.json], allowMultiple: true) { urls in
-                    self.keyFileInput = urls[0].path
+                    self.config.certKey = urls[0].path
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        keyFileInput.isEmpty ?  Text("Client key file:  未选择任何文件"):    Text("Client key file:  \(self.keyFileInput)")
+                        self.config.certKey.isEmpty ?  Text("Client key file:  未选择任何文件"):    Text("Client key file:  \( self.config.certKey)")
                     }
                 }
             }
             
-            TextField("Cluster Endpoint：", text: $endpointInput)
+            TextField("Cluster Endpoint：", text: $config.endpoints[0])
         }
     }
 }
 
 // 相关超时设置表单
 struct ClusterTimeConfigFormView: View {
-    @State private var requestTimeoutInput = 5
-    @State private var dailTimeoutInput = 5
-    @State private var dailKeppAliveInput = 10
-    @State private var dailKeppAliveTimeoutInput = 3
-    @State private var autoSyncInterval = 5
+    @Binding var config : EtcdClientOption
     var body: some View {
         Section(header: Text("Timeout Setting Configuration (seconds)：")) {
-            TextField("Request Timeout：",value:$requestTimeoutInput, formatter: NumberFormatter())
-            TextField("Dial Timeout：",value:$dailTimeoutInput, formatter: NumberFormatter())
-            TextField("Dial Keep Alive Time：",value:$dailKeppAliveInput, formatter: NumberFormatter())
-            TextField("Dial Keep Alive Timeout：",value:$dailKeppAliveTimeoutInput, formatter: NumberFormatter())
-            TextField("Auto Sync Interval：",value:$autoSyncInterval, formatter: NumberFormatter())
+            TextField("Request Timeout：",value:$config.requestTimeout, formatter: NumberFormatter())
+            TextField("Dial Timeout：",value:$config.dialTimeout, formatter: NumberFormatter())
+            TextField("Dial Keep Alive Time：",value:$config.dialKeepAliveTime, formatter: NumberFormatter())
+            TextField("Dial Keep Alive Timeout：",value:$config.dialKeepAliveTimeout, formatter: NumberFormatter())
+            TextField("Auto Sync Interval：",value:$config.autoSyncInterval, formatter: NumberFormatter())
         }
     }
 }
 
 struct OtherConfigFormView: View {
-    @State private var autoPing = true
-    @State private var autoName = true
-    @State private var autoSession = true
-    @State private var autoConnect = true
+    @Binding var config : EtcdClientOption
     var body: some View {
         Section(header: Text("Miscellaneous：")) {
-            Toggle("Auto create client name?", isOn: $autoName)
+            Toggle("Auto create client name?", isOn: $config.autoName)
                 .toggleStyle(.checkbox)
-            Toggle("Reschedule Pings？", isOn: $autoPing)
+            Toggle("Reschedule Pings？", isOn: $config.autoPing)
                 .toggleStyle(.checkbox)
-            Toggle("Clean Session?", isOn: $autoSession)
+            Toggle("Clean Session?", isOn: $config.autoSession)
                 .toggleStyle(.checkbox)
-            Toggle("Auto connect on app launch?", isOn: $autoConnect)
+            Toggle("Auto connect on app launch?", isOn: $config.autoConnect)
                 .toggleStyle(.checkbox)
         }
     }
 }
 struct ETCDConfigView: View {
     @EnvironmentObject var homeData: HomeViewModel
+    @State private var config = EtcdClientOption()
     @State private var isPopView = false
     var body: some View {
         VStack {
@@ -113,16 +101,17 @@ struct ETCDConfigView: View {
                 .padding(.leading ,20)
             
             Form {
-                UserConfigFormView()
-                ClusterNetworkConfigFormView()
-                ClusterTimeConfigFormView()
-                OtherConfigFormView()
+                UserConfigFormView(config: $config)
+                ClusterNetworkConfigFormView(config: $config)
+                ClusterTimeConfigFormView(config: $config)
+                OtherConfigFormView(config: $config)
             }
             .padding(.all,44)
             
             PopView(isActive: $isPopView ) {
                 Button {
-                    
+                    self.homeData.Append(data: config)
+                    self.isPopView.toggle()
                 } label: {
                     Text("Save")
                         .fontWeight(.semibold)
