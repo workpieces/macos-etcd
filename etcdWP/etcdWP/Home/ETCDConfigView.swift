@@ -99,7 +99,7 @@ struct ETCDConfigView: View {
     var body: some View {
         VStack {
             withDefaultNavagationBack(title: "General Settings", isPop: $isPopView)
-                .padding(.vertical,44)
+                .padding(.vertical,30)
                 .padding(.leading ,20)
             
             Form {
@@ -108,7 +108,8 @@ struct ETCDConfigView: View {
                 ClusterTimeConfigFormView(config: $config)
                 OtherConfigFormView(config: $config)
             }
-            .padding(.all,44)
+            .padding(.leading,44)
+            .padding(.trailing ,44)
             
             PopView {
                 Button {
