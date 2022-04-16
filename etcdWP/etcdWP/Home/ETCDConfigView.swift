@@ -9,14 +9,14 @@ import SwiftUI
 
 // 默认用户配置表单
 struct UserConfigFormView: View {
-    @State private var clientInput = ""
+    @State private var clientInput = "etcd-name"
     @State private var usernameInput = ""
     @State private var passwordInput = ""
     var body: some View {
-        Section(header: Text("默认用户信息配置")) {
-            TextField("客户端名称：", text: $clientInput)
-            TextField("用户名：", text: $usernameInput)
-            TextField("密码：", text: $passwordInput)
+        Section(header: Text("Default User Information Configuration：")) {
+            TextField("Client Name：", text: $clientInput)
+            TextField("User Name：", text: $usernameInput)
+            SecureField("Password：", text: $passwordInput)
         }
     }
 }
@@ -24,34 +24,41 @@ struct UserConfigFormView: View {
 // 集群网络表单
 struct ClusterNetworkConfigFormView: View {
     @State private var networkInputUnit = 0
-    @State private var clusterInputs = ""
+    @State private var endpointInput = "localhost:2379"
     var networks = ["HTTP","HTTPS"]
     var body: some View {
-        Section(header: Text("网络节点相关配置")) {
-            Picker("网络协议", selection: $networkInputUnit) {
+        Section(header: Text("Cluster Network Configuration：")) {
+            Picker("Network Protocol：", selection: $networkInputUnit) {
                 ForEach(networks.indices) {
                     Text("\(networks[$0])")
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
             
-            TextField("集群节点IP地址", text: $clusterInputs)
+            if networkInputUnit == 1 {
+                TextField("Client certificate file：", text: $endpointInput)
+                TextField("Client key file：", text: $endpointInput)
+            }
+            
+            TextField("Cluster Endpoint：", text: $endpointInput)
         }
     }
 }
 
 // 相关超时设置表单
 struct ClusterTimeConfigFormView: View {
-    @State private var requestTimeoutInput = "3"
-    @State private var dailTimeoutInput = "3"
-    @State private var dailKeppAliveInput = "3"
-    @State private var dailKeppAliveTimeoutInput = "3"
-    @State private var autoSyncInterval = "3"
+    @State private var requestTimeoutInput = 5
+    @State private var dailTimeoutInput = 5
+    @State private var dailKeppAliveInput = 10
+    @State private var dailKeppAliveTimeoutInput = 3
+    @State private var autoSyncInterval = 5
     var body: some View {
-        Section(header: Text("超时设置配置（秒）")) {
-            TextField("请求超时时长：", text: $requestTimeoutInput)
-            TextField("用户名：", text: $requestTimeoutInput)
-            TextField("密码：", text: $requestTimeoutInput)
+        Section(header: Text("Timeout Setting Configuration (seconds)：")) {
+            TextField("Request Timeout：",value:$requestTimeoutInput, formatter: NumberFormatter())
+            TextField("Dial Timeout：",value:$dailTimeoutInput, formatter: NumberFormatter())
+            TextField("Dial Keep Alive Time：",value:$dailKeppAliveInput, formatter: NumberFormatter())
+            TextField("Dial Keep Alive Timeout：",value:$dailKeppAliveTimeoutInput, formatter: NumberFormatter())
+            TextField("Auto Sync Interval：",value:$autoSyncInterval, formatter: NumberFormatter())
         }
     }
 }
@@ -62,7 +69,7 @@ struct OtherConfigFormView: View {
     @State private var autoSession = true
     @State private var autoConnect = true
     var body: some View {
-        Section(header: Text("其他配置")) {
+        Section(header: Text("Miscellaneous：")) {
             Toggle("Auto create client name?", isOn: $autoName)
                 .toggleStyle(.checkbox)
             Toggle("Reschedule Pings？", isOn: $autoPing)
