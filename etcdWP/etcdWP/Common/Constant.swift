@@ -15,7 +15,7 @@ let MacEtcdName = "etcdWP"
 let MacosLogoName = "logo"
 
 // 版本号
-let MacosEtcdVersion = "Version: 1.0.2"
+let MacosEtcdVersion = "Version: 1.0.1"
 
 // 导航距离文字距离顶端的高度
 let NavagationPaddingHeight = 70.0

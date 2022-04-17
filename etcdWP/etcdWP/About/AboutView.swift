@@ -13,7 +13,7 @@ struct AboutView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("About Us")
+                Text("About")
                     .withDefaultNavagationTitle()
                 Spacer()
             }

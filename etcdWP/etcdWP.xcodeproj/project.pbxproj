@@ -43,7 +43,6 @@
 		D00ED4E4280070730068CBB3 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */; };
 		D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */; };
 		D00ED4E6280070730068CBB3 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */; };
-		D00ED4E7280070730068CBB3 /* ETCDKVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D1280070730068CBB3 /* ETCDKVItem.swift */; };
 		D00ED4E8280070730068CBB3 /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */; };
 		D00ED4E9280070730068CBB3 /* ETCDKVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D3280070730068CBB3 /* ETCDKVStore.swift */; };
 		D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D4280070730068CBB3 /* ETCDControlView.swift */; };
@@ -106,7 +105,6 @@
 		D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
 		D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
 		D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
-		D00ED4D1280070730068CBB3 /* ETCDKVItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItem.swift; sourceTree = "<group>"; };
 		D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
 		D00ED4D3280070730068CBB3 /* ETCDKVStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVStore.swift; sourceTree = "<group>"; };
 		D00ED4D4280070730068CBB3 /* ETCDControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDControlView.swift; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 		D00ED4D0280070730068CBB3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D00ED4D1280070730068CBB3 /* ETCDKVItem.swift */,
 				D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */,
 				D00ED4D3280070730068CBB3 /* ETCDKVStore.swift */,
 			);
@@ -441,6 +438,7 @@
 				D00ED49A28006F6E0068CBB3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */,
+				5C38C223280BC394004C36C1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D00ED46428006EAA0068CBB3 /* Products */;
 			projectDirPath = "";
@@ -491,7 +489,6 @@
 				D00ED4E1280070730068CBB3 /* CardItemView.swift in Sources */,
 				D00ED4B9280070610068CBB3 /* CarouselView.swift in Sources */,
 				D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */,
-				D00ED4E7280070730068CBB3 /* ETCDKVItem.swift in Sources */,
 				D00ED4BA280070610068CBB3 /* Content.swift in Sources */,
 				D00ED4A42800702E0068CBB3 /* AboutView.swift in Sources */,
 				D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */,
@@ -844,6 +841,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C38C223280BC394004C36C1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/markrenaud/FilePicker";
