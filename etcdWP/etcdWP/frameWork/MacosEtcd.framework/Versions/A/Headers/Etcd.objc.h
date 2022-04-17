@@ -12,7 +12,6 @@
 
 
 @class EtcdKVClient;
-@class EtcdObjects;
 
 @interface EtcdKVClient : NSObject <goSeqRefInterface> {
 }
@@ -47,19 +46,11 @@
 - (BOOL)putKeyWithTTL:(NSString* _Nullable)key value:(NSString* _Nullable)value ttl:(long)ttl error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)revoke:(long)leaseid error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)roleAdd:(NSString* _Nullable)role error:(NSError* _Nullable* _Nullable)error;
-- (EtcdObjects* _Nullable)roles:(NSError* _Nullable* _Nullable)error;
+- (NSData* _Nullable)roles:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)sortPrefix:(long)des prefix:(NSString* _Nullable)prefix error:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)status:(NSString* _Nullable)endpoint error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)userAdd:(NSString* _Nullable)user password:(NSString* _Nullable)password error:(NSError* _Nullable* _Nullable)error;
-- (EtcdObjects* _Nullable)users:(NSError* _Nullable* _Nullable)error;
-@end
-
-@interface EtcdObjects : NSObject <goSeqRefInterface> {
-}
-@property(strong, readonly) _Nonnull id _ref;
-
-- (nonnull instancetype)initWithRef:(_Nonnull id)ref;
-- (nonnull instancetype)init;
+- (NSData* _Nullable)users:(NSError* _Nullable* _Nullable)error;
 @end
 
 FOUNDATION_EXPORT EtcdKVClient* _Nullable EtcdNewKVClient(NSString* _Nullable endpoints, NSString* _Nullable username, NSString* _Nullable password, NSString* _Nullable cert, NSString* _Nullable certKey, long requestTimeout, long dialTimeout, long dialKeepAliveTime, long dialKeepAliveTimeout, long autoSyncInterval, NSError* _Nullable* _Nullable error);

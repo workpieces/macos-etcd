@@ -38,8 +38,28 @@ struct PairStore:Codable,Mappable,Identifiable,Hashable {
         size             <- map["size"]
         id = UUID().uuidString
     }
-    
+}
 
+struct Cluster: Codable{
+    var id :  String
+    var name: String
+    var status: Bool
+    var peer_addr: String
+    var client_addr: String
+    var is_learner: Bool
+}
+
+struct ClusterStatus: Codable{
+    var id : String
+    var end_point: String
+    var etcd_version: String
+    var db_size: String
+    var is_leader: Bool
+    var is_learner: Bool
+    var raft_term: String
+    var raft_index: String
+    var raft_applied_index: String
+    var errors: String
 }
 
 extension PairStore {

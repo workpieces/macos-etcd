@@ -140,48 +140,65 @@ extension ItemStore {
 extension ItemStore {
     // 获取所有角色
     func Roles() -> [String] {
-        return []
+        do {
+            let data = try? c?.roles()
+            if ((data?.isEmpty) != nil) {
+                let roles = try JSONDecoder().decode([String].self, from: data!)
+                return roles
+            }
+            return []
+        } catch  {
+            return []
+        }
     }
     
     // 获取所有用户
     func Users() -> [String] {
-        
-        return []
+        do {
+            let data = try? c?.users()
+            if ((data?.isEmpty) != nil) {
+                let usrs = try JSONDecoder().decode([String].self, from: data!)
+                return usrs
+            }
+            return []
+        } catch  {
+            return []
+        }
     }
     
     // 创建角色
     func RoleAdd(role : String) throws {
-        
+        try? c?.roleAdd(role)
     }
     
     // 删除角色
     func DeleteRole(role: String) throws {
-        
+        try? c?.deleteRole(role)
     }
     
     // 创建用户
-    func UserAdd(usr: String) throws {
-        
+    func UserAdd(usr: String,password:String) throws {
+        try? c?.userAdd(usr, password: password)
     }
     
     // 删除用户
     func DeleteUser(usr: String) throws {
-        
+        try? c?.deleteUser(usr)
     }
     
     // Grant authorize roles to user.
-    func Grant(usr: String,role: String) throws {
-        
+    func AuthGrant(usr: String,role: String) throws {
+        try? c?.authGrant(usr, role: role)
     }
     
     // Permission
     func Permission(role: String,key: String,end: String) throws {
-        
+        try? c?.permission(role, key: key, end: end)
     }
     
     // 开启认证
     func AuthEnable(enable: Bool) throws {
-        
+        try? c?.authEnable(enable)
     }
 }
 
@@ -189,8 +206,17 @@ extension ItemStore {
 // ClusterStore 集群服务
 extension ItemStore {
     // 集群成员列表
-    func MemberList() throws{
-     
+    func MemberList() -> [Cluster]{
+        do {
+            let data = try? c?.memberList()
+            if ((data?.isEmpty) != nil) {
+                let clusters = try JSONDecoder().decode([Cluster].self, from: data!)
+                return clusters
+            }
+            return []
+        } catch  {
+            return []
+        }
     }
     
     // 添加集群成员 (以,号分割)

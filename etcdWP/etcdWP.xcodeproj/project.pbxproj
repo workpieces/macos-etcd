@@ -10,7 +10,7 @@
 		5C10A33C280A78F20055215E /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A33B280A78F20055215E /* ETCDConfigView.swift */; };
 		5C10A33E280A995D0055215E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A33D280A995D0055215E /* Button.swift */; };
 		5C10A345280A99DF0055215E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10A344280A99DF0055215E /* AuthView.swift */; };
-		5C38C227280BD5F9004C36C1 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C38C226280BD5F9004C36C1 /* MacosEtcd.framework */; };
+		5C38C229280C457B004C36C1 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C38C228280C457B004C36C1 /* MacosEtcd.framework */; };
 		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
@@ -72,7 +72,7 @@
 		5C10A33B280A78F20055215E /* ETCDConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDConfigView.swift; sourceTree = "<group>"; };
 		5C10A33D280A995D0055215E /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5C10A344280A99DF0055215E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		5C38C226280BD5F9004C36C1 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		5C38C228280C457B004C36C1 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D00ED46A28006EAB0068CBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			files = (
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
-				5C38C227280BD5F9004C36C1 /* MacosEtcd.framework in Frameworks */,
+				5C38C229280C457B004C36C1 /* MacosEtcd.framework in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
 				D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */,
@@ -221,7 +221,7 @@
 		D00ED49E28006FD90068CBB3 /* frameWork */ = {
 			isa = PBXGroup;
 			children = (
-				5C38C226280BD5F9004C36C1 /* MacosEtcd.framework */,
+				5C38C228280C457B004C36C1 /* MacosEtcd.framework */,
 			);
 			path = frameWork;
 			sourceTree = "<group>";
