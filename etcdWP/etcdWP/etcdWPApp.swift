@@ -9,6 +9,7 @@ import SwiftUI
 import AppKit
 // App icon: https://appicon.co/
 // Macos Icon https://icons8.com/icons/set/mac-app
+// SwiftUI基础知识：https://www.jianshu.com/u/c505aa9e47c2
 
 struct EtcdCommands: Commands {
     var body: some Commands {
