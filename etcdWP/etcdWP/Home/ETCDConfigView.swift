@@ -110,26 +110,45 @@ struct ETCDConfigView: View {
             }
             .padding(.leading,44)
             .padding(.trailing ,44)
+            .padding(.bottom,44.0)
             
-            PopView {
-                Button {
-                    if self.homeData.Register(item: config) {
-                        self.homeData.Append(data: config)
+            HStack(spacing: 44.0) {
+                PopView {
+                    Button {
                         self.isPopView.toggle()
-                    }else{
-                        self.isToast.toggle()
+                    } label: {
+                        Text("Cancel")
+                            .fontWeight(.semibold)
+                            .font(.system(size: 18))
+                            .foregroundColor(.white)
+                            .padding()
                     }
-                } label: {
-                    Text("Save")
-                        .fontWeight(.semibold)
-                        .font(.system(size: 18))
-                        .foregroundColor(.white)
-                        .padding()
+                    .frame(width: 120.0,height: 44.0)
+                    .buttonStyle(PlainButtonStyle())
+                    .background(Color.red).opacity(0.75)
+                    .cornerRadius(10.0)
                 }
-                .frame(width: 120.0,height: 44.0)
-                .buttonStyle(PlainButtonStyle())
-                .background(Color(hex:"#00FFFF").opacity(0.75))
-                .cornerRadius(10.0)
+                
+                PopView {
+                    Button {
+                        if self.homeData.Register(item: config) {
+                            self.homeData.Append(data: config)
+                            self.isPopView.toggle()
+                        }else{
+                            self.isToast.toggle()
+                        }
+                    } label: {
+                        Text("Save")
+                            .fontWeight(.semibold)
+                            .font(.system(size: 18))
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                    .frame(width: 120.0,height: 44.0)
+                    .buttonStyle(PlainButtonStyle())
+                    .background(Color(hex:"#00FFFF").opacity(0.75))
+                    .cornerRadius(10.0)
+                }
             }
             
             Spacer()
