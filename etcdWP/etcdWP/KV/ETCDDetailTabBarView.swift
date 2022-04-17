@@ -16,7 +16,7 @@ struct ETCDDetailTabBarView: View {
     var body: some View {
         GeometryReader { proxy in
             AxisTabView(selection: $selection, constant: constant) { state in
-                ATBasicStyle(state, color:Color(hex: "#375B7E"))
+                ATBasicStyle(state, color:Color.clear)
             } content: {
                 ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 0, systemName: "antenna.radiowaves.left.and.right",systemTitle:"KV" ,safeArea: proxy.safeAreaInsets)
                 ETCDControlView(selection: $selection, constant: $constant, color: $color, tag: 1, systemName: "lock.icloud.fill",systemTitle:"Authorize", safeArea: proxy.safeAreaInsets)

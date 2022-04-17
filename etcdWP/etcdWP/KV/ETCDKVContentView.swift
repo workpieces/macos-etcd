@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftyJSON
 
 extension View {
-    func withDefaultHeaderLabelView(title: String,fontSize: CGFloat = 13,color: Color =  Color(hex: "#375B7E")) -> some View {
+    func withDefaultHeaderLabelView(title: String,fontSize: CGFloat = 13,color: Color =  Color.white) -> some View {
         Label {
             Text(title)
                 .withDefaultContentTitle(fontColor: color,fontSize: fontSize)
@@ -31,9 +31,16 @@ extension View {
     
     func withDefaultVHImageButton(name: String, title: String,textColor: Color = .white,color: Color = .white,size: CGFloat = 13) -> some View {
         VStack(alignment: .center, spacing: 2.0) {
-            Image(name)
-                .withDefaultImage(foreColor: color, width: size)
-            
+            if (name .contains(".")){
+                Image(systemName:name)
+                    .withDefaultImage(foreColor: color, width: size)
+                
+            }else{
+                Image(name)
+                    .withDefaultImage(foreColor: color, width: size)
+                
+            }
+        
             Text(title)
                 .font(.subheadline)
                 .foregroundColor(textColor)
@@ -89,10 +96,12 @@ struct ETCDKVContentView: View {
                         HStack {
                             withDefaultHeaderLabelView(title: storeObj.address)
                             Spacer()
-                            withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0)
-                            withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
-                            withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
-                            withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
+                            withDefaultOnlyImageButton(name: "arrow.clockwise.circle",color: .orange,size: 20.0).onTapGesture {
+                                self.items  = storeObj.Children()
+                            }
+//                            withDefaultOnlyImageButton(name: "folder.badge.minus",color: .red,size: 22.0)
+//                            withDefaultOnlyImageButton(name: "plus.circle",color: .green,size: 18.0)
+//                            withDefaultOnlyImageButton(name: "magnifyingglass",size: 18.0)
                         }
                         .frame(width:  geometry.size.width / 2.0, height: 44)
                         List(items, id: \.self ,children:\.pairs){ item in
@@ -102,9 +111,12 @@ struct ETCDKVContentView: View {
                                     self.selecteItem  = item
                                 }
                         }.listStyle(PlainListStyle())
-                        .frame(width: geometry.size.width / 2.0, height: geometry.size.height - 44)
-                        
-                    }.background(Color.black.opacity(0.2))
+                        .frame(width: geometry.size.width / 2.0, height: geometry.size.height - 48)
+                    }
+                    Divider()
+                        .frame(width:0.5)
+                        .frame(maxHeight:geometry.size.height * 0.85)
+                        .background(Color.white)
                     VStack {
                         HStack {
                             Text("Value Size:\(selecteItem?.size ?? 0) bytes")
@@ -124,32 +136,31 @@ struct ETCDKVContentView: View {
                             
                             Spacer()
                             
-                            withDefaultVHImageButton(name: "write", title: "write",size: 14.0)
-                            withDefaultVHImageButton(name: "copy", title: "copy",size: 14.0).onTapGesture {
+//                            withDefaultVHImageButton(name: "pencil.slash", title: "write",size: 14.0)
+                            withDefaultVHImageButton(name: "doc.on.doc", title: "copy",size: 14.0).onTapGesture {
                         
                                 var text = ""
                                 if jsonIndex == 1{
                                     text = selecteItem?.value ?? ""
                                 }else{
-                                    let representation  = selecteItem?.toJSON();
+                                    let representation  = selecteItem?.value;
                                     text = JSON(representation as Any).rawString()!
                                 }
                                 let pasteboard = NSPasteboard.general
                                 pasteboard.declareTypes([.string], owner: nil)
                                 pasteboard.setString(text, forType: .string)
                             }
-                            withDefaultVHImageButton(name: "save", title: "save",size: 14.0)
+//                            withDefaultVHImageButton(name: "square.and.arrow.down.on.square.fill", title: "save",size: 14.0)
                                 .padding(.trailing,10.0)
                         }
                         .frame(height: 44.0)
                         .cornerRadius(DefaultRadius)
-                        .background(Color(hex: "#5B9BD4").opacity(0.45))
                         .padding(.trailing,15.0)
                         .padding(.bottom,15.0)
                         if jsonIndex == 1{
                             TextContentView(selecteItem?.value,geometry)
                         }else{
-                            let representation  = selecteItem?.toJSON();
+                            let representation  = selecteItem?.value;
                             let string = JSON(representation as Any).rawString()
                             TextContentView(string,geometry)
                         }
