@@ -95,9 +95,14 @@ extension ItemStore {
         try c?.put(key, value: value)
     }
     
-    // 添加键值+租约
+    // 添加键值+ttl
+    func PutKeyWithTTL(key: String,value: String,ttl: Int) throws {
+        try c?.putKey(withTTL: key, value: value, ttl: ttl)
+    }
+    
+    // 添加键值+租约id
     func PutKeyWithLease(key: String,value: String,leaseid: Int) throws {
-        try c?.putKey(withLease: key, value: value, ttl: leaseid)
+        try c?.putKey(withLease: key, value: value, leaseid: leaseid)
     }
     
     // 添加键值+租约+存活一次
@@ -121,9 +126,8 @@ extension ItemStore {
     }
     
     // 获取租约id
-    func Grant(ttl: Int) -> Int {
-        
-        return -1
+    func Grant(ttl: Int) -> Int?{
+         c?.grant(ttl)
     }
     
     //撤销租约

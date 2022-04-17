@@ -34,7 +34,7 @@
 - (BOOL)endPointHealth:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)get:(NSString* _Nullable)key error:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)getPrefix:(NSString* _Nullable)prefix error:(NSError* _Nullable* _Nullable)error;
-- (BOOL)grant:(long)ttl ret0_:(long* _Nullable)ret0_ error:(NSError* _Nullable* _Nullable)error;
+- (long)grant:(long)ttl;
 - (BOOL)memberAdd:(NSString* _Nullable)endpoint error:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)memberList:(NSError* _Nullable* _Nullable)error;
 - (BOOL)memberRemove:(long)id_ error:(NSError* _Nullable* _Nullable)error;
@@ -43,7 +43,8 @@
 - (BOOL)permission:(NSString* _Nullable)role key:(NSString* _Nullable)key end:(NSString* _Nullable)end error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)put:(NSString* _Nullable)key value:(NSString* _Nullable)value error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)putKeyWithAliveOnce:(NSString* _Nullable)key value:(NSString* _Nullable)value leaseid:(long)leaseid error:(NSError* _Nullable* _Nullable)error;
-- (BOOL)putKeyWithLease:(NSString* _Nullable)key value:(NSString* _Nullable)value ttl:(long)ttl error:(NSError* _Nullable* _Nullable)error;
+- (BOOL)putKeyWithLease:(NSString* _Nullable)key value:(NSString* _Nullable)value leaseid:(long)leaseid error:(NSError* _Nullable* _Nullable)error;
+- (BOOL)putKeyWithTTL:(NSString* _Nullable)key value:(NSString* _Nullable)value ttl:(long)ttl error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)revoke:(long)leaseid error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)roleAdd:(NSString* _Nullable)role error:(NSError* _Nullable* _Nullable)error;
 - (EtcdObjects* _Nullable)roles:(NSError* _Nullable* _Nullable)error;
