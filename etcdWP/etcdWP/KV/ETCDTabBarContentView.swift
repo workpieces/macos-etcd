@@ -8,40 +8,57 @@
 import SwiftUI
 import NavigationStack
 
-struct ListModel: Identifiable{
-    var id  = UUID()
-    var task : String
-}
-
-let ListModels = [
-    ListModel(task: "namespace/k1/k2"),
-    ListModel(task: "pod/k8s/v1"),
-    ListModel(task: "deployment/k8s/v1"),
-]
-
 struct ETCDKeyListContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     let DefaultImageName = "key"
     var body: some View {
         List {
             Section(header:VStack(content: {
                 HStack{
-                    Text("服务地址：127.127.127.127:2379")
+                    Text("服务地址：\(storeObj.address)")
                         .font(.caption)
                         .foregroundColor(Color(hex: "#5B9BD4"))
                     Spacer()
-                    Text("链接状态: 正常")
-                        .font(.caption)
-                        .foregroundColor(.red)
+                    
+                    if storeObj.status {
+                        Text("链接状态: 正常")
+                            .font(.caption)
+                            .foregroundColor(.green)
+                    }else{
+                        Text("链接状态: 异常")
+                            .font(.caption)
+                            .foregroundColor(.red)
+                    }
                 }
                 .padding(.all,4.0)
+                
+                HStack {
+                    Button {} label: {
+                        Text("刷新加载")
+                            .font(.caption)
+                            .foregroundColor(.yellow)
+                    }
+                    Button {} label: {
+                        Text("重新链接")
+                            .font(.caption)
+                            .foregroundColor(.yellow)
+                    }
+                    
+                    Button {} label: {
+                        Text("断开链接")
+                            .font(.caption)
+                            .foregroundColor(.yellow)
+                    }
+                    Spacer()
+                }
                 Divider()
             })) {
-                ForEach(ListModels) { item in
+                ForEach(storeObj.All()) { item in
                     HStack {
                         Image(systemName: DefaultImageName)
                             .foregroundColor(.orange)
                             .font(.system(size: 12.0))
-                        Text(item.task)
+                        Text(item.key)
                             .foregroundColor(.white)
                             .font(.system(size: 11.0,weight: .semibold))
                             .lineSpacing(8.0)
@@ -68,17 +85,17 @@ struct ETCDKVGridContentView: View {
                 HStack {
                     Spacer()
                     withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
-
+                    
                     Spacer()
-
+                    
                     withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
                     Spacer()
-
+                    
                     withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
                     Spacer()
                     withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
                     Spacer()
-
+                    
                 }
                 .padding(.top,20.0)
                 Spacer()
@@ -110,9 +127,6 @@ struct ETCDTabBarContentView: View {
                 .offset(y: -20)
             }
         })
-        .onAppear {
-            
-        }
     }
 }
 

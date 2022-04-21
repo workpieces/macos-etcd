@@ -11,9 +11,11 @@ import MacosEtcd
 class ItemStore: ObservableObject {
     @Published var c : EtcdKVClient?
     @Published var address: String
-    init(c: EtcdKVClient?,address: String) {
+    @Published var status: Bool
+    init(c: EtcdKVClient?,address: String,status: Bool) {
         self.c  = c
         self.address = address
+        self.status = status
     }
 }
 

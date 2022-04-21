@@ -40,13 +40,9 @@
 		D00ED4DF280070730068CBB3 /* ETCDOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C6280070730068CBB3 /* ETCDOptionStore.swift */; };
 		D00ED4E1280070730068CBB3 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4C9280070730068CBB3 /* CardItemView.swift */; };
 		D00ED4E2280070730068CBB3 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CA280070730068CBB3 /* TopToastView.swift */; };
-		D00ED4E4280070730068CBB3 /* ETCDDetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */; };
 		D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */; };
-		D00ED4E6280070730068CBB3 /* ETCDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */; };
 		D00ED4E8280070730068CBB3 /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */; };
 		D00ED4E9280070730068CBB3 /* ETCDKVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D3280070730068CBB3 /* ETCDKVStore.swift */; };
-		D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D4280070730068CBB3 /* ETCDControlView.swift */; };
-		D00ED4EB280070730068CBB3 /* ETCDKVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D5280070730068CBB3 /* ETCDKVContentView.swift */; };
 		D00ED4EC280070730068CBB3 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D7280070730068CBB3 /* MembersView.swift */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
 /* End PBXBuildFile section */
@@ -102,13 +98,9 @@
 		D00ED4C6280070730068CBB3 /* ETCDOptionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDOptionStore.swift; sourceTree = "<group>"; };
 		D00ED4C9280070730068CBB3 /* CardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		D00ED4CA280070730068CBB3 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
-		D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDDetailTabBarView.swift; sourceTree = "<group>"; };
 		D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
-		D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItem.swift; sourceTree = "<group>"; };
 		D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
 		D00ED4D3280070730068CBB3 /* ETCDKVStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVStore.swift; sourceTree = "<group>"; };
-		D00ED4D4280070730068CBB3 /* ETCDControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDControlView.swift; sourceTree = "<group>"; };
-		D00ED4D5280070730068CBB3 /* ETCDKVContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVContentView.swift; sourceTree = "<group>"; };
 		D00ED4D7280070730068CBB3 /* MembersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,12 +300,8 @@
 		D00ED4CC280070730068CBB3 /* KV */ = {
 			isa = PBXGroup;
 			children = (
-				D00ED4CD280070730068CBB3 /* ETCDDetailTabBarView.swift */,
 				D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */,
-				D00ED4CF280070730068CBB3 /* ETCDTabBarItem.swift */,
 				D00ED4D0280070730068CBB3 /* Model */,
-				D00ED4D4280070730068CBB3 /* ETCDControlView.swift */,
-				D00ED4D5280070730068CBB3 /* ETCDKVContentView.swift */,
 			);
 			path = KV;
 			sourceTree = "<group>";
@@ -485,20 +473,16 @@
 				5C10A33E280A995D0055215E /* Button.swift in Sources */,
 				D00ED4DD280070730068CBB3 /* HomeViewModel.swift in Sources */,
 				D00ED4E9280070730068CBB3 /* ETCDKVStore.swift in Sources */,
-				D00ED4E4280070730068CBB3 /* ETCDDetailTabBarView.swift in Sources */,
 				D00ED4E1280070730068CBB3 /* CardItemView.swift in Sources */,
 				D00ED4B9280070610068CBB3 /* CarouselView.swift in Sources */,
 				D00ED4BB280070610068CBB3 /* ColorHex.swift in Sources */,
 				D00ED4BA280070610068CBB3 /* Content.swift in Sources */,
 				D00ED4A42800702E0068CBB3 /* AboutView.swift in Sources */,
-				D00ED4EA280070730068CBB3 /* ETCDControlView.swift in Sources */,
 				5C10A33C280A78F20055215E /* ETCDConfigView.swift in Sources */,
-				D00ED4E6280070730068CBB3 /* ETCDTabBarItem.swift in Sources */,
 				D00ED4B8280070610068CBB3 /* CarouselItemlView.swift in Sources */,
 				D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */,
 				D00ED4A52800702E0068CBB3 /* AboutModel.swift in Sources */,
 				D00ED4AC280070470068CBB3 /* Constant.swift in Sources */,
-				D00ED4EB280070730068CBB3 /* ETCDKVContentView.swift in Sources */,
 				D00ED4DF280070730068CBB3 /* ETCDOptionStore.swift in Sources */,
 				D00ED4DE280070730068CBB3 /* ETCDStore.swift in Sources */,
 				D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */,

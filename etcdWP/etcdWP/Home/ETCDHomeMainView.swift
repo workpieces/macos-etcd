@@ -29,7 +29,7 @@ struct HomeMainView: View {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
                             PushView(destination: ETCDTabBarContentView()
                                 .environmentObject(ItemStore.init(
-                                    c: self.homeData.ectdClientList[item].etcdClient,address: self.homeData.ectdClientList[item].endpoints.first!))){
+                                    c: self.homeData.ectdClientList[item].etcdClient,address: self.homeData.ectdClientList[item].endpoints.first!,status: self.homeData.ectdClientList[item].status))){
                                 CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }
