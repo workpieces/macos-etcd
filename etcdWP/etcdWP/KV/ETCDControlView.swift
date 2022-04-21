@@ -24,7 +24,8 @@ struct ETCDControlView: View {
         ZStack {
             switch selection {
             case 0:
-                ETCDKVContentView( selecteItem:storeObj.Children().first ,items:storeObj.Children()).background(Color.clear)
+//                ETCDKVContentView( selecteItem:storeObj.Children().first ,items:storeObj.Children()).background(Color.clear)
+                Color.red
             case 1:
                 Text("\(selection)")
             case 2:
