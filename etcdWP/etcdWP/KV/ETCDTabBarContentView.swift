@@ -13,9 +13,6 @@ struct ListModel: Identifiable{
     var task : String
 }
 
-/*
- 定义假数据，数据列表
- */
 let ListModels = [
     ListModel(task: "namespace/k1/k2"),
     ListModel(task: "pod/k8s/v1"),
@@ -26,8 +23,7 @@ struct ETCDKeyListContentView: View {
     let DefaultImageName = "key"
     var body: some View {
         List {
-            Section(header:
-            VStack(content: {
+            Section(header:VStack(content: {
                 HStack{
                     Text("服务地址：127.127.127.127:2379")
                         .font(.caption)
@@ -64,6 +60,33 @@ struct ETCDKeyListContentView: View {
     }
 }
 
+struct ETCDKVGridContentView: View {
+    @State var putSelect = false
+    var body: some View {
+        ZStack(alignment: .topLeading){
+            VStack{
+                HStack {
+                    Spacer()
+                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
+
+                    Spacer()
+
+                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
+                    Spacer()
+
+                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
+                    Spacer()
+                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
+                    Spacer()
+
+                }
+                .padding(.top,20.0)
+                Spacer()
+            }
+        }
+    }
+}
+
 struct ETCDTabBarContentView: View {
     @State private var isPopView = false
     var body: some View {
@@ -75,9 +98,10 @@ struct ETCDTabBarContentView: View {
                 GeometryReader {  g in
                     HStack(spacing: 10.0) {
                         ETCDKeyListContentView()
-                            .frame(width: g.size.width/3.2)
-                            .border(Color(hex: "#5B9BD4").opacity(0.30), width: 0.5)
-                        EmptyView()
+                            .frame(width: g.size.width/3.0)
+                            .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+                        ETCDKVGridContentView()
+                            .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                     }
                 }
                 .padding(.leading,15)
