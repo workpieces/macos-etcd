@@ -57,14 +57,7 @@ extension HomeViewModel {
     
     // 检测etcd是否健康
     func Ping(c: EtcdKVClient) -> Bool {
-        var ok : Bool = true
-        do {
-            try c.endPointHealth()
-        } catch {
-            print(error)
-            ok = false
-        }
-        return ok
+        return c.ping()
     }
     
     // 关闭指定的etcd客户端服务

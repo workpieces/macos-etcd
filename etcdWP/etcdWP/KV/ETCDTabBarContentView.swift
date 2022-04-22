@@ -7,6 +7,7 @@
 
 import SwiftUI
 import NavigationStack
+import Dispatch
 
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
@@ -33,38 +34,44 @@ struct ETCDKeyListContentView: View {
                 .padding(.all,4.0)
                 
                 HStack {
-                    Button {} label: {
+                    Button {
+                        
+                    } label: {
                         Text("刷新加载")
                             .font(.caption)
                             .foregroundColor(.yellow)
                     }
-                    Button {} label: {
-                        Text("重新链接")
+                    Button {
+                        let resp = storeObj.DeleteALL()
+                        print(resp as Any)
+                    } label: {
+                        Text("清空键值")
                             .font(.caption)
                             .foregroundColor(.yellow)
                     }
                     
+                    Spacer()
+                    
                     Button {} label: {
-                        Text("断开链接")
+                        Text("查询")
                             .font(.caption)
                             .foregroundColor(.yellow)
                     }
-                    Spacer()
                 }
                 Divider()
             })) {
-                ForEach(storeObj.All()) { item in
+                ForEach(storeObj.GetALL()) { item in
                     HStack {
                         Image(systemName: DefaultImageName)
                             .foregroundColor(.orange)
                             .font(.system(size: 12.0))
-                        Text(item.key)
+                        Text(item.key!)
                             .foregroundColor(.white)
                             .font(.system(size: 11.0,weight: .semibold))
                             .lineSpacing(8.0)
                             .truncationMode(.middle)
                         Spacer()
-                        Text("10KB")
+                        Text(item.size!)
                             .foregroundColor(.white)
                             .font(.system(size: 11.0,weight: .semibold))
                             .lineSpacing(8.0)
@@ -77,28 +84,143 @@ struct ETCDKeyListContentView: View {
     }
 }
 
+struct ETCDKVClusterContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
+    let heads: [String] = ["id","end_point","etcd_version","db_size","db_size_in_use","is_leader","is_learner","raft_term","raft_index","raft_applied_index","errors"]
+    var body: some View {
+        List {
+            GeometryReader {  g in
+                Section(header: HStack(content: {
+                    ForEach(0..<heads.count()) { item in
+                        Text(heads[item])
+                            .font(.subheadline)
+                            .foregroundColor(.orange)
+                            .frame(width: g.size.width/heads.count())
+                        Spacer()
+                    }
+                })) {
+                    ForEach(0..<20) { item in
+                        HStack {
+                            Group {
+                                Text("1")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("2")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("3")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("4")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("5")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                            }
+                            Group {
+                                Text("6")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("7")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("8")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                            }
+                            
+                            Group{
+                                Text("9")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("10")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                                Text("11")
+                                    .font(.subheadline)
+                                    .foregroundColor(.orange)
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct ETCDKVOperateContentView: View {
+    var body: some View {
+        Color.orange
+    }
+}
+
+struct ETCDKVLogsContentView: View {
+    var body: some View {
+        Color.green
+    }
+}
+
 struct ETCDKVGridContentView: View {
     @State var putSelect = false
     var body: some View {
         ZStack(alignment: .topLeading){
-            VStack{
-                HStack {
-                    Spacer()
-                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
-                    
-                    Spacer()
-                    
-                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
-                    Spacer()
-                    
-                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
-                    Spacer()
-                    withDefaultAddButton(imageName: "", title: "添加键值", link:$putSelect )
-                    Spacer()
-                    
+            VStack(alignment: .leading,spacing: 10.0){
+                Section {
+                    ETCDKVClusterContentView()
+                        .padding(.leading,10)
+                        .padding(.trailing,10)
+                        .cornerRadius(10.0)
+                        .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+                } header: {
+                    HStack {
+                        Text("集群状态")
+                            .foregroundColor(.orange)
+                            .padding(.leading,20)
+                        Spacer()
+                    }
                 }
-                .padding(.top,20.0)
-                Spacer()
+                
+                Section {
+                    ETCDKVOperateContentView()
+                        .padding(.leading,10)
+                        .padding(.trailing,10)
+                        .cornerRadius(10.0)
+                        .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+                } header: {
+                    HStack {
+                        Text("键值操作")
+                            .foregroundColor(.orange)
+                            .padding(.leading,20)
+                        Spacer()
+                    }
+                }
+                
+                Section {
+                    ETCDKVLogsContentView()
+                        .padding(.leading,10)
+                        .padding(.trailing,10)
+                        .cornerRadius(10.0)
+                        .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+                } header: {
+                    HStack {
+                        Text("操作日志")
+                            .foregroundColor(.orange)
+                            .padding(.leading,20)
+                        Spacer()
+                    }
+                }
             }
         }
     }

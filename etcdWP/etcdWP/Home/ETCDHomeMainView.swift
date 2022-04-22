@@ -14,7 +14,7 @@ struct HomeMainView: View {
     let timer = Timer.publish(every: 3.0, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
-            withDefaultAddButton(imageName: "plus", title: "Create Etcd Client", link: $isLinkActive)
+            withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
                 .padding(.top ,40)
                 .padding(.trailing,18)
             HStack {
