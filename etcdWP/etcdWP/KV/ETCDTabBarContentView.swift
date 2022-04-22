@@ -89,86 +89,100 @@ struct ETCDKVClusterContentView: View {
     let heads: [String] = ["id","end_point","etcd_version","db_size","db_size_in_use","is_leader","is_learner","raft_term","raft_index","raft_applied_index","errors"]
     var body: some View {
         List {
-            GeometryReader {  g in
-                Section(header: HStack(content: {
-                    ForEach(0..<heads.count()) { item in
-                        Text(heads[item])
-                            .font(.subheadline)
-                            .foregroundColor(.orange)
-                            .frame(width: g.size.width/heads.count())
-                        Spacer()
-                    }
-                })) {
-                    ForEach(0..<20) { item in
-                        HStack {
-                            Group {
-                                Text("1")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("2")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("3")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("4")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("5")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                            }
-                            Group {
-                                Text("6")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("7")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("8")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                            }
-                            
-                            Group{
-                                Text("9")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("10")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                                Text("11")
-                                    .font(.subheadline)
-                                    .foregroundColor(.orange)
-                                Spacer()
-                            }
+            Section(header: HStack(content: {
+                ForEach(0..<heads.count) { item in
+                    Text(heads[item])
+                        .font(.subheadline)
+                        .foregroundColor(.orange)
+                    Spacer()
+                }
+            })) {
+                ForEach(0..<20) { item in
+                    HStack {
+                        Group {
+                            Text("1")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("2")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                        }
+                        Group{
+                            Text("3")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("4")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("5")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                        }
+                        Group {
+                            Text("6")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("7")
+                                .font(.subheadline)
+                                .foregroundColor(.white)
+                            Spacer()
+                            Text("8")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                        }
+                        
+                        Group{
+                            Text("9")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("10")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("11")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Spacer()
                         }
                     }
                 }
             }
         }
+        
     }
 }
 
 struct ETCDKVOperateContentView: View {
     var body: some View {
-        Color.orange
+        GeometryReader {  g in
+            HStack {
+                Color.red
+                    .frame(width: g.size.width*2/3)
+                Color.yellow
+                    .frame(width: g.size.width/3)
+            }
+        }
     }
 }
 
 struct ETCDKVLogsContentView: View {
     var body: some View {
-        Color.green
+        VStack {
+            HStack {
+                Text("2021-12-13 event: PUT OK ")
+                    .foregroundColor(.gray)
+                Spacer()
+            }
+            Spacer()
+        }
     }
 }
 
