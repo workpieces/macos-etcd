@@ -113,4 +113,38 @@ struct KVOperateLog: Identifiable,Hashable{
         self.message = message
         self.operate = operate
     }
+    
+    func formatTime() -> String {
+        let date = self.time
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd hh:mm:ss"
+        var dateStrin = "time: "
+        dateStrin.append(dateFormatter.string(from: date))
+        dateStrin.append("  | ")
+        return dateStrin ;
+    }
+    
+    
+    func formatStatus() -> String {
+        let date = String(self.status ?? 0)
+        var dateStrin = "status: : "
+        dateStrin.append(date)
+        dateStrin.append("  | ")
+        return dateStrin ;
+    }
+    
+    func formatMessage() -> String {
+        let damessagete = self.message ?? ""
+        var dateStrin = "message: "
+        dateStrin.append(damessagete)
+        return dateStrin ;
+    }
+    
+    func formatOperate() -> String {
+        let operateagete = self.operate
+        var dateStrin = "operate: : "
+        dateStrin.append(operateagete)
+        dateStrin.append(" | ")
+        return dateStrin ;
+    }
 }

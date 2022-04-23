@@ -196,10 +196,22 @@ struct ETCDKVOperateContentView: View {
 struct ETCDKVLogsContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
-        List(storeObj.logs,id:\.self){ item in
-            HStack{
-                Text(item.message! + " " + item.operate )
-            }.padding(5)
+        List(storeObj.GetLogs(),id:\.self){ item in
+        HStack{
+            Text(item.formatTime())
+                    .font(.subheadline)
+                    .foregroundColor(.green)
+            Text(item.formatStatus())
+                    .font(.subheadline)
+                    .foregroundColor(.yellow)
+            Text(item.formatOperate())
+               .font(.subheadline)
+               .foregroundColor(.orange)
+            Text(item.formatMessage())
+                    .font(.subheadline)
+                    .foregroundColor(.red)
+    
+            }
         }
     }
 }
