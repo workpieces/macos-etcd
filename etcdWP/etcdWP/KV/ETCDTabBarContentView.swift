@@ -7,7 +7,7 @@
 
 import SwiftUI
 import NavigationStack
-import Dispatch
+import PopupView
 
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
@@ -275,6 +275,7 @@ struct ETCDKVGridContentView: View {
 
 struct ETCDTabBarContentView: View {
     @State private var isPopView = false
+    @State private var isShowToast = false
     var body: some View {
         ZStack(alignment: .topLeading, content: {
             VStack {
@@ -296,6 +297,9 @@ struct ETCDTabBarContentView: View {
                 .offset(y: -20)
             }
         })
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 15) {
+            TopToastView()
+        }
     }
 }
 
