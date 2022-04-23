@@ -13,6 +13,7 @@ class ItemStore: ObservableObject {
     @Published var address: String
     @Published var status: Bool
     @Published var relead: Bool = false
+    @Published var realeadData: KVRealoadData?
     private var logs: [KVOperateLog] = []
     init(c: EtcdKVClient?,address: String,status: Bool) {
         self.c  = c
@@ -22,28 +23,35 @@ class ItemStore: ObservableObject {
 }
 
 struct KVRealoadData {
-    let kvs : [KVData]?
-    let members : [KVData]?
+    var  kvs : [KVData]
+    var  members : [KVData]
     var kvCount: Int = 0
     var memberCount: Int = 0
     
     init(ks : [KVData],mms : [KVData]) {
-        self.kvs = ks
-        self.members = mms
+        self.kvs = []
+        self.members = []
+        self.kvs.append(contentsOf:ks)
+        self.members.append(contentsOf: mms)
         self.kvCount = ks.count
         self.memberCount = mms.count
+    }
+    
+    func GetMemberCount() -> Int {
+        return self.memberCount
+    }
+    
+    func GetKvCount() -> Int{
+        return self.kvCount
     }
 }
 
 // Reload
 extension ItemStore {
-    func KVReaload() -> KVRealoadData?{
+    func KVReaload(){
         let kd = self.GetALL()
         let md = self.MemberList()
-        return KVRealoadData.init(ks: kd, mms: md)
-    }
-    func Reaload()  {
-        self.relead = !self.relead
+        self.realeadData =  KVRealoadData.init(ks: kd, mms: md)
     }
 }
 

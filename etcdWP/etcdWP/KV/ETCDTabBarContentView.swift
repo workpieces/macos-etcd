@@ -12,19 +12,33 @@ import PopupView
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
- 
+    
     func Reaload() {
-        storeObj.Reaload()
+        storeObj.KVReaload()
     }
     
-    func DeleteKey(key: String) {
-        storeObj.Delete(key: key)
-        Reaload()
+    func DeleteKey(key: String) -> Bool{
+        defer {storeObj.KVReaload()}
+        let data = storeObj.Delete(key: key)
+        if ((data?.datas?.isEmpty) != nil) {
+            return false
+        }
+        if data?.status != 200 {
+            return false
+        }
+        return true
     }
     
-    func DeleteALL() {
-        storeObj.DeleteALL()
-        Reaload()
+    func DeleteALL() -> Bool{
+        defer {storeObj.KVReaload()}
+        let data = storeObj.DeleteALL()
+        if ((data?.datas?.isEmpty) != nil) {
+            return false
+        }
+        if data?.status != 200 {
+            return false
+        }
+        return true
     }
     
     var body: some View {
@@ -56,7 +70,9 @@ struct ETCDKeyListContentView: View {
                                 .foregroundColor(.yellow)
                         }
                         Button {
-                            DeleteALL()
+                            if !self.DeleteALL() {
+                                print("Clean")
+                            }
                         } label: {
                             Text("清空键值")
                                 .font(.caption)
@@ -73,7 +89,7 @@ struct ETCDKeyListContentView: View {
                     }
                     Spacer()
                 })) {
-                    ForEach(storeObj.GetALL()) { item in
+                    ForEach(storeObj.realeadData?.kvs ?? []) { item in
                         ZStack {
                             HStack {
                                 Image(systemName: DefaultKeyImageName)
@@ -104,7 +120,7 @@ struct ETCDKeyListContentView: View {
             
             List {
                 Section {
-                    ForEach(storeObj.MemberList()) { item in
+                    ForEach(storeObj.realeadData?.members ?? []) { item in
                         VStack {
                             HStack {
                                 Text("成员名称: ")
@@ -128,7 +144,7 @@ struct ETCDKeyListContentView: View {
                                         .frame(width: 10, height: 10)
                                 }
                             }
-                           
+                            
                             HStack {
                                 Text("成员ID: ")
                                     .font(.system(size: 12.0,weight: .semibold))
@@ -150,16 +166,13 @@ struct ETCDKeyListContentView: View {
                 } header: {
                     VStack {
                         HStack(content: {
-                            Text("成员列表: 4")
+                            Text("成员相关")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Spacer()
+                            Text("成员总数量:  \(storeObj.realeadData?.GetMemberCount() ?? 0) 位")
                                 .font(.caption)
                                 .foregroundColor(Color(hex: "#5B9BD4"))
-                            
-                            Spacer()
-                            Button {} label: {
-                                Text("成员操作")
-                                    .font(.caption)
-                                    .foregroundColor(.yellow)
-                            }
                         })
                         .padding(.all,4.0)
                     }
@@ -341,6 +354,7 @@ struct ETCDKVGridContentView: View {
 }
 
 struct ETCDTabBarContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     @State private var isPopView = false
     @State private var isShowToast = false
     var body: some View {
@@ -365,7 +379,7 @@ struct ETCDTabBarContentView: View {
             }
         })
         .onAppear(perform: {
-            print("AAAA")
+            storeObj.KVReaload()
         })
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 15) {
             TopToastView()
