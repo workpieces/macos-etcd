@@ -31,6 +31,7 @@ extension ItemStore {
 // Operate Logs
 extension ItemStore {
     func InsertLogs(status: Int ,message: String,operate: String) {
+        self.logs.removeAll()
         let lg = KVOperateLog.init(status: status, message: message , operate: operate)
         self.logs.append(lg)
     }
