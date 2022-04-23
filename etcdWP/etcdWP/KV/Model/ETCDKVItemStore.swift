@@ -67,21 +67,45 @@ extension ItemStore {
     func Next() {
         let currentIndex = self.realeadData.page
         let count = self.realeadData.GetKvCount()
-        let last = count - currentIndex*self.realeadData.offset
-        if last > 0 {
-            self.realeadData.page += 1
-        }
-        print(self.realeadData.page)
-        if currentIndex != self.realeadData.page{
-            self.realeadData.kvs = self.realeadData.temp
-            let tmp  = self.realeadData.kvs[(self.realeadData.page-1)*self.realeadData.offset..<self.realeadData.page*self.realeadData.offset]
-            self.realeadData.kvs.removeAll()
-            self.realeadData.kvs.append(contentsOf: tmp)
+        if count != 0 {
+            let last = count - currentIndex*self.realeadData.offset
+            if last > 0 {
+                self.realeadData.page += 1
+                // maybe bug ?
+                if currentIndex != self.realeadData.page{
+                    self.realeadData.kvs = self.realeadData.temp
+                    // 判断是不是最后一页
+                    let mod = count / self.realeadData.offset
+                    if self.realeadData.page > mod {
+                        let tmp  = self.realeadData.kvs[(self.realeadData.page-1)*self.realeadData.offset..<count]
+                        self.realeadData.kvs.removeAll()
+                        self.realeadData.kvs.append(contentsOf: tmp)
+                    }else {
+                        let tmp  = self.realeadData.kvs[(self.realeadData.page-1)*self.realeadData.offset..<self.realeadData.page*self.realeadData.offset]
+                        self.realeadData.kvs.removeAll()
+                        self.realeadData.kvs.append(contentsOf: tmp)
+                    }
+                }
+            }
         }
     }
     
     func Last() {
-        
+        let currentIndex = self.realeadData.page
+        let count = self.realeadData.GetKvCount()
+        if count != 0 {
+            if self.realeadData.page != 1 {
+                self.realeadData.page -= 1                
+                if currentIndex != self.realeadData.page{
+                    self.realeadData.kvs = self.realeadData.temp
+                    let tmp  = self.realeadData.kvs[(self.realeadData.page-1)*self.realeadData.offset..<self.realeadData.page*self.realeadData.offset]
+                    self.realeadData.kvs.removeAll()
+                    self.realeadData.kvs.append(contentsOf: tmp)
+                }
+            }else{
+                self.realeadData.page = 1
+            }
+        }
     }
    
     func KVReaload(){
