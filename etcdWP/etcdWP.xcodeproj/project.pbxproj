@@ -44,6 +44,9 @@
 		D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */; };
 		D00ED4E8280070730068CBB3 /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */; };
 		D00ED4EC280070730068CBB3 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED4D7280070730068CBB3 /* MembersView.swift */; };
+		D079BE0D2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079BE0C2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift */; };
+		D079BE46281430DC006B8619 /* ETCDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079BE45281430DC006B8619 /* ETCDTableView.swift */; };
+		D079BE5028143F36006B8619 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079BE4F28143F36006B8619 /* SnapKit */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +105,8 @@
 		D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
 		D00ED4D2280070730068CBB3 /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
 		D00ED4D7280070730068CBB3 /* MembersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
+		D079BE0C2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTableViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
+		D079BE45281430DC006B8619 /* ETCDTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
+				D079BE5028143F36006B8619 /* SnapKit in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				5CB0E3392813FB1C0014DBA8 /* MacosEtcd.framework in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
@@ -302,6 +308,8 @@
 			children = (
 				D00ED4CE280070730068CBB3 /* ETCDTabBarContentView.swift */,
 				D00ED4D0280070730068CBB3 /* Model */,
+				D079BE0C2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift */,
+				D079BE45281430DC006B8619 /* ETCDTableView.swift */,
 			);
 			path = KV;
 			sourceTree = "<group>";
@@ -346,6 +354,7 @@
 				D00ED49B28006F6E0068CBB3 /* SwiftyJSON */,
 				D07D78692802827500F72CF7 /* ObjectMapper */,
 				5CDD9589280AA1180040BD53 /* FilePicker */,
+				D079BE4F28143F36006B8619 /* SnapKit */,
 			);
 			productName = etcdWP;
 			productReference = D00ED46328006EAA0068CBB3 /* etcdWP.app */;
@@ -394,6 +403,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = ETCD;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
@@ -427,6 +437,7 @@
 				D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				5CDD9588280AA1180040BD53 /* XCRemoteSwiftPackageReference "FilePicker" */,
 				5C38C223280BC394004C36C1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D079BE4E28143F36006B8619 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = D00ED46428006EAA0068CBB3 /* Products */;
 			projectDirPath = "";
@@ -484,6 +495,7 @@
 				D00ED4A52800702E0068CBB3 /* AboutModel.swift in Sources */,
 				D00ED4AC280070470068CBB3 /* Constant.swift in Sources */,
 				D00ED4DF280070730068CBB3 /* ETCDOptionStore.swift in Sources */,
+				D079BE0D2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D00ED4DE280070730068CBB3 /* ETCDStore.swift in Sources */,
 				D00ED4E5280070730068CBB3 /* ETCDTabBarContentView.swift in Sources */,
 				D00ED4E2280070730068CBB3 /* TopToastView.swift in Sources */,
@@ -491,6 +503,7 @@
 				D00ED4AD280070470068CBB3 /* OpenPan.swift in Sources */,
 				5C10A345280A99DF0055215E /* AuthView.swift in Sources */,
 				D00ED4EC280070730068CBB3 /* MembersView.swift in Sources */,
+				D079BE46281430DC006B8619 /* ETCDTableView.swift in Sources */,
 				D00ED4D8280070730068CBB3 /* ETCDHomeContentView.swift in Sources */,
 				D00ED4E8280070730068CBB3 /* ETCDKVItemStore.swift in Sources */,
 				D00ED4DB280070730068CBB3 /* ETCDClientStore.swift in Sources */,
@@ -875,6 +888,14 @@
 				version = 5.0.1;
 			};
 		};
+		D079BE4E28143F36006B8619 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
 		D07D78682802827500F72CF7 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
@@ -910,6 +931,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D00ED49A28006F6E0068CBB3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		D079BE4F28143F36006B8619 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D079BE4E28143F36006B8619 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		D07D78692802827500F72CF7 /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;

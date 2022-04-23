@@ -209,78 +209,8 @@ struct ETCDKeyListContentView: View {
 }
 
 struct ETCDKVClusterContentView: View {
-    @EnvironmentObject var storeObj : ItemStore
-    let heads: [String] = ["id","endpoint","version","dbSize","dbSizeInUse","leader","isLearner","raftTerm","raftIndex","raftAppliedIndex","errors"]
     var body: some View {
-        List {
-            Section(header: HStack(content: {
-                ForEach(0..<heads.count, id: \.self) { item in
-                    Text(heads[item])
-                        .font(.subheadline)
-                        .foregroundColor(.orange)
-                    Spacer()
-                }
-            })) {
-                ForEach(storeObj.EndpointStatus()) { item in
-                    HStack {
-                        Group {
-                            Text(item.status?.sid ?? "0")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text(item.status?.end_point ?? "localhost:2379")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                        }
-                        //                        Group{
-                        //                            Text(item.status?.etcd_version)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                            Text(item.status?.db_size)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                            Text(item.status?.db_size_in_use)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                        }
-                        //                        Group {
-                        //                            Text(item.status?.is_leader)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                            Text(item.status?.is_learner)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.white)
-                        //                            Spacer()
-                        //                            Text(item.status.raft_term)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                        }
-                        //
-                        //                        Group{
-                        //                            Text(item.status?.raft_index)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                            Text(item.status?.raft_applied_index)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                            Text(item.status?.errors)
-                        //                                .font(.subheadline)
-                        //                                .foregroundColor(.gray)
-                        //                            Spacer()
-                        //                        }
-                    }
-                }
-            }
-        }
-        
+        ETCDTableViewRepresentableBootcamp().background(Color.red)
     }
 }
 
@@ -321,7 +251,7 @@ struct ETCDKVLogsContentView: View {
                     .font(.subheadline)
                     .foregroundColor(item.status == 200 ? .white : .red)
                     .opacity(item.status == 200 ? 0.75 : 1.0)
-                    .frame( minHeight: 30, maxHeight: .infinity)
+                    .frame(minHeight: 30, maxHeight: .infinity)
             }
         }
     }
