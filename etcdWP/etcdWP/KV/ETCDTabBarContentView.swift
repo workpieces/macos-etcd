@@ -313,7 +313,7 @@ struct ETCDKVLogsContentView: View {
                     .opacity(0.75)
                 Text(item.formatStatus())
                     .font(.subheadline)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(item.status == 200 ? .yellow: .red)
                     .opacity(0.75)
                 Text(item.formatOperate())
                     .font(.subheadline)
@@ -321,7 +321,7 @@ struct ETCDKVLogsContentView: View {
                     .opacity(0.75)
                 Text(item.formatMessage())
                     .font(.subheadline)
-                    .foregroundColor(item.status == 200 ? .white : .red)
+                    .foregroundColor(item.status == 200 ? .secondary : .red)
                     .opacity(item.status == 200 ? 0.75 : 1.0)
             }
         }

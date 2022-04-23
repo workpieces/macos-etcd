@@ -95,7 +95,7 @@ extension ItemStore {
         let count = self.realeadData.GetKvCount()
         if count != 0 {
             if self.realeadData.page != 1 {
-                self.realeadData.page -= 1                
+                self.realeadData.page -= 1
                 if currentIndex != self.realeadData.page{
                     self.realeadData.kvs = self.realeadData.temp
                     let tmp  = self.realeadData.kvs[(self.realeadData.page-1)*self.realeadData.offset..<self.realeadData.page*self.realeadData.offset]
