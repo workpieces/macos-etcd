@@ -12,7 +12,6 @@ import PopupView
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
-    
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -220,6 +219,28 @@ struct ETCDKVClusterContentView: View {
 }
 
 struct ETCDKVOperateContentView: View {
+    var body: some View {
+        GeometryReader {  g in
+            HStack {
+                Color.red
+                    .frame(width: g.size.width/2)
+                MakeOperateButtonContentView(callback: { newValue, model in
+                    
+                })
+                    .frame(width: g.size.width/2)
+                }
+            }
+        }
+    }
+
+
+
+
+struct MakeOperateButtonContentView :View {
+    
+    @State var showingPopup: String? = nil
+    @State var show: Bool = false
+    var callback:(_ newValue: Bool, _ model:KVOperateModel) -> Void
     let operateModels : [KVOperateModel] = [
         KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
         KVOperateModel.init(name: "前缀删除", english: "（DeletePrefix）",type: 0),
@@ -228,22 +249,9 @@ struct ETCDKVOperateContentView: View {
         KVOperateModel.init(name: "租约列表",english: "（LeaseList）", type: 0),
     ]
     var body: some View {
-        GeometryReader {  g in
-            HStack {
-                Color.red
-                    .frame(width: g.size.width/2)
-                makeOperateButtonContentView(models: operateModels)
-                    .frame(width: g.size.width/2)
-            }
-        }
-    }
-}
-
-private extension ETCDKVOperateContentView {
-    @ViewBuilder func makeOperateButtonContentView(models: [KVOperateModel]) -> some View {
         ZStack(alignment: .topLeading){
             List {
-                ForEach(models) { item in
+                ForEach(operateModels) { item in
                     VStack {
                         Spacer()
                         HStack {
@@ -261,6 +269,10 @@ private extension ETCDKVOperateContentView {
                             Spacer()
                         }
                         Spacer()
+                    }.onTapGesture {
+                        self.showingPopup = "string"
+                        self.show.toggle()
+                        callback(self.show,item)
                     }
                     .background(Color.secondary.opacity(0.15))
                     .cornerRadius(8)
@@ -268,9 +280,70 @@ private extension ETCDKVOperateContentView {
                 }
             }
             .padding(8.0)
+        }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
+            AlerPopup()
         }
+        
+        
+        
     }
+    func AlerPopup() -> some View {
+        VStack(spacing: 10) {
+            Text("adsfadsfasdfadsf")
+                .foregroundColor(.white)
+                .fontWeight(.bold)
+            Text("adsfadsfasdfadsf")
+                .foregroundColor(.white)
+                .fontWeight(.bold)
+            HStack{
+                Button {
+                    self.showingPopup = nil
+                } label: {
+                    Text("Got it")
+                        .font(.system(size: 14))
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                }
+                .frame(width: 100, height: 40)
+                .background(Color.white)
+                .cornerRadius(20.0)
+                Button {
+                    self.showingPopup = nil
+                } label: {
+                    Text("Got it")
+                        .font(.system(size: 14))
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                }
+                .frame(width: 100, height: 40)
+                .background(Color.white)
+                .cornerRadius(20.0)
+                Button {
+                    self.showingPopup = nil
+                } label: {
+                    Text("Got it")
+                        .font(.system(size: 14))
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                }
+                .frame(width: 100, height: 40)
+                .background(Color.white)
+                .cornerRadius(20.0)
+            }
+        }
+        .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+        .background(Color.red)
+        .cornerRadius(10.0)
+        .frame( minHeight: 300,maxHeight: .infinity)
+        .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 10.0)
+    }
+
 }
+
+
+
+
+
 
 
 struct ETCDKVLogsContentView: View {
