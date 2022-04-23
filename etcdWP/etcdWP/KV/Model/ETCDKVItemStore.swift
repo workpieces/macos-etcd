@@ -197,3 +197,19 @@ extension ItemStore {
         return []
     }
 }
+
+// Members
+extension ItemStore {
+    func MemberList() -> [KVData] {
+        let result = c?.memberList()
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER"))
+            if resp?.status != 200 {
+                return []
+            }
+            return resp?.datas ?? []
+        }
+        return []
+    }
+}

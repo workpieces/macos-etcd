@@ -56,6 +56,8 @@ struct KVData: Codable, Identifiable {
     let size: String?
     // etcd endpoint status
     let status: KVStatus?
+    // etcd members obj
+    let members: KVMember?
     
     enum CodingKeys: String, CodingKey {
         case ttlid
@@ -69,6 +71,7 @@ struct KVData: Codable, Identifiable {
         case lease
         case size
         case status
+        case members
     }
 }
 
@@ -80,8 +83,8 @@ struct KVStatus: Codable, Identifiable {
     let etcd_version :String?
     let db_size : String?
     let db_size_in_use : String?
-    let is_leader : Bool?
-    let is_learner : Bool?
+    let is_leader : Bool = false
+    let is_learner : Bool = false
     let raft_term : String?
     let raft_index : String?
     let raft_applied_index : String?
@@ -99,6 +102,25 @@ struct KVStatus: Codable, Identifiable {
         case raft_index
         case raft_applied_index
         case errors
+    }
+}
+
+struct KVMember: Codable, Identifiable {
+    var id = UUID()
+    
+    let mid: String?
+    let name: String?
+    let status: Bool = false
+    let peer_addr: String?
+    let client_addr: String?
+    let is_learner: Bool = false
+    enum CodingKeys: String, CodingKey {
+        case mid
+        case name
+        case status
+        case peer_addr
+        case client_addr
+        case is_learner
     }
 }
 

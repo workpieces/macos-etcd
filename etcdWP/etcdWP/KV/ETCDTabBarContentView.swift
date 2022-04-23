@@ -27,80 +27,125 @@ struct ETCDKeyListContentView: View {
     }
     
     var body: some View {
-        List {
-            Section(header:VStack(content: {
-                HStack{
-                    Text("服务地址：\(storeObj.address)")
-                        .font(.caption)
-                        .foregroundColor(Color(hex: "#5B9BD4"))
-                    Spacer()
+        VStack {
+            List {
+                Section(header:VStack(content: {
+                    HStack{
+                        Text("服务地址：\(storeObj.address)")
+                            .font(.caption)
+                            .foregroundColor(Color(hex: "#5B9BD4"))
+                        Spacer()
+                        
+                        if storeObj.status {
+                            Text("链接状态: 正常")
+                                .font(.caption)
+                                .foregroundColor(.green)
+                        }else{
+                            Text("链接状态: 异常")
+                                .font(.caption)
+                                .foregroundColor(.red)
+                        }
+                    }
+                    .padding(.all,4.0)
                     
-                    if storeObj.status {
-                        Text("链接状态: 正常")
-                            .font(.caption)
-                            .foregroundColor(.green)
-                    }else{
-                        Text("链接状态: 异常")
-                            .font(.caption)
-                            .foregroundColor(.red)
-                    }
-                }
-                .padding(.all,4.0)
-                
-                HStack {
-                    Button {Reaload()} label: {
-                        Text("刷新加载")
-                            .font(.caption)
-                            .foregroundColor(.yellow)
-                    }
-                    Button {
-                        DeleteALL()
-                    } label: {
-                        Text("清空键值")
-                            .font(.caption)
-                            .foregroundColor(.yellow)
-                    }
-                    
-                    Spacer()
-                    
-                    Button {} label: {
-                        Text("查询")
-                            .font(.caption)
-                            .foregroundColor(.yellow)
-                    }
-                }
-                Spacer()
-            })) {
-                ForEach(storeObj.GetALL()) { item in
-                    ZStack {
-                        HStack {
-                            Image(systemName: DefaultKeyImageName)
-                                .foregroundColor(.orange)
-                                .font(.system(size: 12.0))
-                            Text(item.key!)
-                                .foregroundColor(.white)
-                                .font(.system(size: 11.0,weight: .semibold))
-                                .lineSpacing(8.0)
-                                .truncationMode(.middle)
-                            Spacer()
-                            Text(item.size!)
-                                .foregroundColor(.white)
-                                .font(.system(size: 11.0,weight: .semibold))
-                                .lineSpacing(8.0)
-                                .truncationMode(.middle)
+                    HStack {
+                        Button {Reaload()} label: {
+                            Text("刷新加载")
+                                .font(.caption)
+                                .foregroundColor(.yellow)
+                        }
+                        Button {
+                            DeleteALL()
+                        } label: {
+                            Text("清空键值")
+                                .font(.caption)
+                                .foregroundColor(.yellow)
                         }
                         
+                        Spacer()
+                        
+                        Button {} label: {
+                            Text("查询")
+                                .font(.caption)
+                                .foregroundColor(.yellow)
+                        }
                     }
-                    
-                    .onTapGesture(perform: {
-                        showingAlert.toggle()
-                    })
-                    .buttonStyle(PlainButtonStyle())
+                    Spacer()
+                })) {
+                    ForEach(storeObj.GetALL()) { item in
+                        ZStack {
+                            HStack {
+                                Image(systemName: DefaultKeyImageName)
+                                    .foregroundColor(.orange)
+                                    .font(.system(size: 12.0))
+                                Text(item.key!)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 11.0,weight: .semibold))
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
+                                Spacer()
+                                Text(item.size!)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 11.0,weight: .semibold))
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
+                            }
+                        }
+                        .onTapGesture(perform: {
+                            showingAlert.toggle()
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                    }
                 }
+                
+                
             }
+            .listRowInsets(nil)
+            .listStyle(.inset)
+            
+            List {
+                Section {
+                    ForEach(storeObj.MemberList()) { item in
+                        ScrollView(.horizontal,showsIndicators: false) {
+                            HStack {
+                                Text(item.members?.mid ?? "")
+                                Text(item.members?.name ?? "")
+                                if ((item.members?.status) != nil) {
+                                    Text("True")
+                                }else{
+                                    Text("False")
+                                }
+                                Text(item.members?.peer_addr ?? "")
+                                Text(item.members?.client_addr ?? "")
+                                if ((item.members?.is_learner) != nil) {
+                                    Text("True")
+                                }else{
+                                    Text("False")
+                                }
+                            }
+                        }
+                    }
+                } header: {
+                    VStack {
+                        HStack(content: {
+                            Text("成员列表: 4")
+                                .font(.caption)
+                                .foregroundColor(Color(hex: "#5B9BD4"))
+                            
+                            Spacer()
+                            Button {} label: {
+                                Text("操作文档介绍")
+                                    .font(.caption)
+                                    .foregroundColor(.yellow)
+                            }
+                        })
+                        .padding(.all,4.0)
+                    }
+                }
+                
+            }
+            .frame(height: 180.0)
         }
-        .listRowInsets(nil)
-        .listStyle(.inset)
     }
 }
 
@@ -129,49 +174,49 @@ struct ETCDKVClusterContentView: View {
                                 .foregroundColor(.gray)
                             Spacer()
                         }
-//                        Group{
-//                            Text(item.status?.etcd_version)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                            Text(item.status?.db_size)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                            Text(item.status?.db_size_in_use)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                        }
-//                        Group {
-//                            Text(item.status?.is_leader)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                            Text(item.status?.is_learner)
-//                                .font(.subheadline)
-//                                .foregroundColor(.white)
-//                            Spacer()
-//                            Text(item.status.raft_term)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                        }
-//                        
-//                        Group{
-//                            Text(item.status?.raft_index)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                            Text(item.status?.raft_applied_index)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                            Text(item.status?.errors)
-//                                .font(.subheadline)
-//                                .foregroundColor(.gray)
-//                            Spacer()
-//                        }
+                        //                        Group{
+                        //                            Text(item.status?.etcd_version)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                            Text(item.status?.db_size)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                            Text(item.status?.db_size_in_use)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                        }
+                        //                        Group {
+                        //                            Text(item.status?.is_leader)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                            Text(item.status?.is_learner)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.white)
+                        //                            Spacer()
+                        //                            Text(item.status.raft_term)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                        }
+                        //
+                        //                        Group{
+                        //                            Text(item.status?.raft_index)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                            Text(item.status?.raft_applied_index)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                            Text(item.status?.errors)
+                        //                                .font(.subheadline)
+                        //                                .foregroundColor(.gray)
+                        //                            Spacer()
+                        //                        }
                     }
                 }
             }
