@@ -140,7 +140,7 @@ struct KVOperateLog: Identifiable,Hashable{
     }
     
     func formatOperate() -> String {
-        let operateagete = self.operate
+        let operateagete = self.operate.lowercased()
         var dateStrin = "operate:  "
         dateStrin.append(operateagete)
         dateStrin.append(" | ")
