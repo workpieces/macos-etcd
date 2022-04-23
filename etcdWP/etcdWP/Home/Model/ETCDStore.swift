@@ -26,13 +26,11 @@ extension HomeViewModel {
                                          item.autoSyncInterval ,
                                          nil)
                 self.ectdClientList[idx].etcdClient = c
-            }else{
-                let ok =  self.Ping(c: item.etcdClient!)
-                if ok {
-                    self.ectdClientList[idx].status = true
-                }else{
-                    self.ectdClientList[idx].status = false
+                if c != nil {
+                    self.ectdClientList[idx].status = self.Ping(c: c!)
                 }
+            }else{
+                self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)
             }
         }
     }
