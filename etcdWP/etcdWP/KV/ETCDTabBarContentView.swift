@@ -175,14 +175,12 @@ struct ETCDKVOperateContentView: View {
 }
 
 struct ETCDKVLogsContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
-        VStack {
-            HStack {
-                Text("2021-12-13 event: PUT OK ")
-                    .foregroundColor(.gray)
-                Spacer()
-            }
-            Spacer()
+        List(storeObj.logs,id:\.self){ item in
+            HStack{
+                Text(item.message! + " " + item.operate )
+            }.padding(5)
         }
     }
 }

@@ -102,7 +102,7 @@ struct KVStatus: Codable, Identifiable {
     }
 }
 
-struct KVOperateLog: Identifiable {
+struct KVOperateLog: Identifiable,Hashable{
     var id  = UUID()
     var time: Date = Date()
     var status: Int?
