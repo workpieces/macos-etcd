@@ -8,6 +8,13 @@
 import SwiftUI
 import MacosEtcd
 
+struct KVOperateModel: Identifiable,Hashable {
+    var id = UUID()
+    var name: String
+    var english: String
+    var type: Int
+}
+
 class ItemStore: ObservableObject {
     @Published var c : EtcdKVClient?
     @Published var address: String

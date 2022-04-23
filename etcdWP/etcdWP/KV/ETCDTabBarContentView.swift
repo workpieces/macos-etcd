@@ -290,17 +290,58 @@ struct ETCDKVClusterContentView: View {
 }
 
 struct ETCDKVOperateContentView: View {
+    let operateModels : [KVOperateModel] = [
+        KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
+        KVOperateModel.init(name: "前缀删除", english: "（DeletePrefix）",type: 0),
+        KVOperateModel.init(name: "创建租约", english: "（LeaseGrant）",type: 0),
+        KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 0),
+        KVOperateModel.init(name: "租约列表",english: "（LeaseList）", type: 0),
+    ]
     var body: some View {
         GeometryReader {  g in
             HStack {
                 Color.red
-                    .frame(width: g.size.width*2/3)
-                Color.yellow
-                    .frame(width: g.size.width/3)
+                    .frame(width: g.size.width/2)
+                makeOperateButtonContentView(models: operateModels)
+                    .frame(width: g.size.width/2)
             }
         }
     }
 }
+
+private extension ETCDKVOperateContentView {
+    @ViewBuilder func makeOperateButtonContentView(models: [KVOperateModel]) -> some View {
+        ZStack(alignment: .topLeading){
+            List {
+                ForEach(models) { item in
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text(item.name)
+                                .font(.body)
+                                .foregroundColor(.green)
+                                .truncationMode(.middle)
+                                .frame(maxHeight: 44.0)
+                            
+                            Text(item.english)
+                                .font(.body)
+                                .foregroundColor(.green)
+                                .truncationMode(.middle)
+                                .frame(maxHeight: 44.0)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                    .cornerRadius(8.0)
+                    .background(Color.secondary.opacity(0.15))
+                }
+            }
+            .padding(8.0)
+        }
+    }
+}
+
 
 struct ETCDKVLogsContentView: View {
     @EnvironmentObject var storeObj : ItemStore
