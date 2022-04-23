@@ -91,15 +91,14 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
             text.stringValue = value ?? "0"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("errorsColumn") {
             let value  = item.status?.errors;
-            text.stringValue = value ?? "0"
+            text.stringValue = value ?? ""
         }
 
         let cell = NSTableCellView()
         cell.addSubview(text)
         text.drawsBackground = false
         text.isBordered = false
-        text.translatesAutoresizingMaskIntoConstraints = false
-        cell .addSubview(text)
+        cell.addSubview(text)
         text.snp.makeConstraints { make in
             make.edges.equalTo(cell)
         }

@@ -253,7 +253,6 @@ private extension ETCDKVOperateContentView {
                                 .foregroundColor(.green)
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
-                            
                             Text(item.english)
                                 .font(.body)
                                 .foregroundColor(.green)
@@ -262,8 +261,8 @@ private extension ETCDKVOperateContentView {
                             Spacer()
                         }
                         Spacer()
-                    }
-                    .cornerRadius(8.0)
+                    }.cornerRadius(8.0)
+                    .clipped()
                     .background(Color.secondary.opacity(0.15))
                 }
             }
