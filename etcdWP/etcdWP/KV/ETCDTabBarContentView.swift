@@ -45,7 +45,7 @@ struct ETCDKeyListContentView: View {
         VStack {
             List {
                 Section {
-                    ForEach(storeObj.realeadData?.kvs ?? []) { item in
+                    ForEach(storeObj.realeadData.kvs) { item in
                         ZStack {
                             HStack {
                                 Image(systemName: DefaultKeyImageName)
@@ -122,8 +122,12 @@ struct ETCDKeyListContentView: View {
             
             HStack {
                 Spacer()
+                Text("当前页:  \(storeObj.realeadData.GetCurrentPage())  ")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+                Spacer()
                 Button {
-                   print("上一页")
+                    storeObj.Last()
                 } label: {
                     Text("上一页")
                         .font(.caption)
@@ -131,20 +135,21 @@ struct ETCDKeyListContentView: View {
                 }
                 Spacer()
                 Button {
-                    print("下一页")
+                    storeObj.Next()
                 } label: {
                     Text("下一页")
                         .font(.caption)
                         .foregroundColor(.yellow)
                 }
                 Spacer()
-                Text("键值总数量:  \(storeObj.realeadData?.GetKvCount() ?? 0)  ")
+                Text("总数:  \(storeObj.realeadData.GetKvCount())  ")
                     .foregroundColor(.secondary)
                     .font(.caption)
+                Spacer()
             }
             List {
                 Section {
-                    ForEach(storeObj.realeadData?.members ?? []) { item in
+                    ForEach(storeObj.realeadData.members) { item in
                         VStack {
                             HStack {
                                 Text("成员名称: ")
@@ -194,7 +199,7 @@ struct ETCDKeyListContentView: View {
                                 .font(.caption)
                                 .foregroundColor(Color(hex: "#5B9BD4"))
                             Spacer()
-                            Text("成员总数量:  \(storeObj.realeadData?.GetMemberCount() ?? 0) 位")
+                            Text("成员总数量:  \(storeObj.realeadData.GetMemberCount()) 位")
                                 .font(.caption)
                                 .foregroundColor(Color(hex: "#5B9BD4"))
                         })
@@ -239,7 +244,7 @@ struct ETCDKVLogsContentView: View {
                     .frame(minHeight: 30, maxHeight: .infinity)
                 Text(item.formatStatus())
                     .font(.subheadline)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(item.status == 200 ? .yellow: .red)
                     .opacity(0.75)
                     .frame(minHeight: 30, maxHeight: .infinity)
                 Text(item.formatOperate())
@@ -249,7 +254,7 @@ struct ETCDKVLogsContentView: View {
                     .frame(minHeight: 30, maxHeight: .infinity)
                 Text(item.formatMessage())
                     .font(.subheadline)
-                    .foregroundColor(item.status == 200 ? .white : .red)
+                    .foregroundColor(item.status == 200 ? .secondary : .red)
                     .opacity(item.status == 200 ? 0.75 : 1.0)
                     .frame(minHeight: 30, maxHeight: .infinity)
             }
