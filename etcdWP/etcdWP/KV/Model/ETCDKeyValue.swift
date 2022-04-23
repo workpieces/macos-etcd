@@ -149,7 +149,7 @@ struct KVOperateLog: Identifiable,Hashable{
     
     func formatStatus() -> String {
         let date = String(self.status ?? 0)
-        var dateStrin = "status: "
+        var dateStrin = ""
         dateStrin.append(date)
         dateStrin.append("  | ")
         return dateStrin ;
@@ -157,14 +157,14 @@ struct KVOperateLog: Identifiable,Hashable{
     
     func formatMessage() -> String {
         let damessagete = self.message ?? ""
-        var dateStrin = "message: "
+        var dateStrin = ""
         dateStrin.append(damessagete)
         return dateStrin ;
     }
     
     func formatOperate() -> String {
         let operateagete = self.operate.lowercased()
-        var dateStrin = "operate:  "
+        var dateStrin = " "
         dateStrin.append(operateagete)
         dateStrin.append(" | ")
         return dateStrin ;

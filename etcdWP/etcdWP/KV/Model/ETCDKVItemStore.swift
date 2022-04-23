@@ -21,8 +21,27 @@ class ItemStore: ObservableObject {
     }
 }
 
+struct KVRealoadData {
+    let kvs : [KVData]?
+    let members : [KVData]?
+    var kvCount: Int = 0
+    var memberCount: Int = 0
+    
+    init(ks : [KVData],mms : [KVData]) {
+        self.kvs = ks
+        self.members = mms
+        self.kvCount = ks.count
+        self.memberCount = mms.count
+    }
+}
+
 // Reload
 extension ItemStore {
+    func KVReaload() -> KVRealoadData?{
+        let kd = self.GetALL()
+        let md = self.MemberList()
+        return KVRealoadData.init(ks: kd, mms: md)
+    }
     func Reaload()  {
         self.relead = !self.relead
     }

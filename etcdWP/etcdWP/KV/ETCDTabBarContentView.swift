@@ -12,6 +12,7 @@ import PopupView
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
+ 
     func Reaload() {
         storeObj.Reaload()
     }
@@ -97,8 +98,6 @@ struct ETCDKeyListContentView: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                 }
-                
-                
             }
             .listRowInsets(nil)
             .listStyle(.inset)
@@ -106,23 +105,46 @@ struct ETCDKeyListContentView: View {
             List {
                 Section {
                     ForEach(storeObj.MemberList()) { item in
-                        ScrollView(.horizontal,showsIndicators: false) {
+                        VStack {
                             HStack {
-                                Text(item.members?.mid ?? "")
+                                Text("成员名称: ")
+                                    .font(.system(size: 12.0,weight: .semibold))
+                                    .foregroundColor(Color(hex: "#5B9BD4"))
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
                                 Text(item.members?.name ?? "")
+                                    .foregroundColor(.orange)
+                                    .font(.system(size: 11.0,weight: .semibold))
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
+                                Spacer()
                                 if ((item.members?.status) != nil) {
-                                    Text("True")
+                                    Rectangle()
+                                        .fill(Color.green)
+                                        .frame(width: 10, height: 10)
                                 }else{
-                                    Text("False")
-                                }
-                                Text(item.members?.peer_addr ?? "")
-                                Text(item.members?.client_addr ?? "")
-                                if ((item.members?.is_learner) != nil) {
-                                    Text("True")
-                                }else{
-                                    Text("False")
+                                    Rectangle()
+                                        .fill(Color.red)
+                                        .frame(width: 10, height: 10)
                                 }
                             }
+                           
+                            HStack {
+                                Text("成员ID: ")
+                                    .font(.system(size: 12.0,weight: .semibold))
+                                    .foregroundColor(Color(hex: "#5B9BD4"))
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
+                                
+                                Text(item.members?.mid ?? "")
+                                    .foregroundColor(.orange)
+                                    .font(.system(size: 11.0,weight: .semibold))
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
+                                Spacer()
+                            }
+                            
+                            Divider()
                         }
                     }
                 } header: {
@@ -134,7 +156,7 @@ struct ETCDKeyListContentView: View {
                             
                             Spacer()
                             Button {} label: {
-                                Text("操作文档介绍")
+                                Text("成员操作")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
                             }
@@ -242,20 +264,20 @@ struct ETCDKVLogsContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         List(storeObj.GetLogs(),id:\.self){ item in
-        HStack{
-            Text(item.formatTime())
+            HStack{
+                Text(item.formatTime())
                     .font(.subheadline)
                     .foregroundColor(.green)
                     .opacity(0.75)
-            Text(item.formatStatus())
+                Text(item.formatStatus())
                     .font(.subheadline)
                     .foregroundColor(.yellow)
                     .opacity(0.75)
-            Text(item.formatOperate())
-               .font(.subheadline)
-               .foregroundColor(.orange)
-               .opacity(0.75)
-            Text(item.formatMessage())
+                Text(item.formatOperate())
+                    .font(.subheadline)
+                    .foregroundColor(.orange)
+                    .opacity(0.75)
+                Text(item.formatMessage())
                     .font(.subheadline)
                     .foregroundColor(item.status == 200 ? .white : .red)
                     .opacity(item.status == 200 ? 0.75 : 1.0)
@@ -341,6 +363,9 @@ struct ETCDTabBarContentView: View {
                 .padding(.bottom,20)
                 .offset(y: -20)
             }
+        })
+        .onAppear(perform: {
+            print("AAAA")
         })
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 15) {
             TopToastView()
