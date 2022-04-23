@@ -13,7 +13,7 @@ class ItemStore: ObservableObject {
     @Published var address: String
     @Published var status: Bool
     @Published var relead: Bool = false
-    @Published var logs: [KVOperateLog] = []
+    private var logs: [KVOperateLog] = []
     init(c: EtcdKVClient?,address: String,status: Bool) {
         self.c  = c
         self.address = address
@@ -48,7 +48,7 @@ extension ItemStore {
         let result = c?.getALL()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-//            self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
+            self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
             return resp?.datas ?? []
         }
         return []
@@ -62,6 +62,7 @@ extension ItemStore {
         let result = c?.deleteALL()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
             return resp ?? nil
         }
         return nil
@@ -70,6 +71,7 @@ extension ItemStore {
         let result = c?.delete(key)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
             return resp ?? nil
         }
         return nil
@@ -83,6 +85,7 @@ extension ItemStore {
         let result = c?.endpointStatus()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ENDPOINT"))
             return resp?.datas ?? []
         }
         return []

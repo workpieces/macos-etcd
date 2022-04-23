@@ -35,4 +35,7 @@ let DefaultTabbarButtonHeight = 70.0
 // default Space
 let DefaultSpacePadding = 18.0
 
+// default key image name.
+let DefaultKeyImageName = "key"
+
 
