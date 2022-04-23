@@ -163,10 +163,10 @@ struct KVOperateLog: Identifiable,Hashable{
     }
     
     func formatOperate() -> String {
-        let operateagete = self.operate.lowercased()
-        var dateStrin = " "
+        let operateagete = self.operate.uppercased()
+        var dateStrin = ""
         dateStrin.append(operateagete)
-        dateStrin.append(" | ")
+        dateStrin.append("  | ")
         return dateStrin ;
     }
 }

@@ -13,28 +13,34 @@ class ItemStore: ObservableObject {
     @Published var address: String
     @Published var status: Bool
     @Published var relead: Bool = false
-    @Published var realeadData: KVRealoadData?
+    @Published var realeadData: KVRealoadData
     private var logs: [KVOperateLog] = []
     init(c: EtcdKVClient?,address: String,status: Bool) {
         self.c  = c
         self.address = address
         self.status = status
+        self.realeadData = KVRealoadData.init(ks: [], mms: [])
     }
 }
 
 struct KVRealoadData {
     var  kvs : [KVData]
     var  members : [KVData]
+    var  temp : [KVData]
+    let  offset : Int = 2
+    var  page : Int = 1
     var kvCount: Int = 0
     var memberCount: Int = 0
     
     init(ks : [KVData],mms : [KVData]) {
         self.kvs = []
         self.members = []
+        self.temp = []
         self.kvs.append(contentsOf:ks)
         self.members.append(contentsOf: mms)
         self.kvCount = ks.count
         self.memberCount = mms.count
+        self.temp.append(contentsOf:ks)
     }
     
     func GetMemberCount() -> Int {
@@ -44,15 +50,49 @@ struct KVRealoadData {
     func GetKvCount() -> Int{
         return self.kvCount
     }
+    
+    func GetCurrentPage() -> Int {
+        if self.page == 0 {
+            return 1
+        }else {
+            return self.page
+        }
+    }
+
 }
 
 // Reload
 extension ItemStore {
+    
+    func Next() {
+        let currentIndex = self.realeadData.page
+        let count = self.realeadData.GetKvCount()
+        let last = count - currentIndex*self.realeadData.offset
+        if last > 0 {
+            self.realeadData.page += 1
+        }
+        print(self.realeadData.page)
+        if currentIndex != self.realeadData.page{
+            self.realeadData.kvs = self.realeadData.temp
+            let tmp  = self.realeadData.kvs[(self.realeadData.page-1)*self.realeadData.offset..<self.realeadData.page*self.realeadData.offset]
+            self.realeadData.kvs.removeAll()
+            self.realeadData.kvs.append(contentsOf: tmp)
+        }
+    }
+    
+    func Last() {
+        
+    }
+   
     func KVReaload(){
         let kd = self.GetALL()
         let md = self.MemberList()
         self.realeadData =  KVRealoadData.init(ks: kd, mms: md)
+        let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
+        self.realeadData.kvs.removeAll()
+        self.realeadData.kvs.append(contentsOf: tmp)
     }
+    
 }
 
 // Operate Logs
