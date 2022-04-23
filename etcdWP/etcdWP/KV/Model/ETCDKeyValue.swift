@@ -118,8 +118,7 @@ struct KVOperateLog: Identifiable,Hashable{
         let date = self.time
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd hh:mm:ss"
-        var dateStrin = "time: "
-        dateStrin.append(dateFormatter.string(from: date))
+        var dateStrin = dateFormatter.string(from: date)
         dateStrin.append("  | ")
         return dateStrin ;
     }
@@ -127,7 +126,7 @@ struct KVOperateLog: Identifiable,Hashable{
     
     func formatStatus() -> String {
         let date = String(self.status ?? 0)
-        var dateStrin = "status: : "
+        var dateStrin = "status: "
         dateStrin.append(date)
         dateStrin.append("  | ")
         return dateStrin ;
@@ -142,7 +141,7 @@ struct KVOperateLog: Identifiable,Hashable{
     
     func formatOperate() -> String {
         let operateagete = self.operate
-        var dateStrin = "operate: : "
+        var dateStrin = "operate:  "
         dateStrin.append(operateagete)
         dateStrin.append(" | ")
         return dateStrin ;
