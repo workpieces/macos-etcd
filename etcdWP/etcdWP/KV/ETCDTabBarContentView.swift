@@ -44,51 +44,7 @@ struct ETCDKeyListContentView: View {
     var body: some View {
         VStack {
             List {
-                Section(header:VStack(content: {
-                    HStack{
-                        Text("服务地址：\(storeObj.address)")
-                            .font(.caption)
-                            .foregroundColor(Color(hex: "#5B9BD4"))
-                        Spacer()
-                        
-                        if storeObj.status {
-                            Text("链接状态: 正常")
-                                .font(.caption)
-                                .foregroundColor(.green)
-                        }else{
-                            Text("链接状态: 异常")
-                                .font(.caption)
-                                .foregroundColor(.red)
-                        }
-                    }
-                    .padding(.all,4.0)
-                    
-                    HStack {
-                        Button {Reaload()} label: {
-                            Text("刷新加载")
-                                .font(.caption)
-                                .foregroundColor(.yellow)
-                        }
-                        Button {
-                            if !self.DeleteALL() {
-                                print("Clean")
-                            }
-                        } label: {
-                            Text("清空键值")
-                                .font(.caption)
-                                .foregroundColor(.yellow)
-                        }
-                        
-                        Spacer()
-                        
-                        Button {} label: {
-                            Text("查询")
-                                .font(.caption)
-                                .foregroundColor(.yellow)
-                        }
-                    }
-                    Spacer()
-                })) {
+                Section {
                     ForEach(storeObj.realeadData?.kvs ?? []) { item in
                         ZStack {
                             HStack {
@@ -113,11 +69,79 @@ struct ETCDKeyListContentView: View {
                         })
                         .buttonStyle(PlainButtonStyle())
                     }
+                } header: {
+                    VStack(content: {
+                        HStack{
+                            Text("服务地址：\(storeObj.address)")
+                                .font(.caption)
+                                .foregroundColor(Color(hex: "#5B9BD4"))
+                            Spacer()
+                            
+                            if storeObj.status {
+                                Text("链接状态: 正常")
+                                    .font(.caption)
+                                    .foregroundColor(.green)
+                            }else{
+                                Text("链接状态: 异常")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                            }
+                        }
+                        .padding(.all,4.0)
+                        
+                        HStack {
+                            Button {Reaload()} label: {
+                                Text("刷新加载")
+                                    .font(.caption)
+                                    .foregroundColor(.yellow)
+                            }
+                            Button {
+                                if !self.DeleteALL() {
+                                    print("Clean")
+                                }
+                            } label: {
+                                Text("清空键值")
+                                    .font(.caption)
+                                    .foregroundColor(.yellow)
+                            }
+                            
+                            Spacer()
+                            
+                            Button {} label: {
+                                Text("查询")
+                                    .font(.caption)
+                                    .foregroundColor(.yellow)
+                            }
+                        }
+                        Spacer()
+                    })
                 }
             }
             .listRowInsets(nil)
             .listStyle(.inset)
             
+            HStack {
+                Spacer()
+                Button {
+                   print("上一页")
+                } label: {
+                    Text("上一页")
+                        .font(.caption)
+                        .foregroundColor(.yellow)
+                }
+                Spacer()
+                Button {
+                    print("下一页")
+                } label: {
+                    Text("下一页")
+                        .font(.caption)
+                        .foregroundColor(.yellow)
+                }
+                Spacer()
+                Text("键值总数量:  \(storeObj.realeadData?.GetKvCount() ?? 0)  ")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+            }
             List {
                 Section {
                     ForEach(storeObj.realeadData?.members ?? []) { item in
@@ -125,7 +149,7 @@ struct ETCDKeyListContentView: View {
                             HStack {
                                 Text("成员名称: ")
                                     .font(.system(size: 12.0,weight: .semibold))
-                                    .foregroundColor(Color(hex: "#5B9BD4"))
+                                    .foregroundColor(.secondary)
                                     .lineSpacing(8.0)
                                     .truncationMode(.middle)
                                 Text(item.members?.name ?? "")
@@ -148,7 +172,7 @@ struct ETCDKeyListContentView: View {
                             HStack {
                                 Text("成员ID: ")
                                     .font(.system(size: 12.0,weight: .semibold))
-                                    .foregroundColor(Color(hex: "#5B9BD4"))
+                                    .foregroundColor(.secondary)
                                     .lineSpacing(8.0)
                                     .truncationMode(.middle)
                                 
@@ -168,7 +192,7 @@ struct ETCDKeyListContentView: View {
                         HStack(content: {
                             Text("成员相关")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(Color(hex: "#5B9BD4"))
                             Spacer()
                             Text("成员总数量:  \(storeObj.realeadData?.GetMemberCount() ?? 0) 位")
                                 .font(.caption)
