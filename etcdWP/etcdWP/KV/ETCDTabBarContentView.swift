@@ -11,7 +11,21 @@ import Dispatch
 
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
-    let DefaultImageName = "key"
+    @State private var showingAlert: Bool = false
+    func Reaload() {
+        storeObj.Reaload()
+    }
+    
+    func DeleteKey(key: String) {
+        storeObj.Delete(key: key)
+        Reaload()
+    }
+    
+    func DeleteALL() {
+        storeObj.DeleteALL()
+        Reaload()
+    }
+    
     var body: some View {
         List {
             Section(header:VStack(content: {
@@ -34,17 +48,13 @@ struct ETCDKeyListContentView: View {
                 .padding(.all,4.0)
                 
                 HStack {
-                    Button {
-                        storeObj.Reaload()
-                    } label: {
+                    Button {Reaload()} label: {
                         Text("刷新加载")
                             .font(.caption)
                             .foregroundColor(.yellow)
                     }
                     Button {
-                        let resp = storeObj.DeleteALL()
-                        print(resp as Any)
-                        storeObj.Reaload()
+                        DeleteALL()
                     } label: {
                         Text("清空键值")
                             .font(.caption)
@@ -59,29 +69,38 @@ struct ETCDKeyListContentView: View {
                             .foregroundColor(.yellow)
                     }
                 }
-                Divider()
+                Spacer()
             })) {
                 ForEach(storeObj.GetALL()) { item in
-                    HStack {
-                        Image(systemName: DefaultImageName)
-                            .foregroundColor(.orange)
-                            .font(.system(size: 12.0))
-                        Text(item.key!)
-                            .foregroundColor(.white)
-                            .font(.system(size: 11.0,weight: .semibold))
-                            .lineSpacing(8.0)
-                            .truncationMode(.middle)
-                        Spacer()
-                        Text(item.size!)
-                            .foregroundColor(.white)
-                            .font(.system(size: 11.0,weight: .semibold))
-                            .lineSpacing(8.0)
-                            .truncationMode(.middle)
+                    ZStack {
+                        HStack {
+                            Image(systemName: DefaultKeyImageName)
+                                .foregroundColor(.orange)
+                                .font(.system(size: 12.0))
+                            Text(item.key!)
+                                .foregroundColor(.white)
+                                .font(.system(size: 11.0,weight: .semibold))
+                                .lineSpacing(8.0)
+                                .truncationMode(.middle)
+                            Spacer()
+                            Text(item.size!)
+                                .foregroundColor(.white)
+                                .font(.system(size: 11.0,weight: .semibold))
+                                .lineSpacing(8.0)
+                                .truncationMode(.middle)
+                        }
+                        
                     }
+                    
+                    .onTapGesture(perform: {
+                        showingAlert.toggle()
+                    })
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
         }
-        .listStyle(.sidebar)
+        .listRowInsets(nil)
+        .listStyle(.inset)
     }
 }
 
@@ -91,68 +110,68 @@ struct ETCDKVClusterContentView: View {
     var body: some View {
         List {
             Section(header: HStack(content: {
-                ForEach(0..<heads.count) { item in
+                ForEach(0..<heads.count, id: \.self) { item in
                     Text(heads[item])
                         .font(.subheadline)
                         .foregroundColor(.orange)
                     Spacer()
                 }
             })) {
-                ForEach(0..<20) { item in
+                ForEach(storeObj.EndpointStatus()) { item in
                     HStack {
                         Group {
-                            Text("1")
+                            Text(item.status?.sid ?? "0")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                             Spacer()
-                            Text("2")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                        }
-                        Group{
-                            Text("3")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text("4")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text("5")
+                            Text(item.status?.end_point ?? "localhost:2379")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                             Spacer()
                         }
-                        Group {
-                            Text("6")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text("7")
-                                .font(.subheadline)
-                                .foregroundColor(.white)
-                            Spacer()
-                            Text("8")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                        }
-                        
-                        Group{
-                            Text("9")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text("10")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text("11")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer()
-                        }
+//                        Group{
+//                            Text(item.status?.etcd_version)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                            Text(item.status?.db_size)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                            Text(item.status?.db_size_in_use)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                        }
+//                        Group {
+//                            Text(item.status?.is_leader)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                            Text(item.status?.is_learner)
+//                                .font(.subheadline)
+//                                .foregroundColor(.white)
+//                            Spacer()
+//                            Text(item.status.raft_term)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                        }
+//                        
+//                        Group{
+//                            Text(item.status?.raft_index)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                            Text(item.status?.raft_applied_index)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                            Text(item.status?.errors)
+//                                .font(.subheadline)
+//                                .foregroundColor(.gray)
+//                            Spacer()
+//                        }
                     }
                 }
             }
