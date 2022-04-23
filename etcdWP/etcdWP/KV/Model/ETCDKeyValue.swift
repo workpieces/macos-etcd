@@ -73,7 +73,9 @@ struct KVData: Codable, Identifiable {
 }
 
 struct KVStatus: Codable, Identifiable {
-    let id : String?
+    var id = UUID()
+    
+    let sid : String?
     let end_point : String?
     let etcd_version :String?
     let db_size : String?
@@ -86,7 +88,7 @@ struct KVStatus: Codable, Identifiable {
     let errors : String?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case sid
         case end_point
         case etcd_version
         case db_size
@@ -97,5 +99,18 @@ struct KVStatus: Codable, Identifiable {
         case raft_index
         case raft_applied_index
         case errors
+    }
+}
+
+struct KVOperateLog: Identifiable {
+    var id  = UUID()
+    var time: Date = Date()
+    var status: Int?
+    var message: String?
+    var operate: String
+    init(status: Int,message: String,operate: String) {
+        self.status = status
+        self.message = message
+        self.operate = operate
     }
 }

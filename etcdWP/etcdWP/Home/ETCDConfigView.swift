@@ -98,7 +98,7 @@ struct ETCDConfigView: View {
     
     var body: some View {
         VStack {
-            withDefaultNavagationBack(title: "General Settings", isPop: $isPopView)
+            withDefaultNavagationBack(title: "通用设置", isPop: $isPopView)
                 .padding(.vertical,30)
                 .padding(.leading ,20)
             

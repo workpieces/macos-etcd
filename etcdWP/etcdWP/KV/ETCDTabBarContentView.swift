@@ -35,7 +35,7 @@ struct ETCDKeyListContentView: View {
                 
                 HStack {
                     Button {
-                        
+                        storeObj.Reaload()
                     } label: {
                         Text("刷新加载")
                             .font(.caption)
@@ -44,6 +44,7 @@ struct ETCDKeyListContentView: View {
                     Button {
                         let resp = storeObj.DeleteALL()
                         print(resp as Any)
+                        storeObj.Reaload()
                     } label: {
                         Text("清空键值")
                             .font(.caption)
@@ -86,7 +87,7 @@ struct ETCDKeyListContentView: View {
 
 struct ETCDKVClusterContentView: View {
     @EnvironmentObject var storeObj : ItemStore
-    let heads: [String] = ["id","end_point","etcd_version","db_size","db_size_in_use","is_leader","is_learner","raft_term","raft_index","raft_applied_index","errors"]
+    let heads: [String] = ["id","endpoint","version","dbSize","dbSizeInUse","leader","isLearner","raftTerm","raftIndex","raftAppliedIndex","errors"]
     var body: some View {
         List {
             Section(header: HStack(content: {

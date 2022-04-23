@@ -54,20 +54,17 @@ extension HomeViewModel {
         }
         return self.Ping(c: c!)
     }
-    
-    // 检测etcd是否健康
+}
+
+extension HomeViewModel {    
     func Ping(c: EtcdKVClient) -> Bool {
         return c.ping()
     }
-    
-    // 关闭指定的etcd客户端服务
     func Close(c: EtcdKVClient) throws {
         do {
             try c.close()
         }
     }
-    
-    // 关闭所有的etcd客户端服务
     func CloseAll() throws {
         do {
             for item in self.ectdClientList {
