@@ -49,12 +49,94 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
+            if resp?.status != 200 {
+                return []
+            }
+            return resp?.datas ?? []
+        }
+        return []
+    }
+    // getConsistency s -> json l -> plain
+    func Get(key: String,getConsistency: String = "s") -> [KVData] {
+        let result = c?.get(key, getConsistency: getConsistency)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
+            if resp?.status != 200 {
+                return []
+            }
+            return resp?.datas ?? []
+        }
+        return []
+    }
+    func GetPrefix(key: String) -> [KVData] {
+        let result = c?.getPrefix(key)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
+            if resp?.status != 200 {
+                return []
+            }
             return resp?.datas ?? []
         }
         return []
     }
 }
 
+// PUT
+extension ItemStore {
+    func Put(key: String,value: String) -> [KVData] {
+        let result = c?.put(key, value: value)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT")
+            if resp?.status != 200 {
+                return []
+            }
+            return resp?.datas ?? []
+        }
+        return []
+    }
+    
+    func PutWithTTL(key: String,value: String,ttl: Int) ->ETCDKeyValue? {
+        let result = c?.put(withTTL: key, value: value, ttl: ttl)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT"))
+            if resp?.status != 200 {
+                return nil
+            }
+            return resp ?? nil
+        }
+        return nil
+    }
+    
+    func PutKeyWithLease(key: String,value: String,leasid: Int) -> ETCDKeyValue? {
+        let result = c?.putKey(withLease: key, value: value, leaseid: leasid)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT"))
+            if resp?.status != 200 {
+                return nil
+            }
+            return resp ?? nil
+        }
+        return nil
+    }
+    
+    func PutKeyWithAliveOnce(key: String,value: String,leasid: Int) -> ETCDKeyValue? {
+        let result = c?.putKey(withAliveOnce: key, value: value, leaseid: leasid)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT"))
+            if resp?.status != 200 {
+                return nil
+            }
+            return resp ?? nil
+        }
+        return nil
+    }
+}
 
 // Delete
 extension ItemStore {
@@ -63,6 +145,9 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
+            if resp?.status != 200 {
+                return nil
+            }
             return resp ?? nil
         }
         return nil
@@ -72,12 +157,30 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
+            if resp?.status != 200 {
+                return nil
+            }
             return resp ?? nil
         }
         return nil
     }
 }
 
+// lease
+extension ItemStore {
+    func LeaseGrant(ttl: Int) -> ETCDKeyValue? {
+        let result = c?.grant(ttl)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
+            if resp?.status != 200 {
+                return nil
+            }
+            return resp ?? nil
+        }
+        return nil
+    }
+}
 
 // Endpoint
 extension ItemStore {
@@ -86,6 +189,9 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ENDPOINT"))
+            if resp?.status != 200 {
+                return []
+            }
             return resp?.datas ?? []
         }
         return []
