@@ -75,11 +75,11 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("dbSizeInUseColumn") {
             text.stringValue = item.status?.db_size_in_use ?? "0KB"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("leaderColumn") {
-            let value  = item.status?.is_leader as! String;
-            text.stringValue = value 
+            let value  = item.status?.is_leader as? String;
+            text.stringValue = value ?? "false"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("isLearnerColumn") {
-            let value  = item.status?.is_leader as! String;
-            text.stringValue = value
+            let value  = item.status?.is_leader as? String;
+            text.stringValue = value ?? "false"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("raftTermColumn") {
             let value  = item.status?.raft_term;
             text.stringValue = value ?? "0"
