@@ -239,14 +239,27 @@ struct ETCDKVOperateContentView: View {
 }
 
 struct ETCDKVLogsContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
-        VStack {
-            HStack {
-                Text("2021-12-13 event: PUT OK ")
-                    .foregroundColor(.gray)
-                Spacer()
+        List(storeObj.GetLogs(),id:\.self){ item in
+        HStack{
+            Text(item.formatTime())
+                    .font(.subheadline)
+                    .foregroundColor(.green)
+                    .opacity(0.75)
+            Text(item.formatStatus())
+                    .font(.subheadline)
+                    .foregroundColor(.yellow)
+                    .opacity(0.75)
+            Text(item.formatOperate())
+               .font(.subheadline)
+               .foregroundColor(.orange)
+               .opacity(0.75)
+            Text(item.formatMessage())
+                    .font(.subheadline)
+                    .foregroundColor(item.status == 200 ? .white : .red)
+                    .opacity(item.status == 200 ? 0.75 : 1.0)
             }
-            Spacer()
         }
     }
 }
