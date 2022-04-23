@@ -261,9 +261,10 @@ private extension ETCDKVOperateContentView {
                             Spacer()
                         }
                         Spacer()
-                    }.cornerRadius(8.0)
-                    .clipped()
+                    }
                     .background(Color.secondary.opacity(0.15))
+                    .cornerRadius(8)
+                    .clipped()
                 }
             }
             .padding(8.0)
