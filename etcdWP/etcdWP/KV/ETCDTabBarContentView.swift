@@ -220,7 +220,7 @@ struct ETCDKeyListContentView: View {
                     }
                 }
             }
-            .frame(height: 180.0)
+            .frame(minHeight: 180.0, idealHeight: 180.0, maxHeight: 250)
         }
     }
 }
@@ -240,21 +240,36 @@ struct ETCDKVOperateContentView: View {
                 })
                 .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                 .frame(width: g.size.width/2)
+                Spacer()
             }
         }
     }
 }
 
 struct MakeOperateKvTextContentView: View {
+    @State private var isShowJSON = false
     var body: some View {
         VStack {
-            let data  = "Molecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule Man"
-            Text(data)
-                .font(.system(size: 13.0))
-            //                    .lineLimit(0)
-                .fixedSize(horizontal: false, vertical: true)
-                .foregroundColor(.secondary)
-                .padding(10.0)
+            HStack {
+                Spacer()
+                Toggle("JSON", isOn: $isShowJSON)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.top,8.0)
+            .padding(.trailing,8.0)
+            .toggleStyle(.switch)
+            
+            Divider()
+            
+            ScrollView(.vertical, showsIndicators: true) {
+                Text("aaa")
+                    .lineLimit(nil)
+                    .foregroundColor(.secondary)
+                    .font(.custom("HelveticaNeue", size: 13))
+                    .lineSpacing(10)
+                    .padding(.all,10)
+                    .multilineTextAlignment(TextAlignment.leading)
+            }
             Spacer()
         }
     }
