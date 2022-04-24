@@ -18,4 +18,11 @@ func showOpenPanel() -> URL? {
     let response = openPanel.runModal()
     return response == .OK ? openPanel.url : nil
 }
+
+func copyToClipBoard(textToCopy: String) {
+    let pasteBoard = NSPasteboard.general
+    pasteBoard.clearContents()
+    pasteBoard.setString(textToCopy, forType: .string)
+}
+
  

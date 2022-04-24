@@ -226,7 +226,6 @@ struct ETCDKeyListContentView: View {
     }
 }
 
-
 struct ETCDKVOperateContentView: View {
     var body: some View {
         GeometryReader {  g in
@@ -256,27 +255,38 @@ struct MakeOperateKvTextContentView: View {
                 Spacer()
                 Toggle("JSON", isOn: $isShowJSON)
                     .foregroundColor(.secondary)
+                    .toggleStyle(.switch)
+                    .padding(.top,8.0)
+                Button {
+                    copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                } label: {
+                    Text("粘贴")
+                        .font(.custom("HelveticaNeue", size: 12))
+                        .lineSpacing(10)
+                        .foregroundColor(.orange)
+                }
+                .padding(.top,8.0)
+                .padding(.trailing,8.0)
             }
-            .padding(.top,8.0)
-            .padding(.trailing,8.0)
-            .toggleStyle(.switch)
             
             Divider()
             
-            ScrollView(.vertical, showsIndicators: true) {
+            ScrollView(.vertical, showsIndicators: false) {
                 Text(storeObj.realeadData.currentKv?.value ?? "")
                     .lineLimit(nil)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.pink)
                     .font(.custom("HelveticaNeue", size: 13))
                     .lineSpacing(10)
-                    .padding(.all,10)
                     .multilineTextAlignment(TextAlignment.leading)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Copy", action: {
+                            copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                        })
+                }))
             }
-            Spacer()
         }
     }
 }
-
 
 struct MakeOperateButtonContentView :View {
     @State var showingPopup: String? = nil
