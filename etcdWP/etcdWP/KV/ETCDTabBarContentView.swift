@@ -262,9 +262,9 @@ struct MakeOperateKvTextContentView: View {
                     copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                 } label: {
                     Text("粘贴")
-                        .font(.custom("HelveticaNeue", size: 12))
+                        .font(.custom("HelveticaNeue", size: 13))
                         .lineSpacing(10)
-                        .foregroundColor(.orange)
+                        .foregroundColor(.pink)
                 }
                 .padding(.top,8.0)
                 .padding(.trailing,8.0)
@@ -333,7 +333,7 @@ struct MakeOperateButtonContentView :View {
             }
             .padding(8.0)
         }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
-            //            AlerPopup()
+//                        AlerPopup()
         }
     }
     
@@ -342,49 +342,22 @@ struct MakeOperateButtonContentView :View {
             Text("adsfadsfasdfadsf")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
-            Text("adsfadsfasdfadsf")
-                .foregroundColor(.white)
-                .fontWeight(.bold)
             HStack{
                 Button {
                     self.showingPopup = nil
                 } label: {
                     Text("Got it")
-                        .font(.system(size: 14))
-                        .foregroundColor(.black)
-                        .fontWeight(.bold)
+                        .foregroundColor(.pink)
+                        .font(.custom("HelveticaNeue", size: 13))
                 }
-                .frame(width: 100, height: 40)
-                .background(Color.white)
-                .cornerRadius(20.0)
-                Button {
-                    self.showingPopup = nil
-                } label: {
-                    Text("Got it")
-                        .font(.system(size: 14))
-                        .foregroundColor(.black)
-                        .fontWeight(.bold)
-                }
-                .frame(width: 100, height: 40)
-                .background(Color.white)
-                .cornerRadius(20.0)
-                Button {
-                    self.showingPopup = nil
-                } label: {
-                    Text("Got it")
-                        .font(.system(size: 14))
-                        .foregroundColor(.black)
-                        .fontWeight(.bold)
-                }
-                .frame(width: 100, height: 40)
-                .background(Color.white)
-                .cornerRadius(20.0)
+                .background(Color.black.opacity(0.3))
+                .cornerRadius(10.0)
             }
         }
         .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-        .background(Color.red)
+        .background(Color.blue)
         .cornerRadius(10.0)
-        .frame( minHeight: 300,maxHeight: .infinity)
+        .frame(minWidth: 320,maxWidth: .infinity,minHeight: 420,maxHeight: .infinity)
         .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 10.0)
     }
 }
