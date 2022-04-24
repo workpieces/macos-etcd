@@ -54,6 +54,7 @@ struct ETCDKeyListContentView: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 11.0,weight: .semibold))
                                     .lineSpacing(8.0)
+                                    .lineLimit(1)
                                     .truncationMode(.middle)
                                 Spacer()
                                 Text(item.size!)
