@@ -32,6 +32,7 @@ class ItemStore: ObservableObject {
 
 struct KVRealoadData {
     var  kvs : [KVData]
+    var  currentKv: KVData?
     var  members : [KVData]
     var  temp : [KVData]
     let  offset : Int = 20

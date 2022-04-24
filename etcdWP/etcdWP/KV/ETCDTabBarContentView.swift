@@ -64,6 +64,7 @@ struct ETCDKeyListContentView: View {
                             }
                         }
                         .onTapGesture(perform: {
+                            self.storeObj.realeadData.currentKv = item
                             showingAlert.toggle()
                         })
                         .buttonStyle(PlainButtonStyle())
@@ -247,6 +248,7 @@ struct ETCDKVOperateContentView: View {
 }
 
 struct MakeOperateKvTextContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     @State private var isShowJSON = false
     var body: some View {
         VStack {
@@ -262,7 +264,7 @@ struct MakeOperateKvTextContentView: View {
             Divider()
             
             ScrollView(.vertical, showsIndicators: true) {
-                Text("aaa")
+                Text(storeObj.realeadData.currentKv?.value ?? "")
                     .lineLimit(nil)
                     .foregroundColor(.secondary)
                     .font(.custom("HelveticaNeue", size: 13))
