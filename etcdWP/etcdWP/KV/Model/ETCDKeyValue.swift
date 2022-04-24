@@ -151,7 +151,7 @@ struct KVOperateLog: Identifiable,Hashable{
         let date = String(self.status ?? 0)
         var dateStrin = ""
         dateStrin.append(date)
-        dateStrin.append("  | ")
+        dateStrin.append(" | ")
         return dateStrin ;
     }
     

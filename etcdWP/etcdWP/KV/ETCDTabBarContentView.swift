@@ -398,22 +398,18 @@ struct ETCDKVLogsContentView: View {
                     .font(.subheadline)
                     .foregroundColor(.green)
                     .opacity(0.75)
-                    .frame(minHeight: 30, maxHeight: .infinity)
                 Text(item.formatStatus())
                     .font(.subheadline)
                     .foregroundColor(item.status == 200 ? .yellow: .red)
                     .opacity(0.75)
-                    .frame(minHeight: 30, maxHeight: .infinity)
                 Text(item.formatOperate())
                     .font(.subheadline)
                     .foregroundColor(.orange)
                     .opacity(0.75)
-                    .frame(minHeight: 30, maxHeight: .infinity)
                 Text(item.formatMessage())
                     .font(.subheadline)
                     .foregroundColor(item.status == 200 ? .secondary : .red)
                     .opacity(item.status == 200 ? 0.75 : 1.0)
-                    .frame(minHeight: 30, maxHeight: .infinity)
             }
         }
     }
