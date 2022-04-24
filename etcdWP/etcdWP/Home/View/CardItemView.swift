@@ -78,7 +78,7 @@ struct CardItemView: View {
             }
         }
         .frame(minHeight: 210, maxHeight: 260)
-        .background(Color(hex: "#5B9BD4").opacity(0.30))
+        .background(Color(hex: "#5B9BD4").opacity(0.15))
         .cornerRadius(DefaultRadius)
     }
 }

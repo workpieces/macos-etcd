@@ -149,63 +149,63 @@ struct ETCDKeyListContentView: View {
             List {
                 Section {
                     ForEach(storeObj.realeadData.members) { item in
-                        VStack {
-                            HStack {
-                                Text("成员名称: ")
-                                    .font(.system(size: 12.0,weight: .semibold))
-                                    .foregroundColor(.secondary)
-                                    .lineSpacing(8.0)
-                                    .truncationMode(.middle)
-                                Text(item.members?.name ?? "")
-                                    .foregroundColor(.orange)
-                                    .font(.system(size: 11.0,weight: .semibold))
+                        HStack {
+                            Rectangle()
+                                .foregroundColor(item.members?.status ?? false ? .red : .green)
+                                .frame(width:10.0)
+                            VStack(alignment: .leading){
+                                Spacer()
+                                Text("名称: \(item.members?.name ?? "")")
+                                    .font(.system(size: 11.0,weight: .medium))
+                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
                                     .lineSpacing(8.0)
                                     .truncationMode(.middle)
                                 Spacer()
-                                if ((item.members?.status) != nil) {
-                                    Rectangle()
-                                        .fill(Color.green)
-                                        .frame(width: 10, height: 10)
-                                }else{
-                                    Rectangle()
-                                        .fill(Color.red)
-                                        .frame(width: 10, height: 10)
-                                }
-                            }
-                            
-                            HStack {
-                                Text("成员ID: ")
-                                    .font(.system(size: 12.0,weight: .semibold))
-                                    .foregroundColor(.secondary)
+                                let mid  = String(item.members?.mid ?? "000000").suffix(6)
+                                Text("ID: \(String(mid))")
+                                    .font(.system(size: 11.0,weight: .medium))
+                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
                                     .lineSpacing(8.0)
                                     .truncationMode(.middle)
+                                Spacer()
+                            }
+                            Spacer()
+                            VStack(alignment: .leading){
+                                Spacer()
+                                Text("节点: \(item.members?.peer_addr ?? "")")
+                                    .font(.system(size: 11.0,weight: .medium))
+                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
+                                    .lineSpacing(8.0)
+                                    .truncationMode(.middle)
+                                Spacer()
                                 
-                                Text(item.members?.mid ?? "")
-                                    .foregroundColor(.orange)
-                                    .font(.system(size: 11.0,weight: .semibold))
+                                Text("客户端: \(item.members?.client_addr ?? "")")
+                                    .font(.system(size: 11.0,weight: .medium))
+                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
                                     .lineSpacing(8.0)
                                     .truncationMode(.middle)
                                 Spacer()
                             }
-                            
-                            Divider()
                         }
+                        .frame(height:60.0)
+                        .background(Color.secondary.opacity(0.25))
+                        .cornerRadius(8.0)
+                        .shadow(radius: 8.0,x: 0.0,y: 8.0)
                     }
                 } header: {
                     VStack {
                         HStack(content: {
-                            Text("成员相关")
+                            Text("成员(Members)详情")
                                 .font(.caption)
                                 .foregroundColor(Color(hex: "#5B9BD4"))
                             Spacer()
-                            Text("成员总数量:  \(storeObj.realeadData.GetMemberCount()) 位")
+                            Text("成员总数:  \(storeObj.realeadData.GetMemberCount()) 位")
                                 .font(.caption)
                                 .foregroundColor(Color(hex: "#5B9BD4"))
                         })
                         .padding(.all,4.0)
                     }
                 }
-                
             }
             .frame(height: 180.0)
         }
