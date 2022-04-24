@@ -212,11 +212,6 @@ struct ETCDKeyListContentView: View {
     }
 }
 
-struct ETCDKVClusterContentView: View {
-    var body: some View {
-        ETCDTableViewRepresentableBootcamp().background(Color.red)
-    }
-}
 
 struct ETCDKVOperateContentView: View {
     var body: some View {
@@ -227,17 +222,13 @@ struct ETCDKVOperateContentView: View {
                 MakeOperateButtonContentView(callback: { newValue, model in
                     
                 })
-                    .frame(width: g.size.width/2)
-                }
+                .frame(width: g.size.width/2)
             }
         }
     }
-
-
-
+}
 
 struct MakeOperateButtonContentView :View {
-    
     @State var showingPopup: String? = nil
     @State var show: Bool = false
     var callback:(_ newValue: Bool, _ model:KVOperateModel) -> Void
@@ -283,10 +274,8 @@ struct MakeOperateButtonContentView :View {
         }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
             AlerPopup()
         }
-        
-        
-        
     }
+    
     func AlerPopup() -> some View {
         VStack(spacing: 10) {
             Text("adsfadsfasdfadsf")
@@ -337,14 +326,7 @@ struct MakeOperateButtonContentView :View {
         .frame( minHeight: 300,maxHeight: .infinity)
         .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 10.0)
     }
-
 }
-
-
-
-
-
-
 
 struct ETCDKVLogsContentView: View {
     @EnvironmentObject var storeObj : ItemStore
@@ -382,7 +364,7 @@ struct ETCDKVGridContentView: View {
         ZStack(alignment: .topLeading){
             VStack(alignment: .leading,spacing: 10.0){
                 Section {
-                    ETCDKVClusterContentView()
+                    ETCDTableViewRepresentableBootcamp().background(Color.red)
                         .padding(.leading,10)
                         .padding(.trailing,10)
                         .cornerRadius(10.0)

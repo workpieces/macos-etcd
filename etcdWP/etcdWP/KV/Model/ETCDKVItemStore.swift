@@ -34,7 +34,7 @@ struct KVRealoadData {
     var  kvs : [KVData]
     var  members : [KVData]
     var  temp : [KVData]
-    let  offset : Int = 2
+    let  offset : Int = 20
     var  page : Int = 1
     var kvCount: Int = 0
     var memberCount: Int = 0
@@ -119,11 +119,12 @@ extension ItemStore {
         let kd = self.GetALL()
         let md = self.MemberList()
         self.realeadData =  KVRealoadData.init(ks: kd, mms: md)
-        let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
-        self.realeadData.kvs.removeAll()
-        self.realeadData.kvs.append(contentsOf: tmp)
+        if self.realeadData.kvCount > self.realeadData.offset {
+            let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
+            self.realeadData.kvs.removeAll()
+            self.realeadData.kvs.append(contentsOf: tmp)
+        }
     }
-    
 }
 
 // Operate Logs

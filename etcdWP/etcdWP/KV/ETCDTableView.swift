@@ -31,7 +31,7 @@ class ETCDTableView: NSView
         
         scrollView = NSScrollView()
         self.addSubview(scrollView)
-        scrollView.snp_makeConstraints { make in
+        scrollView.snp.makeConstraints { make in
             make.edges.equalTo(self)
         }
         tableView = NSTableView(frame: scrollView.bounds)
@@ -63,23 +63,37 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
     }
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let text = NSTextField()
+        text.maximumNumberOfLines = 1
+        text.isEditable = false
+        text.textColor = NSColor.orange
+        text.lineBreakMode = NSLineBreakMode.byTruncatingMiddle
+        text.sizeToFit()
         let item = self.items![row]
         if tableColumn?.identifier == NSUserInterfaceItemIdentifier("idColumn") {
-            text.stringValue = item.status?.sid ?? "0"
+            let sid  = item.status?.sid ?? "000000"
+            text.stringValue = String(sid.suffix(6))
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("endpointColumn") {
-            text.stringValue = item.status?.end_point ?? "localhost:2379"
+            text.stringValue = item.status?.end_point ?? "http://localhost:2379"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("versionColumn") {
-            text.stringValue = item.status?.etcd_version ?? "0.0.0"
+            text.stringValue = item.status?.etcd_version ?? "3.0.0"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("dbSizeColumn") {
-            text.stringValue = item.status?.db_size ?? "0 KB"
+            text.stringValue = item.status?.db_size ?? "0 B"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("dbSizeInUseColumn") {
-            text.stringValue = item.status?.db_size_in_use ?? "0KB"
+            text.stringValue = item.status?.db_size_in_use ?? "0 B"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("leaderColumn") {
-            let value  = item.status?.is_leader as? String;
-            text.stringValue = value ?? "false"
-        }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("isLearnerColumn") {
-            let value  = item.status?.is_leader as? String;
-            text.stringValue = value ?? "false"
+             let ok  = item.status?.is_leader ?? false
+            if ok  {
+                text.stringValue = "true"
+            }else{
+                text.stringValue = "false"
+            }
+        }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("isLearnerColumn") {       
+            let ok  = item.status?.is_learner ?? false
+           if ok  {
+               text.stringValue = "true"
+           }else{
+               text.stringValue = "false"
+           }
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("raftTermColumn") {
             let value  = item.status?.raft_term;
             text.stringValue = value ?? "0"
@@ -91,7 +105,7 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
             text.stringValue = value ?? "0"
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("errorsColumn") {
             let value  = item.status?.errors;
-            text.stringValue = value ?? ""
+            text.stringValue = value ?? "None"
         }
 
         let cell = NSTableCellView()
