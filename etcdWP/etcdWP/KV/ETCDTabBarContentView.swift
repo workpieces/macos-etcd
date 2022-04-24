@@ -153,41 +153,54 @@ struct ETCDKeyListContentView: View {
                             Rectangle()
                                 .foregroundColor(item.members?.status ?? false ? .red : .green)
                                 .frame(width:10.0)
-                            VStack(alignment: .leading){
+                            VStack {
                                 Spacer()
-                                Text("名称: \(item.members?.name ?? "")")
-                                    .font(.system(size: 11.0,weight: .medium))
-                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
-                                    .lineSpacing(8.0)
-                                    .truncationMode(.middle)
-                                Spacer()
-                                let mid  = String(item.members?.mid ?? "000000").suffix(6)
-                                Text("ID: \(String(mid))")
-                                    .font(.system(size: 11.0,weight: .medium))
-                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
-                                    .lineSpacing(8.0)
-                                    .truncationMode(.middle)
-                                Spacer()
-                            }
-                            Spacer()
-                            VStack(alignment: .leading){
-                                Spacer()
-                                Text("节点: \(item.members?.peer_addr ?? "")")
-                                    .font(.system(size: 11.0,weight: .medium))
-                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
-                                    .lineSpacing(8.0)
-                                    .truncationMode(.middle)
-                                Spacer()
+                                HStack{
+                                    Text("名称:   \(item.members?.name ?? "")")
+                                        .font(.system(size: 8.0,weight: .medium))
+                                        .foregroundColor(.secondary)
+                                        .lineSpacing(8.0)
+                                        .truncationMode(.middle)
+                                    Spacer()
+                                    let mid  = String(item.members?.mid ?? "000000").suffix(6)
+                                    Text("ID:   \(String(mid))")
+                                        .font(.system(size: 8.0,weight: .medium))
+                                        .foregroundColor(.secondary)
+                                        .lineSpacing(8.0)
+                                        .truncationMode(.middle)
+                                }
+                                .padding(.leading,10)
+                                .padding(.trailing,10)
                                 
-                                Text("客户端: \(item.members?.client_addr ?? "")")
-                                    .font(.system(size: 11.0,weight: .medium))
-                                    .foregroundColor(item.members?.status ?? false ? .red : .green)
-                                    .lineSpacing(8.0)
-                                    .truncationMode(.middle)
-                                Spacer()
+                                Divider()
+                                
+                                VStack(alignment: .leading){
+                                    HStack {
+                                        Text("节点:   \(item.members?.peer_addr ?? "")")
+                                            .font(.system(size: 8.0,weight: .medium))
+                                            .foregroundColor(.secondary)
+                                            .lineSpacing(8.0)
+                                            .truncationMode(.middle)
+                                        Spacer()
+                                    }
+                                    .padding(.leading,10)
+                                    .padding(.trailing,10)
+                                    
+                                    Divider()
+                                    HStack {
+                                        Text("客户端:   \(item.members?.client_addr ?? "")")
+                                            .font(.system(size: 8.0,weight: .medium))
+                                            .foregroundColor(.secondary)
+                                            .lineSpacing(8.0)
+                                            .truncationMode(.middle)
+                                        Spacer()
+                                    }
+                                    .padding(.leading,10)
+                                    .padding(.trailing,10)
+                                }
+                                Divider()
                             }
                         }
-                        .frame(height:60.0)
                         .background(Color.secondary.opacity(0.25))
                         .cornerRadius(8.0)
                         .shadow(radius: 8.0,x: 0.0,y: 8.0)
@@ -217,16 +230,36 @@ struct ETCDKVOperateContentView: View {
     var body: some View {
         GeometryReader {  g in
             HStack {
-                Color.red
+                Spacer()
+                MakeOperateKvTextContentView()
+                    .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                     .frame(width: g.size.width/2)
+                Spacer()
                 MakeOperateButtonContentView(callback: { newValue, model in
                     
                 })
+                .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                 .frame(width: g.size.width/2)
             }
         }
     }
 }
+
+struct MakeOperateKvTextContentView: View {
+    var body: some View {
+        VStack {
+            let data  = "Molecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule ManMolecule Man"
+            Text(data)
+                .font(.system(size: 13.0))
+            //                    .lineLimit(0)
+                .fixedSize(horizontal: false, vertical: true)
+                .foregroundColor(.secondary)
+                .padding(10.0)
+            Spacer()
+        }
+    }
+}
+
 
 struct MakeOperateButtonContentView :View {
     @State var showingPopup: String? = nil
@@ -272,7 +305,7 @@ struct MakeOperateButtonContentView :View {
             }
             .padding(8.0)
         }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
-            AlerPopup()
+            //            AlerPopup()
         }
     }
     
