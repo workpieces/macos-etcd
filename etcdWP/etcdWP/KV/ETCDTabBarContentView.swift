@@ -119,8 +119,7 @@ struct ETCDKeyListContentView: View {
                 }
             }
             .listRowInsets(nil)
-            .listStyle(.inset)
-            
+            .listStyle(.sidebar)
             HStack {
                 Spacer()
                 Text("当前页:  \(storeObj.realeadData.GetCurrentPage())  ")
@@ -237,7 +236,7 @@ struct ETCDKVOperateContentView: View {
                     .frame(width: g.size.width/2)
                 Spacer()
                 MakeOperateButtonContentView(callback: { newValue, model in
-                    
+                   print("\(newValue)")
                 })
                 .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                 .frame(width: g.size.width/2)
@@ -322,7 +321,6 @@ struct MakeOperateButtonContentView :View {
                         }
                         Spacer()
                     }.onTapGesture {
-                        self.showingPopup = "string"
                         self.show.toggle()
                         callback(self.show,item)
                     }
@@ -332,34 +330,10 @@ struct MakeOperateButtonContentView :View {
                 }
             }
             .padding(8.0)
-        }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
-//                        AlerPopup()
         }
     }
     
-    func AlerPopup() -> some View {
-        VStack(spacing: 10) {
-            Text("adsfadsfasdfadsf")
-                .foregroundColor(.white)
-                .fontWeight(.bold)
-            HStack{
-                Button {
-                    self.showingPopup = nil
-                } label: {
-                    Text("Got it")
-                        .foregroundColor(.pink)
-                        .font(.custom("HelveticaNeue", size: 13))
-                }
-                .background(Color.black.opacity(0.3))
-                .cornerRadius(10.0)
-            }
-        }
-        .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-        .background(Color.blue)
-        .cornerRadius(10.0)
-        .frame(minWidth: 320,maxWidth: .infinity,minHeight: 420,maxHeight: .infinity)
-        .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 10.0)
-    }
+
 }
 
 struct ETCDKVLogsContentView: View {
@@ -394,7 +368,7 @@ struct ETCDKVGridContentView: View {
         ZStack(alignment: .topLeading){
             VStack(alignment: .leading,spacing: 10.0){
                 Section {
-                    ETCDTableViewRepresentableBootcamp().background(Color.red)
+                    ETCDTableViewRepresentableBootcamp()
                         .padding(.leading,10)
                         .padding(.trailing,10)
                         .cornerRadius(10.0)

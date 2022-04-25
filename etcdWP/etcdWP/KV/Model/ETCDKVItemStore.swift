@@ -49,6 +49,7 @@ struct KVRealoadData {
         self.kvCount = ks.count
         self.memberCount = mms.count
         self.temp.append(contentsOf:ks)
+        self.currentKv = self.kvs.first
     }
     
     func GetMemberCount() -> Int {
