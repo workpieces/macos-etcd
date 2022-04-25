@@ -154,14 +154,14 @@ struct ETCDKeyListContentView: View {
                             VStack {
                                 Spacer()
                                 HStack{
-                                    Text("名称：   \(item.members?.name ?? "")")
+                                    Text("名称： \(item.members?.name ?? "")")
                                         .font(.system(size: 12))
                                         .foregroundColor(.secondary)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
                                     Spacer()
                                     let mid  = String(item.members?.mid ?? "000000").suffix(6)
-                                    Text("ID：   \(String(mid))")
+                                    Text("ID： \(String(mid))")
                                         .font(.system(size: 12))
                                         .foregroundColor(.secondary)
                                         .lineSpacing(8.0)
@@ -178,7 +178,7 @@ struct ETCDKeyListContentView: View {
                                 
                                 VStack(alignment: .leading){
                                     HStack {
-                                        Text("节点：   \(item.members?.peer_addr ?? "")")
+                                        Text("节点： \(item.members?.peer_addr ?? "")")
                                             .font(.system(size: 12))
                                             .foregroundColor(.secondary)
                                             .lineSpacing(8.0)
@@ -190,7 +190,7 @@ struct ETCDKeyListContentView: View {
                                     
                                     Divider()
                                     HStack {
-                                        Text("客户端：   \(item.members?.client_addr ?? "")")
+                                        Text("客户端： \(item.members?.client_addr ?? "")")
                                             .font(.system(size: 12))
                                             .foregroundColor(.secondary)
                                             .lineSpacing(8.0)
@@ -322,10 +322,9 @@ struct MakeOperateButtonContentView :View {
     var callback:(_ newValue: Bool, _ model:KVOperateModel) -> Void
     let operateModels : [KVOperateModel] = [
         KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
-        KVOperateModel.init(name: "前缀删除", english: "（DeletePrefix）",type: 0),
+        KVOperateModel.init(name: "键值前缀删除", english: "（DeletePrefix）",type: 0),
         KVOperateModel.init(name: "创建租约", english: "（LeaseGrant）",type: 0),
         KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 0),
-        KVOperateModel.init(name: "租约列表",english: "（LeaseList）", type: 0),
     ]
     var body: some View {
         ZStack(alignment: .topLeading){
@@ -337,12 +336,12 @@ struct MakeOperateButtonContentView :View {
                             Spacer()
                             Text(item.name)
                                 .font(.body)
-                                .foregroundColor(.green)
+                                .foregroundColor(.yellow)
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             Text(item.english)
                                 .font(.body)
-                                .foregroundColor(.green)
+                                .foregroundColor(.yellow)
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             Spacer()

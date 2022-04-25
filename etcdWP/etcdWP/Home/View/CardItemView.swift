@@ -52,8 +52,8 @@ struct CardItemView: View {
                 Spacer()
                 
                 VStack(spacing: 8.0){
-                    Text("Service Name")
-                        .withDefaultContentTitle(fontColor: Color.orange)
+                    Text("服务名称")
+                        .withDefaultContentTitle(fontColor: Color.yellow)
                     
                     Text(options.clientName)
                         .withDefaultSubContentTitle()
@@ -62,14 +62,16 @@ struct CardItemView: View {
             }
             
             VStack(alignment: .center,spacing: 8.0) {
-                Text("Endpoints")
-                    .withDefaultContentTitle(fontColor: Color.orange)
+                Text("节点地址")
+                    .withDefaultContentTitle(fontColor: Color.yellow)
                 
                 Text(options.endpoints.first!)
                     .withDefaultSubContentTitle()
                 
-                Text("Connection Status")
-                    .withDefaultContentTitle(fontColor: Color.orange)
+                Spacer()
+                
+                Text("连接状态")
+                    .withDefaultContentTitle(fontColor: Color.yellow)
                 
                 Text(options.status == true ? "Scuess" : "Failed")
                     .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#00FF7F") : Color.red)
@@ -78,7 +80,7 @@ struct CardItemView: View {
             }
         }
         .frame(minHeight: 210, maxHeight: 260)
-        .background(Color(hex: "#5B9BD4").opacity(0.15))
+        .background(Color(hex: "#5B9BD4").opacity(0.25))
         .cornerRadius(DefaultRadius)
     }
 }

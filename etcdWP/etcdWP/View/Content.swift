@@ -11,7 +11,7 @@ import SwiftUI
 struct DefaultNavagationModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
-            .font(.system(size: 30.0,weight: .semibold))
+            .font(.system(size: 30))
             .foregroundColor(.white)
             .frame(height: 40.0, alignment: .leading)
             .lineLimit(1)
@@ -25,7 +25,7 @@ struct DefaultContentModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
             .foregroundColor(fontColor)
-            .font(.system(size: fontSize,weight: .semibold))
+            .font(.system(size: fontSize))
     }
 }
 
@@ -36,7 +36,7 @@ struct DefaultSubContentModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
             .foregroundColor(fontColor)
-            .font(.system(size: fontSize,weight: .semibold))
+            .font(.system(size: fontSize))
             .lineSpacing(8.0)
             .truncationMode(.middle)
     }
@@ -47,7 +47,7 @@ extension View {
         modifier(DefaultNavagationModifier())
     }
     
-    func withDefaultContentTitle(fontColor: Color = .white,fontSize: CGFloat = 16.0) -> some View {
+    func withDefaultContentTitle(fontColor: Color = .white,fontSize: CGFloat = 14.0) -> some View {
         modifier(DefaultContentModifier(fontColor: fontColor, fontSize: fontSize))
     }
     
