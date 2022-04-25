@@ -271,9 +271,7 @@ struct ETCDKVOperateContentView: View {
                     .frame(width: g.size.width/2)
                 //                    .background(Color.red)
                 Spacer()
-                MakeOperateButtonContentView(callback: { newValue, model in
-                    print("\(newValue)")
-                })
+                MakeOperateButtonContentView()
                 .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                 .frame(width: g.size.width/2)
                 Spacer()
@@ -317,15 +315,17 @@ struct MakeOperateKvTextContentView: View {
 }
 
 struct MakeOperateButtonContentView :View {
-    @State var showingPopup: String? = nil
-    @State var show: Bool = false
-    var callback:(_ newValue: Bool, _ model:KVOperateModel) -> Void
+    
     let operateModels : [KVOperateModel] = [
         KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
         KVOperateModel.init(name: "键值前缀删除", english: "（DeletePrefix）",type: 0),
         KVOperateModel.init(name: "创建租约", english: "（LeaseGrant）",type: 0),
         KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 0),
     ]
+    @State var show: Bool = false
+    @State var text: String = ""
+    @State var name: String = ""
+
     var body: some View {
         ZStack(alignment: .topLeading){
             List {
@@ -348,8 +348,8 @@ struct MakeOperateButtonContentView :View {
                         }
                         Spacer()
                     }.onTapGesture {
+                        self.name = item.name
                         self.show.toggle()
-                        callback(self.show,item)
                     }
                     .background(Color.secondary.opacity(0.15))
                     .cornerRadius(8)
@@ -357,13 +357,19 @@ struct MakeOperateButtonContentView :View {
                 }
             }
             .padding(8.0)
-        }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
-            //                        AlerPopup()
+        }.sheet(isPresented: $show, onDismiss: didDismiss) {
+            ETCDSheetView(text: $text,name: $name)
         }
+        
+       
     }
     
-    
+    func didDismiss() {
+        //消失回调
+    }
 }
+
+
 
 struct ETCDKVLogsContentView: View {
     @EnvironmentObject var storeObj : ItemStore
