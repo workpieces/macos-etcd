@@ -57,7 +57,7 @@ struct DefaultAddButtonViewModifier: ViewModifier{
                     .padding(DefaultSpacePadding)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .background(Capsule().fill(Color(hex:"#00FFFF").opacity(0.30)))
+                .background(Capsule().fill(Color(hex:"#00FFFF").opacity(0.45)))
             }
         }
     }
