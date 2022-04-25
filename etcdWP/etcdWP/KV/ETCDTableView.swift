@@ -65,7 +65,7 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
         let text = NSTextField()
         text.maximumNumberOfLines = 1
         text.isEditable = false
-        text.textColor = NSColor.orange
+        text.textColor = NSColor.lightGray
         text.lineBreakMode = NSLineBreakMode.byTruncatingMiddle
         text.sizeToFit()
         let item = self.items![row]

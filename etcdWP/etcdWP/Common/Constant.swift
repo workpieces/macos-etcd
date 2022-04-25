@@ -39,3 +39,11 @@ let DefaultSpacePadding = 18.0
 let DefaultKeyImageName = "key"
 
 
+// Official website
+let DefaultOfficialWebsite = "https://github.com/workpieces/etcdWpSite"
+
+
+// Feedback
+let DefaultFeedback = "https://github.com/workpieces/etcdWpSite/issues"
+
+
