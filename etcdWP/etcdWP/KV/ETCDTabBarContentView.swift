@@ -12,6 +12,8 @@ import PopupView
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
+    @State private var showingPopover = false
+    @State private var memberConfig: MembersConfig = MembersConfig.init()
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -222,16 +224,19 @@ struct ETCDKeyListContentView: View {
                         
                         HStack {
                             Button {
-                                
+                                self.showingPopover.toggle()
                             } label: {
                                 Text("创建成员")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
                             }
+                            .popover(isPresented: $showingPopover) {
+                                MakeMemberPopoverContent(memberConfig: $memberConfig)
+                            }
                             
                             Spacer()
                             Button {
-                                
+                                self.showingPopover.toggle()
                             } label: {
                                 Text("删除成员")
                                     .font(.caption)
@@ -239,7 +244,7 @@ struct ETCDKeyListContentView: View {
                             }
                             Spacer()
                             Button {
-                                
+                                self.showingPopover.toggle()
                             } label: {
                                 Text("更新成员")
                                     .font(.caption)
@@ -247,7 +252,7 @@ struct ETCDKeyListContentView: View {
                             }
                             Spacer()
                             Button {
-                                
+                                self.showingPopover.toggle()
                             } label: {
                                 Text("Promotes")
                                     .font(.caption)
@@ -269,7 +274,6 @@ struct ETCDKVOperateContentView: View {
             HStack {
                 MakeOperateKvTextContentView()
                     .frame(width: g.size.width/2)
-                //                    .background(Color.red)
                 Spacer()
                 MakeOperateButtonContentView(callback: { newValue, model in
                     print("\(newValue)")
@@ -357,12 +361,8 @@ struct MakeOperateButtonContentView :View {
                 }
             }
             .padding(8.0)
-        }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
-            //                        AlerPopup()
         }
     }
-    
-    
 }
 
 struct ETCDKVLogsContentView: View {
