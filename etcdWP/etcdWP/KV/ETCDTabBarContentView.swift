@@ -152,24 +152,25 @@ struct ETCDKeyListContentView: View {
                 Section {
                     ForEach(storeObj.realeadData.members) { item in
                         HStack {
-                            Rectangle()
-                                .foregroundColor(item.members?.status ?? false ? .red : .green)
-                                .frame(width:10.0)
                             VStack {
                                 Spacer()
                                 HStack{
                                     Text("名称:   \(item.members?.name ?? "")")
-                                        .font(.system(size: 8.0,weight: .medium))
+                                        .font(.system(size: 10.0,weight: .medium))
                                         .foregroundColor(.secondary)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
                                     Spacer()
                                     let mid  = String(item.members?.mid ?? "000000").suffix(6)
                                     Text("ID:   \(String(mid))")
-                                        .font(.system(size: 8.0,weight: .medium))
+                                        .font(.system(size: 10.0,weight: .medium))
                                         .foregroundColor(.secondary)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
+                                    Spacer()
+                                    Rectangle()
+                                        .foregroundColor(item.members?.status ?? false ? .red : .green)
+                                        .frame(width:8.0,height: 8.0)
                                 }
                                 .padding(.leading,10)
                                 .padding(.trailing,10)
@@ -179,7 +180,7 @@ struct ETCDKeyListContentView: View {
                                 VStack(alignment: .leading){
                                     HStack {
                                         Text("节点:   \(item.members?.peer_addr ?? "")")
-                                            .font(.system(size: 8.0,weight: .medium))
+                                            .font(.system(size: 10.0,weight: .medium))
                                             .foregroundColor(.secondary)
                                             .lineSpacing(8.0)
                                             .truncationMode(.middle)
@@ -191,7 +192,7 @@ struct ETCDKeyListContentView: View {
                                     Divider()
                                     HStack {
                                         Text("客户端:   \(item.members?.client_addr ?? "")")
-                                            .font(.system(size: 8.0,weight: .medium))
+                                            .font(.system(size: 10.0,weight: .medium))
                                             .foregroundColor(.secondary)
                                             .lineSpacing(8.0)
                                             .truncationMode(.middle)
@@ -283,7 +284,7 @@ struct MakeOperateKvTextContentView: View {
                         Button("Copy", action: {
                             copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                         })
-                }))
+                    }))
             }
         }
     }
@@ -333,7 +334,7 @@ struct MakeOperateButtonContentView :View {
             }
             .padding(8.0)
         }.popup(item: $showingPopup, type: .`default`, closeOnTap: true) {
-//                        AlerPopup()
+            //                        AlerPopup()
         }
     }
     
