@@ -267,13 +267,12 @@ struct ETCDKVOperateContentView: View {
     var body: some View {
         GeometryReader {  g in
             HStack {
-                Spacer()
                 MakeOperateKvTextContentView()
-                    .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                     .frame(width: g.size.width/2)
+                //                    .background(Color.red)
                 Spacer()
                 MakeOperateButtonContentView(callback: { newValue, model in
-                   print("\(newValue)")
+                    print("\(newValue)")
                 })
                 .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                 .frame(width: g.size.width/2)
@@ -287,39 +286,31 @@ struct MakeOperateKvTextContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var isShowJSON = false
     var body: some View {
-        VStack {
-            HStack {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
                 Spacer()
-                Toggle("JSON", isOn: $isShowJSON)
-                    .foregroundColor(.secondary)
-                    .toggleStyle(.switch)
-                    .padding(.top,8.0)
-                Button {
-                    copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
-                } label: {
-                    Text("粘贴")
-                        .font(.custom("HelveticaNeue", size: 13))
-                        .lineSpacing(10)
-                        .foregroundColor(.pink)
+                HStack {
+                    Text(storeObj.realeadData.currentKv?.value ?? "")
+                        .lineLimit(nil)
+                        .foregroundColor(.secondary)
+                        .font(.system(size: 12))
+                        .lineSpacing(4)
+                        .multilineTextAlignment(TextAlignment.leading)
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button("Copy", action: {
+                                copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                            })
+                        }))
+                    Spacer()
+                    Button {
+                        copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                    } label: {
+                        Text("粘贴")
+                            .font(.system(size: 10.0))
+                            .foregroundColor(.yellow)
+                    }
                 }
-                .padding(.top,8.0)
-                .padding(.trailing,8.0)
-            }
-            
-            Divider()
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                Text(storeObj.realeadData.currentKv?.value ?? "")
-                    .lineLimit(nil)
-                    .foregroundColor(.pink)
-                    .font(.custom("HelveticaNeue", size: 13))
-                    .lineSpacing(10)
-                    .multilineTextAlignment(TextAlignment.leading)
-                    .contextMenu(ContextMenu(menuItems: {
-                        Button("Copy", action: {
-                            copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
-                        })
-                    }))
+                Spacer()
             }
         }
     }
@@ -372,7 +363,7 @@ struct MakeOperateButtonContentView :View {
         }
     }
     
-
+    
 }
 
 struct ETCDKVLogsContentView: View {
