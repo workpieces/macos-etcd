@@ -27,10 +27,17 @@ extension HomeViewModel {
                                          nil)
                 self.ectdClientList[idx].etcdClient = c
                 if c != nil {
-                    self.ectdClientList[idx].status = self.Ping(c: c!)
+                    let ping  =  self.Ping(c: c!)
+                    if ping {
+                    self.ectdClientList[idx].status = ping
+                    }
                 }
             }else{
-                self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)
+                let ping  =  self.Ping(c: item.etcdClient!)
+                let currentStatus = self.ectdClientList[idx].status
+                if ping != currentStatus{
+                    self.ectdClientList[idx].status = ping
+                }
             }
         }
     }
