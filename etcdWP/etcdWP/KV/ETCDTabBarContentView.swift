@@ -319,21 +319,15 @@ struct MakeOperateKvTextContentView: View {
 }
 
 struct MakeOperateButtonContentView :View {
-    
-    let operateModels : [KVOperateModel] = [
-        KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
-        KVOperateModel.init(name: "键值前缀删除", english: "（DeletePrefix）",type: 0),
-        KVOperateModel.init(name: "创建租约", english: "（LeaseGrant）",type: 0),
-        KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 0),
-    ]
+
     @State var show: Bool = false
     @State var text: String = ""
-    @State var name: String = ""
-
+    @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         ZStack(alignment: .topLeading){
             List {
-                ForEach(operateModels) { item in
+                ForEach(KVOperateModel.getItems()) { item in
                     VStack {
                         Spacer()
                         HStack {
@@ -352,7 +346,7 @@ struct MakeOperateButtonContentView :View {
                         }
                         Spacer()
                     }.onTapGesture {
-                        self.name = item.name
+                        self.currentModel = item
                         self.show.toggle()
                     }
                     .background(Color.secondary.opacity(0.15))
@@ -363,7 +357,7 @@ struct MakeOperateButtonContentView :View {
             .padding(8.0)
 
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
-            ETCDSheetView(text: $text,name: $name)
+            ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
         }
         
        

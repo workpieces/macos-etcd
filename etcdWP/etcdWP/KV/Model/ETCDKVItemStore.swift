@@ -13,6 +13,16 @@ struct KVOperateModel: Identifiable,Hashable {
     var name: String
     var english: String
     var type: Int
+
+    static  func getItems() -> [KVOperateModel]{
+        let operateModels : [KVOperateModel] = [
+            KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
+            KVOperateModel.init(name: "键值前缀删除", english: "（DeletePrefix）",type: 1),
+            KVOperateModel.init(name: "创建租约", english: "（LeaseGrant）",type: 2),
+            KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 3),
+        ]
+        return operateModels
+    }
 }
 
 class ItemStore: ObservableObject {

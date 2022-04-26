@@ -50,6 +50,7 @@
 		D079BE5028143F36006B8619 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079BE4F28143F36006B8619 /* SnapKit */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
 		D08211452816E4B8004D7688 /* ETCDSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08211442816E4B8004D7688 /* ETCDSheetView.swift */; };
+		D08211472816EC08004D7688 /* ETCDTextViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08211462816EC08004D7688 /* ETCDTextViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		D079BE0C2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTableViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		D079BE45281430DC006B8619 /* ETCDTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTableView.swift; sourceTree = "<group>"; };
 		D08211442816E4B8004D7688 /* ETCDSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDSheetView.swift; sourceTree = "<group>"; };
+		D08211462816EC08004D7688 /* ETCDTextViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDTextViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				D08211442816E4B8004D7688 /* ETCDSheetView.swift */,
+				D08211462816EC08004D7688 /* ETCDTextViewRepresentable.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				D00ED4A52800702E0068CBB3 /* AboutModel.swift in Sources */,
 				D00ED4AC280070470068CBB3 /* Constant.swift in Sources */,
 				D00ED4DF280070730068CBB3 /* ETCDOptionStore.swift in Sources */,
+				D08211472816EC08004D7688 /* ETCDTextViewRepresentable.swift in Sources */,
 				D079BE0D2814276F006B8619 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D08211452816E4B8004D7688 /* ETCDSheetView.swift in Sources */,
 				D00ED4DE280070730068CBB3 /* ETCDStore.swift in Sources */,

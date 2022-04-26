@@ -9,27 +9,34 @@ import SwiftUI
 
 struct ETCDSheetView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var text : String
-    @Binding var name  : String
+    @Binding var currentModel  : KVOperateModel
+    @State var text : String
     var body: some View {
         VStack(){
-            Text(name).padding(10)
-            Spacer()
-            VStack(){
-                Button("Cancel") {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                Button("确定") {
-                 
-                }
-                Button("确定") {
-                 
-                }
-                Button("确定") {
-                 
-                }
-                TextField("Password：", text: $text)
+            Text(currentModel.name).padding(10)
+            if currentModel.type == 0 || currentModel.type == 1{
+                ETCDTextViewRepresentable(text: $text)
+                    .padding(10)
+            }else{
+                Text("fadfasdfasdkgf")
             }
+            HStack(){
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("取消")
+                        .font(.caption)
+                        .foregroundColor(.yellow)
+                }
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("确定")
+                        .font(.caption)
+                        .foregroundColor(.yellow)
+                }
+            }.padding(10)
+            
         }.frame(minWidth: 300, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
     }
 }
