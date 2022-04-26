@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ETCDSheetView: View {
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var storeObj : ItemStore
     @Binding var currentModel  : KVOperateModel
     @State var text : String
     var body: some View {
@@ -27,14 +28,20 @@ struct ETCDSheetView: View {
                     Text("取消")
                         .font(.caption)
                         .foregroundColor(.yellow)
-                }
+                }.padding(.trailing,10)
+                    .padding(.leading,10)
                 Button {
+                    if text != storeObj.realeadData.currentKv?.value
+                    {
+                        storeObj.realeadData.currentKv?.value = text
+                    }
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("确定")
                         .font(.caption)
                         .foregroundColor(.yellow)
-                }
+                }.padding(.trailing,10)
+                    .padding(.leading,10)
             }.padding(10)
             
         }.frame(minWidth: 300, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)

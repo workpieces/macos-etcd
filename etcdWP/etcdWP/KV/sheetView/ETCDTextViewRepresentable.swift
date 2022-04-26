@@ -47,6 +47,13 @@ struct ETCDTextViewRepresentable: NSViewRepresentable {
             self._text = text
         }
         
+        func textDidChange(_ notification: Notification) {
+            
+            guard let textView = notification.object as? NSTextView else {
+                return
+            }
+            text =  textView.string
+        }
     }
 
 }

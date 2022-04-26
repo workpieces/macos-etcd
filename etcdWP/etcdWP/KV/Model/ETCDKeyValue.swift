@@ -47,7 +47,7 @@ struct KVData: Codable, Identifiable {
     // increases its version.
     let version : Int64?
     // value is the value held by the key, in bytes.
-    let value : String?
+    var value : String?
     // lease is the ID of the lease that attached to key.
     // When the attached lease expires, the key will be deleted.
     // If lease is 0, then no lease is attached to the key.
