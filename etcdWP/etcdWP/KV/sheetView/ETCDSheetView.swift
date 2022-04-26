@@ -12,10 +12,24 @@ struct ETCDSheetView: View {
     @EnvironmentObject var storeObj : ItemStore
     @Binding var currentModel  : KVOperateModel
     @State var text : String
+    @State var serachText : String = ""
+    @State var replaceText : String = ""
     var body: some View {
         VStack(){
             Text(currentModel.name).padding(10)
             if currentModel.type == 0 || currentModel.type == 1{
+                if currentModel.type == 1{
+                    HStack(){
+                        TextField.init("Serach", text: $serachText, onEditingChanged: { _ in},onCommit: {
+                            
+                        }).textFieldStyle(.roundedBorder)
+                            .padding(10)
+                        TextField.init("替换", text: $replaceText, onEditingChanged: { _ in},onCommit: {
+                            
+                        }).textFieldStyle(.roundedBorder)
+                            .padding(10)
+                    }
+                }
                 ETCDTextViewRepresentable(text: $text)
                     .padding(10)
             }else if(currentModel.type == 2){
