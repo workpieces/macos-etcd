@@ -34,7 +34,7 @@ struct ETCDHomeContentView: View {
                             selectTab: $homeData.selectTab)
                     }
                     Spacer()
-                    Text(MacosEtcdVersion)
+                    Text("Version: \(homeData.getVersion())")
                         .withDefaultContentTitle()
                         .padding(.bottom,DefaultSpacePadding)
                 }

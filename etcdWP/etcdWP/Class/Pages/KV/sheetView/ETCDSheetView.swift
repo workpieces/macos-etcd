@@ -35,7 +35,7 @@ struct ETCDSheetView: View {
             }else if(currentModel.type == 2){
                 
             }else{
-                Text("FADFADSFA")
+                Text("fdafdasfd")
             }
             HStack(){
                 Button {

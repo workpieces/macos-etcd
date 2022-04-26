@@ -37,4 +37,10 @@ class HomeViewModel: ObservableObject {
         // 一启动就创建客户端
         self.WatchListenEtcdClient()
     }
+    
+    //获取版本
+    func getVersion() ->  String {
+        let infoDic = Bundle.main.infoDictionary
+        return infoDic?["CFBundleShortVersionString"] as! String
+    }
 }
