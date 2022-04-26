@@ -12,7 +12,10 @@ import PopupView
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
-    @State private var showingPopover = false
+    @State private var showingCreatPopover:Bool = false
+    @State private var showingDelePopover :Bool  = false
+    @State private var showingUpdatePopover :Bool  = false
+    @State private var showingPromotesPopover :Bool  = false
     @State private var memberConfig: MembersConfig = MembersConfig.init()
     func Reaload() {
         storeObj.KVReaload()
@@ -224,39 +227,45 @@ struct ETCDKeyListContentView: View {
                         
                         HStack {
                             Button {
-                                self.showingPopover.toggle()
+                                self.showingCreatPopover.toggle()
                             } label: {
                                 Text("创建成员")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
                             }
-                            .popover(isPresented: $showingPopover) {
+                            .popover(isPresented: $showingCreatPopover) {
                                 MakeMemberPopoverContent(memberConfig: $memberConfig)
                             }
                             
                             Spacer()
                             Button {
-                                self.showingPopover.toggle()
+                                self.showingDelePopover.toggle()
                             } label: {
                                 Text("删除成员")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
+                            }.popover(isPresented: $showingDelePopover) {
+                                MakeMemberPopoverContent(memberConfig: $memberConfig)
                             }
                             Spacer()
                             Button {
-                                self.showingPopover.toggle()
+                                self.showingUpdatePopover.toggle()
                             } label: {
                                 Text("更新成员")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
+                            }.popover(isPresented: $showingUpdatePopover) {
+                                MakeMemberPopoverContent(memberConfig: $memberConfig)
                             }
                             Spacer()
                             Button {
-                                self.showingPopover.toggle()
+                                self.showingPromotesPopover.toggle()
                             } label: {
                                 Text("Promotes")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
+                            }.popover(isPresented: $showingPromotesPopover) {
+                                MakeMemberPopoverContent(memberConfig: $memberConfig)
                             }
                         }
                         Spacer()
