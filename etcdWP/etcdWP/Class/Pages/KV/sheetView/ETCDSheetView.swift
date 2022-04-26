@@ -33,7 +33,7 @@ struct ETCDSheetView: View {
                 ETCDTextViewRepresentable(text: $text)
                     .padding(10)
             }else if(currentModel.type == 2){
-                Text("FADFADSFA")
+                
             }else{
                 Text("FADFADSFA")
             }
