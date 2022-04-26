@@ -198,6 +198,7 @@ extension ItemStore {
 // PUT
 extension ItemStore {
     func Put(key: String,value: String) -> [KVData] {
+        //put 闪退
         let result = c?.put(key, value: value)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)

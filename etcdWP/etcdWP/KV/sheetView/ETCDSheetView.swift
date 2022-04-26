@@ -18,32 +18,38 @@ struct ETCDSheetView: View {
             if currentModel.type == 0 || currentModel.type == 1{
                 ETCDTextViewRepresentable(text: $text)
                     .padding(10)
+            }else if(currentModel.type == 2){
+                Text("FADFADSFA")
             }else{
-                Text("fadfasdfasdkgf")
+                Text("FADFADSFA")
             }
             HStack(){
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("取消")
-                        .font(.caption)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
                         .foregroundColor(.yellow)
-                }.padding(.trailing,10)
-                    .padding(.leading,10)
+                        .padding(10)
+                }.padding(30)
+                
                 Button {
                     if text != storeObj.realeadData.currentKv?.value
                     {
                         storeObj.realeadData.currentKv?.value = text
+                      let _ = storeObj.Put(key: (storeObj.realeadData.currentKv?.key)!, value: text)
                     }
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("确定")
-                        .font(.caption)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
                         .foregroundColor(.yellow)
-                }.padding(.trailing,10)
-                    .padding(.leading,10)
-            }.padding(10)
+                        .padding(10)
+                }
+            }.padding(.bottom ,10)
             
-        }.frame(minWidth: 300, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
     }
 }

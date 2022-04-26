@@ -34,7 +34,7 @@ struct ETCDTextViewRepresentable: NSViewRepresentable {
   
     private func getTextView() -> NSTextView {
         let textView = NSTextView(frame: .zero)
-        textView.font = NSFont.systemFont(ofSize: 10)
+        textView.font = NSFont.systemFont(ofSize: 12)
         textView.textColor = NSColor.white
         textView.backgroundColor = NSColor.clear
         return textView
