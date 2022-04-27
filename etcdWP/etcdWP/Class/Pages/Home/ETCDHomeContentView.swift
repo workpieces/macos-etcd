@@ -12,7 +12,7 @@ import NavigationStack
 var screen = NSScreen.main!.visibleFrame
 
 struct ETCDHomeContentView: View {
-    @StateObject var homeData = HomeViewModel.init()
+    @StateObject var homeData = HomeViewModel()
     let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {
         return  NavigationStackView(transitionType: .custom(.opacity)){
@@ -55,6 +55,10 @@ struct ETCDHomeContentView: View {
         .onReceive(closePublisher) { _ in
             print("Application will Terminate Notification")
             self.homeData.ectdClientList.removeAll()
+        }
+        .onAppear{
+            //优化获取的时机
+            self.homeData.WatchListenEtcdClient()
         }
     }
 }

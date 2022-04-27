@@ -39,7 +39,9 @@ struct HomeMainView: View {
                 }
                 .onReceive(timer, perform: {
                     _ in
-                    homeData.WatchListenEtcdClient()
+                    DispatchQueue.main.async {
+                        homeData.WatchListenEtcdClient()
+                    }
                 }).onDisappear {
                     self.timer.upstream.connect().cancel()
                 }

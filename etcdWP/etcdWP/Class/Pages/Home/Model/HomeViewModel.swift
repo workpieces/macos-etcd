@@ -34,8 +34,6 @@ class HomeViewModel: ObservableObject {
                 status: data.status)
             self.ectdClientList.append(client)
         }
-        // 一启动就创建客户端
-        self.WatchListenEtcdClient()
     }
     
     //获取版本
