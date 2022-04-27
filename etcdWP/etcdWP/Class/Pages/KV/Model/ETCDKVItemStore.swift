@@ -25,6 +25,22 @@ struct KVOperateModel: Identifiable,Hashable {
     }
 }
 
+struct KVMemberModel: Identifiable,Hashable {
+    var id = UUID()
+    var name: String
+    var type: Int
+    
+    static func getMembers() -> [KVMemberModel] {
+        let members : [KVMemberModel] = [
+            KVMemberModel.init(name: "创建成员", type: 0),
+            KVMemberModel.init(name: "删除成员", type: 1),
+            KVMemberModel.init(name: "修改成员", type: 2),
+            KVMemberModel.init(name: "Promotes", type: 3),
+        ]        
+        return members
+    }
+}
+
 class ItemStore: ObservableObject {
     @Published var c : EtcdKVClient?
     @Published var address: String

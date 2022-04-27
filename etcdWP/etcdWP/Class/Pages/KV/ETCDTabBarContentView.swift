@@ -12,11 +12,8 @@ import PopupView
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
-    @State private var showingCreatPopover:Bool = false
-    @State private var showingDelePopover :Bool  = false
-    @State private var showingUpdatePopover :Bool  = false
-    @State private var showingPromotesPopover :Bool  = false
-    @State private var memberConfig: MembersConfig = MembersConfig.init()
+    @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
+    @State private var show: Bool = false
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -80,7 +77,7 @@ struct ETCDKeyListContentView: View {
                         HStack{
                             Text("服务地址：\(storeObj.address)")
                                 .font(.caption)
-                                .foregroundColor(.yellow)
+                                .foregroundColor(.white)
                             Spacer()
                             
                             if storeObj.status {
@@ -217,56 +214,28 @@ struct ETCDKeyListContentView: View {
                         HStack(content: {
                             Text("成员（Members）")
                                 .font(.caption)
-                                .foregroundColor(.yellow)
+                                .foregroundColor(.white)
                             Spacer()
-                            Text("成员总数:  \(storeObj.realeadData.GetMemberCount()) 位")
+                            Text("成员总数:  \(storeObj.realeadData.GetMemberCount()) ")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.white)
                         })
                         .padding(.all,4.0)
                         
-                        HStack {
-                            Button {
-                                self.showingCreatPopover.toggle()
-                            } label: {
-                                Text("创建成员")
-                                    .font(.caption)
-                                    .foregroundColor(.yellow)
+                        // Create Members / Delete Members / Update Members
+                        LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 4), alignment: .center) {
+                            ForEach(KVMemberModel.getMembers()) { item in
+                                Button {
+                                    self.currentMember = item
+                                    self.show.toggle()
+                                } label: {
+                                    Text(item.name)
+                                        .font(.caption)
+                                        .foregroundColor(.yellow)
+                                }
                             }
-                            .popover(isPresented: $showingCreatPopover) {
-                                MakeMemberPopoverContent(memberConfig: $memberConfig)
-                            }
-                            
-                            Spacer()
-                            Button {
-                                self.showingDelePopover.toggle()
-                            } label: {
-                                Text("删除成员")
-                                    .font(.caption)
-                                    .foregroundColor(.yellow)
-                            }.popover(isPresented: $showingDelePopover) {
-                                MakeMemberPopoverContent(memberConfig: $memberConfig)
-                            }
-                            Spacer()
-                            Button {
-                                self.showingUpdatePopover.toggle()
-                            } label: {
-                                Text("更新成员")
-                                    .font(.caption)
-                                    .foregroundColor(.yellow)
-                            }.popover(isPresented: $showingUpdatePopover) {
-                                MakeMemberPopoverContent(memberConfig: $memberConfig)
-                            }
-                            Spacer()
-                            Button {
-                                self.showingPromotesPopover.toggle()
-                            } label: {
-                                Text("Promotes")
-                                    .font(.caption)
-                                    .foregroundColor(.yellow)
-                            }.popover(isPresented: $showingPromotesPopover) {
-                                MakeMemberPopoverContent(memberConfig: $memberConfig)
-                            }
+                        }.popover(isPresented: $show) {
+                            MakeMemberPopoverContent(currentModel: $currentMember, text: "HHHH", isOn: false)
                         }
                         Spacer()
                     }
@@ -285,8 +254,8 @@ struct ETCDKVOperateContentView: View {
                     .frame(width: g.size.width/2)
                 Spacer()
                 MakeOperateButtonContentView()
-                .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
-                .frame(width: g.size.width/2)
+                    .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+                    .frame(width: g.size.width/2)
                 Spacer()
             }
         }
@@ -328,7 +297,6 @@ struct MakeOperateKvTextContentView: View {
 }
 
 struct MakeOperateButtonContentView :View {
-
     @State var show: Bool = false
     @State var text: String = ""
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
@@ -364,18 +332,15 @@ struct MakeOperateButtonContentView :View {
                 }
             }
             .padding(8.0)
-
+            
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
             ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
         }
-        
-       
     }
-
+    
     func didDismiss() {
         //消失回调
     }
-
 }
 
 
