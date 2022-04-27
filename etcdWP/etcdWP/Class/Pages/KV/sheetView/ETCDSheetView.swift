@@ -20,7 +20,8 @@ struct ETCDSheetView: View {
             if currentModel.type == 0 || currentModel.type == 1{
                 if currentModel.type == 1{
                     HStack(){
-                        TextField.init("Serach", text: $serachText, onEditingChanged: { _ in},onCommit: {
+                        TextField.init("Search", text: $serachText, onEditingChanged: { _ in},onCommit: {
+                            
                             
                         }).textFieldStyle(.roundedBorder)
                             .padding(10)
