@@ -11,7 +11,7 @@ import NavigationStack
 struct HomeMainView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State var isLinkActive = false
-    let timer = Timer.publish(every: 10.0, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
@@ -37,14 +37,13 @@ struct HomeMainView: View {
                     }
                     .padding(GriditemPaddingSpace)
                 }
-                .onReceive(timer, perform: {
-                    _ in
-                    DispatchQueue.main.async {
-                        homeData.WatchListenEtcdClient()
-                    }
-                }).onDisappear {
-                    self.timer.upstream.connect().cancel()
+            } .onReceive(timer, perform: {
+                _ in
+                DispatchQueue.main.async {
+                    homeData.WatchListenEtcdClient()
                 }
+            }).onDisappear {
+                self.timer.upstream.connect().cancel()
             }
         }
     }
