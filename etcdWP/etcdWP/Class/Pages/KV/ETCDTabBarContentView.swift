@@ -13,6 +13,7 @@ struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
+    @State private var currentTextValue: MemberTextValue = MemberTextValue.init()
     @State private var show: Bool = false
     func Reaload() {
         storeObj.KVReaload()
@@ -235,7 +236,7 @@ struct ETCDKeyListContentView: View {
                                 }
                             }
                         }.popover(isPresented: $show) {
-                            MakeMemberPopoverContent(currentModel: $currentMember, text: "HHHH", isOn: false)
+                            MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue)
                         }
                         Spacer()
                     }

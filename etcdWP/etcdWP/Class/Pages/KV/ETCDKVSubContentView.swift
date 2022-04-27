@@ -7,19 +7,30 @@
 
 import SwiftUI
 
+struct MemberTextValue {
+    var peerAddress: String = ""
+    var isLearner : Bool = false
+    var delete_member_id: String = ""
+    var update_member_id_old : String = ""
+    var update_member_peer_address_new : String = ""
+    var promotes_member_id : String = ""
+    var current_type : Int = 0
+    var isConfirm : Bool = false
+}
+
 struct MakeMemberPopoverContent: View {
     @Binding var currentModel  : KVMemberModel
-    @State var text : String
-    @State var isOn : Bool
+    @Binding var textVauleModel: MemberTextValue
+    
     var body: some View {
         VStack {
             switch currentModel.type {
             case 0:
                 Section(header: Text("创建集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点地址: ",value: $text, formatter: NumberFormatter())
+                    TextField("节点地址: ",value: $textVauleModel.peerAddress, formatter: NumberFormatter())
                         .foregroundColor(.white)
                         .font(.system(size: 12))
-                    Toggle("IsLearner", isOn: $isOn)
+                    Toggle("IsLearner", isOn: $textVauleModel.isLearner)
                         .foregroundColor(.white)
                         .toggleStyle(.switch)
                 }
@@ -28,7 +39,7 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             case 1:
                 Section(header: Text("删除集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点id: ",value: $text, formatter: NumberFormatter())
+                    TextField("节点id: ",value: $textVauleModel.delete_member_id, formatter: NumberFormatter())
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                 }
@@ -37,10 +48,10 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             case 2:
                 Section(header: Text("更新集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("修改前节点id: ",value: $text, formatter: NumberFormatter())
+                    TextField("修改前节点id: ",value: $textVauleModel.update_member_id_old, formatter: NumberFormatter())
                         .foregroundColor(.white)
                         .font(.system(size: 12))
-                    TextField("修改后节点地址: ",value: $text, formatter: NumberFormatter())
+                    TextField("修改后节点地址: ",value: $textVauleModel.update_member_peer_address_new, formatter: NumberFormatter())
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                 }
@@ -49,7 +60,7 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             case 3:
                 Section(header: Text("Promotes集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点id: ",value: $text, formatter: NumberFormatter())
+                    TextField("节点id: ",value: $textVauleModel.promotes_member_id, formatter: NumberFormatter())
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                 }
@@ -58,10 +69,10 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             default:
                 Section(header: Text("创建集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点地址: ",value: $text, formatter: NumberFormatter())
+                    TextField("节点地址: ",value: $textVauleModel.peerAddress, formatter: NumberFormatter())
                         .foregroundColor(.white)
                         .font(.system(size: 12))
-                    Toggle("IsLearner", isOn: $isOn)
+                    Toggle("IsLearner", isOn: $textVauleModel.isLearner)
                         .foregroundColor(.white)
                         .toggleStyle(.switch)
                 }
@@ -72,7 +83,7 @@ struct MakeMemberPopoverContent: View {
             
             HStack {
                 Button {
-                    
+                    textVauleModel.isConfirm = true
                 } label: {
                     Text("取消")
                         .font(.system(size: 11))
@@ -81,7 +92,7 @@ struct MakeMemberPopoverContent: View {
                 .padding(.trailing,20)
                 
                 Button {
-                    
+                    textVauleModel.isConfirm = false
                 } label: {
                     Text("确定")
                         .font(.system(size: 11))

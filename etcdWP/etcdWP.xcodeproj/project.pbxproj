@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8EEC0C281973AF0012ECAA /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8EEC0B281973AF0012ECAA /* MacosEtcd.framework */; };
 		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		D00ED49628006F490068CBB3 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49528006F490068CBB3 /* PopupView */; };
 		D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49828006F600068CBB3 /* AxisTabView */; };
 		D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49B28006F6E0068CBB3 /* SwiftyJSON */; };
-		D0305056281824DC00477D33 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0305027281824DC00477D33 /* MacosEtcd.framework */; };
 		D0305058281824DD00477D33 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030502C281824DC00477D33 /* Carousel.swift */; };
 		D0305059281824DD00477D33 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030502D281824DC00477D33 /* CarouselItemlView.swift */; };
 		D030505A281824DD00477D33 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030502E281824DC00477D33 /* CarouselView.swift */; };
@@ -75,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C8EEC0B281973AF0012ECAA /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D00ED46A28006EAB0068CBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		D00ED48228006EAC0068CBB3 /* etcdWPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPUITests.swift; sourceTree = "<group>"; };
 		D00ED48428006EAC0068CBB3 /* etcdWPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D00ED49D28006F900068CBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0305027281824DC00477D33 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D030502C281824DC00477D33 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		D030502D281824DC00477D33 /* CarouselItemlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemlView.swift; sourceTree = "<group>"; };
 		D030502E281824DC00477D33 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			files = (
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D079BE5028143F36006B8619 /* SnapKit in Frameworks */,
-				D0305056281824DC00477D33 /* MacosEtcd.framework in Frameworks */,
+				5C8EEC0C281973AF0012ECAA /* MacosEtcd.framework in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
@@ -231,7 +231,7 @@
 		D0305026281824DC00477D33 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				D0305027281824DC00477D33 /* MacosEtcd.framework */,
+				5C8EEC0B281973AF0012ECAA /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
@@ -825,6 +825,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/etcdWP/frameWork",
 					"$(PROJECT_DIR)/etcdWP/Class/frameWork",
+					"$(PROJECT_DIR)/etcdWP/Class/FrameWork",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = etcdWP/Info.plist;
@@ -860,6 +861,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/etcdWP/frameWork",
 					"$(PROJECT_DIR)/etcdWP/Class/frameWork",
+					"$(PROJECT_DIR)/etcdWP/Class/FrameWork",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = etcdWP/Info.plist;
