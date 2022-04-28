@@ -75,9 +75,10 @@ struct ETCDKeyListContentView: View {
                                 copyToClipBoard(textToCopy: item.key ?? "")
                             })
                             Button("删除", action: {
-                                guard ((item.key?.isEmpty) != nil) else {
+                                guard ((item.key?.isEmpty) == nil) else {
                                     let resp =  storeObj.Delete(key: item.key!)
                                     print(resp as Any)
+                                    Reaload()
                                     return
                                 }
                             })
