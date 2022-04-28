@@ -169,6 +169,11 @@ struct ETCDKeyListContentView: View {
                                         .foregroundColor(.secondary)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
+                                        .contextMenu(ContextMenu(menuItems: {
+                                            Button("粘贴成员ID", action: {
+                                                copyToClipBoard(textToCopy: item.members?.mid ?? "")
+                                            })
+                                        }))
                                     Spacer()
                                     Rectangle()
                                         .foregroundColor(item.members?.status ?? false ? .red : .green)
@@ -333,7 +338,7 @@ struct MakeOperateKvTextContentView: View {
                         .lineSpacing(4)
                         .multilineTextAlignment(TextAlignment.leading)
                         .contextMenu(ContextMenu(menuItems: {
-                            Button("Copy", action: {
+                            Button("粘贴键值", action: {
                                 copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                             })
                         }))
