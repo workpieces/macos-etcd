@@ -37,8 +37,7 @@
 - (NSData* _Nullable)grant:(long)ttl;
 - (NSData* _Nullable)grantUserRole:(NSString* _Nullable)user role:(NSString* _Nullable)role;
 - (NSData* _Nullable)keepAliveOnce:(long)leaseid;
-// skipped method KVClient.LeaseList with unsupported parameter or return types
-
+- (NSData* _Nullable)leaseList;
 - (NSData* _Nullable)memberAdd:(NSString* _Nullable)endpoint learner:(BOOL)learner;
 - (NSData* _Nullable)memberList;
 - (NSData* _Nullable)memberRemove:(long)id_;
