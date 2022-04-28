@@ -67,10 +67,22 @@ struct ETCDKeyListContentView: View {
                                     .truncationMode(.middle)
                             }
                         }
-                        .onTapGesture(perform: {
-                            self.storeObj.realeadData.currentKv = item
-                            showingAlert.toggle()
-                        })
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button("粘贴", action: {
+                                copyToClipBoard(textToCopy: item.key ?? "")
+                            })
+                            Button("删除", action: {
+                                guard ((item.key?.isEmpty) != nil) else {
+                                    let resp =  storeObj.Delete(key: item.key!)
+                                    print(resp as Any)
+                                    return
+                                }
+                            })
+                        }))
+//                        .onTapGesture(perform: {
+//                            self.storeObj.realeadData.currentKv = item
+//                            showingAlert.toggle()
+//                        })
                         .buttonStyle(PlainButtonStyle())
                     }
                 } header: {
@@ -170,8 +182,19 @@ struct ETCDKeyListContentView: View {
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
                                         .contextMenu(ContextMenu(menuItems: {
-                                            Button("粘贴成员ID", action: {
+                                            Button("粘贴成员", action: {
                                                 copyToClipBoard(textToCopy: item.members?.mid ?? "")
+                                            })
+                                            Button("删除成员", action: {
+                                                guard Int(currentTextValue.delete_member_id) != 0 else {
+                                                    return
+                                                }
+                                                
+                                                let resp  =  storeObj.MemberRemove(id: Int(currentTextValue.delete_member_id)!)
+                                                guard resp?.status == 200 else {
+                                                    return
+                                                }
+                                                print(resp?.message as Any)
                                             })
                                         }))
                                     Spacer()
@@ -229,7 +252,7 @@ struct ETCDKeyListContentView: View {
                         .padding(.all,4.0)
                         
                         // Create Members / Delete Members / Update Members
-                        LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 4), alignment: .center) {
+                        LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 3), alignment: .center) {
                             ForEach(KVMemberModel.getMembers()) { item in
                                 Button {
                                     self.currentMember = item
@@ -259,15 +282,6 @@ struct ETCDKeyListContentView: View {
                                         return
                                     }
                                 case 1:
-                                    guard Int(currentTextValue.delete_member_id) != 0 else {
-                                        return
-                                    }
-                                    
-                                    let resp  =  storeObj.MemberRemove(id: Int(currentTextValue.delete_member_id)!)
-                                    guard resp?.status == 200 else {
-                                        return
-                                    }
-                                case 2:
                                     guard Int(currentTextValue.update_member_id_old) != 0 && !currentTextValue.update_member_peer_address_new.isEmpty else {
                                         return
                                     }
@@ -276,7 +290,7 @@ struct ETCDKeyListContentView: View {
                                     guard resp?.status == 200 else {
                                         return
                                     }
-                                case 3:
+                                case 2:
                                     guard Int(currentTextValue.promotes_member_id) != 0 else {
                                         return
                                     }

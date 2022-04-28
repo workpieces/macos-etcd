@@ -33,9 +33,8 @@ struct KVMemberModel: Identifiable,Hashable {
     static func getMembers() -> [KVMemberModel] {
         let members : [KVMemberModel] = [
             KVMemberModel.init(name: "创建成员", type: 0),
-            KVMemberModel.init(name: "删除成员", type: 1),
-            KVMemberModel.init(name: "修改成员", type: 2),
-            KVMemberModel.init(name: "Promotes", type: 3),
+            KVMemberModel.init(name: "修改成员", type: 1),
+            KVMemberModel.init(name: "Promotes", type: 2),
         ]        
         return members
     }

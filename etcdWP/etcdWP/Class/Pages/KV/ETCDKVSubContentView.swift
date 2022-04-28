@@ -38,15 +38,6 @@ struct MakeMemberPopoverContent: View {
                 .padding(.top,15)
                 Spacer()
             case 1:
-                Section(header: Text("删除集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点id: ",value: $textVauleModel.delete_member_id, formatter: NumberFormatter())
-                        .foregroundColor(.white)
-                        .font(.system(size: 12))
-                }
-                .frame(width: 180, alignment: .center)
-                .padding(.top,15)
-                Spacer()
-            case 2:
                 Section(header: Text("更新集群成员").foregroundColor(.white).font(.system(size: 12))) {
                     TextField("修改前节点id: ",value: $textVauleModel.update_member_id_old, formatter: NumberFormatter())
                         .foregroundColor(.white)
@@ -58,7 +49,7 @@ struct MakeMemberPopoverContent: View {
                 .frame(width: 180, alignment: .center)
                 .padding(.top,15)
                 Spacer()
-            case 3:
+            case 2:
                 Section(header: Text("Promotes集群成员").foregroundColor(.white).font(.system(size: 12))) {
                     TextField("节点id: ",value: $textVauleModel.promotes_member_id, formatter: NumberFormatter())
                         .foregroundColor(.white)
