@@ -238,6 +238,7 @@ struct ETCDKeyListContentView: View {
                         }.popover(isPresented: $isShowingPopover,arrowEdge: .trailing) {
                             MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue) {
                                 defer {self.isShowingPopover.toggle()}
+                                
                                 guard currentTextValue.isConfirm else {
                                     return
                                 }
@@ -251,7 +252,7 @@ struct ETCDKeyListContentView: View {
                                     let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
                                     guard resp?.status == 200 else {
                                         return
-                                    }                                
+                                    }
                                 case 1:
                                     guard Int(currentTextValue.delete_member_id) != 0 else {
                                         return

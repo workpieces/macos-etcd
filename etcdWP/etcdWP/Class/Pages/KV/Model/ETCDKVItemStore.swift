@@ -309,8 +309,8 @@ extension ItemStore {
         }
         return nil
     }
-    func LeaseRevoke(ttl: Int) -> ETCDKeyValue? {
-        let result = c?.revoke(ttl)
+    func LeaseRevoke(leaseid: Int) -> ETCDKeyValue? {
+        let result = c?.revoke(leaseid)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
