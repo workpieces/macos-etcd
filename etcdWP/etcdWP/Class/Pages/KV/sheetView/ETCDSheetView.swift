@@ -37,11 +37,12 @@ struct ETCDSheetView: View {
                     .lineSpacing(1.5)
                     .disableAutocorrection(true)
                     .allowsTightening(true)
-                    .padding(10)
-                    .frame(height: 200)
-                    .onAppear{
-                        
-                    }
+                    .padding(.bottom,5)
+                    .padding(.top,10)
+                    .padding(.trailing,10)
+                    .padding(.leading,10)
+                    .frame(height: 280)
+                
             }else if(currentModel.type == 2){
                 
             }else{
@@ -56,8 +57,7 @@ struct ETCDSheetView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.yellow)
                         .padding(10)
-                }.padding(30)
-                
+                }
                 Button {
                     if text != storeObj.realeadData.currentKv?.value
                     {
