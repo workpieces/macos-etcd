@@ -169,6 +169,11 @@ struct ETCDKeyListContentView: View {
                                         .foregroundColor(.secondary)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
+                                        .contextMenu(ContextMenu(menuItems: {
+                                            Button("粘贴成员ID", action: {
+                                                copyToClipBoard(textToCopy: item.members?.mid ?? "")
+                                            })
+                                        }))
                                     Spacer()
                                     Rectangle()
                                         .foregroundColor(item.members?.status ?? false ? .red : .green)
@@ -238,6 +243,7 @@ struct ETCDKeyListContentView: View {
                         }.popover(isPresented: $isShowingPopover,arrowEdge: .trailing) {
                             MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue) {
                                 defer {self.isShowingPopover.toggle()}
+                                
                                 guard currentTextValue.isConfirm else {
                                     return
                                 }
@@ -251,7 +257,7 @@ struct ETCDKeyListContentView: View {
                                     let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
                                     guard resp?.status == 200 else {
                                         return
-                                    }                                
+                                    }
                                 case 1:
                                     guard Int(currentTextValue.delete_member_id) != 0 else {
                                         return
@@ -332,7 +338,7 @@ struct MakeOperateKvTextContentView: View {
                         .lineSpacing(4)
                         .multilineTextAlignment(TextAlignment.leading)
                         .contextMenu(ContextMenu(menuItems: {
-                            Button("Copy", action: {
+                            Button("粘贴键值", action: {
                                 copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                             })
                         }))
