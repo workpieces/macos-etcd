@@ -388,7 +388,7 @@ struct MakeOperateButtonContentView :View {
                     }.onTapGesture {
                         self.currentModel = item
                         if item.type == 3{
-                          let reuslt =  storeObj.LeaseRevoke(ttl: storeObj.realeadData.currentKv?.ttlid)
+                            let reuslt =  storeObj.LeaseRevoke(leaseid: Int(storeObj.realeadData.currentKv?.ttlid ?? 0))
                             if reuslt?.status != 200{
                                 self.isShowToast.toggle()
                             }else{
