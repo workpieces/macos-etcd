@@ -354,6 +354,8 @@ struct MakeOperateKvTextContentView: View {
 struct MakeOperateButtonContentView :View {
     @State var show: Bool = false
     @State var text: String = ""
+    @State var isShowToast: Bool = false
+    @State var isSucceFul: Bool = false
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
@@ -379,7 +381,17 @@ struct MakeOperateButtonContentView :View {
                         Spacer()
                     }.onTapGesture {
                         self.currentModel = item
-                        self.show.toggle()
+                        if item.type == 3{
+                          let reuslt =  storeObj.LeaseRevoke(ttl: storeObj.realeadData.currentKv?.ttlid)
+                            if reuslt?.status != 200{
+                                self.isShowToast.toggle()
+                            }else{
+                                self.isSucceFul .toggle()
+                                self.isShowToast.toggle()
+                            }
+                        }else{
+                            self.show.toggle()
+                        }
                     }
                     .background(Color.secondary.opacity(0.15))
                     .cornerRadius(8)
@@ -391,6 +403,9 @@ struct MakeOperateButtonContentView :View {
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
             ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
         }
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+            TopToastView(title:self.isSucceFul ? "移除租约成功":"移除租约错误")
+           }
     }
     
     func didDismiss() {

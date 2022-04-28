@@ -309,7 +309,7 @@ extension ItemStore {
         }
         return nil
     }
-    func LeaseRevoke(ttl: Int) -> ETCDKeyValue? {
+    func LeaseRevoke(ttl: Int64) -> ETCDKeyValue? {
         let result = c?.revoke(ttl)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
