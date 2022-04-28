@@ -530,7 +530,7 @@ struct ETCDTabBarContentView: View {
             storeObj.KVReaload()
         })
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 15) {
-            TopToastView()
+            TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
         }
     }
 }

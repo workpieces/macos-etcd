@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct TopToastView: View {
+    var title:String
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                Text("The network connection is abnormal, please check the relevant configuration ?")
+                Text(title)
                     .lineLimit(2)
                     .font(.system(size: 16))
                     .foregroundColor(.white)
@@ -28,7 +29,7 @@ struct TopToastView: View {
 
 struct TopToastView_Previews: PreviewProvider {
     static var previews: some View {
-        TopToastView()
+        TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
     }
 }
 

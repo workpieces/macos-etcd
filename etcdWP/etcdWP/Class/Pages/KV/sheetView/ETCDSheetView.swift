@@ -14,6 +14,11 @@ struct ETCDSheetView: View {
     @State var text : String
     @State var serachText : String = ""
     @State var replaceText : String = ""
+    @State var leaseText : String = ""
+    @State var isShowToast : Bool = false
+    @State var isError : Bool = false
+    @State var isShowText : String = ""
+    @State var isSuccessful : Bool = false
     var body: some View {
         VStack(){
             Text(currentModel.name).padding(10)
@@ -37,13 +42,33 @@ struct ETCDSheetView: View {
                     .lineSpacing(1.5)
                     .disableAutocorrection(true)
                     .allowsTightening(true)
-                    .padding(10)
-                    .frame(height: 200)
-                    .onAppear{
-                        
-                    }
-            }else if(currentModel.type == 2){
+                    .padding(.bottom,5)
+                    .padding(.top,10)
+                    .padding(.trailing,10)
+                    .padding(.leading,10)
+                    .frame(height: 280)
                 
+            }else if(currentModel.type == 2){
+                if !self.isShowText.isEmpty {
+                    HStack(){
+                        Text(self.isShowText)
+                            .font(.system(size: 10.0))
+                            .foregroundColor(.white)
+                        Button {
+                            copyToClipBoard(textToCopy: self.isShowText )
+                        } label: {
+                            Text("粘贴")
+                                .font(.system(size: 10.0))
+                                .foregroundColor(.yellow)
+                        }
+                    }
+                  
+                }
+                TextField(currentModel.name, text: $leaseText)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(10)
+                    .textContentType(.oneTimeCode)
+                Spacer()
             }else{
                 Text("fdafdasfd")
             }
@@ -56,15 +81,54 @@ struct ETCDSheetView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.yellow)
                         .padding(10)
-                }.padding(30)
-                
-                Button {
-                    if text != storeObj.realeadData.currentKv?.value
-                    {
-                        storeObj.realeadData.currentKv?.value = text
-                      let _ = storeObj.Put(key: (storeObj.realeadData.currentKv?.key)!, value: text)
+                }
+                if self.isSuccessful{
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Text("关闭")
+                            .font(.system(size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(.yellow)
+                            .padding(10)
                     }
-                    presentationMode.wrappedValue.dismiss()
+                }
+                Button {
+                    if self.currentModel.type == 0{
+                        if text != storeObj.realeadData.currentKv?.value
+                        {
+                            storeObj.realeadData.currentKv?.value = text
+                            let _ = storeObj.Put(key: (storeObj.realeadData.currentKv?.key)!, value: text)
+                        }
+                        
+                        presentationMode.wrappedValue.dismiss()
+                    }else if self.currentModel.type == 1{
+                        
+                        presentationMode.wrappedValue.dismiss()
+                    }else if self.currentModel.type == 2{
+                        
+                        let  numStrin  =  leaseText.trimmingCharacters(in: .decimalDigits)
+                        if numStrin.isEmpty {
+                            let time = Int(leaseText)
+                            let  result   =  storeObj.LeaseGrant(ttl:time!)
+                            if result?.status != 200 {
+                                self.isError.toggle()
+                                self.isShowToast.toggle()
+                            }else{
+                                let ttid  = result?.datas?.first?.ttlid
+                                self.isShowText = String(format:"%ld",ttid!)
+                                self.isSuccessful.toggle()
+                            }
+                        }else{
+                            self.isShowToast.toggle()
+                        }
+                        
+                        
+                    }else if self.currentModel.type == 3{
+                        
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    
                 } label: {
                     Text("确定")
                         .font(.system(size: 12))
@@ -75,5 +139,10 @@ struct ETCDSheetView: View {
             }.padding(.bottom ,10)
             
         }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+             TopToastView(title:self.isError ? "保存错误":"请输入时间单位")
+            }
     }
 }
+
+
