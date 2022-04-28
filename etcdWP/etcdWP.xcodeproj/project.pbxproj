@@ -31,7 +31,6 @@
 		D030509C281826F600477D33 /* ETCDKVSubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507A281826F500477D33 /* ETCDKVSubContentView.swift */; };
 		D030509D281826F600477D33 /* ETCDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507B281826F500477D33 /* ETCDTableView.swift */; };
 		D030509E281826F600477D33 /* ETCDSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507D281826F500477D33 /* ETCDSheetView.swift */; };
-		D030509F281826F600477D33 /* ETCDTextViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507E281826F500477D33 /* ETCDTextViewRepresentable.swift */; };
 		D03050A0281826F600477D33 /* ETCDKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305080281826F500477D33 /* ETCDKeyValue.swift */; };
 		D03050A1281826F600477D33 /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305081281826F500477D33 /* ETCDKVItemStore.swift */; };
 		D03050A2281826F600477D33 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305083281826F500477D33 /* AboutView.swift */; };
@@ -55,6 +54,7 @@
 		D03050B72818271000477D33 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03050B52818271000477D33 /* OpenPan.swift */; };
 		D079BE5028143F36006B8619 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079BE4F28143F36006B8619 /* SnapKit */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
+		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,6 @@
 		D030507A281826F500477D33 /* ETCDKVSubContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVSubContentView.swift; sourceTree = "<group>"; };
 		D030507B281826F500477D33 /* ETCDTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTableView.swift; sourceTree = "<group>"; };
 		D030507D281826F500477D33 /* ETCDSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDSheetView.swift; sourceTree = "<group>"; };
-		D030507E281826F500477D33 /* ETCDTextViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTextViewRepresentable.swift; sourceTree = "<group>"; };
 		D0305080281826F500477D33 /* ETCDKeyValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValue.swift; sourceTree = "<group>"; };
 		D0305081281826F500477D33 /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
 		D0305083281826F500477D33 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		D0305099281826F600477D33 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
 		D03050B42818271000477D33 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D03050B52818271000477D33 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
+		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,7 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				D030507D281826F500477D33 /* ETCDSheetView.swift */,
-				D030507E281826F500477D33 /* ETCDTextViewRepresentable.swift */,
+				D0E8A994281A26F50087B3B6 /* NSTextView+.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -614,7 +614,7 @@
 				D03050AB281826F600477D33 /* ETCDHomeMainView.swift in Sources */,
 				D03050A2281826F600477D33 /* AboutView.swift in Sources */,
 				D030509C281826F600477D33 /* ETCDKVSubContentView.swift in Sources */,
-				D030509F281826F600477D33 /* ETCDTextViewRepresentable.swift in Sources */,
+				D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */,
 				D03050B0281826F600477D33 /* ETCDOptionStore.swift in Sources */,
 				D03050B62818271000477D33 /* Constant.swift in Sources */,
 				D03050AD281826F600477D33 /* ETCDTabarStore.swift in Sources */,

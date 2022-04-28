@@ -31,8 +31,17 @@ struct ETCDSheetView: View {
                             .padding(10)
                     }
                 }
-                ETCDTextViewRepresentable(text: $text)
+                TextEditor(text: $text)
+                    .foregroundColor(Color.white)
+                    .font(.custom("HelveticaNeue", size: 12))
+                    .lineSpacing(1.5)
+                    .disableAutocorrection(true)
+                    .allowsTightening(true)
                     .padding(10)
+                    .frame(height: 200)
+                    .onAppear{
+                        
+                    }
             }else if(currentModel.type == 2){
                 
             }else{
