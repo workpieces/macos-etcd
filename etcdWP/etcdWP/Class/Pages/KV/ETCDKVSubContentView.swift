@@ -21,7 +21,7 @@ struct MemberTextValue {
 struct MakeMemberPopoverContent: View {
     @Binding var currentModel  : KVMemberModel
     @Binding var textVauleModel: MemberTextValue
-    
+    var action: (() -> Void)?
     var body: some View {
         VStack {
             switch currentModel.type {
@@ -83,7 +83,9 @@ struct MakeMemberPopoverContent: View {
             
             HStack {
                 Button {
-                    textVauleModel.isConfirm = true
+                    textVauleModel.current_type = currentModel.type
+                    textVauleModel.isConfirm = false
+                    action!()
                 } label: {
                     Text("取消")
                         .font(.system(size: 11))
@@ -92,7 +94,9 @@ struct MakeMemberPopoverContent: View {
                 .padding(.trailing,20)
                 
                 Button {
-                    textVauleModel.isConfirm = false
+                    textVauleModel.current_type = currentModel.type
+                    textVauleModel.isConfirm = true
+                    action!()
                 } label: {
                     Text("确定")
                         .font(.system(size: 11))
