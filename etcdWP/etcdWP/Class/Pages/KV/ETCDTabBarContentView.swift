@@ -14,7 +14,7 @@ struct ETCDKeyListContentView: View {
     @State private var showingAlert: Bool = false
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
     @State private var currentTextValue: MemberTextValue = MemberTextValue.init()
-    @State private var show: Bool = false
+    @State private var isShowingPopover = false
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -228,15 +228,69 @@ struct ETCDKeyListContentView: View {
                             ForEach(KVMemberModel.getMembers()) { item in
                                 Button {
                                     self.currentMember = item
-                                    self.show.toggle()
+                                    self.isShowingPopover.toggle()
                                 } label: {
                                     Text(item.name)
                                         .font(.caption)
                                         .foregroundColor(.yellow)
                                 }
                             }
-                        }.popover(isPresented: $show) {
-                            MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue)
+                        }.popover(isPresented: $isShowingPopover,arrowEdge: .trailing) {
+                            MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue) {
+                                defer {self.isShowingPopover.toggle()}
+                                guard currentTextValue.isConfirm else {
+                                    return
+                                }
+                                
+                                switch currentTextValue.current_type {
+                                case 0:
+                                    guard !currentTextValue.peerAddress.isEmpty else {
+                                        return
+                                    }
+                                    
+                                    let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
+                                    guard resp?.status == 200 else {
+                                        return
+                                    }                                
+                                case 1:
+                                    guard Int(currentTextValue.delete_member_id) != 0 else {
+                                        return
+                                    }
+                                    
+                                    let resp  =  storeObj.MemberRemove(id: Int(currentTextValue.delete_member_id)!)
+                                    guard resp?.status == 200 else {
+                                        return
+                                    }
+                                case 2:
+                                    guard Int(currentTextValue.update_member_id_old) != 0 && !currentTextValue.update_member_peer_address_new.isEmpty else {
+                                        return
+                                    }
+                                    
+                                    let resp =  storeObj.MemberUpdate(id: Int(currentTextValue.update_member_id_old)!, peerUrl: currentTextValue.update_member_peer_address_new)
+                                    guard resp?.status == 200 else {
+                                        return
+                                    }
+                                case 3:
+                                    guard Int(currentTextValue.promotes_member_id) != 0 else {
+                                        return
+                                    }
+                                    
+                                    let resp = storeObj.MemberPromotes(id: Int(currentTextValue.promotes_member_id)!)
+                                    guard resp?.status == 200 else {
+                                        return
+                                    }
+                                default:
+                                    guard !currentTextValue.peerAddress.isEmpty else {
+                                        self.isShowingPopover.toggle()
+                                        return
+                                    }
+                                    
+                                    let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
+                                    guard resp?.status == 200 else {
+                                        return
+                                    }
+                                }
+                            }
                         }
                         Spacer()
                     }
