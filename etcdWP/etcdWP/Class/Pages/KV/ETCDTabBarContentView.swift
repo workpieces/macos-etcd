@@ -66,7 +66,10 @@ struct ETCDKeyListContentView: View {
                                     .lineSpacing(8.0)
                                     .truncationMode(.middle)
                             }
-                        }
+                        } .onTapGesture(perform: {
+                            self.storeObj.realeadData.currentKv = item
+                            showingAlert.toggle()
+                        })
                         .contextMenu(ContextMenu(menuItems: {
                             Button("粘贴", action: {
                                 copyToClipBoard(textToCopy: item.key ?? "")
@@ -79,10 +82,7 @@ struct ETCDKeyListContentView: View {
                                 }
                             })
                         }))
-//                        .onTapGesture(perform: {
-//                            self.storeObj.realeadData.currentKv = item
-//                            showingAlert.toggle()
-//                        })
+
                         .buttonStyle(PlainButtonStyle())
                     }
                 } header: {
