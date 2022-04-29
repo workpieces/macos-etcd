@@ -15,6 +15,7 @@ struct ETCDKeyListContentView: View {
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
     @State private var currentTextValue: MemberTextValue = MemberTextValue.init()
     @State private var isShowingPopover = false
+    @State private var isShowingUpdatePopover = false
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -52,7 +53,7 @@ struct ETCDKeyListContentView: View {
                             HStack {
                                 Image(systemName: DefaultKeyImageName)
                                     .foregroundColor(.orange)
-                                    .font(.system(size: 13.0))
+                                    .font(.system(size: 14.0))
                                 Text(item.key!)
                                     .foregroundColor(.white)
                                     .font(.system(size: 12))
@@ -64,15 +65,19 @@ struct ETCDKeyListContentView: View {
                                     .font(.system(size: 10))
                                     .truncationMode(.middle)
                             }
-                        } .onTapGesture(perform: {
+                        }
+                        .onTapGesture(perform: {
                             self.storeObj.realeadData.currentKv = item
                             showingAlert.toggle()
                         })
                         .contextMenu(ContextMenu(menuItems: {
-                            Button("粘贴", action: {
+                            Button("复制key值", action: {
                                 copyToClipBoard(textToCopy: item.key ?? "")
                             })
-                            Button("删除", action: {
+                            Button("复制value值", action: {
+                                copyToClipBoard(textToCopy: item.value ?? "")
+                            })
+                            Button("删除键值", action: {
                                 guard ((item.key?.isEmpty) == nil) else {
                                     let resp =  storeObj.Delete(key: item.key!)
                                     print(resp as Any)
@@ -80,8 +85,10 @@ struct ETCDKeyListContentView: View {
                                     return
                                 }
                             })
+                            Button("更新键值", action: {
+                                isShowingUpdatePopover.toggle()
+                            })
                         }))
-
                         .buttonStyle(PlainButtonStyle())
                     }
                 } header: {
@@ -130,6 +137,11 @@ struct ETCDKeyListContentView: View {
                         }
                         Spacer()
                     })
+                }
+            }
+            .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
+                MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue) {
+                    
                 }
             }
             .listRowInsets(nil)
@@ -181,15 +193,24 @@ struct ETCDKeyListContentView: View {
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
                                         .contextMenu(ContextMenu(menuItems: {
-                                            Button("粘贴成员", action: {
+                                            Button("复制成员", action: {
                                                 copyToClipBoard(textToCopy: item.members?.mid ?? "")
                                             })
                                             Button("删除成员", action: {
-                                                guard Int(currentTextValue.delete_member_id) != 0 else {
+                                                guard item.members?.mid?.toInt() != 0 else {
                                                     return
                                                 }
-                                                
-                                                let resp  =  storeObj.MemberRemove(id: Int(currentTextValue.delete_member_id)!)
+                                                let resp  =  storeObj.MemberRemove(id: (item.members?.mid?.toInt()!)!)
+                                                guard resp?.status == 200 else {
+                                                    return
+                                                }
+                                                print(resp?.message as Any)
+                                            })
+                                            Button("提升成员", action: {
+                                                guard item.members?.mid?.toInt() != 0 else {
+                                                    return
+                                                }
+                                                let resp = storeObj.MemberPromotes(id: (item.members?.mid?.toInt()!)!)
                                                 guard resp?.status == 200 else {
                                                     return
                                                 }
@@ -361,7 +382,7 @@ struct MakeOperateKvTextContentView: View {
                     } label: {
                         Text("粘贴")
                             .font(.system(size: 10.0))
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.white)
                     }
                 }
                 Spacer()
@@ -385,12 +406,12 @@ struct MakeOperateButtonContentView :View {
                             Spacer()
                             Text(item.name)
                                 .font(.body)
-                                .foregroundColor(.yellow)
+                                .foregroundColor(.white)
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             Text(item.english)
                                 .font(.body)
-                                .foregroundColor(.yellow)
+                                .foregroundColor(.white)
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             Spacer()
