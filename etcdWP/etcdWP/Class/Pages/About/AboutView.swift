@@ -27,7 +27,7 @@ struct AboutView: View {
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(abouts) { item in
                             ZStack {
-                                Color(hex:"#00FFFF").opacity(0.3)
+                                Color(hex:"#f1f1f1").opacity(0.1)
                                     .cornerRadius(DefaultRadius)
                                 VStack {
                                     Text(item.title)
@@ -53,14 +53,14 @@ struct AboutView: View {
                                         Text("Download")
                                             .withDefaultContentTitle(fontColor: .white)
                                             .padding(.all,DefaultSpacePadding)
-                                            .background(Color.orange)
+                                            .background(Color.orange.opacity(0.3))
                                             .cornerRadius(10.0)
                                             .offset(y: DefaultSpacePadding)
                                     case .Documentation:
                                         Text("Documentation")
                                             .withDefaultContentTitle(fontColor: .white)
                                             .padding(.all,DefaultSpacePadding)
-                                            .background(Color.orange)
+                                            .background(Color.orange.opacity(0.3))
                                             .cornerRadius(10.0)
                                             .offset(y: DefaultSpacePadding)
                                     case .Empty:
