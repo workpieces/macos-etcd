@@ -68,6 +68,9 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
         text.font = NSFont.systemFont(ofSize: 12)
         text.lineBreakMode = NSLineBreakMode.byTruncatingMiddle
         text.sizeToFit()
+        text.drawsBackground = false
+        text.isBordered = false
+        text.textColor = NSColor.white
         let item = self.items![row]
         if tableColumn?.identifier == NSUserInterfaceItemIdentifier("idColumn") {
             let sid  = item.status?.sid ?? "000000"
@@ -84,7 +87,9 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
              let ok  = item.status?.is_leader ?? false
             if ok  {
                 text.stringValue = "true"
+                text.textColor = NSColor.green.withAlphaComponent(0.9)
             }else{
+                text.textColor = NSColor.red.withAlphaComponent(0.9)
                 text.stringValue = "false"
             }
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("isLearnerColumn") {       
@@ -94,6 +99,7 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
            }else{
                text.stringValue = "false"
            }
+            
         }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("raftTermColumn") {
             let value  = item.status?.raft_term;
             text.stringValue = value ?? "0"
@@ -109,9 +115,6 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
         }
 
         let cell = NSTableCellView()
-        cell.addSubview(text)
-        text.drawsBackground = false
-        text.isBordered = false
         cell.addSubview(text)
         text.snp.makeConstraints { make in
             make.edges.equalTo(cell)
