@@ -53,34 +53,34 @@ struct CardItemView: View {
                 
                 VStack(spacing: 8.0){
                     Text("服务名称")
-                        .withDefaultContentTitle(fontColor: Color.yellow)
+                        .withDefaultContentTitle(fontColor: .white)
                     
                     Text(options.clientName)
-                        .withDefaultSubContentTitle()
+                        .withDefaultSubContentTitle(fontColor: .white)
                 }
                 .padding(DefaultSpacePadding)
             }
             
             VStack(alignment: .center,spacing: 8.0) {
                 Text("节点地址")
-                    .withDefaultContentTitle(fontColor: Color.yellow)
+                    .withDefaultContentTitle(fontColor: .white)
                 
                 Text(options.endpoints.first!)
-                    .withDefaultSubContentTitle()
+                    .withDefaultSubContentTitle(fontColor: .white)
                 
                 Spacer()
                 
                 Text("连接状态")
-                    .withDefaultContentTitle(fontColor: Color.yellow)
+                    .withDefaultContentTitle(fontColor: .white)
                 
                 Text(options.status == true ? "Scuess" : "Failed")
-                    .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#00FF7F") : Color.red)
+                    .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#7CFC00") : .red)
                 
                 Spacer()
             }
         }
         .frame(minHeight: 210, maxHeight: 260)
-        .background(Color(hex: "#5B9BD4").opacity(0.25))
+        .background(Color(hex: "#00FFFF").opacity(0.15))
         .cornerRadius(DefaultRadius)
     }
 }

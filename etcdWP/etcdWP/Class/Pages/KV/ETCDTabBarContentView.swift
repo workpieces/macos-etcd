@@ -52,18 +52,16 @@ struct ETCDKeyListContentView: View {
                             HStack {
                                 Image(systemName: DefaultKeyImageName)
                                     .foregroundColor(.orange)
-                                    .font(.system(size: 12.0))
+                                    .font(.system(size: 13.0))
                                 Text(item.key!)
                                     .foregroundColor(.white)
                                     .font(.system(size: 12))
-                                    .lineSpacing(8.0)
                                     .lineLimit(1)
                                     .truncationMode(.middle)
                                 Spacer()
                                 Text(item.size!)
                                     .foregroundColor(.white)
-                                    .font(.system(size: 12))
-                                    .lineSpacing(8.0)
+                                    .font(.system(size: 10))
                                     .truncationMode(.middle)
                             }
                         } .onTapGesture(perform: {
@@ -110,7 +108,7 @@ struct ETCDKeyListContentView: View {
                             Button {Reaload()} label: {
                                 Text("刷新加载")
                                     .font(.caption)
-                                    .foregroundColor(.yellow)
+                                    .foregroundColor(.white)
                             }
                             Button {
                                 if !self.DeleteALL() {
@@ -119,7 +117,7 @@ struct ETCDKeyListContentView: View {
                             } label: {
                                 Text("清空键值")
                                     .font(.caption)
-                                    .foregroundColor(.yellow)
+                                    .foregroundColor(.white)
                             }
                             
                             Spacer()
@@ -127,7 +125,7 @@ struct ETCDKeyListContentView: View {
                             Button {} label: {
                                 Text("查询")
                                     .font(.caption)
-                                    .foregroundColor(.yellow)
+                                    .foregroundColor(.white)
                             }
                         }
                         Spacer()
@@ -147,7 +145,7 @@ struct ETCDKeyListContentView: View {
                 } label: {
                     Text("上一页")
                         .font(.caption)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                 }
                 Spacer()
                 Button {
@@ -155,7 +153,7 @@ struct ETCDKeyListContentView: View {
                 } label: {
                     Text("下一页")
                         .font(.caption)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                 }
                 Spacer()
                 Text("总数:  \(storeObj.realeadData.GetKvCount())  ")
@@ -172,14 +170,14 @@ struct ETCDKeyListContentView: View {
                                 HStack{
                                     Text("名称： \(item.members?.name ?? "")")
                                         .font(.system(size: 12))
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(.white)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
                                     Spacer()
                                     let mid  = String(item.members?.mid ?? "000000").suffix(6)
                                     Text("ID： \(String(mid))")
                                         .font(.system(size: 12))
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(.white)
                                         .lineSpacing(8.0)
                                         .truncationMode(.middle)
                                         .contextMenu(ContextMenu(menuItems: {
@@ -212,7 +210,7 @@ struct ETCDKeyListContentView: View {
                                     HStack {
                                         Text("节点： \(item.members?.peer_addr ?? "")")
                                             .font(.system(size: 12))
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(.white)
                                             .lineSpacing(8.0)
                                             .truncationMode(.middle)
                                         Spacer()
@@ -224,7 +222,7 @@ struct ETCDKeyListContentView: View {
                                     HStack {
                                         Text("客户端： \(item.members?.client_addr ?? "")")
                                             .font(.system(size: 12))
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(.white)
                                             .lineSpacing(8.0)
                                             .truncationMode(.middle)
                                         Spacer()
@@ -244,11 +242,11 @@ struct ETCDKeyListContentView: View {
                         HStack(content: {
                             Text("成员（Members）")
                                 .font(.caption)
-                                .foregroundColor(.white)
+                                .foregroundColor(.secondary)
                             Spacer()
                             Text("成员总数:  \(storeObj.realeadData.GetMemberCount()) ")
                                 .font(.caption)
-                                .foregroundColor(.white)
+                                .foregroundColor(.secondary)
                         })
                         .padding(.all,4.0)
                         
@@ -261,7 +259,7 @@ struct ETCDKeyListContentView: View {
                                 } label: {
                                     Text(item.name)
                                         .font(.caption)
-                                        .foregroundColor(.yellow)
+                                        .foregroundColor(.white)
                                 }
                             }
                         }.popover(isPresented: $isShowingPopover,arrowEdge: .trailing) {
@@ -437,13 +435,16 @@ struct ETCDKVLogsContentView: View {
                     .opacity(0.75)
                 Text(item.formatOperate())
                     .font(.subheadline)
-                    .foregroundColor(.orange)
+                    .foregroundColor(Color(hex:"#00FFFF"))
                     .opacity(0.75)
                 Text(item.formatMessage())
                     .font(.subheadline)
                     .foregroundColor(item.status == 200 ? .secondary : .red)
+                    .lineLimit(1)
                     .opacity(item.status == 200 ? 0.75 : 1.0)
+                Spacer()
             }
+            .frame(height: 2.0)
         }
     }
 }
@@ -462,8 +463,10 @@ struct ETCDKVGridContentView: View {
                 } header: {
                     HStack {
                         Text("集群状态")
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 15))
+                            .foregroundColor(.white)
                             .padding(.leading,20)
+                            .padding(.top,10)
                         Spacer()
                     }
                 }
@@ -477,7 +480,8 @@ struct ETCDKVGridContentView: View {
                 } header: {
                     HStack {
                         Text("键值操作")
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 15))
+                            .foregroundColor(.white)
                             .padding(.leading,20)
                         Spacer()
                     }
@@ -492,7 +496,8 @@ struct ETCDKVGridContentView: View {
                 } header: {
                     HStack {
                         Text("操作日志")
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 15))
+                            .foregroundColor(.white)
                             .padding(.leading,20)
                         Spacer()
                     }

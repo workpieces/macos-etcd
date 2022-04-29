@@ -37,7 +37,6 @@ struct DefaultSubContentModifier: ViewModifier{
         content
             .foregroundColor(fontColor)
             .font(.system(size: fontSize))
-            .lineSpacing(8.0)
             .truncationMode(.middle)
     }
 }
