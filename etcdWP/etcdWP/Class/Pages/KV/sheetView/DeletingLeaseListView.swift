@@ -9,6 +9,20 @@ import SwiftUI
 
 struct DeletingLeaseListView: View {
     var items :[KVData]
+    @EnvironmentObject var storeObj : ItemStore
+    @State var isShowToast: Bool = false
+    @State var isSucceFul: Bool = false
+    
+    fileprivate func deleFunc(item:KVData) {
+        let reuslt = storeObj.LeaseRevoke(leaseid: Int(item.ttlid!))
+        if reuslt?.status != 200{
+            self.isShowToast.toggle()
+        }else{
+            self.isSucceFul .toggle()
+            self.isShowToast.toggle()
+        }
+    }
+    
     var body: some View {
         List(items){ item in
             HStack(){
@@ -21,7 +35,7 @@ struct DeletingLeaseListView: View {
                             copyToClipBoard(textToCopy:String(format:"%ld", item.ttlid!))
                         })
                         Button("删除", action: {
-                            
+                            deleFunc(item: item)
                         })
                     }))
                 Spacer()
@@ -33,13 +47,16 @@ struct DeletingLeaseListView: View {
                         .foregroundColor(.yellow)
                 }
                 Button {
-                    
+                    deleFunc(item: item)
                 } label: {
                     Text("删除")
                         .font(.system(size: 10.0))
                         .foregroundColor(.yellow)
                 }
             }
-        }
+        }.popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+            TopToastView(title:self.isSucceFul ? "移除租约成功":"移除租约错误")
+           }
+
     }
 }

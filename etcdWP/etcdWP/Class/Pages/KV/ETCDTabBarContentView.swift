@@ -8,7 +8,7 @@
 import SwiftUI
 import NavigationStack
 import PopupView
-
+import Combine
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
@@ -414,16 +414,15 @@ struct MakeOperateButtonContentView :View {
     
     func didDismiss() {
         //消失回调
-     storeObj.KVReaload()
     }
 }
 
 
 
 struct ETCDKVLogsContentView: View {
-    @EnvironmentObject var storeObj : ItemStore
+    @StateObject private var logs = ETCDLogsObservable()
     var body: some View {
-        List(storeObj.GetLogs(),id:\.self){ item in
+        List(logs.items,id:\.self){ item in
             HStack{
                 Text(item.formatTime())
                     .font(.subheadline)
