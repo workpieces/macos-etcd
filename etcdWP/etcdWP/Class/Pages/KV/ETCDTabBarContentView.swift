@@ -416,7 +416,6 @@ struct MakeOperateButtonContentView :View {
     
     func didDismiss() {
         //消失回调
-     storeObj.KVReaload()
     }
 }
 
