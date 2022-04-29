@@ -34,7 +34,7 @@ struct DeletingLeaseListView: View {
                         Button("粘贴", action: {
                             copyToClipBoard(textToCopy:String(format:"%ld", item.ttlid!))
                         })
-                        Button("删除", action: {
+                        Button("移除", action: {
                             deleFunc(item: item)
                         })
                     }))
@@ -49,7 +49,7 @@ struct DeletingLeaseListView: View {
                 Button {
                     deleFunc(item: item)
                 } label: {
-                    Text("删除")
+                    Text("移除")
                         .font(.system(size: 10.0))
                         .foregroundColor(.yellow)
                 }
