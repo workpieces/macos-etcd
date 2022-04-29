@@ -41,7 +41,7 @@ class ETCDTableView: NSView
         for columTitle in columns {
             let identifier = columTitle + "Column"
             let columTitleCol = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue:identifier))
-            columTitleCol.width = 100
+            columTitleCol.minWidth = 100
             columTitleCol.title = columTitle
             columTitleCol.maxWidth = .infinity
             tableView.addTableColumn(columTitleCol)
