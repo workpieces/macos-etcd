@@ -372,7 +372,7 @@ struct MakeOperateKvTextContentView: View {
                         .lineSpacing(4)
                         .multilineTextAlignment(TextAlignment.leading)
                         .contextMenu(ContextMenu(menuItems: {
-                            Button("粘贴键值", action: {
+                            Button("粘贴", action: {
                                 copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                             })
                         }))
