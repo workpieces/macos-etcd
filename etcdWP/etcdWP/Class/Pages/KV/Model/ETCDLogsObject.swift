@@ -80,6 +80,30 @@ class ETCDLogsObject : NSObject
     static  func sendLog(status:Int, message:String , operate:String){
         let lg =  KVOperateLog.init(status: status, message: message, operate: operate)
         shared.logSubjec.send(lg)
-        shared.logSubjec.send(completion: .finished)
+//        shared.logSubjec.send(completion: .finished)
+    }
+}
+
+
+
+class ETCDLogsObservable: ObservableObject {
+    
+    @Published var items: [KVOperateLog] = []
+    let log = ETCDLogsObject.shared
+    var cancellables = Set<AnyCancellable>()
+    init() {
+       getLoadLogs()
+    }
+    func getLoadLogs (){
+       let _ =  log.logSubjec.sink { completion in
+           switch completion {
+           case .finished:
+               break
+           case .failure(let error):
+               print("\(error)")
+           }
+        } receiveValue: { [weak self] value in
+            self?.items.append(value)
+        }.store(in: &cancellables)
     }
 }

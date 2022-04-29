@@ -423,9 +423,9 @@ struct MakeOperateButtonContentView :View {
 
 
 struct ETCDKVLogsContentView: View {
-    @EnvironmentObject var storeObj : ItemStore
+    @StateObject private var logs = ETCDLogsObservable()
     var body: some View {
-        List(storeObj.itemLogs,id:\.self){ item in
+        List(logs.items,id:\.self){ item in
             HStack{
                 Text(item.formatTime())
                     .font(.subheadline)

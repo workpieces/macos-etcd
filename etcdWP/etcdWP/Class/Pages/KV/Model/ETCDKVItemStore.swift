@@ -46,29 +46,11 @@ class ItemStore: ObservableObject {
     @Published var status: Bool
     @Published var relead: Bool = false
     @Published var realeadData: KVRealoadData
-    @Published var itemLogs:[KVOperateLog] = []
-    let log = ETCDLogsObject.shared
-    var cancellables = Set<AnyCancellable>()
     init(c: EtcdKVClient?,address: String,status: Bool) {
         self.c  = c
         self.address = address
         self.status = status
         self.realeadData = KVRealoadData.init(ks: [], mms: [])
-        getLoadLogs()
-    }
-
-    
-    func getLoadLogs (){
-       let _ =  log.logSubjec.sink { completion in
-           switch completion {
-           case .finished:
-               break
-           case .failure(let error):
-               print("\(error)")
-           }
-        } receiveValue: { [weak self] value in
-            self?.itemLogs.append(value)
-        }.store(in: &cancellables)
     }
 }
 
@@ -175,8 +157,8 @@ extension ItemStore {
 extension ItemStore {
     func InsertLogs(status: Int ,message: String,operate: String) {
         let lg = KVOperateLog.init(status: status, message: message , operate: operate)
-        log.logSubjec.send(lg)
-        log.logSubjec.send(completion: .finished)
+        ETCDLogsObject.shared.logSubjec.send(lg)
+//        log.logSubjec.send(completion: .finished)
     }
 }
 
@@ -242,8 +224,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -257,8 +239,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -272,8 +254,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -290,8 +272,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -304,8 +286,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -322,8 +304,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
           let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "creat")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -336,8 +318,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -350,8 +332,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return nil
             }
@@ -368,8 +350,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
            let  lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ENDPOINT")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return []
             }
@@ -386,8 +368,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             if resp?.status != 200 {
                 return []
             }
@@ -400,8 +382,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
           let  lg =  KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "add")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             return resp
         }
         return nil
@@ -412,8 +394,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             return resp
         }
         return nil
@@ -423,8 +405,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             return resp
         }
         return nil
@@ -434,8 +416,8 @@ extension ItemStore {
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let  lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER")
-            log.logSubjec.send(lg)
-            log.logSubjec.send(completion: .finished)
+            ETCDLogsObject.shared.logSubjec.send(lg)
+//            log.logSubjec.send(completion: .finished)
             return resp
         }
         return nil
