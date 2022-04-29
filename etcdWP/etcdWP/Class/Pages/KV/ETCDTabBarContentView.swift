@@ -379,6 +379,7 @@ struct MakeOperateButtonContentView :View {
     @State var isSucceFul: Bool = false
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
     @EnvironmentObject var storeObj : ItemStore
+    
     var body: some View {
         ZStack(alignment: .topLeading){
             List {
@@ -431,6 +432,7 @@ struct MakeOperateButtonContentView :View {
     
     func didDismiss() {
         //消失回调
+     storeObj.KVReaload()
     }
 }
 

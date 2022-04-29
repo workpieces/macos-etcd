@@ -157,7 +157,6 @@ extension ItemStore {
 // Operate Logs
 extension ItemStore {
     func InsertLogs(status: Int ,message: String,operate: String) {
-        self.logs.removeAll()
         let lg = KVOperateLog.init(status: status, message: message , operate: operate)
         self.logs.append(lg)
     }
@@ -172,6 +171,7 @@ extension ItemStore {
 // GET
 extension ItemStore {
     func GetALL() -> [KVData] {
+        self.logs.removeAll()
         let result = c?.getALL()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
@@ -300,7 +300,7 @@ extension ItemStore {
         let result = c?.grant(ttl)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "creat"))
             if resp?.status != 200 {
                 return nil
             }

@@ -19,6 +19,7 @@ struct ETCDSheetView: View {
     @State var isError : Bool = false
     @State var isShowText : String = ""
     @State var isSuccessful : Bool = false
+    @State var times :Int = 0
     var body: some View {
         VStack(){
             Text(currentModel.name).padding(10)
@@ -92,7 +93,7 @@ struct ETCDSheetView: View {
                             .foregroundColor(.yellow)
                             .padding(10)
                     }
-                }
+                }else{
                 Button {
                     if self.currentModel.type == 0{
                         if text != storeObj.realeadData.currentKv?.value
@@ -110,15 +111,18 @@ struct ETCDSheetView: View {
                         let  numStrin  =  leaseText.trimmingCharacters(in: .decimalDigits)
                         if numStrin.isEmpty {
                             let time = Int(leaseText)
-                            let  result   =  storeObj.LeaseGrant(ttl:time!)
-                            if result?.status != 200 {
-                                self.isError.toggle()
-                                self.isShowToast.toggle()
-                            }else{
-                                let ttid  = result?.datas?.first?.ttlid
-                                self.isShowText = String(format:"%ld",ttid!)
-                                self.isSuccessful.toggle()
+                            if time != times{
+                                let  result   =  storeObj.LeaseGrant(ttl:time!)
+                                if result?.status != 200 {
+                                    self.isError.toggle()
+                                    self.isShowToast.toggle()
+                                }else{
+                                    let ttid  = result?.datas?.first?.ttlid
+                                    self.isShowText = String(format:"%ld",ttid!)
+                                    self.isSuccessful.toggle()
+                                }
                             }
+
                         }else{
                             self.isShowToast.toggle()
                         }
@@ -135,6 +139,8 @@ struct ETCDSheetView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.yellow)
                         .padding(10)
+                }
+                    
                 }
             }.padding(.bottom ,10)
             
