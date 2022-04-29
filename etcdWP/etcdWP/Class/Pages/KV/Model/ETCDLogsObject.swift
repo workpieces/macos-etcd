@@ -80,7 +80,6 @@ class ETCDLogsObject : NSObject
     static  func sendLog(status:Int, message:String , operate:String){
         let lg =  KVOperateLog.init(status: status, message: message, operate: operate)
         shared.logSubjec.send(lg)
-//        shared.logSubjec.send(completion: .finished)
     }
 }
 
