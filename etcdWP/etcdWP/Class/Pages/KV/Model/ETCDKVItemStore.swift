@@ -91,7 +91,10 @@ struct KVRealoadData {
             return self.page
         }
     }
-
+    
+    func GetKey() -> String {
+        return (self.currentKv?.key)!
+    }
 }
 
 // Reload
@@ -204,18 +207,18 @@ extension ItemStore {
 
 // PUT
 extension ItemStore {
-    func Put(key: String,value: String) -> [KVData] {
-        //put 闪退
+    func Put(key: String,value: String) ->ETCDKeyValue? {
         let result = c?.put(key, value: value)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT")
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "PUT")
+            ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
-                return []
+                return nil
             }
-            return resp?.datas ?? []
+            return resp ?? nil
         }
-        return []
+        return nil
     }
     
     func PutWithTTL(key: String,value: String,ttl: Int) ->ETCDKeyValue? {

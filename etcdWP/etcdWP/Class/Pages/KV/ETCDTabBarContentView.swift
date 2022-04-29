@@ -16,6 +16,7 @@ struct ETCDKeyListContentView: View {
     @State private var currentTextValue: MemberTextValue = MemberTextValue.init()
     @State private var isShowingPopover = false
     @State private var isShowingUpdatePopover = false
+    @State private var textValue: String = ""
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -71,6 +72,9 @@ struct ETCDKeyListContentView: View {
                             showingAlert.toggle()
                         })
                         .contextMenu(ContextMenu(menuItems: {
+                            Button("查看键值详情", action: {
+                              
+                            })
                             Button("复制key值", action: {
                                 copyToClipBoard(textToCopy: item.key ?? "")
                             })
@@ -86,7 +90,9 @@ struct ETCDKeyListContentView: View {
                                 }
                             })
                             Button("更新键值", action: {
-                                isShowingUpdatePopover.toggle()
+                                self.storeObj.realeadData.currentKv = item
+                                self.textValue = item.value ?? ""
+                                self.isShowingUpdatePopover.toggle()
                             })
                         }))
                         .buttonStyle(PlainButtonStyle())
@@ -140,9 +146,48 @@ struct ETCDKeyListContentView: View {
                 }
             }
             .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
-                MakeMemberPopoverContent(currentModel: $currentMember,textVauleModel: $currentTextValue) {
+                VStack {
+                    Section(header: Text("更新键值").foregroundColor(.white).font(.system(size: 12))) {
+                        TextEditor(text: $textValue)
+                            .font(.system(size: 12))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 180, alignment: .center)
+                    .padding(.top,15)
                     
+                    Spacer()
+                    
+                    HStack {
+                        Button {
+                            isShowingUpdatePopover.toggle()
+                        } label: {
+                            Text("取消")
+                                .font(.system(size: 12))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing,20)
+                        
+                        Button {
+                            defer {isShowingUpdatePopover.toggle()}
+                            guard !textValue.isEmpty else {
+                                return
+                            }
+                            
+                            let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                            guard resp?.status == 200 else {
+                                return
+                            }
+                            Reaload()
+                        } label: {
+                            Text("确定")
+                                .font(.system(size: 12))
+                                .foregroundColor(.white)
+                        }
+                    }
+                    .padding(.bottom,20)
+                    Spacer()
                 }
+                .frame(width: 280, height: 320)
             }
             .listRowInsets(nil)
             .listStyle(.inset)
