@@ -79,8 +79,8 @@ struct MakeMemberPopoverContent: View {
                     action!()
                 } label: {
                     Text("取消")
-                        .font(.system(size: 11))
-                        .foregroundColor(.yellow)
+                        .font(.system(size: 12))
+                        .foregroundColor(.white)
                 }
                 .padding(.trailing,20)
                 
@@ -90,8 +90,8 @@ struct MakeMemberPopoverContent: View {
                     action!()
                 } label: {
                     Text("确定")
-                        .font(.system(size: 11))
-                        .foregroundColor(.yellow)
+                        .font(.system(size: 12))
+                        .foregroundColor(.white)
                 }
             }
             Spacer()
