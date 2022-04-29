@@ -324,7 +324,7 @@ extension ItemStore {
         let result = c?.leaseList()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE"))
+            self.logs.append(KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET"))
             if resp?.status != 200 {
                 return nil
             }

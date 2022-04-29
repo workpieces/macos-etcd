@@ -55,6 +55,7 @@
 		D079BE5028143F36006B8619 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079BE4F28143F36006B8619 /* SnapKit */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
 		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
+		D0EC35A9281BD4BB00F77078 /* DeletingLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		D03050B42818271000477D33 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D03050B52818271000477D33 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
+		D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingLeaseListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 			children = (
 				D030507D281826F500477D33 /* ETCDSheetView.swift */,
 				D0E8A994281A26F50087B3B6 /* NSTextView+.swift */,
+				D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			files = (
 				D0305059281824DD00477D33 /* CarouselItemlView.swift in Sources */,
 				D030509B281826F600477D33 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
+				D0EC35A9281BD4BB00F77078 /* DeletingLeaseListView.swift in Sources */,
 				D030509D281826F600477D33 /* ETCDTableView.swift in Sources */,
 				D03050A0281826F600477D33 /* ETCDKeyValue.swift in Sources */,
 				D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */,
