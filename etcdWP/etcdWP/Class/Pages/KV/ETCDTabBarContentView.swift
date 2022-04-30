@@ -673,19 +673,16 @@ struct ETCDTabBarContentView: View {
                         let urls  = showOpenPanel()
                         guard ((urls?.path.isEmpty) == nil) else {
                             var dict = [String:String]()
-                            for item in storeObj.realeadData.kvs {
+                            for item in storeObj.realeadData.temp {
                                 if  !item.key!.isEmpty && !item.value!.isEmpty {
-                                    print(item.key as Any)
-                                    print(item.value as Any)
                                     let key = item.key ?? ""
                                     let value = item.value ?? ""
-                                    dict[key] = dict[value]
+                                    dict[key] = value
                                 }
                             }
                             
                             do {
                                 let encoder = JSONEncoder()
-                                encoder.outputFormatting = .prettyPrinted
                                 let data = try encoder.encode(dict)
                                 let  current_url  =  urls!.appendingPathComponent("etcdwp.json")
                                 try data.write(to: current_url)
