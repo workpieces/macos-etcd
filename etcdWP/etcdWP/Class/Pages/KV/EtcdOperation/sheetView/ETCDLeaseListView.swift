@@ -62,7 +62,7 @@ struct ETCDLeaseListView: View {
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
          .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-            TopToastView(title:self.isSucceFul ? "移除租约成功":"移除租约错误")
+            TopToastView(title:"操作租约错误")
            }
 
     }
@@ -123,21 +123,21 @@ extension ETCDLeaseListView {
                 } label: {
                     Text("粘贴")
                         .font(.system(size: 10.0))
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                 }
                 Button {
                     deleFunc(item: item)
                 } label: {
                     Text("移除")
                         .font(.system(size: 10.0))
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                 }
                 Button {
                     LiveOnceFunction(item: item)
                 } label: {
                     Text("存活一次")
                         .font(.system(size: 10.0))
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                 }
             }
         }
