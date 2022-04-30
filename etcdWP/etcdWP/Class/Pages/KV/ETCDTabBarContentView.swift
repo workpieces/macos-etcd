@@ -258,15 +258,19 @@ struct ETCDKeyListContentView: View {
                             
                             Button {
                                 defer {isShowingUpdatePopover.toggle()}
-                                guard !textValue.isEmpty else {
-                                    return
-                                }
                                 
-                                let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
-                                guard resp?.status == 200 else {
-                                    return
+                                do {
+                                    guard !textValue.isEmpty else {
+                                        throw NSError.init(domain: "键值不能输入为空", code: 400)
+                                    }
+                                    let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                                    if resp?.status != 200 {
+                                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                    }
+                                    Reaload()
+                                } catch  {
+                                    print(error.localizedDescription)
                                 }
-                                Reaload()
                             } label: {
                                 Text("确定")
                                     .font(.system(size: 12))
@@ -332,24 +336,36 @@ struct ETCDKeyListContentView: View {
                                                 copyToClipBoard(textToCopy: item.members?.mid ?? "")
                                             })
                                             Button("删除成员", action: {
-                                                guard item.members?.mid?.toInt() != 0 else {
-                                                    return
+                                                do {
+                                                    guard item.members?.mid?.toInt() != 0 else {
+                                                        throw NSError.init(domain: "成员id输入有误", code: 400)
+                                                    }
+                                                    
+                                                    let resp  =  storeObj.MemberRemove(id: (item.members?.mid?.toInt()!)!)
+                                                    guard resp?.status == 200 else {
+                                                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                                    }
+                                                    
+                                                    Reaload()
+                                                } catch  {
+                                                    print(error.localizedDescription)
                                                 }
-                                                let resp  =  storeObj.MemberRemove(id: (item.members?.mid?.toInt()!)!)
-                                                guard resp?.status == 200 else {
-                                                    return
-                                                }
-                                                print(resp?.message as Any)
                                             })
                                             Button("提升成员", action: {
-                                                guard item.members?.mid?.toInt() != 0 else {
-                                                    return
+                                                do {
+                                                    guard item.members?.mid?.toInt() != 0 else {
+                                                        throw NSError.init(domain: "成员id输入有误", code: 400)
+                                                    }
+                                                    
+                                                    let resp = storeObj.MemberPromotes(id: (item.members?.mid?.toInt()!)!)
+                                                    guard resp?.status == 200 else {
+                                                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                                    }
+                                                    
+                                                    Reaload()
+                                                } catch  {
+                                                    print(error.localizedDescription)
                                                 }
-                                                let resp = storeObj.MemberPromotes(id: (item.members?.mid?.toInt()!)!)
-                                                guard resp?.status == 200 else {
-                                                    return
-                                                }
-                                                print(resp?.message as Any)
                                             })
                                         }))
                                     Spacer()
@@ -428,41 +444,56 @@ struct ETCDKeyListContentView: View {
                                 
                                 switch currentTextValue.current_type {
                                 case 0:
-                                    guard !currentTextValue.peerAddress.isEmpty else {
-                                        return
-                                    }
-                                    
-                                    let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
-                                    guard resp?.status == 200 else {
-                                        return
+                                    do {
+                                        guard !currentTextValue.peerAddress.isEmpty else {
+                                            throw NSError.init(domain: "成员地址输入有误", code: 400)
+                                        }
+                                        let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
+                                        guard resp?.status == 200 else {
+                                            throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                        }
+                                        Reaload()
+                                    } catch  {
+                                        print(error.localizedDescription)
                                     }
                                 case 1:
-                                    guard Int(currentTextValue.update_member_id_old) != 0 && !currentTextValue.update_member_peer_address_new.isEmpty else {
-                                        return
-                                    }
-                                    
-                                    let resp =  storeObj.MemberUpdate(id: Int(currentTextValue.update_member_id_old)!, peerUrl: currentTextValue.update_member_peer_address_new)
-                                    guard resp?.status == 200 else {
-                                        return
+                                    do {
+                                        guard Int(currentTextValue.update_member_id_old) != 0 && !currentTextValue.update_member_peer_address_new.isEmpty else {
+                                            throw NSError.init(domain: "成员地址输入有误", code: 400)
+                                        }
+                                        
+                                        let resp =  storeObj.MemberUpdate(id: Int(currentTextValue.update_member_id_old)!, peerUrl: currentTextValue.update_member_peer_address_new)
+                                        guard resp?.status == 200 else {
+                                            throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                        }
+                                    } catch  {
+                                        print(error.localizedDescription)
                                     }
                                 case 2:
-                                    guard Int(currentTextValue.promotes_member_id) != 0 else {
-                                        return
-                                    }
-                                    
-                                    let resp = storeObj.MemberPromotes(id: Int(currentTextValue.promotes_member_id)!)
-                                    guard resp?.status == 200 else {
-                                        return
+                                    do {
+                                        guard Int(currentTextValue.promotes_member_id) != 0 else {
+                                            throw NSError.init(domain: "成员输入有误", code: 400)
+                                        }
+                                        
+                                        let resp = storeObj.MemberPromotes(id: Int(currentTextValue.promotes_member_id)!)
+                                        guard resp?.status == 200 else {
+                                            throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                        }
+                                    } catch  {
+                                        print(error.localizedDescription)
                                     }
                                 default:
-                                    guard !currentTextValue.peerAddress.isEmpty else {
-                                        self.isShowingPopover.toggle()
-                                        return
-                                    }
-                                    
-                                    let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
-                                    guard resp?.status == 200 else {
-                                        return
+                                    do {
+                                        guard !currentTextValue.peerAddress.isEmpty else {
+                                            throw NSError.init(domain: "成员地址输入有误", code: 400)
+                                        }
+                                        let resp = storeObj.MemberAdd(endpoint: currentTextValue.peerAddress, learner: currentTextValue.isLearner)
+                                        guard resp?.status == 200 else {
+                                            throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                        }
+                                        Reaload()
+                                    } catch  {
+                                        print(error.localizedDescription)
                                     }
                                 }
                             }
