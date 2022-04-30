@@ -46,7 +46,7 @@ struct ETCDRolesListView: View {
                             self.isSucceFul.toggle()
                             self.isShowToast.toggle()
                         }else{
-                            items =  storeObj.RolesList()
+                            items =  storeObj.RolesList() ?? []
                         }
                         presentationMode.wrappedValue.dismiss()
                     }

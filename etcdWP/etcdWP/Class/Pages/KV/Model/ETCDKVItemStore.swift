@@ -456,14 +456,14 @@ extension ItemStore {
 //Roles
 extension ItemStore {
    
-    func RolesList()-> [KVData]{
+    func RolesList()-> [KVData]?{
         let result = c?.roles()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             if resp?.status != 200 {
                 return []
             }
-            return (resp?.datas)!
+            return resp?.datas
         }
         return []
     }
@@ -501,14 +501,14 @@ extension ItemStore {
 //users
 extension ItemStore {
    
-    func UsersList()-> [KVData]{
+    func UsersList()-> [KVData]?{
         let result = c?.users()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             if resp?.status != 200 {
                 return []
             }
-            return resp?.datas ?? []
+            return resp?.datas
         }
         return []
     }
