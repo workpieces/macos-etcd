@@ -12,8 +12,9 @@ struct ETCDUserListView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
     @State var isSucceFul: Bool = false
-    @State var roleText: String = ""
-    @State var role :String = ""
+    @State var userText: String = ""
+    @State var passWordText: String = ""
+    @State var user :String = ""
     @Binding var currentModel  : KVOperateModel
     @Environment(\.presentationMode) var presentationMode
     
@@ -25,20 +26,38 @@ struct ETCDUserListView: View {
                 .padding(.leading,10)
                 .padding(.bottom,5)
             HStack(){
-                Text("创建角色")
-                    .font(.system(size: 12))
-                    .fontWeight(.medium)
-                    .foregroundColor(.white)
-                    .padding(.trailing,8)
-                    .padding(.leading,10)
-                TextField.init("请输入角色", text: $roleText)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(10)
+                VStack(){
+                    HStack(){
+                        Text("创建用户")
+                            .font(.system(size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding(.trailing,8)
+                            .padding(.leading,10)
+                        TextField.init("请输入用户", text: $userText)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.leading,10)
+                            .padding(.trailing,5)
+                    }
+                    HStack(){
+                        Text("创建密码")
+                            .font(.system(size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding(.trailing,8)
+                            .padding(.leading,10)
+                        TextField.init("请输入密码", text: $passWordText)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.leading,10)
+                            .padding(.trailing,5)
+                    }
+                }
                 Button {
                     
-                    guard !roleText.isEmpty else{
+                    guard !userText.isEmpty else{
                         return
                     }
+<<<<<<< HEAD
                     if roleText != role{
                         role = roleText
 //                        let  result   =  storeObj.createRole(roleId: roleText)
@@ -48,6 +67,17 @@ struct ETCDUserListView: View {
 //                        }else{
 //                            items =  storeObj.RolesList()
 //                        }
+=======
+                    if userText != user{
+                        user = userText
+                        let  result   =  storeObj.addUser(user: userText, password: passWordText)
+                        if result?.status != 200 {
+                            self.isSucceFul.toggle()
+                            self.isShowToast.toggle()
+                        }else{
+                            items =  storeObj.RolesList()
+                        }
+>>>>>>> 7d5ee7e7430112e4b3540f2c895f4dd79ce12b09
                         presentationMode.wrappedValue.dismiss()
                     }
 
@@ -71,7 +101,7 @@ struct ETCDUserListView: View {
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
          .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-            TopToastView(title:"操作角色错误")
+            TopToastView(title:"操作用户错误")
            }
 
     }
@@ -81,6 +111,7 @@ struct ETCDUserListView: View {
 //方法
 extension ETCDUserListView {
     
+<<<<<<< HEAD
 //     func deleFunc(item:ETCDRoleDetailModel) {
 //         let reuslt = storeObj.removeRole(roleId: item.role!)
 //        if reuslt?.status != 200{
@@ -90,6 +121,17 @@ extension ETCDUserListView {
 //            self.isShowToast.toggle()
 //        }
 //    }
+=======
+     func deleFunc(item:ETCDRoleDetailModel) {
+         let reuslt = storeObj.removeUser(user: item.user!)
+        if reuslt?.status != 200{
+            self.isShowToast.toggle()
+        }else{
+            self.isSucceFul .toggle()
+            self.isShowToast.toggle()
+        }
+    }
+>>>>>>> 7d5ee7e7430112e4b3540f2c895f4dd79ce12b09
     
  
     
@@ -102,13 +144,13 @@ extension ETCDUserListView {
     private var leaseListView : some View {
         List(items){ item in
             HStack(){
-                Text("角色：\(item.role!)")
+                Text("角色：\(item.user!)")
                     .font(.subheadline)
                     .foregroundColor(.white)
                     .opacity(0.75)
                     .contextMenu(ContextMenu(menuItems: {
                         Button("粘贴", action: {
-                            copyToClipBoard(textToCopy:item.role!)
+                            copyToClipBoard(textToCopy:item.user!)
                         })
                         Button("移除", action: {
 //                            deleFunc(item: item)
@@ -116,7 +158,7 @@ extension ETCDUserListView {
                     }))
                 Spacer()
                 Button {
-                    copyToClipBoard(textToCopy:item.role!)
+                    copyToClipBoard(textToCopy:item.user!)
                 } label: {
                     Text("粘贴")
                         .font(.system(size: 10.0))

@@ -36,6 +36,10 @@ struct ETCDEtcdOperationView :View {
                         }
                         Spacer()
                     }.onTapGesture {
+                        if item.type ==  5 {
+                            
+                            return
+                        }
                         self.currentModel = item
                         self.type = self.currentModel.type
                         self.show.toggle()
