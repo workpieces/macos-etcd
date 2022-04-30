@@ -18,7 +18,7 @@ struct KVOperateModel: Identifiable,Hashable {
         let operateModels : [KVOperateModel] = [
             KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
             KVOperateModel.init(name: "键值前缀删除", english: "（DeletePrefix）",type: 1),
-            KVOperateModel.init(name: "租约", english: "（LeaseGrant）",type: 2),
+            KVOperateModel.init(name: "租约管理", english: "（LeaseGrant）",type: 2),
             KVOperateModel.init(name: "角色", english: "（LeaseGrant）",type: 3),
 //            KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 3),
 //            KVOperateModel.init(name: "租约列表", english: "（LeaseList）",type: 4),

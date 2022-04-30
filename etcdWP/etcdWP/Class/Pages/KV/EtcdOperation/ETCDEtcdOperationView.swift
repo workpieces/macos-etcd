@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ETCDEtcdOperationView :View {
+    
     @State var show: Bool = false
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
     @State var type :Int = 0
@@ -51,7 +52,7 @@ struct ETCDEtcdOperationView :View {
                case 0 ,1:
                 ETCDKeyValueActionsView(currentModel: $currentModel)
             case 2:
-                DeletingLeaseListView(items: storeObj.LeaseList()?.datas ?? [])
+                DeletingLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
                default :
                 ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
             }
