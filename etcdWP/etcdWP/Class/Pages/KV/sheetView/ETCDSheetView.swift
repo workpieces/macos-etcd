@@ -19,6 +19,8 @@ struct ETCDSheetView: View {
     @State var isError : Bool = false
     @State var isShowText : String = ""
     @State var isSuccessful : Bool = false
+    @State var keyText : String = ""
+    @State var valueText : String = ""
     @State var times :Int = 0
     var body: some View {
         VStack(){
@@ -36,18 +38,50 @@ struct ETCDSheetView: View {
                         }).textFieldStyle(.roundedBorder)
                             .padding(10)
                     }
+                    TextEditor(text: $text)
+                        .foregroundColor(Color.white)
+                        .font(.custom("HelveticaNeue", size: 12))
+                        .lineSpacing(1.5)
+                        .disableAutocorrection(true)
+                        .allowsTightening(true)
+                        .padding(.bottom,5)
+                        .padding(.top,10)
+                        .padding(.trailing,10)
+                        .padding(.leading,10)
+                        .frame(height: 280)
+                }else{
+                    VStack(){
+                        HStack(){
+                            Text("请输入key")
+                                .foregroundColor(Color.white)
+                                .font(.custom("HelveticaNeue", size: 12))
+                                .lineSpacing(1.5)
+                                .padding(10)
+                            TextField.init("请输入key", text: $keyText, onEditingChanged: { _ in},onCommit: {
+                                
+                            }).textFieldStyle(.roundedBorder)
+                                .padding(10)
+                        }
+                        Text("请输入Value")
+                            .foregroundColor(Color.white)
+                            .font(.custom("HelveticaNeue", size: 12))
+                            .lineSpacing(1.5)
+                            .padding(10)
+                        TextEditor(text: $valueText)
+                            .foregroundColor(Color.white)
+                            .font(.custom("HelveticaNeue", size: 12))
+                            .lineSpacing(1.5)
+                            .disableAutocorrection(true)
+                            .allowsTightening(true)
+                            .padding(.bottom,5)
+                            .padding(.top,10)
+                            .padding(.trailing,10)
+                            .padding(.leading,10)
+                            .frame(height: 280)
+                    }
+
                 }
-                TextEditor(text: $text)
-                    .foregroundColor(Color.white)
-                    .font(.custom("HelveticaNeue", size: 12))
-                    .lineSpacing(1.5)
-                    .disableAutocorrection(true)
-                    .allowsTightening(true)
-                    .padding(.bottom,5)
-                    .padding(.top,10)
-                    .padding(.trailing,10)
-                    .padding(.leading,10)
-                    .frame(height: 280)
+                
                 
             }else if(currentModel.type == 2){
                 if !self.isShowText.isEmpty {
@@ -96,12 +130,11 @@ struct ETCDSheetView: View {
                 }else{
                 Button {
                     if self.currentModel.type == 0{
-                        if text != storeObj.realeadData.currentKv?.value
-                        {
-                            storeObj.realeadData.currentKv?.value = text
-                            let _ = storeObj.Put(key: (storeObj.realeadData.currentKv?.key)!, value: text)
+                        if  keyText .isEmpty  || valueText.isEmpty {
+                            self.isError.toggle()
+                            return
                         }
-                        
+                        let _ = storeObj.Put(key: keyText, value: valueText)
                         presentationMode.wrappedValue.dismiss()
                     }else if self.currentModel.type == 1{
                         
@@ -146,7 +179,7 @@ struct ETCDSheetView: View {
             
         }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
          .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-             TopToastView(title:self.isError ? "保存错误":"请输入时间单位")
+             TopToastView(title:self.isError ? "保存错误":"输入错误请重新输入")
             }
     }
 }
