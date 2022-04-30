@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ETCDSheetView: View {
-    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var storeObj : ItemStore
     @Binding var currentModel  : KVOperateModel
     var body: some View {
@@ -17,6 +16,11 @@ struct ETCDSheetView: View {
             ETCDKeyValueActionsView(currentModel: $currentModel)
         case 2:
             ETCDLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
+        case 3:
+            ETCDRolesListView(items: storeObj.RolesList(), currentModel: $currentModel)
+            
+        case 4:
+            ETCDUserListView(items: storeObj.RolesList(), currentModel: $currentModel)
         default :
           Text("dsafdasf")
         }
