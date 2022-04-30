@@ -121,7 +121,7 @@ struct ETCDKeyListContentView: View {
                                     try self.DeleteALL()
                                 } catch {
                                     print(error.localizedDescription)
-                                }                                
+                                }
                             } label: {
                                 Text("清空键值")
                                     .font(.caption)
@@ -323,11 +323,11 @@ struct ETCDKeyListContentView: View {
                                             })
                                             Button("删除成员", action: {
                                                 do {
-                                                    guard item.members?.mid?.toInt() != 0 else {
+                                                    guard !(item.members?.mid!.isEmpty)! else {
                                                         throw NSError.init(domain: "成员id输入有误", code: 400)
                                                     }
                                                     
-                                                    let resp  =  storeObj.MemberRemove(id: (item.members?.mid?.toInt()!)!)
+                                                    let resp  =  storeObj.MemberRemove(id: (item.members?.mid)!)
                                                     guard resp?.status == 200 else {
                                                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                                     }
@@ -339,11 +339,11 @@ struct ETCDKeyListContentView: View {
                                             })
                                             Button("提升成员", action: {
                                                 do {
-                                                    guard item.members?.mid?.toInt() != 0 else {
+                                                    guard !(item.members?.mid!.isEmpty)! else {
                                                         throw NSError.init(domain: "成员id输入有误", code: 400)
                                                     }
                                                     
-                                                    let resp = storeObj.MemberPromotes(id: (item.members?.mid?.toInt()!)!)
+                                                    let resp = storeObj.MemberPromotes(id: (item.members?.mid)!)
                                                     guard resp?.status == 200 else {
                                                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                                     }
@@ -448,7 +448,7 @@ struct ETCDKeyListContentView: View {
                                             throw NSError.init(domain: "成员地址输入有误", code: 400)
                                         }
                                         
-                                        let resp =  storeObj.MemberUpdate(id: Int(currentTextValue.update_member_id_old)!, peerUrl: currentTextValue.update_member_peer_address_new)
+                                        let resp =  storeObj.MemberUpdate(id: currentTextValue.update_member_id_old, peerUrl: currentTextValue.update_member_peer_address_new)
                                         guard resp?.status == 200 else {
                                             throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                         }
@@ -457,11 +457,11 @@ struct ETCDKeyListContentView: View {
                                     }
                                 case 2:
                                     do {
-                                        guard Int(currentTextValue.promotes_member_id) != 0 else {
+                                        guard !currentTextValue.promotes_member_id.isEmpty  else {
                                             throw NSError.init(domain: "成员输入有误", code: 400)
                                         }
                                         
-                                        let resp = storeObj.MemberPromotes(id: Int(currentTextValue.promotes_member_id)!)
+                                        let resp = storeObj.MemberPromotes(id: currentTextValue.update_member_id_old)
                                         guard resp?.status == 200 else {
                                             throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                         }
