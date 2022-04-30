@@ -673,10 +673,13 @@ struct ETCDTabBarContentView: View {
                         let urls  = showOpenPanel()
                         guard ((urls?.path.isEmpty) == nil) else {
                             var dict = [String:String]()
-                            print(storeObj.realeadData.kvs)
                             for item in storeObj.realeadData.kvs {
                                 if  !item.key!.isEmpty && !item.value!.isEmpty {
-                                    dict[item.key ?? ""] = dict[item.value ?? ""]
+                                    print(item.key as Any)
+                                    print(item.value as Any)
+                                    let key = item.key ?? ""
+                                    let value = item.value ?? ""
+                                    dict[key] = dict[value]
                                 }
                             }
                             
