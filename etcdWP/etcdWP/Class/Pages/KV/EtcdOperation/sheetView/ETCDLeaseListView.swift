@@ -72,10 +72,10 @@ struct ETCDLeaseListView: View {
             leaseListView
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
-         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
             TopToastView(title:"操作租约错误")
-           }
-
+        }
+        
     }
 }
 
@@ -83,7 +83,7 @@ struct ETCDLeaseListView: View {
 //方法
 extension ETCDLeaseListView {
     
-     func deleFunc(item:KVData) {
+    func deleFunc(item:KVData) {
         let reuslt = storeObj.LeaseRevoke(leaseid: Int(item.ttlid!))
         if reuslt?.status != 200{
             self.isShowToast.toggle()
@@ -94,14 +94,14 @@ extension ETCDLeaseListView {
     }
     
     func LiveOnceFunction(item:KVData) {
-       let reuslt = storeObj.keepAliveOnce(leaseid: Int(item.ttlid!))
-       if reuslt?.status != 200{
-           self.isShowToast.toggle()
-       }else{
-           self.isSucceFul .toggle()
-           self.isShowToast.toggle()
-       }
-   }
+        let reuslt = storeObj.keepAliveOnce(leaseid: Int(item.ttlid!))
+        if reuslt?.status != 200{
+            self.isShowToast.toggle()
+        }else{
+            self.isSucceFul .toggle()
+            self.isShowToast.toggle()
+        }
+    }
     
     
 }
@@ -111,7 +111,7 @@ extension ETCDLeaseListView {
 extension ETCDLeaseListView {
     
     private var leaseListView : some View {
-
+        
         List(items.reversed()){ item in
             HStack(){
                 Text(String(format: "租约ID：%ld", item.ttlid!))

@@ -51,7 +51,7 @@ struct ETCDRolesListView: View {
                         }
                         presentationMode.wrappedValue.dismiss()
                     }
-
+                    
                 } label: {
                     Text("确定")
                         .font(.system(size: 12))
@@ -71,10 +71,10 @@ struct ETCDRolesListView: View {
             leaseListView
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
-         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
             TopToastView(title:"操作角色错误")
-           }
-
+        }
+        
     }
 }
 
@@ -82,8 +82,8 @@ struct ETCDRolesListView: View {
 //方法
 extension ETCDRolesListView {
     
-     func deleFunc(item:KVData) {
-         let reuslt = storeObj.removeRole(roleId: item.role!)
+    func deleFunc(item:KVData) {
+        let reuslt = storeObj.removeRole(roleId: item.role!)
         if reuslt?.status != 200{
             self.isShowToast.toggle()
         }else{
@@ -92,7 +92,7 @@ extension ETCDRolesListView {
         }
     }
     
- 
+    
     
 }
 
