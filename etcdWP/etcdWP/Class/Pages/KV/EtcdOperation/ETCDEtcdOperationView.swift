@@ -45,7 +45,13 @@ struct ETCDEtcdOperationView :View {
             .padding(8.0)
             
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
-            ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
+            switch self.currentModel.type {
+               case 0 :
+                ETCDKeyValueActionsView(currentModel: $currentModel)
+                
+               default :
+                ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
+            }
         }
     }
     

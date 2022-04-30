@@ -9,6 +9,8 @@ import SwiftUI
 import NavigationStack
 import PopupView
 import Combine
+import FilePicker
+import ObjectMapper
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
@@ -611,22 +613,40 @@ struct ETCDTabBarContentView: View {
                         .padding(.vertical,30)
                         .padding(.leading ,20)
                     
-                    Button {
-                        print("批量导入")
+                    FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
+                        print("load")
                     } label: {
                         Text("批量导入")
                             .font(.system(size: 14))
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
-
-                    Button {
-                        print("批量导出")
+                    
+                    FilePicker(types:[.directory], allowMultiple: true) { urls in
+                        var dict = [String:String]()
+                        for item in storeObj.realeadData.kvs {
+                            if item.key!.isEmpty && ((item.value?.isEmpty) != nil) {
+                                break
+                            }
+                            dict[item.key!] = dict[item.value!]
+                        }
+                        
+                        do {
+                            let encoder = JSONEncoder()
+                            encoder.outputFormatting = .prettyPrinted
+                            let data = try encoder.encode(dict)
+                            let  current_url  =  urls[0].appendingPathComponent("etcdwp.json")
+                            try data.write(to: current_url)
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                        
                     } label: {
                         Text("批量导出")
                             .font(.system(size: 14))
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
                     .padding(.trailing,15)
+                    
                 }
                 GeometryReader {  g in
                     HStack(spacing: 10.0) {
