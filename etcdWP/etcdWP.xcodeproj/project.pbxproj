@@ -56,6 +56,8 @@
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
 		D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */; };
 		D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */; };
+		D0BAF527281D762C0062819B /* ETCDRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF526281D762C0062819B /* ETCDRolesListView.swift */; };
+		D0BAF529281D79C00062819B /* ETCDRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF528281D79C00062819B /* ETCDRoleModel.swift */; };
 		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
 		D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */; };
 		D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */; };
@@ -129,6 +131,8 @@
 		D03050B52818271000477D33 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDEtcdOperationView.swift; sourceTree = "<group>"; };
 		D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsView.swift; sourceTree = "<group>"; };
+		D0BAF526281D762C0062819B /* ETCDRolesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRolesListView.swift; sourceTree = "<group>"; };
+		D0BAF528281D79C00062819B /* ETCDRoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRoleModel.swift; sourceTree = "<group>"; };
 		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
 		D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLeaseListView.swift; sourceTree = "<group>"; };
 		D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLogsObject.swift; sourceTree = "<group>"; };
@@ -355,6 +359,7 @@
 				D0E8A994281A26F50087B3B6 /* NSTextView+.swift */,
 				D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */,
 				D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */,
+				D0BAF526281D762C0062819B /* ETCDRolesListView.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				D0305080281826F500477D33 /* ETCDKeyValue.swift */,
 				D0305081281826F500477D33 /* ETCDKVItemStore.swift */,
 				D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */,
+				D0BAF528281D79C00062819B /* ETCDRoleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -634,9 +640,11 @@
 				D03050AD281826F600477D33 /* ETCDTabarStore.swift in Sources */,
 				D03050B2281826F600477D33 /* TopToastView.swift in Sources */,
 				D03050A8281826F600477D33 /* Button.swift in Sources */,
+				D0BAF529281D79C00062819B /* ETCDRoleModel.swift in Sources */,
 				D03050B1281826F600477D33 /* CardItemView.swift in Sources */,
 				D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */,
 				D030509E281826F600477D33 /* ETCDSheetView.swift in Sources */,
+				D0BAF527281D762C0062819B /* ETCDRolesListView.swift in Sources */,
 				D03050B72818271000477D33 /* OpenPan.swift in Sources */,
 				D030505A281824DD00477D33 /* CarouselView.swift in Sources */,
 				D03050AE281826F600477D33 /* HomeViewModel.swift in Sources */,
