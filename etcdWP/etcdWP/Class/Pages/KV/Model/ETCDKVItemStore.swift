@@ -259,6 +259,22 @@ extension ItemStore {
         return nil
     }
     
+    
+    
+    func keepAliveOnce(leaseid:Int) ->ETCDKeyValue? {
+        let result = c?.keepAliveOnce(leaseid)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "keepAliveOnce")
+            ETCDLogsObject.shared.logSubjec.send(lg)
+            if resp?.status != 200 {
+                return nil
+            }
+            return resp ?? nil
+        }
+        return nil
+    }
+    
     func PutWithTTL(key: String,value: String,ttl: Int) ->ETCDKeyValue? {
         let result = c?.put(withTTL: key, value: value, ttl: ttl)
         guard result == nil || ((result?.isEmpty) == nil) else {

@@ -57,7 +57,7 @@
 		D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */; };
 		D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */; };
 		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
-		D0EC35A9281BD4BB00F77078 /* DeletingLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */; };
+		D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */; };
 		D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +130,7 @@
 		D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDEtcdOperationView.swift; sourceTree = "<group>"; };
 		D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsView.swift; sourceTree = "<group>"; };
 		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
-		D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingLeaseListView.swift; sourceTree = "<group>"; };
+		D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLeaseListView.swift; sourceTree = "<group>"; };
 		D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLogsObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -353,7 +353,7 @@
 			children = (
 				D030507D281826F500477D33 /* ETCDSheetView.swift */,
 				D0E8A994281A26F50087B3B6 /* NSTextView+.swift */,
-				D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */,
+				D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */,
 				D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */,
 			);
 			path = sheetView;
@@ -612,7 +612,7 @@
 				D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */,
 				D0305059281824DD00477D33 /* CarouselItemlView.swift in Sources */,
 				D030509B281826F600477D33 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
-				D0EC35A9281BD4BB00F77078 /* DeletingLeaseListView.swift in Sources */,
+				D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */,
 				D030509D281826F600477D33 /* ETCDTableView.swift in Sources */,
 				D03050A0281826F600477D33 /* ETCDKeyValue.swift in Sources */,
 				D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */,

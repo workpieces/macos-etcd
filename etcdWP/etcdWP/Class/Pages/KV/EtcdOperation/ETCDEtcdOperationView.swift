@@ -52,7 +52,7 @@ struct ETCDEtcdOperationView :View {
                case 0 ,1:
                 ETCDKeyValueActionsView(currentModel: $currentModel)
             case 2:
-                DeletingLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
+                ETCDLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
                default :
                 ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
             }

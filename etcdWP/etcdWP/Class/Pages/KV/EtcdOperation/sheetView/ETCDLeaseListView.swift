@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeletingLeaseListView: View {
+struct ETCDLeaseListView: View {
     @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
@@ -16,17 +16,6 @@ struct DeletingLeaseListView: View {
     @State var times :Int = 0
     @Binding var currentModel  : KVOperateModel
     @Environment(\.presentationMode) var presentationMode
-    
-    fileprivate func deleFunc(item:KVData) {
-        let reuslt = storeObj.LeaseRevoke(leaseid: Int(item.ttlid!))
-        if reuslt?.status != 200{
-            self.isShowToast.toggle()
-        }else{
-            self.isSucceFul .toggle()
-            self.isShowToast.toggle()
-        }
-    }
-    
     
     var body: some View {
         VStack(){
@@ -58,8 +47,16 @@ struct DeletingLeaseListView: View {
                         .font(.system(size: 12))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
-                        .padding(10)
-                }
+                }.padding(6)
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("关闭")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }.padding(10)
+                
             }
             leaseListView
         }
@@ -72,8 +69,35 @@ struct DeletingLeaseListView: View {
 }
 
 
+//方法
+extension ETCDLeaseListView {
+    
+     func deleFunc(item:KVData) {
+        let reuslt = storeObj.LeaseRevoke(leaseid: Int(item.ttlid!))
+        if reuslt?.status != 200{
+            self.isShowToast.toggle()
+        }else{
+            self.isSucceFul .toggle()
+            self.isShowToast.toggle()
+        }
+    }
+    
+    func LiveOnceFunction(item:KVData) {
+       let reuslt = storeObj.keepAliveOnce(leaseid: Int(item.ttlid!))
+       if reuslt?.status != 200{
+           self.isShowToast.toggle()
+       }else{
+           self.isSucceFul .toggle()
+           self.isShowToast.toggle()
+       }
+   }
+    
+    
+}
 
-extension DeletingLeaseListView {
+
+//列表
+extension ETCDLeaseListView {
     
     private var leaseListView : some View {
         List(items){ item in
@@ -89,6 +113,9 @@ extension DeletingLeaseListView {
                         Button("移除", action: {
                             deleFunc(item: item)
                         })
+                        Button("存活一次", action: {
+                            LiveOnceFunction(item: item)
+                        })
                     }))
                 Spacer()
                 Button {
@@ -102,6 +129,13 @@ extension DeletingLeaseListView {
                     deleFunc(item: item)
                 } label: {
                     Text("移除")
+                        .font(.system(size: 10.0))
+                        .foregroundColor(.yellow)
+                }
+                Button {
+                    LiveOnceFunction(item: item)
+                } label: {
+                    Text("存活一次")
                         .font(.system(size: 10.0))
                         .foregroundColor(.yellow)
                 }
