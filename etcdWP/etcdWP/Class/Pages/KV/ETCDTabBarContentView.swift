@@ -139,6 +139,14 @@ struct ETCDKeyListContentView: View {
                                     .foregroundColor(.white)
                             }
                             
+                            Button {
+                                storeObj.showFormat =  storeObj.showFormat == .Tree ? .List:.Tree
+                            } label: {
+                                Text(storeObj.showFormat.Name())
+                                    .font(.caption)
+                                    .foregroundColor(Color(hex:"#00FFFF"))
+                            }
+                            
                             Spacer()
                             
                             Button {} label: {
@@ -680,7 +688,9 @@ struct ETCDTabBarContentView: View {
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
                     
+                    // copy from https://www.raywenderlich.com/books/swiftui-apprentice/v1.0/chapters/19-saving-files
                     Button {
+                        print("save")
                         let urls  = showOpenPanel()
                         guard ((urls?.path.isEmpty) == nil) else {
                             var outs = [OutKvModel]()

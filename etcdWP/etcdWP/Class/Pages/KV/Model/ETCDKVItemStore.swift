@@ -8,12 +8,14 @@
 import SwiftUI
 import MacosEtcd
 import Combine
+
+// 键值操作类型
 struct KVOperateModel: Identifiable,Hashable {
     var id = UUID()
     var name: String
     var english: String
     var type: Int
-
+    
     static  func getItems() -> [KVOperateModel]{
         let operateModels : [KVOperateModel] = [
             KVOperateModel.init(name: "创建键值", english: "（PutWithTTL）",type: 0),
@@ -39,6 +41,7 @@ struct KVOperateModel: Identifiable,Hashable {
     }
 }
 
+// 成员类型
 struct KVMemberModel: Identifiable,Hashable {
     var id = UUID()
     var name: String
@@ -49,17 +52,37 @@ struct KVMemberModel: Identifiable,Hashable {
             KVMemberModel.init(name: "创建成员", type: 0),
             KVMemberModel.init(name: "修改成员", type: 1),
             KVMemberModel.init(name: "提升成员", type: 2),
-        ]        
+        ]
         return members
     }
 }
 
+// 树形或者平铺展示格式
+enum ShowFormat: String {
+    case List  = "平铺结构" // 平铺结构
+    case Tree  = "树形结构" // 树形结构
+    
+    func Name() -> String {
+        switch self {
+        case .List: return rawValue
+        case .Tree: return rawValue
+        }
+    }
+}
+
+// 导入导出数据格式
+struct OutKvModel: Codable {
+    var key : String
+    var value: String
+}
+
+// 状态管理类型
 class ItemStore: ObservableObject {
     @Published var c : EtcdKVClient?
     @Published var address: String
     @Published var status: Bool
-    @Published var relead: Bool = false
     @Published var realeadData: KVRealoadData
+    @Published var showFormat: ShowFormat = .List
     init(c: EtcdKVClient?,address: String,status: Bool) {
         self.c  = c
         self.address = address
@@ -157,7 +180,7 @@ extension ItemStore {
             }
         }
     }
-   
+    
     func KVReaload(){
         let kd = self.GetALL()
         let md = self.MemberList()
@@ -297,7 +320,7 @@ extension ItemStore {
         let result = c?.delete(key)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-           let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE")
+            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
                 return nil
@@ -314,7 +337,7 @@ extension ItemStore {
         let result = c?.grant(ttl)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-          let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "creat")
+            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "creat")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
                 return nil
@@ -340,7 +363,7 @@ extension ItemStore {
         let result = c?.leaseList()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-           let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
+            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
                 return nil
@@ -357,7 +380,7 @@ extension ItemStore {
         let result = c?.endpointStatus()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-           let  lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ENDPOINT")
+            let  lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ENDPOINT")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
                 return []
@@ -387,7 +410,7 @@ extension ItemStore {
         let result = c?.memberAdd(endpoint, learner: learner)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-          let  lg =  KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "add")
+            let  lg =  KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "add")
             ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
         }
