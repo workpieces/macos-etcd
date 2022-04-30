@@ -13,9 +13,9 @@ import SwiftUI
 func showOpenPanel() -> URL? {
     let openPanel = NSOpenPanel()
     openPanel.allowsMultipleSelection = false
-    openPanel.canChooseDirectories = false
-    openPanel.canCreateDirectories = false;
-    openPanel.canChooseFiles = true
+    openPanel.canChooseDirectories = true
+    openPanel.canCreateDirectories = true;
+    openPanel.canChooseFiles = false
     let response = openPanel.runModal()
     return response == .OK ? openPanel.url : nil
 }

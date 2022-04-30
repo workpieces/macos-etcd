@@ -310,17 +310,9 @@
 			isa = PBXGroup;
 			children = (
 				D03050B32818271000477D33 /* Common */,
-				D0305041281824DC00477D33 /* Netwrok */,
 				D0305042281824DC00477D33 /* Extension */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		D0305041281824DC00477D33 /* Netwrok */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Netwrok;
 			sourceTree = "<group>";
 		};
 		D0305042281824DC00477D33 /* Extension */ = {

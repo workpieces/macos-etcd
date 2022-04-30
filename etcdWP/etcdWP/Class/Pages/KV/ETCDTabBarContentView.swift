@@ -669,32 +669,34 @@ struct ETCDTabBarContentView: View {
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
                     
-                    FilePicker(types:[.directory], allowMultiple: true) { urls in
-                        var dict = [String:String]()
-                        for item in storeObj.realeadData.kvs {
-                            if item.key!.isEmpty && ((item.value?.isEmpty) != nil) {
-                                break
+                    Button {
+                        let urls  = showOpenPanel()
+                        guard ((urls?.path.isEmpty) == nil) else {
+                            var dict = [String:String]()
+                            print(storeObj.realeadData.kvs)
+                            for item in storeObj.realeadData.kvs {
+                                if  !item.key!.isEmpty && !item.value!.isEmpty {
+                                    dict[item.key ?? ""] = dict[item.value ?? ""]
+                                }
                             }
-                            dict[item.key!] = dict[item.value!]
+                            
+                            do {
+                                let encoder = JSONEncoder()
+                                encoder.outputFormatting = .prettyPrinted
+                                let data = try encoder.encode(dict)
+                                let  current_url  =  urls!.appendingPathComponent("etcdwp.json")
+                                try data.write(to: current_url)
+                            } catch {
+                                print(error.localizedDescription)
+                            }
+                            return
                         }
-                        
-                        do {
-                            let encoder = JSONEncoder()
-                            encoder.outputFormatting = .prettyPrinted
-                            let data = try encoder.encode(dict)
-                            let  current_url  =  urls[0].appendingPathComponent("etcdwp.json")
-                            try data.write(to: current_url)
-                        } catch {
-                            print(error.localizedDescription)
-                        }
-                        
                     } label: {
                         Text("批量导出")
                             .font(.system(size: 14))
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
                     .padding(.trailing,15)
-                    
                 }
                 GeometryReader {  g in
                     HStack(spacing: 10.0) {
