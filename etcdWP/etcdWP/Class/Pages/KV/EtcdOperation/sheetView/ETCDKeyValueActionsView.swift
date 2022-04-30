@@ -94,7 +94,7 @@ struct ETCDKeyValueActionsView: View {
                             return
                         }
                     }
-
+                    
                     let result = storeObj.PutWithTTL(key: keyText, value: valueText, ttl: timeText.toInt() ?? 0)
                     if result?.status  != 200 {
                         self.errorString = result?.message ?? "保存失败"

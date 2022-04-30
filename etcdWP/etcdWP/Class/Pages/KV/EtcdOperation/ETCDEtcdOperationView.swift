@@ -34,10 +34,10 @@ struct ETCDEtcdOperationView :View {
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             if item.type == 5 {
-                                Toggle("", isOn: $isDisplayed)
-                                    .onChange(of: isDisplayed) { value in
-                                       let _ =  storeObj.authEnable(enble: value)
-                                    }
+                                Toggle("是否开启", isOn: $isDisplayed)
+                                    .onChange(of: isDisplayed, perform: { value in
+                                    let _ =  storeObj.authEnable(enble: value)
+                                })
                             }
                             Spacer()
                         }
