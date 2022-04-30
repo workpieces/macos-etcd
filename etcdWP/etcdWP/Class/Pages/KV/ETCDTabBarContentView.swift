@@ -406,10 +406,10 @@ struct MakeOperateKvTextContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var isShowJSON = false
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                Spacer()
-                HStack {
+        HStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    Spacer()
                     Text(storeObj.realeadData.currentKv?.value ?? "")
                         .lineLimit(nil)
                         .foregroundColor(.secondary)
@@ -422,15 +422,17 @@ struct MakeOperateKvTextContentView: View {
                             })
                         }))
                     Spacer()
-                    Button {
-                        copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
-                    } label: {
-                        Text("粘贴")
-                            .font(.system(size: 10.0))
-                            .foregroundColor(.white)
-                    }
                 }
-                Spacer()
+            }
+            Spacer()
+            VStack {
+                Button {
+                    copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                } label: {
+                    Text("粘贴")
+                        .font(.system(size: 10.0))
+                        .foregroundColor(.white)
+                }
             }
         }
     }
