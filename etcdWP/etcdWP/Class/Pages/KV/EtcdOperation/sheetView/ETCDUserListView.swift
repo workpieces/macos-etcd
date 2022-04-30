@@ -64,7 +64,7 @@ struct ETCDUserListView: View {
                             self.isSucceFul.toggle()
                             self.isShowToast.toggle()
                         }else{
-                            items =  storeObj.RolesList() ?? []
+                            items =  storeObj.UsersList() ?? []
                         }
                         presentationMode.wrappedValue.dismiss()
                     }
@@ -120,7 +120,7 @@ extension ETCDUserListView {
     private var leaseListView : some View {
         List(items){ item in
             HStack(){
-                Text("角色：\(item.user ?? "" )")
+                Text("用户：\(item.user ?? "" )")
                     .font(.subheadline)
                     .foregroundColor(.white)
                     .opacity(0.75)
