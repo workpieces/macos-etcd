@@ -24,21 +24,6 @@ struct KVOperateModel: Identifiable,Hashable {
             KVOperateModel.init(name: "角色管理", english: "（Roles）",type: 3),
             KVOperateModel.init(name: "用户管理", english: "（Roles）",type: 4),
             KVOperateModel.init(name: "开启认证", english: "（AuthEnable）",type: 5),
-//            KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 3),
-//            KVOperateModel.init(name: "租约列表", english: "（LeaseList）",type: 4),
-//            KVOperateModel.init(name: "租约存活一次", english: "（KeepAliveOnce）",type: 5),
-//            KVOperateModel.init(name: "角色列表", english: "（Roles）",type: 6),
-//            KVOperateModel.init(name: "创建角色", english: "（RoleAdd）",type: 7),
-//            KVOperateModel.init(name: "删除角色", english: "（RoleAdd）",type: 8),
-//            KVOperateModel.init(name: "授予角色权限", english: "（Permission）",type: 9),
-//            KVOperateModel.init(name: "用户列表", english: "（Users）",type: 10),
-//            KVOperateModel.init(name: "创建用户", english: "（UserAdd）",type: 11),
-//            KVOperateModel.init(name: "删除用户", english: "（DeleteUser）",type: 12),
-//            KVOperateModel.init(name: "查看用户", english: "（GetUser）",type: 13),
-//            KVOperateModel.init(name: "修改密码", english: "（ChangePassword）",type: 14),
-//            KVOperateModel.init(name: "用户角色绑定", english: "（GrantUserRole）",type: 15),
-//            KVOperateModel.init(name: "用户角色解绑", english: "（UserRoleRevokes）",type: 16),
-//            KVOperateModel.init(name: "开启认证", english: "（AuthEnable）",type: 17),
         ]
         return operateModels
     }
@@ -471,44 +456,44 @@ extension ItemStore {
 //Roles
 extension ItemStore {
    
-    func RolesList()-> [ETCDRoleDetailModel]{
+    func RolesList()-> [KVData]{
         let result = c?.roles()
         guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             if resp?.status != 200 {
                 return []
             }
-            return resp?.datas ?? []
+            return (resp?.datas)!
         }
         return []
     }
     
-    func removeRole(roleId: String) -> ETCDRoleModel? {
-        
-        let result = c?.deleteRole(roleId)
-        
-        guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "deleteRole")
-            ETCDLogsObject.shared.logSubjec.send(lg)
-            
-            return resp
-        }
-        return nil
-    }
-    
-    
-    func createRole(roleId: String) -> ETCDRoleModel?{
-        
-        let result = c?.roleAdd(roleId)
-        guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "roleAdd")
-            ETCDLogsObject.shared.logSubjec.send(lg)
-            return resp
-        }
-        return nil
-    }
+//    func removeRole(roleId: String) -> ETCDKeyValue? {
+//
+//        let result = c?.deleteRole(roleId)
+//
+//        guard result == nil || ((result?.isEmpty) == nil) else {
+//            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+//            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "deleteRole")
+//            ETCDLogsObject.shared.logSubjec.send(lg)
+//
+//            return resp
+//        }
+//        return nil
+//    }
+//
+//
+//    func createRole(roleId: String) -> ETCDKeyValue?{
+//
+//        let result = c?.roleAdd(roleId)
+//        guard result == nil || ((result?.isEmpty) == nil) else {
+//            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+//            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "roleAdd")
+//            ETCDLogsObject.shared.logSubjec.send(lg)
+//            return resp
+//        }
+//        return nil
+//    }
     
 }
 

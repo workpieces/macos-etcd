@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C8EEC10281AD0420012ECAA /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8EEC0F281AD0420012ECAA /* MacosEtcd.framework */; };
+		5C8EEC12281D85950012ECAA /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8EEC11281D85940012ECAA /* MacosEtcd.framework */; };
 		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
@@ -55,7 +55,6 @@
 		D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */; };
 		D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */; };
 		D0BAF527281D762C0062819B /* ETCDRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF526281D762C0062819B /* ETCDRolesListView.swift */; };
-		D0BAF529281D79C00062819B /* ETCDRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF528281D79C00062819B /* ETCDRoleModel.swift */; };
 		D0BAF52B281D81110062819B /* ETCDUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF52A281D81110062819B /* ETCDUserListView.swift */; };
 		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
 		D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */; };
@@ -80,7 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C8EEC0F281AD0420012ECAA /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		5C8EEC11281D85940012ECAA /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D00ED46A28006EAB0068CBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 		D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDEtcdOperationView.swift; sourceTree = "<group>"; };
 		D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsView.swift; sourceTree = "<group>"; };
 		D0BAF526281D762C0062819B /* ETCDRolesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRolesListView.swift; sourceTree = "<group>"; };
-		D0BAF528281D79C00062819B /* ETCDRoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRoleModel.swift; sourceTree = "<group>"; };
 		D0BAF52A281D81110062819B /* ETCDUserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserListView.swift; sourceTree = "<group>"; };
 		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
 		D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLeaseListView.swift; sourceTree = "<group>"; };
@@ -143,7 +141,7 @@
 			files = (
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D079BE5028143F36006B8619 /* SnapKit in Frameworks */,
-				5C8EEC10281AD0420012ECAA /* MacosEtcd.framework in Frameworks */,
+				5C8EEC12281D85950012ECAA /* MacosEtcd.framework in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
@@ -241,7 +239,7 @@
 		D0305026281824DC00477D33 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				5C8EEC0F281AD0420012ECAA /* MacosEtcd.framework */,
+				5C8EEC11281D85940012ECAA /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
@@ -351,7 +349,6 @@
 				D0305080281826F500477D33 /* ETCDKeyValue.swift */,
 				D0305081281826F500477D33 /* ETCDKVItemStore.swift */,
 				D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */,
-				D0BAF528281D79C00062819B /* ETCDRoleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -604,7 +601,6 @@
 				D03050AD281826F600477D33 /* ETCDTabarStore.swift in Sources */,
 				D03050B2281826F600477D33 /* TopToastView.swift in Sources */,
 				D03050A8281826F600477D33 /* Button.swift in Sources */,
-				D0BAF529281D79C00062819B /* ETCDRoleModel.swift in Sources */,
 				D03050B1281826F600477D33 /* CardItemView.swift in Sources */,
 				D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */,
 				D030509E281826F600477D33 /* ETCDSheetView.swift in Sources */,
