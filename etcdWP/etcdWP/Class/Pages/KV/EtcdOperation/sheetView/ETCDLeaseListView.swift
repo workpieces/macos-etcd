@@ -25,7 +25,7 @@ struct ETCDLeaseListView: View {
                 .padding(.leading,10)
                 .padding(.bottom,5)
             HStack(){
-                Text("创建租约时间")
+                Text("创建租约")
                     .font(.system(size: 12))
                     .fontWeight(.medium)
                     .foregroundColor(.white)
