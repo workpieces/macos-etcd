@@ -11,7 +11,7 @@ struct ETCDRoleDetailModel: Codable,Identifiable {
     var id = UUID()
     let role: String?
     let omitempty: String?
-
+    var user: String?
 }
 
 
