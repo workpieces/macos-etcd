@@ -13,6 +13,7 @@ struct ETCDEtcdOperationView :View {
     @State var show: Bool = false
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
     @State var type :Int = 0
+    @State var isDisplayed :Bool = false
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         ZStack(alignment: .topLeading){
@@ -32,14 +33,17 @@ struct ETCDEtcdOperationView :View {
                                 .foregroundColor(.white)
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
+                            if item.type == 5 {
+                                Toggle("", isOn: $isDisplayed)
+                                    .onChange(of: isDisplayed) { value in
+                                        print(value)
+                                    }
+                            }
                             Spacer()
                         }
+
                         Spacer()
                     }.onTapGesture {
-                        if item.type ==  5 {
-                            
-                            return
-                        }
                         self.currentModel = item
                         self.type = self.currentModel.type
                         self.show.toggle()

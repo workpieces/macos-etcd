@@ -23,7 +23,6 @@ struct KVOperateModel: Identifiable,Hashable {
             KVOperateModel.init(name: "租约管理", english: "（LeaseGrant）",type: 2),
             KVOperateModel.init(name: "角色管理", english: "（Roles）",type: 3),
             KVOperateModel.init(name: "用户管理", english: "（Roles）",type: 4),
-            KVOperateModel.init(name: "开启认证", english: "（AuthEnable）",type: 5),
 //            KVOperateModel.init(name: "移除租约", english: "（LeaseRevoke）",type: 3),
 //            KVOperateModel.init(name: "租约列表", english: "（LeaseList）",type: 4),
 //            KVOperateModel.init(name: "租约存活一次", english: "（KeepAliveOnce）",type: 5),
@@ -38,7 +37,7 @@ struct KVOperateModel: Identifiable,Hashable {
 //            KVOperateModel.init(name: "修改密码", english: "（ChangePassword）",type: 14),
 //            KVOperateModel.init(name: "用户角色绑定", english: "（GrantUserRole）",type: 15),
 //            KVOperateModel.init(name: "用户角色解绑", english: "（UserRoleRevokes）",type: 16),
-//            KVOperateModel.init(name: "开启认证", english: "（AuthEnable）",type: 17),
+            KVOperateModel.init(name: "开启认证", english: "（AuthEnable）",type: 5),
         ]
         return operateModels
     }
