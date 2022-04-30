@@ -468,32 +468,32 @@ extension ItemStore {
         return []
     }
     
-//    func removeRole(roleId: String) -> ETCDKeyValue? {
+    func removeRole(roleId: String) -> ETCDKeyValue? {
+
+        let result = c?.deleteRole(roleId)
+
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "deleteRole")
+            ETCDLogsObject.shared.logSubjec.send(lg)
+
+            return resp
+        }
+        return nil
+    }
+
 //
-//        let result = c?.deleteRole(roleId)
-//
-//        guard result == nil || ((result?.isEmpty) == nil) else {
-//            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-//            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "deleteRole")
-//            ETCDLogsObject.shared.logSubjec.send(lg)
-//
-//            return resp
-//        }
-//        return nil
-//    }
-//
-//
-//    func createRole(roleId: String) -> ETCDKeyValue?{
-//
-//        let result = c?.roleAdd(roleId)
-//        guard result == nil || ((result?.isEmpty) == nil) else {
-//            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-//            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "roleAdd")
-//            ETCDLogsObject.shared.logSubjec.send(lg)
-//            return resp
-//        }
-//        return nil
-//    }
+    func createRole(roleId: String) -> ETCDKeyValue?{
+
+        let result = c?.roleAdd(roleId)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "roleAdd")
+            ETCDLogsObject.shared.logSubjec.send(lg)
+            return resp
+        }
+        return nil
+    }
     
 }
 
@@ -501,10 +501,10 @@ extension ItemStore {
 //users
 extension ItemStore {
    
-    func UsersList()-> [ETCDRoleDetailModel]{
+    func UsersList()-> [KVData]{
         let result = c?.users()
         guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             if resp?.status != 200 {
                 return []
             }
@@ -513,11 +513,11 @@ extension ItemStore {
         return []
     }
     
-    func removeUser(user: String) -> ETCDRoleModel? {
+    func removeUser(user: String) -> ETCDKeyValue? {
         
         let result = c?.deleteUser(user)
         guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "deleteRole")
             ETCDLogsObject.shared.logSubjec.send(lg)
             
@@ -527,11 +527,11 @@ extension ItemStore {
     }
     
     
-    func addUser(user: String,password:String) -> ETCDRoleModel?{
+    func addUser(user: String,password:String) -> ETCDKeyValue?{
         
         let result = c?.userAdd(user, password: password)
         guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "roleAdd")
             ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
@@ -545,10 +545,10 @@ extension ItemStore {
 //authEnable
 extension ItemStore {
    
-    func authEnable(enble:Bool ) -> ETCDRoleModel? {
+    func authEnable(enble:Bool ) -> ETCDKeyValue? {
         let result = c?.authEnable(enble)
         guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             return resp
         }
         return nil

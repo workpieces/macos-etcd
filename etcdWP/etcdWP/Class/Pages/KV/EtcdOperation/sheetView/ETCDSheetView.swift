@@ -18,10 +18,9 @@ struct ETCDSheetView: View {
             ETCDLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
         case 3:
             ETCDRolesListView(items: storeObj.RolesList(), currentModel: $currentModel)
-            
         case 4:
-            Text("dsafdasf")
-//            ETCDUserListView(items: storeObj.RolesList(), currentModel: $currentModel)
+
+            ETCDUserListView(items: storeObj.RolesList(), currentModel: $currentModel)
         default :
           Text("dsafdasf")
         }

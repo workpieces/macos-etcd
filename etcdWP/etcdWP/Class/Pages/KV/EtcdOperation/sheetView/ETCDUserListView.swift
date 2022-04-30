@@ -57,15 +57,6 @@ struct ETCDUserListView: View {
                     guard !userText.isEmpty else{
                         return
                     }
-                    if roleText != role{
-                        role = roleText
-//                        let  result   =  storeObj.createRole(roleId: roleText)
-//                        if result?.status != 200 {
-//                            self.isSucceFul.toggle()
-//                            self.isShowToast.toggle()
-//                        }else{
-//                            items =  storeObj.RolesList()
-//                        }
                     if userText != user{
                         user = userText
                         let  result   =  storeObj.addUser(user: userText, password: passWordText)
@@ -108,18 +99,7 @@ struct ETCDUserListView: View {
 //方法
 extension ETCDUserListView {
     
-
-//     func deleFunc(item:ETCDRoleDetailModel) {
-//         let reuslt = storeObj.removeRole(roleId: item.role!)
-//        if reuslt?.status != 200{
-//            self.isShowToast.toggle()
-//        }else{
-//            self.isSucceFul .toggle()
-//            self.isShowToast.toggle()
-//        }
-//    }
-
-     func deleFunc(item:ETCDRoleDetailModel) {
+     func deleFunc(item:KVData) {
          let reuslt = storeObj.removeUser(user: item.user!)
         if reuslt?.status != 200{
             self.isShowToast.toggle()
@@ -149,7 +129,7 @@ extension ETCDUserListView {
                             copyToClipBoard(textToCopy:item.user!)
                         })
                         Button("移除", action: {
-//                            deleFunc(item: item)
+                            deleFunc(item: item)
                         })
                     }))
                 Spacer()
@@ -161,7 +141,7 @@ extension ETCDUserListView {
                         .foregroundColor(.white)
                 }
                 Button {
-//                    deleFunc(item: item)
+                    deleFunc(item: item)
                 } label: {
                     Text("移除")
                         .font(.system(size: 10.0))
