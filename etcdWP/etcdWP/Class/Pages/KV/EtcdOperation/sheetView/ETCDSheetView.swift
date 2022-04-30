@@ -22,7 +22,7 @@ struct ETCDSheetView: View {
         case 4:
             ETCDUserListView(items: storeObj.UsersList(), currentModel: $currentModel)
         default :
-          Text("dsafdasf")
+            Text("----")
         }
     }
 }
