@@ -22,7 +22,7 @@ struct KVOperateModel: Identifiable,Hashable {
             KVOperateModel.init(name: "键值前缀删除", english: "（DeletePrefix）",type: 1),
             KVOperateModel.init(name: "租约管理", english: "（LeaseGrant）",type: 2),
             KVOperateModel.init(name: "角色管理", english: "（Roles）",type: 3),
-            KVOperateModel.init(name: "用户管理", english: "（Roles）",type: 4),
+            KVOperateModel.init(name: "用户管理", english: "（Users）",type: 4),
             KVOperateModel.init(name: "开启认证", english: "（AuthEnable）",type: 5),
         ]
         return operateModels
