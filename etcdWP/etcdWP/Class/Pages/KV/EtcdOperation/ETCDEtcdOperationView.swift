@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 struct ETCDEtcdOperationView :View {
-    
+    @EnvironmentObject var storeObj : ItemStore
     @State var show: Bool = false
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
     @State var type :Int = 0
-    @State var isDisplayed :Bool = false
-    @EnvironmentObject var storeObj : ItemStore
+    @State var isEnable :Bool = false
+
     var body: some View {
         ZStack(alignment: .topLeading){
             List {
@@ -34,10 +34,12 @@ struct ETCDEtcdOperationView :View {
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             if item.type == 5 {
-                                Toggle("是否开启", isOn: $isDisplayed)
-                                    .onChange(of: isDisplayed, perform: { value in
+                                Toggle("", isOn:$isEnable)
+                                    .onChange(of: isEnable)
+                                { value in
                                     let _ =  storeObj.authEnable(enble: value)
-                                })
+                                    print("--------\(value)")
+                                }
                             }
                             Spacer()
                         }

@@ -549,6 +549,8 @@ extension ItemStore {
         let result = c?.authEnable(enble)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "authEnable")
+            ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
         }
         return nil
