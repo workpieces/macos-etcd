@@ -26,24 +26,32 @@ struct ETCDUserListView: View {
                 .padding(.leading,10)
                 .padding(.bottom,5)
             HStack(){
-                Text("创建用户")
-                    .font(.system(size: 12))
-                    .fontWeight(.medium)
-                    .foregroundColor(.white)
-                    .padding(.trailing,8)
-                    .padding(.leading,10)
-                TextField.init("请输入用户", text: $userText)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(10)
-                Text("创建密码")
-                    .font(.system(size: 12))
-                    .fontWeight(.medium)
-                    .foregroundColor(.white)
-                    .padding(.trailing,8)
-                    .padding(.leading,10)
-                TextField.init("请输入密码", text: $passWordText)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(10)
+                VStack(){
+                    HStack(){
+                        Text("创建用户")
+                            .font(.system(size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding(.trailing,8)
+                            .padding(.leading,10)
+                        TextField.init("请输入用户", text: $userText)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.leading,10)
+                            .padding(.trailing,5)
+                    }
+                    HStack(){
+                        Text("创建密码")
+                            .font(.system(size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding(.trailing,8)
+                            .padding(.leading,10)
+                        TextField.init("请输入密码", text: $passWordText)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.leading,10)
+                            .padding(.trailing,5)
+                    }
+                }
                 Button {
                     
                     guard !userText.isEmpty else{
