@@ -35,8 +35,6 @@
 		D03050A1281826F600477D33 /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305081281826F500477D33 /* ETCDKVItemStore.swift */; };
 		D03050A2281826F600477D33 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305083281826F500477D33 /* AboutView.swift */; };
 		D03050A3281826F600477D33 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305084281826F500477D33 /* AboutModel.swift */; };
-		D03050A4281826F600477D33 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305086281826F500477D33 /* AuthView.swift */; };
-		D03050A5281826F600477D33 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305088281826F500477D33 /* MembersView.swift */; };
 		D03050A6281826F600477D33 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508A281826F500477D33 /* Content.swift */; };
 		D03050A7281826F600477D33 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508B281826F500477D33 /* ColorHex.swift */; };
 		D03050A8281826F600477D33 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508C281826F500477D33 /* Button.swift */; };
@@ -110,8 +108,6 @@
 		D0305081281826F500477D33 /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
 		D0305083281826F500477D33 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D0305084281826F500477D33 /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
-		D0305086281826F500477D33 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		D0305088281826F500477D33 /* MembersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
 		D030508A281826F500477D33 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D030508B281826F500477D33 /* ColorHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
 		D030508C281826F500477D33 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -267,8 +263,6 @@
 			children = (
 				D00ED46A28006EAB0068CBB3 /* Assets.xcassets */,
 				D030503C281824DC00477D33 /* internationalization */,
-				D030503D281824DC00477D33 /* Bundle */,
-				D030503E281824DC00477D33 /* Lottie */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -283,28 +277,12 @@
 			path = internationalization;
 			sourceTree = "<group>";
 		};
-		D030503D281824DC00477D33 /* Bundle */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Bundle;
-			sourceTree = "<group>";
-		};
-		D030503E281824DC00477D33 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
 		D030503F281824DC00477D33 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				D030508D281826F500477D33 /* Home */,
 				D0305082281826F500477D33 /* About */,
-				D0305085281826F500477D33 /* Auth */,
 				D0305077281826F500477D33 /* KV */,
-				D0305087281826F500477D33 /* Members */,
 				D0305089281826F500477D33 /* View */,
 			);
 			path = Pages;
@@ -376,22 +354,6 @@
 				D0305084281826F500477D33 /* AboutModel.swift */,
 			);
 			path = About;
-			sourceTree = "<group>";
-		};
-		D0305085281826F500477D33 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				D0305086281826F500477D33 /* AuthView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		D0305087281826F500477D33 /* Members */ = {
-			isa = PBXGroup;
-			children = (
-				D0305088281826F500477D33 /* MembersView.swift */,
-			);
-			path = Members;
 			sourceTree = "<group>";
 		};
 		D0305089281826F500477D33 /* View */ = {
@@ -618,10 +580,8 @@
 				D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */,
 				D03050A6281826F600477D33 /* Content.swift in Sources */,
 				D0305058281824DD00477D33 /* Carousel.swift in Sources */,
-				D03050A4281826F600477D33 /* AuthView.swift in Sources */,
 				D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */,
 				D030509A281826F600477D33 /* ETCDTabBarContentView.swift in Sources */,
-				D03050A5281826F600477D33 /* MembersView.swift in Sources */,
 				D03050AA281826F600477D33 /* ETCDHomeContentView.swift in Sources */,
 				D03050AF281826F600477D33 /* ETCDStore.swift in Sources */,
 				D03050A7281826F600477D33 /* ColorHex.swift in Sources */,
