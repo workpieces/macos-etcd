@@ -17,6 +17,7 @@ struct ETCDKeyListContentView: View {
     @State private var isShowingPopover = false
     @State private var isShowingUpdatePopover = false
     @State private var textValue: String = ""
+    @State private var isDefaultSelectType: Int = 0
     func Reaload() {
         storeObj.KVReaload()
     }
@@ -73,7 +74,9 @@ struct ETCDKeyListContentView: View {
                         })
                         .contextMenu(ContextMenu(menuItems: {
                             Button("查看键值详情", action: {
-                              
+                                self.isDefaultSelectType = 1
+                                self.storeObj.realeadData.currentKv = item
+                                self.isShowingUpdatePopover.toggle()
                             })
                             Button("复制key值", action: {
                                 copyToClipBoard(textToCopy: item.key ?? "")
@@ -90,6 +93,7 @@ struct ETCDKeyListContentView: View {
                                 }
                             })
                             Button("更新键值", action: {
+                                self.isDefaultSelectType = 0
                                 self.storeObj.realeadData.currentKv = item
                                 self.textValue = item.value ?? ""
                                 self.isShowingUpdatePopover.toggle()
@@ -146,48 +150,116 @@ struct ETCDKeyListContentView: View {
                 }
             }
             .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
-                VStack {
-                    Section(header: Text("更新键值").foregroundColor(.white).font(.system(size: 12))) {
-                        TextEditor(text: $textValue)
-                            .font(.system(size: 12))
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 180, alignment: .center)
-                    .padding(.top,15)
-                    
-                    Spacer()
-                    
-                    HStack {
-                        Button {
-                            isShowingUpdatePopover.toggle()
-                        } label: {
-                            Text("取消")
+                switch isDefaultSelectType {
+                case 0:
+                    VStack {
+                        Section(header: Text("更新键值").foregroundColor(.white).font(.system(size: 12))) {
+                            TextEditor(text: $textValue)
                                 .font(.system(size: 12))
                                 .foregroundColor(.white)
                         }
-                        .padding(.trailing,20)
+                        .frame(width: 180, alignment: .center)
+                        .padding(.top,15)
                         
-                        Button {
-                            defer {isShowingUpdatePopover.toggle()}
-                            guard !textValue.isEmpty else {
-                                return
+                        Spacer()
+                        
+                        HStack {
+                            Button {
+                                isShowingUpdatePopover.toggle()
+                            } label: {
+                                Text("取消")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
                             }
+                            .padding(.trailing,20)
                             
-                            let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
-                            guard resp?.status == 200 else {
-                                return
+                            Button {
+                                defer {isShowingUpdatePopover.toggle()}
+                                guard !textValue.isEmpty else {
+                                    return
+                                }
+                                
+                                let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                                guard resp?.status == 200 else {
+                                    return
+                                }
+                                Reaload()
+                            } label: {
+                                Text("确定")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
                             }
-                            Reaload()
-                        } label: {
-                            Text("确定")
+                        }
+                        .padding(.bottom,20)
+                        Spacer()
+                    }
+                    .frame(width: 280, height: 320)
+                case 1:
+                    VStack {
+                        Spacer()
+                        Section(header: Text("查看键值详情").foregroundColor(.white).font(.system(size: 12))) {
+                                Text("CreateRevision： \(String(describing: storeObj.realeadData.currentKv?.create_revision ?? 0))")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                                Text("ModRevision： \(String(describing: storeObj.realeadData.currentKv?.mod_revision ?? 0))")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                                Text("Version： \(String(describing: storeObj.realeadData.currentKv?.version ?? 0))")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                                Text("Lease： \(String(describing: storeObj.realeadData.currentKv?.lease ?? 0))")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                            Spacer()
+                        }
+                        .padding(.top,15)
+                        Spacer()
+                    }
+                    .frame(width: 180, height: 210)
+                default:
+                    VStack {
+                        Section(header: Text("更新键值").foregroundColor(.white).font(.system(size: 12))) {
+                            TextEditor(text: $textValue)
                                 .font(.system(size: 12))
                                 .foregroundColor(.white)
                         }
+                        .frame(width: 180, alignment: .center)
+                        .padding(.top,15)
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Button {
+                                isShowingUpdatePopover.toggle()
+                            } label: {
+                                Text("取消")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.trailing,20)
+                            
+                            Button {
+                                defer {isShowingUpdatePopover.toggle()}
+                                guard !textValue.isEmpty else {
+                                    return
+                                }
+                                
+                                let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                                guard resp?.status == 200 else {
+                                    return
+                                }
+                                Reaload()
+                            } label: {
+                                Text("确定")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .padding(.bottom,20)
+                        Spacer()
                     }
-                    .padding(.bottom,20)
-                    Spacer()
+                    .frame(width: 280, height: 320)
                 }
-                .frame(width: 280, height: 320)
             }
             .listRowInsets(nil)
             .listStyle(.inset)
