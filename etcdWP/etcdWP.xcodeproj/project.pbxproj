@@ -54,6 +54,8 @@
 		D03050B72818271000477D33 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03050B52818271000477D33 /* OpenPan.swift */; };
 		D079BE5028143F36006B8619 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079BE4F28143F36006B8619 /* SnapKit */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
+		D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */; };
+		D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */; };
 		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
 		D0EC35A9281BD4BB00F77078 /* DeletingLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */; };
 		D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */; };
@@ -125,6 +127,8 @@
 		D0305099281826F600477D33 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
 		D03050B42818271000477D33 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D03050B52818271000477D33 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
+		D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDEtcdOperationView.swift; sourceTree = "<group>"; };
+		D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsView.swift; sourceTree = "<group>"; };
 		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
 		D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingLeaseListView.swift; sourceTree = "<group>"; };
 		D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLogsObject.swift; sourceTree = "<group>"; };
@@ -342,11 +346,11 @@
 		D0305077281826F500477D33 /* KV */ = {
 			isa = PBXGroup;
 			children = (
+				D0BAF521281D50720062819B /* EtcdOperation */,
 				D0305078281826F500477D33 /* ETCDTabBarContentView.swift */,
 				D0305079281826F500477D33 /* ETCDTableViewRepresentableBootcamp.swift */,
 				D030507A281826F500477D33 /* ETCDKVSubContentView.swift */,
 				D030507B281826F500477D33 /* ETCDTableView.swift */,
-				D030507C281826F500477D33 /* sheetView */,
 				D030507F281826F500477D33 /* Model */,
 			);
 			path = KV;
@@ -358,6 +362,7 @@
 				D030507D281826F500477D33 /* ETCDSheetView.swift */,
 				D0E8A994281A26F50087B3B6 /* NSTextView+.swift */,
 				D0EC35A8281BD4BB00F77078 /* DeletingLeaseListView.swift */,
+				D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -447,6 +452,15 @@
 				D03050B52818271000477D33 /* OpenPan.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D0BAF521281D50720062819B /* EtcdOperation */ = {
+			isa = PBXGroup;
+			children = (
+				D030507C281826F500477D33 /* sheetView */,
+				D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */,
+			);
+			path = EtcdOperation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */,
 				D0305059281824DD00477D33 /* CarouselItemlView.swift in Sources */,
 				D030509B281826F600477D33 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D0EC35A9281BD4BB00F77078 /* DeletingLeaseListView.swift in Sources */,
@@ -636,6 +651,7 @@
 				D03050AC281826F600477D33 /* ETCDClientStore.swift in Sources */,
 				D03050A3281826F600477D33 /* AboutModel.swift in Sources */,
 				D03050A1281826F600477D33 /* ETCDKVItemStore.swift in Sources */,
+				D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */,
 				D03050A9281826F600477D33 /* ETCDConfigView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
