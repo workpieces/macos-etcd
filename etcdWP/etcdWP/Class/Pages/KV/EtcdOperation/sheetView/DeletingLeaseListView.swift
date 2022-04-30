@@ -54,7 +54,8 @@ struct DeletingLeaseListView: View {
                         .foregroundColor(.yellow)
                 }
             }
-        }.popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
             TopToastView(title:self.isSucceFul ? "移除租约成功":"移除租约错误")
            }
 

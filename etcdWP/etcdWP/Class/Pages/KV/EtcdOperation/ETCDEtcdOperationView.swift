@@ -11,6 +11,7 @@ import SwiftUI
 struct ETCDEtcdOperationView :View {
     @State var show: Bool = false
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
+    @State var type :Int = 0
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         ZStack(alignment: .topLeading){
@@ -35,6 +36,7 @@ struct ETCDEtcdOperationView :View {
                         Spacer()
                     }.onTapGesture {
                         self.currentModel = item
+                        self.type = self.currentModel.type
                         self.show.toggle()
                     }
                     .background(Color.secondary.opacity(0.15))
@@ -45,10 +47,11 @@ struct ETCDEtcdOperationView :View {
             .padding(8.0)
             
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
-            switch self.currentModel.type {
-               case 0 :
+            switch self.type {
+               case 0 ,1:
                 ETCDKeyValueActionsView(currentModel: $currentModel)
-                
+            case 2:
+                DeletingLeaseListView(items: storeObj.LeaseList()?.datas ?? [])
                default :
                 ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
             }

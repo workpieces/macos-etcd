@@ -82,7 +82,7 @@ struct ETCDSheetView: View {
                     .textContentType(.oneTimeCode)
                 Spacer()
             }else{
-                DeletingLeaseListView(items: storeObj.LeaseList()?.datas ?? [])
+             
             }
             HStack(){
                 Button {
