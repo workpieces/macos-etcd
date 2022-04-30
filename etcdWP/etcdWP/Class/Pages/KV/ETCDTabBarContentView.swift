@@ -653,9 +653,28 @@ struct ETCDTabBarContentView: View {
     var body: some View {
         ZStack(alignment: .topLeading, content: {
             VStack {
-                withDefaultNavagationBack(title: "ETCD CLUSTER V3", isPop: $isPopView)
-                    .padding(.vertical,30)
-                    .padding(.leading ,20)
+                HStack {
+                    withDefaultNavagationBack(title: "ETCD CLUSTER V3", isPop: $isPopView)
+                        .padding(.vertical,30)
+                        .padding(.leading ,20)
+                    
+                    Button {
+                        print("批量导入")
+                    } label: {
+                        Text("批量导入")
+                            .font(.system(size: 14))
+                            .foregroundColor(Color(hex:"#00FFFF"))
+                    }
+
+                    Button {
+                        print("批量导出")
+                    } label: {
+                        Text("批量导出")
+                            .font(.system(size: 14))
+                            .foregroundColor(Color(hex:"#00FFFF"))
+                    }
+                    .padding(.trailing,15)
+                }
                 GeometryReader {  g in
                     HStack(spacing: 10.0) {
                         ETCDKeyListContentView()
