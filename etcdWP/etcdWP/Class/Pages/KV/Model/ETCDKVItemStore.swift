@@ -554,3 +554,19 @@ extension ItemStore {
     }
     
 }
+
+
+//authEnable
+extension ItemStore {
+   
+    func authEnable(enble:Bool ) -> ETCDRoleModel? {
+        let result = c?.authEnable(enble)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDRoleModel.self, from: result!)
+            return resp
+        }
+        return nil
+    }
+
+    
+}

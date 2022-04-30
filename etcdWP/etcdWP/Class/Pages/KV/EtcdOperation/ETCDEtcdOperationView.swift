@@ -36,7 +36,7 @@ struct ETCDEtcdOperationView :View {
                             if item.type == 5 {
                                 Toggle("", isOn: $isDisplayed)
                                     .onChange(of: isDisplayed) { value in
-                                        
+                                       let _ =  storeObj.authEnable(enble: value)
                                     }
                             }
                             Spacer()
