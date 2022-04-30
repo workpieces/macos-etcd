@@ -48,14 +48,7 @@ struct ETCDEtcdOperationView :View {
             .padding(8.0)
             
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
-            switch self.type {
-               case 0 ,1:
-                ETCDKeyValueActionsView(currentModel: $currentModel)
-            case 2:
-                ETCDLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
-               default :
-                ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
-            }
+           ETCDSheetView(currentModel: $currentModel)
         }
     }
     
