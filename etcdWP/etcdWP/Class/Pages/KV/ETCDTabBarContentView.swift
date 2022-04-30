@@ -23,29 +23,13 @@ struct ETCDKeyListContentView: View {
     func Reaload() {
         storeObj.KVReaload()
     }
-    
-    func DeleteKey(key: String) -> Bool{
+ 
+    func DeleteALL() throws {
         defer {storeObj.KVReaload()}
-        let data = storeObj.Delete(key: key)
-        if ((data?.datas?.isEmpty) != nil) {
-            return false
+        let resp = storeObj.DeleteALL()
+        if resp?.status != 200 {
+            throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
         }
-        if data?.status != 200 {
-            return false
-        }
-        return true
-    }
-    
-    func DeleteALL() -> Bool{
-        defer {storeObj.KVReaload()}
-        let data = storeObj.DeleteALL()
-        if ((data?.datas?.isEmpty) != nil) {
-            return false
-        }
-        if data?.status != 200 {
-            return false
-        }
-        return true
     }
     
     var body: some View {
@@ -133,9 +117,11 @@ struct ETCDKeyListContentView: View {
                                     .foregroundColor(.white)
                             }
                             Button {
-                                if !self.DeleteALL() {
-                                    print("Clean")
-                                }
+                                do {
+                                    try self.DeleteALL()
+                                } catch {
+                                    print(error.localizedDescription)
+                                }                                
                             } label: {
                                 Text("清空键值")
                                     .font(.caption)
