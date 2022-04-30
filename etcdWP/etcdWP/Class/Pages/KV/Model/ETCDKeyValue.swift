@@ -58,6 +58,10 @@ struct KVData: Codable, Identifiable {
     let status: KVStatus?
     // etcd members obj
     let members: KVMember?
+    // roles list
+    let role: String?
+    // user list
+    let user: String?
     
     enum CodingKeys: String, CodingKey {
         case ttlid
@@ -72,6 +76,8 @@ struct KVData: Codable, Identifiable {
         case size
         case status
         case members
+        case role
+        case user
     }
 }
 

@@ -629,8 +629,11 @@ struct ETCDTabBarContentView: View {
                             let outs = try decoder.decode([OutKvModel].self, from: data)
                             for item in outs {
                                 let resp = storeObj.Put(key: item.key, value: item.value)
-                                print(resp?.status as Any)
+                                if resp?.status != 200 {
+                                    throw Error
+                                }
                             }
+                            storeObj.KVReaload()
                         } catch {
                             print(error.localizedDescription)
                         }
