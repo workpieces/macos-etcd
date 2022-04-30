@@ -48,8 +48,9 @@ struct ETCDRolesListView: View {
                         }else{
                             items =  storeObj.RolesList()
                         }
+                        presentationMode.wrappedValue.dismiss()
                     }
-                    presentationMode.wrappedValue.dismiss()
+
                 } label: {
                     Text("确定")
                         .font(.system(size: 12))
