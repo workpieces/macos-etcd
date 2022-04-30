@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ETCDRolesListView: View {
-    @State var items :[ETCDRoleDetailModel]
+    @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
     @State var isSucceFul: Bool = false
@@ -41,13 +41,13 @@ struct ETCDRolesListView: View {
                     }
                     if roleText != role{
                         role = roleText
-                        let  result   =  storeObj.createRole(roleId: roleText)
-                        if result?.status != 200 {
-                            self.isSucceFul.toggle()
-                            self.isShowToast.toggle()
-                        }else{
-                            items =  storeObj.RolesList()
-                        }
+//                        let  result   =  storeObj.createRole(roleId: roleText)
+//                        if result?.status != 200 {
+//                            self.isSucceFul.toggle()
+//                            self.isShowToast.toggle()
+//                        }else{
+//                            items =  storeObj.RolesList()
+//                        }
                         presentationMode.wrappedValue.dismiss()
                     }
 
@@ -81,15 +81,15 @@ struct ETCDRolesListView: View {
 //方法
 extension ETCDRolesListView {
     
-     func deleFunc(item:ETCDRoleDetailModel) {
-         let reuslt = storeObj.removeRole(roleId: item.role!)
-        if reuslt?.status != 200{
-            self.isShowToast.toggle()
-        }else{
-            self.isSucceFul .toggle()
-            self.isShowToast.toggle()
-        }
-    }
+//     func deleFunc(item:ETCDRoleDetailModel) {
+//         let reuslt = storeObj.removeRole(roleId: item.role!)
+//        if reuslt?.status != 200{
+//            self.isShowToast.toggle()
+//        }else{
+//            self.isSucceFul .toggle()
+//            self.isShowToast.toggle()
+//        }
+//    }
     
  
     
@@ -111,7 +111,7 @@ extension ETCDRolesListView {
                             copyToClipBoard(textToCopy:item.role!)
                         })
                         Button("移除", action: {
-                            deleFunc(item: item)
+//                            deleFunc(item: item)
                         })
                     }))
                 Spacer()
@@ -123,7 +123,7 @@ extension ETCDRolesListView {
                         .foregroundColor(.white)
                 }
                 Button {
-                    deleFunc(item: item)
+//                    deleFunc(item: item)
                 } label: {
                     Text("移除")
                         .font(.system(size: 10.0))
