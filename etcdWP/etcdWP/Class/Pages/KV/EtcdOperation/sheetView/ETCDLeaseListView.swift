@@ -25,10 +25,20 @@ struct ETCDLeaseListView: View {
                 .padding(.leading,10)
                 .padding(.bottom,5)
             HStack(){
+                Text("创建租约时间")
+                    .font(.system(size: 12))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding(.trailing,8)
+                    .padding(.leading,10)
                 TextField.init("请输入时间", text: $timeText)
                     .textFieldStyle(.roundedBorder)
                     .padding(10)
                 Button {
+                    
+                    guard !timeText.isEmpty else{
+                        return
+                    }
                     let  numStrin  =  timeText.trimmingCharacters(in: .decimalDigits)
                     if numStrin.isEmpty {
                         let time = Int(timeText)
@@ -42,6 +52,7 @@ struct ETCDLeaseListView: View {
                             }
                         }
                     }
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("确定")
                         .font(.system(size: 12))
@@ -100,7 +111,8 @@ extension ETCDLeaseListView {
 extension ETCDLeaseListView {
     
     private var leaseListView : some View {
-        List(items){ item in
+
+        List(items.reversed()){ item in
             HStack(){
                 Text(String(format: "租约ID：%ld", item.ttlid!))
                     .font(.subheadline)
