@@ -21,6 +21,7 @@ struct ETCDSheetView: View {
     @State var isSuccessful : Bool = false
     @State var keyText : String = ""
     @State var valueText : String = ""
+    @State var timeText : String = ""
     @State var times :Int = 0
     var body: some View {
         VStack(){
@@ -54,39 +55,7 @@ struct ETCDSheetView: View {
                             .frame(height: 280)
                     }.padding(8)
                 }else{
-                    VStack(){
-                        HStack(){
-                            Text("请输入key")
-                                .foregroundColor(Color.white)
-                                .font(.custom("HelveticaNeue", size: 12))
-                                .lineSpacing(1.5)
-                                .padding(10)
-                            TextField.init("请输入key", text: $keyText, onEditingChanged: { _ in},onCommit: {
-                                
-                            }).textFieldStyle(.roundedBorder)
-                                .padding(10)
-                        }
-                        HStack(){
-                            Text("请输入Value")
-                                .foregroundColor(Color.white)
-                                .font(.custom("HelveticaNeue", size: 12))
-                                .lineSpacing(1.5)
-                                .padding(10)
-                            TextEditor(text: $valueText)
-                                .foregroundColor(Color.white)
-                                .font(.custom("HelveticaNeue", size: 12))
-                                .lineSpacing(1.5)
-                                .disableAutocorrection(true)
-                                .allowsTightening(true)
-                                .padding(.bottom,5)
-                                .padding(10)
-                                .frame(height: 280)
-                                .background(Color.gray.opacity(0.15))
-                                .cornerRadius(10)
-                                .clipped()
-                            Spacer().frame(width: 10)
-                        }
-                    }
+                   
 
                 }
                 
@@ -102,7 +71,7 @@ struct ETCDSheetView: View {
                         } label: {
                             Text("粘贴")
                                 .font(.system(size: 10.0))
-                                .foregroundColor(.yellow)
+                                .foregroundColor(.white)
                         }
                     }
                   
@@ -113,7 +82,7 @@ struct ETCDSheetView: View {
                     .textContentType(.oneTimeCode)
                 Spacer()
             }else{
-                DeletingLeaseListView(items: storeObj.LeaseList()?.datas ?? [])
+             
             }
             HStack(){
                 Button {
@@ -122,7 +91,7 @@ struct ETCDSheetView: View {
                     Text("取消")
                         .font(.system(size: 12))
                         .fontWeight(.medium)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                         .padding(10)
                 }
                 if self.isSuccessful{
@@ -132,7 +101,7 @@ struct ETCDSheetView: View {
                         Text("关闭")
                             .font(.system(size: 12))
                             .fontWeight(.medium)
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.white)
                             .padding(10)
                     }
                 }else{
@@ -142,7 +111,7 @@ struct ETCDSheetView: View {
                             self.isError.toggle()
                             return
                         }
-                        let _ = storeObj.Put(key: keyText, value: valueText)
+                        let _ = storeObj.PutWithTTL(key: keyText, value: valueText, ttl: timeText.toInt() ?? 0)
                         presentationMode.wrappedValue.dismiss()
                     }else if self.currentModel.type == 1{
                         
@@ -178,7 +147,7 @@ struct ETCDSheetView: View {
                     Text("确定")
                         .font(.system(size: 12))
                         .fontWeight(.medium)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                         .padding(10)
                 }
                     

@@ -475,7 +475,7 @@ struct ETCDKVOperateContentView: View {
                 MakeOperateKvTextContentView()
                     .frame(width: g.size.width/2)
                 Spacer()
-                MakeOperateButtonContentView()
+                ETCDEtcdOperationView()
                     .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
                     .frame(width: g.size.width/2)
                 Spacer()
@@ -517,54 +517,6 @@ struct MakeOperateKvTextContentView: View {
                 }
             }
         }
-    }
-}
-
-struct MakeOperateButtonContentView :View {
-    @State var show: Bool = false
-    @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
-    @EnvironmentObject var storeObj : ItemStore
-    
-    var body: some View {
-        ZStack(alignment: .topLeading){
-            List {
-                ForEach(KVOperateModel.getItems()) { item in
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            Text(item.name)
-                                .font(.body)
-                                .foregroundColor(.white)
-                                .truncationMode(.middle)
-                                .frame(maxHeight: 44.0)
-                            Text(item.english)
-                                .font(.body)
-                                .foregroundColor(.white)
-                                .truncationMode(.middle)
-                                .frame(maxHeight: 44.0)
-                            Spacer()
-                        }
-                        Spacer()
-                    }.onTapGesture {
-                        self.currentModel = item
-                        self.show.toggle()
-                    }
-                    .background(Color.secondary.opacity(0.15))
-                    .cornerRadius(8)
-                    .clipped()
-                }
-            }
-            .padding(8.0)
-            
-        }.sheet(isPresented: $show, onDismiss: didDismiss) {
-            ETCDSheetView(currentModel:$currentModel, text:storeObj.realeadData.currentKv?.value ?? "")
-        }
-    }
-    
-    func didDismiss() {
-        //消失回调
-        storeObj.KVReaload()
     }
 }
 
