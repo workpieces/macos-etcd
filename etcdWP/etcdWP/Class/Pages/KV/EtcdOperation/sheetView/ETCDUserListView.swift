@@ -57,7 +57,6 @@ struct ETCDUserListView: View {
                     guard !userText.isEmpty else{
                         return
                     }
-<<<<<<< HEAD
                     if roleText != role{
                         role = roleText
 //                        let  result   =  storeObj.createRole(roleId: roleText)
@@ -67,7 +66,6 @@ struct ETCDUserListView: View {
 //                        }else{
 //                            items =  storeObj.RolesList()
 //                        }
-=======
                     if userText != user{
                         user = userText
                         let  result   =  storeObj.addUser(user: userText, password: passWordText)
@@ -77,7 +75,6 @@ struct ETCDUserListView: View {
                         }else{
                             items =  storeObj.RolesList()
                         }
->>>>>>> 7d5ee7e7430112e4b3540f2c895f4dd79ce12b09
                         presentationMode.wrappedValue.dismiss()
                     }
 
@@ -111,7 +108,7 @@ struct ETCDUserListView: View {
 //方法
 extension ETCDUserListView {
     
-<<<<<<< HEAD
+
 //     func deleFunc(item:ETCDRoleDetailModel) {
 //         let reuslt = storeObj.removeRole(roleId: item.role!)
 //        if reuslt?.status != 200{
@@ -121,7 +118,7 @@ extension ETCDUserListView {
 //            self.isShowToast.toggle()
 //        }
 //    }
-=======
+
      func deleFunc(item:ETCDRoleDetailModel) {
          let reuslt = storeObj.removeUser(user: item.user!)
         if reuslt?.status != 200{
@@ -131,7 +128,6 @@ extension ETCDUserListView {
             self.isShowToast.toggle()
         }
     }
->>>>>>> 7d5ee7e7430112e4b3540f2c895f4dd79ce12b09
     
  
     
