@@ -87,11 +87,14 @@ struct ETCDKeyListContentView: View {
                                 copyToClipBoard(textToCopy: item.value ?? "")
                             })
                             Button("删除键值", action: {
-                                guard ((item.key?.isEmpty) == nil) else {
-                                    let resp =  storeObj.Delete(key: item.key!)
-                                    print(resp as Any)
+                                do {
+                                    let resp = storeObj.Delete(key: item.key!)
+                                    if resp?.status != 200 {
+                                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                    }
                                     Reaload()
-                                    return
+                                } catch  {
+                                    print(error.localizedDescription)
                                 }
                             })
                             Button("更新键值", action: {
@@ -185,15 +188,20 @@ struct ETCDKeyListContentView: View {
                             
                             Button {
                                 defer {isShowingUpdatePopover.toggle()}
-                                guard !textValue.isEmpty else {
-                                    return
+                                
+                                do {
+                                    guard !textValue.isEmpty else {
+                                        throw NSError.init(domain: "键值不能输入为空", code: 400)
+                                    }
+                                    let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                                    if resp?.status != 200 {
+                                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                    }
+                                    Reaload()
+                                } catch  {
+                                    print(error.localizedDescription)
                                 }
                                 
-                                let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
-                                guard resp?.status == 200 else {
-                                    return
-                                }
-                                Reaload()
                             } label: {
                                 Text("确定")
                                     .font(.system(size: 12))
@@ -622,7 +630,6 @@ struct ETCDTabBarContentView: View {
                         .padding(.leading ,20)
                     
                     FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
-                        print("load")
                         do {
                             let data = try Data(contentsOf: urls[0])
                             let decoder = JSONDecoder()
@@ -630,7 +637,7 @@ struct ETCDTabBarContentView: View {
                             for item in outs {
                                 let resp = storeObj.Put(key: item.key, value: item.value)
                                 if resp?.status != 200 {
-                                    throw Error
+                                    throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                 }
                             }
                             storeObj.KVReaload()
@@ -645,9 +652,10 @@ struct ETCDTabBarContentView: View {
                     
                     // copy from https://www.raywenderlich.com/books/swiftui-apprentice/v1.0/chapters/19-saving-files
                     Button {
-                        print("save")
-                        let urls  = showOpenPanel()
-                        guard ((urls?.path.isEmpty) == nil) else {
+                        do {
+                            guard  ((showOpenPanel()?.path.isEmpty) == nil) else {
+                                throw NSError.init(domain: "保存目录不能为空", code: 500)
+                            }
                             var outs = [OutKvModel]()
                             for item in storeObj.realeadData.temp {
                                 if  !item.key!.isEmpty && !item.value!.isEmpty {
@@ -656,18 +664,13 @@ struct ETCDTabBarContentView: View {
                                     outs.append(OutKvModel.init(key: key, value: value))
                                 }
                             }
-                            
-                            do {
-                                let encoder = JSONEncoder()
-                                encoder.outputFormatting = .prettyPrinted
-                                
-                                let data = try encoder.encode(outs)
-                                let current_url  =  urls!.appendingPathComponent("etcdwp.json")
-                                try data.write(to: current_url)
-                            } catch {
-                                print(error.localizedDescription)
-                            }
-                            return
+                            let encoder = JSONEncoder()
+                            encoder.outputFormatting = .prettyPrinted
+                            let data = try encoder.encode(outs)
+                            let current_url  =  showOpenPanel()!.appendingPathComponent("etcdwp.json")
+                            try data.write(to: current_url)
+                        } catch {
+                            print(error.localizedDescription)
                         }
                     } label: {
                         Text("批量导出")
