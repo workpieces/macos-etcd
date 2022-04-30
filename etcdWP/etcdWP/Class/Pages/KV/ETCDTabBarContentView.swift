@@ -663,6 +663,17 @@ struct ETCDTabBarContentView: View {
                     
                     FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
                         print("load")
+                        do {
+                            let data = try Data(contentsOf: urls[0])
+                            let decoder = JSONDecoder()
+                            let outs = try decoder.decode([OutKvModel].self, from: data)
+                            for item in outs {
+                                let resp = storeObj.Put(key: item.key, value: item.value)
+                                print(resp?.status as Any)
+                            }
+                        } catch {
+                            print(error.localizedDescription)
+                        }
                     } label: {
                         Text("批量导入")
                             .font(.system(size: 14))
@@ -672,19 +683,21 @@ struct ETCDTabBarContentView: View {
                     Button {
                         let urls  = showOpenPanel()
                         guard ((urls?.path.isEmpty) == nil) else {
-                            var dict = [String:String]()
+                            var outs = [OutKvModel]()
                             for item in storeObj.realeadData.temp {
                                 if  !item.key!.isEmpty && !item.value!.isEmpty {
                                     let key = item.key ?? ""
                                     let value = item.value ?? ""
-                                    dict[key] = value
+                                    outs.append(OutKvModel.init(key: key, value: value))
                                 }
                             }
                             
                             do {
                                 let encoder = JSONEncoder()
-                                let data = try encoder.encode(dict)
-                                let  current_url  =  urls!.appendingPathComponent("etcdwp.json")
+                                encoder.outputFormatting = .prettyPrinted
+                                
+                                let data = try encoder.encode(outs)
+                                let current_url  =  urls!.appendingPathComponent("etcdwp.json")
                                 try data.write(to: current_url)
                             } catch {
                                 print(error.localizedDescription)

@@ -8,6 +8,12 @@
 import SwiftUI
 import Foundation
 
+
+struct OutKvModel: Codable {
+    var key : String
+    var value: String
+}
+
 struct ETCDKeyValue: Codable {
     let datas: [KVData]?
     // status is response status
