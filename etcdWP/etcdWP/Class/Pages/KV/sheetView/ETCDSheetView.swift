@@ -27,28 +27,32 @@ struct ETCDSheetView: View {
             Text(currentModel.name).padding(10)
             if currentModel.type == 0 || currentModel.type == 1{
                 if currentModel.type == 1{
-                    HStack(){
-                        TextField.init("Search", text: $serachText, onEditingChanged: { _ in},onCommit: {
-                            
-                            
-                        }).textFieldStyle(.roundedBorder)
+                    VStack(){
+                        HStack(){
+                            TextField.init("Search", text: $serachText, onEditingChanged: { _ in},onCommit: {
+                                
+                                
+                            }).textFieldStyle(.roundedBorder)
+                                .padding(10)
+                            TextField.init("替换", text: $replaceText, onEditingChanged: { _ in},onCommit: {
+                                
+                            }).textFieldStyle(.roundedBorder)
+                                .padding(10)
+                        }
+                        
+                        TextEditor(text: $text)
+                            .foregroundColor(Color.white)
+                            .font(.custom("HelveticaNeue", size: 12))
+                            .lineSpacing(1.5)
+                            .disableAutocorrection(true)
+                            .allowsTightening(true)
+                            .padding(.bottom,5)
                             .padding(10)
-                        TextField.init("替换", text: $replaceText, onEditingChanged: { _ in},onCommit: {
-                            
-                        }).textFieldStyle(.roundedBorder)
-                            .padding(10)
-                    }
-                    TextEditor(text: $text)
-                        .foregroundColor(Color.white)
-                        .font(.custom("HelveticaNeue", size: 12))
-                        .lineSpacing(1.5)
-                        .disableAutocorrection(true)
-                        .allowsTightening(true)
-                        .padding(.bottom,5)
-                        .padding(.top,10)
-                        .padding(.trailing,10)
-                        .padding(.leading,10)
-                        .frame(height: 280)
+                            .background(Color.gray.opacity(0.15))
+                            .cornerRadius(10)
+                            .clipped()
+                            .frame(height: 280)
+                    }.padding(8)
                 }else{
                     VStack(){
                         HStack(){
