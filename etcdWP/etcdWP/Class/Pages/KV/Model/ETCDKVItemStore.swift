@@ -421,7 +421,7 @@ extension ItemStore {
         return nil
     }
     
-    func MemberRemove(id: Int) -> ETCDKeyValue? {
+    func MemberRemove(id: String) -> ETCDKeyValue? {
         let result = c?.memberRemove(id)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
@@ -431,7 +431,7 @@ extension ItemStore {
         }
         return nil
     }
-    func MemberUpdate(id: Int,peerUrl: String) ->ETCDKeyValue? {
+    func MemberUpdate(id: String,peerUrl: String) ->ETCDKeyValue? {
         let result = c?.memberUpdate(id, peerUrl: peerUrl)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
@@ -441,7 +441,7 @@ extension ItemStore {
         }
         return nil
     }
-    func MemberPromotes(id: Int) ->ETCDKeyValue? {
+    func MemberPromotes(id: String) ->ETCDKeyValue? {
         let result = c?.promotes(id)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)

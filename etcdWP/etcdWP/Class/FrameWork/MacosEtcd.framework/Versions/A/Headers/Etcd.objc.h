@@ -40,11 +40,11 @@
 - (NSData* _Nullable)leaseList;
 - (NSData* _Nullable)memberAdd:(NSString* _Nullable)endpoint learner:(BOOL)learner;
 - (NSData* _Nullable)memberList;
-- (NSData* _Nullable)memberRemove:(long)id_;
-- (NSData* _Nullable)memberUpdate:(long)id_ peerUrl:(NSString* _Nullable)peerUrl;
+- (NSData* _Nullable)memberRemove:(NSString* _Nullable)id_;
+- (NSData* _Nullable)memberUpdate:(NSString* _Nullable)id_ peerUrl:(NSString* _Nullable)peerUrl;
 - (BOOL)permission:(NSString* _Nullable)role key:(NSString* _Nullable)key end:(NSString* _Nullable)end error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)ping;
-- (NSData* _Nullable)promotes:(long)id_;
+- (NSData* _Nullable)promotes:(NSString* _Nullable)id_;
 - (NSData* _Nullable)put:(NSString* _Nullable)key value:(NSString* _Nullable)value;
 - (NSData* _Nullable)putKeyWithAliveOnce:(NSString* _Nullable)key value:(NSString* _Nullable)value leaseid:(long)leaseid;
 - (NSData* _Nullable)putKeyWithLease:(NSString* _Nullable)key value:(NSString* _Nullable)value leaseid:(long)leaseid;
