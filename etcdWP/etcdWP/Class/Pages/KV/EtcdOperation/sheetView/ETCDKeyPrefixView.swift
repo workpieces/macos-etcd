@@ -68,7 +68,7 @@ struct ETCDKeyPrefixView: View {
                 
             }.padding(.bottom ,10)
             
-        }.frame(minWidth: 150, maxWidth: .infinity, minHeight: 150, maxHeight: .infinity)
+        }.frame(minWidth: 200, maxWidth: .infinity, minHeight: 150, maxHeight: .infinity)
             .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
                 TopToastView(title:self.isSucceful ? "保存失败" : "输入错误，请重新输入")
             }
