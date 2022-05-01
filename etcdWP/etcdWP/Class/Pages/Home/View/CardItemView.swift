@@ -11,7 +11,7 @@ struct CardItemView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var showAlert = false
     @State private var pushEdit = false
-    var options: EtcdClientOption
+    @State var  options: EtcdClientOption
     var idx : Int
     var body: some View {
         VStack {
@@ -78,9 +78,14 @@ struct CardItemView: View {
                 HStack(){
                     Spacer()
                     Button {
-            
+                        if options.status == true {
+                         try! homeData.CloseUseUUID(uuid: options.id.uuidString)
+                        }else{
+                            try! homeData.OpenUseUUID(uuid: options.id.uuidString)
+                        }
+                        options.status.toggle()
                     } label: {
-                        Text("开启")
+                        Text(options.status == true ? "停止" : "开启")
                             .font(.system(size: 10.0))
                             .foregroundColor(.white)
                             .frame(width: 50)
