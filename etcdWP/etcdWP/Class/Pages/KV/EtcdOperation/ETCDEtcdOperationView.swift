@@ -47,8 +47,10 @@ struct ETCDEtcdOperationView :View {
                         Spacer()
                     }.onTapGesture {
                         self.currentModel = item
-                        self.type = self.currentModel.type
-                        self.show.toggle()
+                        if item.type != 5{
+                            self.type = self.currentModel.type
+                            self.show.toggle()
+                        }
                     }
                     .background(Color.secondary.opacity(0.15))
                     .cornerRadius(8)
