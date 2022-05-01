@@ -25,9 +25,7 @@ struct ETCDKeyPrefixView: View {
                     .font(.custom("HelveticaNeue", size: 12))
                     .lineSpacing(1.5)
                     .padding(10)
-                TextField.init("请输入前缀key", text: $keyPrefixText, onEditingChanged: { _ in},onCommit: {
-                    
-                }).textFieldStyle(.roundedBorder)
+                TextField.init("请输入前缀key", text: $keyPrefixText).textFieldStyle(.roundedBorder)
                     .padding(.top,10)
                     .padding(.trailing,10)
                     .padding(.leading,10)
@@ -48,8 +46,7 @@ struct ETCDKeyPrefixView: View {
                         self.isShowToast.toggle()
                         return
                     }
-                
-                    let result = storeObj.DeletePrefix(key: keyPrefix)
+                    let result = storeObj.DeletePrefix(key: keyPrefixText)
                     if result?.status  != 200 {
                         self.isSucceful.toggle()
                         self.isShowToast.toggle()
