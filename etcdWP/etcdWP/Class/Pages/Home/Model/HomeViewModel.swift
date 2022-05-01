@@ -84,7 +84,7 @@ class HomeViewModel: ObservableObject {
     // 监听服务
     // copy from https://stackoverflow.com/questions/71849684/swiftui-concurrency-run-activity-only-on-background-thread
     func WatchListenEtcdClient() async {
-        Task.detached(priority: .medium) {
+        Task.detached(priority: .utility) {
             for (idx,item) in self.ectdClientList.enumerated() {
                 if item.etcdClient == nil{
                     // todo  卡顿
@@ -100,25 +100,27 @@ class HomeViewModel: ObservableObject {
                                              item.autoSyncInterval ,
                                              nil)
                     if c != nil {
-                        // todo 卡顿
+                        // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
+                        let ok : Bool = self.Ping(c: c!)
                         await MainActor.run {
                             self.ectdClientList[idx].etcdClient = c
-                            self.ectdClientList[idx].status = self.Ping(c: c!)
+                            self.ectdClientList[idx].status = ok
                         }
                     }else{
                         await MainActor.run {
-                            self.ectdClientList[idx].etcdClient = c
                             self.ectdClientList[idx].status  = false
                         }
                     }
                 }else{
+                    let ok : Bool = self.Ping(c: item.etcdClient!)
                     await MainActor.run {
-                        self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)
+                        // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
+                        self.ectdClientList[idx].etcdClient = nil
+                        self.ectdClientList[idx].status = ok
                     }
                 }
               
             }
-    
         }
     }
 }
