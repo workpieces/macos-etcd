@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+// 左侧Tab选择状态
+class HomeTabSelectModel: ObservableObject {
+    @Published var selectTab = "Home"
+    @Published var etcdTab = "KV"
+}
+
 struct TabbarOption: Hashable {
     let title: String
     let image: String
