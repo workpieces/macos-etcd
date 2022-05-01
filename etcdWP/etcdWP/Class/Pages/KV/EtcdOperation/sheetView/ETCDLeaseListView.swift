@@ -89,7 +89,6 @@ extension ETCDLeaseListView {
             self.isShowToast.toggle()
         }else{
             self.isSucceFul .toggle()
-            self.isShowToast.toggle()
         }
     }
     
@@ -99,7 +98,6 @@ extension ETCDLeaseListView {
             self.isShowToast.toggle()
         }else{
             self.isSucceFul .toggle()
-            self.isShowToast.toggle()
         }
     }
     
