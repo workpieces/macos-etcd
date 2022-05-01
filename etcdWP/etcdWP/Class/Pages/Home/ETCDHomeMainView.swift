@@ -11,8 +11,6 @@ import NavigationStack
 struct HomeMainView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var isLinkActive = false
-    @Environment(\.scenePhase) var scenePhase
-    @State private var isActive = true
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
@@ -34,25 +32,16 @@ struct HomeMainView: View {
                                     c: self.homeData.ectdClientList[item].etcdClient,address: self.homeData.ectdClientList[item].endpoints.first!,status: self.homeData.ectdClientList[item].status))){
                                 CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
-                        }
-                       
+                        }                       
                     }
                     .padding(GriditemPaddingSpace)
                 }
             } .onReceive(timer, perform: {_ in
-                print("\(timer)")
-                guard isActive else { return }
-                DispatchQueue.main.async {
-                    homeData.WatchListenEtcdClient()
+                Task {
+                   await homeData.WatchListenEtcdClient()
                 }
             }).onDisappear {
                 self.timer.upstream.connect().cancel()
-            }.onChange(of: scenePhase) { pause in
-                if pause == .active {
-                    isActive = true
-                } else {
-                    isActive = false
-                }
             }
         }
     }
