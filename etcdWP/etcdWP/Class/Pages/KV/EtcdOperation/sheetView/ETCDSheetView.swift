@@ -12,8 +12,10 @@ struct ETCDSheetView: View {
     @Binding var currentModel  : KVOperateModel
     var body: some View {
         switch self.currentModel.type {
-        case 0 ,1:
+        case 0:
             ETCDKeyValueActionsView(currentModel: $currentModel)
+        case 1:
+            ETCDKeyPrefixView(currentModel: $currentModel)
         case 2:
             ETCDLeaseListView(items: storeObj.LeaseList()?.datas ?? [],currentModel:$currentModel)
         case 3:
