@@ -84,6 +84,7 @@ class HomeViewModel: ObservableObject {
     func WatchListenEtcdClient() {
         for (idx,item) in self.ectdClientList.enumerated() {
             if item.etcdClient == nil{
+                // todo may be 卡顿
                 let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                          item.username,
                                          item.password,
@@ -97,7 +98,10 @@ class HomeViewModel: ObservableObject {
                                          nil)
                 self.ectdClientList[idx].etcdClient = c
                 if c != nil {
+                    // may be 卡顿
                     self.ectdClientList[idx].status = self.Ping(c: c!)
+                }else{
+                    self.ectdClientList[idx].status  = false
                 }
             }else{
                 self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)

@@ -27,7 +27,7 @@ struct AboutView: View {
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(abouts) { item in
                             ZStack {
-                                Color(hex:"#1C4091").opacity(0.45)
+                                Color(hex:"#00FFFF").opacity(0.15)
                                     .cornerRadius(DefaultRadius)
                                 VStack {
                                     Text(item.title)

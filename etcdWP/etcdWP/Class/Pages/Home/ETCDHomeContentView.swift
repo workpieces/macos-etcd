@@ -59,8 +59,7 @@ struct ETCDHomeContentView: View {
             self.homeData.ectdClientList.removeAll()
         }
         .onAppear{
-            //优化获取的时机
-            self.homeData.WatchListenEtcdClient()
+            homeData.WatchListenEtcdClient()
         }
     }
 }
