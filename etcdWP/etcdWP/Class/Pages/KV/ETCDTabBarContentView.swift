@@ -670,7 +670,8 @@ struct ETCDTabBarContentView: View {
                     // copy from https://www.raywenderlich.com/books/swiftui-apprentice/v1.0/chapters/19-saving-files
                     Button {
                         do {
-                            guard  ((showOpenPanel()?.path.isEmpty) == nil) else {
+                            let path  = showOpenPanel()
+                            guard  path?.path.isEmpty != nil else {
                                 throw NSError.init(domain: "保存目录不能为空", code: 500)
                             }
                             var outs = [OutKvModel]()
@@ -684,7 +685,7 @@ struct ETCDTabBarContentView: View {
                             let encoder = JSONEncoder()
                             encoder.outputFormatting = .prettyPrinted
                             let data = try encoder.encode(outs)
-                            let current_url  =  showOpenPanel()!.appendingPathComponent("etcdwp.json")
+                            let current_url  =  path!.appendingPathComponent("etcdwp.json")
                             try data.write(to: current_url)
                         } catch {
                             print(error.localizedDescription)
