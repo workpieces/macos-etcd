@@ -47,7 +47,9 @@ struct DefaultAddButtonViewModifier: ViewModifier{
         HStack {
             Spacer()
             Button {
-             try!   homeData.OpenALL()
+                Task {
+                    try! await  homeData.OpenALL()
+                }
             } label: {
                 Text("开启所有服务")
                     .font(.system(size: 10.0))
@@ -60,7 +62,9 @@ struct DefaultAddButtonViewModifier: ViewModifier{
               .cornerRadius(8)
               .clipped()
             Button {
-                try!  homeData.CloseAll()
+                Task {
+                    try! await  homeData.CloseAll()
+                }
             } label: {
                 Text("停止所有服务")
                     .font(.system(size: 10.0))
