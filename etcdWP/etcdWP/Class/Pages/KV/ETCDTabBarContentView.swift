@@ -37,6 +37,7 @@ struct ETCDKeyListContentView: View {
             List {
                 Section {
                     ForEach(storeObj.realeadData.kvs) { item in
+//                    List(storeObj.realeadData.kvs, children: \.children) { item in
                         ZStack {
                             HStack {
                                 Image(systemName: DefaultKeyImageName)
