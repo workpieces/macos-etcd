@@ -155,8 +155,16 @@ struct ETCDKeyListContentView: View {
                     VStack {
                         Section(header: Text("更新键值").foregroundColor(.white).font(.system(size: 12))) {
                             TextEditor(text: $textValue)
+                                .foregroundColor(Color.white)
                                 .font(.system(size: 12))
-                                .foregroundColor(.white)
+                                .lineSpacing(1.5)
+                                .disableAutocorrection(true)
+                                .allowsTightening(true)
+                                .padding(.bottom,5)
+                                .padding(10)
+                                .background(Color.gray.opacity(0.15))
+                                .cornerRadius(10)
+                                .clipped()
                         }
                         .frame(width: 180, alignment: .center)
                         .padding(.top,15)
