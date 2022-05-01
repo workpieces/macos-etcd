@@ -8,10 +8,14 @@
 import Foundation
 import MacosEtcd
 
-class HomeViewModel: ObservableObject {
-    let userDefaultsKey: String = "com.etcdclient.list"
+// 左侧选择导航
+class HomeTabSelectModel: ObservableObject {
     @Published var selectTab = "Home"
     @Published var etcdTab = "KV"
+}
+
+class HomeViewModel: ObservableObject {
+    let userDefaultsKey: String = "com.etcdclient.list"
     @Published var ectdClientList: [EtcdClientOption] = []
     
     init() {

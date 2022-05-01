@@ -13,6 +13,8 @@ var screen = NSScreen.main!.visibleFrame
 
 struct ETCDHomeContentView: View {
     @StateObject var homeData = HomeViewModel()
+    @ObservedObject var tableData = HomeTabSelectModel()
+    
     let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {
         return  NavigationStackView(transitionType: .custom(.opacity)){
@@ -31,7 +33,7 @@ struct ETCDHomeContentView: View {
                         withDefaultTabarButton(
                             imageName: item.image,
                             title: item.title,
-                            selectTab: $homeData.selectTab)
+                            selectTab: $tableData.selectTab)
                     }
                     Spacer()
                     Text("Version: \(homeData.getVersion())")
@@ -41,7 +43,7 @@ struct ETCDHomeContentView: View {
                 .padding()
                 
                 ZStack(alignment: .top){
-                    switch homeData.selectTab{
+                    switch tableData.selectTab{
                     case "Home": HomeMainView()
                     case "About": AboutView()
                         default: HomeMainView() }
