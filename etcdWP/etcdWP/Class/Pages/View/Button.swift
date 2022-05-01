@@ -46,25 +46,6 @@ struct DefaultAddButtonViewModifier: ViewModifier{
     func body(content: Content) -> some View {
         HStack {
             Spacer()
-            Button {
-                Task {
-                    if homeData.allStart == true {
-                        try! await  homeData.CloseAll()
-                    }else{
-                        try! await  homeData.OpenALL()
-                    }
-                }
-            } label: {
-                Text(homeData.allStart == true ? "停止所有服务":"开启所有服务")
-                    .font(.system(size: 14))
-                    .foregroundColor(.white)
-                    .frame(width:100)
-            } .frame(alignment: .trailing)
-              .buttonStyle(PlainButtonStyle())
-              .padding(18)
-              .background(Color(hex:"#00FFFF").opacity(0.55))
-              .cornerRadius(8)
-              .clipped()
             PushView(destination: ETCDConfigView(), isActive: $isLinkActive) {
                 Button {  self.isLinkActive.toggle() } label: {
                     HStack {
