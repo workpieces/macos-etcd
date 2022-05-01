@@ -180,22 +180,26 @@ extension ItemStore {
     // 开启服务
     func Open() throws {
         guard c.etcdClient != nil && c.etcdClient!.ping() else {
-            let client =  EtcdNewKVClient(c.endpoints.joined(separator: ","),
-                                          c.username,
-                                          c.password,
-                                          c.certificate,
-                                          c.certKey,
-                                          c.requestTimeout ,
-                                          c.dialTimeout ,
-                                          c.dialKeepAliveTime ,
-                                          c.dialKeepAliveTimeout ,
-                                          c.autoSyncInterval ,
-                                          nil)
-            if client == nil {
-                throw NSError.init(domain: "开启服务失败，请重试", code: 400)
+            Task.detached(priority: .utility) {
+                let client =  EtcdNewKVClient(self.c.endpoints.joined(separator: ","),
+                                              self.c.username,
+                                              self.c.password,
+                                              self.c.certificate,
+                                              self.c.certKey,
+                                              self.c.requestTimeout ,
+                                              self.c.dialTimeout ,
+                                              self.c.dialKeepAliveTime ,
+                                              self.c.dialKeepAliveTimeout ,
+                                              self.c.autoSyncInterval ,
+                                              nil)
+                if client == nil {
+                    throw NSError.init(domain: "开启服务失败，请重试", code: 400)
+                }
+                await MainActor.run {
+                    self.c.etcdClient = client
+                    self.c.status = true
+                }
             }
-            c.etcdClient = client
-            c.status = true
             return
         }
     }
