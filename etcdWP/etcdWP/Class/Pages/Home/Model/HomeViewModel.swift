@@ -13,6 +13,7 @@ class HomeViewModel: ObservableObject {
     @Published var ectdClientList: [EtcdClientOption] = []
     
     init() {
+        // 初始化服务UserDefault
         let item  = self.GetUserDefaults()
         for data in item {
             let client = EtcdClientOption(
@@ -38,5 +39,70 @@ class HomeViewModel: ObservableObject {
     func getVersion() ->  String {
         let infoDic = Bundle.main.infoDictionary
         return infoDic?["CFBundleShortVersionString"] as! String
+    }
+    
+    // 连接状态
+    func Ping(c: EtcdKVClient) -> Bool {
+        return c.ping()
+    }
+    
+    // 关闭服务
+    func Close(c: EtcdKVClient) throws {
+        do {
+            try c.close()
+        }
+    }
+    
+    // 关闭所有服务
+    func CloseAll() throws {
+        do {
+            for item in self.ectdClientList {
+                try? item.etcdClient?.close()
+            }
+        }
+    }
+    
+    // 注册服务
+    func Register(item : EtcdClientOption) -> Bool {
+        let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                 item.username,
+                                 item.password,
+                                 item.certificate,
+                                 item.certKey,
+                                 item.requestTimeout ,
+                                 item.dialTimeout ,
+                                 item.dialKeepAliveTime ,
+                                 item.dialKeepAliveTimeout ,
+                                 item.autoSyncInterval ,
+                                 nil)
+        if c == nil {
+            return false
+        }
+        return self.Ping(c: c!)
+    }
+    
+    // 监听服务
+    func WatchListenEtcdClient() {
+        for (idx,item) in self.ectdClientList.enumerated() {
+            if item.etcdClient == nil{
+                let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                         item.username,
+                                         item.password,
+                                         item.certificate,
+                                         item.certKey,
+                                         item.requestTimeout ,
+                                         item.dialTimeout ,
+                                         item.dialKeepAliveTime ,
+                                         item.dialKeepAliveTimeout ,
+                                         item.autoSyncInterval ,
+                                         nil)
+                self.ectdClientList[idx].etcdClient = c
+                if c != nil {
+                    self.ectdClientList[idx].status = self.Ping(c: c!)
+                }
+            }else{
+                self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)
+            }
+        }
     }
 }

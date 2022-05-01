@@ -31,8 +31,8 @@
 		D030509C281826F600477D33 /* ETCDKVSubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507A281826F500477D33 /* ETCDKVSubContentView.swift */; };
 		D030509D281826F600477D33 /* ETCDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507B281826F500477D33 /* ETCDTableView.swift */; };
 		D030509E281826F600477D33 /* ETCDSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507D281826F500477D33 /* ETCDSheetView.swift */; };
-		D03050A0281826F600477D33 /* ETCDKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305080281826F500477D33 /* ETCDKeyValue.swift */; };
-		D03050A1281826F600477D33 /* ETCDKVItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305081281826F500477D33 /* ETCDKVItemStore.swift */; };
+		D03050A0281826F600477D33 /* ETCDKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305080281826F500477D33 /* ETCDKeyValueModel.swift */; };
+		D03050A1281826F600477D33 /* ETCDKVItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305081281826F500477D33 /* ETCDKVItemModel.swift */; };
 		D03050A2281826F600477D33 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305083281826F500477D33 /* AboutView.swift */; };
 		D03050A3281826F600477D33 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305084281826F500477D33 /* AboutModel.swift */; };
 		D03050A6281826F600477D33 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508A281826F500477D33 /* Content.swift */; };
@@ -42,10 +42,9 @@
 		D03050AA281826F600477D33 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508F281826F600477D33 /* ETCDHomeContentView.swift */; };
 		D03050AB281826F600477D33 /* ETCDHomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305090281826F600477D33 /* ETCDHomeMainView.swift */; };
 		D03050AC281826F600477D33 /* ETCDClientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305092281826F600477D33 /* ETCDClientStore.swift */; };
-		D03050AD281826F600477D33 /* ETCDTabarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305093281826F600477D33 /* ETCDTabarStore.swift */; };
+		D03050AD281826F600477D33 /* ETCDTabarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305093281826F600477D33 /* ETCDTabarModel.swift */; };
 		D03050AE281826F600477D33 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305094281826F600477D33 /* HomeViewModel.swift */; };
-		D03050AF281826F600477D33 /* ETCDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305095281826F600477D33 /* ETCDStore.swift */; };
-		D03050B0281826F600477D33 /* ETCDOptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305096281826F600477D33 /* ETCDOptionStore.swift */; };
+		D03050B0281826F600477D33 /* ETCDConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305096281826F600477D33 /* ETCDConfigModel.swift */; };
 		D03050B1281826F600477D33 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305098281826F600477D33 /* CardItemView.swift */; };
 		D03050B2281826F600477D33 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305099281826F600477D33 /* TopToastView.swift */; };
 		D03050B62818271000477D33 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03050B42818271000477D33 /* Constant.swift */; };
@@ -106,8 +105,8 @@
 		D030507A281826F500477D33 /* ETCDKVSubContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVSubContentView.swift; sourceTree = "<group>"; };
 		D030507B281826F500477D33 /* ETCDTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTableView.swift; sourceTree = "<group>"; };
 		D030507D281826F500477D33 /* ETCDSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDSheetView.swift; sourceTree = "<group>"; };
-		D0305080281826F500477D33 /* ETCDKeyValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValue.swift; sourceTree = "<group>"; };
-		D0305081281826F500477D33 /* ETCDKVItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemStore.swift; sourceTree = "<group>"; };
+		D0305080281826F500477D33 /* ETCDKeyValueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueModel.swift; sourceTree = "<group>"; };
+		D0305081281826F500477D33 /* ETCDKVItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemModel.swift; sourceTree = "<group>"; };
 		D0305083281826F500477D33 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D0305084281826F500477D33 /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
 		D030508A281826F500477D33 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
@@ -117,10 +116,9 @@
 		D030508F281826F600477D33 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
 		D0305090281826F600477D33 /* ETCDHomeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeMainView.swift; sourceTree = "<group>"; };
 		D0305092281826F600477D33 /* ETCDClientStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDClientStore.swift; sourceTree = "<group>"; };
-		D0305093281826F600477D33 /* ETCDTabarStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabarStore.swift; sourceTree = "<group>"; };
+		D0305093281826F600477D33 /* ETCDTabarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabarModel.swift; sourceTree = "<group>"; };
 		D0305094281826F600477D33 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		D0305095281826F600477D33 /* ETCDStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDStore.swift; sourceTree = "<group>"; };
-		D0305096281826F600477D33 /* ETCDOptionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDOptionStore.swift; sourceTree = "<group>"; };
+		D0305096281826F600477D33 /* ETCDConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDConfigModel.swift; sourceTree = "<group>"; };
 		D0305098281826F600477D33 /* CardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		D0305099281826F600477D33 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
 		D03050B42818271000477D33 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -346,8 +344,8 @@
 		D030507F281826F500477D33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D0305080281826F500477D33 /* ETCDKeyValue.swift */,
-				D0305081281826F500477D33 /* ETCDKVItemStore.swift */,
+				D0305080281826F500477D33 /* ETCDKeyValueModel.swift */,
+				D0305081281826F500477D33 /* ETCDKVItemModel.swift */,
 				D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */,
 			);
 			path = Model;
@@ -388,10 +386,9 @@
 			isa = PBXGroup;
 			children = (
 				D0305092281826F600477D33 /* ETCDClientStore.swift */,
-				D0305093281826F600477D33 /* ETCDTabarStore.swift */,
+				D0305093281826F600477D33 /* ETCDTabarModel.swift */,
 				D0305094281826F600477D33 /* HomeViewModel.swift */,
-				D0305095281826F600477D33 /* ETCDStore.swift */,
-				D0305096281826F600477D33 /* ETCDOptionStore.swift */,
+				D0305096281826F600477D33 /* ETCDConfigModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -582,7 +579,7 @@
 				D030509B281826F600477D33 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */,
 				D030509D281826F600477D33 /* ETCDTableView.swift in Sources */,
-				D03050A0281826F600477D33 /* ETCDKeyValue.swift in Sources */,
+				D03050A0281826F600477D33 /* ETCDKeyValueModel.swift in Sources */,
 				D0BAF52B281D81110062819B /* ETCDUserListView.swift in Sources */,
 				D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */,
 				D03050A6281826F600477D33 /* Content.swift in Sources */,
@@ -590,15 +587,14 @@
 				D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */,
 				D030509A281826F600477D33 /* ETCDTabBarContentView.swift in Sources */,
 				D03050AA281826F600477D33 /* ETCDHomeContentView.swift in Sources */,
-				D03050AF281826F600477D33 /* ETCDStore.swift in Sources */,
 				D03050A7281826F600477D33 /* ColorHex.swift in Sources */,
 				D03050AB281826F600477D33 /* ETCDHomeMainView.swift in Sources */,
 				D03050A2281826F600477D33 /* AboutView.swift in Sources */,
 				D030509C281826F600477D33 /* ETCDKVSubContentView.swift in Sources */,
 				D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */,
-				D03050B0281826F600477D33 /* ETCDOptionStore.swift in Sources */,
+				D03050B0281826F600477D33 /* ETCDConfigModel.swift in Sources */,
 				D03050B62818271000477D33 /* Constant.swift in Sources */,
-				D03050AD281826F600477D33 /* ETCDTabarStore.swift in Sources */,
+				D03050AD281826F600477D33 /* ETCDTabarModel.swift in Sources */,
 				D03050B2281826F600477D33 /* TopToastView.swift in Sources */,
 				D03050A8281826F600477D33 /* Button.swift in Sources */,
 				D03050B1281826F600477D33 /* CardItemView.swift in Sources */,
@@ -610,7 +606,7 @@
 				D03050AE281826F600477D33 /* HomeViewModel.swift in Sources */,
 				D03050AC281826F600477D33 /* ETCDClientStore.swift in Sources */,
 				D03050A3281826F600477D33 /* AboutModel.swift in Sources */,
-				D03050A1281826F600477D33 /* ETCDKVItemStore.swift in Sources */,
+				D03050A1281826F600477D33 /* ETCDKVItemModel.swift in Sources */,
 				D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */,
 				D03050A9281826F600477D33 /* ETCDConfigView.swift in Sources */,
 			);

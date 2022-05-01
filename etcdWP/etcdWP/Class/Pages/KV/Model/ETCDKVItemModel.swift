@@ -79,6 +79,7 @@ class ItemStore: ObservableObject {
     }
 }
 
+// 分页刷新管理状态
 struct KVRealoadData {
     var  kvs : [KVData]
     var  currentKv: KVData?
