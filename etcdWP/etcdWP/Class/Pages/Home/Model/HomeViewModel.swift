@@ -47,19 +47,78 @@ class HomeViewModel: ObservableObject {
         return c.ping()
     }
     
-    // 关闭服务
-    func Close(c: EtcdKVClient) throws {
-        do {
-            try c.close()
+    // 开启单个服务 （根据uuid）
+    func OpenUseUUID(uuid : String) throws {
+        Task.detached(priority: .utility) {
+            for (idx,item) in self.ectdClientList.enumerated() {
+                if item.id.uuidString == uuid {
+                    let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                             item.username,
+                                             item.password,
+                                             item.certificate,
+                                             item.certKey,
+                                             item.requestTimeout ,
+                                             item.dialTimeout ,
+                                             item.dialKeepAliveTime ,
+                                             item.dialKeepAliveTimeout ,
+                                             item.autoSyncInterval ,
+                                             nil)
+                    if c == nil{
+                        throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
+                    }
+                    await MainActor.run {
+                        self.ectdClientList[idx].etcdClient = c
+                    }
+                }
+            }
         }
     }
     
+    // 关闭单个服务 （根据uuid）
+    func CloseUseUUID(uuid : String) throws {
+            for (idx,item) in self.ectdClientList.enumerated() {
+                if item.id.uuidString == uuid {
+                    try item.etcdClient?.close()
+                    self.ectdClientList[idx].etcdClient  = nil
+                }
+            }
+    }
+    
+    // 关闭服务
+    func Close(c: EtcdKVClient) throws {
+        try c.close()
+    }
+    
+    // 开启所有服务
+    func OpenALL() throws {
+        Task.detached(priority: .utility) {
+            for (idx,item) in self.ectdClientList.enumerated() {
+                let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                         item.username,
+                                         item.password,
+                                         item.certificate,
+                                         item.certKey,
+                                         item.requestTimeout ,
+                                         item.dialTimeout ,
+                                         item.dialKeepAliveTime ,
+                                         item.dialKeepAliveTimeout ,
+                                         item.autoSyncInterval ,
+                                         nil)
+                if c == nil{
+                    throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
+                }
+                await MainActor.run {
+                    self.ectdClientList[idx].etcdClient = c
+                }
+            }
+        }
+    }
+    
+    
     // 关闭所有服务
     func CloseAll() throws {
-        do {
-            for item in self.ectdClientList {
-                try? item.etcdClient?.close()
-            }
+        for item in self.ectdClientList {
+            try? item.etcdClient?.close()
         }
     }
     
@@ -119,7 +178,7 @@ class HomeViewModel: ObservableObject {
                         self.ectdClientList[idx].status = ok
                     }
                 }
-              
+                
             }
         }
     }
