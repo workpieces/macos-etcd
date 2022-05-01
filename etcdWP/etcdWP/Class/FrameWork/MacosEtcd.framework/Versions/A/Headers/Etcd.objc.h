@@ -21,6 +21,7 @@
 - (nullable instancetype)init:(NSString* _Nullable)endpoints username:(NSString* _Nullable)username password:(NSString* _Nullable)password cert:(NSString* _Nullable)cert certKey:(NSString* _Nullable)certKey requestTimeout:(long)requestTimeout dialTimeout:(long)dialTimeout dialKeepAliveTime:(long)dialKeepAliveTime dialKeepAliveTimeout:(long)dialKeepAliveTimeout autoSyncInterval:(long)autoSyncInterval;
 - (NSData* _Nullable)authEnable:(BOOL)enable;
 - (NSData* _Nullable)changePassword:(NSString* _Nullable)username password:(NSString* _Nullable)password;
+- (NSData* _Nullable)children;
 - (BOOL)close:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)delete:(NSString* _Nullable)key;
 - (NSData* _Nullable)deleteALL;
