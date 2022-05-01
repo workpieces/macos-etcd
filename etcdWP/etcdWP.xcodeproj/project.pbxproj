@@ -56,6 +56,7 @@
 		D0BAF527281D762C0062819B /* ETCDRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF526281D762C0062819B /* ETCDRolesListView.swift */; };
 		D0BAF52B281D81110062819B /* ETCDUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF52A281D81110062819B /* ETCDUserListView.swift */; };
 		D0D4687C281E9379002D0849 /* ETCDKeyPrefixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4687B281E9379002D0849 /* ETCDKeyPrefixView.swift */; };
+		D0D4687E281E9A58002D0849 /* ETCDCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4687D281E9A58002D0849 /* ETCDCheckBoxView.swift */; };
 		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
 		D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */; };
 		D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */; };
@@ -129,6 +130,7 @@
 		D0BAF526281D762C0062819B /* ETCDRolesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRolesListView.swift; sourceTree = "<group>"; };
 		D0BAF52A281D81110062819B /* ETCDUserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserListView.swift; sourceTree = "<group>"; };
 		D0D4687B281E9379002D0849 /* ETCDKeyPrefixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyPrefixView.swift; sourceTree = "<group>"; };
+		D0D4687D281E9A58002D0849 /* ETCDCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDCheckBoxView.swift; sourceTree = "<group>"; };
 		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
 		D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLeaseListView.swift; sourceTree = "<group>"; };
 		D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLogsObject.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				D030508A281826F500477D33 /* Content.swift */,
 				D030508B281826F500477D33 /* ColorHex.swift */,
 				D030508C281826F500477D33 /* Button.swift */,
+				D0D4687D281E9A58002D0849 /* ETCDCheckBoxView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				D030509D281826F600477D33 /* ETCDTableView.swift in Sources */,
 				D03050A0281826F600477D33 /* ETCDKeyValueModel.swift in Sources */,
 				D0BAF52B281D81110062819B /* ETCDUserListView.swift in Sources */,
+				D0D4687E281E9A58002D0849 /* ETCDCheckBoxView.swift in Sources */,
 				D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */,
 				D03050A6281826F600477D33 /* Content.swift in Sources */,
 				D0305058281824DD00477D33 /* Carousel.swift in Sources */,

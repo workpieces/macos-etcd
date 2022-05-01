@@ -14,7 +14,7 @@ struct ETCDEtcdOperationView :View {
     @State var currentModel :KVOperateModel = KVOperateModel.getItems().first!
     @State var type :Int = 0
     @State var isEnable :Bool = false
-
+    @State var isShowToast :Bool  = false
     var body: some View {
         ZStack(alignment: .topLeading){
             List {
@@ -34,11 +34,11 @@ struct ETCDEtcdOperationView :View {
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             if item.type == 5 {
-                                Toggle("", isOn:$isEnable)
-                                    .onChange(of: isEnable)
-                                { value in
-                                    let _ =  storeObj.authEnable(enble: value)
-                                    print("--------\(value)")
+                                ETCDCheckBoxView(IsChoice: $isEnable) {  newValue in
+                                    let keyValue =  storeObj.authEnable(enble: newValue)
+                                    if keyValue?.status != 200{
+                                        self.isShowToast.toggle()
+                                    }
                                 }
                             }
                             Spacer()
@@ -47,8 +47,10 @@ struct ETCDEtcdOperationView :View {
                         Spacer()
                     }.onTapGesture {
                         self.currentModel = item
-                        self.type = self.currentModel.type
-                        self.show.toggle()
+                        if item.type != 5{
+                            self.type = self.currentModel.type
+                            self.show.toggle()
+                        }
                     }
                     .background(Color.secondary.opacity(0.15))
                     .cornerRadius(8)
@@ -59,6 +61,8 @@ struct ETCDEtcdOperationView :View {
             
         }.sheet(isPresented: $show, onDismiss: didDismiss) {
            ETCDSheetView(currentModel: $currentModel)
+        }.popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+            TopToastView(title:"开启认证失败")
         }
     }
     
