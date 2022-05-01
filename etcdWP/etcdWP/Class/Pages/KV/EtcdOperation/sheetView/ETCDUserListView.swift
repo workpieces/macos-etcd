@@ -11,10 +11,10 @@ struct ETCDUserListView: View {
     @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
-    @State var isSucceFul: Bool = false
     @State var userText: String = ""
     @State var passWordText: String = ""
     @State var user :String = ""
+    @State var toastText :String = "操作用户错误"
     @Binding var currentModel  : KVOperateModel
     @Environment(\.presentationMode) var presentationMode
     
@@ -54,19 +54,29 @@ struct ETCDUserListView: View {
                 }
                 Button {
                     
-                    guard !userText.isEmpty else{
+                    guard !userText.isEmpty else {
+                        self.toastText = "用户操作错误"
+                        self.isShowToast.toggle()
                         return
                     }
+                    
+                    guard !passWordText.isEmpty else {
+                        self.toastText = "请输入密码"
+                        self.isShowToast.toggle()
+                        return
+                    }
+                    
                     if userText != user{
-                        user = userText
                         let  result   =  storeObj.addUser(user: userText, password: passWordText)
                         if result?.status != 200 {
-                            self.isSucceFul.toggle()
+                            self.toastText = result?.message ?? "用户操作错误"
                             self.isShowToast.toggle()
                         }else{
                             items =  storeObj.UsersList() ?? []
+                            presentationMode.wrappedValue.dismiss()
                         }
-                        presentationMode.wrappedValue.dismiss()
+                        user = userText
+                        
                     }
                     
                 } label: {
@@ -104,7 +114,6 @@ extension ETCDUserListView {
         if reuslt?.status != 200{
             self.isShowToast.toggle()
         }else{
-            self.isSucceFul .toggle()
             self.isShowToast.toggle()
         }
     }
