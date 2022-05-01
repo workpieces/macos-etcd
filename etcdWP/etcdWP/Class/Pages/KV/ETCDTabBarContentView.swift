@@ -23,7 +23,7 @@ struct ETCDKeyListContentView: View {
     func Reaload() {
         storeObj.KVReaload()
     }
- 
+    
     func DeleteALL() throws {
         defer {storeObj.KVReaload()}
         let resp = storeObj.DeleteALL()
@@ -37,7 +37,7 @@ struct ETCDKeyListContentView: View {
             List {
                 Section {
                     ForEach(storeObj.realeadData.kvs) { item in
-//                    List(storeObj.realeadData.kvs, children: \.children) { item in
+                        //                    List(storeObj.realeadData.kvs, children: \.children) { item in
                         ZStack {
                             HStack {
                                 Image(systemName: DefaultKeyImageName)
@@ -94,12 +94,12 @@ struct ETCDKeyListContentView: View {
                 } header: {
                     VStack(content: {
                         HStack{
-                            Text("服务地址：\(storeObj.address)")
+                            Text("服务地址：\(storeObj.c.endpoints.first ?? "localhost:2379")")
                                 .font(.caption)
                                 .foregroundColor(.white)
                             Spacer()
                             
-                            if storeObj.status {
+                            if storeObj.c.status {
                                 Text("链接状态: 正常")
                                     .font(.caption)
                                     .foregroundColor(.green)
@@ -640,12 +640,34 @@ struct ETCDTabBarContentView: View {
     @State private var isPopView = false
     @State private var isShowToast = false
     var body: some View {
-        ZStack(alignment: .topLeading, content: {
+        ZStack(alignment: .topLeading,content: {
             VStack {
                 HStack {
                     withDefaultNavagationBack(title: "ETCD CLUSTER V3", isPop: $isPopView)
                         .padding(.vertical,30)
                         .padding(.leading ,20)
+                    
+                    Button {
+                        do {
+                            try storeObj.Open()
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    } label: {
+                        Text("开启服务")
+                            .foregroundColor(Color(hex:"#00FFFF"))
+                    }
+                    
+                    Button {
+                        do {
+                            try storeObj.Close()
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    } label: {
+                        Text("关闭服务")
+                            .foregroundColor(Color(hex:"#00FFFF"))
+                    }
                     
                     FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
                         do {
@@ -664,7 +686,6 @@ struct ETCDTabBarContentView: View {
                         }
                     } label: {
                         Text("批量导入")
-                            .font(.system(size: 14))
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
                     
@@ -693,7 +714,6 @@ struct ETCDTabBarContentView: View {
                         }
                     } label: {
                         Text("批量导出")
-                            .font(.system(size: 14))
                             .foregroundColor(Color(hex:"#00FFFF"))
                     }
                     .padding(.trailing,15)

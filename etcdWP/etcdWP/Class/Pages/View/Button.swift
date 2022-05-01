@@ -48,7 +48,7 @@ struct DefaultAddButtonViewModifier: ViewModifier{
             Spacer()
             Button {
                 Task {
-                    await try! homeData.OpenALL()
+                    try! await  homeData.OpenALL()
                 }
             } label: {
                 Text("开启所有服务")
@@ -63,7 +63,7 @@ struct DefaultAddButtonViewModifier: ViewModifier{
               .clipped()
             Button {
                 Task {
-                    await try! homeData.CloseAll()
+                    try! await  homeData.CloseAll()
                 }
             } label: {
                 Text("停止所有服务")
