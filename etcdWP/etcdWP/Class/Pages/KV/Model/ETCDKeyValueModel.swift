@@ -38,6 +38,7 @@ struct KVData: Codable, Identifiable {
     let granted_ttl: Int64?
     // key is the key in bytes. An empty key is not allowed.
     let key : String?
+    let sep_key: String?
     // create_revision is the revision of last creation on this key.
     let create_revision : Int64?
     // mod_revision is the revision of last modification on this key.
@@ -62,12 +63,15 @@ struct KVData: Codable, Identifiable {
     let role: String?
     // user list
     let user: String?
+    // children list.
+    let children: [KVData]?
     
     enum CodingKeys: String, CodingKey {
         case ttlid
         case ttl
         case granted_ttl
         case key
+        case sep_key
         case create_revision
         case mod_revision
         case version
@@ -78,6 +82,7 @@ struct KVData: Codable, Identifiable {
         case members
         case role
         case user
+        case children
     }
 }
 
