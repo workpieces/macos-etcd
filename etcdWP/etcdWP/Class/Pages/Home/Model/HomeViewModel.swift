@@ -12,7 +12,7 @@ import MacosEtcd
 class HomeViewModel: ObservableObject {
     let userDefaultsKey: String = "com.etcdclient.list"
     @Published var ectdClientList: [EtcdClientOption] = []
-    
+    @Published var allStart:Bool = false
     init() {
         // 初始化服务UserDefault
         let item  = self.GetUserDefaults()
@@ -108,6 +108,7 @@ class HomeViewModel: ObservableObject {
                     throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
                 }
                 await MainActor.run {
+                    self.allStart.toggle()
                     self.ectdClientList[idx].etcdClient = c
                 }
             }
@@ -119,6 +120,7 @@ class HomeViewModel: ObservableObject {
     func CloseAll() throws {
         for item in self.ectdClientList {
             try? item.etcdClient?.close()
+            self.allStart.toggle()
         }
     }
     
