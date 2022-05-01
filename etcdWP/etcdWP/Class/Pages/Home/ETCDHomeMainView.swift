@@ -32,14 +32,13 @@ struct HomeMainView: View {
                                     c: self.homeData.ectdClientList[item].etcdClient,address: self.homeData.ectdClientList[item].endpoints.first!,status: self.homeData.ectdClientList[item].status))){
                                 CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
-                        }
-                       
+                        }                       
                     }
                     .padding(GriditemPaddingSpace)
                 }
             } .onReceive(timer, perform: {_ in
-                DispatchQueue.main.async {
-                    homeData.WatchListenEtcdClient()
+                Task {
+                   await homeData.WatchListenEtcdClient()
                 }
             }).onDisappear {
                 self.timer.upstream.connect().cancel()

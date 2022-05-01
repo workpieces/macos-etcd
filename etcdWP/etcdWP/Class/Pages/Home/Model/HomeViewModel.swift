@@ -8,6 +8,7 @@
 import Foundation
 import MacosEtcd
 
+
 class HomeViewModel: ObservableObject {
     let userDefaultsKey: String = "com.etcdclient.list"
     @Published var ectdClientList: [EtcdClientOption] = []
@@ -81,31 +82,42 @@ class HomeViewModel: ObservableObject {
     }
     
     // 监听服务
-    func WatchListenEtcdClient() {
-        for (idx,item) in self.ectdClientList.enumerated() {
-            if item.etcdClient == nil{
-                // todo may be 卡顿
-                let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
-                                         item.username,
-                                         item.password,
-                                         item.certificate,
-                                         item.certKey,
-                                         item.requestTimeout ,
-                                         item.dialTimeout ,
-                                         item.dialKeepAliveTime ,
-                                         item.dialKeepAliveTimeout ,
-                                         item.autoSyncInterval ,
-                                         nil)
-                self.ectdClientList[idx].etcdClient = c
-                if c != nil {
-                    // may be 卡顿
-                    self.ectdClientList[idx].status = self.Ping(c: c!)
+    func WatchListenEtcdClient() async {
+        Task.detached(priority: .medium) {
+            for (idx,item) in self.ectdClientList.enumerated() {
+                if item.etcdClient == nil{
+                    // todo  卡顿
+                    let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                             item.username,
+                                             item.password,
+                                             item.certificate,
+                                             item.certKey,
+                                             item.requestTimeout ,
+                                             item.dialTimeout ,
+                                             item.dialKeepAliveTime ,
+                                             item.dialKeepAliveTimeout ,
+                                             item.autoSyncInterval ,
+                                             nil)
+                    if c != nil {
+                        // todo 卡顿
+                        await MainActor.run {
+                            self.ectdClientList[idx].etcdClient = c
+                            self.ectdClientList[idx].status = self.Ping(c: c!)
+                        }
+                    }else{
+                        await MainActor.run {
+                            self.ectdClientList[idx].etcdClient = c
+                            self.ectdClientList[idx].status  = false
+                        }
+                    }
                 }else{
-                    self.ectdClientList[idx].status  = false
+                    await MainActor.run {
+                        self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)
+                    }
                 }
-            }else{
-                self.ectdClientList[idx].status = self.Ping(c: item.etcdClient!)
+              
             }
+    
         }
     }
 }
