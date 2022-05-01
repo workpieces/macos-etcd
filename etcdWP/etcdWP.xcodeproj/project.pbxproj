@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
-		5CF34AAE281EA48D0052379F /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF34AAD281EA48D0052379F /* MacosEtcd.framework */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
-		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
 		D00ED46E28006EAB0068CBB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */; };
 		D00ED47928006EAC0068CBB3 /* etcdWPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED47828006EAC0068CBB3 /* etcdWPTests.swift */; };
 		D00ED48328006EAC0068CBB3 /* etcdWPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED48228006EAC0068CBB3 /* etcdWPUITests.swift */; };
@@ -19,47 +17,99 @@
 		D00ED49628006F490068CBB3 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49528006F490068CBB3 /* PopupView */; };
 		D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49828006F600068CBB3 /* AxisTabView */; };
 		D00ED49C28006F6E0068CBB3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D00ED49B28006F6E0068CBB3 /* SwiftyJSON */; };
-		D0305058281824DD00477D33 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030502C281824DC00477D33 /* Carousel.swift */; };
-		D0305059281824DD00477D33 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030502D281824DC00477D33 /* CarouselItemlView.swift */; };
-		D030505A281824DD00477D33 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030502E281824DC00477D33 /* CarouselView.swift */; };
-		D03050672818253800477D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D03050692818253800477D33 /* InfoPlist.strings */; };
-		D030506B2818253E00477D33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D030506D2818253E00477D33 /* Localizable.strings */; };
-		D0305071281825E100477D33 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0305073281825E100477D33 /* Localizable.stringsdict */; };
-		D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03050752818261C00477D33 /* LocalizedStringKey+.swift */; };
-		D030509A281826F600477D33 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305078281826F500477D33 /* ETCDTabBarContentView.swift */; };
-		D030509B281826F600477D33 /* ETCDTableViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305079281826F500477D33 /* ETCDTableViewRepresentableBootcamp.swift */; };
-		D030509C281826F600477D33 /* ETCDKVSubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507A281826F500477D33 /* ETCDKVSubContentView.swift */; };
-		D030509D281826F600477D33 /* ETCDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507B281826F500477D33 /* ETCDTableView.swift */; };
-		D030509E281826F600477D33 /* ETCDSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030507D281826F500477D33 /* ETCDSheetView.swift */; };
-		D03050A0281826F600477D33 /* ETCDKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305080281826F500477D33 /* ETCDKeyValueModel.swift */; };
-		D03050A1281826F600477D33 /* ETCDKVItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305081281826F500477D33 /* ETCDKVItemModel.swift */; };
-		D03050A2281826F600477D33 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305083281826F500477D33 /* AboutView.swift */; };
-		D03050A3281826F600477D33 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305084281826F500477D33 /* AboutModel.swift */; };
-		D03050A6281826F600477D33 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508A281826F500477D33 /* Content.swift */; };
-		D03050A7281826F600477D33 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508B281826F500477D33 /* ColorHex.swift */; };
-		D03050A8281826F600477D33 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508C281826F500477D33 /* Button.swift */; };
-		D03050A9281826F600477D33 /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508E281826F600477D33 /* ETCDConfigView.swift */; };
-		D03050AA281826F600477D33 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030508F281826F600477D33 /* ETCDHomeContentView.swift */; };
-		D03050AB281826F600477D33 /* ETCDHomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305090281826F600477D33 /* ETCDHomeMainView.swift */; };
-		D03050AC281826F600477D33 /* ETCDUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305092281826F600477D33 /* ETCDUserDefaultsModel.swift */; };
-		D03050AD281826F600477D33 /* ETCDTabarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305093281826F600477D33 /* ETCDTabarModel.swift */; };
-		D03050AE281826F600477D33 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305094281826F600477D33 /* HomeViewModel.swift */; };
-		D03050B0281826F600477D33 /* ETCDConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305096281826F600477D33 /* ETCDConfigModel.swift */; };
-		D03050B1281826F600477D33 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305098281826F600477D33 /* CardItemView.swift */; };
-		D03050B2281826F600477D33 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0305099281826F600477D33 /* TopToastView.swift */; };
-		D03050B62818271000477D33 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03050B42818271000477D33 /* Constant.swift */; };
-		D03050B72818271000477D33 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03050B52818271000477D33 /* OpenPan.swift */; };
 		D079BE5028143F36006B8619 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079BE4F28143F36006B8619 /* SnapKit */; };
 		D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D07D78692802827500F72CF7 /* ObjectMapper */; };
-		D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */; };
-		D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */; };
-		D0BAF527281D762C0062819B /* ETCDRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF526281D762C0062819B /* ETCDRolesListView.swift */; };
-		D0BAF52B281D81110062819B /* ETCDUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAF52A281D81110062819B /* ETCDUserListView.swift */; };
-		D0D4687C281E9379002D0849 /* ETCDKeyPrefixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4687B281E9379002D0849 /* ETCDKeyPrefixView.swift */; };
-		D0D4687E281E9A58002D0849 /* ETCDCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4687D281E9A58002D0849 /* ETCDCheckBoxView.swift */; };
-		D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8A994281A26F50087B3B6 /* NSTextView+.swift */; };
-		D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */; };
-		D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */; };
+		D0D46889281EC635002D0849 /* etcdWp_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D46888281EC635002D0849 /* etcdWp_iOSApp.swift */; };
+		D0D4688B281EC635002D0849 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4688A281EC635002D0849 /* ContentView.swift */; };
+		D0D4688D281EC637002D0849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D4688C281EC637002D0849 /* Assets.xcassets */; };
+		D0D46890281EC637002D0849 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D4688F281EC637002D0849 /* Preview Assets.xcassets */; };
+		D0D4689A281EC637002D0849 /* etcdWp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D46899281EC637002D0849 /* etcdWp_iOSTests.swift */; };
+		D0D468A4281EC637002D0849 /* etcdWp_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468A3281EC637002D0849 /* etcdWp_iOSUITests.swift */; };
+		D0D468A6281EC637002D0849 /* etcdWp_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468A5281EC637002D0849 /* etcdWp_iOSUITestsLaunchTests.swift */; };
+		D0D468F9281EC697002D0849 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D468B2281EC697002D0849 /* MacosEtcd.framework */; };
+		D0D468FA281EC697002D0849 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D468B2281EC697002D0849 /* MacosEtcd.framework */; };
+		D0D468FB281EC697002D0849 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468B6281EC697002D0849 /* Carousel.swift */; };
+		D0D468FC281EC697002D0849 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468B6281EC697002D0849 /* Carousel.swift */; };
+		D0D468FD281EC697002D0849 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468B7281EC697002D0849 /* CarouselItemlView.swift */; };
+		D0D468FE281EC697002D0849 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468B7281EC697002D0849 /* CarouselItemlView.swift */; };
+		D0D468FF281EC697002D0849 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468B8281EC697002D0849 /* CarouselView.swift */; };
+		D0D46900281EC697002D0849 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468B8281EC697002D0849 /* CarouselView.swift */; };
+		D0D46901281EC697002D0849 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D468BB281EC697002D0849 /* Localizable.strings */; };
+		D0D46902281EC697002D0849 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D468BB281EC697002D0849 /* Localizable.strings */; };
+		D0D46903281EC697002D0849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D468BD281EC697002D0849 /* InfoPlist.strings */; };
+		D0D46904281EC697002D0849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D468BD281EC697002D0849 /* InfoPlist.strings */; };
+		D0D46905281EC697002D0849 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0D468BF281EC697002D0849 /* Localizable.stringsdict */; };
+		D0D46906281EC697002D0849 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0D468BF281EC697002D0849 /* Localizable.stringsdict */; };
+		D0D46907281EC697002D0849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D468C4281EC697002D0849 /* Assets.xcassets */; };
+		D0D46908281EC697002D0849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D468C4281EC697002D0849 /* Assets.xcassets */; };
+		D0D46909281EC697002D0849 /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468C9281EC697002D0849 /* ETCDConfigView.swift */; };
+		D0D4690A281EC697002D0849 /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468C9281EC697002D0849 /* ETCDConfigView.swift */; };
+		D0D4690B281EC697002D0849 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CA281EC697002D0849 /* ETCDHomeContentView.swift */; };
+		D0D4690C281EC697002D0849 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CA281EC697002D0849 /* ETCDHomeContentView.swift */; };
+		D0D4690D281EC697002D0849 /* ETCDHomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CB281EC697002D0849 /* ETCDHomeMainView.swift */; };
+		D0D4690E281EC697002D0849 /* ETCDHomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CB281EC697002D0849 /* ETCDHomeMainView.swift */; };
+		D0D4690F281EC697002D0849 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CD281EC697002D0849 /* HomeViewModel.swift */; };
+		D0D46910281EC697002D0849 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CD281EC697002D0849 /* HomeViewModel.swift */; };
+		D0D46911281EC697002D0849 /* ETCDUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CE281EC697002D0849 /* ETCDUserDefaultsModel.swift */; };
+		D0D46912281EC697002D0849 /* ETCDUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CE281EC697002D0849 /* ETCDUserDefaultsModel.swift */; };
+		D0D46913281EC697002D0849 /* ETCDTabarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CF281EC697002D0849 /* ETCDTabarModel.swift */; };
+		D0D46914281EC697002D0849 /* ETCDTabarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468CF281EC697002D0849 /* ETCDTabarModel.swift */; };
+		D0D46915281EC697002D0849 /* ETCDConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D0281EC697002D0849 /* ETCDConfigModel.swift */; };
+		D0D46916281EC697002D0849 /* ETCDConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D0281EC697002D0849 /* ETCDConfigModel.swift */; };
+		D0D46917281EC697002D0849 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D2281EC697002D0849 /* CardItemView.swift */; };
+		D0D46918281EC697002D0849 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D2281EC697002D0849 /* CardItemView.swift */; };
+		D0D46919281EC697002D0849 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D3281EC697002D0849 /* TopToastView.swift */; };
+		D0D4691A281EC697002D0849 /* TopToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D3281EC697002D0849 /* TopToastView.swift */; };
+		D0D4691B281EC697002D0849 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D5281EC697002D0849 /* ETCDTabBarContentView.swift */; };
+		D0D4691C281EC697002D0849 /* ETCDTabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D5281EC697002D0849 /* ETCDTabBarContentView.swift */; };
+		D0D4691D281EC697002D0849 /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D7281EC697002D0849 /* ETCDEtcdOperationView.swift */; };
+		D0D4691E281EC697002D0849 /* ETCDEtcdOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D7281EC697002D0849 /* ETCDEtcdOperationView.swift */; };
+		D0D4691F281EC697002D0849 /* ETCDKeyPrefixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D9281EC697002D0849 /* ETCDKeyPrefixView.swift */; };
+		D0D46920281EC697002D0849 /* ETCDKeyPrefixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468D9281EC697002D0849 /* ETCDKeyPrefixView.swift */; };
+		D0D46921281EC697002D0849 /* ETCDRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DA281EC697002D0849 /* ETCDRolesListView.swift */; };
+		D0D46922281EC697002D0849 /* ETCDRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DA281EC697002D0849 /* ETCDRolesListView.swift */; };
+		D0D46923281EC697002D0849 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DB281EC697002D0849 /* ETCDLeaseListView.swift */; };
+		D0D46924281EC697002D0849 /* ETCDLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DB281EC697002D0849 /* ETCDLeaseListView.swift */; };
+		D0D46925281EC697002D0849 /* ETCDSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DC281EC697002D0849 /* ETCDSheetView.swift */; };
+		D0D46926281EC697002D0849 /* ETCDSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DC281EC697002D0849 /* ETCDSheetView.swift */; };
+		D0D46927281EC697002D0849 /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DD281EC697002D0849 /* ETCDKeyValueActionsView.swift */; };
+		D0D46928281EC697002D0849 /* ETCDKeyValueActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DD281EC697002D0849 /* ETCDKeyValueActionsView.swift */; };
+		D0D46929281EC697002D0849 /* ETCDUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DE281EC697002D0849 /* ETCDUserListView.swift */; };
+		D0D4692A281EC697002D0849 /* ETCDUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DE281EC697002D0849 /* ETCDUserListView.swift */; };
+		D0D4692B281EC697002D0849 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DF281EC697002D0849 /* NSTextView+.swift */; };
+		D0D4692C281EC697002D0849 /* NSTextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468DF281EC697002D0849 /* NSTextView+.swift */; };
+		D0D4692D281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E1281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift */; };
+		D0D4692E281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E1281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift */; };
+		D0D4692F281EC697002D0849 /* ETCDKVSubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E2281EC697002D0849 /* ETCDKVSubContentView.swift */; };
+		D0D46930281EC697002D0849 /* ETCDKVSubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E2281EC697002D0849 /* ETCDKVSubContentView.swift */; };
+		D0D46931281EC697002D0849 /* ETCDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E3281EC697002D0849 /* ETCDTableView.swift */; };
+		D0D46932281EC697002D0849 /* ETCDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E3281EC697002D0849 /* ETCDTableView.swift */; };
+		D0D46933281EC697002D0849 /* ETCDRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E5281EC697002D0849 /* ETCDRoleModel.swift */; };
+		D0D46934281EC697002D0849 /* ETCDRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E5281EC697002D0849 /* ETCDRoleModel.swift */; };
+		D0D46935281EC697002D0849 /* ETCDKVItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E6281EC697002D0849 /* ETCDKVItemModel.swift */; };
+		D0D46936281EC697002D0849 /* ETCDKVItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E6281EC697002D0849 /* ETCDKVItemModel.swift */; };
+		D0D46937281EC697002D0849 /* ETCDKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E7281EC697002D0849 /* ETCDKeyValueModel.swift */; };
+		D0D46938281EC697002D0849 /* ETCDKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E7281EC697002D0849 /* ETCDKeyValueModel.swift */; };
+		D0D46939281EC697002D0849 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E8281EC697002D0849 /* ETCDLogsObject.swift */; };
+		D0D4693A281EC697002D0849 /* ETCDLogsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468E8281EC697002D0849 /* ETCDLogsObject.swift */; };
+		D0D4693B281EC697002D0849 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EA281EC697002D0849 /* AboutView.swift */; };
+		D0D4693C281EC697002D0849 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EA281EC697002D0849 /* AboutView.swift */; };
+		D0D4693D281EC697002D0849 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EB281EC697002D0849 /* AboutModel.swift */; };
+		D0D4693E281EC697002D0849 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EB281EC697002D0849 /* AboutModel.swift */; };
+		D0D4693F281EC697002D0849 /* ETCDCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468ED281EC697002D0849 /* ETCDCheckBoxView.swift */; };
+		D0D46940281EC697002D0849 /* ETCDCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468ED281EC697002D0849 /* ETCDCheckBoxView.swift */; };
+		D0D46941281EC697002D0849 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EE281EC697002D0849 /* Content.swift */; };
+		D0D46942281EC697002D0849 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EE281EC697002D0849 /* Content.swift */; };
+		D0D46943281EC697002D0849 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EF281EC697002D0849 /* ColorHex.swift */; };
+		D0D46944281EC697002D0849 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468EF281EC697002D0849 /* ColorHex.swift */; };
+		D0D46945281EC697002D0849 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F0281EC697002D0849 /* Button.swift */; };
+		D0D46946281EC697002D0849 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F0281EC697002D0849 /* Button.swift */; };
+		D0D46947281EC697002D0849 /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F5281EC697002D0849 /* LocalizedStringKey+.swift */; };
+		D0D46948281EC697002D0849 /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F5281EC697002D0849 /* LocalizedStringKey+.swift */; };
+		D0D46949281EC697002D0849 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F7281EC697002D0849 /* Constant.swift */; };
+		D0D4694A281EC697002D0849 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F7281EC697002D0849 /* Constant.swift */; };
+		D0D4694B281EC697002D0849 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F8281EC697002D0849 /* OpenPan.swift */; };
+		D0D4694C281EC697002D0849 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D468F8281EC697002D0849 /* OpenPan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +127,25 @@
 			remoteGlobalIDString = D00ED46228006EAA0068CBB3;
 			remoteInfo = etcdWP;
 		};
+		D0D46896281EC637002D0849 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D00ED45B28006EAA0068CBB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D46885281EC635002D0849;
+			remoteInfo = "etcdWp-iOS";
+		};
+		D0D468A0281EC637002D0849 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D00ED45B28006EAA0068CBB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D46885281EC635002D0849;
+			remoteInfo = "etcdWp-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5CF34AAD281EA48D0052379F /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
-		D00ED46A28006EAB0068CBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D00ED46F28006EAB0068CBB3 /* etcdWP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = etcdWP.entitlements; sourceTree = "<group>"; };
 		D00ED47428006EAC0068CBB3 /* etcdWPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = etcdWPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,48 +154,61 @@
 		D00ED48228006EAC0068CBB3 /* etcdWPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPUITests.swift; sourceTree = "<group>"; };
 		D00ED48428006EAC0068CBB3 /* etcdWPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D00ED49D28006F900068CBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D030502C281824DC00477D33 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
-		D030502D281824DC00477D33 /* CarouselItemlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemlView.swift; sourceTree = "<group>"; };
-		D030502E281824DC00477D33 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		D03050682818253800477D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D030506A2818253A00477D33 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		D030506C2818253E00477D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D030506E2818254000477D33 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		D0305072281825E100477D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		D0305074281825E300477D33 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
-		D03050752818261C00477D33 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
-		D0305078281826F500477D33 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
-		D0305079281826F500477D33 /* ETCDTableViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTableViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
-		D030507A281826F500477D33 /* ETCDKVSubContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVSubContentView.swift; sourceTree = "<group>"; };
-		D030507B281826F500477D33 /* ETCDTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTableView.swift; sourceTree = "<group>"; };
-		D030507D281826F500477D33 /* ETCDSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDSheetView.swift; sourceTree = "<group>"; };
-		D0305080281826F500477D33 /* ETCDKeyValueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueModel.swift; sourceTree = "<group>"; };
-		D0305081281826F500477D33 /* ETCDKVItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemModel.swift; sourceTree = "<group>"; };
-		D0305083281826F500477D33 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		D0305084281826F500477D33 /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
-		D030508A281826F500477D33 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		D030508B281826F500477D33 /* ColorHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
-		D030508C281826F500477D33 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		D030508E281826F600477D33 /* ETCDConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDConfigView.swift; sourceTree = "<group>"; };
-		D030508F281826F600477D33 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
-		D0305090281826F600477D33 /* ETCDHomeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeMainView.swift; sourceTree = "<group>"; };
-		D0305092281826F600477D33 /* ETCDUserDefaultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDUserDefaultsModel.swift; sourceTree = "<group>"; };
-		D0305093281826F600477D33 /* ETCDTabarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabarModel.swift; sourceTree = "<group>"; };
-		D0305094281826F600477D33 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		D0305096281826F600477D33 /* ETCDConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDConfigModel.swift; sourceTree = "<group>"; };
-		D0305098281826F600477D33 /* CardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
-		D0305099281826F600477D33 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
-		D03050B42818271000477D33 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		D03050B52818271000477D33 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
-		D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDEtcdOperationView.swift; sourceTree = "<group>"; };
-		D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsView.swift; sourceTree = "<group>"; };
-		D0BAF526281D762C0062819B /* ETCDRolesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRolesListView.swift; sourceTree = "<group>"; };
-		D0BAF52A281D81110062819B /* ETCDUserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserListView.swift; sourceTree = "<group>"; };
-		D0D4687B281E9379002D0849 /* ETCDKeyPrefixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyPrefixView.swift; sourceTree = "<group>"; };
-		D0D4687D281E9A58002D0849 /* ETCDCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDCheckBoxView.swift; sourceTree = "<group>"; };
-		D0E8A994281A26F50087B3B6 /* NSTextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
-		D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLeaseListView.swift; sourceTree = "<group>"; };
-		D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDLogsObject.swift; sourceTree = "<group>"; };
+		D0D46886281EC635002D0849 /* etcdWp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "etcdWp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D46888281EC635002D0849 /* etcdWp_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWp_iOSApp.swift; sourceTree = "<group>"; };
+		D0D4688A281EC635002D0849 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0D4688C281EC637002D0849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D4688F281EC637002D0849 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0D46895281EC637002D0849 /* etcdWp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "etcdWp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D46899281EC637002D0849 /* etcdWp_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWp_iOSTests.swift; sourceTree = "<group>"; };
+		D0D4689F281EC637002D0849 /* etcdWp-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "etcdWp-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D468A3281EC637002D0849 /* etcdWp_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWp_iOSUITests.swift; sourceTree = "<group>"; };
+		D0D468A5281EC637002D0849 /* etcdWp_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWp_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0D468B2281EC697002D0849 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		D0D468B6281EC697002D0849 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		D0D468B7281EC697002D0849 /* CarouselItemlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemlView.swift; sourceTree = "<group>"; };
+		D0D468B8281EC697002D0849 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		D0D468BC281EC697002D0849 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D0D468BE281EC697002D0849 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D0D468C0281EC697002D0849 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D0D468C1281EC697002D0849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0D468C2281EC697002D0849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0D468C3281EC697002D0849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D0D468C4281EC697002D0849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D468C9281EC697002D0849 /* ETCDConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDConfigView.swift; sourceTree = "<group>"; };
+		D0D468CA281EC697002D0849 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
+		D0D468CB281EC697002D0849 /* ETCDHomeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeMainView.swift; sourceTree = "<group>"; };
+		D0D468CD281EC697002D0849 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D0D468CE281EC697002D0849 /* ETCDUserDefaultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDUserDefaultsModel.swift; sourceTree = "<group>"; };
+		D0D468CF281EC697002D0849 /* ETCDTabarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabarModel.swift; sourceTree = "<group>"; };
+		D0D468D0281EC697002D0849 /* ETCDConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDConfigModel.swift; sourceTree = "<group>"; };
+		D0D468D2281EC697002D0849 /* CardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
+		D0D468D3281EC697002D0849 /* TopToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToastView.swift; sourceTree = "<group>"; };
+		D0D468D5281EC697002D0849 /* ETCDTabBarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContentView.swift; sourceTree = "<group>"; };
+		D0D468D7281EC697002D0849 /* ETCDEtcdOperationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDEtcdOperationView.swift; sourceTree = "<group>"; };
+		D0D468D9281EC697002D0849 /* ETCDKeyPrefixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyPrefixView.swift; sourceTree = "<group>"; };
+		D0D468DA281EC697002D0849 /* ETCDRolesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDRolesListView.swift; sourceTree = "<group>"; };
+		D0D468DB281EC697002D0849 /* ETCDLeaseListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDLeaseListView.swift; sourceTree = "<group>"; };
+		D0D468DC281EC697002D0849 /* ETCDSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDSheetView.swift; sourceTree = "<group>"; };
+		D0D468DD281EC697002D0849 /* ETCDKeyValueActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsView.swift; sourceTree = "<group>"; };
+		D0D468DE281EC697002D0849 /* ETCDUserListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDUserListView.swift; sourceTree = "<group>"; };
+		D0D468DF281EC697002D0849 /* NSTextView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+.swift"; sourceTree = "<group>"; };
+		D0D468E1281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTableViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
+		D0D468E2281EC697002D0849 /* ETCDKVSubContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVSubContentView.swift; sourceTree = "<group>"; };
+		D0D468E3281EC697002D0849 /* ETCDTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTableView.swift; sourceTree = "<group>"; };
+		D0D468E5281EC697002D0849 /* ETCDRoleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDRoleModel.swift; sourceTree = "<group>"; };
+		D0D468E6281EC697002D0849 /* ETCDKVItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKVItemModel.swift; sourceTree = "<group>"; };
+		D0D468E7281EC697002D0849 /* ETCDKeyValueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueModel.swift; sourceTree = "<group>"; };
+		D0D468E8281EC697002D0849 /* ETCDLogsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDLogsObject.swift; sourceTree = "<group>"; };
+		D0D468EA281EC697002D0849 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D0D468EB281EC697002D0849 /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
+		D0D468ED281EC697002D0849 /* ETCDCheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDCheckBoxView.swift; sourceTree = "<group>"; };
+		D0D468EE281EC697002D0849 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		D0D468EF281EC697002D0849 /* ColorHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		D0D468F0281EC697002D0849 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D0D468F5281EC697002D0849 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
+		D0D468F7281EC697002D0849 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D0D468F8281EC697002D0849 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +218,7 @@
 			files = (
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D079BE5028143F36006B8619 /* SnapKit in Frameworks */,
-				5CF34AAE281EA48D0052379F /* MacosEtcd.framework in Frameworks */,
+				D0D468F9281EC697002D0849 /* MacosEtcd.framework in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
@@ -166,6 +241,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0D46883281EC635002D0849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D468FA281EC697002D0849 /* MacosEtcd.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D46892281EC637002D0849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D4689C281EC637002D0849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -175,6 +272,9 @@
 				D00ED46528006EAA0068CBB3 /* etcdWP */,
 				D00ED47728006EAC0068CBB3 /* etcdWPTests */,
 				D00ED48128006EAC0068CBB3 /* etcdWPUITests */,
+				D0D46887281EC635002D0849 /* etcdWp-iOS */,
+				D0D46898281EC637002D0849 /* etcdWp-iOSTests */,
+				D0D468A2281EC637002D0849 /* etcdWp-iOSUITests */,
 				D00ED46428006EAA0068CBB3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,6 +285,9 @@
 				D00ED46328006EAA0068CBB3 /* etcdWP.app */,
 				D00ED47428006EAC0068CBB3 /* etcdWPTests.xctest */,
 				D00ED47E28006EAC0068CBB3 /* etcdWPUITests.xctest */,
+				D0D46886281EC635002D0849 /* etcdWp-iOS.app */,
+				D0D46895281EC637002D0849 /* etcdWp-iOSTests.xctest */,
+				D0D4689F281EC637002D0849 /* etcdWp-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,7 +295,7 @@
 		D00ED46528006EAA0068CBB3 /* etcdWP */ = {
 			isa = PBXGroup;
 			children = (
-				D030500D281824DC00477D33 /* Class */,
+				D0D468B0281EC697002D0849 /* Class */,
 				D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */,
 				D00ED49D28006F900068CBB3 /* Info.plist */,
 				D00ED46F28006EAB0068CBB3 /* etcdWP.entitlements */,
@@ -226,212 +329,281 @@
 			path = etcdWPUITests;
 			sourceTree = "<group>";
 		};
-		D030500D281824DC00477D33 /* Class */ = {
+		D0D46887281EC635002D0849 /* etcdWp-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D030503F281824DC00477D33 /* Pages */,
-				D0305040281824DC00477D33 /* Utility */,
-				D0305026281824DC00477D33 /* FrameWork */,
-				D030502A281824DC00477D33 /* Ventor */,
-				D030503B281824DC00477D33 /* Resource */,
+				D0D46888281EC635002D0849 /* etcdWp_iOSApp.swift */,
+				D0D4688A281EC635002D0849 /* ContentView.swift */,
+				D0D4688C281EC637002D0849 /* Assets.xcassets */,
+				D0D4688E281EC637002D0849 /* Preview Content */,
+			);
+			path = "etcdWp-iOS";
+			sourceTree = "<group>";
+		};
+		D0D4688E281EC637002D0849 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D0D4688F281EC637002D0849 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0D46898281EC637002D0849 /* etcdWp-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D46899281EC637002D0849 /* etcdWp_iOSTests.swift */,
+			);
+			path = "etcdWp-iOSTests";
+			sourceTree = "<group>";
+		};
+		D0D468A2281EC637002D0849 /* etcdWp-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468A3281EC637002D0849 /* etcdWp_iOSUITests.swift */,
+				D0D468A5281EC637002D0849 /* etcdWp_iOSUITestsLaunchTests.swift */,
+			);
+			path = "etcdWp-iOSUITests";
+			sourceTree = "<group>";
+		};
+		D0D468B0281EC697002D0849 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468B1281EC697002D0849 /* FrameWork */,
+				D0D468B3281EC697002D0849 /* Ventor */,
+				D0D468B9281EC697002D0849 /* Resource */,
+				D0D468C7281EC697002D0849 /* Pages */,
+				D0D468F1281EC697002D0849 /* Utility */,
 			);
 			path = Class;
 			sourceTree = "<group>";
 		};
-		D0305026281824DC00477D33 /* FrameWork */ = {
+		D0D468B1281EC697002D0849 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				5CF34AAD281EA48D0052379F /* MacosEtcd.framework */,
+				D0D468B2281EC697002D0849 /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
 		};
-		D030502A281824DC00477D33 /* Ventor */ = {
+		D0D468B3281EC697002D0849 /* Ventor */ = {
 			isa = PBXGroup;
 			children = (
-				D030502B281824DC00477D33 /* banner */,
+				D0D468B4281EC697002D0849 /* STTextView */,
+				D0D468B5281EC697002D0849 /* banner */,
 			);
 			path = Ventor;
 			sourceTree = "<group>";
 		};
-		D030502B281824DC00477D33 /* banner */ = {
+		D0D468B4281EC697002D0849 /* STTextView */ = {
 			isa = PBXGroup;
 			children = (
-				D030502C281824DC00477D33 /* Carousel.swift */,
-				D030502D281824DC00477D33 /* CarouselItemlView.swift */,
-				D030502E281824DC00477D33 /* CarouselView.swift */,
+			);
+			path = STTextView;
+			sourceTree = "<group>";
+		};
+		D0D468B5281EC697002D0849 /* banner */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468B6281EC697002D0849 /* Carousel.swift */,
+				D0D468B7281EC697002D0849 /* CarouselItemlView.swift */,
+				D0D468B8281EC697002D0849 /* CarouselView.swift */,
 			);
 			path = banner;
 			sourceTree = "<group>";
 		};
-		D030503B281824DC00477D33 /* Resource */ = {
+		D0D468B9281EC697002D0849 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D00ED46A28006EAB0068CBB3 /* Assets.xcassets */,
-				D030503C281824DC00477D33 /* internationalization */,
+				D0D468BA281EC697002D0849 /* internationalization */,
+				D0D468C4281EC697002D0849 /* Assets.xcassets */,
+				D0D468C5281EC697002D0849 /* Bundle */,
+				D0D468C6281EC697002D0849 /* Lottie */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		D030503C281824DC00477D33 /* internationalization */ = {
+		D0D468BA281EC697002D0849 /* internationalization */ = {
 			isa = PBXGroup;
 			children = (
-				D03050692818253800477D33 /* InfoPlist.strings */,
-				D030506D2818253E00477D33 /* Localizable.strings */,
-				D0305073281825E100477D33 /* Localizable.stringsdict */,
+				D0D468BB281EC697002D0849 /* Localizable.strings */,
+				D0D468BD281EC697002D0849 /* InfoPlist.strings */,
+				D0D468BF281EC697002D0849 /* Localizable.stringsdict */,
 			);
 			path = internationalization;
 			sourceTree = "<group>";
 		};
-		D030503F281824DC00477D33 /* Pages */ = {
+		D0D468C5281EC697002D0849 /* Bundle */ = {
 			isa = PBXGroup;
 			children = (
-				D030508D281826F500477D33 /* Home */,
-				D0305082281826F500477D33 /* About */,
-				D0305077281826F500477D33 /* KV */,
-				D0305089281826F500477D33 /* View */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		D0D468C6281EC697002D0849 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		D0D468C7281EC697002D0849 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468C8281EC697002D0849 /* Home */,
+				D0D468D4281EC697002D0849 /* KV */,
+				D0D468E9281EC697002D0849 /* About */,
+				D0D468EC281EC697002D0849 /* View */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
 		};
-		D0305040281824DC00477D33 /* Utility */ = {
+		D0D468C8281EC697002D0849 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D03050B32818271000477D33 /* Common */,
-				D0305042281824DC00477D33 /* Extension */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		D0305042281824DC00477D33 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				D0305043281824DC00477D33 /* LocalizedStringKey */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		D0305043281824DC00477D33 /* LocalizedStringKey */ = {
-			isa = PBXGroup;
-			children = (
-				D03050752818261C00477D33 /* LocalizedStringKey+.swift */,
-			);
-			path = LocalizedStringKey;
-			sourceTree = "<group>";
-		};
-		D0305077281826F500477D33 /* KV */ = {
-			isa = PBXGroup;
-			children = (
-				D0BAF521281D50720062819B /* EtcdOperation */,
-				D0305078281826F500477D33 /* ETCDTabBarContentView.swift */,
-				D0305079281826F500477D33 /* ETCDTableViewRepresentableBootcamp.swift */,
-				D030507A281826F500477D33 /* ETCDKVSubContentView.swift */,
-				D030507B281826F500477D33 /* ETCDTableView.swift */,
-				D030507F281826F500477D33 /* Model */,
-			);
-			path = KV;
-			sourceTree = "<group>";
-		};
-		D030507C281826F500477D33 /* sheetView */ = {
-			isa = PBXGroup;
-			children = (
-				D030507D281826F500477D33 /* ETCDSheetView.swift */,
-				D0E8A994281A26F50087B3B6 /* NSTextView+.swift */,
-				D0EC35A8281BD4BB00F77078 /* ETCDLeaseListView.swift */,
-				D0BAF524281D594D0062819B /* ETCDKeyValueActionsView.swift */,
-				D0D4687B281E9379002D0849 /* ETCDKeyPrefixView.swift */,
-				D0BAF526281D762C0062819B /* ETCDRolesListView.swift */,
-				D0BAF52A281D81110062819B /* ETCDUserListView.swift */,
-			);
-			path = sheetView;
-			sourceTree = "<group>";
-		};
-		D030507F281826F500477D33 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D0305080281826F500477D33 /* ETCDKeyValueModel.swift */,
-				D0305081281826F500477D33 /* ETCDKVItemModel.swift */,
-				D0EC35AA281BF51500F77078 /* ETCDLogsObject.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D0305082281826F500477D33 /* About */ = {
-			isa = PBXGroup;
-			children = (
-				D0305083281826F500477D33 /* AboutView.swift */,
-				D0305084281826F500477D33 /* AboutModel.swift */,
-			);
-			path = About;
-			sourceTree = "<group>";
-		};
-		D0305089281826F500477D33 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D030508A281826F500477D33 /* Content.swift */,
-				D030508B281826F500477D33 /* ColorHex.swift */,
-				D030508C281826F500477D33 /* Button.swift */,
-				D0D4687D281E9A58002D0849 /* ETCDCheckBoxView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D030508D281826F500477D33 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D030508E281826F600477D33 /* ETCDConfigView.swift */,
-				D030508F281826F600477D33 /* ETCDHomeContentView.swift */,
-				D0305090281826F600477D33 /* ETCDHomeMainView.swift */,
-				D0305091281826F600477D33 /* Model */,
-				D0305097281826F600477D33 /* View */,
+				D0D468C9281EC697002D0849 /* ETCDConfigView.swift */,
+				D0D468CA281EC697002D0849 /* ETCDHomeContentView.swift */,
+				D0D468CB281EC697002D0849 /* ETCDHomeMainView.swift */,
+				D0D468CC281EC697002D0849 /* Model */,
+				D0D468D1281EC697002D0849 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		D0305091281826F600477D33 /* Model */ = {
+		D0D468CC281EC697002D0849 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D0305092281826F600477D33 /* ETCDUserDefaultsModel.swift */,
-				D0305093281826F600477D33 /* ETCDTabarModel.swift */,
-				D0305094281826F600477D33 /* HomeViewModel.swift */,
-				D0305096281826F600477D33 /* ETCDConfigModel.swift */,
+				D0D468CD281EC697002D0849 /* HomeViewModel.swift */,
+				D0D468CE281EC697002D0849 /* ETCDUserDefaultsModel.swift */,
+				D0D468CF281EC697002D0849 /* ETCDTabarModel.swift */,
+				D0D468D0281EC697002D0849 /* ETCDConfigModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D0305097281826F600477D33 /* View */ = {
+		D0D468D1281EC697002D0849 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D0305098281826F600477D33 /* CardItemView.swift */,
-				D0305099281826F600477D33 /* TopToastView.swift */,
+				D0D468D2281EC697002D0849 /* CardItemView.swift */,
+				D0D468D3281EC697002D0849 /* TopToastView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		D03050B32818271000477D33 /* Common */ = {
+		D0D468D4281EC697002D0849 /* KV */ = {
 			isa = PBXGroup;
 			children = (
-				D03050B42818271000477D33 /* Constant.swift */,
-				D03050B52818271000477D33 /* OpenPan.swift */,
+				D0D468D5281EC697002D0849 /* ETCDTabBarContentView.swift */,
+				D0D468D6281EC697002D0849 /* EtcdOperation */,
+				D0D468E1281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift */,
+				D0D468E2281EC697002D0849 /* ETCDKVSubContentView.swift */,
+				D0D468E3281EC697002D0849 /* ETCDTableView.swift */,
+				D0D468E4281EC697002D0849 /* Model */,
 			);
-			path = Common;
+			path = KV;
 			sourceTree = "<group>";
 		};
-		D0BAF521281D50720062819B /* EtcdOperation */ = {
+		D0D468D6281EC697002D0849 /* EtcdOperation */ = {
 			isa = PBXGroup;
 			children = (
-				D0D4687F281EBC9A002D0849 /* popVer */,
-				D030507C281826F500477D33 /* sheetView */,
-				D0BAF522281D57FE0062819B /* ETCDEtcdOperationView.swift */,
+				D0D468D7281EC697002D0849 /* ETCDEtcdOperationView.swift */,
+				D0D468D8281EC697002D0849 /* sheetView */,
+				D0D468E0281EC697002D0849 /* popVer */,
 			);
 			path = EtcdOperation;
 			sourceTree = "<group>";
 		};
-		D0D4687F281EBC9A002D0849 /* popVer */ = {
+		D0D468D8281EC697002D0849 /* sheetView */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468D9281EC697002D0849 /* ETCDKeyPrefixView.swift */,
+				D0D468DA281EC697002D0849 /* ETCDRolesListView.swift */,
+				D0D468DB281EC697002D0849 /* ETCDLeaseListView.swift */,
+				D0D468DC281EC697002D0849 /* ETCDSheetView.swift */,
+				D0D468DD281EC697002D0849 /* ETCDKeyValueActionsView.swift */,
+				D0D468DE281EC697002D0849 /* ETCDUserListView.swift */,
+				D0D468DF281EC697002D0849 /* NSTextView+.swift */,
+			);
+			path = sheetView;
+			sourceTree = "<group>";
+		};
+		D0D468E0281EC697002D0849 /* popVer */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = popVer;
+			sourceTree = "<group>";
+		};
+		D0D468E4281EC697002D0849 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468E5281EC697002D0849 /* ETCDRoleModel.swift */,
+				D0D468E6281EC697002D0849 /* ETCDKVItemModel.swift */,
+				D0D468E7281EC697002D0849 /* ETCDKeyValueModel.swift */,
+				D0D468E8281EC697002D0849 /* ETCDLogsObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0D468E9281EC697002D0849 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468EA281EC697002D0849 /* AboutView.swift */,
+				D0D468EB281EC697002D0849 /* AboutModel.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		D0D468EC281EC697002D0849 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468ED281EC697002D0849 /* ETCDCheckBoxView.swift */,
+				D0D468EE281EC697002D0849 /* Content.swift */,
+				D0D468EF281EC697002D0849 /* ColorHex.swift */,
+				D0D468F0281EC697002D0849 /* Button.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0D468F1281EC697002D0849 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468F2281EC697002D0849 /* Netwrok */,
+				D0D468F3281EC697002D0849 /* Extension */,
+				D0D468F6281EC697002D0849 /* Common */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		D0D468F2281EC697002D0849 /* Netwrok */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Netwrok;
+			sourceTree = "<group>";
+		};
+		D0D468F3281EC697002D0849 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468F4281EC697002D0849 /* LocalizedStringKey */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D0D468F4281EC697002D0849 /* LocalizedStringKey */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468F5281EC697002D0849 /* LocalizedStringKey+.swift */,
+			);
+			path = LocalizedStringKey;
+			sourceTree = "<group>";
+		};
+		D0D468F6281EC697002D0849 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D0D468F7281EC697002D0849 /* Constant.swift */,
+				D0D468F8281EC697002D0849 /* OpenPan.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,6 +671,59 @@
 			productReference = D00ED47E28006EAC0068CBB3 /* etcdWPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D0D46885281EC635002D0849 /* etcdWp-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D468AD281EC637002D0849 /* Build configuration list for PBXNativeTarget "etcdWp-iOS" */;
+			buildPhases = (
+				D0D46882281EC635002D0849 /* Sources */,
+				D0D46883281EC635002D0849 /* Frameworks */,
+				D0D46884281EC635002D0849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "etcdWp-iOS";
+			productName = "etcdWp-iOS";
+			productReference = D0D46886281EC635002D0849 /* etcdWp-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0D46894281EC637002D0849 /* etcdWp-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D468AE281EC637002D0849 /* Build configuration list for PBXNativeTarget "etcdWp-iOSTests" */;
+			buildPhases = (
+				D0D46891281EC637002D0849 /* Sources */,
+				D0D46892281EC637002D0849 /* Frameworks */,
+				D0D46893281EC637002D0849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D46897281EC637002D0849 /* PBXTargetDependency */,
+			);
+			name = "etcdWp-iOSTests";
+			productName = "etcdWp-iOSTests";
+			productReference = D0D46895281EC637002D0849 /* etcdWp-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0D4689E281EC637002D0849 /* etcdWp-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D468AF281EC637002D0849 /* Build configuration list for PBXNativeTarget "etcdWp-iOSUITests" */;
+			buildPhases = (
+				D0D4689B281EC637002D0849 /* Sources */,
+				D0D4689C281EC637002D0849 /* Frameworks */,
+				D0D4689D281EC637002D0849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D468A1281EC637002D0849 /* PBXTargetDependency */,
+			);
+			name = "etcdWp-iOSUITests";
+			productName = "etcdWp-iOSUITests";
+			productReference = D0D4689F281EC637002D0849 /* etcdWp-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -520,6 +745,17 @@
 					D00ED47D28006EAC0068CBB3 = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = D00ED46228006EAA0068CBB3;
+					};
+					D0D46885281EC635002D0849 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					D0D46894281EC637002D0849 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = D0D46885281EC635002D0849;
+					};
+					D0D4689E281EC637002D0849 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = D0D46885281EC635002D0849;
 					};
 				};
 			};
@@ -550,6 +786,9 @@
 				D00ED46228006EAA0068CBB3 /* etcdWP */,
 				D00ED47328006EAC0068CBB3 /* etcdWPTests */,
 				D00ED47D28006EAC0068CBB3 /* etcdWPUITests */,
+				D0D46885281EC635002D0849 /* etcdWp-iOS */,
+				D0D46894281EC637002D0849 /* etcdWp-iOSTests */,
+				D0D4689E281EC637002D0849 /* etcdWp-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -560,10 +799,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00ED46E28006EAB0068CBB3 /* Preview Assets.xcassets in Resources */,
-				D030506B2818253E00477D33 /* Localizable.strings in Resources */,
-				D03050672818253800477D33 /* InfoPlist.strings in Resources */,
-				D0305071281825E100477D33 /* Localizable.stringsdict in Resources */,
-				D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */,
+				D0D46905281EC697002D0849 /* Localizable.stringsdict in Resources */,
+				D0D46903281EC697002D0849 /* InfoPlist.strings in Resources */,
+				D0D46901281EC697002D0849 /* Localizable.strings in Resources */,
+				D0D46907281EC697002D0849 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +820,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0D46884281EC635002D0849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D46890281EC637002D0849 /* Preview Assets.xcassets in Resources */,
+				D0D46904281EC697002D0849 /* InfoPlist.strings in Resources */,
+				D0D46902281EC697002D0849 /* Localizable.strings in Resources */,
+				D0D46906281EC697002D0849 /* Localizable.stringsdict in Resources */,
+				D0D46908281EC697002D0849 /* Assets.xcassets in Resources */,
+				D0D4688D281EC637002D0849 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D46893281EC637002D0849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D4689D281EC637002D0849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -588,43 +854,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0BAF523281D57FE0062819B /* ETCDEtcdOperationView.swift in Sources */,
-				D0305059281824DD00477D33 /* CarouselItemlView.swift in Sources */,
-				D030509B281826F600477D33 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
-				D0EC35A9281BD4BB00F77078 /* ETCDLeaseListView.swift in Sources */,
-				D030509D281826F600477D33 /* ETCDTableView.swift in Sources */,
-				D03050A0281826F600477D33 /* ETCDKeyValueModel.swift in Sources */,
-				D0BAF52B281D81110062819B /* ETCDUserListView.swift in Sources */,
-				D0D4687E281E9A58002D0849 /* ETCDCheckBoxView.swift in Sources */,
-				D03050762818261C00477D33 /* LocalizedStringKey+.swift in Sources */,
-				D03050A6281826F600477D33 /* Content.swift in Sources */,
-				D0305058281824DD00477D33 /* Carousel.swift in Sources */,
+				D0D46945281EC697002D0849 /* Button.swift in Sources */,
+				D0D4691D281EC697002D0849 /* ETCDEtcdOperationView.swift in Sources */,
+				D0D46935281EC697002D0849 /* ETCDKVItemModel.swift in Sources */,
+				D0D46921281EC697002D0849 /* ETCDRolesListView.swift in Sources */,
+				D0D46927281EC697002D0849 /* ETCDKeyValueActionsView.swift in Sources */,
+				D0D46949281EC697002D0849 /* Constant.swift in Sources */,
+				D0D4693B281EC697002D0849 /* AboutView.swift in Sources */,
+				D0D46929281EC697002D0849 /* ETCDUserListView.swift in Sources */,
+				D0D4690D281EC697002D0849 /* ETCDHomeMainView.swift in Sources */,
+				D0D46923281EC697002D0849 /* ETCDLeaseListView.swift in Sources */,
+				D0D4692B281EC697002D0849 /* NSTextView+.swift in Sources */,
+				D0D468FD281EC697002D0849 /* CarouselItemlView.swift in Sources */,
+				D0D46913281EC697002D0849 /* ETCDTabarModel.swift in Sources */,
+				D0D46943281EC697002D0849 /* ColorHex.swift in Sources */,
+				D0D46933281EC697002D0849 /* ETCDRoleModel.swift in Sources */,
+				D0D4691F281EC697002D0849 /* ETCDKeyPrefixView.swift in Sources */,
+				D0D4693D281EC697002D0849 /* AboutModel.swift in Sources */,
+				D0D46941281EC697002D0849 /* Content.swift in Sources */,
+				D0D4690B281EC697002D0849 /* ETCDHomeContentView.swift in Sources */,
+				D0D46919281EC697002D0849 /* TopToastView.swift in Sources */,
+				D0D4692D281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
+				D0D46915281EC697002D0849 /* ETCDConfigModel.swift in Sources */,
+				D0D46939281EC697002D0849 /* ETCDLogsObject.swift in Sources */,
+				D0D4693F281EC697002D0849 /* ETCDCheckBoxView.swift in Sources */,
+				D0D46917281EC697002D0849 /* CardItemView.swift in Sources */,
+				D0D46931281EC697002D0849 /* ETCDTableView.swift in Sources */,
+				D0D4690F281EC697002D0849 /* HomeViewModel.swift in Sources */,
+				D0D46947281EC697002D0849 /* LocalizedStringKey+.swift in Sources */,
+				D0D46925281EC697002D0849 /* ETCDSheetView.swift in Sources */,
+				D0D4694B281EC697002D0849 /* OpenPan.swift in Sources */,
 				D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */,
-				D030509A281826F600477D33 /* ETCDTabBarContentView.swift in Sources */,
-				D03050AA281826F600477D33 /* ETCDHomeContentView.swift in Sources */,
-				D03050A7281826F600477D33 /* ColorHex.swift in Sources */,
-				D03050AB281826F600477D33 /* ETCDHomeMainView.swift in Sources */,
-				D03050A2281826F600477D33 /* AboutView.swift in Sources */,
-				D030509C281826F600477D33 /* ETCDKVSubContentView.swift in Sources */,
-				D0E8A995281A26F50087B3B6 /* NSTextView+.swift in Sources */,
-				D03050B0281826F600477D33 /* ETCDConfigModel.swift in Sources */,
-				D03050B62818271000477D33 /* Constant.swift in Sources */,
-				D0D4687C281E9379002D0849 /* ETCDKeyPrefixView.swift in Sources */,
-				D03050AD281826F600477D33 /* ETCDTabarModel.swift in Sources */,
-				D03050B2281826F600477D33 /* TopToastView.swift in Sources */,
-				D03050A8281826F600477D33 /* Button.swift in Sources */,
-				D03050B1281826F600477D33 /* CardItemView.swift in Sources */,
-				D0EC35AB281BF51500F77078 /* ETCDLogsObject.swift in Sources */,
-				D030509E281826F600477D33 /* ETCDSheetView.swift in Sources */,
-				D0BAF527281D762C0062819B /* ETCDRolesListView.swift in Sources */,
-				D03050B72818271000477D33 /* OpenPan.swift in Sources */,
-				D030505A281824DD00477D33 /* CarouselView.swift in Sources */,
-				D03050AE281826F600477D33 /* HomeViewModel.swift in Sources */,
-				D03050AC281826F600477D33 /* ETCDUserDefaultsModel.swift in Sources */,
-				D03050A3281826F600477D33 /* AboutModel.swift in Sources */,
-				D03050A1281826F600477D33 /* ETCDKVItemModel.swift in Sources */,
-				D0BAF525281D594D0062819B /* ETCDKeyValueActionsView.swift in Sources */,
-				D03050A9281826F600477D33 /* ETCDConfigView.swift in Sources */,
+				D0D46909281EC697002D0849 /* ETCDConfigView.swift in Sources */,
+				D0D46911281EC697002D0849 /* ETCDUserDefaultsModel.swift in Sources */,
+				D0D468FF281EC697002D0849 /* CarouselView.swift in Sources */,
+				D0D4691B281EC697002D0849 /* ETCDTabBarContentView.swift in Sources */,
+				D0D46937281EC697002D0849 /* ETCDKeyValueModel.swift in Sources */,
+				D0D4692F281EC697002D0849 /* ETCDKVSubContentView.swift in Sources */,
+				D0D468FB281EC697002D0849 /* Carousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +912,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0D46882281EC635002D0849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D4691A281EC697002D0849 /* TopToastView.swift in Sources */,
+				D0D4693C281EC697002D0849 /* AboutView.swift in Sources */,
+				D0D46938281EC697002D0849 /* ETCDKeyValueModel.swift in Sources */,
+				D0D46936281EC697002D0849 /* ETCDKVItemModel.swift in Sources */,
+				D0D4693A281EC697002D0849 /* ETCDLogsObject.swift in Sources */,
+				D0D46900281EC697002D0849 /* CarouselView.swift in Sources */,
+				D0D46922281EC697002D0849 /* ETCDRolesListView.swift in Sources */,
+				D0D46946281EC697002D0849 /* Button.swift in Sources */,
+				D0D4691E281EC697002D0849 /* ETCDEtcdOperationView.swift in Sources */,
+				D0D46934281EC697002D0849 /* ETCDRoleModel.swift in Sources */,
+				D0D46940281EC697002D0849 /* ETCDCheckBoxView.swift in Sources */,
+				D0D46928281EC697002D0849 /* ETCDKeyValueActionsView.swift in Sources */,
+				D0D4692A281EC697002D0849 /* ETCDUserListView.swift in Sources */,
+				D0D46910281EC697002D0849 /* HomeViewModel.swift in Sources */,
+				D0D46932281EC697002D0849 /* ETCDTableView.swift in Sources */,
+				D0D468FC281EC697002D0849 /* Carousel.swift in Sources */,
+				D0D46942281EC697002D0849 /* Content.swift in Sources */,
+				D0D4691C281EC697002D0849 /* ETCDTabBarContentView.swift in Sources */,
+				D0D46920281EC697002D0849 /* ETCDKeyPrefixView.swift in Sources */,
+				D0D4690E281EC697002D0849 /* ETCDHomeMainView.swift in Sources */,
+				D0D46918281EC697002D0849 /* CardItemView.swift in Sources */,
+				D0D4690A281EC697002D0849 /* ETCDConfigView.swift in Sources */,
+				D0D4688B281EC635002D0849 /* ContentView.swift in Sources */,
+				D0D4690C281EC697002D0849 /* ETCDHomeContentView.swift in Sources */,
+				D0D468FE281EC697002D0849 /* CarouselItemlView.swift in Sources */,
+				D0D46930281EC697002D0849 /* ETCDKVSubContentView.swift in Sources */,
+				D0D4693E281EC697002D0849 /* AboutModel.swift in Sources */,
+				D0D4694A281EC697002D0849 /* Constant.swift in Sources */,
+				D0D46944281EC697002D0849 /* ColorHex.swift in Sources */,
+				D0D46912281EC697002D0849 /* ETCDUserDefaultsModel.swift in Sources */,
+				D0D4694C281EC697002D0849 /* OpenPan.swift in Sources */,
+				D0D46914281EC697002D0849 /* ETCDTabarModel.swift in Sources */,
+				D0D46889281EC635002D0849 /* etcdWp_iOSApp.swift in Sources */,
+				D0D4692C281EC697002D0849 /* NSTextView+.swift in Sources */,
+				D0D46924281EC697002D0849 /* ETCDLeaseListView.swift in Sources */,
+				D0D46948281EC697002D0849 /* LocalizedStringKey+.swift in Sources */,
+				D0D46926281EC697002D0849 /* ETCDSheetView.swift in Sources */,
+				D0D46916281EC697002D0849 /* ETCDConfigModel.swift in Sources */,
+				D0D4692E281EC697002D0849 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D46891281EC637002D0849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D4689A281EC637002D0849 /* etcdWp_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D4689B281EC637002D0849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D468A4281EC637002D0849 /* etcdWp_iOSUITests.swift in Sources */,
+				D0D468A6281EC637002D0849 /* etcdWp_iOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -658,32 +988,42 @@
 			target = D00ED46228006EAA0068CBB3 /* etcdWP */;
 			targetProxy = D00ED47F28006EAC0068CBB3 /* PBXContainerItemProxy */;
 		};
+		D0D46897281EC637002D0849 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D46885281EC635002D0849 /* etcdWp-iOS */;
+			targetProxy = D0D46896281EC637002D0849 /* PBXContainerItemProxy */;
+		};
+		D0D468A1281EC637002D0849 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D46885281EC635002D0849 /* etcdWp-iOS */;
+			targetProxy = D0D468A0281EC637002D0849 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D03050692818253800477D33 /* InfoPlist.strings */ = {
+		D0D468BB281EC697002D0849 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D03050682818253800477D33 /* en */,
-				D030506A2818253A00477D33 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D030506D2818253E00477D33 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D030506C2818253E00477D33 /* en */,
-				D030506E2818254000477D33 /* zh-Hans */,
+				D0D468BC281EC697002D0849 /* zh-Hans */,
+				D0D468C1281EC697002D0849 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		D0305073281825E100477D33 /* Localizable.stringsdict */ = {
+		D0D468BD281EC697002D0849 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D0305072281825E100477D33 /* en */,
-				D0305074281825E300477D33 /* zh-Hans */,
+				D0D468BE281EC697002D0849 /* zh-Hans */,
+				D0D468C2281EC697002D0849 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0D468BF281EC697002D0849 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D468C0281EC697002D0849 /* zh-Hans */,
+				D0D468C3281EC697002D0849 /* en */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -948,6 +1288,161 @@
 			};
 			name = Release;
 		};
+		D0D468A7281EC637002D0849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"etcdWp-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 93C2552H5C;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/etcdWP/Class/FrameWork",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Study.etcdWp-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D468A8281EC637002D0849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"etcdWp-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 93C2552H5C;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/etcdWP/Class/FrameWork",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Study.etcdWp-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0D468A9281EC637002D0849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93C2552H5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Study.etcdWp-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/etcdWp-iOS.app/etcdWp-iOS";
+			};
+			name = Debug;
+		};
+		D0D468AA281EC637002D0849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93C2552H5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Study.etcdWp-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/etcdWp-iOS.app/etcdWp-iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0D468AB281EC637002D0849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93C2552H5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Study.etcdWp-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "etcdWp-iOS";
+			};
+			name = Debug;
+		};
+		D0D468AC281EC637002D0849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93C2552H5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Study.etcdWp-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "etcdWp-iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -983,6 +1478,33 @@
 			buildConfigurations = (
 				D00ED48F28006EAC0068CBB3 /* Debug */,
 				D00ED49028006EAC0068CBB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D468AD281EC637002D0849 /* Build configuration list for PBXNativeTarget "etcdWp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D468A7281EC637002D0849 /* Debug */,
+				D0D468A8281EC637002D0849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D468AE281EC637002D0849 /* Build configuration list for PBXNativeTarget "etcdWp-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D468A9281EC637002D0849 /* Debug */,
+				D0D468AA281EC637002D0849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D468AF281EC637002D0849 /* Build configuration list for PBXNativeTarget "etcdWp-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D468AB281EC637002D0849 /* Debug */,
+				D0D468AC281EC637002D0849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
