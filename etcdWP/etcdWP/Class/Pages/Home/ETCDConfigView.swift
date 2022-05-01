@@ -131,10 +131,12 @@ struct ETCDConfigView: View {
                 
                 PopView {
                     Button {
-                        if self.homeData.Register(item: config) {
+                        do{
+                            try self.homeData.Register(item: config)
                             self.homeData.Append(data: config)
                             self.isPopView.toggle()
-                        }else{
+                        }catch {
+                            print(error.localizedDescription)
                             self.isToast.toggle()
                         }
                     } label: {

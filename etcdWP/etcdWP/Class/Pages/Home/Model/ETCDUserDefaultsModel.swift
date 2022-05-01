@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+
 var encoder = JSONEncoder()
 var decoder = JSONDecoder()
 
-// 主要用于存储和获取etcd客户端，增删改查操作
 extension HomeViewModel {
+    // 追加UserDefaults
     func Append(data: EtcdClientOption) {
         let client = EtcdClientOption(
             endpoints: data.endpoints,
@@ -30,6 +31,7 @@ extension HomeViewModel {
         self.SetUserDefaults()
     }
     
+    // 判断当前服务名称是否存在
     func FindByName(serviceName: String) ->Bool {
         for item in self.ectdClientList {
             if item.clientName == serviceName {
@@ -39,14 +41,17 @@ extension HomeViewModel {
         return false
     }
     
+    // 获取UUID
     func GetUUID(idx: Int) -> UUID {
         return self.ectdClientList[idx].id
     }
     
+    // 根据指定下标获取配置
     func GetEtcdClientList(idx: Int) -> EtcdClientOption {
         return self.ectdClientList[idx]
     }
     
+    // 根据uuid删除指定的UserDeafult
     func Delete(id: UUID) {
         for (idx,item) in self.ectdClientList.enumerated() {
             if item.id == id {
@@ -56,6 +61,7 @@ extension HomeViewModel {
         self.SetUserDefaults()
     }
     
+    // 更新本地存储
     func Update(id: UUID,newData: EtcdClientOption) {
         for (idx,item) in self.ectdClientList.enumerated() {
             if item.id == id {
@@ -77,23 +83,26 @@ extension HomeViewModel {
         self.SetUserDefaults()
     }
     
+    // 根据创建事件排序
     func Sort() {
         self.ectdClientList.sort(by:) { (data1, data2) in
             return data1.createAt.timeIntervalSince1970 < data2.createAt.timeIntervalSince1970
         }
     }
     
+    // 保存本地存储
     func SetUserDefaults() {
         let data = try! encoder.encode(self.ectdClientList)
         UserDefaults.standard.set(data, forKey: userDefaultsKey)
     }
     
+    // 获取本地存储
     func GetUserDefaults() -> [EtcdClientOption] {
         guard let data = UserDefaults.standard.object(forKey: userDefaultsKey) else {
-            return [EtcdClientOption]()
+            return []
         }
         let js = try? decoder.decode([EtcdClientOption].self, from: data as! Data)
-        if js == nil{
+        guard ((js?.isEmpty) != nil) else {
             return []
         }
         return js!
