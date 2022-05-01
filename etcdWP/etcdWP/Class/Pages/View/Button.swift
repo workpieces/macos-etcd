@@ -52,12 +52,12 @@ struct DefaultAddButtonViewModifier: ViewModifier{
                 }
             } label: {
                 Text("开启所有服务")
-                    .font(.system(size: 10.0))
+                    .font(.system(size: 14))
                     .foregroundColor(.white)
-                    .frame(width:70)
+                    .frame(width:100)
             } .frame(alignment: .trailing)
               .buttonStyle(PlainButtonStyle())
-              .padding(20)
+              .padding(18)
               .background(Color(hex:"#00FFFF").opacity(0.55))
               .cornerRadius(8)
               .clipped()
@@ -67,12 +67,12 @@ struct DefaultAddButtonViewModifier: ViewModifier{
                 }
             } label: {
                 Text("停止所有服务")
-                    .font(.system(size: 10.0))
+                    .font(.system(size: 14))
                     .foregroundColor(.white)
-                    .frame(width:70)
+                    .frame(width:100)
             } .frame(alignment: .trailing)
               .buttonStyle(PlainButtonStyle())
-              .padding(20)
+              .padding(18)
               .background(Color(hex:"#00FFFF").opacity(0.55))
               .cornerRadius(8)
               .clipped()
@@ -80,9 +80,6 @@ struct DefaultAddButtonViewModifier: ViewModifier{
             PushView(destination: ETCDConfigView(), isActive: $isLinkActive) {
                 Button {  self.isLinkActive.toggle() } label: {
                     HStack {
-                        Image(systemName: imageName)
-                            .withDefaultImage(width: 16.0)
-                        
                         Text(title)
                             .withDefaultContentTitle()
                     }
