@@ -11,7 +11,6 @@ struct ETCDLeaseListView: View {
     @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
-    @State var isSucceFul: Bool = false
     @State var timeText: String = ""
     @State var times :Int = 0
     @Binding var currentModel  : KVOperateModel
@@ -45,7 +44,6 @@ struct ETCDLeaseListView: View {
                         if time != times{
                             let  result   =  storeObj.LeaseGrant(ttl:time!)
                             if result?.status != 200 {
-                                self.isSucceFul.toggle()
                                 self.isShowToast.toggle()
                             }else{
                                 items =  storeObj.LeaseList()?.datas ?? []
@@ -87,8 +85,6 @@ extension ETCDLeaseListView {
         let reuslt = storeObj.LeaseRevoke(leaseid: Int(item.ttlid!))
         if reuslt?.status != 200{
             self.isShowToast.toggle()
-        }else{
-            self.isSucceFul .toggle()
         }
     }
     
@@ -96,8 +92,6 @@ extension ETCDLeaseListView {
         let reuslt = storeObj.keepAliveOnce(leaseid: Int(item.ttlid!))
         if reuslt?.status != 200{
             self.isShowToast.toggle()
-        }else{
-            self.isSucceFul .toggle()
         }
     }
     
