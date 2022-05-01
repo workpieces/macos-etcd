@@ -63,7 +63,7 @@ class HomeViewModel: ObservableObject {
     }
     
     // 注册服务
-    func Register(item : EtcdClientOption) -> Bool {
+    func Register(item : EtcdClientOption) throws {
         let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                  item.username,
                                  item.password,
@@ -75,10 +75,9 @@ class HomeViewModel: ObservableObject {
                                  item.dialKeepAliveTimeout ,
                                  item.autoSyncInterval ,
                                  nil)
-        if c == nil {
-            return false
+        if c == nil || !self.Ping(c: c!) {
+            throw NSError.init(domain: "服务连接异常", code: 400)
         }
-        return self.Ping(c: c!)
     }
     
     // 监听服务

@@ -9,7 +9,6 @@ import SwiftUI
 var encoder = JSONEncoder()
 var decoder = JSONDecoder()
 
-// 主要用于存储和获取etcd客户端，增删改查操作
 extension HomeViewModel {
     func Append(data: EtcdClientOption) {
         let client = EtcdClientOption(
@@ -90,10 +89,10 @@ extension HomeViewModel {
     
     func GetUserDefaults() -> [EtcdClientOption] {
         guard let data = UserDefaults.standard.object(forKey: userDefaultsKey) else {
-            return [EtcdClientOption]()
+            return []
         }
         let js = try? decoder.decode([EtcdClientOption].self, from: data as! Data)
-        if js == nil{
+        guard ((js?.isEmpty) != nil) else {
             return []
         }
         return js!
