@@ -55,7 +55,6 @@ struct ETCDHomeContentView: View {
         .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
         .navigationViewStyle(.automatic)
         .onReceive(closePublisher) { _ in
-            print("Application will Terminate Notification")
             self.homeData.ectdClientList.removeAll()
         }
         .onAppear{
