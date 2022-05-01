@@ -60,7 +60,6 @@ struct CardItemView: View {
                 }
                 .padding(DefaultSpacePadding)
             }
-            
             VStack(alignment: .center,spacing: 8.0) {
                 Text("节点地址")
                     .withDefaultContentTitle(fontColor: .white)
@@ -75,8 +74,18 @@ struct CardItemView: View {
                 
                 Text(options.status == true ? "Scuess" : "Failed")
                     .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#7CFC00") : .red)
-                
                 Spacer()
+                HStack(){
+                    Spacer()
+                    Button {
+            
+                    } label: {
+                        Text("开启")
+                            .font(.system(size: 10.0))
+                            .foregroundColor(.white)
+                            .frame(width: 50)
+                    }
+                }.padding(10)
             }
         }
         .frame(minHeight: 210, maxHeight: 260)
