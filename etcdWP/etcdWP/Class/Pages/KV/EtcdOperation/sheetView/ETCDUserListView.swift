@@ -11,7 +11,6 @@ struct ETCDUserListView: View {
     @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
-    @State var isSucceFul: Bool = false
     @State var userText: String = ""
     @State var passWordText: String = ""
     @State var user :String = ""
@@ -71,7 +70,6 @@ struct ETCDUserListView: View {
                         let  result   =  storeObj.addUser(user: userText, password: passWordText)
                         if result?.status != 200 {
                             self.toastText = result?.message ?? "用户操作错误"
-                            self.isSucceFul.toggle()
                             self.isShowToast.toggle()
                         }else{
                             items =  storeObj.UsersList() ?? []
@@ -116,7 +114,6 @@ extension ETCDUserListView {
         if reuslt?.status != 200{
             self.isShowToast.toggle()
         }else{
-            self.isSucceFul .toggle()
             self.isShowToast.toggle()
         }
     }
