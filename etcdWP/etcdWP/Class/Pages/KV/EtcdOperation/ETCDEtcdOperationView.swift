@@ -34,11 +34,9 @@ struct ETCDEtcdOperationView :View {
                                 .truncationMode(.middle)
                                 .frame(maxHeight: 44.0)
                             if item.type == 5 {
-                                Toggle("", isOn:$isEnable)
-                                    .onChange(of: isEnable)
-                                { value in
-                                    let _ =  storeObj.authEnable(enble: value)
-                                    print("--------\(value)")
+                                ETCDCheckBoxView(IsChoice: $isEnable) { newValue in
+                                    let _ =  storeObj.authEnable(enble: newValue)
+                                    print("--------\(newValue)")
                                 }
                             }
                             Spacer()
