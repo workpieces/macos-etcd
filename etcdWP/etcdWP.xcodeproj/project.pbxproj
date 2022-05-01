@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDD9589280AA1180040BD53 /* FilePicker */; };
-		5CF34AA8281E9C9C0052379F /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF34AA7281E9C9C0052379F /* MacosEtcd.framework */; };
+		5CF34AAA281EA1400052379F /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF34AA9281EA1400052379F /* MacosEtcd.framework */; };
 		D00ED46728006EAA0068CBB3 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */; };
 		D00ED46B28006EAB0068CBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46A28006EAB0068CBB3 /* Assets.xcassets */; };
 		D00ED46E28006EAB0068CBB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00ED46D28006EAB0068CBB3 /* Preview Assets.xcassets */; };
@@ -80,7 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5CF34AA7281E9C9C0052379F /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		5CF34AA9281EA1400052379F /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D00ED46328006EAA0068CBB3 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00ED46628006EAA0068CBB3 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D00ED46A28006EAB0068CBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			files = (
 				D07D786A2802827500F72CF7 /* ObjectMapper in Frameworks */,
 				D079BE5028143F36006B8619 /* SnapKit in Frameworks */,
-				5CF34AA8281E9C9C0052379F /* MacosEtcd.framework in Frameworks */,
+				5CF34AAA281EA1400052379F /* MacosEtcd.framework in Frameworks */,
 				D00ED49928006F600068CBB3 /* AxisTabView in Frameworks */,
 				D00ED49628006F490068CBB3 /* PopupView in Frameworks */,
 				5CDD958A280AA1180040BD53 /* FilePicker in Frameworks */,
@@ -241,7 +241,7 @@
 		D0305026281824DC00477D33 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				5CF34AA7281E9C9C0052379F /* MacosEtcd.framework */,
+				5CF34AA9281EA1400052379F /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
