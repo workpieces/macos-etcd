@@ -47,10 +47,11 @@ struct ETCDLeaseListView: View {
                                 self.isShowToast.toggle()
                             }else{
                                 items =  storeObj.LeaseList()?.datas ?? []
+                                presentationMode.wrappedValue.dismiss()
                             }
                         }
                     }
-                    presentationMode.wrappedValue.dismiss()
+
                 } label: {
                     Text("确定")
                         .font(.system(size: 12))
