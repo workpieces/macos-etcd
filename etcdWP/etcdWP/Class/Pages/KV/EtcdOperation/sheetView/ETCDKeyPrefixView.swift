@@ -20,7 +20,7 @@ struct ETCDKeyPrefixView: View {
         VStack(){
             Text(currentModel.name).padding(10)
             HStack(){
-                Text("请输入要删除键值前缀")
+                Text("请输入键值前缀")
                     .foregroundColor(Color.white)
                     .font(.custom("HelveticaNeue", size: 12))
                     .lineSpacing(1.5)
