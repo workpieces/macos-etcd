@@ -52,7 +52,7 @@ struct ETCDLeaseListView: View {
                             }
                         }
                     }
-                    presentationMode.wrappedValue.dismiss()
+//                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("确定")
                         .font(.system(size: 12))
@@ -84,7 +84,7 @@ struct ETCDLeaseListView: View {
 extension ETCDLeaseListView {
     
     func deleFunc(item:KVData) {
-        let reuslt = storeObj.LeaseRevoke(leaseid: Int(item.ttlid!))
+        let reuslt = storeObj.LeaseRevoke(leaseid: String(item.ttlid!))
         if reuslt?.status != 200{
             self.isShowToast.toggle()
         }else{

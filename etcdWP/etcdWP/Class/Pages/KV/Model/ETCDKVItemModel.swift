@@ -366,11 +366,11 @@ extension ItemStore {
         }
         return nil
     }
-    func LeaseRevoke(leaseid: Int) -> ETCDKeyValue? {
-        let result = c?.revoke(leaseid)
+    func LeaseRevoke(leaseid: String) -> ETCDKeyValue? {
+        let result = c?.leaseRevoke(leaseid)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "DELETE")
+            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "LEASE")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
                 return nil
@@ -383,7 +383,7 @@ extension ItemStore {
         let result = c?.leaseList()
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
+            let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "LEASE")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
                 return nil
@@ -488,7 +488,7 @@ extension ItemStore {
         let result = c?.deleteRole(roleId)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "Role")
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ROLE")
             ETCDLogsObject.shared.logSubjec.send(lg)
 
             return resp
@@ -501,7 +501,7 @@ extension ItemStore {
         let result = c?.roleAdd(roleId)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "Role")
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ROLE")
             ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
         }
@@ -531,7 +531,7 @@ extension ItemStore {
         let result = c?.deleteUser(user)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "deleteRole")
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "USER")
             ETCDLogsObject.shared.logSubjec.send(lg)
             
             return resp
@@ -545,7 +545,7 @@ extension ItemStore {
         let result = c?.userAdd(user, password: password)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "roleAdd")
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "USER")
             ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
         }
@@ -562,7 +562,7 @@ extension ItemStore {
         let result = c?.authEnable(enble)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
-            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "authEnable")
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "AUTHENABLE")
             ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
         }

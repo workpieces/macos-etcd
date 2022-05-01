@@ -39,6 +39,7 @@
 - (NSData* _Nullable)grantUserRole:(NSString* _Nullable)user role:(NSString* _Nullable)role;
 - (NSData* _Nullable)keepAliveOnce:(long)leaseid;
 - (NSData* _Nullable)leaseList;
+- (NSData* _Nullable)leaseRevoke:(NSString* _Nullable)leaseid;
 - (NSData* _Nullable)memberAdd:(NSString* _Nullable)endpoint learner:(BOOL)learner;
 - (NSData* _Nullable)memberList;
 - (NSData* _Nullable)memberRemove:(NSString* _Nullable)id_;
@@ -51,7 +52,6 @@
 - (NSData* _Nullable)putKeyWithLease:(NSString* _Nullable)key value:(NSString* _Nullable)value leaseid:(long)leaseid;
 - (NSData* _Nullable)putWithTTL:(NSString* _Nullable)key value:(NSString* _Nullable)value ttl:(long)ttl;
 - (NSData* _Nullable)puts:(NSString* _Nullable)key value:(NSString* _Nullable)value leasid:(long)leasid putPrevKV:(BOOL)putPrevKV putIgnoreVal:(BOOL)putIgnoreVal putIgnoreLease:(BOOL)putIgnoreLease;
-- (NSData* _Nullable)revoke:(long)ttl;
 - (NSData* _Nullable)revokes:(NSString* _Nullable)username rolename:(NSString* _Nullable)rolename;
 - (NSData* _Nullable)roleAdd:(NSString* _Nullable)role;
 - (NSData* _Nullable)roles;
