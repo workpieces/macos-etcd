@@ -11,7 +11,6 @@ struct ETCDRolesListView: View {
     @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
-    @State var isSucceFul: Bool = false
     @State var roleText: String = ""
     @State var role :String = ""
     @Binding var currentModel  : KVOperateModel
@@ -43,13 +42,12 @@ struct ETCDRolesListView: View {
                         role = roleText
                         let  result   =  storeObj.createRole(roleId: roleText)
                         if result?.status != 200 {
-                            self.isSucceFul.toggle()
                             self.isShowToast.toggle()
                         }else{
-                            self.isSucceFul.toggle()
                             items =  storeObj.RolesList() ?? []
+                            presentationMode.wrappedValue.dismiss()
                         }
-                        presentationMode.wrappedValue.dismiss()
+
                     }
                     
                 } label: {
@@ -85,9 +83,6 @@ extension ETCDRolesListView {
     func deleFunc(item:KVData) {
         let reuslt = storeObj.removeRole(roleId: item.role!)
         if reuslt?.status != 200{
-            self.isShowToast.toggle()
-        }else{
-            self.isSucceFul .toggle()
             self.isShowToast.toggle()
         }
     }

@@ -113,13 +113,8 @@ extension ETCDUserListView {
         let reuslt = storeObj.removeUser(user: item.user!)
         if reuslt?.status != 200{
             self.isShowToast.toggle()
-        }else{
-            self.isShowToast.toggle()
         }
     }
-    
-    
-    
 }
 
 
