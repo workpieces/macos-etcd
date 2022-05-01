@@ -73,7 +73,7 @@ struct ETCDUserListView: View {
                             self.isShowToast.toggle()
                         }else{
                             items =  storeObj.UsersList() ?? []
-                            presentationMode.wrappedValue.dismiss()
+//                            presentationMode.wrappedValue.dismiss()
                         }
                         user = userText
                         

@@ -47,7 +47,7 @@ struct ETCDLeaseListView: View {
                                 self.isShowToast.toggle()
                             }else{
                                 items =  storeObj.LeaseList()?.datas ?? []
-                                presentationMode.wrappedValue.dismiss()
+//                                presentationMode.wrappedValue.dismiss()
                             }
                         }
                     }
