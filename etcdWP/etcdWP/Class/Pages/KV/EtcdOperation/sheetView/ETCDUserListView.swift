@@ -15,6 +15,7 @@ struct ETCDUserListView: View {
     @State var userText: String = ""
     @State var passWordText: String = ""
     @State var user :String = ""
+    @State var toastText :String = "操作用户错误"
     @Binding var currentModel  : KVOperateModel
     @Environment(\.presentationMode) var presentationMode
     
@@ -54,19 +55,30 @@ struct ETCDUserListView: View {
                 }
                 Button {
                     
-                    guard !userText.isEmpty else{
+                    guard !userText.isEmpty else {
+                        self.toastText = "用户操作错误"
+                        self.isShowToast.toggle()
                         return
                     }
+                    
+                    guard !passWordText.isEmpty else {
+                        self.toastText = "请输入密码"
+                        self.isShowToast.toggle()
+                        return
+                    }
+                    
                     if userText != user{
-                        user = userText
                         let  result   =  storeObj.addUser(user: userText, password: passWordText)
                         if result?.status != 200 {
+                            self.toastText = result?.message ?? "用户操作错误"
                             self.isSucceFul.toggle()
                             self.isShowToast.toggle()
                         }else{
                             items =  storeObj.UsersList() ?? []
+                            presentationMode.wrappedValue.dismiss()
                         }
-                        presentationMode.wrappedValue.dismiss()
+                        user = userText
+                        
                     }
                     
                 } label: {
