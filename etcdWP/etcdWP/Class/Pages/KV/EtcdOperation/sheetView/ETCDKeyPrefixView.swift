@@ -14,7 +14,6 @@ struct ETCDKeyPrefixView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
     @State var keyPrefixText: String = ""
-    @State var keyPrefix :String = ""
     @State var isSucceful :Bool  = false
     var body: some View {
         VStack(){
