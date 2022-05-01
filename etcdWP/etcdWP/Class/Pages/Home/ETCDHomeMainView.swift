@@ -14,9 +14,13 @@ struct HomeMainView: View {
     let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
-            withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
-                .padding(.top ,40)
-                .padding(.trailing,18)
+            Spacer()
+            HStack(){
+                Spacer()
+                withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
+                    .padding(.top ,40)
+                    .padding(.trailing,18)
+            }
             HStack {
                 Text("Services")
                     .withDefaultContentTitle(fontSize: 30.0)

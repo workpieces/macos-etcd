@@ -39,12 +39,40 @@ struct DefaultTabarButtonViewModifier: ViewModifier{
 
 // 创建客户端按钮
 struct DefaultAddButtonViewModifier: ViewModifier{
+    @EnvironmentObject var homeData: HomeViewModel
     var imageName: String
     var title: String
     @Binding var isLinkActive : Bool
     func body(content: Content) -> some View {
         HStack {
             Spacer()
+            Button {
+             try!   homeData.OpenALL()
+            } label: {
+                Text("开启所有服务")
+                    .font(.system(size: 10.0))
+                    .foregroundColor(.white)
+                    .frame(width:70)
+            } .frame(alignment: .trailing)
+              .buttonStyle(PlainButtonStyle())
+              .padding(20)
+              .background(Color(hex:"#00FFFF").opacity(0.55))
+              .cornerRadius(8)
+              .clipped()
+            Button {
+                try!  homeData.CloseAll()
+            } label: {
+                Text("停止所有服务")
+                    .font(.system(size: 10.0))
+                    .foregroundColor(.white)
+                    .frame(width:70)
+            } .frame(alignment: .trailing)
+              .buttonStyle(PlainButtonStyle())
+              .padding(20)
+              .background(Color(hex:"#00FFFF").opacity(0.55))
+              .cornerRadius(8)
+              .clipped()
+            
             PushView(destination: ETCDConfigView(), isActive: $isLinkActive) {
                 Button {  self.isLinkActive.toggle() } label: {
                     HStack {
@@ -57,7 +85,9 @@ struct DefaultAddButtonViewModifier: ViewModifier{
                     .padding(DefaultSpacePadding)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .background(Capsule().fill(Color(hex:"#00FFFF").opacity(0.55)))
+                .background(Color(hex:"#00FFFF").opacity(0.55))
+                .cornerRadius(8)
+                .clipped()
             }
         }
     }
