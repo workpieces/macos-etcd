@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		D021EFC9281F5AB700992294 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFC8281F5AB700992294 /* Tests_macOSLaunchTests.swift */; };
 		D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFA2281F5AB600992294 /* etcdWPApp.swift */; };
 		D021EFCB281F5AB700992294 /* etcdWPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFA2281F5AB600992294 /* etcdWPApp.swift */; };
-		D021F025281FF8E600992294 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D021EFE2281FF8E500992294 /* MacosEtcd.framework */; };
 		D021F026281FF8E600992294 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFE5281FF8E500992294 /* Carousel.swift */; };
 		D021F027281FF8E600992294 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFE5281FF8E500992294 /* Carousel.swift */; };
 		D021F028281FF8E600992294 /* CarouselItemlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFE6281FF8E500992294 /* CarouselItemlView.swift */; };
@@ -114,6 +113,7 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
+		D021F0B1281FFCB200992294 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D021F0B0281FFCB200992294 /* MacosEtcd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +146,6 @@
 		D021EFC8281F5AB700992294 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		D021EFDE281FF85000992294 /* etcdWP--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "etcdWP--macOS--Info.plist"; sourceTree = "<group>"; };
 		D021EFDF281FF88400992294 /* etcdWP--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "etcdWP--iOS--Info.plist"; sourceTree = "<group>"; };
-		D021EFE2281FF8E500992294 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D021EFE5281FF8E500992294 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		D021EFE6281FF8E500992294 /* CarouselItemlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItemlView.swift; sourceTree = "<group>"; };
 		D021EFE7281FF8E500992294 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
@@ -191,6 +190,7 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D021F0B0281FFCB200992294 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,9 +221,9 @@
 				D021F08D281FFA3600992294 /* Alamofire in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
 				D021F085281FFA1000992294 /* SnapKit in Frameworks */,
-				D021F025281FF8E600992294 /* MacosEtcd.framework in Frameworks */,
 				D021F07A281FF9D900992294 /* NavigationStack in Frameworks */,
 				D021F087281FFA1000992294 /* SnapKit-Dynamic in Frameworks */,
+				D021F0B1281FFCB200992294 /* MacosEtcd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,21 +306,13 @@
 		D021EFE0281FF8E500992294 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				D021EFE1281FF8E500992294 /* FrameWork */,
+				D021F0AF281FFCB200992294 /* FrameWork */,
 				D021EFE3281FF8E500992294 /* Ventor */,
 				D021EFE8281FF8E500992294 /* Resource */,
 				D021EFF4281FF8E500992294 /* Pages */,
 				D021F01D281FF8E600992294 /* Utility */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		D021EFE1281FF8E500992294 /* FrameWork */ = {
-			isa = PBXGroup;
-			children = (
-				D021EFE2281FF8E500992294 /* MacosEtcd.framework */,
-			);
-			path = FrameWork;
 			sourceTree = "<group>";
 		};
 		D021EFE3281FF8E500992294 /* Ventor */ = {
@@ -504,6 +496,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		D021F0AF281FFCB200992294 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				D021F0B0281FFCB200992294 /* MacosEtcd.framework */,
+			);
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -626,7 +626,7 @@
 				};
 			};
 			buildConfigurationList = D021EFA0281F5AB500992294 /* Build configuration list for PBXProject "etcdWP" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
