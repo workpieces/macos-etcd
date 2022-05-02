@@ -95,12 +95,6 @@
 		D021F077281FF8E600992294 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F023281FF8E600992294 /* OpenPan.swift */; };
 		D021F07A281FF9D900992294 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D021F079281FF9D900992294 /* NavigationStack */; };
 		D021F07D281FF9EB00992294 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D021F07C281FF9EB00992294 /* NavigationStack */; };
-		D021F080281FFA0000992294 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D021F07F281FFA0000992294 /* SnapKit */; };
-		D021F082281FFA0000992294 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D021F081281FFA0000992294 /* SnapKit-Dynamic */; };
-		D021F085281FFA1000992294 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D021F084281FFA1000992294 /* SnapKit */; };
-		D021F087281FFA1000992294 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D021F086281FFA1000992294 /* SnapKit-Dynamic */; };
-		D021F08A281FFA2A00992294 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D021F089281FFA2A00992294 /* Alamofire */; };
-		D021F08D281FFA3600992294 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D021F08C281FFA3600992294 /* Alamofire */; };
 		D021F090281FFA5100992294 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F08F281FFA5100992294 /* AxisTabView */; };
 		D021F093281FFA5E00992294 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F092281FFA5E00992294 /* AxisTabView */; };
 		D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D021F095281FFA7B00992294 /* ObjectMapper */; };
@@ -114,6 +108,10 @@
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0B1281FFCB200992294 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D021F0B0281FFCB200992294 /* MacosEtcd.framework */; };
+		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
+		D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0888282002DD00A74D43 /* Alamofire */; };
+		D0FC088C282002F300A74D43 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC088B282002F300A74D43 /* SnapKit */; };
+		D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC088E282002FF00A74D43 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,11 +199,10 @@
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
 				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
+				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
+				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
 				D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */,
-				D021F08A281FFA2A00992294 /* Alamofire in Frameworks */,
-				D021F080281FFA0000992294 /* SnapKit in Frameworks */,
 				D021F07D281FF9EB00992294 /* NavigationStack in Frameworks */,
-				D021F082281FFA0000992294 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,17 +210,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */,
 				D021F0A8281FFB2800992294 /* FilePicker in Frameworks */,
 				D021F0A5281FFADD00992294 /* SwiftyJSON in Frameworks */,
 				D021F09F281FFAAB00992294 /* PopupView in Frameworks */,
 				D021F093281FFA5E00992294 /* AxisTabView in Frameworks */,
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
-				D021F08D281FFA3600992294 /* Alamofire in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
-				D021F085281FFA1000992294 /* SnapKit in Frameworks */,
 				D021F07A281FF9D900992294 /* NavigationStack in Frameworks */,
-				D021F087281FFA1000992294 /* SnapKit-Dynamic in Frameworks */,
 				D021F0B1281FFCB200992294 /* MacosEtcd.framework in Frameworks */,
+				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,13 +518,12 @@
 			name = "etcdWP (iOS)";
 			packageProductDependencies = (
 				D021F07C281FF9EB00992294 /* NavigationStack */,
-				D021F07F281FFA0000992294 /* SnapKit */,
-				D021F081281FFA0000992294 /* SnapKit-Dynamic */,
-				D021F089281FFA2A00992294 /* Alamofire */,
 				D021F08F281FFA5100992294 /* AxisTabView */,
 				D021F095281FFA7B00992294 /* ObjectMapper */,
 				D021F09B281FFA9F00992294 /* PopupView */,
 				D021F0A1281FFAD200992294 /* SwiftyJSON */,
+				D0FC0885282002D000A74D43 /* Alamofire */,
+				D0FC088B282002F300A74D43 /* SnapKit */,
 			);
 			productName = "etcdWP (iOS)";
 			productReference = D021EFA9281F5AB700992294 /* etcdWP.app */;
@@ -549,15 +544,14 @@
 			name = "etcdWP (macOS)";
 			packageProductDependencies = (
 				D021F079281FF9D900992294 /* NavigationStack */,
-				D021F084281FFA1000992294 /* SnapKit */,
-				D021F086281FFA1000992294 /* SnapKit-Dynamic */,
-				D021F08C281FFA3600992294 /* Alamofire */,
 				D021F092281FFA5E00992294 /* AxisTabView */,
 				D021F098281FFA8600992294 /* ObjectMapper */,
 				D021F09E281FFAAB00992294 /* PopupView */,
 				D021F0A4281FFADD00992294 /* SwiftyJSON */,
 				D021F0A7281FFB2800992294 /* FilePicker */,
 				D021F0AA281FFB3400992294 /* FilePicker */,
+				D0FC0888282002DD00A74D43 /* Alamofire */,
+				D0FC088E282002FF00A74D43 /* SnapKit */,
 			);
 			productName = "etcdWP (macOS)";
 			productReference = D021EFAF281F5AB700992294 /* etcdWP.app */;
@@ -638,10 +632,6 @@
 			packageReferences = (
 				D021F078281FF9D900992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D021F07B281FF9EB00992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
-				D021F07E281FFA0000992294 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D021F083281FFA1000992294 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D021F088281FFA2A00992294 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				D021F08B281FFA3600992294 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D021F091281FFA5E00992294 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D021F094281FFA7B00992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
@@ -652,6 +642,10 @@
 				D021F0A3281FFADD00992294 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */,
 				D021F0A9281FFB3400992294 /* XCRemoteSwiftPackageReference "FilePicker" */,
+				D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D0FC0887282002DD00A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D0FC088A282002F300A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D0FC088D282002FF00A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -910,7 +904,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -964,7 +958,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1257,38 +1251,6 @@
 				version = 1.0.4;
 			};
 		};
-		D021F07E281FFA0000992294 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.6.0;
-			};
-		};
-		D021F083281FFA1000992294 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.6.0;
-			};
-		};
-		D021F088281FFA2A00992294 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.6.1;
-			};
-		};
-		D021F08B281FFA3600992294 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.6.1;
-			};
-		};
 		D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
@@ -1369,6 +1331,38 @@
 				version = 1.0.1;
 			};
 		};
+		D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.1;
+			};
+		};
+		D0FC0887282002DD00A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.1;
+			};
+		};
+		D0FC088A282002F300A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
+		D0FC088D282002FF00A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1381,36 +1375,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D021F078281FF9D900992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
-		};
-		D021F07F281FFA0000992294 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F07E281FFA0000992294 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		D021F081281FFA0000992294 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F07E281FFA0000992294 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		D021F084281FFA1000992294 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F07E281FFA0000992294 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		D021F086281FFA1000992294 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F07E281FFA0000992294 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		D021F089281FFA2A00992294 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F088281FFA2A00992294 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		D021F08C281FFA3600992294 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F088281FFA2A00992294 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		D021F08F281FFA5100992294 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1461,6 +1425,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */;
 			productName = FilePicker;
+		};
+		D0FC0885282002D000A74D43 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D0FC0888282002DD00A74D43 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D0FC088B282002F300A74D43 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0FC088A282002F300A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D0FC088E282002FF00A74D43 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0FC088A282002F300A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
