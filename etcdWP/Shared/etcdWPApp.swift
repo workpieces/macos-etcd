@@ -9,7 +9,10 @@ import SwiftUI
 
 #if TARGET_OS_MAC
 import AppKit
+#else
+
 #endif
+
 
 // App icon: https://appicon.co/
 // Macos Icon https://icons8.com/icons/set/mac-app

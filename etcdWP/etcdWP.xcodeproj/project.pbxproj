@@ -303,10 +303,10 @@
 			isa = PBXGroup;
 			children = (
 				D021F0AF281FFCB200992294 /* FrameWork */,
-				D021EFE3281FF8E500992294 /* Ventor */,
-				D021EFE8281FF8E500992294 /* Resource */,
 				D021EFF4281FF8E500992294 /* Pages */,
+				D021EFE8281FF8E500992294 /* Resource */,
 				D021F01D281FF8E600992294 /* Utility */,
+				D021EFE3281FF8E500992294 /* Ventor */,
 			);
 			path = Class;
 			sourceTree = "<group>";
