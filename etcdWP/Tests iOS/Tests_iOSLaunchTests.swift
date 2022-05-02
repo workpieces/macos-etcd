@@ -1,13 +1,13 @@
 //
-//  etcdWp_iOSUITestsLaunchTests.swift
-//  etcdWp-iOSUITests
+//  Tests_iOSLaunchTests.swift
+//  Tests iOS
 //
-//  Created by FaceBook on 2022/5/1.
+//  Created by FaceBook on 2022/5/2.
 //
 
 import XCTest
 
-class etcdWp_iOSUITestsLaunchTests: XCTestCase {
+class Tests_iOSLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

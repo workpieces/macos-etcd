@@ -1,13 +1,13 @@
 //
-//  etcdWPUITests.swift
-//  etcdWPUITests
+//  Tests_iOS.swift
+//  Tests iOS
 //
-//  Created by FaceBook on 2022/4/8.
+//  Created by FaceBook on 2022/5/2.
 //
 
 import XCTest
 
-class etcdWPUITests: XCTestCase {
+class Tests_iOS: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
