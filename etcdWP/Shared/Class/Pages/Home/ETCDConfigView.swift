@@ -37,7 +37,7 @@ struct ClusterNetworkConfigFormView: View {
             .pickerStyle(SegmentedPickerStyle())
             
             if networkInputUnit == 1 {
-                FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
+                FilePicker(types:[.content,.pkcs12,.item], allowMultiple: true) { urls in
                     self.config.certificate = urls[0].path
                 } label: {
                     HStack {
@@ -46,7 +46,7 @@ struct ClusterNetworkConfigFormView: View {
                     }
                 }
                 
-                FilePicker(types: [.plainText,.text,.json], allowMultiple: true) { urls in
+                FilePicker(types: [.content,.pkcs12,.item], allowMultiple: true) { urls in
                     self.config.certKey = urls[0].path
                 } label: {
                     HStack {
