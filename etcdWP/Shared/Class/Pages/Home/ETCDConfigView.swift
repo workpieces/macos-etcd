@@ -114,9 +114,7 @@ struct ETCDConfigView: View {
             
             HStack(spacing: 44.0) {
                 PopView {
-                    Button {
-                        self.isPopView.toggle()
-                    } label: {
+                    VStack{
                         Text("Cancel")
                             .fontWeight(.semibold)
                             .font(.system(size: 18))
@@ -127,19 +125,12 @@ struct ETCDConfigView: View {
                     .buttonStyle(PlainButtonStyle())
                     .background(Color.red).opacity(0.75)
                     .cornerRadius(10.0)
+                    .onTapGesture {
+                        self.isPopView.toggle()
+                    }
                 }
-                
                 PopView {
-                    Button {
-                        do{
-                            try self.homeData.Register(item: config)
-                            self.homeData.Append(data: config)
-                            self.isPopView.toggle()
-                        }catch {
-                            print(error.localizedDescription)
-                            self.isToast.toggle()
-                        }
-                    } label: {
+                    VStack{
                         Text("Save")
                             .fontWeight(.semibold)
                             .font(.system(size: 18))
@@ -150,6 +141,16 @@ struct ETCDConfigView: View {
                     .buttonStyle(PlainButtonStyle())
                     .background(Color(hex:"#00FFFF").opacity(0.75))
                     .cornerRadius(10.0)
+                    .onTapGesture {
+                        do{
+                            try self.homeData.Register(item: config)
+                            self.homeData.Append(data: config)
+                            self.isPopView.toggle()
+                        }catch {
+                            print(error.localizedDescription)
+                            self.isToast.toggle()
+                        }
+                    }
                 }
             }
             
