@@ -54,7 +54,6 @@ struct CardItemView: View {
                 VStack(spacing: 8.0){
                     Text("服务名称")
                         .withDefaultContentTitle(fontColor: .white)
-                    
                     Text(options.clientName)
                         .withDefaultSubContentTitle(fontColor: .white)
                 }
@@ -63,12 +62,12 @@ struct CardItemView: View {
             VStack(alignment: .center,spacing: 8.0) {
                 Text("节点地址")
                     .withDefaultContentTitle(fontColor: .white)
-                
                 Text(options.endpoints.first!)
                     .withDefaultSubContentTitle(fontColor: .white)
-                
+                    .padding(.leading,5)
+                    .padding(.trailing,5)
+                    .padding(.horizontal)
                 Spacer()
-                
                 Text("连接状态")
                     .withDefaultContentTitle(fontColor: .white)
                 
@@ -77,7 +76,7 @@ struct CardItemView: View {
                 Spacer()
             }
         }
-        .frame(minHeight: 210, maxHeight: 260)
+        .frame( height: 220)
         .background(Color.init(hex: "#00FFFF").opacity(0.15))
         .cornerRadius(DefaultRadius)
     }
