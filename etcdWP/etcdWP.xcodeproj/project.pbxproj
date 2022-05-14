@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CBB34A2282F7C160094E772 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBB34A1282F7C160094E772 /* MacosEtcd.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
 		D021EFC7281F5AB700992294 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFC6281F5AB700992294 /* Tests_macOS.swift */; };
@@ -107,7 +108,6 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
-		D021F0B1281FFCB200992294 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D021F0B0281FFCB200992294 /* MacosEtcd.framework */; };
 		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
 		D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0888282002DD00A74D43 /* Alamofire */; };
 		D0FC088C282002F300A74D43 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC088B282002F300A74D43 /* SnapKit */; };
@@ -132,6 +132,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CBB34A1282F7C160094E772 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D021EFA2281F5AB600992294 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D021EFA9281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021EFAF281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +189,6 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D021F0B0281FFCB200992294 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +198,7 @@
 			files = (
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
+				5CBB34A2282F7C160094E772 /* MacosEtcd.framework in Frameworks */,
 				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
@@ -218,7 +219,6 @@
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
 				D021F07A281FF9D900992294 /* NavigationStack in Frameworks */,
-				D021F0B1281FFCB200992294 /* MacosEtcd.framework in Frameworks */,
 				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +495,7 @@
 		D021F0AF281FFCB200992294 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				D021F0B0281FFCB200992294 /* MacosEtcd.framework */,
+				5CBB34A1282F7C160094E772 /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
