@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CBB34A4282F9B9B0094E772 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBB34A3282F9B9B0094E772 /* MacosEtcd.framework */; };
+		5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C649ABD282FB8A90073F885 /* MacosEtcd.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
 		D021EFC7281F5AB700992294 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFC6281F5AB700992294 /* Tests_macOS.swift */; };
@@ -132,7 +132,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5CBB34A3282F9B9B0094E772 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		5C649ABD282FB8A90073F885 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D021EFA2281F5AB600992294 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D021EFA9281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021EFAF281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,7 +198,7 @@
 			files = (
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
-				5CBB34A4282F9B9B0094E772 /* MacosEtcd.framework in Frameworks */,
+				5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */,
 				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
@@ -495,7 +495,7 @@
 		D021F0AF281FFCB200992294 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				5CBB34A3282F9B9B0094E772 /* MacosEtcd.framework */,
+				5C649ABD282FB8A90073F885 /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";

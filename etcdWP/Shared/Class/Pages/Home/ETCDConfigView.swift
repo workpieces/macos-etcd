@@ -42,7 +42,7 @@ struct ClusterNetworkConfigFormView: View {
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        self.config.certFile.isEmpty ?  Text("CertFile:  未选择任何文件"): Text("Client certificate file: \(self.config.certFile)")
+                        self.config.certFile.isEmpty ?  Text("CertFile:  未选择任何文件"): Text("CertFile: \(self.config.certFile)")
                     }
                 }
                 
@@ -51,7 +51,7 @@ struct ClusterNetworkConfigFormView: View {
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        self.config.keyFile.isEmpty ?  Text("KeyFile:  未选择任何文件"):    Text("Client key file:  \( self.config.keyFile)")
+                        self.config.keyFile.isEmpty ?  Text("KeyFile:  未选择任何文件"):    Text("KeyFile:  \( self.config.keyFile)")
                     }
                 }
                 
@@ -60,7 +60,7 @@ struct ClusterNetworkConfigFormView: View {
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        self.config.keyFile.isEmpty ?  Text("CAFile:  未选择任何文件"):    Text("Client key file:  \( self.config.caFile)")
+                        self.config.keyFile.isEmpty ?  Text("TrustedCAFile:  未选择任何文件"):    Text("TrustedCAFile:  \( self.config.caFile)")
                     }
                 }
             }
