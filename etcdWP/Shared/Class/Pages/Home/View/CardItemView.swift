@@ -62,12 +62,17 @@ struct CardItemView: View {
             VStack(alignment: .center,spacing: 8.0) {
                 Text("节点地址")
                     .withDefaultContentTitle(fontColor: .white)
-                Text(options.endpoints.first!)
-                    .withDefaultSubContentTitle(fontColor: .white)
-                    .padding(.leading,5)
-                    .padding(.trailing,5)
-                    .padding(.horizontal)
-                Spacer()
+                    .padding(.bottom,5)
+                VStack(alignment: .center){
+                    ForEach(options.getEndpoints(),id: \.self) { item in
+                        Text(item)
+                            .withDefaultSubContentTitle(fontColor: .white)
+                            .padding(.leading,5)
+                            .padding(.trailing,5)
+                            .padding(.horizontal)
+                    }
+                }.frame( height:50)
+                .padding(.bottom,10)
                 Text("连接状态")
                     .withDefaultContentTitle(fontColor: .white)
                 

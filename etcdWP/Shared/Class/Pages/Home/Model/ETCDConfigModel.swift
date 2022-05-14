@@ -50,4 +50,23 @@ struct EtcdClientOption: Identifiable,Codable {
         case updateAt
         case status
     }
+    
+    func getEndpoints () -> [String]{
+        
+        var newEndpoints :[String] = []
+        
+        let  endpoints =  self.endpoints.first!.components(separatedBy: ",")
+        
+        for (index, item) in endpoints.enumerated() {
+            if index <= 2{
+                newEndpoints.append(item)
+            }
+        }
+        guard newEndpoints.count < 3 else {
+            newEndpoints.append("...")
+            return newEndpoints
+        }
+        return newEndpoints
+            
+    }
 }
