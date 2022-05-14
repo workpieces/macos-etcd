@@ -14,8 +14,9 @@ struct EtcdClientOption: Identifiable,Codable {
     var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
     var username: String = ""
     var password: String = ""
-    var certificate: String = ""
-    var certKey: String = ""
+    var certFile: String = ""
+    var keyFile: String = ""
+    var caFile:  String = ""
     var requestTimeout: Int = 5
     var dialTimeout: Int = 5
     var dialKeepAliveTime: Int = 10
@@ -35,8 +36,9 @@ struct EtcdClientOption: Identifiable,Codable {
         case clientName
         case username
         case password
-        case certificate
-        case certKey
+        case certFile
+        case keyFile
+        case caFile
         case requestTimeout
         case dialTimeout
         case dialKeepAliveTime

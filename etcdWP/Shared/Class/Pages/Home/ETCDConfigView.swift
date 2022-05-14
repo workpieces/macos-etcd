@@ -38,20 +38,29 @@ struct ClusterNetworkConfigFormView: View {
             
             if networkInputUnit == 1 {
                 FilePicker(types:[.item], allowMultiple: true) { urls in
-                    self.config.certificate = urls[0].path
+                    self.config.certFile = urls[0].path
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        self.config.certificate.isEmpty ?  Text("Client certificate file:  未选择任何文件"): Text("Client certificate file: \(self.config.certificate)")
+                        self.config.certFile.isEmpty ?  Text("CertFile:  未选择任何文件"): Text("Client certificate file: \(self.config.certFile)")
                     }
                 }
                 
                 FilePicker(types: [.item], allowMultiple: true) { urls in
-                    self.config.certKey = urls[0].path
+                    self.config.keyFile = urls[0].path
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
-                        self.config.certKey.isEmpty ?  Text("Client key file:  未选择任何文件"):    Text("Client key file:  \( self.config.certKey)")
+                        self.config.keyFile.isEmpty ?  Text("KeyFile:  未选择任何文件"):    Text("Client key file:  \( self.config.keyFile)")
+                    }
+                }
+                
+                FilePicker(types: [.item], allowMultiple: true) { urls in
+                    self.config.caFile = urls[0].path
+                } label: {
+                    HStack {
+                        Image(systemName: "doc.on.doc")
+                        self.config.keyFile.isEmpty ?  Text("CAFile:  未选择任何文件"):    Text("Client key file:  \( self.config.caFile)")
                     }
                 }
             }

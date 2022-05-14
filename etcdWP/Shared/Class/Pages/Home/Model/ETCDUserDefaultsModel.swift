@@ -18,8 +18,9 @@ extension HomeViewModel {
             clientName: data.clientName,
             username: data.username,
             password: data.password,
-            certificate: data.certificate,
-            certKey: data.certKey,
+            certFile: data.certFile,
+            keyFile: data.keyFile,
+            caFile: data.caFile,
             requestTimeout: data.requestTimeout,
             dialTimeout: data.dialTimeout,
             dialKeepAliveTime: data.dialKeepAliveTime,
@@ -68,8 +69,9 @@ extension HomeViewModel {
                 self.ectdClientList[idx].endpoints = newData.endpoints
                 self.ectdClientList[idx].username = newData.username
                 self.ectdClientList[idx].password = newData.password
-                self.ectdClientList[idx].certificate = newData.certificate
-                self.ectdClientList[idx].certKey = newData.certKey
+                self.ectdClientList[idx].certFile = newData.certFile
+                self.ectdClientList[idx].keyFile = newData.keyFile
+                self.ectdClientList[idx].caFile = newData.caFile
                 self.ectdClientList[idx].requestTimeout = newData.requestTimeout
                 self.ectdClientList[idx].dialTimeout = newData.dialTimeout
                 self.ectdClientList[idx].dialKeepAliveTime = newData.dialKeepAliveTime

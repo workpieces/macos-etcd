@@ -18,7 +18,7 @@
 @property(strong, readonly) _Nonnull id _ref;
 
 - (nonnull instancetype)initWithRef:(_Nonnull id)ref;
-- (nullable instancetype)init:(NSString* _Nullable)endpoints username:(NSString* _Nullable)username password:(NSString* _Nullable)password certFile:(NSString* _Nullable)certFile certKey:(NSString* _Nullable)certKey requestTimeout:(long)requestTimeout dialTimeout:(long)dialTimeout dialKeepAliveTime:(long)dialKeepAliveTime dialKeepAliveTimeout:(long)dialKeepAliveTimeout autoSyncInterval:(long)autoSyncInterval;
+- (nullable instancetype)init:(NSString* _Nullable)endpoints username:(NSString* _Nullable)username password:(NSString* _Nullable)password certFile:(NSString* _Nullable)certFile keyFile:(NSString* _Nullable)keyFile CAFile:(NSString* _Nullable)CAFile requestTimeout:(long)requestTimeout dialTimeout:(long)dialTimeout dialKeepAliveTime:(long)dialKeepAliveTime dialKeepAliveTimeout:(long)dialKeepAliveTimeout autoSyncInterval:(long)autoSyncInterval;
 - (NSData* _Nullable)authEnable:(BOOL)enable;
 - (NSData* _Nullable)changePassword:(NSString* _Nullable)username password:(NSString* _Nullable)password;
 - (NSData* _Nullable)children;
@@ -60,7 +60,7 @@
 - (NSData* _Nullable)users;
 @end
 
-FOUNDATION_EXPORT EtcdKVClient* _Nullable EtcdNewKVClient(NSString* _Nullable endpoints, NSString* _Nullable username, NSString* _Nullable password, NSString* _Nullable certFile, NSString* _Nullable certKey, long requestTimeout, long dialTimeout, long dialKeepAliveTime, long dialKeepAliveTimeout, long autoSyncInterval, NSError* _Nullable* _Nullable error);
+FOUNDATION_EXPORT EtcdKVClient* _Nullable EtcdNewKVClient(NSString* _Nullable endpoints, NSString* _Nullable username, NSString* _Nullable password, NSString* _Nullable certFile, NSString* _Nullable keyFile, NSString* _Nullable CAFile, long requestTimeout, long dialTimeout, long dialKeepAliveTime, long dialKeepAliveTimeout, long autoSyncInterval, NSError* _Nullable* _Nullable error);
 
 FOUNDATION_EXPORT EtcdKVClient* _Nullable EtcdNewMock(void);
 
