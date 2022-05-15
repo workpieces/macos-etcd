@@ -9,6 +9,7 @@ import SwiftUI
 
 #if TARGET_OS_MAC
 import AppKit
+import GoogleMobileAds
 #else
 
 #endif
@@ -32,6 +33,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         print("Application Should Terminate After Last WindowClosed")
         return true
     }
+
 }
 #else
 
