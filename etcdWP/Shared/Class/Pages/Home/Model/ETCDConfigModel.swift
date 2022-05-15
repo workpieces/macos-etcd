@@ -10,7 +10,7 @@ import MacosEtcd
 
 struct EtcdClientOption: Identifiable,Codable {
     var id = UUID()
-    var endpoints: [String] = ["localhost:2379"]
+    var endpoints: [String] = ["127.0.0.1:2379"]
     var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
     var username: String = ""
     var password: String = ""

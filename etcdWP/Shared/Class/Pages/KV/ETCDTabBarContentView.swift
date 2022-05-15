@@ -15,8 +15,8 @@ struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     @State private var showingAlert: Bool = false
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
-    @State private var currentTextValue: MemberTextValue = MemberTextValue.init()
-    @State private var isShowingPopover = false
+    @State private  var currentTextValue: MemberTextValue = MemberTextValue.init()
+    @State private  var isShowingPopover = false
     @State private var isShowingUpdatePopover = false
     @State private var textValue: String = ""
     @State private var isDefaultSelectType: Int = 0
@@ -32,69 +32,96 @@ struct ETCDKeyListContentView: View {
         }
     }
     
+    fileprivate func menuItem(_ item: KVData) -> ContextMenu<TupleView<(Button<Text>, Button<Text>, Button<Text>, Button<Text>, Button<Text>)>> {
+        return ContextMenu(menuItems: {
+            Button("查看键值详情", action: {
+                self.isDefaultSelectType = 1
+                self.storeObj.realeadData.currentKv = item
+                self.isShowingUpdatePopover.toggle()
+            })
+            Button("复制key值", action: {
+                copyToClipBoard(textToCopy: item.key ?? "")
+            })
+            Button("复制value值", action: {
+                copyToClipBoard(textToCopy: item.value ?? "")
+            })
+            Button("删除键值", action: {
+                do {
+                    let resp = storeObj.Delete(key: item.key!)
+                    if resp?.status != 200 {
+                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                    }
+                    Reaload()
+                } catch  {
+                    print(error.localizedDescription)
+                }
+            })
+            Button("更新键值", action: {
+                self.isDefaultSelectType = 0
+                self.storeObj.realeadData.currentKv = item
+                self.textValue = item.value ?? ""
+                self.isShowingUpdatePopover.toggle()
+            })
+        })
+    }
+    
+    fileprivate func CellItem(_ item: KVData) -> some View {
+        return  ZStack {
+            HStack {
+                Image(systemName: DefaultKeyImageName)
+                    .foregroundColor(.orange)
+                    .font(.system(size: 14.0))
+                Text(item.key!)
+                    .foregroundColor(.white)
+                    .font(.system(size: 12))
+                    .lineLimit(1)
+                    .truncationMode(.middle)
+                Spacer()
+                Text(item.size!)
+                    .foregroundColor(.white)
+                    .font(.system(size: 10))
+                    .truncationMode(.middle)
+            }
+        }
+    }
+    
+    
+    
     var body: some View {
         VStack {
             List {
                 Section {
-                    ForEach(storeObj.realeadData.kvs) { item in
-                        //                    List(storeObj.realeadData.kvs, children: \.children) { item in
-                        ZStack {
-                            HStack {
-                                Image(systemName: DefaultKeyImageName)
-                                    .foregroundColor(.orange)
-                                    .font(.system(size: 14.0))
-                                Text(item.key!)
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 12))
-                                    .lineLimit(1)
-                                    .truncationMode(.middle)
-                                Spacer()
-                                Text(item.size!)
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 10))
-                                    .truncationMode(.middle)
-                            }
+                    
+                    if storeObj.showFormat == .Tree {
+                        List(storeObj.realeadData.kvs, children: \.children) { item in
+                            CellItem(item)
+                                .onTapGesture(perform: {
+                                    self.storeObj.realeadData.currentKv = item
+                                    showingAlert.toggle()
+                                })
+                                .contextMenu(menuItem(item))
+                                .buttonStyle(PlainButtonStyle())
                         }
-                        .onTapGesture(perform: {
-                            self.storeObj.realeadData.currentKv = item
-                            showingAlert.toggle()
-                        })
-                        .contextMenu(ContextMenu(menuItems: {
-                            Button("查看键值详情", action: {
-                                self.isDefaultSelectType = 1
-                                self.storeObj.realeadData.currentKv = item
-                                self.isShowingUpdatePopover.toggle()
-                            })
-                            Button("复制key值", action: {
-                                copyToClipBoard(textToCopy: item.key ?? "")
-                            })
-                            Button("复制value值", action: {
-                                copyToClipBoard(textToCopy: item.value ?? "")
-                            })
-                            Button("删除键值", action: {
-                                do {
-                                    let resp = storeObj.Delete(key: item.key!)
-                                    if resp?.status != 200 {
-                                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
-                                    }
-                                    Reaload()
-                                } catch  {
-                                    print(error.localizedDescription)
-                                }
-                            })
-                            Button("更新键值", action: {
-                                self.isDefaultSelectType = 0
-                                self.storeObj.realeadData.currentKv = item
-                                self.textValue = item.value ?? ""
-                                self.isShowingUpdatePopover.toggle()
-                            })
-                        }))
-                        .buttonStyle(PlainButtonStyle())
+                        
+                    } else {
+                        
+                        ForEach(storeObj.realeadData.kvs) { item in
+                            CellItem(item)
+                                .onTapGesture(perform: {
+                                    self.storeObj.realeadData.currentKv = item
+                                    showingAlert.toggle()
+                                })
+                                .contextMenu(menuItem(item))
+                                .buttonStyle(PlainButtonStyle())
+                        }
                     }
+                    
+                    
+                    
                 } header: {
                     VStack(content: {
                         HStack{
-                            Text("服务地址：\(storeObj.c.endpoints.first ?? "localhost:2379")")
+                            Text("服务地址：\(storeObj.c.endpoints.first ?? "127.0.0.1:2379")")
                                 .font(.caption)
                                 .foregroundColor(.white)
                             Spacer()
