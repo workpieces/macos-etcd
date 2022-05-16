@@ -77,10 +77,12 @@ struct ETCDKeyListContentView: View {
                     .lineLimit(1)
                     .truncationMode(.middle)
                 Spacer()
-                Text(item.size!)
-                    .foregroundColor(.white)
-                    .font(.system(size: 10))
-                    .truncationMode(.middle)
+                if item.size != nil {
+                    Text(item.size!)
+                        .foregroundColor(.white)
+                        .font(.system(size: 10))
+                        .truncationMode(.middle)
+                }
             }
         }
     }
@@ -93,14 +95,14 @@ struct ETCDKeyListContentView: View {
                 Section {
                     
                     if storeObj.showFormat == .Tree {
-                        List(storeObj.realeadData.kvs, children: \.children) { item in
+                        List(storeObj.Chidren(), children: \.children) { item in
                             CellItem(item)
                                 .onTapGesture(perform: {
                                     self.storeObj.realeadData.currentKv = item
                                     showingAlert.toggle()
                                 })
-                                .contextMenu(menuItem(item))
-                                .buttonStyle(PlainButtonStyle())
+                             .buttonStyle(PlainButtonStyle())
+                             .contextMenu(menuItem(item))
                         }
                         
                     } else {
