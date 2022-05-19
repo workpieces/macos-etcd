@@ -620,5 +620,16 @@ extension ItemStore {
         return []
     }
     
+    func treeItem () -> KVData? {
+        let result = c.etcdClient?.children()
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "tree")
+            ETCDLogsObject.shared.logSubjec.send(lg)
+            return resp?.datas?.first
+        }
+        return nil
+    }
+    
     
 }

@@ -108,6 +108,8 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
+		D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
+		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0CBAAD52831216F00E8B452 /* ETCDKeyListContentView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CBAAD42831216F00E8B452 /* ETCDKeyListContentView+.swift */; };
 		D0CBAAD62831216F00E8B452 /* ETCDKeyListContentView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CBAAD42831216F00E8B452 /* ETCDKeyListContentView+.swift */; };
 		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
@@ -191,6 +193,7 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemView.swift; sourceTree = "<group>"; };
 		D0CBAAD42831216F00E8B452 /* ETCDKeyListContentView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ETCDKeyListContentView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -404,6 +407,7 @@
 				D021F00E281FF8E600992294 /* ETCDKVSubContentView.swift */,
 				D021F00F281FF8E600992294 /* ETCDTableView.swift */,
 				D021F010281FF8E600992294 /* Model */,
+				D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */,
 			);
 			path = KV;
 			sourceTree = "<group>";
@@ -734,6 +738,7 @@
 				D021F064281FF8E600992294 /* ETCDLogsObject.swift in Sources */,
 				D021F06A281FF8E600992294 /* ETCDCheckBoxView.swift in Sources */,
 				D021F042281FF8E600992294 /* CardItemView.swift in Sources */,
+				D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */,
 				D021F05C281FF8E600992294 /* ETCDTableView.swift in Sources */,
 				D021F03A281FF8E600992294 /* HomeViewModel.swift in Sources */,
 				D021F072281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,
@@ -780,6 +785,7 @@
 				D021F065281FF8E600992294 /* ETCDLogsObject.swift in Sources */,
 				D021F06B281FF8E600992294 /* ETCDCheckBoxView.swift in Sources */,
 				D021F043281FF8E600992294 /* CardItemView.swift in Sources */,
+				D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */,
 				D021F05D281FF8E600992294 /* ETCDTableView.swift in Sources */,
 				D021F03B281FF8E600992294 /* HomeViewModel.swift in Sources */,
 				D021F073281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,

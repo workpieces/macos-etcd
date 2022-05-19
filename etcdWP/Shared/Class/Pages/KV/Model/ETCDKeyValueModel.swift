@@ -27,7 +27,8 @@ struct ETCDKeyValue: Codable {
     }
 }
 
-struct KVData: Codable, Identifiable {
+struct KVData: Codable, Identifiable,CustomStringConvertible{
+    var description: String = UUID().uuidString
     var id = UUID()
     
     // ttlid is lease id.

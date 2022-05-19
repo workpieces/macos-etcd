@@ -64,28 +64,6 @@ struct ETCDKeyListContentView: View {
         })
     }
     
-    fileprivate func CellItem(_ item: KVData) -> some View {
-        return  ZStack {
-            HStack {
-                Image(systemName: DefaultKeyImageName)
-                    .foregroundColor(.orange)
-                    .font(.system(size: 14.0))
-                Text(item.key!)
-                    .foregroundColor(.white)
-                    .font(.system(size: 12))
-                    .lineLimit(1)
-                    .truncationMode(.middle)
-                Spacer()
-                if item.size != nil {
-                    Text(item.size!)
-                        .foregroundColor(.white)
-                        .font(.system(size: 10))
-                        .truncationMode(.middle)
-                }
-            }
-        }
-    }
-
     fileprivate func headerView() -> some View {
         return VStack{
             HStack{
@@ -141,13 +119,14 @@ struct ETCDKeyListContentView: View {
         }
     }
     
+    
     var body: some View {
         VStack {
             if storeObj.showFormat == .List{
                 List {
                     Section {
                         ForEach(storeObj.realeadData.kvs) { item in
-                            CellItem(item)
+                            ETCDKVItemView(item: item)
                                 .onTapGesture(perform: {
                                     self.storeObj.realeadData.currentKv = item
                                 })
@@ -299,7 +278,7 @@ struct ETCDKeyListContentView: View {
                         .frame(height:60)
                         .background(Color(hex: "#221C27"))
                     List(storeObj.Chidren(), children: \.children) { item in
-                        CellItem(item)
+                        ETCDKVItemView(item:item)
                             .onTapGesture(perform: {
                                 if item.children == nil{
                                     self.storeObj.realeadData.currentKv = item
@@ -307,8 +286,9 @@ struct ETCDKeyListContentView: View {
                             })
                             .buttonStyle(PlainButtonStyle())
                             .contextMenu(menuItem(item))
-                    }.background(Color(hex: "#221C27"))
-                        .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
+                    }
+                    .background(Color(hex: "#221C27"))
+                     .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
                             switch isDefaultSelectType {
                             case 0:
                                 VStack {
@@ -661,6 +641,32 @@ struct ETCDKeyListContentView: View {
     }
 }
 
+
+struct ETCDNodeOutlineGroup: View {
+    let node: KVData
+    let childKeyPath: KeyPath<KVData, [KVData]?>
+    @State var isExpanded: Bool = true
+    var body: some View {
+        if node[keyPath: childKeyPath] != nil {
+            DisclosureGroup(
+                isExpanded: $isExpanded,
+                content: {
+                    if isExpanded {
+                        ForEach(node[keyPath: childKeyPath]!) { childNode in
+                            ETCDNodeOutlineGroup(node: childNode, childKeyPath:childKeyPath,isExpanded:false)
+                        }
+                    }
+                },
+                label: { ETCDKVItemView(item: node)}
+            )
+        } else {
+            ETCDKVItemView(item: node)
+        }
+    }
+}
+
+
+
 struct ETCDKVOperateContentView: View {
     var body: some View {
         GeometryReader {  g in
@@ -712,7 +718,6 @@ struct MakeOperateKvTextContentView: View {
         }
     }
 }
-
 
 
 struct ETCDKVLogsContentView: View {
