@@ -10,10 +10,9 @@ import SwiftUI
 struct ETCDKeyContentMembersListView: View {
     
     @State private  var currentTextValue = MemberTextValue()
-    @EnvironmentObject var storeObj : ItemStore
+    @State var storeObj : ItemStore
     @State private  var isShowingPopover = false
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
-    
     private func Reaload() {
          storeObj.KVReaload()
      }
@@ -212,10 +211,4 @@ struct ETCDKeyContentMembersListView: View {
         .frame(minHeight: 180.0, idealHeight: 180.0, maxHeight: 250)
     }
     
-}
-
-struct ETCDKeyContentMembersListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDKeyContentMembersListView()
-    }
 }

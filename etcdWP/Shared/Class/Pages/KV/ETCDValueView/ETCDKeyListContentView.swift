@@ -18,17 +18,10 @@ struct ETCDKeyListContentView: View {
     @State private var isShowingUpdatePopover = false
     @State private var textValue: String = ""
     @State private var isDefaultSelectType: Int = 0
-   private func Reaload() {
+    fileprivate func Reaload() {
         storeObj.KVReaload()
     }
-    
-    func DeleteALL() throws {
-        defer {storeObj.KVReaload()}
-        let resp = storeObj.DeleteALL()
-        if resp?.status != 200 {
-            throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
-        }
-    }
+
     
     fileprivate func menuItem(_ item: KVData) -> ContextMenu<TupleView<(Button<Text>, Button<Text>, Button<Text>, Button<Text>, Button<Text>)>> {
         return ContextMenu(menuItems: {
@@ -63,61 +56,6 @@ struct ETCDKeyListContentView: View {
         })
     }
     
-    fileprivate func headerView() -> some View {
-        return VStack{
-            HStack{
-                Text("服务地址：\(storeObj.c.endpoints.first ?? "127.0.0.1:2379")")
-                    .font(.caption)
-                    .foregroundColor(.white)
-                Spacer()
-                
-                if storeObj.c.status {
-                    Text("链接状态: 正常")
-                        .font(.caption)
-                        .foregroundColor(.green)
-                }else{
-                    Text("链接状态: 异常")
-                        .font(.caption)
-                        .foregroundColor(.red)
-                }
-            }
-            .padding(.all,4.0)
-            HStack {
-                Button {Reaload()} label: {
-                    Text("刷新加载")
-                        .font(.caption)
-                        .foregroundColor(.white)
-                }
-                Button {
-                    do {
-                        try self.DeleteALL()
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                } label: {
-                    Text("清空键值")
-                        .font(.caption)
-                        .foregroundColor(.white)
-                }
-                
-                Button {
-                    storeObj.showFormat =  storeObj.showFormat == .Tree ? .List:.Tree
-                } label: {
-                    Text(storeObj.showFormat.Name())
-                        .font(.caption)
-                        .foregroundColor(Color(hex:"#00FFFF"))
-                }
-                
-                Spacer()
-                Button {} label: {
-                    Text("查询")
-                        .font(.caption)
-                        .foregroundColor(.white)
-                }
-            }
-        }
-    }
-    
     
     var body: some View {
         VStack {
@@ -134,7 +72,7 @@ struct ETCDKeyListContentView: View {
                         }
                         
                     } header: {
-                        headerView()
+                        ETCDKeyListContentHeadView(storeObj: storeObj)
                     }
                 }
                 .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
@@ -270,7 +208,7 @@ struct ETCDKeyListContentView: View {
                 .listStyle(.inset)
             }else{
                 VStack(spacing:1){
-                    headerView()
+                    ETCDKeyListContentHeadView(storeObj: storeObj)
                         .padding(10)
                         .padding(.leading,3)
                         .padding(.trailing,3)
@@ -418,15 +356,7 @@ struct ETCDKeyListContentView: View {
                 }
             }
             ETCDKeyListContentPageView(storeObj: storeObj)
-            ETCDKeyContentMembersListView()
+            ETCDKeyContentMembersListView(storeObj: storeObj)
         }
-    }
-}
-
-
-
-struct ETCDKeyListContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDKeyListContentView()
     }
 }
