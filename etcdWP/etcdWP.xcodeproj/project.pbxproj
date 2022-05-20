@@ -108,6 +108,20 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
+		D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
+		D0690EB12837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
+		D0690EB32837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */; };
+		D0690EB42837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */; };
+		D0690EB62837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */; };
+		D0690EB72837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */; };
+		D0690EBC2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EBB2837CD090010C8A3 /* ETCDKVLogsContentView.swift */; };
+		D0690EBD2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EBB2837CD090010C8A3 /* ETCDKVLogsContentView.swift */; };
+		D0690EC02837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EBF2837CD690010C8A3 /* ETCDKeyListContentView.swift */; };
+		D0690EC12837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EBF2837CD690010C8A3 /* ETCDKeyListContentView.swift */; };
+		D0690EC32837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EC22837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift */; };
+		D0690EC42837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EC22837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift */; };
+		D0690EC72837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EC62837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift */; };
+		D0690EC82837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EC62837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift */; };
 		D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0CBAAD52831216F00E8B452 /* ETCDKeyListContentView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CBAAD42831216F00E8B452 /* ETCDKeyListContentView+.swift */; };
@@ -193,6 +207,13 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
+		D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVOperateContentView.swift; sourceTree = "<group>"; };
+		D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVGridContentView.swift; sourceTree = "<group>"; };
+		D0690EBB2837CD090010C8A3 /* ETCDKVLogsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVLogsContentView.swift; sourceTree = "<group>"; };
+		D0690EBF2837CD690010C8A3 /* ETCDKeyListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyListContentView.swift; sourceTree = "<group>"; };
+		D0690EC22837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDNodeOutlineGroup.swift; sourceTree = "<group>"; };
+		D0690EC62837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVTabBarContentHeadView.swift; sourceTree = "<group>"; };
 		D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemView.swift; sourceTree = "<group>"; };
 		D0CBAAD42831216F00E8B452 /* ETCDKeyListContentView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ETCDKeyListContentView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -400,6 +421,9 @@
 		D021F001281FF8E600992294 /* KV */ = {
 			isa = PBXGroup;
 			children = (
+				D0690EC52837CE410010C8A3 /* ETCDKVTabBarContentHeadView */,
+				D0690EBE2837CD510010C8A3 /* ETCDValueView */,
+				D0690EB92837CCD40010C8A3 /* ETCOperationView */,
 				D021F002281FF8E600992294 /* ETCDTabBarContentView.swift */,
 				D0CBAAD42831216F00E8B452 /* ETCDKeyListContentView+.swift */,
 				D021F003281FF8E600992294 /* EtcdOperation */,
@@ -506,6 +530,42 @@
 				5C649ABD282FB8A90073F885 /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		D0690EB92837CCD40010C8A3 /* ETCOperationView */ = {
+			isa = PBXGroup;
+			children = (
+				D0690EBA2837CCF10010C8A3 /* Log */,
+				D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */,
+				D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */,
+				D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */,
+			);
+			path = ETCOperationView;
+			sourceTree = "<group>";
+		};
+		D0690EBA2837CCF10010C8A3 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				D0690EBB2837CD090010C8A3 /* ETCDKVLogsContentView.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		D0690EBE2837CD510010C8A3 /* ETCDValueView */ = {
+			isa = PBXGroup;
+			children = (
+				D0690EBF2837CD690010C8A3 /* ETCDKeyListContentView.swift */,
+				D0690EC22837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift */,
+			);
+			path = ETCDValueView;
+			sourceTree = "<group>";
+		};
+		D0690EC52837CE410010C8A3 /* ETCDKVTabBarContentHeadView */ = {
+			isa = PBXGroup;
+			children = (
+				D0690EC62837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift */,
+			);
+			path = ETCDKVTabBarContentHeadView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -719,6 +779,7 @@
 				D021F052281FF8E600992294 /* ETCDKeyValueActionsView.swift in Sources */,
 				D021F074281FF8E600992294 /* Constant.swift in Sources */,
 				D021F066281FF8E600992294 /* AboutView.swift in Sources */,
+				D0690EC02837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */,
 				D021F054281FF8E600992294 /* ETCDUserListView.swift in Sources */,
 				D021F038281FF8E600992294 /* ETCDHomeMainView.swift in Sources */,
 				D021F04E281FF8E600992294 /* ETCDLeaseListView.swift in Sources */,
@@ -730,22 +791,28 @@
 				D021F04A281FF8E600992294 /* ETCDKeyPrefixView.swift in Sources */,
 				D021F068281FF8E600992294 /* AboutModel.swift in Sources */,
 				D021F06C281FF8E600992294 /* Content.swift in Sources */,
+				D0690EBC2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */,
 				D021F036281FF8E600992294 /* ETCDHomeContentView.swift in Sources */,
 				D021F044281FF8E600992294 /* TopToastView.swift in Sources */,
 				D021F058281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D0CBAAD52831216F00E8B452 /* ETCDKeyListContentView+.swift in Sources */,
+				D0690EC32837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */,
 				D021F040281FF8E600992294 /* ETCDConfigModel.swift in Sources */,
 				D021F064281FF8E600992294 /* ETCDLogsObject.swift in Sources */,
+				D0690EB32837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */,
 				D021F06A281FF8E600992294 /* ETCDCheckBoxView.swift in Sources */,
 				D021F042281FF8E600992294 /* CardItemView.swift in Sources */,
 				D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */,
 				D021F05C281FF8E600992294 /* ETCDTableView.swift in Sources */,
 				D021F03A281FF8E600992294 /* HomeViewModel.swift in Sources */,
 				D021F072281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,
+				D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */,
+				D0690EB62837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */,
 				D021F050281FF8E600992294 /* ETCDSheetView.swift in Sources */,
 				D021F076281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */,
 				D021F034281FF8E600992294 /* ETCDConfigView.swift in Sources */,
+				D0690EC72837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift in Sources */,
 				D021F03C281FF8E600992294 /* ETCDUserDefaultsModel.swift in Sources */,
 				D021F02A281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F046281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
@@ -766,6 +833,7 @@
 				D021F053281FF8E600992294 /* ETCDKeyValueActionsView.swift in Sources */,
 				D021F075281FF8E600992294 /* Constant.swift in Sources */,
 				D021F067281FF8E600992294 /* AboutView.swift in Sources */,
+				D0690EC12837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */,
 				D021F055281FF8E600992294 /* ETCDUserListView.swift in Sources */,
 				D021F039281FF8E600992294 /* ETCDHomeMainView.swift in Sources */,
 				D021F04F281FF8E600992294 /* ETCDLeaseListView.swift in Sources */,
@@ -777,22 +845,28 @@
 				D021F04B281FF8E600992294 /* ETCDKeyPrefixView.swift in Sources */,
 				D021F069281FF8E600992294 /* AboutModel.swift in Sources */,
 				D021F06D281FF8E600992294 /* Content.swift in Sources */,
+				D0690EBD2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */,
 				D021F037281FF8E600992294 /* ETCDHomeContentView.swift in Sources */,
 				D021F045281FF8E600992294 /* TopToastView.swift in Sources */,
 				D021F059281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D0CBAAD62831216F00E8B452 /* ETCDKeyListContentView+.swift in Sources */,
+				D0690EC42837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */,
 				D021F041281FF8E600992294 /* ETCDConfigModel.swift in Sources */,
 				D021F065281FF8E600992294 /* ETCDLogsObject.swift in Sources */,
+				D0690EB42837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */,
 				D021F06B281FF8E600992294 /* ETCDCheckBoxView.swift in Sources */,
 				D021F043281FF8E600992294 /* CardItemView.swift in Sources */,
 				D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */,
 				D021F05D281FF8E600992294 /* ETCDTableView.swift in Sources */,
 				D021F03B281FF8E600992294 /* HomeViewModel.swift in Sources */,
 				D021F073281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,
+				D0690EB12837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */,
+				D0690EB72837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */,
 				D021F051281FF8E600992294 /* ETCDSheetView.swift in Sources */,
 				D021F077281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCB281F5AB700992294 /* etcdWPApp.swift in Sources */,
 				D021F035281FF8E600992294 /* ETCDConfigView.swift in Sources */,
+				D0690EC82837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift in Sources */,
 				D021F03D281FF8E600992294 /* ETCDUserDefaultsModel.swift in Sources */,
 				D021F02B281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F047281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
