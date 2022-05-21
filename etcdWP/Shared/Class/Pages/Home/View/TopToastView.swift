@@ -13,7 +13,7 @@ struct TopToastView: View {
         VStack {
             HStack {
                 Spacer()
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .lineLimit(2)
                     .font(.system(size: 16))
                     .foregroundColor(.white)

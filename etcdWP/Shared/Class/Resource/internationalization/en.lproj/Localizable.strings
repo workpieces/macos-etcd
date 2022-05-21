@@ -9,8 +9,20 @@
 "批量导入"                   = "Batch Import";
 "关闭服务"                   = "Shut Down Services";
 "开启服务"                   = "Open Service";
-"保存目录不能为空"                   = "Save directory cannot be empty";
+"保存目录不能为空"             = "Save directory cannot be empty";
 
 "创建ETCD客户端"              = "Create ETCD Client";
 "Home"                      = "Home";
 "About"                     = "About";
+
+//Tip
+"开启认证失败"                     = "Failed to open authentication";
+"The network connection is abnormal, please check the relevant configuration ?"                     = "The network connection is abnormal, please check the relevant configuration ?";
+"保存失败"                        = "Save Failed";
+"输入错误，请重新输入"                     = "Input error, please re-enter";
+"操作角色错误"                     = "Operation role error";
+"输入错误，请重新输入"                     = "Input error, please re-enter";
+"操作租约错误"                     = "Operation lease error";
+"操作用户错误"                     = "Operation user error";
+
+
