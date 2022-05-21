@@ -1,0 +1,153 @@
+/* 
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"                   = "批量導出";
+"批量导入"                   = "批量導入";
+"关闭服务"                   = "關閉服務";
+"开启服务"                   = "開啓服務";
+"保存目录不能为空"             = "保存目錄不能為空";
+
+
+"创建ETCD客户端"              = "創建ETCD客户端";
+"Home"                      = "首頁";
+"About"                      = "關於";
+
+
+//Tip
+"开启认证失败"                     = "開啟認證失敗";
+"The network connection is abnormal, please check the relevant configuration ?"                     = "網絡連接異常，請檢查相關配置？";
+"保存失败"                        = "保存失敗";
+"输入错误，请重新输入"                     = "輸入錯誤，請重新輸入";
+"操作角色错误"                     = "操作角色錯誤";
+"操作租约错误"                     = "操作租約錯誤";
+"操作用户错误"                     = "操作用戶錯誤";
+
+//配置
+"ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
+"通用设置"                           = "通用設置";
+"Cancel"                           = "取消";
+"Default User Information Configuration："                           = "默認用戶信息配置：";
+"Client Name："                           = "客戶名稱：";
+"User Name："                           = "用戶名：";
+"Password："                           = "密碼：";
+"Cluster Network Configuration："                           = "網絡配置：";
+"Network Protocol："                           = "網絡協議：";
+"Cluster Endpoint："                           = "群集結點：";
+"TrustedCAFile:  未选择任何文件"                           = "TrustedCAFile:  未選擇任何文件";
+"KeyFile:  未选择任何文件"                           = "KeyFile:  未選擇任何文件";
+"CertFile:  未选择任何文件"                           = "CertFile:  未選擇任何文件";
+
+"Timeout Setting Configuration (seconds)："                             = "超時設置配置（秒）：";
+"Request Timeout："                              = "請求超時：";
+"Dial Timeout："                           = "超時時間：";
+"Dial Keep Alive Time："                           = "保持活動時間：";
+"Dial Keep Alive Timeout："                             = "保持活動超時：";
+"Auto Sync Interval："                             = "自動同步間隔：";
+"Miscellaneous："                             = "其他配置：";
+"Auto create client name?"                             = "是否自動創建客戶端名稱？";
+"Reschedule Pings？"                              = "重新ping";
+"Clean Session?"                           = "清理會話？";
+"Auto connect on app launch?"                           = "應用程序啟動時自動連接？";
+
+
+
+
+//home
+"服务名称"                              = "服務名稱";
+"节点地址"                           = "節點地址";
+"连接状态"                           = "連接狀態";
+"Scuess"                             = "成功";
+"Failed"                             = "失敗";
+"Delete"                             = "删除";
+"Cancle"                             = "取消";
+"The connection to the server was lost."                             = "與服務器的連接丟失。";
+"Want to modify etcd service data?"                             = "是否要修改etcd服務數據？";
+
+// about
+"Contact Us"                              = "聯系我們";
+"If you have feature requests, custom app requirements or bugs, contact us :"                           = "如果您有功能請求、自定義應用程序要求或錯誤，請與我們聯系：";
+"Download"                           = "下載";
+"App for Mac,Window and Linux"                             = "適用於Mac、Windows和Linux的應用程序";
+"Documentation"                             = "文檔";
+"Learn more about etcdWp features and turorials."                             = "了解有關etcdWp功能和turorials的更多信息。";
+
+
+
+//
+
+"访问官网"                             = "訪問官網";
+"意见反馈"                             = "意見反饋";
+"粘贴"                             = "粘貼";
+"键值操作"                             = "鍵值操作";
+"集群状态"                             = "集群狀態";
+"查看键值详情"                             = "查看鍵值詳情";
+"复制key值"                             = "復製key值";
+"删除键值"                             = "刪除鍵值";
+"更新键值"                             = "更新鍵值";
+"复制value值"                             = "復製value值";
+"Promotes集群成员"                             = "Promotes集群成員";
+"上一页"                             = "上一頁";
+"下一页"                             = "下一頁";
+"键值不能输入为空"                             = "鍵值不能輸入為空";
+"复制成员"                             = "復製成員";
+"删除成员"                             = "刪除成員";
+"成员id输入有误"                             = "成員id輸入有誤";
+"提升成员"                             = "提升成員";
+"成员（Members）"                             = "成員（Members）";
+"成员地址输入有误"                             = "成員地址輸入有誤";
+"链接状态: 正常"                             = "鏈接狀態: 正常";
+"链接状态: 异常"                             = "鏈接狀態: 異常";
+"刷新加载"                             = "刷新加載";
+"清空键值"                             = "清空鍵值";
+"查询"                                = "查詢";
+"确定"                                = "確定";
+"平铺结构"                             = "平鋪結構";
+"树形结构"                             = "樹形結構";
+"创建成员"                             = "創建成員";
+"修改成员"                             = "修改成員";
+"创建键值"                                = "創建鍵值";
+"键值前缀删除"                                = "鍵值前綴刪除";
+"租约管理"                             = "租約管理";
+"角色管理"                             = "角色管理";
+"用户管理"                             = "用户管理";
+"开启认证"                             = "開啟認證";
+
+//
+"请输入键值前缀"                                = "請輸入鍵值前綴";
+"请输入前缀key"                             = "請輸入前綴key";
+"创建角色"                             = "創建角色";
+"请输入角色"                             = "請輸入角色";
+"关闭"                             = "關閉";
+"移除"                                = "移除";
+"存活一次"                                = "存活一次";
+"请输入key"                                = "請輸入key";
+
+"请输入时间"                                = "請輸入時間";
+"请输入Value"                                = "請輸入Value";
+"输入时间错误，请重新输入"                                = "輸入時間錯誤，請重新輸入";
+"创建用户"                                = "創建用戶";
+"创建密码"                                = "創建密碼";
+"请输入密码"                                = "請輸入密碼";
+"用户操作错误"                                = "用戶操作錯誤";
+
+//
+"创建集群成员"                                = "創建集群成員";
+"更新集群成员"                                = "更新集群成員";
+"修改后节点地址:"                                = "修改後節點地址:";
+"节点地址: "                                = "節點地址: ";
+"修改前节点id: "                                = "修改前節點id: ";
+"节点id: "                                = "節點id: ";
+
+
+"当前页:  %lld  "                                = "當前頁:  %lld  ";
+"成员总数:  %lld "                                = "成員總數:  %lld ";
+"服务地址：%@"                                   = "成員總數:  %lld ";
+"总数:  %lld  "                                   = "總數:  %lld  ";
+"客户端： %@"                                   = "客戶端： %@";
+"节点： %@"                                   = "節點： %@";
+"名称： %@"                                  = "名稱： %@";
+
