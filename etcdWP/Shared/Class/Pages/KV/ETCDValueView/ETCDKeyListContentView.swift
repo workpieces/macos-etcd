@@ -23,8 +23,8 @@ struct ETCDKeyListContentView: View {
             }
             ETCDKeyListContentPageView(storeObj: storeObj)
             ETCDKeyContentMembersListView(storeObj: storeObj)
-        }.onAppear{
+        }.onAppear(perform: {
             storeObj.KVReaload()
-        }
+        })
     }
 }
