@@ -108,7 +108,7 @@ extension ETCDLeaseListView {
         
         List(items.reversed()){ item in
             HStack(){
-                Text(String(format: "租约ID：%ld", item.ttlid!))
+                Text(String(format: "ID：%ld", item.ttlid!))
                     .font(.subheadline)
                     .foregroundColor(.white)
                     .opacity(0.75)

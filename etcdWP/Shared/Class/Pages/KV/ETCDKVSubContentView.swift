@@ -78,7 +78,7 @@ struct MakeMemberPopoverContent: View {
                     textVauleModel.isConfirm = false
                     action!()
                 } label: {
-                    Text("取消")
+                    Text("Cancle")
                         .font(.system(size: 12))
                         .foregroundColor(.white)
                 }
