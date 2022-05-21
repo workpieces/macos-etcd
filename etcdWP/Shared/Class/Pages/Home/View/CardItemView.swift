@@ -76,7 +76,7 @@ struct CardItemView: View {
                 Text("连接状态")
                     .withDefaultContentTitle(fontColor: .white)
                 
-                Text(options.status == true ? "Scuess" : "Failed")
+                Text(LocalizedStringKey(options.status == true ? "Scuess" : "Failed"))
                     .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#7CFC00") : .red)
                 Spacer()
             }

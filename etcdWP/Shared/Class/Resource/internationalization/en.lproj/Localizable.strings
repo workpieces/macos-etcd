@@ -29,3 +29,17 @@
 //配置
 "ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
 "通用设置"                           = "General Settings";
+"Cancel"                           = "Cancel";
+"Save"                             = "Save";
+
+
+//home
+"服务名称"                              = "Service Name";
+"节点地址"                           = "Node Address";
+"连接状态"                           = "Connection status";
+"Scuess"                             = "Scuess";
+"Failed"                             = "Failed";
+"Delete"                             = "Delete";
+"Cancle"                             = "Cancel";
+"The connection to the server was lost."                             = "The connection to the server was lost.";
+"Want to modify etcd service data?"                             = "Want to modify etcd service data?";
