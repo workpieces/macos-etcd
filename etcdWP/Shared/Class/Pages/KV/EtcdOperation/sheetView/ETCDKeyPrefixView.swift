@@ -34,7 +34,7 @@ struct ETCDKeyPrefixView: View {
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
-                    Text("取消")
+                    Text("Cancel")
                         .font(.system(size: 12))
                         .fontWeight(.medium)
                         .foregroundColor(.white)

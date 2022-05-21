@@ -112,3 +112,22 @@
 "角色管理"                             = "Role Management";
 "用户管理"                             = "User Management";
 "开启认证"                             = "Turn on authentication";
+
+//
+"请输入键值前缀"                                = "Please enter key prefix";
+"请输入前缀key"                             = "Please enter prefix key";
+"创建角色"                             = "Create roles";
+"请输入角色"                             = "Please enter a role";
+"关闭"                             = "Close";
+"移除"                                = "remove";
+"存活一次"                                = "Keep Once";
+"请输入key"                                = "Please enter key";
+
+"请输入时间"                                = "Please enter a time";
+"请输入Value"                                = "Please enter Value";
+"输入时间错误，请重新输入"                                = "Error entering time, please re-enter";
+"创建用户"                                = "Create User";
+"创建密码"                                = "Create password";
+"请输入密码"                                = "Please input a password";
+"用户操作错误"                                = "User operation error";
+
