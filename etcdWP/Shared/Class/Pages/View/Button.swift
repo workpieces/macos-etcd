@@ -23,7 +23,7 @@ struct DefaultTabarButtonViewModifier: ViewModifier{
                 Image(systemName: image)
                     .withDefaultContentTitle()
                     .foregroundColor(selectTab == title ? .white : .gray)
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .withDefaultSubContentTitle()
                     .foregroundColor(selectTab == title ? .white : .gray)
             }
@@ -49,7 +49,7 @@ struct DefaultAddButtonViewModifier: ViewModifier{
             PushView(destination: ETCDConfigView(), isActive: $isLinkActive) {
                 Button {  self.isLinkActive.toggle() } label: {
                     HStack {
-                        Text(title)
+                        Text(LocalizedStringKey(title))
                             .withDefaultContentTitle()
                     }
                     .padding(DefaultSpacePadding)

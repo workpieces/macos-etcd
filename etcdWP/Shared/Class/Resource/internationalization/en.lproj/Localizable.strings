@@ -5,3 +5,12 @@
   Created by FaceBook on 2022/4/26.
   
 */
+"批量导出"                   = "Batch Export";
+"批量导入"                   = "Batch Import";
+"关闭服务"                   = "Shut Down Services";
+"开启服务"                   = "Open Service";
+"保存目录不能为空"                   = "Save directory cannot be empty";
+
+"创建ETCD客户端"              = "Create ETCD Client";
+"Home"                      = "Home";
+"About"                     = "About";
