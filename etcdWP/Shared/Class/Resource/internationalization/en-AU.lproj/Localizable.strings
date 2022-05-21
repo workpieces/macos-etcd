@@ -1,10 +1,10 @@
 /* 
-  Localizable.strings
-  etcdWP
-
-  Created by FaceBook on 2022/4/26.
-  
-*/
+ Localizable.strings
+ etcdWP
+ 
+ Created by FaceBook on 2022/4/26.
+ 
+ */
 "批量导出"                   = "Batch Export";
 "批量导入"                   = "Batch Import";
 "关闭服务"                   = "Shut Down Services";
@@ -98,7 +98,7 @@
 "提升成员"                             = "Promote Members";
 "成员（Members）"                             = "Members";
 "成员地址输入有误"                             = "成员地址输入有误";
-"链接状态: 正常"                             = "Member address entered incorrectly";
+"链接状态: 正常"                             = "Link status: normal";
 "链接状态: 异常"                             = "Link Status: Exception";
 "刷新加载"                             = "Refresh Load";
 "清空键值"                             = "Empty key value";
