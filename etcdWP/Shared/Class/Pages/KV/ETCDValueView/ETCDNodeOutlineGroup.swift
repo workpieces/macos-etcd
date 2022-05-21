@@ -67,23 +67,23 @@ struct ETCDNodeOutlineGroup: View {
                     }
                 },
                 label: {
-                    ETCDKVItemView(item: node)
+                    ETCDNodeOutlineKVItemView(item: node)
                         .padding(.trailing ,8)
                         .onTapGesture(perform: {
                             self.storeObj.realeadData.currentKv = node
                         })
-                        .contextMenu(menuItem(node))
                         .buttonStyle(PlainButtonStyle())
+                        .contextMenu(menuItem(node))
                 }
             ).padding(.leading,10)
         } else {
-            ETCDKVItemView(item: node)
+            ETCDNodeOutlineKVItemView(item: node)
                 .onTapGesture(perform: {
                     self.storeObj.realeadData.currentKv = node
                 })
-                .contextMenu(menuItem(node))
                 .buttonStyle(PlainButtonStyle())
                 .padding(.trailing ,8)
+                .contextMenu(menuItem(node))
         }
     }
 }
