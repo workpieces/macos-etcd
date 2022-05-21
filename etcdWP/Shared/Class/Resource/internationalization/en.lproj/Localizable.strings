@@ -88,6 +88,7 @@
 "删除键值"                             = "Delete key value";
 "更新键值"                             = "Update Key Values";
 "复制value值"                             = "Copy Value";
+"Promotes集群成员"                             = "Promotes cluster members";
 "上一页"                             = "Previous page";
 "下一页"                             = "next page";
 "键值不能输入为空"                             = "Key value cannot be entered as null";
@@ -138,3 +139,10 @@
 "节点地址: "                                = "node address: ";
 "修改前节点id: "                                = "node ID before modification: ";
 "节点id: "                                = "node ID:";
+"当前页:  %lld  "                                = "current page:  %lld  ";
+"成员总数:  %lld "                                = "Total number of members:  %lld ";
+"服务地址：%@"                                   = "Service Address：%@";
+"总数:  %lld  "                                   = "Total:  %lld  ";
+"客户端： %@"                                   = "Client： %@";
+"节点： %@"                                   = "Node： %@";
+"名称： %@"                                  = "Name： %@";

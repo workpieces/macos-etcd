@@ -24,8 +24,6 @@
 		D021F02D281FF8E600992294 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D021EFEA281FF8E500992294 /* Localizable.strings */; };
 		D021F02E281FF8E600992294 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D021EFEC281FF8E500992294 /* InfoPlist.strings */; };
 		D021F02F281FF8E600992294 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D021EFEC281FF8E500992294 /* InfoPlist.strings */; };
-		D021F030281FF8E600992294 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D021EFEE281FF8E500992294 /* Localizable.stringsdict */; };
-		D021F031281FF8E600992294 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D021EFEE281FF8E500992294 /* Localizable.stringsdict */; };
 		D021F034281FF8E600992294 /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFF6281FF8E500992294 /* ETCDConfigView.swift */; };
 		D021F035281FF8E600992294 /* ETCDConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFF6281FF8E500992294 /* ETCDConfigView.swift */; };
 		D021F036281FF8E600992294 /* ETCDHomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFF7281FF8E600992294 /* ETCDHomeContentView.swift */; };
@@ -134,6 +132,8 @@
 		D0690ED72837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
 		D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
+		D0BBCE7428391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
+		D0BBCE7528391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
 		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
 		D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0888282002DD00A74D43 /* Alamofire */; };
 		D0FC088C282002F300A74D43 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC088B282002F300A74D43 /* SnapKit */; };
@@ -176,10 +176,8 @@
 		D021EFE7281FF8E500992294 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		D021EFEB281FF8E500992294 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D021EFED281FF8E500992294 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		D021EFEF281FF8E500992294 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		D021EFF0281FF8E500992294 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D021EFF1281FF8E500992294 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D021EFF2281FF8E500992294 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D021EFF6281FF8E500992294 /* ETCDConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDConfigView.swift; sourceTree = "<group>"; };
 		D021EFF7281FF8E600992294 /* ETCDHomeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeContentView.swift; sourceTree = "<group>"; };
 		D021EFF8281FF8E600992294 /* ETCDHomeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeMainView.swift; sourceTree = "<group>"; };
@@ -228,6 +226,8 @@
 		D0690ED22837D7050010C8A3 /* ETCDKeyListContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyListContentListView.swift; sourceTree = "<group>"; };
 		D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyListContentTreeListView.swift; sourceTree = "<group>"; };
 		D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemView.swift; sourceTree = "<group>"; };
+		D0BBCE7628391400008C175D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D0BBCE7828391401008C175D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,7 +382,7 @@
 			children = (
 				D021EFEA281FF8E500992294 /* Localizable.strings */,
 				D021EFEC281FF8E500992294 /* InfoPlist.strings */,
-				D021EFEE281FF8E500992294 /* Localizable.stringsdict */,
+				D0BBCE7728391400008C175D /* Localizable.stringsdict */,
 			);
 			path = internationalization;
 			sourceTree = "<group>";
@@ -749,8 +749,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D021F030281FF8E600992294 /* Localizable.stringsdict in Resources */,
 				D021F02E281FF8E600992294 /* InfoPlist.strings in Resources */,
+				D0BBCE7428391400008C175D /* Localizable.stringsdict in Resources */,
 				D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */,
 				D021F02C281FF8E600992294 /* Localizable.strings in Resources */,
 			);
@@ -760,8 +760,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D021F031281FF8E600992294 /* Localizable.stringsdict in Resources */,
 				D021F02F281FF8E600992294 /* InfoPlist.strings in Resources */,
+				D0BBCE7528391400008C175D /* Localizable.stringsdict in Resources */,
 				D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */,
 				D021F02D281FF8E600992294 /* Localizable.strings in Resources */,
 			);
@@ -952,11 +952,11 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D021EFEE281FF8E500992294 /* Localizable.stringsdict */ = {
+		D0BBCE7728391400008C175D /* Localizable.stringsdict */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D021EFEF281FF8E500992294 /* zh-Hans */,
-				D021EFF2281FF8E500992294 /* en */,
+				D0BBCE7628391400008C175D /* en */,
+				D0BBCE7828391401008C175D /* zh-Hans */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";

@@ -40,6 +40,6 @@ let abouts: [AboutModel] = [
         image: "questionmark.circle",
         title: "Documentation",
         desc: "Learn more about etcdWp features and turorials.",
-        link: "https://github.com/workpieces/etcdWpSite/wiki",
+        link: "https://github.com/workpieces/etcdWpSite",
         type: .Documentation),
 ]
