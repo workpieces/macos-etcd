@@ -92,8 +92,6 @@
 		D021F075281FF8E600992294 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F022281FF8E600992294 /* Constant.swift */; };
 		D021F076281FF8E600992294 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F023281FF8E600992294 /* OpenPan.swift */; };
 		D021F077281FF8E600992294 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F023281FF8E600992294 /* OpenPan.swift */; };
-		D021F07A281FF9D900992294 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D021F079281FF9D900992294 /* NavigationStack */; };
-		D021F07D281FF9EB00992294 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D021F07C281FF9EB00992294 /* NavigationStack */; };
 		D021F090281FFA5100992294 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F08F281FFA5100992294 /* AxisTabView */; };
 		D021F093281FFA5E00992294 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F092281FFA5E00992294 /* AxisTabView */; };
 		D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D021F095281FFA7B00992294 /* ObjectMapper */; };
@@ -134,6 +132,8 @@
 		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0BBCE7428391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
 		D0BBCE7528391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
+		D0BBCE8728392CA4008C175D /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D0BBCE8628392CA4008C175D /* NavigationStack */; };
+		D0BBCE8A28392CDD008C175D /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D0BBCE8928392CDD008C175D /* NavigationStack */; };
 		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
 		D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0888282002DD00A74D43 /* Alamofire */; };
 		D0FC088C282002F300A74D43 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC088B282002F300A74D43 /* SnapKit */; };
@@ -252,9 +252,9 @@
 				5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */,
 				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
+				D0BBCE8A28392CDD008C175D /* NavigationStack in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
 				D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */,
-				D021F07D281FF9EB00992294 /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,13 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */,
+				D0BBCE8728392CA4008C175D /* NavigationStack in Frameworks */,
 				D021F0A8281FFB2800992294 /* FilePicker in Frameworks */,
 				D021F0A5281FFADD00992294 /* SwiftyJSON in Frameworks */,
 				D021F09F281FFAAB00992294 /* PopupView in Frameworks */,
 				D021F093281FFA5E00992294 /* AxisTabView in Frameworks */,
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
-				D021F07A281FF9D900992294 /* NavigationStack in Frameworks */,
 				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,13 +613,13 @@
 			);
 			name = "etcdWP (iOS)";
 			packageProductDependencies = (
-				D021F07C281FF9EB00992294 /* NavigationStack */,
 				D021F08F281FFA5100992294 /* AxisTabView */,
 				D021F095281FFA7B00992294 /* ObjectMapper */,
 				D021F09B281FFA9F00992294 /* PopupView */,
 				D021F0A1281FFAD200992294 /* SwiftyJSON */,
 				D0FC0885282002D000A74D43 /* Alamofire */,
 				D0FC088B282002F300A74D43 /* SnapKit */,
+				D0BBCE8928392CDD008C175D /* NavigationStack */,
 			);
 			productName = "etcdWP (iOS)";
 			productReference = D021EFA9281F5AB700992294 /* etcdWP.app */;
@@ -639,7 +639,6 @@
 			);
 			name = "etcdWP (macOS)";
 			packageProductDependencies = (
-				D021F079281FF9D900992294 /* NavigationStack */,
 				D021F092281FFA5E00992294 /* AxisTabView */,
 				D021F098281FFA8600992294 /* ObjectMapper */,
 				D021F09E281FFAAB00992294 /* PopupView */,
@@ -648,6 +647,7 @@
 				D021F0AA281FFB3400992294 /* FilePicker */,
 				D0FC0888282002DD00A74D43 /* Alamofire */,
 				D0FC088E282002FF00A74D43 /* SnapKit */,
+				D0BBCE8628392CA4008C175D /* NavigationStack */,
 			);
 			productName = "etcdWP (macOS)";
 			productReference = D021EFAF281F5AB700992294 /* etcdWP.app */;
@@ -730,8 +730,6 @@
 			);
 			mainGroup = D021EF9C281F5AB500992294;
 			packageReferences = (
-				D021F078281FF9D900992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
-				D021F07B281FF9EB00992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D021F091281FFA5E00992294 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D021F094281FFA7B00992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
@@ -746,6 +744,8 @@
 				D0FC0887282002DD00A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D0FC088A282002F300A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D0FC088D282002FF00A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				D0BBCE8828392CDD008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -1375,22 +1375,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D021F078281FF9D900992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.4;
-			};
-		};
-		D021F07B281FF9EB00992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.4;
-			};
-		};
 		D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
@@ -1471,6 +1455,22 @@
 				version = 1.0.1;
 			};
 		};
+		D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.4;
+			};
+		};
+		D0BBCE8828392CDD008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.4;
+			};
+		};
 		D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1506,16 +1506,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D021F079281FF9D900992294 /* NavigationStack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F078281FF9D900992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
-			productName = NavigationStack;
-		};
-		D021F07C281FF9EB00992294 /* NavigationStack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F078281FF9D900992294 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
-			productName = NavigationStack;
-		};
 		D021F08F281FFA5100992294 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */;
@@ -1565,6 +1555,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */;
 			productName = FilePicker;
+		};
+		D0BBCE8628392CA4008C175D /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			productName = NavigationStack;
+		};
+		D0BBCE8928392CDD008C175D /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			productName = NavigationStack;
 		};
 		D0FC0885282002D000A74D43 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
