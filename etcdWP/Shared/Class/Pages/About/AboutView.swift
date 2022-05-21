@@ -30,11 +30,11 @@ struct AboutView: View {
                                 Color(hex:"#00FFFF").opacity(0.15)
                                     .cornerRadius(DefaultRadius)
                                 VStack {
-                                    Text(item.title)
+                                    Text(LocalizedStringKey(item.title))
                                         .withDefaultContentTitle(fontSize: 22.0)
                                         .padding(.vertical,DefaultSpacePadding)
                                     
-                                    Text(item.desc)
+                                    Text(LocalizedStringKey(item.desc))
                                         .multilineTextAlignment(.leading)
                                         .withDefaultSubContentTitle(fontSize: 14.0)
                                         .padding(.horizontal,DefaultSpacePadding)

@@ -43,3 +43,13 @@
 "Cancle"                             = "Cancel";
 "The connection to the server was lost."                             = "The connection to the server was lost.";
 "Want to modify etcd service data?"                             = "Want to modify etcd service data?";
+
+
+
+// about
+"Contact Us"                              = "Contact Us";
+"If you have feature requests, custom app requirements or bugs, contact us :"                           = "If you have feature requests, custom app requirements or bugs, contact us :";
+"Download"                           = "Download";
+"App for Mac,Window and Linux"                             = "App for Mac,Window and Linux";
+"Documentation"                             = "Documentation";
+"Learn more about etcdWp features and turorials."                             = "Learn more about etcdWp features and turorials.";

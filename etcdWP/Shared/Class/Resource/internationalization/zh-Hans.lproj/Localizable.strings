@@ -44,3 +44,11 @@
 "Cancle"                             = "取消";
 "The connection to the server was lost."                             = "与服务器的连接丢失。";
 "Want to modify etcd service data?"                             = "是否要修改etcd服务数据？";
+
+// about
+"Contact Us"                              = "联系我们";
+"If you have feature requests, custom app requirements or bugs, contact us :"                           = "如果您有功能请求、自定义应用程序要求或错误，请与我们联系：";
+"Download"                           = "下载";
+"App for Mac,Window and Linux"                             = "适用于Mac、Windows和Linux的应用程序";
+"Documentation"                             = "文档";
+"Learn more about etcdWp features and turorials."                             = "了解有关etcdWp功能和turorials的更多信息。";
