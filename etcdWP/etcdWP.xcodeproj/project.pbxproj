@@ -746,7 +746,6 @@
 				D0FC0887282002DD00A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D0FC088A282002F300A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D0FC088D282002FF00A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D0CBAACE2830B7FE00E8B452 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -1470,14 +1469,6 @@
 			requirement = {
 				kind = exactVersion;
 				version = 1.0.1;
-			};
-		};
-		D0CBAACE2830B7FE00E8B452 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
-			requirement = {
-				kind = exactVersion;
-				version = 9.4.0;
 			};
 		};
 		D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
