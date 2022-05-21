@@ -62,7 +62,7 @@ struct ETCDKeyListContentHeadView: View {
                 Button {
                     storeObj.showFormat =  storeObj.showFormat == .Tree ? .List:.Tree
                 } label: {
-                    Text(storeObj.showFormat.Name())
+                    Text(LocalizedStringKey(storeObj.showFormat.Name()))
                         .font(.caption)
                         .foregroundColor(Color(hex:"#00FFFF"))
                 }

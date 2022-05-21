@@ -133,9 +133,9 @@
 "用户操作错误"                                = "用户操作错误";
 
 //
-"创建集群成员"                                = "create cluster member";
-"更新集群成员"                                = "update cluster member";
-"修改后节点地址:"                                = "modified node address:";
-"节点地址: "                                = "node address:";
-"修改前节点id:"                                = "node ID before modification:";
-"节点id: "                                = "node ID:";
+"创建集群成员"                                = "创建集群成员";
+"更新集群成员"                                = "更新集群成员";
+"修改后节点地址:"                                = "修改后节点地址:";
+"节点地址: "                                = "节点地址: ";
+"修改前节点id: "                                = "修改前节点id: ";
+"节点id: "                                = "节点id: ";

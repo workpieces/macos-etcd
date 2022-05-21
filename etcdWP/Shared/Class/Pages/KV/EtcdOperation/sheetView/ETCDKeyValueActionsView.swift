@@ -19,7 +19,7 @@ struct ETCDKeyValueActionsView: View {
     @State var errorString:String = "输入错误，请重新输入"
     var body: some View {
         VStack(){
-            Text(currentModel.name).padding(10)
+            Text(LocalizedStringKey(currentModel.name)).padding(10)
             HStack(){
                 Text("请输入key")
                     .foregroundColor(Color.white)

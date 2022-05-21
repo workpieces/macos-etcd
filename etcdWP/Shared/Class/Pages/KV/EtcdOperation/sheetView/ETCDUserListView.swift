@@ -20,7 +20,7 @@ struct ETCDUserListView: View {
     
     var body: some View {
         VStack(){
-            Text(currentModel.name)
+            Text(LocalizedStringKey(currentModel.name))
                 .padding(.top,10)
                 .padding(.trailing,10)
                 .padding(.leading,10)
@@ -124,7 +124,7 @@ extension ETCDUserListView {
     private var leaseListView : some View {
         List(items){ item in
             HStack(){
-                Text("用户：\(item.user ?? "" )")
+                Text("id：\(item.user ?? "" )")
                     .font(.subheadline)
                     .foregroundColor(.white)
                     .opacity(0.75)

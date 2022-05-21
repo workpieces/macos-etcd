@@ -17,7 +17,7 @@ struct ETCDKeyPrefixView: View {
     @State var isSucceful :Bool  = false
     var body: some View {
         VStack(){
-            Text(currentModel.name).padding(10)
+            Text(LocalizedStringKey(currentModel.name)).padding(10)
             HStack(){
                 Text("请输入键值前缀")
                     .foregroundColor(Color.white)

@@ -33,7 +33,7 @@
 "Save"                             = "Save";
 
 "Default User Information Configuration："                           = "Default User Information Configuration：";
-"Client Name："                           = "/Users/facebook/Documents/module/study/mac_os/project/macos-etcd/etcdWP/Shared/Class/Pages/Home/ETCDConfigView.swiftClient Name：";
+"Client Name："                           = "Client Name：";
 "User Name："                           = "User Name：";
 "Password："                           = "Password：";
 "Cluster Network Configuration："                           = "Cluster Network Configuration：";
@@ -131,9 +131,9 @@
 "请输入密码"                                = "Please input a password";
 "用户操作错误"                                = "User operation error";
 
-"创建集群成员"                                = "创建集群成员";
-"更新集群成员"                                = "更新集群成员";
-"修改后节点地址:"                                = "修改后节点地址:";
-"节点地址: "                                = "节点地址: ";
-"修改前节点id:"                                = "修改前节点id:";
-"节点id: "                                = "节点id: ";
+"创建集群成员"                                = "create cluster member";
+"更新集群成员"                                = "update cluster member";
+"修改后节点地址:"                                = "modified node address: ";
+"节点地址: "                                = "node address: ";
+"修改前节点id: "                                = "node ID before modification: ";
+"节点id: "                                = "node ID:";

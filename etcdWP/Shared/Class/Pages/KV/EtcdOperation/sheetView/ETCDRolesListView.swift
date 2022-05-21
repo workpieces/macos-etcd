@@ -18,7 +18,7 @@ struct ETCDRolesListView: View {
     
     var body: some View {
         VStack(){
-            Text(currentModel.name)
+            Text(LocalizedStringKey(currentModel.name))
                 .padding(.top,10)
                 .padding(.trailing,10)
                 .padding(.leading,10)
