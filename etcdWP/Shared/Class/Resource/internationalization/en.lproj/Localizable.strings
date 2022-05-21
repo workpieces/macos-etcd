@@ -31,6 +31,18 @@
 "通用设置"                           = "General Settings";
 "Cancel"                           = "Cancel";
 "Save"                             = "Save";
+
+"Default User Information Configuration："                           = "Default User Information Configuration：";
+"Client Name："                           = "/Users/facebook/Documents/module/study/mac_os/project/macos-etcd/etcdWP/Shared/Class/Pages/Home/ETCDConfigView.swiftClient Name：";
+"User Name："                           = "User Name：";
+"Password："                           = "Password：";
+"Cluster Network Configuration："                           = "Cluster Network Configuration：";
+"Network Protocol："                           = "Network Protocol：";
+"Cluster Endpoint："                           = "Cluster Endpoint：";
+"TrustedCAFile:  未选择任何文件"                           = "TrustedCAFile: No file selected";
+"KeyFile:  未选择任何文件"                           = "KeyFile: No file selected";
+"CertFile:  未选择任何文件"                           = "CertFile: No file selected";
+
 "Timeout Setting Configuration (seconds)："                             = "Timeout Setting Configuration (seconds)：";
 "Request Timeout："                              = "Request Timeout：";
 "Dial Timeout："                           = "Dial Timeout：";

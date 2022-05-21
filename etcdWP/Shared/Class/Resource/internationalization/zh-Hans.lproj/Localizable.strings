@@ -31,6 +31,17 @@
 "ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
 "通用设置"                           = "通用设置";
 "Cancel"                           = "取消";
+"Default User Information Configuration："                           = "默认用户信息配置：";
+"Client Name："                           = "客户名称：";
+"User Name："                           = "用户名：";
+"Password："                           = "密码：";
+"Cluster Network Configuration："                           = "网络配置：";
+"Network Protocol："                           = "网络协议：";
+"Cluster Endpoint："                           = "群集结点：";
+"TrustedCAFile:  未选择任何文件"                           = "TrustedCAFile:  未选择任何文件";
+"KeyFile:  未选择任何文件"                           = "KeyFile:  未选择任何文件";
+"CertFile:  未选择任何文件"                           = "CertFile:  未选择任何文件";
+
 "Timeout Setting Configuration (seconds)："                             = "超时设置配置（秒）：";
 "Request Timeout："                              = "请求超时：";
 "Dial Timeout："                           = "超时时间：";
