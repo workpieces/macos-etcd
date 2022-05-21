@@ -31,6 +31,17 @@
 "通用设置"                           = "General Settings";
 "Cancel"                           = "Cancel";
 "Save"                             = "Save";
+"Timeout Setting Configuration (seconds)："                             = "Timeout Setting Configuration (seconds)：";
+"Request Timeout："                              = "Request Timeout：";
+"Dial Timeout："                           = "Dial Timeout：";
+"Dial Keep Alive Time："                           = "Dial Keep Alive Time：";
+"Dial Keep Alive Timeout："                             = "Dial Keep Alive Timeout：";
+"Auto Sync Interval："                             = "Auto Sync Interval：";
+"Miscellaneous："                             = "Miscellaneous：";
+"Auto create client name?"                             = "Auto create client name?";
+"Reschedule Pings？"                              = "Reschedule Pings？";
+"Clean Session?"                           = "Clean Session?";
+"Auto connect on app launch?"                           = "Auto connect on app launch?";
 
 
 //home

@@ -31,7 +31,19 @@
 "ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
 "通用设置"                           = "通用设置";
 "Cancel"                           = "取消";
-"Save"                             = "保存";
+"Timeout Setting Configuration (seconds)："                             = "超时设置配置（秒）：";
+"Request Timeout："                              = "请求超时：";
+"Dial Timeout："                           = "超时时间：";
+"Dial Keep Alive Time："                           = "保持活动时间：";
+"Dial Keep Alive Timeout："                             = "保持活动超时：";
+"Auto Sync Interval："                             = "自动同步间隔：";
+"Miscellaneous："                             = "其他配置：";
+"Auto create client name?"                             = "是否自动创建客户端名称？";
+"Reschedule Pings？"                              = "重新ping";
+"Clean Session?"                           = "清理会话？";
+"Auto connect on app launch?"                           = "应用程序启动时自动连接？";
+
+
 
 
 //home
