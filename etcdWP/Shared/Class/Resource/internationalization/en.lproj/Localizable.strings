@@ -102,3 +102,13 @@
 "清空键值"                             = "Empty key value";
 "查询"                             = "query";
 "确定"                             = "Submit";
+"平铺结构"                             = "Tile Structure";
+"树形结构"                             = "Tree Structure";
+"创建成员"                             = "Create Members";
+"修改成员"                             = "Modify Members";
+"创建键值"                                = "Create key value";
+"键值前缀删除"                                = "Key prefix deletion";
+"租约管理"                             = "Lease Management";
+"角色管理"                             = "Role Management";
+"用户管理"                             = "User Management";
+"开启认证"                             = "Turn on authentication";

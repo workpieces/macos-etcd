@@ -23,12 +23,7 @@ struct ETCDEtcdOperationView :View {
                         Spacer()
                         HStack {
                             Spacer()
-                            Text(item.name)
-                                .font(.body)
-                                .foregroundColor(.white)
-                                .truncationMode(.middle)
-                                .frame(maxHeight: 44.0)
-                            Text(item.english)
+                            Text(LocalizedStringKey(item.name))
                                 .font(.body)
                                 .foregroundColor(.white)
                                 .truncationMode(.middle)

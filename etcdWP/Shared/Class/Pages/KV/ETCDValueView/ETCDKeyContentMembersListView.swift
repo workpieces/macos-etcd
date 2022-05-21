@@ -135,7 +135,7 @@ struct ETCDKeyContentMembersListView: View {
                                 self.currentMember = item
                                 self.isShowingPopover.toggle()
                             } label: {
-                                Text(item.name)
+                                Text(LocalizedStringKey(item.name))
                                     .font(.caption)
                                     .foregroundColor(.white)
                             }
