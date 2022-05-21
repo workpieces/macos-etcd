@@ -76,3 +76,29 @@
 "App for Mac,Window and Linux"                             = "App for Mac,Window and Linux";
 "Documentation"                             = "Documentation";
 "Learn more about etcdWp features and turorials."                             = "Learn more about etcdWp features and turorials.";
+
+
+"访问官网"                             = "Website";
+"意见反馈"                             = "Feedback";
+"粘贴"                                = "paste";
+"键值操作"                             = "Key value operation";
+"集群状态"                             = "Cluster status";
+"查看键值详情"                             = "View key value details";
+"复制key值"                             = "Copy key value";
+"删除键值"                             = "Delete key value";
+"更新键值"                             = "Update Key Values";
+"上一页"                             = "Previous page";
+"下一页"                             = "next page";
+"键值不能输入为空"                             = "Key value cannot be entered as null";
+"复制成员"                             = "Copy Members";
+"删除成员"                             = "Delete Members";
+"成员id输入有误"                             = "Incorrect member ID input";
+"提升成员"                             = "Promote Members";
+"成员（Members）"                             = "Members";
+"成员地址输入有误"                             = "成员地址输入有误";
+"链接状态: 正常"                             = "Member address entered incorrectly";
+"链接状态: 异常"                             = "Link Status: Exception";
+"刷新加载"                             = "Refresh Load";
+"清空键值"                             = "Empty key value";
+"查询"                             = "query";
+"确定"                             = "Submit";

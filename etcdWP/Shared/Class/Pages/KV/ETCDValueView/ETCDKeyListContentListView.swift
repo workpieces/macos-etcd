@@ -93,7 +93,7 @@ struct ETCDKeyListContentListView: View {
                         Button {
                             isShowingUpdatePopover.toggle()
                         } label: {
-                            Text("取消")
+                            Text("Cancle")
                                 .font(.system(size: 12))
                                 .foregroundColor(.white)
                         }
