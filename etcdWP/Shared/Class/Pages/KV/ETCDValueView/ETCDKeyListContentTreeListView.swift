@@ -10,44 +10,12 @@ import SwiftUI
 struct ETCDKeyListContentTreeListView: View {
     
     @StateObject var storeObj : ItemStore
+    @State fileprivate var isDefaultSelectType: Int = 0
     @State fileprivate var isShowingUpdatePopover = false
     @State fileprivate var textValue: String = ""
-    @State fileprivate var isDefaultSelectType: Int = 0
+    
     fileprivate func Reaload() {
         storeObj.KVReaload()
-    }
-    
-    fileprivate func menuItem(_ item: KVData) -> ContextMenu<TupleView<(Button<Text>, Button<Text>, Button<Text>, Button<Text>, Button<Text>)>> {
-        return ContextMenu(menuItems: {
-            Button("查看键值详情", action: {
-                self.isDefaultSelectType = 1
-                storeObj.realeadData.currentKv = item
-                self.isShowingUpdatePopover.toggle()
-            })
-            Button("复制key值", action: {
-                copyToClipBoard(textToCopy: item.key ?? "")
-            })
-            Button("复制value值", action: {
-                copyToClipBoard(textToCopy: item.value ?? "")
-            })
-            Button("删除键值", action: {
-                do {
-                    let resp = storeObj.Delete(key: item.key!)
-                    if resp?.status != 200 {
-                        throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
-                    }
-                    Reaload()
-                } catch  {
-                    print(error.localizedDescription)
-                }
-            })
-            Button("更新键值", action: {
-                self.isDefaultSelectType = 0
-                storeObj.realeadData.currentKv = item
-                self.textValue = item.value ?? ""
-                self.isShowingUpdatePopover.toggle()
-            })
-        })
     }
     
     var body: some View {
@@ -58,17 +26,17 @@ struct ETCDKeyListContentTreeListView: View {
                 .padding(.trailing,3)
                 .frame(height:60)
                 .background(Color(hex: "#221C27"))
-            List(storeObj.Chidren(), children: \.children) { item in
-                ETCDKVItemView(item:item)
-                    .onTapGesture(perform: {
-                        if item.children == nil{
-                            self.storeObj.realeadData.currentKv = item
-                        }
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .contextMenu(menuItem(item))
-            }
-            .background(Color(hex: "#221C27"))
+            ETCDNodeOutlineGroup(storeObj: storeObj, callback: { newValue, index , text in
+                if !text.isEmpty {
+                    self.textValue = text
+                }
+                
+                self.isShowingUpdatePopover = newValue
+                self.isDefaultSelectType = index
+                
+            },node: storeObj.treeItem()!, childKeyPath:  \.children)
+            Spacer()
+        }.background(Color(hex: "#221C27"))
             .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
                 switch isDefaultSelectType {
                 case 0:
@@ -197,7 +165,6 @@ struct ETCDKeyListContentTreeListView: View {
                     .frame(width: 280, height: 320)
                 }
             }
-        }
     }
 }
 
