@@ -87,6 +87,7 @@
 "复制key值"                             = "Copy key value";
 "删除键值"                             = "Delete key value";
 "更新键值"                             = "Update Key Values";
+"复制value值"                             = "Copy Value";
 "上一页"                             = "Previous page";
 "下一页"                             = "next page";
 "键值不能输入为空"                             = "Key value cannot be entered as null";
