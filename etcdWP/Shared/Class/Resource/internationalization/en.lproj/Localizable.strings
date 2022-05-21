@@ -26,3 +26,6 @@
 "操作用户错误"                     = "Operation user error";
 
 
+//配置
+"ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
+"通用设置"                           = "General Settings";

@@ -79,7 +79,7 @@ struct DefaultNavagationBackViewModifier: ViewModifier {
                 .buttonStyle(PlainButtonStyle())
             }
             Spacer()
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .withDefaultContentTitle(fontSize: size)
             Spacer()
         }
