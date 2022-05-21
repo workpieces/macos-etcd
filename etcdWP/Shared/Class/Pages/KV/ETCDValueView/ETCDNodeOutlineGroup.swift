@@ -18,7 +18,7 @@ struct ETCDNodeOutlineGroup: View {
                 content: {
                     if isExpanded {
                         ForEach(node[keyPath: childKeyPath]!) { childNode in
-                            ETCDNodeOutlineGroup(node: childNode, childKeyPath:childKeyPath,isExpanded:false)
+                            ETCDNodeOutlineGroup(node: childNode, childKeyPath:childKeyPath,isExpanded:isExpanded)
                         }
                     }
                 },

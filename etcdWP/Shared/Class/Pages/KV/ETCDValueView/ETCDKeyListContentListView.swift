@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ETCDKeyListContentListView: View {
     @EnvironmentObject var storeObj : ItemStore
-    @State private var isShowingUpdatePopover = false
-    @State private var textValue: String = ""
-    @State private var isDefaultSelectType: Int = 0
+    @State fileprivate var isShowingUpdatePopover = false
+    @State fileprivate var textValue: String = ""
+    @State fileprivate var isDefaultSelectType: Int = 0
     
     fileprivate func Reaload() {
          storeObj.KVReaload()

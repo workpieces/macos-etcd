@@ -9,11 +9,10 @@ import SwiftUI
 
 struct ETCDKeyListContentTreeListView: View {
     
-    @EnvironmentObject var storeObj : ItemStore
-    @State private var isShowingUpdatePopover = false
-    @State private var textValue: String = ""
-    @State private var isDefaultSelectType: Int = 0
-    
+    @StateObject var storeObj : ItemStore
+    @State fileprivate var isShowingUpdatePopover = false
+    @State fileprivate var textValue: String = ""
+    @State fileprivate var isDefaultSelectType: Int = 0
     fileprivate func Reaload() {
         storeObj.KVReaload()
     }
@@ -22,7 +21,7 @@ struct ETCDKeyListContentTreeListView: View {
         return ContextMenu(menuItems: {
             Button("查看键值详情", action: {
                 self.isDefaultSelectType = 1
-                self.storeObj.realeadData.currentKv = item
+                storeObj.realeadData.currentKv = item
                 self.isShowingUpdatePopover.toggle()
             })
             Button("复制key值", action: {
@@ -44,13 +43,12 @@ struct ETCDKeyListContentTreeListView: View {
             })
             Button("更新键值", action: {
                 self.isDefaultSelectType = 0
-                self.storeObj.realeadData.currentKv = item
+                storeObj.realeadData.currentKv = item
                 self.textValue = item.value ?? ""
                 self.isShowingUpdatePopover.toggle()
             })
         })
     }
-    
     
     var body: some View {
         VStack(spacing:1){
@@ -203,8 +201,3 @@ struct ETCDKeyListContentTreeListView: View {
     }
 }
 
-struct ETCDKeyListContentTreeListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDKeyListContentTreeListView()
-    }
-}

@@ -19,7 +19,7 @@ struct ETCDKeyListContentView: View {
             if storeObj.showFormat == .List{
                 ETCDKeyListContentListView()
             }else{
-                ETCDKeyListContentTreeListView()
+                ETCDKeyListContentTreeListView(storeObj: storeObj)
             }
             ETCDKeyListContentPageView(storeObj: storeObj)
             ETCDKeyContentMembersListView(storeObj: storeObj)
