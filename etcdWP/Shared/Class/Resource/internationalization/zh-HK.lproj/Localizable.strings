@@ -74,6 +74,12 @@
 "App for Mac,Window and Linux"                             = "適用於Mac的應用程序";
 "Documentation"                             = "文檔";
 "Learn more about etcdWp features and turorials."                             = "了解有關etcdWp功能和turorials的更多信息。";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"                             = "MediaGB是一個基於GB28181標準實現的網絡視頻平台，支持NAT穿透，支持海康、大華、宇視等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等視頻推流、流轉發到國標平台。";
+"推荐 MediaGB"                             = "推薦 MediaGB";
+"Learn More"                             = "學到更多";
+"（已发版）"                           = "（已發版）";
+"（研发中）"                           = "（研發中）";
+"Workpieces 官方开发社区和组织仓库"                           = "Workpieces 官方開發社區和組織倉庫";
 
 
 
