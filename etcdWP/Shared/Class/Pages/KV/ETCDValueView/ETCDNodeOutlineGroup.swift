@@ -73,7 +73,7 @@ struct ETCDNodeOutlineGroup: View {
                             self.storeObj.realeadData.currentKv = node
                         })
                         .buttonStyle(PlainButtonStyle())
-                        .contextMenu(menuItem(node))
+                        .contextMenu( node.children == nil ? menuItem(node):nil)
                 }
             ).padding(.leading,10)
         } else {
@@ -83,7 +83,7 @@ struct ETCDNodeOutlineGroup: View {
                 })
                 .buttonStyle(PlainButtonStyle())
                 .padding(.trailing ,8)
-                .contextMenu(menuItem(node))
+                .contextMenu(node.children == nil ? menuItem(node):nil)
         }
     }
 }
