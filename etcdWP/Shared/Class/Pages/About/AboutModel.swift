@@ -32,6 +32,12 @@ let abouts: [AboutModel] = [
         type: .Contact),
     AboutModel(
         image: "questionmark.circle",
+        title: "Download",
+        desc: "App for Mac,Window and Linux",
+        link: "https://github.com/workpieces/etcdWp/releases",
+        type: .Download),
+    AboutModel(
+        image: "questionmark.circle",
         title: "Documentation",
         desc: "Learn more about etcdWp features and turorials.",
         link: "https://github.com/workpieces/etcdWp",
