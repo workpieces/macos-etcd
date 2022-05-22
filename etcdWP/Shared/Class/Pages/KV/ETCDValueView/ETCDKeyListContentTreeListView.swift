@@ -80,6 +80,7 @@ struct ETCDKeyListContentTreeListView: View {
                                     if resp?.status != 200 {
                                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                     }
+                                    self.storeObj.realeadData.currentKv?.value = textValue
                                     Reaload()
                                 } catch  {
                                     print(error.localizedDescription)
