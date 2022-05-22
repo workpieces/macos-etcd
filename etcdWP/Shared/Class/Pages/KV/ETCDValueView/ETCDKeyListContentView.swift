@@ -12,6 +12,9 @@ import Combine
 import FilePicker
 import ObjectMapper
 
+
+
+
 struct ETCDKeyListContentView: View {
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
@@ -21,6 +24,7 @@ struct ETCDKeyListContentView: View {
                 ETCDKeyListContentPageView()
             }else{
                 ETCDKeyListContentTreeListView()
+                ETCDKeyTreeListContentPageView()
             }
             ETCDKeyContentMembersListView()
         }.onAppear(perform: {

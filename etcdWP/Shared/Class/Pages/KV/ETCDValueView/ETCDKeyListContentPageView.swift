@@ -39,3 +39,17 @@ struct ETCDKeyListContentPageView: View {
         }
     }
 }
+
+
+struct ETCDKeyTreeListContentPageView: View {
+    @EnvironmentObject var storeObj: ItemStore
+    var body: some View {
+        HStack {
+            Spacer()
+            Text("总数:  \(storeObj.realeadData.GetKvCount())  ")
+                .foregroundColor(.secondary)
+                .font(.caption)
+            Spacer()
+        }.frame( height: 40)
+    }
+}

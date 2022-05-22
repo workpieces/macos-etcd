@@ -26,6 +26,7 @@ struct ETCDKeyListContentTreeListView: View {
                 .padding(.trailing,3)
                 .frame(height:60)
                 .background(Color(hex: "#221C27"))
+            Divider().background(Color.white.opacity(0.15))
             ETCDNodeOutlineGroup( callback: { newValue, index , text in
                 if !text.isEmpty {
                     self.textValue = text
