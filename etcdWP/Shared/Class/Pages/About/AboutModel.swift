@@ -34,5 +34,5 @@ let abouts: [AboutModel] = [
         desc: "MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。",
         status: 2,
         logo: "",
-        link: "https://github.com/workpieces"),
+        link: "https://workpieces.github.io/workpieces_websit"),
 ]
