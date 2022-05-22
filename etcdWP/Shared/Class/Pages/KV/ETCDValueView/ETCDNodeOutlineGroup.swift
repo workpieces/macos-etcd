@@ -29,14 +29,14 @@ struct ETCDNodeOutlineGroup: View {
                 callback(self.isShowingUpdatePopover,self.isDefaultSelectType,"")
             })
             Button("复制key值", action: {
-                copyToClipBoard(textToCopy: item.key ?? "")
+                copyToClipBoard(textToCopy: item.sep_key ?? "")
             })
             Button("复制value值", action: {
                 copyToClipBoard(textToCopy: item.value ?? "")
             })
             Button("删除键值", action: {
                 do {
-                    let resp = storeObj.Delete(key: item.key!)
+                    let resp = storeObj.Delete(key: item.sep_key!)
                     if resp?.status != 200 {
                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                     }

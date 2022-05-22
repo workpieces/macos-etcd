@@ -76,7 +76,7 @@ struct ETCDKeyListContentTreeListView: View {
                                     guard !textValue.isEmpty else {
                                         throw NSError.init(domain: "键值不能输入为空", code: 400)
                                     }
-                                    let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                                    let resp =  self.storeObj.Put(key: (self.storeObj.realeadData.currentKv?.sep_key)!, value: textValue)
                                     if resp?.status != 200 {
                                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                     }
@@ -147,7 +147,7 @@ struct ETCDKeyListContentTreeListView: View {
                                     guard !textValue.isEmpty else {
                                         throw NSError.init(domain: "键值不能输入为空", code: 400)
                                     }
-                                    let resp =  self.storeObj.Put(key: self.storeObj.realeadData.GetKey(), value: textValue)
+                                    let resp =  self.storeObj.Put(key: (self.storeObj.realeadData.currentKv?.sep_key)!, value: textValue)
                                     if resp?.status != 200 {
                                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                     }
