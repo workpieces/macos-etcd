@@ -37,7 +37,7 @@ let DefaultKeyImageName = "key"
 
 
 // Official website
-let DefaultOfficialWebsite = "https://github.com/workpieces/etcdWpSite"
+let DefaultOfficialWebsite = "https://workpieces.github.io/workpieces_websit/#/"
 
 
 // Feedback
