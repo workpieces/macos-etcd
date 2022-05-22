@@ -7,39 +7,32 @@
 
 import Foundation
 
-enum AboutType {
-    case Contact
-    case Download
-    case Documentation
-    case Empty
-}
-
 struct AboutModel : Identifiable,Hashable {
     var id = UUID()
-    var image: String
     var title: String
     var desc: String
+    var status: Int  // 0: 不显示 1：已发布 2： 研发中
+    var logo: String
     var link: String
-    var type: AboutType = .Empty
 }
 
 let abouts: [AboutModel] = [
     AboutModel(
-        image: "github",
-        title: "Contact Us",
-        desc: "If you have feature requests, custom app requirements or bugs, contact us :",
-        link: "https://github.com/workpieces/etcdWp/issues",
-        type: .Contact),
+        title: "Workpieces Websit",
+        desc: "Workpieces LLC 官网",
+        status: 0,
+        logo: "",
+        link: "https://workpieces.github.io/workpieces_websit"),
     AboutModel(
-        image: "questionmark.circle",
-        title: "Download",
-        desc: "App for Mac,Window and Linux",
-        link: "https://github.com/workpieces/etcdWp/releases",
-        type: .Download),
+        title: "Github",
+        desc: "Workpieces 官方开发社区和组织仓库",
+        status: 0,
+        logo: "",
+        link: "https://github.com/workpieces"),
     AboutModel(
-        image: "questionmark.circle",
-        title: "Documentation",
-        desc: "Learn more about etcdWp features and turorials.",
-        link: "https://github.com/workpieces/etcdWp",
-        type: .Documentation),
+        title: "推荐 MediaGB",
+        desc: "MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。",
+        status: 2,
+        logo: "",
+        link: "https://github.com/workpieces"),
 ]

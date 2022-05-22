@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct AboutView: View {
-    
-    @State var items = ["banner-1","banner-1","banner-1"]
     var body: some View {
         VStack {
             HStack {
@@ -21,55 +19,45 @@ struct AboutView: View {
             
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
-//                    CarouselView(items: $items,second: 10).frame(height: 200.0)
-//                        .cornerRadius(DefaultRadius)
-//                        .padding()
-                    LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), alignment: .center, spacing: GriditemPaddingSpace) {
+                    LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 1), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(abouts) { item in
                             ZStack {
-                                Color(hex:"#00FFFF").opacity(0.15)
-                                    .cornerRadius(DefaultRadius)
-                                VStack {
-                                    Text(LocalizedStringKey(item.title))
-                                        .withDefaultContentTitle(fontSize: 22.0)
-                                        .padding(.vertical,DefaultSpacePadding)
-                                    
-                                    Text(LocalizedStringKey(item.desc))
-                                        .multilineTextAlignment(.leading)
-                                        .withDefaultSubContentTitle(fontSize: 14.0)
-                                        .padding(.horizontal,DefaultSpacePadding)
-                                    
-                                    switch item.type {
-                                    case .Contact:
-                                        HStack(spacing: 20.0){
-                                            Image(item.image)
-                                                .withDefaultImage(width: 44.0)
-                                                .padding(.top,DefaultSpacePadding)
-                                            Image("email")
-                                                .withDefaultImage(width: 40.0)
-                                                .padding(.top,DefaultSpacePadding)
+                                LinearGradient(
+                                    gradient: Gradient(colors: [.blue, .black]), startPoint: .leading, endPoint: .trailing)
+                                HStack(alignment: .top, spacing: GriditemPaddingSpace){
+                                    VStack(alignment: .leading, spacing: GriditemPaddingSpace){
+                                        HStack(alignment: .bottom, spacing: 10.0) {
+                                            Text(LocalizedStringKey(item.title))
+                                                .font(.system(size: 25))
+                                                .bold()
+                                                .foregroundColor(.white)
+                                            if item.status != 0 {
+                                                Text(LocalizedStringKey(item.status == 1 ? "（已发版）" : "（研发中）"))
+                                                    .font(.system(size: 12))
+                                                    .foregroundColor(item.status == 1 ? .green : .orange)
+                                            }
+                                            Spacer()
                                         }
-                                    case .Download:
-                                        Text("Download")
-                                            .withDefaultContentTitle(fontColor: .white)
-                                            .padding(.all,DefaultSpacePadding)
-                                            .background(Color.orange.opacity(0.3))
+                                        Text(LocalizedStringKey(item.desc))
+                                            .font(.system(size: 16))
+                                            .lineSpacing(3.0)
+                                            .foregroundColor(.white)
+                                        
+                                        Text(LocalizedStringKey("Learn More"))
+                                            .font(.system(size: 16))
+                                            .lineSpacing(3.0)
+                                            .foregroundColor(.white)
+                                            .padding(EdgeInsets(top: GriditemPaddingSpace, leading: 20, bottom: GriditemPaddingSpace, trailing: 20))
+                                            .background(Color.pink)
                                             .cornerRadius(10.0)
-                                            .offset(y: DefaultSpacePadding)
-                                    case .Documentation:
-                                        Text("Documentation")
-                                            .withDefaultContentTitle(fontColor: .white)
-                                            .padding(.all,DefaultSpacePadding)
-                                            .background(Color.orange.opacity(0.3))
-                                            .cornerRadius(10.0)
-                                            .offset(y: DefaultSpacePadding)
-                                    case .Empty:
-                                        EmptyView()
+                                        
                                     }
-                                    Spacer()
+                                    .padding(.leading,GriditemPaddingSpace)
+                                    .padding(.trailing,GriditemPaddingSpace)
                                 }
+                                Spacer()
                             }
-                            .frame(height:210.0)
+                            .frame(height: 210)
                             .onTapGesture {
                                 NSWorkspace.shared.open(URL.init(string: item.link)!)
                             }
