@@ -199,5 +199,6 @@ struct ETCDKeyListContentListView: View {
         }
         .listRowInsets(nil)
         .listStyle(.inset)
+        .background(Color(hex: "#221C27"))
     }
 }

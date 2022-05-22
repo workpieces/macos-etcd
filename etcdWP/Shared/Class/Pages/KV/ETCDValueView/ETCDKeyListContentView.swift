@@ -18,10 +18,10 @@ struct ETCDKeyListContentView: View {
         VStack {
             if storeObj.showFormat == .List{
                 ETCDKeyListContentListView()
+                ETCDKeyListContentPageView()
             }else{
                 ETCDKeyListContentTreeListView()
             }
-            ETCDKeyListContentPageView()
             ETCDKeyContentMembersListView()
         }.onAppear(perform: {
             storeObj.KVReaload(false)

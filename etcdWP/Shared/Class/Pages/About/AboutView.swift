@@ -23,7 +23,7 @@ struct AboutView: View {
                         ForEach(abouts) { item in
                             ZStack {
                                 LinearGradient(
-                                    gradient: Gradient(colors: [.blue, .black]), startPoint: .leading, endPoint: .trailing)
+                                    gradient: Gradient(colors: [Color.init(hex: "#00FFFF").opacity(0.15), .black]), startPoint: .leading, endPoint: .trailing)
                                 HStack(alignment: .top, spacing: GriditemPaddingSpace){
                                     VStack(alignment: .leading, spacing: GriditemPaddingSpace){
                                         HStack(alignment: .bottom, spacing: 10.0) {
@@ -48,7 +48,7 @@ struct AboutView: View {
                                             .lineSpacing(3.0)
                                             .foregroundColor(.white)
                                             .padding(EdgeInsets(top: GriditemPaddingSpace, leading: 20, bottom: GriditemPaddingSpace, trailing: 20))
-                                            .background(Color.pink)
+                                            .background(Color.init(hex: "#00FFFF").opacity(0.15))
                                             .cornerRadius(10.0)
                                         
                                     }
@@ -57,6 +57,7 @@ struct AboutView: View {
                                 }
                                 Spacer()
                             }
+                            .cornerRadius(10)
                             .frame(height: 210)
                             .onTapGesture {
                                 NSWorkspace.shared.open(URL.init(string: item.link)!)
