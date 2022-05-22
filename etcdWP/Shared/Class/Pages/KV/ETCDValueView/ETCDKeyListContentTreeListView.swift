@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ETCDKeyListContentTreeListView: View {
     
-    @StateObject var storeObj : ItemStore
+    @EnvironmentObject var storeObj : ItemStore
     @State fileprivate var isDefaultSelectType: Int = 0
     @State fileprivate var isShowingUpdatePopover = false
     @State fileprivate var textValue: String = ""
@@ -20,13 +20,13 @@ struct ETCDKeyListContentTreeListView: View {
     
     var body: some View {
         VStack(spacing:1){
-            ETCDKeyListContentHeadView(storeObj: storeObj)
+            ETCDKeyListContentHeadView()
                 .padding(10)
                 .padding(.leading,3)
                 .padding(.trailing,3)
                 .frame(height:60)
                 .background(Color(hex: "#221C27"))
-            ETCDNodeOutlineGroup(storeObj: storeObj, callback: { newValue, index , text in
+            ETCDNodeOutlineGroup( callback: { newValue, index , text in
                 if !text.isEmpty {
                     self.textValue = text
                 }
@@ -80,6 +80,7 @@ struct ETCDKeyListContentTreeListView: View {
                                     if resp?.status != 200 {
                                         throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                     }
+                                    self.storeObj.realeadData.currentKv?.value = textValue
                                     Reaload()
                                 } catch  {
                                     print(error.localizedDescription)

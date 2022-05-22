@@ -21,7 +21,7 @@ struct ETCDTabBarContentView: View {
     var body: some View {
         ZStack(alignment: .topLeading,content: {
             VStack {
-                ETCDKVTabBarContentHeadView(storeObj: storeObj)
+                ETCDKVTabBarContentHeadView()
                 GeometryReader {  g in
                     HStack(spacing: 10.0) {
                         ETCDKeyListContentView()

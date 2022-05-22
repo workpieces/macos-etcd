@@ -10,7 +10,7 @@ import SwiftUI
 struct ETCDKeyContentMembersListView: View {
     
     @State private  var currentTextValue = MemberTextValue()
-    @State var storeObj : ItemStore
+    @EnvironmentObject var storeObj : ItemStore
     @State private  var isShowingPopover = false
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
     private func Reaload() {

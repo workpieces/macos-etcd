@@ -71,7 +71,7 @@ class ItemStore: ObservableObject {
     @Published var showFormat: ShowFormat = .List
     init(c: EtcdClientOption) {
         self.c = c
-        self.realeadData = KVRealoadData.init(ks: [], mms: [])
+        self.realeadData = KVRealoadData.init(ks: [], mms: [],currentKv: nil)
     }
 }
 
@@ -86,7 +86,7 @@ struct KVRealoadData {
     var kvCount: Int = 0
     var memberCount: Int = 0
     
-    init(ks : [KVData],mms : [KVData]) {
+    init(ks : [KVData],mms : [KVData],currentKv:KVData?) {
         self.kvs = []
         self.members = []
         self.temp = []
@@ -95,7 +95,11 @@ struct KVRealoadData {
         self.kvCount = ks.count
         self.memberCount = mms.count
         self.temp.append(contentsOf:ks)
-        self.currentKv = self.kvs.first
+        if currentKv != nil {
+            self.currentKv = currentKv
+        }else{
+            self.currentKv = self.kvs.first
+        }
     }
     
     func GetMemberCount() -> Int {
@@ -169,7 +173,7 @@ extension ItemStore {
     func KVReaload(){
         let kd = self.GetALL()
         let md = self.MemberList()
-        self.realeadData =  KVRealoadData.init(ks: kd, mms: md)
+        self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: self.realeadData.currentKv)
         if self.realeadData.kvCount > self.realeadData.offset {
             let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
             self.realeadData.kvs.removeAll()

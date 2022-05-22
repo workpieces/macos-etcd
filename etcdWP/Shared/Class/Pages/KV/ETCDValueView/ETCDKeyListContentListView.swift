@@ -64,7 +64,7 @@ struct ETCDKeyListContentListView: View {
                 }
                 
             } header: {
-                ETCDKeyListContentHeadView(storeObj: storeObj)
+                ETCDKeyListContentHeadView()
             }
         }
         .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
@@ -110,6 +110,7 @@ struct ETCDKeyListContentListView: View {
                                 if resp?.status != 200 {
                                     throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                                 }
+                                self.storeObj.realeadData.currentKv?.value = textValue;
                                 Reaload()
                             } catch  {
                                 print(error.localizedDescription)

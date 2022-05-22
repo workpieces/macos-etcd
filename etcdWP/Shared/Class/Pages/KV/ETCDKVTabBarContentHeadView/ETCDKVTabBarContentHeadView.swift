@@ -14,7 +14,7 @@ import ObjectMapper
 
 struct ETCDKVTabBarContentHeadView: View {
     
-    var storeObj : ItemStore
+   @EnvironmentObject var storeObj : ItemStore
     
     @State private var isPopView = false
     
