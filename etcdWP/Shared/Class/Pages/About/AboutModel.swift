@@ -28,18 +28,12 @@ let abouts: [AboutModel] = [
         image: "github",
         title: "Contact Us",
         desc: "If you have feature requests, custom app requirements or bugs, contact us :",
-        link: "https://github.com/workpieces/etcdWpSite",
+        link: "https://github.com/workpieces/etcdWp/issues",
         type: .Contact),
-    AboutModel(
-        image: "questionmark.circle",
-        title: "Download",
-        desc: "App for Mac,Window and Linux",
-        link: "https://github.com/workpieces/etcdWpSite",
-        type: .Download),
     AboutModel(
         image: "questionmark.circle",
         title: "Documentation",
         desc: "Learn more about etcdWp features and turorials.",
-        link: "https://github.com/workpieces/etcdWpSite",
+        link: "https://github.com/workpieces/etcdWp",
         type: .Documentation),
 ]
