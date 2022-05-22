@@ -11,11 +11,11 @@ struct ETCDKeyListContentHeadView: View {
     
     @EnvironmentObject var storeObj : ItemStore
     fileprivate func Reaload() {
-         storeObj.KVReaload()
+         storeObj.KVReaload(false)
      }
     
     fileprivate func DeleteALL() throws {
-        defer {storeObj.KVReaload()}
+        defer {storeObj.KVReaload(false)}
         let resp = storeObj.DeleteALL()
         if resp?.status != 200 {
             throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
@@ -61,6 +61,7 @@ struct ETCDKeyListContentHeadView: View {
                 
                 Button {
                     storeObj.showFormat =  storeObj.showFormat == .Tree ? .List:.Tree
+                    storeObj.KVReaload(true)
                 } label: {
                     Text(LocalizedStringKey(storeObj.showFormat.Name()))
                         .font(.caption)

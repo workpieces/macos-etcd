@@ -14,7 +14,7 @@ struct ETCDKeyListContentListView: View {
     @State fileprivate var isDefaultSelectType: Int = 0
     
     fileprivate func Reaload() {
-         storeObj.KVReaload()
+         storeObj.KVReaload(false)
      }
     
     fileprivate func menuItem(_ item: KVData) -> ContextMenu<TupleView<(Button<Text>, Button<Text>, Button<Text>, Button<Text>, Button<Text>)>> {

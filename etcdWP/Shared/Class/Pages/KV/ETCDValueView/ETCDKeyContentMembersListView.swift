@@ -14,7 +14,7 @@ struct ETCDKeyContentMembersListView: View {
     @State private  var isShowingPopover = false
     @State private var currentMember :KVMemberModel = KVMemberModel.getMembers().first!
     private func Reaload() {
-         storeObj.KVReaload()
+         storeObj.KVReaload(false)
      }
     
     var body: some View {

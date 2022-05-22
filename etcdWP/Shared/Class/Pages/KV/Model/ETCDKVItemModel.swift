@@ -170,10 +170,10 @@ extension ItemStore {
         }
     }
     
-    func KVReaload(){
+    func KVReaload( _ newValue:Bool){
         let kd = self.GetALL()
         let md = self.MemberList()
-        self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: self.realeadData.currentKv)
+        self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: newValue ? nil :self.realeadData.currentKv )
         if self.realeadData.kvCount > self.realeadData.offset {
             let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
             self.realeadData.kvs.removeAll()
