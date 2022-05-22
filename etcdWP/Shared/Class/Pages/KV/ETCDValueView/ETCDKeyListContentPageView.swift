@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ETCDKeyListContentPageView: View {
-    @StateObject var storeObj: ItemStore
+    @EnvironmentObject var storeObj: ItemStore
     var body: some View {
         HStack {
             Spacer()

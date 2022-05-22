@@ -64,7 +64,7 @@ struct ETCDKeyListContentListView: View {
                 }
                 
             } header: {
-                ETCDKeyListContentHeadView(storeObj: storeObj)
+                ETCDKeyListContentHeadView()
             }
         }
         .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {

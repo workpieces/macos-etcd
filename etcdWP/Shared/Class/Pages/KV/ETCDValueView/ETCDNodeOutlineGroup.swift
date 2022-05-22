@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ETCDNodeOutlineGroup: View {
     
-    @StateObject var storeObj : ItemStore
+    @EnvironmentObject var storeObj : ItemStore
     var callback:(_ newValue: Bool,_ index:Int,_ text:String) -> Void
     let node: KVData
     let childKeyPath: KeyPath<KVData, [KVData]?>
@@ -62,7 +62,7 @@ struct ETCDNodeOutlineGroup: View {
                 content: {
                     if isExpanded {
                         ForEach(node[keyPath: childKeyPath]!) { childNode in
-                            ETCDNodeOutlineGroup(storeObj:storeObj,callback:callback, node: childNode, childKeyPath:childKeyPath,isExpanded:isExpanded)
+                            ETCDNodeOutlineGroup(callback:callback, node: childNode, childKeyPath:childKeyPath,isExpanded:isExpanded)
                         }
                     }
                 },

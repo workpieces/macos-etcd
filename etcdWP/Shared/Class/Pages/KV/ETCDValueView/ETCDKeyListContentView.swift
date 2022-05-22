@@ -19,10 +19,10 @@ struct ETCDKeyListContentView: View {
             if storeObj.showFormat == .List{
                 ETCDKeyListContentListView()
             }else{
-                ETCDKeyListContentTreeListView(storeObj: storeObj)
+                ETCDKeyListContentTreeListView()
             }
-            ETCDKeyListContentPageView(storeObj: storeObj)
-            ETCDKeyContentMembersListView(storeObj: storeObj)
+            ETCDKeyListContentPageView()
+            ETCDKeyContentMembersListView()
         }.onAppear(perform: {
             storeObj.KVReaload()
         })

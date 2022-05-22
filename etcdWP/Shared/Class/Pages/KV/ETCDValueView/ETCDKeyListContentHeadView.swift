@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ETCDKeyListContentHeadView: View {
     
-    @State var storeObj : ItemStore
+    @EnvironmentObject var storeObj : ItemStore
     fileprivate func Reaload() {
          storeObj.KVReaload()
      }
