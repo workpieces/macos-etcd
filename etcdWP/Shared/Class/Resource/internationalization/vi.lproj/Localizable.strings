@@ -1,0 +1,150 @@
+/*
+ Localizable.strings
+ etcdWP
+ 
+ Created by FaceBook on 2022/4/26.
+ 
+ */
+"批量导出"    = "Xuất hàng loạt";
+"批量导入"    = "Nhập hàng loạt";
+"关闭服务"    = "Đóng dịch vụ";
+"开启服务"    = "Bật dịch vụ";
+"保存目录不能为空"    = "Thư mục lưu không được để trống";
+    
+    
+"创建ETCD客户端"    = "Tạo ứng dụng khách ETCD";
+"Home"    = "Trang chủ";
+"About"    = "Giới thiệu";
+    
+    
+//Tip    //Mẹo
+"开启认证失败"    = "Không thể kích hoạt xác thực";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Kết nối mạng không bình thường, vui lòng kiểm tra cấu hình liên quan?";
+"保存失败"    = "Lưu không thành công";
+"输入错误，请重新输入"    = "Nhập sai, vui lòng thử lại";
+"操作角色错误"    = "Lỗi vai trò hoạt động";
+"操作租约错误"    = "Lỗi thuê vận hành";
+"操作用户错误"    = "Lỗi Người dùng Thao tác";
+    
+//配置    // cấu hình
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Cài đặt chung";
+"Cancel"    = "Hủy bỏ";
+"Default User Information Configuration："    = "Cấu hình thông tin người dùng mặc định:";
+"Client Name："    = "Tên khách hàng:";
+"User Name："    = "Tên người dùng:";
+"Password："    = "Mật khẩu:";
+"Cluster Network Configuration："    = "Cấu hình mạng:";
+"Network Protocol："    = "Giao thức mạng:";
+"Cluster Endpoint："    = "Nút cụm:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Không có tệp nào được chọn";
+"KeyFile: 未选择任何文件"    = "KeyFile: Không có tệp nào được chọn";
+"CertFile: 未选择任何文件"    = "CertFile: Không có tệp nào được chọn";
+    
+"Timeout Setting Configuration (seconds)："    = "Cấu hình cài đặt thời gian chờ (giây):";
+"Request Timeout："    = "Yêu cầu đã hết thời gian chờ:";
+"Dial Timeout："    = "Hết giờ:";
+"Dial Keep Alive Time："    = "Giữ thời gian tồn tại:";
+"Dial Keep Alive Timeout："    = "Duy trì thời gian chờ tồn tại:";
+"Auto Sync Interval："    = "Khoảng thời gian đồng bộ hóa tự động:";
+"Miscellaneous："    = "Cấu hình khác:";
+"Auto create client name?"    = "Tự động tạo tên khách hàng?";
+"Reschedule Pings？"    = "lại ping";
+"Clean Session?"    = "Phiên dọn dẹp?";
+"Auto connect on app launch?"    = "Tự động kết nối khi ứng dụng khởi động?";
+    
+    
+    
+    
+//home    //Trang Chủ
+"服务名称"    = "Tên dịch vụ";
+"节点地址"    = "Địa chỉ nút";
+"连接状态"    = "Trạng thái kết nối";
+"Scuess"    = "Thành công";
+"Failed"    = "thất bại";
+"Delete"    = "xóa";
+"Cancle"    = "Hủy bỏ";
+"The connection to the server was lost."    = "Kết nối đến máy chủ bị mất.";
+"Want to modify etcd service data?"    = "Bạn có muốn sửa đổi dữ liệu dịch vụ etcd không?";
+    
+// about    // Về
+"Contact Us"    = "Liên hệ với chúng tôi";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Nếu bạn có yêu cầu tính năng, yêu cầu ứng dụng tùy chỉnh hoặc lỗi, vui lòng liên hệ với chúng tôi:";
+"Download"    = "tải xuống";
+"App for Mac,Window and Linux"    = "Ứng dụng dành cho Mac";
+"Documentation"    = "Tài liệu";
+"Learn more about etcdWp features and turorials."    = "Tìm hiểu thêm về các tính năng và turorial của etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB là nền tảng video mạng dựa trên tiêu chuẩn GB28181. Nó hỗ trợ thâm nhập NAT và hỗ trợ truy cập IPC, NVR, DVR của các thương hiệu như Hikvision, Dahua và Uniview. Nó hỗ trợ truyền và chuyển tiếp video như rtsp / rtmp. Go lên nền tảng tiêu chuẩn quốc gia.";
+"推荐 MediaGB" = "Đề xuất MediaGB";
+"Learn More"    = "nữa";
+"（已发版）"    = "(phát hành)";
+"（研发中）"    = "(đang phát triển)";
+"Workpieces 官方开发社区和组织仓库"    = "Kho lưu trữ Tổ chức và Cộng đồng Phát triển Chính thức của Workpieces";
+"Workpieces LLC 官网"    = "Trang web chính thức của Workpieces LLC";
+    
+"访问官网"    = "Truy cập trang web chính thức";
+"意见反馈"    ="Phản hồi";
+"粘贴"    = "Dán";
+"键值操作"    = "Thao tác khóa-giá trị";
+"集群状态"    = "Trạng thái cụm";
+"查看键值详情"    = "Xem chi tiết khóa-giá trị";
+"复制key值"    = "Sao chép giá trị khóa";
+"删除键值"    = "Xóa giá trị khóa";
+"更新键值"    = "Cập nhật giá trị khóa";
+"复制value值"    = "Sao chép giá trị";
+"Promotes集群成员"    = "Thúc đẩy thành viên cụm";
+"上一页"    = "Trang trước";
+"下一页"    = "Trang tiếp theo";
+"键值不能输入为空"    = "Không thể nhập giá trị khóa là trống";
+"复制成员"    = "Sao chép Thành viên";
+"删除成员"    = "Xóa thành viên";
+"成员id输入有误"    = "Id thành viên nhập sai";
+"提升成员"    = "Thăng cấp thành viên";
+"成员（Members）"    = "Thành viên";
+"成员地址输入有误"    = "Địa chỉ thành viên nhập sai";
+"链接状态: 正常"    = "Trạng thái liên kết: OK";
+"链接状态: 异常"    = "Trạng thái liên kết: Ngoại lệ";
+"刷新加载"    = "Làm mới tải";
+"清空键值"    ="Xóa giá trị khóa";
+"查询"    = "Truy vấn";
+"确定"    = "Được";
+"平铺结构"    = "cấu trúc gạch";
+"树形结构"    = "cấu trúc cây";
+"创建成员"    = "Tạo thành viên";
+"修改成员"    = "Sửa đổi thành viên";
+"创建键值"    = "Tạo giá trị khóa";
+"键值前缀删除"    = "Xóa tiền tố giá trị khóa";
+"租约管理"    = "Quản lý cho thuê";
+"角色管理"    = "quản lý vai trò";
+"用户管理"    = "Quản lý người dùng";
+"开启认证"    = "Bật xác thực";
+"请输入键值前缀"    = "Vui lòng nhập tiền tố khóa";
+"请输入前缀key"    = "Vui lòng nhập khóa tiền tố";
+"创建角色"    = "Tạo vai trò";
+"请输入角色"    ="Vui lòng nhập một vai trò";
+"关闭"    = "đóng";
+"移除"    = "Xóa";
+"存活一次"    = "tồn tại một lần";
+"请输入key"    = "Vui lòng nhập khóa";
+"请输入时间"    = "Vui lòng nhập thời gian";
+"请输入Value"    = "Vui lòng nhập Giá trị";
+"输入时间错误，请重新输入"    = "Thời gian không chính xác, vui lòng thử lại";
+"创建用户"    = "Tạo người dùng";
+"创建密码"    = "Tạo mật khẩu";
+"请输入密码"    = "Vui lòng nhập mật khẩu của bạn";
+"用户操作错误"    = "Lỗi thao tác của người dùng";
+"创建集群成员"    = "Tạo thành viên cụm";
+"更新集群成员"    = "Cập nhật thành viên cụm";
+"修改后节点地址:"    = "Địa chỉ nút đã sửa đổi:";
+"节点地址: "    = "Địa chỉ nút:";
+"修改前节点id: "    = "Id nút trước khi sửa đổi:";
+"节点id: "    = "id nút:";
+    
+    
+"当前页: %lld "    = "Trang hiện tại:% lld";
+"成员总数: %lld "    = "Tổng số thành viên:% lld";
+"服务地址：%@"    = "Địa chỉ Dịch vụ:% @";
+"总数: %lld "    = "Tổng số:% lld";
+"客户端： %@"    = "Máy khách:% @";
+"节点： %@"    = "Nút:% @";
+"名称： %@"    = "Tên:% @";
