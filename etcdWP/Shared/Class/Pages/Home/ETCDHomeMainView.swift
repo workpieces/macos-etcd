@@ -11,25 +11,29 @@ import NavigationStack
 struct HomeMainView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var isLinkActive = false
+    @State private var seletcd = false
     let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             Spacer()
             HStack(){
                 Spacer()
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Text(LocalizedStringKey("全部删除"))
-                            .withDefaultContentTitle()
+                Toggle("全选"  , isOn: $seletcd)
+                    .toggleStyle(.checkbox)
+                    .padding(.bottom,3)
+                if seletcd {
+                    Button { } label: {
+                        HStack {
+                            Text(LocalizedStringKey("全部删除"))
+                                .withDefaultContentTitle(fontSize: 10)
+                        }
+                        .padding(8)
                     }
-                    .padding(DefaultSpacePadding)
+                    .buttonStyle(PlainButtonStyle())
+                    .background(Color(hex:"#00FFFF").opacity(0.55))
+                    .cornerRadius(5)
+                    .clipped()
                 }
-                .buttonStyle(PlainButtonStyle())
-                .background(Color(hex:"#00FFFF").opacity(0.55))
-                .cornerRadius(8)
-                .clipped()
                 withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
                     .padding(.top ,40)
                     .padding(.trailing,18)
@@ -46,7 +50,7 @@ struct HomeMainView: View {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
                             PushView(destination: ETCDTabBarContentView()
                                 .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item]))){
-                                    CardItemView(options: self.homeData.ectdClientList[item],idx: item)
+                                    CardItemView(isOn:$seletcd, options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }                       
                     }

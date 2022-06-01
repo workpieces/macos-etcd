@@ -11,7 +11,8 @@ struct CardItemView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var showAlert = false
     @State private var pushEdit = false
-    @State private var seletcd = false
+    @Binding <Bool> var isOn:Bool
+    @State private var selted:Bool = false
     var  options: EtcdClientOption
     var idx : Int
     var body: some View {
@@ -55,7 +56,7 @@ struct CardItemView: View {
                     HStack(alignment: .center, spacing: 10){
                         Text("服务名称")
                             .withDefaultContentTitle(fontColor: .white)
-                        Toggle("", isOn: $seletcd)
+                        Toggle("", isOn: $selted)
                             .toggleStyle(.checkbox)
                             .padding(.bottom,3)
                     }
@@ -89,6 +90,11 @@ struct CardItemView: View {
         .frame( height: 220)
         .background(Color.init(hex: "#00FFFF").opacity(0.15))
         .cornerRadius(DefaultRadius)
+        .onAppear{
+            if isOn {
+                self.selted.toggle();
+            }
+        }
     }
 }
 
