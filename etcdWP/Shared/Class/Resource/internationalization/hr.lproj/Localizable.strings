@@ -15,8 +15,9 @@
 "创建ETCD客户端"    = "Kreiraj ETCD klijenta";
 "Home"    = "Kuća";
 "About"    = "O";
-    
-    
+"全部删除"                     = "izbrisati sve";
+"全选"                     = "Odaberi sve";
+
 //Tip    //Savjet
 "开启认证失败"    = "Omogućavanje provjere autentičnosti nije uspjelo";
 "The network connection is abnormal, please check the relevant configuration ?"    = "Mrežna veza je nenormalna, provjerite odgovarajuću konfiguraciju?";

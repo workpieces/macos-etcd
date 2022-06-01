@@ -15,8 +15,9 @@
 "创建ETCD客户端"    = "Creëer ETCD-client";
 "Home"    = "Thuis";
 "About"    = "Over";
-    
-    
+"全部删除"                     = "slet alt";
+"全选"                     = "selecteer alles";
+
 //Tip    //Tip
 "开启认证失败"    = "Kan authenticatie niet inschakelen";
 "The network connection is abnormal, please check the relevant configuration ?"    = "De netwerkverbinding is abnormaal, controleer de relevante configuratie?";

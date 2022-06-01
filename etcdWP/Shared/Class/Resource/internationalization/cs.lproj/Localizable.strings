@@ -15,8 +15,9 @@
 "创建ETCD客户端"    = "Vytvořit klienta ETCD";
 "Home"    = "Domů";
 "About"    = "O";
-    
-    
+"全部删除"                     = "smazat všechny";
+"全选"                     = "vybrat vše";
+
 //Tip    //Spropitné
 "开启认证失败"    = "Nepodařilo se povolit ověřování";
 "The network connection is abnormal, please check the relevant configuration ?"    = "Síťové připojení je abnormální, zkontrolujte prosím příslušnou konfiguraci?";

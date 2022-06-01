@@ -15,7 +15,10 @@
 "创建ETCD客户端"    = "Luo ETCD-asiakas";
 "Home"    = "Koti";
 "About"    = "Tietoja";
-    
+"全部删除"                     = "Poista kaikki";
+"全选"                     = "Valitse kaikki";
+
+
     
 //Tip    //Kärki
 "开启认证失败"    = "Todennusta ei voitu ottaa käyttöön";

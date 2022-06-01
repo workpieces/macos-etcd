@@ -14,7 +14,8 @@
 "创建ETCD客户端"              = "ETCDクライアントを作成する";
 "Home"                      = "家";
 "About"                     = "約";
-
+"全部删除"                     = "すべて削除";
+"全选"                     = "全選";
 //Tip
 "开启认证失败"                     = "認証を有効にできませんでした";
 "The network connection is abnormal, please check the relevant configuration ?"                     = "ネットワーク接続が異常です。関連する構成を確認してください。";

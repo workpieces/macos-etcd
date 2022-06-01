@@ -14,6 +14,10 @@
 "创建ETCD客户端"              = "Create ETCD Client";
 "Home"                      = "Home";
 "About"                     = "About";
+"全部删除"                     = "delete all";
+"全选"                     = "select all";
+
+
 
 //Tip
 "开启认证失败"                     = "Failed to open authentication";

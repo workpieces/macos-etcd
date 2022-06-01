@@ -15,8 +15,9 @@
 "创建ETCD客户端"    = "Crear cliente ETCD";
 "Home"    = "Inicio";
 "About"    = "Acerca de";
-    
-    
+"全部删除"                     = "eliminar todos";
+"全选"                     = "seleccionar todo";
+
 //Tip    //Consejo
 "开启认证失败"    = "Error al habilitar la autenticación";
 "The network connection is abnormal, please check the relevant configuration ?"    = "La conexión de red es anormal, verifique la configuración correspondiente?";

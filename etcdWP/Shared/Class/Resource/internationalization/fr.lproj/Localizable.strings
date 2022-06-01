@@ -15,7 +15,10 @@
 "创建ETCD客户端"    = "Créer un client ETCD";
 "Home"    = "Accueil";
 "About"    = "À propos";
-    
+"全部删除"                     = "Poista kaikki";
+"全选"                     = "Valitse kaikki";
+
+
     
 //Tip    //Pointe
 "开启认证失败"    = "Impossible d'activer l'authentification";

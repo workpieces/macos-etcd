@@ -15,8 +15,9 @@
 "创建ETCD客户端"    = "Tạo ứng dụng khách ETCD";
 "Home"    = "Trang chủ";
 "About"    = "Giới thiệu";
-    
-    
+"全部删除"                     = "xóa hết";
+"全选"                     = "chọn tất cả";
+
 //Tip    //Mẹo
 "开启认证失败"    = "Không thể kích hoạt xác thực";
 "The network connection is abnormal, please check the relevant configuration ?"    = "Kết nối mạng không bình thường, vui lòng kiểm tra cấu hình liên quan?";

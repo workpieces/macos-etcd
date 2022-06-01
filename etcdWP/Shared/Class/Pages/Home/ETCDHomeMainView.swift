@@ -17,6 +17,19 @@ struct HomeMainView: View {
             Spacer()
             HStack(){
                 Spacer()
+                Button {
+                    
+                } label: {
+                    HStack {
+                        Text(LocalizedStringKey("全部删除"))
+                            .withDefaultContentTitle()
+                    }
+                    .padding(DefaultSpacePadding)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .background(Color(hex:"#00FFFF").opacity(0.55))
+                .cornerRadius(8)
+                .clipped()
                 withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
                     .padding(.top ,40)
                     .padding(.trailing,18)

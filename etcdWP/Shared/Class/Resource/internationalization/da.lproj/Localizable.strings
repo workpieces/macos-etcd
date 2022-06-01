@@ -15,8 +15,10 @@
 "创建ETCD客户端"    = "Opret ETCD-klient";
 "Home"    = "Hjem";
 "About"    = "Om";
-    
-    
+"全部删除"                     = "slet alt";
+"全选"                     = "Vælg alle";
+
+
 //Tip    //Tip
 "开启认证失败"    = "Kunne ikke aktivere godkendelse";
 "The network connection is abnormal, please check the relevant configuration ?"    = "Netværksforbindelsen er unormal, tjek venligst den relevante konfiguration?";

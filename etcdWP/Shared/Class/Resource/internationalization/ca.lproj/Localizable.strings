@@ -15,8 +15,9 @@
 "创建ETCD客户端"    = "Crea un client ETCD";
 "Home"    = "Inici";
 "About"    = "Quant a";
-    
-    
+"全部删除"                     = "eliminar tots";
+"全选"                     = "seleccionar tot";
+
 //Tip    // Consell
 "开启认证失败"    = "No s'ha pogut habilitar l'autenticació";
 "The network connection is abnormal, please check the relevant configuration ?"    = "La connexió de xarxa és anormal, comproveu la configuració corresponent?";
