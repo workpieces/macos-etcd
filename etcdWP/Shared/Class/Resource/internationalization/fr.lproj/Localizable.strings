@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Exportation par lots";
+"批量导入"    = "Importation en masse";
+"关闭服务"    = "Fermer le service";
+"开启服务"    = "Activer le service";
+"保存目录不能为空"    = "Le répertoire de sauvegarde ne peut pas être vide";
+    
+    
+"创建ETCD客户端"    = "Créer un client ETCD";
+"Home"    = "Accueil";
+"About"    = "À propos";
+    
+    
+//Tip    //Pointe
+"开启认证失败"    = "Impossible d'activer l'authentification";
+"The network connection is abnormal, please check the relevant configuration ?"    = "La connexion réseau est anormale, veuillez vérifier la configuration correspondante?";
+"保存失败"    = "Échec de la sauvegarde";
+"输入错误，请重新输入"    = "Saisie incorrecte, veuillez réessayer";
+"操作角色错误"    = "Erreur de rôle d'opération";
+"操作租约错误"    = "Erreur de bail d'opération";
+"操作用户错误"    = "Erreur utilisateur d'opération";
+    
+//配置    //configurer
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Paramètres généraux";
+"Cancel"    = "Annuler";
+"Default User Information Configuration："    = "Configuration des informations utilisateur par défaut:";
+"Client Name："    = "Nom du client:";
+"User Name："    = "Nom d'utilisateur : ";
+"Password："    = "Mot de passe:";
+"Cluster Network Configuration："    = "Configuration réseau:";
+"Network Protocol："    = "Protocole réseau:";
+"Cluster Endpoint："    = "Nœud de cluster:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: aucun fichier sélectionné";
+"KeyFile: 未选择任何文件"    = "KeyFile: Aucun fichier sélectionné";
+"CertFile: 未选择任何文件"    = "CertFile: aucun fichier sélectionné";
+    
+"Timeout Setting Configuration (seconds)："    = "Configuration du paramètre de temporisation (secondes):";
+"Request Timeout："    = "La requête a expiré:";
+"Dial Timeout："    = "Délai d'expiration:";
+"Dial Keep Alive Time："    = "Maintenir le temps en vie:";
+"Dial Keep Alive Timeout："    = "Délai de maintien en vie:";
+"Auto Sync Interval："    = "Intervalle de synchronisation automatique:";
+"Miscellaneous："    = "Autre paramétrage : ";
+"Auto create client name?"    = "Créer automatiquement le nom du client?";
+"Reschedule Pings？"    = "re-ping";
+"Clean Session?"    = "Nettoyer la session ?";
+"Auto connect on app launch?"    = "Connexion automatique au démarrage de l'application?";
+    
+    
+    
+    
+//home    //domicile
+"服务名称"    = "Nom du service";
+"节点地址"    = "Adresse de nœud";
+"连接状态"    = "État de la connexion";
+"Scuess"    = "Succès";
+"Failed"    = "échec";
+"Delete"    = "supprimer";
+"Cancle"    = "Annuler";
+"The connection to the server was lost."    = "La connexion au serveur a été perdue.";
+"Want to modify etcd service data?"    = "Voulez-vous modifier les données du service etcd?";
+    
+// about    // sur
+"Contact Us"    = "Contactez-nous";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Si vous avez une demande de fonctionnalité, une demande d'application personnalisée ou un bug, veuillez nous contacter:";
+"Download"    = "télécharger";
+"App for Mac,Window and Linux"    = "Applications pour Mac";
+"Documentation"    = "Documents";
+"Learn more about etcdWp features and turorials."    = "En savoir plus sur les fonctionnalités et les didacticiels d'etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB est une plate-forme vidéo en réseau basée sur la norme GB28181. Il prend en charge la pénétration NAT et prend en charge l'accès IPC, NVR, DVR de marques telles que Hikvision, Dahua et Uniview. Il prend en charge le streaming et le transfert vidéo tels que rtsp/rtmp. Go à la plate-forme nationale des normes.";
+"推荐 MediaGB"    = "Recommander MediaGB";
+"Learn More"    = "plus";
+"（已发版）"    = "(publié)";
+"（研发中）"    = "(en cours de développement)";
+"Workpieces 官方开发社区和组织仓库"    = "Référentiel officiel de la communauté de développement et de l'organisation Workpieces";
+"Workpieces LLC 官网"    = "Site officiel de Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Visiter le site officiel";
+"意见反馈"    ="Commentaires";
+"粘贴"    = "Coller";
+"键值操作"    = "Opération clé-valeur";
+"集群状态"    = "Statut du cluster";
+"查看键值详情"    = "Afficher les détails de la valeur-clé";
+"复制key值"    = "Copier la valeur de la clé";
+"删除键值"    = "Supprimer la valeur de la clé";
+"更新键值"    = "Mettre à jour la valeur de la clé";
+"复制value值"    = "Copier la valeur";
+"Promotes集群成员"    = "Promouvoir le membre du cluster";
+"上一页"    = "Page précédente";
+"下一页"    = "Page suivante";
+"键值不能输入为空"    = "La valeur de la clé ne peut pas être saisie comme vide";
+"复制成员"    = "Copier le membre";
+"删除成员"    = "Supprimer le membre";
+"成员id输入有误"    = "Identifiant de membre entré incorrectement";
+"提升成员"    = "Promouvoir un membre";
+"成员（Members）"    = "Membres";
+"成员地址输入有误"    = "L'adresse du membre n'a pas été saisie correctement";
+"链接状态: 正常"    = "État du lien: OK";
+"链接状态: 异常"    = "Statut du lien: Exception";
+"刷新加载"    = "Actualiser la charge";
+"清空键值"    ="Effacer la valeur de la clé";
+"查询"    = "Requête";
+"确定"    = "D'accord";
+"平铺结构"    = "structure de tuiles";
+"树形结构"    = "arborescence";
+"创建成员"    = "Créer un membre";
+"修改成员"    = "Modifier membre";
+"创建键值"    = "Créer une valeur clé";
+"键值前缀删除"    = "Suppression du préfixe de la valeur clé";
+"租约管理"    = "Location-Gestion";
+"角色管理"    = "gestion des rôles";
+"用户管理"    = "Gestion des utilisateurs";
+"开启认证"    = "Activer l'authentification";
+    
+//    //
+"请输入键值前缀"    = "Veuillez saisir un préfixe de clé";
+"请输入前缀key"    = "Veuillez entrer la clé de préfixe";
+"创建角色"    = "Créer un rôle";
+"请输入角色"    ="Veuillez entrer un rôle";
+"关闭"    = "fermer";
+"移除"    = "Supprimer";
+"存活一次"    = "survivre une fois";
+"请输入key"    = "Veuillez entrer la clé";
+    
+"请输入时间"    = "Veuillez saisir l'heure";
+"请输入Value"    = "Veuillez saisir une valeur";
+"输入时间错误，请重新输入"    = "Heure incorrecte, veuillez réessayer";
+"创建用户"    = "Créer un utilisateur";
+"创建密码"    = "Créer un mot de passe";
+"请输入密码"    = "Veuillez saisir votre mot de passe";
+"用户操作错误"    = "Erreur d'opération utilisateur";
+    
+//    //
+"创建集群成员"    = "Créer un membre de cluster";
+"更新集群成员"    = "Mettre à jour les membres du cluster";
+"修改后节点地址:"    = "Adresse de nœud modifiée:";
+"节点地址: "    = "Adresse de nœud:";
+"修改前节点id: "    = "Identifiant du nœud avant modification:";
+"节点id: "    = "identifiant du nœud:";
+    
+    
+"当前页: %lld "    = "Page actuelle: %lld";
+"成员总数: %lld "    = "Nombre total de membres: %lld";
+"服务地址：%@"    = "Adresse de service: %@";
+"总数: %lld "    = "Total : %lld";
+"客户端： %@"    = "Client: %@";
+"节点： %@"    = "Nœud: %@";
+"名称： %@"    = "Nom: %@";

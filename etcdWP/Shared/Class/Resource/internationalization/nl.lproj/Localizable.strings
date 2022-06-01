@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Batch-export";
+"批量导入"    = "Bulkimport";
+"关闭服务"    = "Service sluiten";
+"开启服务"    = "Service inschakelen";
+"保存目录不能为空"    = "Opslagmap mag niet leeg zijn";
+    
+    
+"创建ETCD客户端"    = "Creëer ETCD-client";
+"Home"    = "Thuis";
+"About"    = "Over";
+    
+    
+//Tip    //Tip
+"开启认证失败"    = "Kan authenticatie niet inschakelen";
+"The network connection is abnormal, please check the relevant configuration ?"    = "De netwerkverbinding is abnormaal, controleer de relevante configuratie?";
+"保存失败"    = "Opslaan mislukt";
+"输入错误，请重新输入"    = "Onjuiste invoer, probeer het opnieuw";
+"操作角色错误"    = "Bewerkingsrolfout";
+"操作租约错误"    = "Operationle lease-fout";
+"操作用户错误"    = "Gebruikersfout bewerking";
+    
+//配置    //configureren
+"ETCD CLUSTER V3"    = "ETCD-CLUSTER V3";
+"通用设置"    = "Algemene instellingen";
+"Cancel"    = "Annuleren";
+"Default User Information Configuration："    = "Standaard configuratie gebruikersinformatie:";
+"Client Name："    = "Klantnaam:";
+"User Name："    = "Gebruikersnaam: ";
+"Password："    = "Wachtwoord:";
+"Cluster Network Configuration："    = "Netwerkconfiguratie:";
+"Network Protocol："    = "Netwerkprotocol:";
+"Cluster Endpoint："    = "Clusterknooppunt:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Geen bestand geselecteerd";
+"KeyFile: 未选择任何文件"    = "KeyFile: Geen bestand geselecteerd";
+"CertFile: 未选择任何文件"    = "CertFile: Geen bestand geselecteerd";
+    
+"Timeout Setting Configuration (seconds)："    = "Configuratie time-outinstelling (seconden):";
+"Request Timeout："    = "Time-out aanvraag:";
+"Dial Timeout："    = "Time-out: ";
+"Dial Keep Alive Time："    = "Houd de tijd in leven:";
+"Dial Keep Alive Timeout："    = "Houd in leven time-out: ";
+"Auto Sync Interval："    = "Interval automatisch synchroniseren:";
+"Miscellaneous："    = "Andere configuratie: ";
+"Auto create client name?"    = "Klantnaam automatisch aanmaken?";
+"Reschedule Pings？"    = "opnieuw pingen";
+"Clean Session?"    = "Sessie opruimen?";
+"Auto connect on app launch?"    = "Automatisch verbinden wanneer applicatie start?";
+    
+    
+    
+    
+//home    //huis
+"服务名称"    = "Servicenaam";
+"节点地址"    = "Knooppuntadres";
+"连接状态"    = "Verbindingsstatus";
+"Scuess"    = "Succes";
+"Failed"    = "mislukking";
+"Delete"    = "verwijderen";
+"Cancle"    = "Annuleren";
+"The connection to the server was lost."    = "De verbinding met de server is verbroken.";
+"Want to modify etcd service data?"    = "Wilt u de servicegegevens van etcd wijzigen?";
+    
+// about    // over
+"Contact Us"    = "Neem contact met ons op";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Als u een functieverzoek, verzoek voor een aangepaste app of een bug heeft, neem dan contact met ons op:";
+"Download"    = "downloaden";
+"App for Mac,Window and Linux"    = "Apps voor Mac";
+"Documentation"    = "Documentatie";
+"Learn more about etcdWp features and turorials."    = "Meer informatie over etcdWp-functies en turorials.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB is een netwerkvideoplatform gebaseerd op de GB28181-standaard. Het ondersteunt NAT-penetratie en ondersteunt IPC-, NVR-, DVR-toegang van merken zoals Hikvision, Dahua en Uniview. Het ondersteunt videostreaming en doorsturen zoals rtsp/rtmp. Ga naar het nationale standaardplatform.";
+"推荐 MediaGB"    = "Beveel MediaGB aan";
+"Learn More"    = "meer";
+"（已发版）"    = "(vrijgegeven)";
+"（研发中）"    = "(in ontwikkeling)";
+"Workpieces 官方开发社区和组织仓库"    = "Workpieces Official Development Community and Organization Repository";
+"Workpieces LLC 官网"    = "Officiële website van Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Bezoek de officiële website";
+"意见反馈"    ="Feedback";
+"粘贴"    = "Plakken";
+"键值操作"    = "Sleutelwaarde-bewerking";
+"集群状态"    = "Clusterstatus";
+"查看键值详情"    = "Bekijk sleutel-waarde details";
+"复制key值"    = "Sleutelwaarde kopiëren";
+"删除键值"    = "Sleutelwaarde verwijderen";
+"更新键值"    = "Sleutelwaarde bijwerken";
+"复制value值"    = "Kopieer waarde";
+"Promotes集群成员"    = "Bevordert clusterlid";
+"上一页"    = "Vorige pagina";
+"下一页"    = "Volgende pagina";
+"键值不能输入为空"    = "Sleutelwaarde kan niet als leeg worden ingevoerd";
+"复制成员"    = "Lid kopiëren";
+"删除成员"    = "Lid verwijderen";
+"成员id输入有误"    = "Lid-ID onjuist ingevoerd";
+"提升成员"    = "Promotie lid";
+"成员（Members）"    = "Leden";
+"成员地址输入有误"    = "Adres van lid verkeerd ingevoerd";
+"链接状态: 正常"    = "Verbindingsstatus: OK";
+"链接状态: 异常"    = "Link Status: Uitzondering";
+"刷新加载"    = "Laden vernieuwen";
+"清空键值"    ="Sleutelwaarde wissen";
+"查询"    = "Opvragen";
+"确定"    = "OK";
+"平铺结构"    = "tegelstructuur";
+"树形结构"    = "boomstructuur";
+"创建成员"    = "Maak lid aan";
+"修改成员"    = "Lid wijzigen";
+"创建键值"    = "Sleutelwaarde maken";
+"键值前缀删除"    = "Voorvoegsel sleutelwaarde verwijderen";
+"租约管理"    = "Leasebeheer";
+"角色管理"    = "rolbeheer";
+"用户管理"    = "Gebruikersbeheer";
+"开启认证"    = "Schakel authenticatie in";
+    
+//    //
+"请输入键值前缀"    = "Voer een sleutelprefix in";
+"请输入前缀key"    = "Voer de prefixsleutel in";
+"创建角色"    = "Rol maken";
+"请输入角色"    ="Voer een rol in";
+"关闭"    = "sluiten";
+"移除"    = "Verwijderen";
+"存活一次"    = "een keer overleven";
+"请输入key"    = "Voer de sleutel in";
+    
+"请输入时间"    = "Voer de tijd in";
+"请输入Value"    = "Voer a.u.b. Waarde in";
+"输入时间错误，请重新输入"    = "Onjuiste tijd, probeer het opnieuw";
+"创建用户"    = "Gebruiker maken";
+"创建密码"    = "Wachtwoord aanmaken";
+"请输入密码"    = "Voer uw wachtwoord in";
+"用户操作错误"    = "Gebruikersfout";
+    
+//    //
+"创建集群成员"    = "Clusterlid maken";
+"更新集群成员"    = "Clusterleden bijwerken";
+"修改后节点地址:"    = "Gewijzigd knooppuntadres:";
+"节点地址: "    = "Knooppuntadres: ";
+"修改前节点id: "    = "Knooppunt-ID vóór wijziging: ";
+"节点id: "    = "knooppunt-ID: ";
+    
+    
+"当前页: %lld "    = "Huidige pagina: %lld ";
+"成员总数: %lld "    = "Totaal aantal leden: %lld ";
+"服务地址：%@"    = "Serviceadres: %@ ";
+"总数: %lld "    = "Totaal: %lld ";
+"客户端： %@"    = "Klant: %@";
+"节点： %@"    = "Knooppunt: %@";
+"名称： %@"    = "Naam: %@";

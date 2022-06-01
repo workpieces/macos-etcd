@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Exportació per lots";
+"批量导入"    = "Importació massiva";
+"关闭服务"    = "Tancar el servei";
+"开启服务"    = "Habilita el servei";
+"保存目录不能为空"    = "Desa el directori no pot estar buit";
+    
+    
+"创建ETCD客户端"    = "Crea un client ETCD";
+"Home"    = "Inici";
+"About"    = "Quant a";
+    
+    
+//Tip    // Consell
+"开启认证失败"    = "No s'ha pogut habilitar l'autenticació";
+"The network connection is abnormal, please check the relevant configuration ?"    = "La connexió de xarxa és anormal, comproveu la configuració corresponent?";
+"保存失败"    = "No s'ha pogut desar";
+"输入错误，请重新输入"    = "Entrada incorrecta, si us plau, torna-ho a provar";
+"操作角色错误"    = "Error de funció d'operació";
+"操作租约错误"    = "Error d'arrendament d'operació";
+"操作用户错误"    = "Error d'usuari de l'operació";
+    
+//配置    //configureu
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Configuració general";
+"Cancel"    = "Cancel·la";
+"Default User Information Configuration："    = "Configuració per defecte de la informació de l'usuari:";
+"Client Name："    = "Nom del client:";
+"User Name："    = "Nom d'usuari:";
+"Password："    = "Contrasenya:";
+"Cluster Network Configuration："    = "Configuració de la xarxa:";
+"Network Protocol："    = "Protocol de xarxa:";
+"Cluster Endpoint："    = "Node del clúster:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: No s'ha seleccionat cap fitxer";
+"KeyFile: 未选择任何文件"    = "KeyFile: No s'ha seleccionat cap fitxer";
+"CertFile: 未选择任何文件"    = "CertFile: No s'ha seleccionat cap fitxer";
+    
+"Timeout Setting Configuration (seconds)："    = "Configuració de la configuració del temps d'espera (segons):";
+"Request Timeout："    = "Temps d'espera de la sol·licitud:";
+"Dial Timeout："    = "Temps d'espera:";
+"Dial Keep Alive Time："    = "Mantenir el temps viu:";
+"Dial Keep Alive Timeout："    = "Mantenir el temps d'espera: ";
+"Auto Sync Interval："    = "Interval de sincronització automàtica:";
+"Miscellaneous："    = "Una altra configuració: ";
+"Auto create client name?"    = "Crear automàticament el nom del client?";
+"Reschedule Pings？"    = "re-ping";
+"Clean Session?"    = "Neteja la sessió?";
+"Auto connect on app launch?"    = "Connexió automàtica quan s'inicia l'aplicació?";
+    
+    
+    
+    
+//home    //casa
+"服务名称"    = "Nom del servei";
+"节点地址"    = "Adreça del node";
+"连接状态"    = "Estat de la connexió";
+"Scuess"    = "Èxit";
+"Failed"    = "falla";
+"Delete"    = "suprimir";
+"Cancle"    = "Cancel·la";
+"The connection to the server was lost."    = "La connexió amb el servidor s'ha perdut.";
+"Want to modify etcd service data?"    = "Voleu modificar les dades del servei etcd?";
+    
+// about    // Sobre
+"Contact Us"    = "Contacteu amb nosaltres";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Si teniu una sol·licitud de funció, una sol·licitud d'aplicació personalitzada o un error, poseu-vos en contacte amb nosaltres:";
+"Download"    = "descàrrega";
+"App for Mac,Window and Linux"    = "Aplicacions per a Mac";
+"Documentation"    = "Documentació";
+"Learn more about etcdWp features and turorials."    = "Més informació sobre les funcions i els turials d'etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB és una plataforma de vídeo de xarxa basada en l'estàndard GB28181. Admet la penetració de NAT i admet l'accés IPC, NVR, DVR de marques com Hikvision, Dahua i Uniview. Admet la transmissió i el reenviament de vídeo com rtsp/rtmp. Vés a la plataforma estàndard nacional.";
+"推荐 MediaGB"    = "Recomana MediaGB";
+"Learn More"    = "més";
+"（已发版）"    = "(publicat)";
+"（研发中）"    = "(en desenvolupament)";
+"Workpieces 官方开发社区和组织仓库"    = "Repositori d'organització i comunitat de desenvolupament oficial de peces de treball";
+"Workpieces LLC 官网"    = "Web oficial de Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Visiteu el lloc web oficial";
+"意见反馈"    ="Comentaris";
+"粘贴"    = "Enganxa";
+"键值操作"    = "Operació clau-valor";
+"集群状态"    = "Estat del clúster";
+"查看键值详情"    = "Mostra els detalls del valor-clau";
+"复制key值"    = "Copia el valor de la clau";
+"删除键值"    = "Suprimeix el valor de la clau";
+"更新键值"    = "Actualitza el valor de la clau";
+"复制value值"    = "Copia el valor";
+"Promotes集群成员"    = "Promociona el membre del clúster";
+"上一页"    = "Pàgina anterior";
+"下一页"    = "Pàgina següent";
+"键值不能输入为空"    = "El valor de la clau no es pot introduir com a buit";
+"复制成员"    = "Copia el membre";
+"删除成员"    = "Elimina el membre";
+"成员id输入有误"    = "L'identificador del membre s'ha introduït incorrectament";
+"提升成员"    = "Promociona membre";
+"成员（Members）"    = "Membres";
+"成员地址输入有误"    = "L'adreça del membre s'ha introduït incorrectament";
+"链接状态: 正常"    = "Estat de l'enllaç: OK";
+"链接状态: 异常"    = "Estat de l'enllaç: excepció";
+"刷新加载"    = "Actualitzar la càrrega";
+"清空键值"    ="Esborra el valor de la clau";
+"查询"    = "Consulta";
+"确定"    = "D'acord";
+"平铺结构"    = "estructura de rajoles";
+"树形结构"    = "estructura d'arbre";
+"创建成员"    = "Crea un membre";
+"修改成员"    = "Modifica el membre";
+"创建键值"    = "Crea el valor de la clau";
+"键值前缀删除"    = "Suprimir el prefix del valor clau";
+"租约管理"    = "Gestió d'arrendaments";
+"角色管理"    = "gestió de rols";
+"用户管理"    = "Gestió d'usuaris";
+"开启认证"    = "Activa l'autenticació";
+    
+//    //
+"请输入键值前缀"    = "Introduïu un prefix de clau";
+"请输入前缀key"    = "Si us plau, introduïu la clau del prefix";
+"创建角色"    = "Crea un rol";
+"请输入角色"    ="Introduïu una funció";
+"关闭"    = "tancar";
+"移除"    = "Eliminar";
+"存活一次"    = "sobreviure una vegada";
+"请输入key"    = "Si us plau, introduïu la clau";
+    
+"请输入时间"    = "Introduïu l'hora";
+"请输入Value"    = "Introduïu el valor";
+"输入时间错误，请重新输入"    = "Hora incorrecta, si us plau, torna-ho a provar";
+"创建用户"    = "Crea un usuari";
+"创建密码"    = "Crear contrasenya";
+"请输入密码"    = "Si us plau, introduïu la vostra contrasenya";
+"用户操作错误"    = "Error de funcionament de l'usuari";
+    
+//    //
+"创建集群成员"    = "Crea un membre del clúster";
+"更新集群成员"    = "Actualitzar els membres del clúster";
+"修改后节点地址:"    = "Adreça de node modificada:";
+"节点地址: "    = "Adreça del node: ";
+"修改前节点id: "    = "Identificador del node abans de la modificació: ";
+"节点id: "    = "identificador de node:";
+    
+    
+"当前页: %lld "    = "Pàgina actual: %lld";
+"成员总数: %lld "    = "Total de membres: %lld";
+"服务地址：%@"    = "Adreça del servei: %@";
+"总数: %lld "    = "Total: %lld";
+"客户端： %@"    = "Client: %@";
+"节点： %@"    = "Node: %@";
+"名称： %@"    = "Nom: %@";

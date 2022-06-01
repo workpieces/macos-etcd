@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Erävienti";
+"批量导入"    = "Joukkotuonti";
+"关闭服务"    = "Sulje palvelu";
+"开启服务"    = "Ota palvelu käyttöön";
+"保存目录不能为空"    = "Tallenna hakemisto ei voi olla tyhjä";
+    
+    
+"创建ETCD客户端"    = "Luo ETCD-asiakas";
+"Home"    = "Koti";
+"About"    = "Tietoja";
+    
+    
+//Tip    //Kärki
+"开启认证失败"    = "Todennusta ei voitu ottaa käyttöön";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Verkkoyhteys on epänormaali, tarkista asiaankuuluvat asetukset?";
+"保存失败"    = "Tallennus epäonnistui";
+"输入错误，请重新输入"    = "Väärä syöttö, yritä uudelleen";
+"操作角色错误"    = "Toimintoroolivirhe";
+"操作租约错误"    = "Käyttövuokravirhe";
+"操作用户错误"    = "Käyttäjän käyttövirhe";
+    
+//配置    //määritä
+"ETCD CLUSTER V3"    = "ETCD-RYPPI V3";
+"通用设置"    = "Yleiset asetukset";
+"Cancel"    = "Peruuta";
+"Default User Information Configuration："    = "Käyttäjätietojen oletusmääritys:";
+"Client Name："    = "Asiakkaan nimi:";
+"User Name："    = "Käyttäjänimi: ";
+"Password："    = "Salasana:";
+"Cluster Network Configuration："    = "Verkon kokoonpano:";
+"Network Protocol："    = "Verkkoprotokolla:";
+"Cluster Endpoint："    = "Klusterisolmu:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Tiedostoa ei ole valittu";
+"KeyFile: 未选择任何文件"    = "KeyFile: Tiedostoa ei ole valittu";
+"CertFile: 未选择任何文件"    = "CertFile: Tiedostoa ei ole valittu";
+    
+"Timeout Setting Configuration (seconds)："    = "Aikakatkaisuasetusten konfiguraatio (sekunteina):";
+"Request Timeout："    = "Pyyntö aikakatkaistiin:";
+"Dial Timeout："    = "Aikakatkaisu: ";
+"Dial Keep Alive Time："    = "Pidä elossa aika:";
+"Dial Keep Alive Timeout："    = "Pidä hengissä aikakatkaisu: ";
+"Auto Sync Interval："    = "Automaattinen synkronointiväli:";
+"Miscellaneous："    = "Muu kokoonpano: ";
+"Auto create client name?"    = "Luo automaattisesti asiakkaan nimi?";
+"Reschedule Pings？"    = "uudelleenping";
+"Clean Session?"    = "Siivousistunto?";
+"Auto connect on app launch?"    = "Yhdistä automaattisesti, kun sovellus käynnistyy?";
+    
+    
+    
+    
+//home    //Koti
+"服务名称"    = "Palvelun nimi";
+"节点地址"    = "Solmun osoite";
+"连接状态"    = "Yhteyden tila";
+"Scuess"    = "Onnistuminen";
+"Failed"    = "epäonnistuminen";
+"Delete"    = "poista";
+"Cancle"    = "Peruuta";
+"The connection to the server was lost."    = "Yhteys palvelimeen katkesi.";
+"Want to modify etcd service data?"    = "Haluatko muokata etcd-palvelutietoja?";
+    
+// about    // noin
+"Contact Us"    = "Ota yhteyttä";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Jos sinulla on ominaisuuspyyntö, mukautettu sovelluspyyntö tai virhe, ota meihin yhteyttä:";
+"Download"    = "lataa";
+"App for Mac,Window and Linux"    = "Mac-sovellukset";
+"Documentation"    = "Dokumentaatio";
+"Learn more about etcdWp features and turorials."    = "Lisätietoja etcdWp:n ominaisuuksista ja ohjeista.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB on verkkovideoalusta, joka perustuu GB28181-standardiin. Se tukee NAT-penetraatiota ja tukee IPC-, NVR- ja DVR-käyttöoikeuksia tuotemerkeille, kuten Hikvision, Dahua ja Uniview. Se tukee videoiden suoratoistoa ja edelleenlähetystä, kuten rtsp/rtmp. Go kansalliselle standardialustalle.";
+"推荐 MediaGB"    = "Suosittele MediaGB:tä";
+"Learn More"    = "enemmän";
+"（已发版）"    = "(vapautettu)";
+"（研发中）"    = "(kehitellään)";
+"Workpieces 官方开发社区和组织仓库"    = "Työkappaleiden virallinen kehitysyhteisön ja organisaation arkisto";
+"Workpieces LLC 官网"    = "Workpieces LLC:n virallinen verkkosivusto";
+    
+//    //
+    
+"访问官网"    = "Käy virallisella verkkosivustolla";
+"意见反馈"    ="Palaute";
+"粘贴"    = "Liitä";
+"键值操作"    = "Avainarvotoiminto";
+"集群状态"    = "Klusterin tila";
+"查看键值详情"    = "Näytä avainarvon tiedot";
+"复制key值"    = "Kopioi avaimen arvo";
+"删除键值"    = "Poista avaimen arvo";
+"更新键值"    = "Päivitä avaimen arvo";
+"复制value值"    = "Kopioi arvo";
+"Promotes集群成员"    = "Ylennä klusterin jäsentä";
+"上一页"    = "Edellinen sivu";
+"下一页"    = "Seuraava sivu";
+"键值不能输入为空"    = "Avainarvoa ei voi syöttää tyhjänä";
+"复制成员"    = "Kopioi jäsen";
+"删除成员"    = "Poista jäsen";
+"成员id输入有误"    = "Jäsentunnus syötetty väärin";
+"提升成员"    = "Ylennä jäsen";
+"成员（Members）"    = "Jäsenet";
+"成员地址输入有误"    = "Jäsenosoite syötetty väärin";
+"链接状态: 正常"    = "Linkin tila: OK";
+"链接状态: 异常"    = "Linkin tila: Poikkeus";
+"刷新加载"    = "Päivitä lataus";
+"清空键值"    ="Tyhjennä avaimen arvo";
+"查询"    = "Kysely";
+"确定"    = "OK";
+"平铺结构"    = "laattarakenne";
+"树形结构"    = "puurakenne";
+"创建成员"    = "Luo jäsen";
+"修改成员"    = "Muokkaa jäsentä";
+"创建键值"    = "Luo avainarvo";
+"键值前缀删除"    = "Avainarvon etuliite poista";
+"租约管理"    = "Lease Management";
+"角色管理"    = "roolinhallinta";
+"用户管理"    = "Käyttäjien hallinta";
+"开启认证"    = "Ota todennus käyttöön";
+    
+//    //
+"请输入键值前缀"    = "Anna avaimen etuliite";
+"请输入前缀key"    = "Anna etuliiteavain";
+"创建角色"    = "Luo rooli";
+"请输入角色"    ="Anna rooli";
+"关闭"    = "sulje";
+"移除"    = "Poista";
+"存活一次"    = "selviydy kerran";
+"请输入key"    = "Anna avain";
+    
+"请输入时间"    = "Anna aika";
+"请输入Value"    = "Anna arvo";
+"输入时间错误，请重新输入"    = "Väärä aika, yritä uudelleen";
+"创建用户"    = "Luo käyttäjä";
+"创建密码"    = "Luo salasana";
+"请输入密码"    = "Anna salasanasi";
+"用户操作错误"    = "Käyttäjän toimintavirhe";
+    
+//    //
+"创建集群成员"    = "Luo klusterin jäsen";
+"更新集群成员"    = "Päivitä klusterin jäsenet";
+"修改后节点地址:"    = "Muokattu solmuosoite:";
+"节点地址: "    = "Solmun osoite: ";
+"修改前节点id: "    = "Solmun tunnus ennen muutosta: ";
+"节点id: "    = "solmun tunnus:";
+    
+    
+"当前页: %lld "    = "Nykyinen sivu: %lld ";
+"成员总数: %lld "    = "Jäseniä yhteensä: %lld ";
+"服务地址：%@"    = "Palveluosoite: %@ ";
+"总数: %lld "    = "Yhteensä: %lld";
+"客户端： %@"    = "Asiakas: %@";
+"节点： %@"    = "Solmu: %@";
+"名称： %@"    = "Nimi: %@";

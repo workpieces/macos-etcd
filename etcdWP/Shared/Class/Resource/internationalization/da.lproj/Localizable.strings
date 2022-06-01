@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Batcheksport";
+"批量导入"    = "Masseimport";
+"关闭服务"    = "Luk tjeneste";
+"开启服务"    = "Aktiver tjeneste";
+"保存目录不能为空"    = "Gem mappe må ikke være tom";
+    
+    
+"创建ETCD客户端"    = "Opret ETCD-klient";
+"Home"    = "Hjem";
+"About"    = "Om";
+    
+    
+//Tip    //Tip
+"开启认证失败"    = "Kunne ikke aktivere godkendelse";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Netværksforbindelsen er unormal, tjek venligst den relevante konfiguration?";
+"保存失败"    = "Gem mislykkedes";
+"输入错误，请重新输入"    = "Forkert input, prøv venligst igen";
+"操作角色错误"    = "Betjeningsrolle fejl";
+"操作租约错误"    = "Operationsleasing fejl";
+"操作用户错误"    = "Betjeningsbrugerfejl";
+    
+//配置    //konfigurere
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Generelle indstillinger";
+"Cancel"    = "Annuller";
+"Default User Information Configuration："    = "Standard konfiguration af brugeroplysninger:";
+"Client Name："    = "Kundenavn:";
+"User Name："    = "Brugernavn: ";
+"Password："    = "Adgangskode:";
+"Cluster Network Configuration："    = "Netværkskonfiguration:";
+"Network Protocol："    = "Netværksprotokol:";
+"Cluster Endpoint："    = "Klynge node:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Ingen fil valgt";
+"KeyFile: 未选择任何文件"    = "KeyFile: Ingen fil valgt";
+"CertFile: 未选择任何文件"    = "CertFile: Ingen fil valgt";
+    
+"Timeout Setting Configuration (seconds)："    = "Timeout indstilling konfiguration (sekunder):";
+"Request Timeout："    = "Forespørgsel fik timeout:";
+"Dial Timeout："    = "Timeout: ";
+"Dial Keep Alive Time："    = "Hold tid i live:";
+"Dial Keep Alive Timeout："    = "Hold i live timeout: ";
+"Auto Sync Interval："    = "Automatisk synkroniseringsinterval:";
+"Miscellaneous："    = "Anden konfiguration: ";
+"Auto create client name?"    = "Opret automatisk klientnavn?";
+"Reschedule Pings？"    = "gen-ping";
+"Clean Session?"    = "Ryd op i session?";
+"Auto connect on app launch?"    = "Automatisk forbindelse, når programmet starter?";
+    
+    
+    
+    
+//home    //hjem
+"服务名称"    = "Tjenestenavn";
+"节点地址"    = "Knudeadresse";
+"连接状态"    = "Forbindelsesstatus";
+"Scuess"    = "Succes";
+"Failed"    = "fejl";
+"Delete"    = "slet";
+"Cancle"    = "Annuller";
+"The connection to the server was lost."    = "Forbindelsen til serveren gik tabt.";
+"Want to modify etcd service data?"    = "Vil du ændre etcd service data?";
+    
+// about    // om
+"Contact Us"    = "Kontakt os";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Hvis du har en funktionsanmodning, brugerdefineret app-anmodning eller fejl, så kontakt os venligst:";
+"Download"    = "download";
+"App for Mac,Window and Linux"    = "Apps til Mac";
+"Documentation"    = "Dokumentation";
+"Learn more about etcdWp features and turorials."    = "Lær mere om etcdWp-funktioner og turorials.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB er en netværksvideoplatform baseret på GB28181-standarden. Den understøtter NAT-penetration og understøtter IPC, NVR, DVR-adgang fra mærker som Hikvision, Dahua og Uniview. Den understøtter videostreaming og videresendelse såsom rtsp/rtmp. Go til den nationale standardplatform.";
+"推荐 MediaGB"    = "Anbefal MediaGB";
+"Learn More"    = "mere";
+"（已发版）"    = "(frigivet)";
+"（研发中）"    = "(under udvikling)";
+"Workpieces 官方开发社区和组织仓库"    = "Workpieces Official Development Community and Organization Repository";
+"Workpieces LLC 官网"    = "Workpieces LLC officielle hjemmeside";
+    
+//    //
+    
+"访问官网"    = "Besøg den officielle hjemmeside";
+"意见反馈"    ="Feedback";
+"粘贴"    = "Indsæt";
+"键值操作"    = "Nøgle-værdi operation";
+"集群状态"    = "Klyngestatus";
+"查看键值详情"    = "Se nøgle-værdi detaljer";
+"复制key值"    = "Kopiér nøgleværdi";
+"删除键值"    = "Slet nøgleværdi";
+"更新键值"    = "Opdater nøgleværdi";
+"复制value值"    = "Kopier værdi";
+"Promotes集群成员"    = "Fremmer klyngemedlem";
+"上一页"    = "Forrige side";
+"下一页"    = "Næste side";
+"键值不能输入为空"    = "Nøgleværdi kan ikke indtastes som tom";
+"复制成员"    = "Kopiér medlem";
+"删除成员"    = "Fjern medlem";
+"成员id输入有误"    = "Medlems-id indtastet forkert";
+"提升成员"    = "Forfrem medlem";
+"成员（Members）"    = "Medlemmer";
+"成员地址输入有误"    = "Medlemsadresse indtastet forkert";
+"链接状态: 正常"    = "Linkstatus: OK";
+"链接状态: 异常"    = "Linkstatus: Undtagelse";
+"刷新加载"    = "Opdater indlæsning";
+"清空键值"    ="Ryd nøgleværdi";
+"查询"    = "Forespørgsel";
+"确定"    = "OK";
+"平铺结构"    = "flisestruktur";
+"树形结构"    = "træstruktur";
+"创建成员"    = "Opret medlem";
+"修改成员"    = "Rediger medlem";
+"创建键值"    = "Opret nøgleværdi";
+"键值前缀删除"    = "Slet nøgleværdipræfiks";
+"租约管理"    = "Lejestyring";
+"角色管理"    = "rollestyring";
+"用户管理"    = "Brugerstyring";
+"开启认证"    = "Aktiver godkendelse";
+    
+//    //
+"请输入键值前缀"    = "Indtast venligst et nøglepræfiks";
+"请输入前缀key"    = "Indtast venligst præfiksnøglen";
+"创建角色"    = "Opret rolle";
+"请输入角色"    ="Angiv venligst en rolle";
+"关闭"    = "luk";
+"移除"    = "Fjern";
+"存活一次"    = "overlev én gang";
+"请输入key"    = "Indtast venligst nøgle";
+    
+"请输入时间"    = "Indtast venligst tidspunktet";
+"请输入Value"    = "Indtast venligst værdi";
+"输入时间错误，请重新输入"    = "Forkert tidspunkt, prøv venligst igen";
+"创建用户"    = "Opret bruger";
+"创建密码"    = "Opret adgangskode";
+"请输入密码"    = "Indtast venligst din adgangskode";
+"用户操作错误"    = "Brugerbetjeningsfejl";
+    
+//    //
+"创建集群成员"    = "Opret klyngemedlem";
+"更新集群成员"    = "Opdater klyngemedlemmer";
+"修改后节点地址:"    = "Ændret nodeadresse:";
+"节点地址: "    = "Nodeadresse: ";
+"修改前节点id: "    = "Node-id før ændring: ";
+"节点id: "    = "node-id: ";
+    
+    
+"当前页: %lld "    = "Nuværende side: %lld ";
+"成员总数: %lld "    = "Samlet antal medlemmer: %lld ";
+"服务地址：%@"    = "Tjenesteadresse: %@ ";
+"总数: %lld "    = "I alt: %lld ";
+"客户端： %@"    = "Kunde: %@";
+"节点： %@"    = "Node: %@";
+"名称： %@"    = "Navn: %@";

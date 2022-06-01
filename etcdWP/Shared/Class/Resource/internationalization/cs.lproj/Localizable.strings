@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Dávkový export";
+"批量导入"    = "Hromadný import";
+"关闭服务"    = "Ukončit službu";
+"开启服务"    = "Povolit službu";
+"保存目录不能为空"    = "Uložit adresář nemůže být prázdný";
+    
+    
+"创建ETCD客户端"    = "Vytvořit klienta ETCD";
+"Home"    = "Domů";
+"About"    = "O";
+    
+    
+//Tip    //Spropitné
+"开启认证失败"    = "Nepodařilo se povolit ověřování";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Síťové připojení je abnormální, zkontrolujte prosím příslušnou konfiguraci?";
+"保存失败"    = "Uložení se nezdařilo";
+"输入错误，请重新输入"    = "Nesprávné zadání, zkuste to prosím znovu";
+"操作角色错误"    = "Chyba operační role";
+"操作租约错误"    = "Chyba zapůjčení operace";
+"操作用户错误"    = "Chyba uživatele operace";
+    
+//配置    //konfigurovat
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Obecná nastavení";
+"Cancel"    = "Zrušit";
+"Default User Information Configuration："    = "Výchozí konfigurace informací o uživateli:";
+"Client Name："    = "Jméno zákazníka:";
+"User Name："    = "Uživatelské jméno: ";
+"Password："    = "Heslo:";
+"Cluster Network Configuration："    = "Konfigurace sítě:";
+"Network Protocol："    = "Síťový protokol:";
+"Cluster Endpoint："    = "Uzel clusteru:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Nebyl vybrán žádný soubor";
+"KeyFile: 未选择任何文件"    = "KeyFile: Nebyl vybrán žádný soubor";
+"CertFile: 未选择任何文件"    = "CertFile: Nebyl vybrán žádný soubor";
+    
+"Timeout Setting Configuration (seconds)："    = "Konfigurace nastavení časového limitu (v sekundách):";
+"Request Timeout："    = "Vypršel časový limit požadavku:";
+"Dial Timeout："    = "Časový limit: ";
+"Dial Keep Alive Time："    = "Udržujte čas naživu:";
+"Dial Keep Alive Timeout："    = "Časový limit udržování při životě: ";
+"Auto Sync Interval："    = "Interval automatické synchronizace:";
+"Miscellaneous："    = "Jiná konfigurace: ";
+"Auto create client name?"    = "Automaticky vytvořit jméno klienta?";
+"Reschedule Pings？"    = "re-ping";
+"Clean Session?"    = "Vyčistit relace?";
+"Auto connect on app launch?"    = "Automaticky připojit při spuštění aplikace?";
+    
+    
+    
+    
+//home    //Domov
+"服务名称"    = "Název služby";
+"节点地址"    = "Adresa uzlu";
+"连接状态"    = "Stav připojení";
+"Scuess"    = "Úspěch";
+"Failed"    = "selhání";
+"Delete"    = "smazat";
+"Cancle"    = "Zrušit";
+"The connection to the server was lost."    = "Připojení k serveru bylo ztraceno.";
+"Want to modify etcd service data?"    = "Chcete upravit data služby etcd?";
+    
+// about    // o
+"Contact Us"    = "Kontaktujte nás";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Pokud máte požadavek na funkci, žádost o vlastní aplikaci nebo chybu, kontaktujte nás:";
+"Download"    = "stáhnout";
+"App for Mac,Window and Linux"    = "Aplikace pro Mac";
+"Documentation"    = "Dokumentace";
+"Learn more about etcdWp features and turorials."    = "Další informace o funkcích a výukových programech etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB je platforma síťového videa založená na standardu GB28181. Podporuje penetraci NAT a podporuje přístup IPC, NVR, DVR značek jako Hikvision, Dahua a Uniview. Podporuje streamování a předávání videa, jako je rtsp/rtmp. Přejít na národní standardní platformu.";
+"推荐 MediaGB"    = "Doporučit MediaGB";
+"Learn More"    = "více";
+"（已发版）"    = "(vydáno)";
+"（研发中）"    = "(ve vývoji)";
+"Workpieces 官方开发社区和组织仓库"    = "Workpieces Official Development Community and Organization Repository";
+"Workpieces LLC 官网"    = "Oficiální stránky Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Navštivte oficiální stránky";
+"意见反馈"    ="Zpětná vazba";
+"粘贴"    = "Vložit";
+"键值操作"    = "Operace klíč-hodnota";
+"集群状态"    = "Stav clusteru";
+"查看键值详情"    = "Zobrazit podrobnosti páru klíč–hodnota";
+"复制key值"    = "Kopírovat hodnotu klíče";
+"删除键值"    = "Vymazat hodnotu klíče";
+"更新键值"    = "Aktualizovat hodnotu klíče";
+"复制value值"    = "Kopírovat hodnotu";
+"Promotes集群成员"    = "Povýší člena klastru";
+"上一页"    = "Předchozí stránka";
+"下一页"    = "Další stránka";
+"键值不能输入为空"    = "Hodnotu klíče nelze zadat jako prázdnou";
+"复制成员"    = "Kopírovat člena";
+"删除成员"    = "Odebrat člena";
+"成员id输入有误"    = "Nesprávně zadané ID člena";
+"提升成员"    = "Povýšit člena";
+"成员（Members）"    = "Členové";
+"成员地址输入有误"    = "Nesprávně zadaná adresa člena";
+"链接状态: 正常"    = "Stav odkazu: OK";
+"链接状态: 异常"    = "Stav odkazu: Výjimka";
+"刷新加载"    = "Obnovit zatížení";
+"清空键值"    ="Vymazat hodnotu klíče";
+"查询"    = "Dotaz";
+"确定"    = "OK";
+"平铺结构"    = "struktura dlaždic";
+"树形结构"    = "stromová struktura";
+"创建成员"    = "Vytvořit člena";
+"修改成员"    = "Upravit člena";
+"创建键值"    = "Vytvořit hodnotu klíče";
+"键值前缀删除"    = "Vymazání předpony klíčové hodnoty";
+"租约管理"    = "Řízení leasingu";
+"角色管理"    = "správa rolí";
+"用户管理"    = "Správa uživatelů";
+"开启认证"    = "Povolit ověřování";
+    
+//    //
+"请输入键值前缀"    = "Zadejte předponu klíče";
+"请输入前缀key"    = "Zadejte klíč předpony";
+"创建角色"    = "Vytvořit roli";
+"请输入角色"    ="Zadejte roli";
+"关闭"    = "zavřít";
+"移除"    = "Odebrat";
+"存活一次"    = "přežít jednou";
+"请输入key"    = "Zadejte klíč";
+    
+"请输入时间"    = "Zadejte prosím čas";
+"请输入Value"    = "Zadejte hodnotu";
+"输入时间错误，请重新输入"    = "Nesprávný čas, zkuste to prosím znovu";
+"创建用户"    = "Vytvořit uživatele";
+"创建密码"    = "Vytvořit heslo";
+"请输入密码"    = "Zadejte prosím své heslo";
+"用户操作错误"    = "Chyba uživatelské operace";
+    
+//    //
+"创建集群成员"    = "Vytvořit člena klastru";
+"更新集群成员"    = "Aktualizovat členy klastru";
+"修改后节点地址:"    = "Upravená adresa uzlu:";
+"节点地址: "    = "Adresa uzlu: ";
+"修改前节点id: "    = "ID uzlu před úpravou: ";
+"节点id: "    = "id uzlu: ";
+    
+    
+"当前页: %lld "    = "Aktuální stránka: %lld ";
+"成员总数: %lld "    = "Celkový počet členů: %lld ";
+"服务地址：%@"    = "Adresa služby: %@ ";
+"总数: %lld "    = "Celkem: %lld";
+"客户端： %@"    = "Klient: %@";
+"节点： %@"    = "Uzel: %@";
+"名称： %@"    = "Jméno: %@";

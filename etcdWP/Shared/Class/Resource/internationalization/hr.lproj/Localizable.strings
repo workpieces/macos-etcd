@@ -1,0 +1,157 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"    = "Skupni izvoz";
+"批量导入"    = "Skupni uvoz";
+"关闭服务"    = "Zatvori uslugu";
+"开启服务"    = "Omogući uslugu";
+"保存目录不能为空"    = "Spremi imenik ne može biti prazan";
+    
+    
+"创建ETCD客户端"    = "Kreiraj ETCD klijenta";
+"Home"    = "Kuća";
+"About"    = "O";
+    
+    
+//Tip    //Savjet
+"开启认证失败"    = "Omogućavanje provjere autentičnosti nije uspjelo";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Mrežna veza je nenormalna, provjerite odgovarajuću konfiguraciju?";
+"保存失败"    = "Spremanje nije uspjelo";
+"输入错误，请重新输入"    = "Netočan unos, pokušajte ponovo";
+"操作角色错误"    = "Pogreška u ulozi operacije";
+"操作租约错误"    = "Pogreška operativnog najma";
+"操作用户错误"    = "Pogreška korisnika operacije";
+    
+//配置    //konfigurirati
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Opće postavke";
+"Cancel"    = "Otkaži";
+"Default User Information Configuration："    = "Konfiguracija zadanih korisničkih podataka:";
+"Client Name："    = "Ime kupca:";
+"User Name："    = "Korisničko ime: ";
+"Password："    = "Lozinka:";
+"Cluster Network Configuration："    = "Konfiguracija mreže:";
+"Network Protocol："    = "Mrežni protokol:";
+"Cluster Endpoint："    = "Čvor klastera:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Nije odabrana datoteka";
+"KeyFile: 未选择任何文件"    = "KeyFile: Nije odabrana datoteka";
+"CertFile: 未选择任何文件"    = "CertFile: nije odabrana datoteka";
+    
+"Timeout Setting Configuration (seconds)："    = "Konfiguracija postavke vremenskog ograničenja (sekunde):";
+"Request Timeout："    = "Zahtjev je istekao:";
+"Dial Timeout："    = "Istek: ";
+"Dial Keep Alive Time："    = "Održi vrijeme u životu:";
+"Dial Keep Alive Timeout："    = "Istek trajanja održavanja: ";
+"Auto Sync Interval："    = "Interval automatske sinkronizacije:";
+"Miscellaneous："    = "Druga konfiguracija: ";
+"Auto create client name?"    = "Automatski kreirati ime klijenta?";
+"Reschedule Pings？"    = "ponovni ping";
+"Clean Session?"    = "Sesija čišćenja?";
+"Auto connect on app launch?"    = "Automatsko povezivanje kada se aplikacija pokrene?";
+    
+    
+    
+    
+//home    //Dom
+"服务名称"    = "Naziv usluge";
+"节点地址"    = "Adresa čvora";
+"连接状态"    = "Status veze";
+"Scuess"    = "Uspjeh";
+"Failed"    = "neuspjeh";
+"Delete"    = "izbriši";
+"Cancle"    = "Otkaži";
+"The connection to the server was lost."    = "Veza s poslužiteljem je izgubljena.";
+"Want to modify etcd service data?"    = "Želite li izmijeniti etcd servisne podatke?";
+    
+// about    // o
+"Contact Us"    = "Kontaktirajte nas";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Ako imate zahtjev za značajkom, zahtjev za prilagođenu aplikaciju ili bug, kontaktirajte nas:";
+"Download"    = "preuzimanje";
+"App for Mac,Window and Linux"    = "Aplikacije za Mac";
+"Documentation"    = "Dokumentacija";
+"Learn more about etcdWp features and turorials."    = "Saznajte više o etcdWp značajkama i vodičima.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB je mrežna video platforma zasnovana na standardu GB28181. Podržava NAT prodor i podržava IPC, NVR, DVR pristup robnih marki kao što su Hikvision, Dahua i Uniview. Podržava video streaming i prosljeđivanje kao što je rtsp/rtmp. Idi na nacionalnu standardnu ​​platformu.";
+"推荐 MediaGB"    = "Preporuči MediaGB";
+"Learn More"    = "više";
+"（已发版）"    = "(pušteno)";
+"（研发中）"    = "(u razvoju)";
+"Workpieces 官方开发社区和组织仓库"    = "Radnici Službena razvojna zajednica i repozitorijum organizacije";
+"Workpieces LLC 官网"    = "Službena web stranica Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Posjetite službenu web stranicu";
+"意见反馈"    ="Povratne informacije";
+"粘贴"    = "Zalijepi";
+"键值操作"    = "Operacija ključ-vrijednost";
+"集群状态"    = "Status klastera";
+"查看键值详情"    = "Prikaži pojedinosti ključ/vrijednost";
+"复制key值"    = "Kopiraj vrijednost ključa";
+"删除键值"    = "Izbriši vrijednost ključa";
+"更新键值"    = "Ažuriraj vrijednost ključa";
+"复制value值"    = "Vrijednost kopiranja";
+"Promotes集群成员"    = "Promiče člana klastera";
+"上一页"    = "Prethodna stranica";
+"下一页"    = "Sljedeća stranica";
+"键值不能输入为空"    = "Vrijednost ključa se ne može unijeti kao prazna";
+"复制成员"    = "Kopiraj člana";
+"删除成员"    = "Ukloni člana";
+"成员id输入有误"    = "ID člana unesen pogrešno";
+"提升成员"    = "Promoviraj člana";
+"成员（Members）"    = "Članovi";
+"成员地址输入有误"    = "Adresa člana unesena netočno";
+"链接状态: 正常"    = "Status veze: OK";
+"链接状态: 异常"    = "Status veze: iznimka";
+"刷新加载"    = "Osvježi učitavanje";
+"清空键值"    ="Izbriši vrijednost ključa";
+"查询"    = "Upit";
+"确定"    = "U redu";
+"平铺结构"    = "struktura pločica";
+"树形结构"    = "struktura stabla";
+"创建成员"    = "Stvori člana";
+"修改成员"    = "Izmijeni člana";
+"创建键值"    = "Kreiraj vrijednost ključa";
+"键值前缀删除"    = "Izbriši prefiks vrijednosti ključa";
+"租约管理"    = "Upravljanje zakupom";
+"角色管理"    = "upravljanje ulogama";
+"用户管理"    = "Upravljanje korisnicima";
+"开启认证"    = "Omogući provjeru autentičnosti";
+    
+//    //
+"请输入键值前缀"    = "Molimo unesite prefiks ključa";
+"请输入前缀key"    = "Molimo unesite prefiks ključ";
+"创建角色"    = "Stvori ulogu";
+"请输入角色"    ="Molimo unesite ulogu";
+"关闭"    = "zatvori";
+"移除"    = "Ukloni";
+"存活一次"    = "preživjeti jednom";
+"请输入key"    = "Unesite ključ";
+    
+"请输入时间"    = "Molimo unesite vrijeme";
+"请输入Value"    = "Molimo unesite vrijednost";
+"输入时间错误，请重新输入"    = "Netočno vrijeme, pokušajte ponovo";
+"创建用户"    = "Stvori korisnika";
+"创建密码"    = "Kreiraj lozinku";
+"请输入密码"    = "Molimo unesite svoju lozinku";
+"用户操作错误"    = "Pogreška u radu korisnika";
+    
+//    //
+"创建集群成员"    = "Stvori člana klastera";
+"更新集群成员"    = "Ažuriraj članove klastera";
+"修改后节点地址:"    = "Promijenjena adresa čvora:";
+"节点地址: "    = "Adresa čvora: ";
+"修改前节点id: "    = "ID čvora prije izmjene: ";
+"节点id: "    = "id čvora: ";
+    
+    
+"当前页: %lld "    = "Trenutna stranica: %lld ";
+"成员总数: %lld "    = "Ukupno članova: %lld ";
+"服务地址：%@"    = "Adresa usluge: %@ ";
+"总数: %lld "    = "Ukupno: %lld";
+"客户端： %@"    = "Klijent: %@";
+"节点： %@"    = "Čvor: %@";
+"名称： %@"    = "Ime: %@";

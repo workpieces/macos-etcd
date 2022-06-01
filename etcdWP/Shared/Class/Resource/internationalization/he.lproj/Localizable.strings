@@ -1,0 +1,156 @@
+/* 
+ Localizable.strings
+ etcdWP
+ 
+ Created by FaceBook on 2022/4/26.
+ 
+ */
+"批量导出"                   = "Batch Export";
+"批量导入"                   = "Batch Import";
+"关闭服务"                   = "Shut Down Services";
+"开启服务"                   = "Open Service";
+"保存目录不能为空"             = "Save directory cannot be empty";
+
+"创建ETCD客户端"              = "Create ETCD Client";
+"Home"                      = "Home";
+"About"                     = "About";
+
+//Tip
+"开启认证失败"                     = "Failed to open authentication";
+"The network connection is abnormal, please check the relevant configuration ?"                     = "The network connection is abnormal, please check the relevant configuration ?";
+"保存失败"                        = "Save Failed";
+"输入错误，请重新输入"                     = "Input error, please re-enter";
+"操作角色错误"                     = "Operation role error";
+"输入错误，请重新输入"                     = "Input error, please re-enter";
+"操作租约错误"                     = "Operation lease error";
+"操作用户错误"                     = "Operation user error";
+
+
+//配置
+"ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
+"通用设置"                           = "General Settings";
+"Cancel"                           = "Cancel";
+"Save"                             = "Save";
+
+"Default User Information Configuration："                           = "Default User Information Configuration：";
+"Client Name："                           = "Client Name：";
+"User Name："                           = "User Name：";
+"Password："                           = "Password：";
+"Cluster Network Configuration："                           = "Cluster Network Configuration：";
+"Network Protocol："                           = "Network Protocol：";
+"Cluster Endpoint："                           = "Cluster Endpoint：";
+"TrustedCAFile:  未选择任何文件"                           = "TrustedCAFile: No file selected";
+"KeyFile:  未选择任何文件"                           = "KeyFile: No file selected";
+"CertFile:  未选择任何文件"                           = "CertFile: No file selected";
+
+"Timeout Setting Configuration (seconds)："                             = "Timeout Setting Configuration (seconds)：";
+"Request Timeout："                              = "Request Timeout：";
+"Dial Timeout："                           = "Dial Timeout：";
+"Dial Keep Alive Time："                           = "Dial Keep Alive Time：";
+"Dial Keep Alive Timeout："                             = "Dial Keep Alive Timeout：";
+"Auto Sync Interval："                             = "Auto Sync Interval：";
+"Miscellaneous："                             = "Miscellaneous：";
+"Auto create client name?"                             = "Auto create client name?";
+"Reschedule Pings？"                              = "Reschedule Pings？";
+"Clean Session?"                           = "Clean Session?";
+"Auto connect on app launch?"                           = "Auto connect on app launch?";
+
+
+//home
+"服务名称"                              = "Service Name";
+"节点地址"                           = "Node Address";
+"连接状态"                           = "Connection status";
+"Scuess"                             = "Scuess";
+"Failed"                             = "Failed";
+"Delete"                             = "Delete";
+"Cancle"                             = "Cancel";
+"The connection to the server was lost."                             = "The connection to the server was lost.";
+"Want to modify etcd service data?"                             = "Want to modify etcd service data?";
+
+
+
+// about
+"Contact Us"                              = "Contact Us";
+"If you have feature requests, custom app requirements or bugs, contact us :"                           = "If you have feature requests, custom app requirements or bugs, contact us :";
+"Download"                           = "Download";
+"App for Mac,Window and Linux"                             = "App for Mac";
+"Documentation"                             = "Documentation";
+"Learn more about etcdWp features and turorials."                             = "Learn more about etcdWp features and turorials.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"                             = "MediaGB is a network video platform based on the GB28181 standard, which supports NAT traversal, and supports IPC, NVR, DVR access of brands such as Hikvision, Dahua, and Uniview. Support rtsp/rtmp and other video streaming, stream forwarding to the national standard platform.";
+"推荐 MediaGB"                             = "Recommended MediaGB";
+"Learn More"                             = "Learn More";
+"（已发版）"                           = "(released)";
+"（研发中）"                           = "(under development)";
+"Workpieces 官方开发社区和组织仓库"                           = "Workpieces official development community and organization repository";
+"Workpieces LLC 官网"                           = "Workpieces LLC official website";
+
+
+
+"访问官网"                             = "Website";
+"意见反馈"                             = "Feedback";
+"粘贴"                                = "paste";
+"键值操作"                             = "Key value operation";
+"集群状态"                             = "Cluster status";
+"查看键值详情"                             = "View key value details";
+"复制key值"                             = "Copy key value";
+"删除键值"                             = "Delete key value";
+"更新键值"                             = "Update Key Values";
+"复制value值"                             = "Copy Value";
+"Promotes集群成员"                             = "Promotes cluster members";
+"上一页"                             = "Previous page";
+"下一页"                             = "next page";
+"键值不能输入为空"                             = "Key value cannot be entered as null";
+"复制成员"                             = "Copy Members";
+"删除成员"                             = "Delete Members";
+"成员id输入有误"                             = "Incorrect member ID input";
+"提升成员"                             = "Promote Members";
+"成员（Members）"                             = "Members";
+"成员地址输入有误"                             = "成员地址输入有误";
+"链接状态: 正常"                             = "Link status: normal";
+"链接状态: 异常"                             = "Link Status: Exception";
+"刷新加载"                             = "Refresh Load";
+"清空键值"                             = "Empty key value";
+"查询"                             = "query";
+"确定"                             = "Submit";
+"平铺结构"                             = "Tile Structure";
+"树形结构"                             = "Tree Structure";
+"创建成员"                             = "Create Members";
+"修改成员"                             = "Modify Members";
+"创建键值"                                = "Create key value";
+"键值前缀删除"                                = "Key prefix deletion";
+"租约管理"                             = "Lease Management";
+"角色管理"                             = "Role Management";
+"用户管理"                             = "User Management";
+"开启认证"                             = "Turn on authentication";
+
+//
+"请输入键值前缀"                                = "Please enter key prefix";
+"请输入前缀key"                             = "Please enter prefix key";
+"创建角色"                             = "Create roles";
+"请输入角色"                             = "Please enter a role";
+"关闭"                             = "Close";
+"移除"                                = "remove";
+"存活一次"                                = "Keep Once";
+"请输入key"                                = "Please enter key";
+
+"请输入时间"                                = "Please enter a time";
+"请输入Value"                                = "Please enter Value";
+"输入时间错误，请重新输入"                                = "Error entering time, please re-enter";
+"创建用户"                                = "Create User";
+"创建密码"                                = "Create password";
+"请输入密码"                                = "Please input a password";
+"用户操作错误"                                = "User operation error";
+
+"创建集群成员"                                = "create cluster member";
+"更新集群成员"                                = "update cluster member";
+"修改后节点地址:"                                = "modified node address: ";
+"节点地址: "                                = "node address: ";
+"修改前节点id: "                                = "node ID before modification: ";
+"节点id: "                                = "node ID:";
+"当前页:  %lld  "                                = "current page:  %lld  ";
+"成员总数:  %lld "                                = "Total number of members:  %lld ";
+"服务地址：%@"                                   = "Service Address：%@";
+"总数:  %lld  "                                   = "Total:  %lld  ";
+"客户端： %@"                                   = "Client： %@";
+"节点： %@"                                   = "Node： %@";
+"名称： %@"                                  = "Name： %@";
