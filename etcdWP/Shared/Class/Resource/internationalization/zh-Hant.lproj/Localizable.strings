@@ -1,0 +1,158 @@
+/*
+  Localizable.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+"批量导出"                   = "批量导出";
+"批量导入"                   = "批量导入";
+"关闭服务"                   = "关闭服务";
+"开启服务"                   = "开启服务";
+"保存目录不能为空"             = "保存目录不能为空";
+
+
+"创建ETCD客户端"              = "创建ETCD客户端";
+"Home"                      = "首页";
+"About"                      = "关于";
+
+
+//Tip
+"开启认证失败"                     = "开启认证失败";
+"The network connection is abnormal, please check the relevant configuration ?"                     = "网络连接异常，请检查相关配置？";
+"保存失败"                        = "保存失败";
+"输入错误，请重新输入"                     = "输入错误，请重新输入";
+"操作角色错误"                     = "操作角色错误";
+"操作租约错误"                     = "操作租约错误";
+"操作用户错误"                     = "操作用户错误";
+
+//配置
+"ETCD CLUSTER V3"                  = "ETCD CLUSTER V3";
+"通用设置"                           = "通用设置";
+"Cancel"                           = "取消";
+"Default User Information Configuration："                           = "默认用户信息配置：";
+"Client Name："                           = "客户名称：";
+"User Name："                           = "用户名：";
+"Password："                           = "密码：";
+"Cluster Network Configuration："                           = "网络配置：";
+"Network Protocol："                           = "网络协议：";
+"Cluster Endpoint："                           = "群集结点：";
+"TrustedCAFile:  未选择任何文件"                           = "TrustedCAFile:  未选择任何文件";
+"KeyFile:  未选择任何文件"                           = "KeyFile:  未选择任何文件";
+"CertFile:  未选择任何文件"                           = "CertFile:  未选择任何文件";
+
+"Timeout Setting Configuration (seconds)："                             = "超时设置配置（秒）：";
+"Request Timeout："                              = "请求超时：";
+"Dial Timeout："                           = "超时时间：";
+"Dial Keep Alive Time："                           = "保持活动时间：";
+"Dial Keep Alive Timeout："                             = "保持活动超时：";
+"Auto Sync Interval："                             = "自动同步间隔：";
+"Miscellaneous："                             = "其他配置：";
+"Auto create client name?"                             = "是否自动创建客户端名称？";
+"Reschedule Pings？"                              = "重新ping";
+"Clean Session?"                           = "清理会话？";
+"Auto connect on app launch?"                           = "应用程序启动时自动连接？";
+
+
+
+
+//home
+"服务名称"                              = "服务名称";
+"节点地址"                           = "节点地址";
+"连接状态"                           = "连接状态";
+"Scuess"                             = "成功";
+"Failed"                             = "失败";
+"Delete"                             = "删除";
+"Cancle"                             = "取消";
+"The connection to the server was lost."                             = "与服务器的连接丢失。";
+"Want to modify etcd service data?"                             = "是否要修改etcd服务数据？";
+
+// about
+"Contact Us"                              = "联系我们";
+"If you have feature requests, custom app requirements or bugs, contact us :"                           = "如果您有功能请求、自定义应用程序要求或错误，请与我们联系：";
+"Download"                           = "下载";
+"App for Mac,Window and Linux"                             = "适用于Mac的应用程序";
+"Documentation"                             = "文档";
+"Learn more about etcdWp features and turorials."                             = "了解有关etcdWp功能和turorials的更多信息。";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"                             = "MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。";
+"推荐 MediaGB"                             = "推荐 MediaGB";
+"Learn More"                             = "更多";
+"（已发版）"                           = "（已发版）";
+"（研发中）"                           = "（研发中）";
+"Workpieces 官方开发社区和组织仓库"                           = "Workpieces 官方开发社区和组织仓库";
+"Workpieces LLC 官网"                           = "Workpieces LLC 官网";
+
+//
+
+"访问官网"                             = "访问官网";
+"意见反馈"                             = "意见反馈";
+"粘贴"                             = "粘贴";
+"键值操作"                             = "键值操作";
+"集群状态"                             = "集群状态";
+"查看键值详情"                             = "查看键值详情";
+"复制key值"                             = "复制key值";
+"删除键值"                             = "删除键值";
+"更新键值"                             = "更新键值";
+"复制value值"                             = "复制value值";
+"Promotes集群成员"                             = "Promotes集群成员";
+"上一页"                             = "上一页";
+"下一页"                             = "下一页";
+"键值不能输入为空"                             = "键值不能输入为空";
+"复制成员"                             = "复制成员";
+"删除成员"                             = "删除成员";
+"成员id输入有误"                             = "成员id输入有误";
+"提升成员"                             = "提升成员";
+"成员（Members）"                             = "成员（Members）";
+"成员地址输入有误"                             = "成员地址输入有误";
+"链接状态: 正常"                             = "链接状态: 正常";
+"链接状态: 异常"                             = "链接状态: 异常";
+"刷新加载"                             = "刷新加载";
+"清空键值"                             = "清空键值";
+"查询"                                = "查询";
+"确定"                                = "确定";
+"平铺结构"                             = "平铺结构";
+"树形结构"                             = "树形结构";
+"创建成员"                             = "创建成员";
+"修改成员"                             = "修改成员";
+"创建键值"                                = "创建键值";
+"键值前缀删除"                                = "键值前缀删除";
+"租约管理"                             = "租约管理";
+"角色管理"                             = "角色管理";
+"用户管理"                             = "用户管理";
+"开启认证"                             = "开启认证";
+
+//
+"请输入键值前缀"                                = "请输入键值前缀";
+"请输入前缀key"                             = "请输入前缀key";
+"创建角色"                             = "创建角色";
+"请输入角色"                             = "请输入角色";
+"关闭"                             = "关闭";
+"移除"                                = "移除";
+"存活一次"                                = "存活一次";
+"请输入key"                                = "请输入key";
+
+"请输入时间"                                = "请输入时间";
+"请输入Value"                                = "请输入Value";
+"输入时间错误，请重新输入"                                = "输入时间错误，请重新输入";
+"创建用户"                                = "创建用户";
+"创建密码"                                = "创建密码";
+"请输入密码"                                = "请输入密码";
+"用户操作错误"                                = "用户操作错误";
+
+//
+"创建集群成员"                                = "创建集群成员";
+"更新集群成员"                                = "更新集群成员";
+"修改后节点地址:"                                = "修改后节点地址:";
+"节点地址: "                                = "节点地址: ";
+"修改前节点id: "                                = "修改前节点id: ";
+"节点id: "                                = "节点id: ";
+
+
+"当前页:  %lld  "                                = "当前页:  %lld  ";
+"成员总数:  %lld "                                = "成员总数:  %lld ";
+"服务地址：%@"                                   = "服务地址:  %@ ";
+"总数:  %lld  "                                   = "总数:  %lld  ";
+"客户端： %@"                                   = "客户端： %@";
+"节点： %@"                                   = "节点： %@";
+"名称： %@"                                  = "名称： %@";
+

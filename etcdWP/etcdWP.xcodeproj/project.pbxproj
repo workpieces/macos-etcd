@@ -213,6 +213,21 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D02C9CE92847097C001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D02C9CEA2847097D001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D02C9CEB2847097D001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ko; path = ko.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D02C9CEC28470E23001B838A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D02C9CED28470E23001B838A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D02C9CEE28470E23001B838A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D02C9CEF28470F1B001B838A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D02C9CF028470F1C001B838A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D02C9CF128470F1C001B838A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = de; path = de.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D02C9CF2284710CD001B838A /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D02C9CF3284710CD001B838A /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D02C9CF4284710CE001B838A /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "fr-CA"; path = "fr-CA.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D02C9CF528471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D02C9CF628471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
 		D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVOperateContentView.swift; sourceTree = "<group>"; };
 		D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVGridContentView.swift; sourceTree = "<group>"; };
@@ -731,6 +746,11 @@
 				"en-AU",
 				"en-IN",
 				"en-GB",
+				ko,
+				"zh-Hant",
+				de,
+				"fr-CA",
+				ar,
 			);
 			mainGroup = D021EF9C281F5AB500992294;
 			packageReferences = (
@@ -963,6 +983,11 @@
 				D06C172E283A88910033CBD9 /* en-AU */,
 				D06C1731283A88950033CBD9 /* en-IN */,
 				D06C1734283A88990033CBD9 /* en-GB */,
+				D02C9CE92847097C001B838A /* ko */,
+				D02C9CEC28470E23001B838A /* zh-Hant */,
+				D02C9CEF28470F1B001B838A /* de */,
+				D02C9CF2284710CD001B838A /* fr-CA */,
+				D02C9CF528471126001B838A /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -977,6 +1002,11 @@
 				D06C172F283A88910033CBD9 /* en-AU */,
 				D06C1732283A88950033CBD9 /* en-IN */,
 				D06C1735283A88990033CBD9 /* en-GB */,
+				D02C9CEA2847097D001B838A /* ko */,
+				D02C9CED28470E23001B838A /* zh-Hant */,
+				D02C9CF028470F1C001B838A /* de */,
+				D02C9CF3284710CD001B838A /* fr-CA */,
+				D02C9CF628471126001B838A /* ar */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -991,6 +1021,11 @@
 				D06C1730283A88910033CBD9 /* en-AU */,
 				D06C1733283A88950033CBD9 /* en-IN */,
 				D06C1736283A88990033CBD9 /* en-GB */,
+				D02C9CEB2847097D001B838A /* ko */,
+				D02C9CEE28470E23001B838A /* zh-Hant */,
+				D02C9CF128470F1C001B838A /* de */,
+				D02C9CF4284710CE001B838A /* fr-CA */,
+				D02C9CF728471126001B838A /* ar */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -1192,7 +1227,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 93C2552H5C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1209,7 +1244,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.7;
+				MARKETING_VERSION = 1.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.etcdwp.app;
 				PRODUCT_NAME = etcdWP;
 				SDKROOT = macosx;
@@ -1226,7 +1261,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 93C2552H5C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1243,7 +1278,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.7;
+				MARKETING_VERSION = 1.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.etcdwp.app;
 				PRODUCT_NAME = etcdWP;
 				SDKROOT = macosx;
