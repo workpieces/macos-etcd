@@ -45,6 +45,10 @@ struct HomeMainView: View {
                 }
             }).onDisappear {
                 self.timer.upstream.connect().cancel()
+            }.onAppear{
+                Task {
+                   await homeData.WatchListenEtcdClient()
+                }
             }
         }
     }
