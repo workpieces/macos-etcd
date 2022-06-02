@@ -8,7 +8,7 @@
 import Foundation
 import MacosEtcd
 
-struct EtcdClientOption: Identifiable,Codable {
+struct EtcdClientOption: Identifiable,Codable,Equatable {
     var id = UUID()
     var endpoints: [String] = ["127.0.0.1:2379"]
     var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
@@ -30,7 +30,7 @@ struct EtcdClientOption: Identifiable,Codable {
     var updateAt: Date = Date()
     var status: Bool = false
     var etcdClient: EtcdKVClient?
-    
+    var checked:Bool = false
     enum CodingKeys: String, CodingKey {
         case endpoints
         case clientName
