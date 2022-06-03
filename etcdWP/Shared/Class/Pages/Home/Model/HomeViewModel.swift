@@ -148,6 +148,7 @@ class HomeViewModel: ObservableObject {
     
     // 监听服务
     // copy from https://stackoverflow.com/questions/71849684/swiftui-concurrency-run-activity-only-on-background-thread
+    //https://juejin.cn/post/7025261081291407373#heading-3
     func WatchListenEtcdClient() async {
         Task.detached(priority: .utility) {
             for (idx,item) in self.ectdClientList.enumerated() {

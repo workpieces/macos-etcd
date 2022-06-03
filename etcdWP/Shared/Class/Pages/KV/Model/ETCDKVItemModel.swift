@@ -182,11 +182,11 @@ extension ItemStore {
     }
     
     // 开启服务
-    //https://juejin.cn/post/7025261081291407373#heading-3
+    //
     func Open() throws {
         guard c.etcdClient != nil && c.etcdClient!.ping() else {
             Task.detached(priority: .utility) {
-                let client =  EtcdNewKVClient(self.c.endpoints.joined(separator: ","),
+                async   let client =  EtcdNewKVClient(self.c.endpoints.joined(separator: ","),
                                               self.c.username,
                                               self.c.password,
                                               self.c.certFile,
@@ -198,13 +198,11 @@ extension ItemStore {
                                               self.c.dialKeepAliveTimeout ,
                                               self.c.autoSyncInterval ,
                                               nil)
-                if client == nil {
+                if await client == nil {
                     throw NSError.init(domain: "开启服务失败，请重试", code: 400)
                 }
-                await MainActor.run {
-                    self.c.etcdClient = client
-                    self.c.status = true
-                }
+                await self.c.etcdClient = client
+                await self.c.status = true
             }
             return
         }
