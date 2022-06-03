@@ -13,6 +13,7 @@ class HomeViewModel: ObservableObject {
     let userDefaultsKey: String = "com.etcdclient.list"
     @Published var ectdClientList: [EtcdClientOption] = []
     @Published var allStart:Bool = false
+    @Published var selectedItems:[EtcdClientOption] = []
     init() {
         // 初始化服务UserDefault
         let item  = self.GetUserDefaults()

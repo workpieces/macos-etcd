@@ -12,7 +12,6 @@ struct HomeMainView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var isLinkActive = false
     @State private var seletcd = false
-    @State  var selectedItems: [EtcdClientOption] = []
     let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
@@ -23,20 +22,27 @@ struct HomeMainView: View {
                     .toggleStyle(.checkbox)
                     .padding(.bottom,3)
                     .onChange(of: seletcd) { newValue in
-                        selectedItems.removeAll()
-                        homeData.ectdClientList.forEach { (vaule) in
-                            var tempValue = vaule
-                            tempValue.checked = newValue
-                            selectedItems.append(tempValue)
+                        homeData.selectedItems.removeAll()
+                        if newValue {
+                            homeData.ectdClientList.forEach { (vaule) in
+                                var tempValue = vaule
+                                tempValue.checked = newValue
+                                homeData.selectedItems.append(tempValue)
+                            }
+                        }else{
+                            homeData.ectdClientList.forEach { (vaule) in
+                                var tempValue = vaule
+                                tempValue.checked = newValue
+                            }
                         }
                     }
-                if selectedItems.count != 0 {
+                if homeData.selectedItems.count != 0 {
                     Button {
-                        selectedItems.forEach { item in
+                        homeData.selectedItems.forEach { item in
                             let index = self.homeData.ectdClientList.index(of: item)
                             self.homeData.Delete(id:self.homeData.GetUUID(idx:index!))
                         }
-                        selectedItems.removeAll()
+                        homeData.selectedItems.removeAll()
                         self.seletcd.toggle();
                     } label: {
                         HStack {
@@ -66,7 +72,7 @@ struct HomeMainView: View {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
                             PushView(destination: ETCDTabBarContentView()
                                 .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item]))){
-                                    CardItemView(options: self.homeData.ectdClientList[item], selectedItems:$selectedItems,idx: item)
+                                    CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }                       
                     }
