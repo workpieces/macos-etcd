@@ -182,6 +182,7 @@ extension ItemStore {
     }
     
     // 开启服务
+    //https://juejin.cn/post/7025261081291407373#heading-3
     func Open() throws {
         guard c.etcdClient != nil && c.etcdClient!.ping() else {
             Task.detached(priority: .utility) {
