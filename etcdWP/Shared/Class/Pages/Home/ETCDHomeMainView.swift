@@ -30,12 +30,13 @@ struct HomeMainView: View {
                             selectedItems.append(tempValue)
                         }
                     }
-                if seletcd && (selectedItems.count != 0) {
+                if selectedItems.count != 0 {
                     Button {
                         selectedItems.forEach { item in
                             let index = self.homeData.ectdClientList.index(of: item)
                             self.homeData.Delete(id:self.homeData.GetUUID(idx:index!))
                         }
+                        selectedItems.removeAll()
                         self.seletcd.toggle();
                     } label: {
                         HStack {

@@ -12,9 +12,28 @@ struct CardItemView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var showAlert = false
     @State private var pushEdit = false
-    @State  var options: EtcdClientOption
+    @State var options: EtcdClientOption
     @Binding var selectedItems: [EtcdClientOption]
+    @State private var selected:Bool = false;
     var idx : Int
+    
+//    private var adapterValue: Binding<Bool> {
+//        Binding<Bool>(get: {
+//            return self.selected
+//        }, set: {
+//            self.didModify()
+//            self.selected = $0
+//        })
+//    }
+    
+    private func didModify() {
+        if selectedItems.contains(options){
+            self.selected = true
+        }else{
+            self.selected = false
+        }
+        print("\(self.selected)")
+    }
     var body: some View {
         VStack {
             HStack(alignment: .top) {
@@ -56,22 +75,22 @@ struct CardItemView: View {
                     HStack(alignment: .center, spacing: 10){
                         Text("服务名称")
                             .withDefaultContentTitle(fontColor: .white)
-                        if (selectedItems.count != 0) {
-                            Toggle("", isOn: $selectedItems[selectedItems.firstIndex(of: options) ?? 0].checked)
-                                .toggleStyle(.checkbox)
-                                .padding(.bottom,3)
-                                .onChange(of:options.checked) { newValue in
-                                    options.checked = newValue
+                        Toggle("", isOn: $selected)
+                            .toggleStyle(.checkbox)
+                            .padding(.bottom,3)
+                            .onChange(of:selected) { newValue in
+                                options.checked = newValue
+                                if newValue {
+                                    if selectedItems .contains(options){
+                                        return
+                                    }
+                                    selectedItems.append(options)
+                                }else{
+                                    if selectedItems.contains(options){
+                                        selectedItems.remove(at:selectedItems.index(of: options)!)
+                                    }
                                 }
-                        }else{
-                            Toggle("", isOn: $options.checked)
-                                .toggleStyle(.checkbox)
-                                .padding(.bottom,3)
-                                .onChange(of:options.checked) { newValue in
-                                    options.checked = newValue
-                                }
-                        }
-
+                            }
                     }
                     Text(options.clientName)
                         .withDefaultSubContentTitle(fontColor: .white)
@@ -103,9 +122,6 @@ struct CardItemView: View {
         .frame( height: 220)
         .background(Color.init(hex: "#00FFFF").opacity(0.15))
         .cornerRadius(DefaultRadius)
-        .onAppear{
-            print("-----------\(options.checked)")
-        }
     }
 }
 
