@@ -12,6 +12,7 @@ struct HomeMainView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var isLinkActive = false
     @State private var seletcd = false
+    @State  var selectedItems: [EtcdClientOption] = []
     let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
@@ -21,8 +22,22 @@ struct HomeMainView: View {
                 Toggle("全选"  , isOn: $seletcd)
                     .toggleStyle(.checkbox)
                     .padding(.bottom,3)
-                if seletcd {
-                    Button { } label: {
+                    .onChange(of: seletcd) { newValue in
+                        selectedItems.removeAll()
+                        homeData.ectdClientList.forEach { (vaule) in
+                            var tempValue = vaule
+                            tempValue.checked = newValue
+                            selectedItems.append(tempValue)
+                        }
+                    }
+                if seletcd && (selectedItems.count != 0) {
+                    Button {
+                        selectedItems.forEach { item in
+                            let index = self.homeData.ectdClientList.index(of: item)
+                            self.homeData.Delete(id:self.homeData.GetUUID(idx:index!))
+                        }
+                        self.seletcd.toggle();
+                    } label: {
                         HStack {
                             Text(LocalizedStringKey("全部删除"))
                                 .withDefaultContentTitle(fontSize: 10)
@@ -50,7 +65,7 @@ struct HomeMainView: View {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
                             PushView(destination: ETCDTabBarContentView()
                                 .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item]))){
-                                    CardItemView(isOn:$seletcd, options: self.homeData.ectdClientList[item],idx: item)
+                                    CardItemView(options: self.homeData.ectdClientList[item], selectedItems:$selectedItems,idx: item)
                             }
                         }                       
                     }

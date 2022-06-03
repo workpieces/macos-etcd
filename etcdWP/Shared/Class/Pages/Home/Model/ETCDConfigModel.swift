@@ -53,6 +53,10 @@ struct EtcdClientOption: Identifiable,Codable,Equatable {
         case status
     }
     
+    static func == (lhs: Self, rhs: Self) -> Bool{
+        lhs.id == rhs.id
+    }
+    
     func getEndpoints () -> [String]{
         
         var newEndpoints :[String] = []

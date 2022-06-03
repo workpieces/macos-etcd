@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct CardItemView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var showAlert = false
     @State private var pushEdit = false
-    @Binding <Bool> var isOn:Bool
-    @State private var selted:Bool = false
-    var  options: EtcdClientOption
+    @State  var options: EtcdClientOption
+    @Binding var selectedItems: [EtcdClientOption]
     var idx : Int
     var body: some View {
         VStack {
@@ -56,9 +56,22 @@ struct CardItemView: View {
                     HStack(alignment: .center, spacing: 10){
                         Text("服务名称")
                             .withDefaultContentTitle(fontColor: .white)
-                        Toggle("", isOn: $selted)
-                            .toggleStyle(.checkbox)
-                            .padding(.bottom,3)
+                        if (selectedItems.count != 0) {
+                            Toggle("", isOn: $selectedItems[selectedItems.firstIndex(of: options) ?? 0].checked)
+                                .toggleStyle(.checkbox)
+                                .padding(.bottom,3)
+                                .onChange(of:options.checked) { newValue in
+                                    options.checked = newValue
+                                }
+                        }else{
+                            Toggle("", isOn: $options.checked)
+                                .toggleStyle(.checkbox)
+                                .padding(.bottom,3)
+                                .onChange(of:options.checked) { newValue in
+                                    options.checked = newValue
+                                }
+                        }
+
                     }
                     Text(options.clientName)
                         .withDefaultSubContentTitle(fontColor: .white)
@@ -91,9 +104,7 @@ struct CardItemView: View {
         .background(Color.init(hex: "#00FFFF").opacity(0.15))
         .cornerRadius(DefaultRadius)
         .onAppear{
-            if isOn {
-                self.selted.toggle();
-            }
+            print("-----------\(options.checked)")
         }
     }
 }
