@@ -152,9 +152,12 @@ struct ETCDConfigView: View {
                     .cornerRadius(10.0)
                     .onTapGesture {
                         do{
-                            try self.homeData.Register(item: config)
-                            self.homeData.Append(data: config)
-                            self.isPopView.toggle()
+                            Task{
+                                try await self.homeData.Register(item: config)
+                                try await self.homeData.Append(data: config)
+                                 self.isPopView.toggle()
+                            }
+
                         }catch {
                             print(error.localizedDescription)
                             self.isToast.toggle()

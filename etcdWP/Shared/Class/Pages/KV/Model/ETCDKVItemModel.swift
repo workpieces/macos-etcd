@@ -182,7 +182,6 @@ extension ItemStore {
     }
     
     // 开启服务
-    //
     func Open() throws {
         guard c.etcdClient != nil && c.etcdClient!.ping() else {
             Task.detached(priority: .utility) {
