@@ -58,7 +58,7 @@ struct ETCDHomeContentView: View {
             self.homeData.ectdClientList.removeAll()
         }
         .onAppear{
-            Task {
+            Task  {
                 await homeData.WatchListenEtcdClient()
             }
         }

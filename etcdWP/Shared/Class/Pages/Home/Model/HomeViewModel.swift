@@ -14,7 +14,7 @@ class HomeViewModel: ObservableObject {
     @Published var ectdClientList: [EtcdClientOption] = []
     @Published var allStart:Bool = false
     @Published var selectedItems:[EtcdClientOption] = []
-    init() {
+    init()  {
         // 初始化服务UserDefault
         let item  = self.GetUserDefaults()
         for data in item {
@@ -79,12 +79,12 @@ class HomeViewModel: ObservableObject {
     
     // 关闭单个服务 （根据uuid）
     func CloseUseUUID(uuid : String) throws {
-            for (idx,item) in self.ectdClientList.enumerated() {
-                if item.id.uuidString == uuid {
-                    try item.etcdClient?.close()
-                    self.ectdClientList[idx].etcdClient  = nil
-                }
+        for (idx,item) in self.ectdClientList.enumerated() {
+            if item.id.uuidString == uuid {
+                try item.etcdClient?.close()
+                self.ectdClientList[idx].etcdClient  = nil
             }
+        }
     }
     
     // 关闭服务
@@ -131,19 +131,19 @@ class HomeViewModel: ObservableObject {
     // 注册服务
     func Register(item : EtcdClientOption) async throws {
         async let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
-                                 item.username,
-                                 item.password,
-                                 item.certFile,
-                                 item.keyFile,
-                                 item.caFile,
-                                 item.requestTimeout ,
-                                 item.dialTimeout ,
-                                 item.dialKeepAliveTime ,
-                                 item.dialKeepAliveTimeout ,
-                                 item.autoSyncInterval ,
-                                 nil)
+                                       item.username,
+                                       item.password,
+                                       item.certFile,
+                                       item.keyFile,
+                                       item.caFile,
+                                       item.requestTimeout ,
+                                       item.dialTimeout ,
+                                       item.dialKeepAliveTime ,
+                                       item.dialKeepAliveTimeout ,
+                                       item.autoSyncInterval ,
+                                       nil)
         
- 
+        
         
         if await c == nil {
             throw NSError.init(domain: "服务连接异常", code: 400)
@@ -160,39 +160,39 @@ class HomeViewModel: ObservableObject {
     // 监听服务
     // copy from https://stackoverflow.com/questions/71849684/swiftui-concurrency-run-activity-only-on-background-thread
     //https://juejin.cn/post/7025261081291407373#heading-3
+    @MainActor
     func WatchListenEtcdClient() async {
-        Task.detached(priority: .utility) {
-            for (idx,item) in self.ectdClientList.enumerated() {
-                if item.etcdClient == nil{
-                    // todo  卡顿
-                    async   let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
-                                             item.username,
-                                             item.password,
-                                             item.certFile,
-                                             item.keyFile,
-                                             item.caFile,
-                                             item.requestTimeout ,
-                                             item.dialTimeout ,
-                                             item.dialKeepAliveTime ,
-                                             item.dialKeepAliveTimeout ,
-                                             item.autoSyncInterval ,
-                                             nil)
-                    if await c != nil {
-                        // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
-                         let ok : Bool = await self.Ping(c: c!)
-                        await self.ectdClientList[idx].etcdClient = c
-                        await  self.ectdClientList[idx].status = ok
-                    }else{
-                        await self.ectdClientList[idx].status  = false
-                    }
+        for (idx,item) in self.ectdClientList.enumerated() {
+            if item.etcdClient == nil{
+                // todo  卡顿
+                async   let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+                                                 item.username,
+                                                 item.password,
+                                                 item.certFile,
+                                                 item.keyFile,
+                                                 item.caFile,
+                                                 item.requestTimeout ,
+                                                 item.dialTimeout ,
+                                                 item.dialKeepAliveTime ,
+                                                 item.dialKeepAliveTimeout ,
+                                                 item.autoSyncInterval ,
+                                                 nil)
+                if await c != nil {
+                    // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
+                    let ok : Bool = await self.Ping(c: c!)
+                     await self.ectdClientList[idx].etcdClient = c
+                     self.ectdClientList[idx].status = ok
                 }else{
-                     let ok : Bool = self.Ping(c: item.etcdClient!)
-                    // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
-                    await self.ectdClientList[idx].etcdClient = nil
-                    await self.ectdClientList[idx].status = ok
+                     self.ectdClientList[idx].status  = false
                 }
-                
+              
+            }else{
+                let ok : Bool = self.Ping(c: item.etcdClient!)
+                // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
+                 self.ectdClientList[idx].etcdClient = nil
+                 self.ectdClientList[idx].status = ok
             }
+            
         }
     }
 }
