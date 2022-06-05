@@ -69,10 +69,10 @@ struct HomeMainView: View {
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
-                        ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
+                        ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { index in
                             PushView(destination: ETCDTabBarContentView()
-                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item])),isActive: $isLinkActive){
-                                    CardItemView(options: self.homeData.ectdClientList[item],idx: item)
+                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[index])),isActive: $isLinkActive){
+                                    CardItemView(options: self.homeData.ectdClientList[index],idx: index)
                             }
                         }                       
                     }

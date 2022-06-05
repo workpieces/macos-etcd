@@ -8,7 +8,7 @@
 import Foundation
 import MacosEtcd
 
-struct EtcdClientOption: Identifiable,Codable,Equatable {
+struct EtcdClientOption: Identifiable,Codable,Equatable,Hashable {
     var id = UUID()
     var endpoints: [String] = ["127.0.0.1:2379"]
     var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
@@ -51,6 +51,14 @@ struct EtcdClientOption: Identifiable,Codable,Equatable {
         case createAt
         case updateAt
         case status
+    }
+    
+    var hashValue: Int {
+        return id.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool{
