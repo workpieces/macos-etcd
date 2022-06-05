@@ -22,7 +22,6 @@ struct CardItemView: View {
         }else{
             self.selected = false
         }
-        print("\(self.selected)")
     }
     var body: some View {
         VStack {

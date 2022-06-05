@@ -71,6 +71,7 @@ class ItemStore: ObservableObject {
     @Published var showFormat: ShowFormat = .List
     init(c: EtcdClientOption) {
         self.c = c
+
         self.realeadData = KVRealoadData.init(ks: [], mms: [],currentKv: nil)
     }
 }
@@ -201,7 +202,7 @@ extension ItemStore {
                     throw NSError.init(domain: "开启服务失败，请重试", code: 400)
                 }
                 await self.c.etcdClient = client
-                await self.c.status = true
+                 self.c.status = true
             }
             return
         }
@@ -235,6 +236,7 @@ extension ItemStore {
             if resp?.status != 200 {
                 return []
             }
+    
             return resp?.datas ?? []
         }
         return []
