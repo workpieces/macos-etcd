@@ -14,7 +14,6 @@ var screen = NSScreen.main!.visibleFrame
 struct ETCDHomeContentView: View {
     @StateObject var homeData = HomeViewModel()
     @ObservedObject var tableData = HomeTabSelectModel()
-    
     let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {
         return  NavigationStackView(transitionType: .custom(.opacity)){
@@ -44,9 +43,9 @@ struct ETCDHomeContentView: View {
                 
                 ZStack(alignment: .top){
                     switch tableData.selectTab{
-                    case "Home": HomeMainView()
+                    case "Home": HomeMainView(homeData: homeData)
                     case "About": AboutView()
-                        default: HomeMainView() }
+                        default: HomeMainView(homeData: homeData) }
                 }
             }
         }

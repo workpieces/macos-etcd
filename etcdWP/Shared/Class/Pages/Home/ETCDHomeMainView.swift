@@ -9,7 +9,7 @@ import SwiftUI
 import NavigationStack
 
 struct HomeMainView: View {
-    @EnvironmentObject var homeData: HomeViewModel
+    @StateObject var homeData: HomeViewModel
     @State private var isLinkActive = false
     @State private var seletcd = false
     let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
@@ -71,7 +71,7 @@ struct HomeMainView: View {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { item in
                             PushView(destination: ETCDTabBarContentView()
-                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item]))){
+                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[item])),isActive: $isLinkActive){
                                     CardItemView(options: self.homeData.ectdClientList[item],idx: item)
                             }
                         }                       
@@ -90,11 +90,5 @@ struct HomeMainView: View {
                 }
             }
         }
-    }
-}
-
-struct HomeMainView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeMainView()
     }
 }
