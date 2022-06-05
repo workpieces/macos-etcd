@@ -20,6 +20,8 @@ struct ETCDMakeOperateKvTextContentView: View {
                     .foregroundColor(.secondary)
                     .font(.system(size: 12))
                     .lineSpacing(4)
+                    .padding(.top,10)
+                    .padding(.bottom,10)
                     .multilineTextAlignment(TextAlignment.leading)
                     .contextMenu(ContextMenu(menuItems: {
                         Button("粘贴", action: {

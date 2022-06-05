@@ -172,6 +172,7 @@ extension ItemStore {
     }
     
     func KVReaload( _ newValue:Bool){
+        //获取数据慢 
         let kd = self.GetALL()
         let md = self.MemberList()
         self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: newValue ? nil :self.realeadData.currentKv )
