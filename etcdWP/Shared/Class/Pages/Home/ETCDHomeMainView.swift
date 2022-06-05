@@ -71,7 +71,7 @@ struct HomeMainView: View {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { index in
                             PushView(destination: ETCDTabBarContentView()
-                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[index])),isActive: $isLinkActive){
+                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[index]))){
                                     CardItemView(options: self.homeData.ectdClientList[index],idx: index)
                             }
                         }                       
