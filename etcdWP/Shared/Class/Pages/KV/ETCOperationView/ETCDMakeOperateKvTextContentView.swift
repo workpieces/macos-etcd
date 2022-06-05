@@ -7,11 +7,11 @@
 
 import SwiftUI
 import TextSourceful
+import Combine
 
 struct ETCDMakeOperateKvTextContentView: View {
     @EnvironmentObject var storeObj : ItemStore
-    @State var text:String = ""
-    
+    @State var text:String
     var body: some View {
         GeometryReader {  g in
             HStack {
@@ -36,8 +36,8 @@ struct ETCDMakeOperateKvTextContentView: View {
                             .foregroundColor(.white)
                     }
                 }
-            }.onAppear{
-                text = storeObj.realeadData.currentKv?.value ?? ""
+            }.onReceive(Just(text)) { value in
+                text =  storeObj.realeadData.currentKv?.value ?? ""
             }
         }
 

@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ETCDKVOperateContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         GeometryReader {  g in
             HStack {
-                ETCDMakeOperateKvTextContentView()
+                ETCDMakeOperateKvTextContentView(text:storeObj.realeadData.currentKv?.value ?? "")
                     .frame(width: g.size.width/2)
                 Spacer()
                 ETCDEtcdOperationView()
