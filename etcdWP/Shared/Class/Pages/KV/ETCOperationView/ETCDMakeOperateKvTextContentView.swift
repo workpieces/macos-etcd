@@ -6,38 +6,40 @@
 //
 
 import SwiftUI
+import TextSourceful
 
 struct ETCDMakeOperateKvTextContentView: View {
     @EnvironmentObject var storeObj : ItemStore
+    @State var text:String = ""
+    
     var body: some View {
-        HStack {
-            ScrollView(.vertical, showsIndicators: false) {
+        GeometryReader {  g in
+            HStack {
+                TextSourceCodeTextEditor(text: $text)
+                    .lineLimit(nil)
+                    .foregroundColor(.secondary)
+                    .font(.system(size: 12))
+                    .lineSpacing(4)
+                    .multilineTextAlignment(TextAlignment.leading)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("粘贴", action: {
+                            copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                        })
+                    }))
+                Spacer()
                 VStack {
-                    Spacer()
-                    Text(storeObj.realeadData.currentKv?.value ?? "")
-                        .lineLimit(nil)
-                        .foregroundColor(.secondary)
-                        .font(.system(size: 12))
-                        .lineSpacing(4)
-                        .multilineTextAlignment(TextAlignment.leading)
-                        .contextMenu(ContextMenu(menuItems: {
-                            Button("粘贴", action: {
-                                copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
-                            })
-                        }))
-                    Spacer()
+                    Button {
+                        copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                    } label: {
+                        Text("粘贴")
+                            .font(.system(size: 10.0))
+                            .foregroundColor(.white)
+                    }
                 }
-            }
-            Spacer()
-            VStack {
-                Button {
-                    copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
-                } label: {
-                    Text("粘贴")
-                        .font(.system(size: 10.0))
-                        .foregroundColor(.white)
-                }
+            }.onAppear{
+                text = storeObj.realeadData.currentKv?.value ?? ""
             }
         }
+
     }
 }

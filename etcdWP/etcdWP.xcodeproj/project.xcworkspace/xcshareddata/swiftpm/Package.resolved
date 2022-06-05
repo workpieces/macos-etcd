@@ -71,6 +71,15 @@
         "revision" : "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
         "version" : "5.0.1"
       }
+    },
+    {
+      "identity" : "textsourceful",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:workpieces/TextSourceful.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2b83cc55bb36cd5166ede9fda3a9d9ee54da6551"
+      }
     }
   ],
   "version" : 2
