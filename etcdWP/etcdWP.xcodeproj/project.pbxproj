@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 4454E4C6284E4AED0075986A /* TextSourceful */; };
 		5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C649ABD282FB8A90073F885 /* MacosEtcd.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
@@ -130,7 +131,6 @@
 		D0690ED72837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
 		D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
-		D093C5BB284C47C600026EB5 /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = D093C5BA284C47C600026EB5 /* TextSourceful */; };
 		D0BBCE7428391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
 		D0BBCE7528391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
 		D0BBCE8728392CA4008C175D /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = D0BBCE8628392CA4008C175D /* NavigationStack */; };
@@ -339,7 +339,7 @@
 				D0BBCE8728392CA4008C175D /* NavigationStack in Frameworks */,
 				D021F0A8281FFB2800992294 /* FilePicker in Frameworks */,
 				D021F0A5281FFADD00992294 /* SwiftyJSON in Frameworks */,
-				D093C5BB284C47C600026EB5 /* TextSourceful in Frameworks */,
+				4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */,
 				D021F09F281FFAAB00992294 /* PopupView in Frameworks */,
 				D021F093281FFA5E00992294 /* AxisTabView in Frameworks */,
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
@@ -722,7 +722,7 @@
 				D0FC0888282002DD00A74D43 /* Alamofire */,
 				D0FC088E282002FF00A74D43 /* SnapKit */,
 				D0BBCE8628392CA4008C175D /* NavigationStack */,
-				D093C5BA284C47C600026EB5 /* TextSourceful */,
+				4454E4C6284E4AED0075986A /* TextSourceful */,
 			);
 			productName = "etcdWP (macOS)";
 			productReference = D021EFAF281F5AB700992294 /* etcdWP.app */;
@@ -845,7 +845,7 @@
 				D0FC088D282002FF00A74D43 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D0BBCE8828392CDD008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
-				D093C5B9284C47C600026EB5 /* XCRemoteSwiftPackageReference "TextSourceful" */,
+				4454E4C5284E4AED0075986A /* XCRemoteSwiftPackageReference "TextSourceful" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -1547,6 +1547,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4454E4C5284E4AED0075986A /* XCRemoteSwiftPackageReference "TextSourceful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/workpieces/TextSourceful.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
@@ -1627,14 +1636,6 @@
 				version = 1.0.1;
 			};
 		};
-		D093C5B9284C47C600026EB5 /* XCRemoteSwiftPackageReference "TextSourceful" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:workpieces/TextSourceful.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.2;
-			};
-		};
 		D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
@@ -1686,6 +1687,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4454E4C6284E4AED0075986A /* TextSourceful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4454E4C5284E4AED0075986A /* XCRemoteSwiftPackageReference "TextSourceful" */;
+			productName = TextSourceful;
+		};
 		D021F08F281FFA5100992294 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */;
@@ -1735,11 +1741,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */;
 			productName = FilePicker;
-		};
-		D093C5BA284C47C600026EB5 /* TextSourceful */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D093C5B9284C47C600026EB5 /* XCRemoteSwiftPackageReference "TextSourceful" */;
-			productName = TextSourceful;
 		};
 		D0BBCE8628392CA4008C175D /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;

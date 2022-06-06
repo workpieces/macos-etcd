@@ -69,6 +69,7 @@ struct HomeMainView: View {
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
+                        //会自动刷新恢复正常界面，push过去之后。。。。
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { index in
                             PushView(destination: ETCDTabBarContentView()
                                 .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[index]))){

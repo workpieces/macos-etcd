@@ -175,6 +175,9 @@ extension ItemStore {
         //获取数据慢 
         let kd = self.GetALL()
         let md = self.MemberList()
+        
+        print("kd---------\(kd),md ---------\(md)")
+        
         self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: newValue ? nil :self.realeadData.currentKv )
         if self.realeadData.kvCount > self.realeadData.offset {
             let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
@@ -231,6 +234,9 @@ extension ItemStore {
 extension ItemStore {
     func GetALL() -> [KVData] {
         let result = c.etcdClient?.getALL()
+        
+        print("c---------\(c)--------------------etcdClient:result-----%s",result)
+    
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
@@ -453,6 +459,8 @@ extension ItemStore {
 extension ItemStore {
     func MemberList() -> [KVData] {
         let result = c.etcdClient?.memberList()
+        
+        print("c---------\(c)--------------------MemberList:result-----%s",result)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER")
