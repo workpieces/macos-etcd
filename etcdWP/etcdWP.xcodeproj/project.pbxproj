@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 4454E4C6284E4AED0075986A /* TextSourceful */; };
+		44ADC8B9284F9321003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8B8284F9321003B32C3 /* SwiftUIRouter */; };
+		44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8BB284F9331003B32C3 /* SwiftUIRouter */; };
 		5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C649ABD282FB8A90073F885 /* MacosEtcd.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
@@ -320,6 +322,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */,
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
 				5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */,
@@ -338,6 +341,7 @@
 				D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */,
 				D0BBCE8728392CA4008C175D /* NavigationStack in Frameworks */,
 				D021F0A8281FFB2800992294 /* FilePicker in Frameworks */,
+				44ADC8B9284F9321003B32C3 /* SwiftUIRouter in Frameworks */,
 				D021F0A5281FFADD00992294 /* SwiftyJSON in Frameworks */,
 				4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */,
 				D021F09F281FFAAB00992294 /* PopupView in Frameworks */,
@@ -694,6 +698,7 @@
 				D0FC0885282002D000A74D43 /* Alamofire */,
 				D0FC088B282002F300A74D43 /* SnapKit */,
 				D0BBCE8928392CDD008C175D /* NavigationStack */,
+				44ADC8BB284F9331003B32C3 /* SwiftUIRouter */,
 			);
 			productName = "etcdWP (iOS)";
 			productReference = D021EFA9281F5AB700992294 /* etcdWP.app */;
@@ -723,6 +728,7 @@
 				D0FC088E282002FF00A74D43 /* SnapKit */,
 				D0BBCE8628392CA4008C175D /* NavigationStack */,
 				4454E4C6284E4AED0075986A /* TextSourceful */,
+				44ADC8B8284F9321003B32C3 /* SwiftUIRouter */,
 			);
 			productName = "etcdWP (macOS)";
 			productReference = D021EFAF281F5AB700992294 /* etcdWP.app */;
@@ -846,6 +852,8 @@
 				D0BBCE8528392CA4008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				D0BBCE8828392CDD008C175D /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				4454E4C5284E4AED0075986A /* XCRemoteSwiftPackageReference "TextSourceful" */,
+				44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+				44ADC8BA284F9331003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -1556,6 +1564,24 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/frzi/SwiftUIRouter.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 1.0.0;
+			};
+		};
+		44ADC8BA284F9331003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/frzi/SwiftUIRouter.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
@@ -1691,6 +1717,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4454E4C5284E4AED0075986A /* XCRemoteSwiftPackageReference "TextSourceful" */;
 			productName = TextSourceful;
+		};
+		44ADC8B8284F9321003B32C3 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			productName = SwiftUIRouter;
+		};
+		44ADC8BB284F9331003B32C3 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			productName = SwiftUIRouter;
 		};
 		D021F08F281FFA5100992294 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
