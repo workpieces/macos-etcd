@@ -173,8 +173,6 @@ class HomeViewModel: ObservableObject {
         for (idx,item) in self.ectdClientList.enumerated() {
             if item.etcdClient == nil{
                 // todo  卡顿
-
-                
                 async   let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                                  item.username,
                                                  item.password,
@@ -188,18 +186,18 @@ class HomeViewModel: ObservableObject {
                                                  item.autoSyncInterval ,
                                                  &error)
                 if await c != nil  && error == nil {
-                    self.reload = false;
+                    self.reload = true;
                     // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
                     let ok : Bool = await self.Ping(c: c!)
                      await self.ectdClientList[idx].etcdClient = c
                      self.ectdClientList[idx].status = ok
                 }else{
-                    self.reload = true;
+                    self.reload = false;
                      self.ectdClientList[idx].status  = false
                 }
               
             }else{
-                self.reload.toggle();
+                self.reload = true;
                 let ok : Bool = self.Ping(c: item.etcdClient!)
                 // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
                  self.ectdClientList[idx].etcdClient = nil
