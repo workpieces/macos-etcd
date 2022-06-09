@@ -14,6 +14,8 @@ class HomeViewModel: ObservableObject {
     @Published var ectdClientList: [EtcdClientOption] = []
     @Published var allStart:Bool = false
     @Published var selectedItems:[EtcdClientOption] = []
+    var error: NSError?
+    @Published var reload:Bool = true
     init()  {
         // 初始化服务UserDefault
         let item  = self.GetUserDefaults()
@@ -51,7 +53,7 @@ class HomeViewModel: ObservableObject {
     
     // 开启单个服务 （根据uuid）
     func OpenUseUUID(uuid : String) throws {
-        Task.detached(priority: .utility) {
+        Task.detached(priority: .utility) { [self] in
             for (idx,item) in self.ectdClientList.enumerated() {
                 if item.id.uuidString == uuid {
                     let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
@@ -65,11 +67,13 @@ class HomeViewModel: ObservableObject {
                                              item.dialKeepAliveTime ,
                                              item.dialKeepAliveTimeout ,
                                              item.autoSyncInterval ,
-                                             nil)
-                    if c == nil{
+                                             &self.error)
+                    if c == nil || self.error != nil{
+                        self.reload   =  false
                         throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
                     }
                     await MainActor.run {
+                        self.reload = true
                         self.ectdClientList[idx].etcdClient = c
                     }
                 }
@@ -94,7 +98,7 @@ class HomeViewModel: ObservableObject {
     
     // 开启所有服务
     func OpenALL() throws {
-        Task.detached(priority: .utility) {
+        Task.detached(priority: .utility) { [self] in
             for (idx,item) in self.ectdClientList.enumerated() {
                 let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                          item.username,
@@ -107,12 +111,14 @@ class HomeViewModel: ObservableObject {
                                          item.dialKeepAliveTime ,
                                          item.dialKeepAliveTimeout ,
                                          item.autoSyncInterval ,
-                                         nil)
-                if c == nil{
+                                         &self.error)
+                if c == nil || error != nil{
+                    self.reload = false
                     throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
                 }
                 await MainActor.run {
                     self.allStart.toggle()
+                    self.reload = true
                     self.ectdClientList[idx].etcdClient = c
                 }
             }
@@ -141,17 +147,19 @@ class HomeViewModel: ObservableObject {
                                        item.dialKeepAliveTime ,
                                        item.dialKeepAliveTimeout ,
                                        item.autoSyncInterval ,
-                                       nil)
+                                       &error)
         
         
         
-        if await c == nil {
+        if await c == nil || error != nil {
+            self.reload = false;
             throw NSError.init(domain: "服务连接异常", code: 400)
             return
         }
         let ping =  await self.Ping(c: c!)
         
         if !ping {
+            self.reload = false;
             throw NSError.init(domain: "服务连接异常", code: 400)
         }
         
@@ -165,6 +173,8 @@ class HomeViewModel: ObservableObject {
         for (idx,item) in self.ectdClientList.enumerated() {
             if item.etcdClient == nil{
                 // todo  卡顿
+
+                
                 async   let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                                  item.username,
                                                  item.password,
@@ -176,17 +186,20 @@ class HomeViewModel: ObservableObject {
                                                  item.dialKeepAliveTime ,
                                                  item.dialKeepAliveTimeout ,
                                                  item.autoSyncInterval ,
-                                                 nil)
-                if await c != nil {
+                                                 &error)
+                if await c != nil  && error == nil {
+                    self.reload = false;
                     // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
                     let ok : Bool = await self.Ping(c: c!)
                      await self.ectdClientList[idx].etcdClient = c
                      self.ectdClientList[idx].status = ok
                 }else{
+                    self.reload = true;
                      self.ectdClientList[idx].status  = false
                 }
               
             }else{
+                self.reload.toggle();
                 let ok : Bool = self.Ping(c: item.etcdClient!)
                 // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
                  self.ectdClientList[idx].etcdClient = nil
