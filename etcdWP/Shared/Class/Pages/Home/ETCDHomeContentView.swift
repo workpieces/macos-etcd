@@ -56,11 +56,6 @@ struct ETCDHomeContentView: View {
         .onReceive(closePublisher) { _ in
             self.homeData.ectdClientList.removeAll()
         }
-        .onAppear{
-            Task  {
-                await homeData.WatchListenEtcdClient()
-            }
-        }
     }
 }
 

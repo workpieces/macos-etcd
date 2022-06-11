@@ -167,6 +167,9 @@
 /* Begin PBXFileReference section */
 		44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
 		44AD32822850EF5A00B66261 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		44B5CCBE2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		44B5CCBF2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "es-MX"; path = "es-MX.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		5C649ABD282FB8A90073F885 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D021EFA2281F5AB600992294 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D021EFA9281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -864,6 +867,7 @@
 				el,
 				he,
 				hi,
+				"es-MX",
 			);
 			mainGroup = D021EF9C281F5AB500992294;
 			packageReferences = (
@@ -1126,6 +1130,7 @@
 				D0A15B3C28476EB6004B6134 /* el */,
 				D0A15B3F28476FE1004B6134 /* he */,
 				D0A15B4228477010004B6134 /* hi */,
+				44B5CCBD2854BCA400FE49AF /* es-MX */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1163,6 +1168,7 @@
 				D0A15B3D28476EB6004B6134 /* el */,
 				D0A15B4028476FE1004B6134 /* he */,
 				D0A15B4328477010004B6134 /* hi */,
+				44B5CCBE2854BCA400FE49AF /* es-MX */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1200,6 +1206,7 @@
 				D0A15B3E28476EB6004B6134 /* el */,
 				D0A15B4128476FE1004B6134 /* he */,
 				D0A15B4428477010004B6134 /* hi */,
+				44B5CCBF2854BCA400FE49AF /* es-MX */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";

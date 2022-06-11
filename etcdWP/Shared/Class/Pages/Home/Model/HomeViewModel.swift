@@ -52,6 +52,7 @@ class HomeViewModel: ObservableObject {
     }
     
     // 开启单个服务 （根据uuid）
+    @MainActor
     func OpenUseUUID(uuid : String) throws {
         Task.detached(priority: .utility) { [self] in
             for (idx,item) in self.ectdClientList.enumerated() {
@@ -135,6 +136,7 @@ class HomeViewModel: ObservableObject {
     }
     
     // 注册服务
+    @MainActor
     func Register(item : EtcdClientOption) async throws {
         async let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                        item.username,
@@ -193,9 +195,8 @@ class HomeViewModel: ObservableObject {
                      self.ectdClientList[idx].status = ok
                 }else{
                     self.reload = false;
-                     self.ectdClientList[idx].status  = false
+                    self.ectdClientList[idx].status  = false
                 }
-              
             }else{
                 self.reload = true;
                 let ok : Bool = self.Ping(c: item.etcdClient!)
