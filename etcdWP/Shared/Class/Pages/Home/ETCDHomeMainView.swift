@@ -17,6 +17,7 @@ struct HomeMainView: View {
 
 struct HomeListView: View {
     @EnvironmentObject var homeData: HomeViewModel
+    let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     @State private var seletcd = false
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -93,6 +94,8 @@ struct HomeListView: View {
                 Task {
                     await homeData.WatchListenEtcdClient()
                 }
+            }.onReceive(closePublisher) { _ in
+                self.homeData.ectdClientList.removeAll()
             }
         }
     }

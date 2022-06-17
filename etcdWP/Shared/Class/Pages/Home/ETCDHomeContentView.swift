@@ -36,9 +36,7 @@ struct ETCDHomeContentView: View {
 }
 
 struct ETCDHomeContentItemView: View {
-    @EnvironmentObject var homeData : HomeViewModel
     @ObservedObject var tableData = HomeTabSelectModel()
-    let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {
         NavigationStackView(transitionType: .custom(.opacity)){
             HStack{
@@ -59,7 +57,7 @@ struct ETCDHomeContentItemView: View {
                             selectTab: $tableData.selectTab)
                     }
                     Spacer()
-                    Text("Version: \(homeData.getVersion())")
+                    Text("Version: \(tableData.getVersion())")
                         .withDefaultContentTitle()
                         .padding(.bottom,DefaultSpacePadding)
                 }
@@ -76,9 +74,6 @@ struct ETCDHomeContentItemView: View {
             .ignoresSafeArea(.all,edges: .all)
             .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
             .navigationViewStyle(.automatic)
-            .onReceive(closePublisher) { _ in
-                self.homeData.ectdClientList.removeAll()
-            }
     }
     
 }

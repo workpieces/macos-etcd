@@ -62,13 +62,6 @@ class HomeViewModel: ObservableObject {
             self.ectdClientList.append(client)
         }
     }
-    
-    //获取版本
-    func getVersion() ->  String {
-        let infoDic = Bundle.main.infoDictionary
-        return infoDic?["CFBundleShortVersionString"] as! String
-    }
-    
     // 连接状态
     func Ping(c: EtcdKVClient) -> Bool {
         return c.ping()
