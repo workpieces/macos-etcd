@@ -11,11 +11,14 @@ import SwiftUIRouter
 struct DefaultTabarButtonViewModifier: ViewModifier{
     var image: String
     var title: String
+    @EnvironmentObject var tableData :HomeTabSelectModel
     @Binding var selectTab : String
     func body(content: Content) -> some View {
         Button {
             withAnimation {
                 selectTab = title
+                tableData.selectTab = selectTab
+                print("---selectTab \(tableData.selectTab)")
             }
         } label: {
             VStack(spacing: 8.0){

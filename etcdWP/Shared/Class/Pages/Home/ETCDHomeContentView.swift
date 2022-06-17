@@ -36,44 +36,42 @@ struct ETCDHomeContentView: View {
 }
 
 struct ETCDHomeContentItemView: View {
-    @ObservedObject var tableData = HomeTabSelectModel()
+    @StateObject var  tableData = HomeTabSelectModel()
     var body: some View {
-        NavigationStackView(transitionType: .custom(.opacity)){
-            HStack{
-                VStack{
-                    HStack{
-                        Image(MacosLogoName)
-                            .withDefaultImage()
-                        
-                        Text(MacEtcdName)
-                            .withDefaultContentTitle(fontSize: 25.0)
-                    }
-                    .padding(EdgeInsets(top: 44.0, leading: 0.0, bottom: 22.0, trailing: 0.0))
+        HStack{
+            VStack{
+                HStack{
+                    Image(MacosLogoName)
+                        .withDefaultImage()
                     
-                    ForEach(tabarOption,id: \.self) {item in
-                        withDefaultTabarButton(
-                            imageName: item.image,
-                            title: item.title,
-                            selectTab: $tableData.selectTab)
-                    }
-                    Spacer()
-                    Text("Version: \(tableData.getVersion())")
-                        .withDefaultContentTitle()
-                        .padding(.bottom,DefaultSpacePadding)
+                    Text(MacEtcdName)
+                        .withDefaultContentTitle(fontSize: 25.0)
                 }
-                .padding()
+                .padding(EdgeInsets(top: 44.0, leading: 0.0, bottom: 22.0, trailing: 0.0))
                 
-                ZStack(alignment: .top){
-                    switch tableData.selectTab{
-                    case "Home": HomeMainView().frame(maxWidth: screen.width - DefaultTabbarButtonHeight)
-                    case "About": AboutView()
-                        default: HomeMainView() }
+                ForEach(tabarOption,id: \.self) {item in
+                    withDefaultTabarButton(
+                        imageName: item.image,
+                        title: item.title,
+                        selectTab: $tableData.selectTab)
                 }
+                Spacer()
+                Text("Version: \(tableData.getVersion())")
+                    .withDefaultContentTitle()
+                    .padding(.bottom,DefaultSpacePadding)
+            }
+            .padding()
+            ZStack(alignment: .top){
+                switch tableData.selectTab{
+                case "Home": HomeMainView().frame(maxWidth: screen.width - DefaultTabbarButtonHeight)
+                case "About": AboutView()
+                    default: HomeMainView() }
             }
         }.buttonStyle(.plain)
          .ignoresSafeArea(.all,edges: .all)
          .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
         .navigationViewStyle(.automatic)
+        .environmentObject(tableData)
     }
     
 }
