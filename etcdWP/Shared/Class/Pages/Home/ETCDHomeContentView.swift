@@ -13,7 +13,7 @@ import SwiftUIRouter
 var screen = NSScreen.main!.visibleFrame
 
 struct ETCDHomeContentView: View {
-    @StateObject var homeData = HomeViewModel()
+    @EnvironmentObject var homeData:HomeViewModel
     var body: some View {
         SwitchRoutes {
             Route(":id/*", validator: findUser) { user in
@@ -22,7 +22,7 @@ struct ETCDHomeContentView: View {
             Route("create") {
                 ETCDConfigView()
             }
-            Route(content: ETCDHomeContentItemView(homeData: homeData).environmentObject(homeData))
+            Route(content: ETCDHomeContentItemView())
         }
     }
     private func findUser(route: RouteInformation) -> EtcdClientOption? {
@@ -36,7 +36,7 @@ struct ETCDHomeContentView: View {
 }
 
 struct ETCDHomeContentItemView: View {
-    @StateObject var homeData = HomeViewModel()
+    @EnvironmentObject var homeData : HomeViewModel
     @ObservedObject var tableData = HomeTabSelectModel()
     let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {

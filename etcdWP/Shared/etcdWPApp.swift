@@ -46,9 +46,8 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct etcdWPApp: App {
-
+    @StateObject var homeData = HomeViewModel()
     @EnvironmentObject private var navigator: Navigator
-    
 #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
 #endif
@@ -56,7 +55,7 @@ struct etcdWPApp: App {
         WindowGroup {
             Router {
                 ETCDHomeContentView()
-            }
+            }.environmentObject(homeData)
             .preferredColorScheme(.dark)
         }
 #if os(macOS)

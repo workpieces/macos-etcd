@@ -10,15 +10,14 @@ import NavigationStack
 import SwiftUIRouter
 
 struct HomeMainView: View {
-    @StateObject var homeData: HomeViewModel
+
     var body: some View {
-        HomeListView(homeData: homeData)
+        HomeListView()
     }
 }
 
 struct HomeListView: View {
-    @StateObject var homeData: HomeViewModel
-    @State private var isLinkActive = false
+    @EnvironmentObject var homeData: HomeViewModel
     @State private var seletcd = false
     let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
     var body: some View {
