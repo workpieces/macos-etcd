@@ -155,11 +155,11 @@ struct ETCDConfigView: View {
                         do{
                             Task{
                                 self.homeData.Append(data: config)
-                                try await self.homeData.Register(item: config)
                                 navigator.goBack()
+                                try await self.homeData.Register(item: config)
                             }
 
-                        }catch {
+                        }catch let error  as  NSError {
                             self.isToast.toggle()
                             navigator.goBack()
                         }

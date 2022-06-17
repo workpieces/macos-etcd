@@ -156,6 +156,7 @@ class HomeViewModel: ObservableObject {
         if await c == nil || error != nil {
             self.reload = false;
             throw NSError.init(domain: "服务连接异常", code: 400)
+            
         }
         let ping =  await self.Ping(c: c!)
         
