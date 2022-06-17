@@ -52,7 +52,7 @@ struct HomeListView: View {
                             self.homeData.Delete(id:self.homeData.GetUUID(idx:index!))
                         }
                         homeData.selectedItems.removeAll()
-                        self.seletcd.toggle();
+                        self.seletcd = false;
                     } label: {
                         HStack {
                             Text(LocalizedStringKey("全部删除"))
