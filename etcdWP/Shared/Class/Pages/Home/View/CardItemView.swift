@@ -24,10 +24,9 @@ struct CardItemView: View {
         }else{
             self.selected = false
         }
-        let statut = homeData.ectdClientList[idx].status
     }
     var body: some View {
-        NavLink(to: homeData.ectdClientList[idx].id.uuidString){
+        NavLink(to: homeData.ectdClientList.count == 0 ? "id:0":homeData.ectdClientList[idx].id.uuidString ){
             VStack {
                 HStack(alignment: .top) {
                     Button {
@@ -88,7 +87,7 @@ struct CardItemView: View {
                                     self.didModify()
                                 }
                         }
-                        Text(homeData.ectdClientList[idx].clientName)
+                        Text(homeData.ectdClientList.count == 0 ? " ":homeData.ectdClientList[idx].clientName)
                             .withDefaultSubContentTitle(fontColor: .white)
                     }
                     .padding(DefaultSpacePadding)
@@ -98,7 +97,7 @@ struct CardItemView: View {
                         .withDefaultContentTitle(fontColor: .white)
                         .padding(.bottom,5)
                     VStack(alignment: .center){
-                        ForEach(homeData.ectdClientList[idx].getEndpoints(),id: \.self) { item in
+                        ForEach(homeData.ectdClientList.count == 0 ? [] :homeData.ectdClientList[idx].getEndpoints(),id: \.self) { item in
                             Text(item)
                                 .withDefaultSubContentTitle(fontColor: .white)
                                 .padding(.leading,5)
@@ -110,8 +109,8 @@ struct CardItemView: View {
                     Text("连接状态")
                         .withDefaultContentTitle(fontColor: .white)
                     
-                    Text(LocalizedStringKey(homeData.ectdClientList[idx].status == true ? "Scuess" : "Failed"))
-                        .withDefaultSubContentTitle(fontColor: homeData.ectdClientList[idx].status == true ? Color(hex:"#7CFC00") : .red)
+                    Text(LocalizedStringKey(homeData.ectdClientList.count == 0 ? " Failed":homeData.ectdClientList[idx].status == true ? "Scuess" : "Failed"))
+                        .withDefaultSubContentTitle(fontColor: homeData.ectdClientList.count == 0 ? .red :homeData.ectdClientList[idx].status == true ? Color(hex:"#7CFC00") : .red)
                     Spacer()
                 }
             }
