@@ -67,9 +67,9 @@ struct ETCDHomeContentItemView: View {
                 
                 ZStack(alignment: .top){
                     switch tableData.selectTab{
-                    case "Home": HomeMainView(homeData: homeData)
+                    case "Home": HomeMainView()
                     case "About": AboutView()
-                        default: HomeMainView(homeData: homeData) }
+                        default: HomeMainView() }
                 }
             }
         }.buttonStyle(.plain)
