@@ -18,7 +18,7 @@ struct HomeMainView: View {
 struct HomeListView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var seletcd = false
-    let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             Spacer()
