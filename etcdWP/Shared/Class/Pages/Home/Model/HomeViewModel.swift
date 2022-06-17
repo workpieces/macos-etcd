@@ -193,9 +193,13 @@ class HomeViewModel: ObservableObject {
                     let ok : Bool = await self.Ping(c: c!)
                      await self.ectdClientList[idx].etcdClient = c
                      self.ectdClientList[idx].status = ok
+                    let statut = self.ectdClientList[idx].status
+                    print("--------------------ok----\(statut.description)")
                 }else{
                     self.reload = false;
                     self.ectdClientList[idx].status  = false
+                    let statut = self.ectdClientList[idx].status
+                    print("--------------------ok1----\(statut.description)")
                 }
             }else{
                 self.reload = true;
@@ -203,6 +207,8 @@ class HomeViewModel: ObservableObject {
                 // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
                  self.ectdClientList[idx].etcdClient = nil
                  self.ectdClientList[idx].status = ok
+                let statut = self.ectdClientList[idx].status
+                print("--------------------ok----3\(statut.description)")
             }
             
         }

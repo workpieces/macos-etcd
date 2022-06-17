@@ -24,6 +24,8 @@ struct CardItemView: View {
         }else{
             self.selected = false
         }
+        let statut = homeData.ectdClientList[idx].status
+        print("--------------------ok-----5\(statut.description)----------options:\(options.status.description)")
     }
     var body: some View {
         NavLink(to: options.id.uuidString){
@@ -109,8 +111,8 @@ struct CardItemView: View {
                     Text("连接状态")
                         .withDefaultContentTitle(fontColor: .white)
                     
-                    Text(LocalizedStringKey(options.status == true ? "Scuess" : "Failed"))
-                        .withDefaultSubContentTitle(fontColor: options.status == true ? Color(hex:"#7CFC00") : .red)
+                    Text(LocalizedStringKey(homeData.ectdClientList[idx].status == true ? "Scuess" : "Failed"))
+                        .withDefaultSubContentTitle(fontColor: homeData.ectdClientList[idx].status == true ? Color(hex:"#7CFC00") : .red)
                     Spacer()
                 }
             }

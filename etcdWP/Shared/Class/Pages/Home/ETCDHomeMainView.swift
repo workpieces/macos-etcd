@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIRouter
 
 struct HomeMainView: View {
-
+    @EnvironmentObject var homeData: HomeViewModel
     var body: some View {
         HomeListView()
     }
@@ -18,7 +18,7 @@ struct HomeMainView: View {
 struct HomeListView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var seletcd = false
-    let timer = Timer.publish(every: 8, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             Spacer()
@@ -75,7 +75,7 @@ struct HomeListView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { index in
-                            CardItemView(options: self.homeData.ectdClientList[index],idx: index)
+                            CardItemView(options:homeData.ectdClientList[index],idx: index)
                         }
                     }
                     .padding(GriditemPaddingSpace)
