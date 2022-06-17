@@ -175,9 +175,6 @@ extension ItemStore {
         //获取数据慢 
         let kd = self.GetALL()
         let md = self.MemberList()
-        
-        print("kd---------\(kd),md ---------\(md)")
-        
         self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: newValue ? nil :self.realeadData.currentKv )
         if self.realeadData.kvCount > self.realeadData.offset {
             let tmp = self.realeadData.kvs[0..<self.realeadData.offset]

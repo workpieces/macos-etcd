@@ -230,11 +230,9 @@ class HomeViewModel: ObservableObject {
                 let ok : Bool = self.Ping(c: item.etcdClient!)
                 // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
                 if  self.ectdClientList[idx,true] != nil{
-                    self.ectdClientList[idx].etcdClient = nil
                     self.ectdClientList[idx].status = ok
                 }
             }
-            
         }
     }
 }
