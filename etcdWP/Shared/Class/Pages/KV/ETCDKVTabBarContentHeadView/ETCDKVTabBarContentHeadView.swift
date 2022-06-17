@@ -21,10 +21,12 @@ struct ETCDKVTabBarContentHeadView: View {
                 .padding(.leading ,20)
             
             Button {
-                do {
-                    try storeObj.Open()
-                }catch{
-                    print(error.localizedDescription)
+                Task{
+                    do {
+                        try await storeObj.Open()
+                    }catch let error as NSError {
+                        print(error.localizedDescription)
+                    }
                 }
             } label: {
                 Text("开启服务")

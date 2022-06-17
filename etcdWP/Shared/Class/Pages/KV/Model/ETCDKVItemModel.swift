@@ -184,7 +184,8 @@ extension ItemStore {
     }
     
     // 开启服务
-    func Open() throws {
+    @MainActor
+    func Open() async {
         guard c.etcdClient != nil && c.etcdClient!.ping() else {
             Task.detached(priority: .utility) {
                 async   let client =  EtcdNewKVClient(self.c.endpoints.joined(separator: ","),
@@ -212,7 +213,6 @@ extension ItemStore {
     func Close() throws {
         guard c.etcdClient == nil else {
             try c.etcdClient?.close()
-            c.etcdClient = nil
             c.status = false
             return
         }
@@ -231,9 +231,6 @@ extension ItemStore {
 extension ItemStore {
     func GetALL() -> [KVData] {
         let result = c.etcdClient?.getALL()
-        
-        print("c---------\(c)--------------------etcdClient:result-----%s",result)
-    
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
