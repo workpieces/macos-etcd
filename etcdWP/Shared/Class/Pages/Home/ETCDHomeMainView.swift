@@ -46,6 +46,9 @@ struct HomeListView: View {
                     Button {
                         homeData.selectedItems.forEach { item in
                             let index = self.homeData.ectdClientList.index(of: item)
+                            if index == nil{
+                                return
+                            }
                             self.homeData.Delete(id:self.homeData.GetUUID(idx:index!))
                         }
                         homeData.selectedItems.removeAll()

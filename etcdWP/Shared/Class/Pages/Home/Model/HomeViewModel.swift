@@ -9,6 +9,29 @@ import Foundation
 import MacosEtcd
 
 
+public extension Collection {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
+extension Array {
+    // 防止数组越界
+    subscript(index: Int, safe: Bool) -> Element? {
+        if safe {
+            if self.count > index {
+                return self[index]
+            }
+            else {
+                return nil
+            }
+        }
+        else {
+            return self[index]
+        }
+    }
+}
+
 class HomeViewModel: ObservableObject {
     let userDefaultsKey: String = "com.etcdclient.list"
     @Published var ectdClientList: [EtcdClientOption] = []
@@ -191,18 +214,25 @@ class HomeViewModel: ObservableObject {
                     self.reload = true;
                     // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
                     let ok : Bool = await self.Ping(c: c!)
-                     await self.ectdClientList[idx].etcdClient = c
-                     self.ectdClientList[idx].status = ok
+
+                    if  self.ectdClientList[idx,true] != nil{
+                        await self.ectdClientList[idx].etcdClient = c
+                        self.ectdClientList[idx].status = ok
+                    }
                 }else{
                     self.reload = false;
-                    self.ectdClientList[idx].status  = false
+                    if  self.ectdClientList[idx,true] != nil{
+                        self.ectdClientList[idx].status = false
+                    }
                 }
             }else{
                 self.reload = true;
                 let ok : Bool = self.Ping(c: item.etcdClient!)
                 // todo 解决连接正常，然后断开，卡顿现象，为什么这里会卡顿呢，因为服务会重试
-                 self.ectdClientList[idx].etcdClient = nil
-                 self.ectdClientList[idx].status = ok
+                if  self.ectdClientList[idx,true] != nil{
+                    self.ectdClientList[idx].etcdClient = nil
+                    self.ectdClientList[idx].status = ok
+                }
             }
             
         }
