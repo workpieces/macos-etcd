@@ -160,8 +160,8 @@ struct ETCDConfigView: View {
                             }
 
                         }catch {
-                            print(error.localizedDescription)
                             self.isToast.toggle()
+                            navigator.goBack()
                         }
                     }
                 }
