@@ -194,12 +194,10 @@ class HomeViewModel: ObservableObject {
                      await self.ectdClientList[idx].etcdClient = c
                      self.ectdClientList[idx].status = ok
                     let statut = self.ectdClientList[idx].status
-                    print("--------------------ok----\(statut.description)")
                 }else{
                     self.reload = false;
                     self.ectdClientList[idx].status  = false
                     let statut = self.ectdClientList[idx].status
-                    print("--------------------ok1----\(statut.description)")
                 }
             }else{
                 self.reload = true;
@@ -208,7 +206,6 @@ class HomeViewModel: ObservableObject {
                  self.ectdClientList[idx].etcdClient = nil
                  self.ectdClientList[idx].status = ok
                 let statut = self.ectdClientList[idx].status
-                print("--------------------ok----3\(statut.description)")
             }
             
         }
