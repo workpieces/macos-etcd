@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import NavigationStack
 import PopupView
 import Combine
 import FilePicker

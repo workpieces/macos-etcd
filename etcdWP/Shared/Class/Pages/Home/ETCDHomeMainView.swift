@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import NavigationStack
 import SwiftUIRouter
 
 struct HomeMainView: View {

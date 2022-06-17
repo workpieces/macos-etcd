@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import NavigationStack
 import SwiftUIRouter
 // 设置默认左侧点击按钮
 struct DefaultTabarButtonViewModifier: ViewModifier{
