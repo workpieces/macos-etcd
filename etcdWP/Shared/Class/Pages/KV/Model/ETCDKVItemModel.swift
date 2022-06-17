@@ -171,10 +171,11 @@ extension ItemStore {
         }
     }
     
-    func KVReaload( _ newValue:Bool){
+    @MainActor
+    func KVReaload( _ newValue:Bool)  async{
         //获取数据慢 
-        let kd = self.GetALL()
-        let md = self.MemberList()
+        let kd =   await self.GetALL()
+        let md =  await self.MemberList()
         self.realeadData =  KVRealoadData.init(ks: kd, mms: md,currentKv: newValue ? nil :self.realeadData.currentKv )
         if self.realeadData.kvCount > self.realeadData.offset {
             let tmp = self.realeadData.kvs[0..<self.realeadData.offset]
@@ -229,10 +230,10 @@ extension ItemStore {
 
 // GET
 extension ItemStore {
-    func GetALL() -> [KVData] {
-        let result = c.etcdClient?.getALL()
-        guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+    func  GetALL() async -> [KVData] {
+      async  let result = c.etcdClient?.getALL()
+        guard await result == nil  else {
+            let resp = try? await JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             self.InsertLogs(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "GET")
             if resp?.status != 200 {
                 return []
@@ -434,10 +435,10 @@ extension ItemStore {
 
 // Endpoint
 extension ItemStore {
-    func EndpointStatus() -> [KVData] {
-        let result = c.etcdClient?.endpointStatus()
-        guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+    func EndpointStatus() async -> [KVData] {
+        async  let result = c.etcdClient?.endpointStatus()
+        guard await result == nil else {
+            let resp = try? await JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let  lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "ENDPOINT")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {
@@ -451,12 +452,10 @@ extension ItemStore {
 
 // Members
 extension ItemStore {
-    func MemberList() -> [KVData] {
-        let result = c.etcdClient?.memberList()
-        
-        print("c---------\(c)--------------------MemberList:result-----%s",result)
-        guard result == nil || ((result?.isEmpty) == nil) else {
-            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+    func MemberList() async -> [KVData] {
+        async  let result = c.etcdClient?.memberList()
+        guard await result == nil else {
+            let resp = try? await JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg  = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "MEMBER")
             ETCDLogsObject.shared.logSubjec.send(lg)
             if resp?.status != 200 {

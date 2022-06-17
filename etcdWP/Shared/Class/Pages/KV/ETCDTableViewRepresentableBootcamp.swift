@@ -18,7 +18,9 @@ struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable
     }
     
     func updateNSView(_ nsView: ETCDTableView, context: Context) {
-        nsView.reloadData(storeObj)
+        Task{
+            await  nsView.reloadData(storeObj)
+        }
     }
     
     typealias NSViewType = ETCDTableView

@@ -55,7 +55,9 @@ struct ETCDKVTabBarContentHeadView: View {
                             throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
                         }
                     }
-                    storeObj.KVReaload(false)
+                    Task{
+                        await   storeObj.KVReaload(false)
+                    }
                 } catch {
                     print(error.localizedDescription)
                 }

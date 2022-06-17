@@ -49,8 +49,8 @@ class ETCDTableView: NSView
         scrollView.documentView =  tableView
     }
     
-    public func reloadData(_ item:ItemStore){
-        self.items = item.EndpointStatus()
+    public func reloadData(_ item:ItemStore) async{
+        self.items = await item.EndpointStatus()
         self.tableView .reloadData()
     }
 

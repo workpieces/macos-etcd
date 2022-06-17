@@ -24,7 +24,9 @@ struct ETCDKeyListContentView: View {
             }
             ETCDKeyContentMembersListView()
         }.onAppear(perform: {
-            storeObj.KVReaload(false)
+            Task{
+                await  storeObj.KVReaload(false)
+            }
         })
     }
 }

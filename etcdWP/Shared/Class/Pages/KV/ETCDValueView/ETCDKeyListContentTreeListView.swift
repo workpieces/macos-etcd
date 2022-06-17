@@ -15,7 +15,9 @@ struct ETCDKeyListContentTreeListView: View {
     @State fileprivate var textValue: String = ""
     
     fileprivate func Reaload() {
-        storeObj.KVReaload(false)
+        Task{
+            await  storeObj.KVReaload(false)
+        }
     }
     
     var body: some View {

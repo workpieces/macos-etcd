@@ -63,7 +63,9 @@ struct ETCDEtcdOperationView :View {
     
     func didDismiss() {
         //消失回调
-        storeObj.KVReaload(false)
+        Task{
+            await  storeObj.KVReaload(false)
+        }
     }
 }
 
