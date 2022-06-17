@@ -20,7 +20,7 @@ struct ETCDHomeContentView: View {
                 ETCDTabBarContentView().environmentObject(ItemStore.init(c:user))
             }
             Route("create") {
-                ETCDConfigView()
+                ETCDConfigView().frame(maxWidth: screen.width - DefaultTabbarButtonHeight)
             }
             Route(content: ETCDHomeContentItemView())
         }
@@ -65,15 +65,15 @@ struct ETCDHomeContentItemView: View {
                 
                 ZStack(alignment: .top){
                     switch tableData.selectTab{
-                    case "Home": HomeMainView()
+                    case "Home": HomeMainView().frame(maxWidth: screen.width - DefaultTabbarButtonHeight)
                     case "About": AboutView()
                         default: HomeMainView() }
                 }
             }
         }.buttonStyle(.plain)
-            .ignoresSafeArea(.all,edges: .all)
-            .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
-            .navigationViewStyle(.automatic)
+         .ignoresSafeArea(.all,edges: .all)
+         .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
+        .navigationViewStyle(.automatic)
     }
     
 }
