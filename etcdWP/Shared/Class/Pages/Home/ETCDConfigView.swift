@@ -9,6 +9,7 @@ import SwiftUI
 import PopupView
 import NavigationStack
 import FilePicker
+import SwiftUIRouter
 
 // 默认用户配置表单
 struct UserConfigFormView: View {
@@ -102,12 +103,12 @@ struct OtherConfigFormView: View {
 struct ETCDConfigView: View {
     @EnvironmentObject var homeData: HomeViewModel
     @State private var config = EtcdClientOption()
-    @State private var isPopView = false
+    @EnvironmentObject private var navigator: Navigator
     @State private var isToast = false
     
     var body: some View {
         VStack {
-            withDefaultNavagationBack(title: "通用设置", isPop: $isPopView)
+            withDefaultNavagationBack(title: "通用设置")
                 .padding(.vertical,30)
                 .padding(.leading ,20)
             
@@ -135,7 +136,7 @@ struct ETCDConfigView: View {
                     .background(Color.red).opacity(0.75)
                     .cornerRadius(10.0)
                     .onTapGesture {
-                        self.isPopView.toggle()
+                        navigator.goBack()
                     }
                 }
                 PopView {
@@ -153,9 +154,9 @@ struct ETCDConfigView: View {
                     .onTapGesture {
                         do{
                             Task{
+                                self.homeData.Append(data: config)
                                 try await self.homeData.Register(item: config)
-                                try await self.homeData.Append(data: config)
-                                 self.isPopView.toggle()
+                                navigator.goBack()
                             }
 
                         }catch {

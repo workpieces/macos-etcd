@@ -8,15 +8,39 @@
 import SwiftUI
 import AppKit
 import NavigationStack
+import SwiftUIRouter
 
 var screen = NSScreen.main!.visibleFrame
 
 struct ETCDHomeContentView: View {
     @StateObject var homeData = HomeViewModel()
+    var body: some View {
+        SwitchRoutes {
+            Route(":id/*", validator: findUser) { user in
+                ETCDTabBarContentView().environmentObject(ItemStore.init(c:user))
+            }
+            Route("create") {
+                ETCDConfigView()
+            }
+            Route(content: ETCDHomeContentItemView(homeData: homeData).environmentObject(homeData))
+        }
+    }
+    private func findUser(route: RouteInformation) -> EtcdClientOption? {
+        if let parameter = route.parameters["id"],
+           let uuid = UUID(uuidString: parameter)
+        {
+            return homeData.ectdClientList.first { $0.id == uuid }
+        }
+        return nil
+    }
+}
+
+struct ETCDHomeContentItemView: View {
+    @StateObject var homeData = HomeViewModel()
     @ObservedObject var tableData = HomeTabSelectModel()
     let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
     var body: some View {
-        return  NavigationStackView(transitionType: .custom(.opacity)){
+        NavigationStackView(transitionType: .custom(.opacity)){
             HStack{
                 VStack{
                     HStack{
@@ -48,19 +72,13 @@ struct ETCDHomeContentView: View {
                         default: HomeMainView(homeData: homeData) }
                 }
             }
-        }
-        .environmentObject(homeData)
-        .ignoresSafeArea(.all,edges: .all)
-        .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
-        .navigationViewStyle(.automatic)
-        .onReceive(closePublisher) { _ in
-            self.homeData.ectdClientList.removeAll()
-        }
+        }.buttonStyle(.plain)
+            .ignoresSafeArea(.all,edges: .all)
+            .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
+            .navigationViewStyle(.automatic)
+            .onReceive(closePublisher) { _ in
+                self.homeData.ectdClientList.removeAll()
+            }
     }
-}
-
-struct HomeController_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDHomeContentView()
-    }
+    
 }

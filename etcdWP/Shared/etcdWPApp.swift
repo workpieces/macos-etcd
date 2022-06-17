@@ -46,14 +46,18 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct etcdWPApp: App {
+
+    @EnvironmentObject private var navigator: Navigator
     
 #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
 #endif
     var body: some Scene {
         WindowGroup {
+            Router {
                 ETCDHomeContentView()
-                .preferredColorScheme(.dark)
+            }
+            .preferredColorScheme(.dark)
         }
 #if os(macOS)
         .windowStyle(.hiddenTitleBar)

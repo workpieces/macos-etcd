@@ -15,12 +15,9 @@ import ObjectMapper
 struct ETCDKVTabBarContentHeadView: View {
     
    @EnvironmentObject var storeObj : ItemStore
-    
-    @State private var isPopView = false
-    
     var body: some View {
         HStack {
-            withDefaultNavagationBack(title: "ETCD CLUSTER V3", isPop: $isPopView)
+            withDefaultNavagationBack(title: "ETCD CLUSTER V3")
                 .padding(.vertical,30)
                 .padding(.leading ,20)
             

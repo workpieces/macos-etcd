@@ -7,8 +7,16 @@
 
 import SwiftUI
 import NavigationStack
+import SwiftUIRouter
 
 struct HomeMainView: View {
+    @StateObject var homeData: HomeViewModel
+    var body: some View {
+        HomeListView(homeData: homeData)
+    }
+}
+
+struct HomeListView: View {
     @StateObject var homeData: HomeViewModel
     @State private var isLinkActive = false
     @State private var seletcd = false
@@ -56,7 +64,7 @@ struct HomeMainView: View {
                     .cornerRadius(5)
                     .clipped()
                 }
-                withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端", link: $isLinkActive)
+                withDefaultAddButton(imageName: "plus", title: "创建ETCD客户端")
                     .padding(.top ,40)
                     .padding(.trailing,18)
             }
@@ -65,29 +73,24 @@ struct HomeMainView: View {
                     .withDefaultContentTitle(fontSize: 30.0)
                 Spacer()
             }
-            
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),spacing: GriditemPaddingSpace),count: 3), alignment: .center, spacing: GriditemPaddingSpace) {
-                        //会自动刷新恢复正常界面，push过去之后。。。。
                         ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { index in
-                            PushView(destination: ETCDTabBarContentView()
-                                .environmentObject(ItemStore.init(c: self.homeData.ectdClientList[index]))){
-                                    CardItemView(options: self.homeData.ectdClientList[index],idx: index)
-                            }
-                        }                       
+                            CardItemView(options: self.homeData.ectdClientList[index],idx: index)
+                        }
                     }
                     .padding(GriditemPaddingSpace)
                 }
             } .onReceive(timer, perform: {_ in
                 Task {
-                   await homeData.WatchListenEtcdClient()
+                    await homeData.WatchListenEtcdClient()
                 }
             }).onDisappear {
                 self.timer.upstream.connect().cancel()
             }.onAppear{
                 Task {
-                   await homeData.WatchListenEtcdClient()
+                    await homeData.WatchListenEtcdClient()
                 }
             }
         }
