@@ -230,6 +230,7 @@ extension ItemStore {
 
 // GET
 extension ItemStore {
+    @MainActor
     func  GetALL() async -> [KVData] {
       async  let result = c.etcdClient?.getALL()
         guard await result == nil  else {
@@ -435,6 +436,7 @@ extension ItemStore {
 
 // Endpoint
 extension ItemStore {
+    @MainActor
     func EndpointStatus() async -> [KVData] {
         async  let result = c.etcdClient?.endpointStatus()
         guard await result == nil else {
@@ -452,6 +454,7 @@ extension ItemStore {
 
 // Members
 extension ItemStore {
+    @MainActor
     func MemberList() async -> [KVData] {
         async  let result = c.etcdClient?.memberList()
         guard await result == nil else {
