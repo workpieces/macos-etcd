@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      Localizable.strings
+etcdWP      vbdWP
+    
+    
+      
+*/
+"批量导出"    = "Toplu Dışa Aktarma";
+"批量导入"    = "Toplu İçe Aktarma";
+"关闭服务"    = "Hizmeti kapat";
+"开启服务"    = "Hizmeti etkinleştir";
+"保存目录不能为空"    = "Kaydet dizini boş olamaz";
+    
+    
+"创建ETCD客户端"    = "ETCD istemcisi oluştur";
+"Home"    = "Ev";
+"About"    = "Hakkında";
+    
+    
+//Tip    //Uç
+"开启认证失败"    = "Doğrulama etkinleştirilemedi";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Ağ bağlantısı anormal, lütfen ilgili yapılandırmayı kontrol edin?";
+"保存失败"    = "Kaydetme başarısız";
+"输入错误，请重新输入"    = "Yanlış giriş, lütfen tekrar deneyin";
+"操作角色错误"    = "İşlem rolü hatası";
+"操作租约错误"    = "İşlem kiralama hatası";
+"操作用户错误"    = "İşlem Kullanıcı Hatası";
+    
+//配置    //yapılandır
+"ETCD CLUSTER V3"    = "ETCD KÜME V3";
+"通用设置"    = "Genel Ayarlar";
+"Cancel"    = "İptal";
+"Default User Information Configuration："    = "Varsayılan kullanıcı bilgisi yapılandırması:";
+"Client Name："    = "Müşteri Adı:";
+"User Name："    = "Kullanıcı adı: ";
+"Password："    = "Şifre:";
+"Cluster Network Configuration："    = "Ağ Yapılandırması:";
+"Network Protocol："    = "Ağ Protokolü:";
+"Cluster Endpoint："    = "Küme Düğümü:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Dosya seçilmedi";
+"KeyFile: 未选择任何文件"    = "KeyFile: Dosya seçilmedi";
+"CertFile: 未选择任何文件"    = "CertFile: Dosya seçilmedi";
+    
+"Timeout Setting Configuration (seconds)："    = "Zaman aşımı ayarı yapılandırması (saniye):";
+"Request Timeout："    = "İstek zaman aşımına uğradı:";
+"Dial Timeout："    = "Zaman aşımı: ";
+"Dial Keep Alive Time："    = "Hayatta kalma zamanı:";
+"Dial Keep Alive Timeout："    = "Canlı tutma zaman aşımı: ";
+"Auto Sync Interval："    = "Otomatik eşitleme aralığı:";
+"Miscellaneous："    = "Diğer yapılandırma: ";
+"Auto create client name?"    = "İstemci adı otomatik olarak oluşturulsun mu?";
+"Reschedule Pings？"    = "yeniden ping";
+"Clean Session?"    = "Oturumu temizle?";
+"Auto connect on app launch?"    = "Uygulama başladığında otomatik bağlanılsın mı?";
+    
+    
+    
+    
+//home    //ev
+"服务名称"    = "Hizmet Adı";
+"节点地址"    = "Düğüm Adresi";
+"连接状态"    = "Bağlantı Durumu";
+"Scuess"    = "Başarı";
+"Failed"    = "başarısızlık";
+"Delete"    = "sil";
+"Cancle"    = "İptal";
+"The connection to the server was lost."    = "Sunucuyla bağlantı kesildi.";
+"Want to modify etcd service data?"    = "etcd servis verilerini değiştirmek istiyor musunuz?";
+    
+// about    // hakkında
+"Contact Us"    = "Bize Ulaşın";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Bir özellik talebiniz, özel uygulama talebiniz veya hatanız varsa lütfen bizimle iletişime geçin:";
+"Download"    = "indir";
+"App for Mac,Window and Linux"    = "Mac için Uygulamalar";
+"Documentation"    = "Belgeler";
+"Learn more about etcdWp features and turorials."    = "etcdWp özellikleri ve turorials hakkında daha fazla bilgi edinin.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB, GB28181 standardını temel alan bir ağ video platformudur. NAT penetrasyonunu destekler ve Hikvision, Dahua ve Uniview gibi markaların IPC, NVR, DVR erişimini destekler. rtsp/rtmp gibi video akışını ve iletmeyi destekler. Git ulusal standart platformuna.";
+"推荐 MediaGB"    = "MediaGB'yi Öner";
+"Learn More"    = "daha fazla";
+"（已发版）"    = "(serbest bırakıldı)";
+"（研发中）"    = "(geliştirme aşamasında)";
+"Workpieces 官方开发社区和组织仓库"    = "İş Parçaları Resmi Geliştirme Topluluğu ve Organizasyon Deposu";
+"Workpieces LLC 官网"    = "İş Parçaları LLC resmi web sitesi";
+    
+//    //
+    
+"访问官网"    = "Resmi web sitesini ziyaret edin";
+"意见反馈"    ="Geri bildirim";
+"粘贴"    = "Yapıştır";
+"键值操作"    = "Anahtar-değer işlemi";
+"集群状态"    = "Küme Durumu";
+"查看键值详情"    = "Anahtar/değer ayrıntılarını görüntüle";
+"复制key值"    = "Anahtar değerini kopyala";
+"删除键值"    = "Anahtar değerini sil";
+"更新键值"    = "Anahtar değerini güncelle";
+"复制value值"    = "Değeri kopyala";
+"Promotes集群成员"    = "Küme üyesini teşvik eder";
+"上一页"    = "Önceki sayfa";
+"下一页"    = "Sonraki sayfa";
+"键值不能输入为空"    = "Anahtar değeri boş girilemez";
+"复制成员"    = "Üyeyi Kopyala";
+"删除成员"    = "Üyeyi kaldır";
+"成员id输入有误"    = "Üye kimliği yanlış girildi";
+"提升成员"    = "Üyeyi tanıtın";
+"成员（Members）"    = "Üyeler";
+"成员地址输入有误"    = "Üye adresi yanlış girildi";
+"链接状态: 正常"    = "Bağlantı Durumu: Tamam";
+"链接状态: 异常"    = "Bağlantı Durumu: İstisna";
+"刷新加载"    = "Yükü Yenile";
+"清空键值"    ="Anahtar değerini temizle";
+"查询"    = "Sorgu";
+"确定"    = "Tamam";
+"平铺结构"    = "karo yapısı";
+"树形结构"    = "ağaç yapısı";
+"创建成员"    = "Üye oluştur";
+"修改成员"    = "Üyeyi değiştir";
+"创建键值"    = "Anahtar değeri oluştur";
+"键值前缀删除"    = "Anahtar değer öneki silin";
+"租约管理"    = "Kira Yönetimi";
+"角色管理"    = "rol yönetimi";
+"用户管理"    = "Kullanıcı Yönetimi";
+"开启认证"    = "Doğrulamayı etkinleştir";
+    
+//    //
+"请输入键值前缀"    = "Lütfen bir anahtar öneki girin";
+"请输入前缀key"    = "Lütfen önek anahtarını girin";
+"创建角色"    = "Rol oluştur";
+"请输入角色"    ="Lütfen bir rol girin";
+"关闭"    = "kapat";
+"移除"    = "Kaldır";
+"存活一次"    = "bir kez hayatta kal";
+"请输入key"    = "Lütfen anahtarı girin";
+    
+"请输入时间"    = "Lütfen saati giriniz";
+"请输入Value"    = "Lütfen Değer Giriniz";
+"输入时间错误，请重新输入"    = "Yanlış zaman, lütfen tekrar deneyin";
+"创建用户"    = "Kullanıcı Oluştur";
+"创建密码"    = "Şifre Oluştur";
+"请输入密码"    = "Lütfen şifrenizi giriniz";
+"用户操作错误"    = "Kullanıcı işlem hatası";
+    
+//    //
+"创建集群成员"    = "Küme üyesi oluştur";
+"更新集群成员"    = "Küme üyelerini güncelle";
+"修改后节点地址:"    = "Değiştirilmiş düğüm adresi:";
+"节点地址: "    = "Düğüm adresi: ";
+"修改前节点id: "    = "Değişiklik öncesi düğüm kimliği: ";
+"节点id: "    = "düğüm kimliği:";
+    
+    
+"当前页: %lld "    = "Geçerli sayfa: %lld";
+"成员总数: %lld "    = "Toplam üye: %lld";
+"服务地址：%@"    = "Hizmet Adresi: %@ ";
+"总数: %lld "    = "Toplam: %lld";
+"客户端： %@"    = "İstemci: %@";
+"节点： %@"    = "Düğüm: %@";
+"名称： %@"    = "Ad: %@";
