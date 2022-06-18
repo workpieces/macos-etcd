@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      Boleh disetempatkan.rentetan
+etcdWP      etcdWP
+    
+    
+      
+*/
+"批量导出"    = "Eksport Kelompok";
+"批量导入"    = "Import Pukal";
+"关闭服务"    = "Tutup perkhidmatan";
+"开启服务"    = "Dayakan perkhidmatan";
+"保存目录不能为空"    = "Simpan direktori tidak boleh kosong";
+    
+    
+"创建ETCD客户端"    = "Buat pelanggan ETCD";
+"Home"    = "Rumah";
+"About"    = "Mengenai";
+    
+    
+//Tip    //Petua
+"开启认证失败"    = "Gagal mendayakan pengesahan";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Sambungan rangkaian tidak normal, sila semak konfigurasi yang berkaitan?";
+"保存失败"    = "Gagal simpan";
+"输入错误，请重新输入"    = "Input salah, sila cuba lagi";
+"操作角色错误"    = "Ralat peranan operasi";
+"操作租约错误"    = "Ralat pajakan operasi";
+"操作用户错误"    = "Ralat Pengguna Operasi";
+    
+//配置    //konfigurasi
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Tetapan Umum";
+"Cancel"    = "Batal";
+"Default User Information Configuration："    = "Konfigurasi maklumat pengguna lalai:";
+"Client Name："    = "Nama Pelanggan:";
+"User Name："    = "Nama Pengguna: ";
+"Password："    = "Kata Laluan:";
+"Cluster Network Configuration："    = "Konfigurasi Rangkaian:";
+"Network Protocol："    = "Protokol Rangkaian:";
+"Cluster Endpoint："    = "Nod Kluster:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Tiada fail dipilih";
+"KeyFile: 未选择任何文件"    = "KeyFile: Tiada fail dipilih";
+"CertFile: 未选择任何文件"    = "CertFile: Tiada fail dipilih";
+    
+"Timeout Setting Configuration (seconds)："    = "Konfigurasi tetapan tamat masa (saat):";
+"Request Timeout："    = "Permintaan tamat masa:";
+"Dial Timeout："    = "Tamat masa: ";
+"Dial Keep Alive Time："    = "Kekalkan masa hidup:";
+"Dial Keep Alive Timeout："    = "Kekalkan hidup tamat masa: ";
+"Auto Sync Interval："    = "Selang penyegerakan automatik:";
+"Miscellaneous："    = "Konfigurasi lain: ";
+"Auto create client name?"    = "Buat nama pelanggan secara automatik?";
+"Reschedule Pings？"    = "ping semula";
+"Clean Session?"    = "Sesi pembersihan?";
+"Auto connect on app launch?"    = "Sambung automatik apabila aplikasi bermula?";
+    
+    
+    
+    
+//home    //rumah
+"服务名称"    = "Nama Perkhidmatan";
+"节点地址"    = "Alamat Nod";
+"连接状态"    = "Status Sambungan";
+"Scuess"    = "Kejayaan";
+"Failed"    = "kegagalan";
+"Delete"    = "padam";
+"Cancle"    = "Batal";
+"The connection to the server was lost."    = "Sambungan ke pelayan telah hilang.";
+"Want to modify etcd service data?"    = "Adakah anda mahu mengubah suai data perkhidmatan etcd?";
+    
+// about    // tentang
+"Contact Us"    = "Hubungi Kami";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Jika anda mempunyai permintaan ciri, permintaan aplikasi tersuai atau pepijat, sila hubungi kami:";
+"Download"    = "muat turun";
+"App for Mac,Window and Linux"    = "Apl untuk Mac";
+"Documentation"    = "Dokumentasi";
+"Learn more about etcdWp features and turorials."    = "Ketahui lebih lanjut tentang ciri dan turorial etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB ialah platform video rangkaian berdasarkan standard GB28181. Ia menyokong penembusan NAT dan menyokong akses IPC, NVR, DVR jenama seperti Hikvision, Dahua dan Uniview. Ia menyokong penstriman dan penghantaran video seperti rtsp/rtmp. Pergi ke platform standard kebangsaan.";
+"推荐 MediaGB"    = "Syorkan MediaGB";
+"Learn More"    = "lebih";
+"（已发版）"    = "(dilepaskan)";
+"（研发中）"    = "(dalam pembangunan)";
+"Workpieces 官方开发社区和组织仓库"    = "Repositori Komuniti Pembangunan Rasmi dan Organisasi Bahan Kerja";
+"Workpieces LLC 官网"    = "Tapak web rasmi Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Lawati laman web rasmi";
+"意见反馈"    ="Maklum Balas";
+"粘贴"    = "Tampal";
+"键值操作"    = "Kendalian nilai kunci";
+"集群状态"    = "Status Kluster";
+"查看键值详情"    = "Lihat butiran nilai kunci";
+"复制key值"    = "Salin nilai kunci";
+"删除键值"    = "Padam nilai kunci";
+"更新键值"    = "Kemas kini nilai kunci";
+"复制value值"    = "Salin nilai";
+"Promotes集群成员"    = "Menggalakkan ahli kluster";
+"上一页"    = "Halaman sebelumnya";
+"下一页"    = "Halaman seterusnya";
+"键值不能输入为空"    = "Nilai kunci tidak boleh dimasukkan sebagai kosong";
+"复制成员"    = "Salin Ahli";
+"删除成员"    = "Alih keluar ahli";
+"成员id输入有误"    = "Id ahli tersilap masukkan";
+"提升成员"    = "Naikkan pangkat ahli";
+"成员（Members）"    = "Ahli";
+"成员地址输入有误"    = "Alamat ahli dimasukkan dengan salah";
+"链接状态: 正常"    = "Status Pautan: OK";
+"链接状态: 异常"    = "Status Pautan: Pengecualian";
+"刷新加载"    = "Muat Segar Semula";
+"清空键值"    ="Kosongkan nilai kunci";
+"查询"    = "Pertanyaan";
+"确定"    = "OK";
+"平铺结构"    = "struktur jubin";
+"树形结构"    = "struktur pokok";
+"创建成员"    = "Buat ahli";
+"修改成员"    = "Ubah suai ahli";
+"创建键值"    = "Buat nilai kunci";
+"键值前缀删除"    = "Padam awalan nilai utama";
+"租约管理"    = "Pengurusan Pajakan";
+"角色管理"    = "pengurusan peranan";
+"用户管理"    = "Pengurusan Pengguna";
+"开启认证"    = "Dayakan pengesahan";
+    
+//    //
+"请输入键值前缀"    = "Sila masukkan awalan kunci";
+"请输入前缀key"    = "Sila masukkan kekunci awalan";
+"创建角色"    = "Buat peranan";
+"请输入角色"    ="Sila masukkan peranan";
+"关闭"    = "tutup";
+"移除"    = "Alih keluar";
+"存活一次"    = "bertahan sekali";
+"请输入key"    = "Sila masukkan kunci";
+    
+"请输入时间"    = "Sila masukkan masa";
+"请输入Value"    = "Sila masukkan Nilai";
+"输入时间错误，请重新输入"    = "Masa yang salah, sila cuba lagi";
+"创建用户"    = "Buat Pengguna";
+"创建密码"    = "Buat Kata Laluan";
+"请输入密码"    = "Sila masukkan kata laluan anda";
+"用户操作错误"    = "Ralat operasi pengguna";
+    
+//    //
+"创建集群成员"    = "Buat ahli kluster";
+"更新集群成员"    = "Kemas kini ahli kluster";
+"修改后节点地址:"    = "Alamat nod yang diubah suai:";
+"节点地址: "    = "Alamat nod: ";
+"修改前节点id: "    = "Id nod sebelum pengubahsuaian: ";
+"节点id: "    = "id nod: ";
+    
+    
+"当前页: %lld "    = "Halaman semasa: %lld ";
+"成员总数: %lld "    = "Jumlah ahli: %lld ";
+"服务地址：%@"    = "Alamat Perkhidmatan: %@ ";
+"总数: %lld "    = "Jumlah: %lld ";
+"客户端： %@"    = "Pelanggan: %@";
+"节点： %@"    = "Nod: %@";
+"名称： %@"    = "Nama: %@";

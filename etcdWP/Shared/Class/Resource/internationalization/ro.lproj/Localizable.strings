@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      şiruri de caractere localizabile
+etcdWP      etcdWP
+    
+    
+      
+*/
+"批量导出"    ="Export în loturi";
+"批量导入"    ="Import în vrac";
+"关闭服务"    = "Închideți serviciul";
+"开启服务"    = "Activați serviciul";
+"保存目录不能为空"    = "Salvare director nu poate fi gol";
+    
+    
+"创建ETCD客户端"    = "Creează client ETCD";
+"Home"    = "Acasă";
+"About"    = "Despre";
+    
+    
+//Tip    //Bacsis
+"开启认证失败"    = "Activarea autentificarea a eșuat";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Conexiunea la rețea este anormală, vă rugăm să verificați configurația relevantă?";
+"保存失败"    = "Salvarea eșuată";
+"输入错误，请重新输入"    = "Introducere incorectă, vă rugăm să încercați din nou";
+"操作角色错误"    = "Eroare rol operațiune";
+"操作租约错误"    = "Eroare de închiriere operațională";
+"操作用户错误"    = "Eroare utilizator de operare";
+    
+//配置    //configurează
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Setări generale";
+"Cancel"    = "Anulează";
+"Default User Information Configuration："    = "Configurația implicită a informațiilor despre utilizator:";
+"Client Name："    = "Numele clientului:";
+"User Name："    = "Nume de utilizator: ";
+"Password："    = "Parola:";
+"Cluster Network Configuration："    = "Configurația rețelei:";
+"Network Protocol："    = "Protocol de rețea:";
+"Cluster Endpoint："    = "Nodul cluster:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Niciun fișier selectat";
+"KeyFile: 未选择任何文件"    = "KeyFile: Niciun fișier selectat";
+"CertFile: 未选择任何文件"    = "CertFile: Niciun fișier selectat";
+    
+"Timeout Setting Configuration (seconds)："    = "Configurare setare timeout (secunde):";
+"Request Timeout："    = "Solicitarea a expirat:";
+"Dial Timeout："    = "Timeout:";
+"Dial Keep Alive Time："    = "Păstrează timpul în viață:";
+"Dial Keep Alive Timeout："    = "Păstrați timpul expirat: ";
+"Auto Sync Interval："    = "Interval de sincronizare automată:";
+"Miscellaneous："    = "Altă configurație: ";
+"Auto create client name?"    = "Creați automat numele clientului?";
+"Reschedule Pings？"    = "re-ping";
+"Clean Session?"    = "Sesiune de curățare?";
+"Auto connect on app launch?"    = "Conectare automată când pornește aplicația?";
+    
+    
+    
+    
+//home    //Acasă
+"服务名称"    = "Nume serviciu";
+"节点地址"    = "Adresa nodului";
+"连接状态"    = "Starea conexiunii";
+"Scuess"    = "Succes";
+"Failed"    = "eșec";
+"Delete"    = "șterge";
+"Cancle"    = "Anulează";
+"The connection to the server was lost."    = "Conexiunea la server a fost pierdută.";
+"Want to modify etcd service data?"    = "Doriți să modificați datele serviciului etcd?";
+    
+// about    // despre
+"Contact Us"    = "Contactați-ne";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Dacă aveți o solicitare de funcționalitate, o cerere de aplicație personalizată sau o eroare, vă rugăm să ne contactați:";
+"Download"    = "descărcare";
+"App for Mac,Window and Linux"    = "Aplicații pentru Mac";
+"Documentation"    = "Documentare";
+"Learn more about etcdWp features and turorials."    = "Aflați mai multe despre caracteristicile etcdWp și turiale.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB este o platformă video de rețea bazată pe standardul GB28181. Acceptă penetrarea NAT și acceptă acces IPC, NVR, DVR de mărci precum Hikvision, Dahua și Uniview. Acceptă streaming și redirecționare video, cum ar fi rtsp/rtmp. Mergi la platforma standard națională.";
+"推荐 MediaGB"    = "Recomandați MediaGB";
+"Learn More"    = "mai mult";
+"（已发版）"    = "(eliberat)";
+"（研发中）"    = "(în dezvoltare)";
+"Workpieces 官方开发社区和组织仓库"    = "Depozitul oficial al comunității de dezvoltare și al organizației pentru piese de lucru";
+"Workpieces LLC 官网"    = "Site-ul web oficial Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Vizitați site-ul oficial";
+"意见反馈"    ="Părere";
+"粘贴"    = "Lipire";
+"键值操作"    = "Operațiune cheie-valoare";
+"集群状态"    = "Starea clusterului";
+"查看键值详情"    = "Vedeți detaliile cheie-valoare";
+"复制key值"    = "Copiați valoarea cheii";
+"删除键值"    = "Ștergeți valoarea cheii";
+"更新键值"    = "Actualizați valoarea cheii";
+"复制value值"    = "Copiați valoarea";
+"Promotes集群成员"    = "Promovează membrul clusterului";
+"上一页"    = "Pagina anterioară";
+"下一页"    = "Pagina următoare";
+"键值不能输入为空"    = "Valoarea cheii nu poate fi introdusă ca goală";
+"复制成员"    = "Copie membru";
+"删除成员"    = "Eliminați membru";
+"成员id输入有误"    = "ID membru introdus incorect";
+"提升成员"    = "Promovați membru";
+"成员（Members）"    = "Membri";
+"成员地址输入有误"    = "Adresa membrului introdusă incorect";
+"链接状态: 正常"    = "Stare link: OK";
+"链接状态: 异常"    = "Stare link: excepție";
+"刷新加载"    = "Încărcare de reîmprospătare";
+"清空键值"    ="ștergeți valoarea cheii";
+"查询"    = "Interogare";
+"确定"    = "OK";
+"平铺结构"    = "structură țiglă";
+"树形结构"    = "structură arborescentă";
+"创建成员"    = "Creează membru";
+"修改成员"    = "Modificare membru";
+"创建键值"    = "Creează valoarea cheii";
+"键值前缀删除"    = "Ștergerea prefixului valorii cheie";
+"租约管理"    = "Gestionarea leasingului";
+"角色管理"    = "managementul rolurilor";
+"用户管理"    = "Gestionarea utilizatorilor";
+"开启认证"    = "Activați autentificarea";
+    
+//    //
+"请输入键值前缀"    = "Vă rugăm să introduceți un prefix cheie";
+"请输入前缀key"    = "Vă rugăm să introduceți cheia de prefix";
+"创建角色"    = "Creează un rol";
+"请输入角色"    ="Vă rugăm să introduceți un rol";
+"关闭"    = "închidere";
+"移除"    = "Eliminați";
+"存活一次"    = "supraviețuiește o dată";
+"请输入key"    = "Vă rugăm introduceți cheia";
+    
+"请输入时间"    = "Vă rugăm să introduceți ora";
+"请输入Value"    = "Vă rugăm să introduceți valoarea";
+"输入时间错误，请重新输入"    = "Ora incorectă, vă rugăm să încercați din nou";
+"创建用户"    = "Creează utilizator";
+"创建密码"    = "Creează parola";
+"请输入密码"    = "Vă rugăm să introduceți parola";
+"用户操作错误"    = "Eroare de operare a utilizatorului";
+    
+//    //
+"创建集群成员"    = "Creează membru cluster";
+"更新集群成员"    = "Actualizați membrii clusterului";
+"修改后节点地址:"    = "Adresa nodului modificat:";
+"节点地址: "    = "Adresa nodului: ";
+"修改前节点id: "    = "Idul nodului înainte de modificare: ";
+"节点id: "    = "ID nod:";
+    
+    
+"当前页: %lld "    = "Pagina curentă: %lld";
+"成员总数: %lld "    = "Numărul total de membri: %lld";
+"服务地址：%@"    = "Adresa serviciului: %@";
+"总数: %lld "    = "Total: %lld";
+"客户端： %@"    = "Client: %@";
+"节点： %@"    = "Nod: %@";
+"名称： %@"    = "Nume: %@";

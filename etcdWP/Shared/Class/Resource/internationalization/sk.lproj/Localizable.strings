@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      Localizable.strings
+etcdWP      atďdWP
+    
+    
+      
+*/
+"批量导出"    = "Dávkový export";
+"批量导入"    = "Hromadný import";
+"关闭服务"    = "Zatvoriť službu";
+"开启服务"    = "Povoliť službu";
+"保存目录不能为空"    = "Uložiť adresár nemôže byť prázdny";
+    
+    
+"创建ETCD客户端"    = "Vytvoriť klienta ETCD";
+"Home"    = "Domov";
+"About"    = "O";
+    
+    
+//Tip    //Tip
+"开启认证失败"    = "Nepodarilo sa povoliť autentifikáciu";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Sieťové pripojenie je abnormálne, skontrolujte príslušnú konfiguráciu?";
+"保存失败"    = "Uloženie zlyhalo";
+"输入错误，请重新输入"    = "Nesprávne zadanie, skúste to znova";
+"操作角色错误"    = "Chyba roly operácie";
+"操作租约错误"    = "Chyba prenájmu prevádzky";
+"操作用户错误"    = "Chyba používateľa operácie";
+    
+//配置    //konfigurovať
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Všeobecné nastavenia";
+"Cancel"    = "Zrušiť";
+"Default User Information Configuration："    = "Predvolená konfigurácia používateľských informácií:";
+"Client Name："    = "Meno zákazníka:";
+"User Name："    = "Používateľské meno: ";
+"Password："    = "Heslo:";
+"Cluster Network Configuration："    = "Konfigurácia siete:";
+"Network Protocol："    = "Sieťový protokol:";
+"Cluster Endpoint："    = "Uzol klastra:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Nie je vybratý žiadny súbor";
+"KeyFile: 未选择任何文件"    = "KeyFile: Nie je vybratý žiadny súbor";
+"CertFile: 未选择任何文件"    = "CertFile: Nie je vybratý žiadny súbor";
+    
+"Timeout Setting Configuration (seconds)："    = "Konfigurácia nastavenia časového limitu (v sekundách):";
+"Request Timeout："    = "Časový limit požiadavky vypršal:";
+"Dial Timeout："    = "Časový limit: ";
+"Dial Keep Alive Time："    = "Udržať nažive čas:";
+"Dial Keep Alive Timeout："    = "Časový limit udržiavania pri živote: ";
+"Auto Sync Interval："    = "Interval automatickej synchronizácie:";
+"Miscellaneous："    = "Iná konfigurácia: ";
+"Auto create client name?"    = "Automaticky vytvoriť meno klienta?";
+"Reschedule Pings？"    = "opätovné pingnutie";
+"Clean Session?"    = "Vyčistiť reláciu?";
+"Auto connect on app launch?"    = "Automaticky pripojiť pri spustení aplikácie?";
+    
+    
+    
+    
+//home    //Domov
+"服务名称"    = "Názov služby";
+"节点地址"    = "Adresa uzla";
+"连接状态"    = "Stav pripojenia";
+"Scuess"    = "Úspech";
+"Failed"    = "zlyhanie";
+"Delete"    = "vymazať";
+"Cancle"    = "Zrušiť";
+"The connection to the server was lost."    = "Pripojenie k serveru bolo stratené.";
+"Want to modify etcd service data?"    = "Chcete upraviť údaje služby etcd?";
+    
+// about    // o
+"Contact Us"    = "Kontaktujte nás";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Ak máte požiadavku na funkciu, požiadavku na vlastnú aplikáciu alebo chybu, kontaktujte nás:";
+"Download"    = "stiahnuť";
+"App for Mac,Window and Linux"    = "Aplikácie pre Mac";
+"Documentation"    = "Dokumentácia";
+"Learn more about etcdWp features and turorials."    = "Získajte viac informácií o funkciách a programoch etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB je sieťová video platforma založená na štandarde GB28181. Podporuje prienik NAT a podporuje prístup IPC, NVR, DVR značiek ako Hikvision, Dahua a Uniview. Podporuje streamovanie a preposielanie videa ako rtsp/rtmp. Prejsť na národnú štandardnú platformu.";
+"推荐 MediaGB"    = "Odporúčať MediaGB";
+"Learn More"    = "viac";
+"（已发版）"    = "(vydané)";
+"（研发中）"    = "(vo vývoji)";
+"Workpieces 官方开发社区和组织仓库"    = "Repozitár oficiálneho rozvoja komunity a organizácie obrobkov";
+"Workpieces LLC 官网"    = "Oficiálna webová stránka Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Navštívte oficiálnu webovú stránku";
+"意见反馈"    ="Spätná väzba";
+"粘贴"    = "Prilepiť";
+"键值操作"    = "Operácia kľúč-hodnota";
+"集群状态"    = "Stav klastra";
+"查看键值详情"    = "Zobraziť podrobnosti páru kľúč – hodnota";
+"复制key值"    = "Kopírovať hodnotu kľúča";
+"删除键值"    = "Vymazať hodnotu kľúča";
+"更新键值"    = "Aktualizovať hodnotu kľúča";
+"复制value值"    = "Kopírovať hodnotu";
+"Promotes集群成员"    = "Povýší člena klastra";
+"上一页"    = "Predchádzajúca stránka";
+"下一页"    = "Ďalšia stránka";
+"键值不能输入为空"    = "Hodnotu kľúča nemožno zadať ako prázdnu";
+"复制成员"    = "Kopírovať člena";
+"删除成员"    = "Odstrániť člena";
+"成员id输入有误"    = "Nesprávne zadané ID člena";
+"提升成员"    = "Povýšiť člena";
+"成员（Members）"    = "Členovia";
+"成员地址输入有误"    = "Nesprávne zadaná adresa člena";
+"链接状态: 正常"    = "Stav odkazu: OK";
+"链接状态: 异常"    = "Stav odkazu: Výnimka";
+"刷新加载"    = "Obnoviť zaťaženie";
+"清空键值"    ="Vymazať hodnotu kľúča";
+"查询"    = "Dopyt";
+"确定"    = "OK";
+"平铺结构"    = "štruktúra dlaždíc";
+"树形结构"    = "stromová štruktúra";
+"创建成员"    = "Vytvoriť člena";
+"修改成员"    = "Upraviť člena";
+"创建键值"    = "Vytvoriť hodnotu kľúča";
+"键值前缀删除"    = "Vymazanie predpony kľúčovej hodnoty";
+"租约管理"    = "Manažment prenájmu";
+"角色管理"    = "správa rolí";
+"用户管理"    = "Správa používateľov";
+"开启认证"    = "Povoliť autentifikáciu";
+    
+//    //
+"请输入键值前缀"    = "Zadajte predponu kľúča";
+"请输入前缀key"    = "Zadajte kľúč prefixu";
+"创建角色"    = "Vytvoriť rolu";
+"请输入角色"    ="Zadajte rolu";
+"关闭"    = "zavrieť";
+"移除"    = "Odstrániť";
+"存活一次"    = "prežiť raz";
+"请输入key"    = "Zadajte kľúč";
+    
+"请输入时间"    = "Zadajte prosím čas";
+"请输入Value"    = "Zadajte hodnotu";
+"输入时间错误，请重新输入"    = "Nesprávny čas, skúste to znova";
+"创建用户"    = "Vytvoriť používateľa";
+"创建密码"    = "Vytvoriť heslo";
+"请输入密码"    = "Zadajte svoje heslo";
+"用户操作错误"    = "Chyba obsluhy používateľa";
+    
+//    //
+"创建集群成员"    = "Vytvoriť člena klastra";
+"更新集群成员"    = "Aktualizovať členov klastra";
+"修改后节点地址:"    = "Upravená adresa uzla:";
+"节点地址: "    = "Adresa uzla: ";
+"修改前节点id: "    = "ID uzla pred úpravou: ";
+"节点id: "    = "id uzla: ";
+    
+    
+"当前页: %lld "    = "Aktuálna stránka: %lld";
+"成员总数: %lld "    = "Celkový počet členov: %lld";
+"服务地址：%@"    = "Adresa služby: %@ ";
+"总数: %lld "    = "Celkom: %lld";
+"客户端： %@"    = "Klient: %@";
+"节点： %@"    = "Uzol: %@";
+"名称： %@"    = "Meno: %@";

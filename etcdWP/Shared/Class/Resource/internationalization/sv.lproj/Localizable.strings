@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      Lokaliserbara.strängar
+etcdWP      etcdWP
+    
+    
+      
+*/
+"批量导出"    = "Satsexport";
+"批量导入"    = "Massimport";
+"关闭服务"    = "Stäng tjänst";
+"开启服务"    = "Aktivera tjänst";
+"保存目录不能为空"    = "Spara katalog kan inte vara tom";
+    
+    
+"创建ETCD客户端"    = "Skapa ETCD-klient";
+"Home"    = "Hem";
+"About"    = "Om";
+    
+    
+//Tip    //Dricks
+"开启认证失败"    = "Det gick inte att aktivera autentisering";
+"The network connection is abnormal, please check the relevant configuration ?"    = "Nätverksanslutningen är onormal, kontrollera den relevanta konfigurationen?";
+"保存失败"    = "Spara misslyckades";
+"输入错误，请重新输入"    = "Felaktig inmatning, försök igen";
+"操作角色错误"    = "Fel vid operationsroll";
+"操作租约错误"    = "Fel vid operationsleasing";
+"操作用户错误"    = "Operation User Error";
+    
+//配置    //konfigurera
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Allmänna inställningar";
+"Cancel"    = "Avbryt";
+"Default User Information Configuration："    = "Standardkonfiguration för användarinformation:";
+"Client Name："    = "Kundens namn:";
+"User Name："    = "Användarnamn: ";
+"Password："    = "Lösenord:";
+"Cluster Network Configuration："    = "Nätverkskonfiguration:";
+"Network Protocol："    = "Nätverksprotokoll:";
+"Cluster Endpoint："    = "Klusternod:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Ingen fil vald";
+"KeyFile: 未选择任何文件"    = "KeyFile: Ingen fil vald";
+"CertFile: 未选择任何文件"    = "CertFile: Ingen fil vald";
+    
+"Timeout Setting Configuration (seconds)："    = "Timeout-inställningskonfiguration (sekunder):";
+"Request Timeout："    = "Tidsgränsen för begäran togs:";
+"Dial Timeout："    = "Timeout: ";
+"Dial Keep Alive Time："    = "Håll livstid:";
+"Dial Keep Alive Timeout："    = "Keep alive timeout: ";
+"Auto Sync Interval："    = "Automatisk synkroniseringsintervall:";
+"Miscellaneous："    = "Annan konfiguration: ";
+"Auto create client name?"    = "Skapa klientnamn automatiskt?";
+"Reschedule Pings？"    = "åter-pinga";
+"Clean Session?"    = "Rensa upp session?";
+"Auto connect on app launch?"    = "Anslut automatiskt när programmet startar?";
+    
+    
+    
+    
+//home    //Hem
+"服务名称"    = "Tjänstens namn";
+"节点地址"    = "Nodadress";
+"连接状态"    = "Anslutningsstatus";
+"Scuess"    = "Framgång";
+"Failed"    = "misslyckande";
+"Delete"    = "ta bort";
+"Cancle"    = "Avbryt";
+"The connection to the server was lost."    = "Anslutningen till servern förlorades.";
+"Want to modify etcd service data?"    = "Vill du ändra etcd-tjänstdata?";
+    
+// about    // handla om
+"Contact Us"    = "Kontakta oss";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Om du har en funktionsbegäran, anpassad appbegäran eller bugg, kontakta oss:";
+"Download"    = "ladda ner";
+"App for Mac,Window and Linux"    = "Appar för Mac";
+"Documentation"    = "Dokumentation";
+"Learn more about etcdWp features and turorials."    = "Läs mer om etcdWp-funktioner och turorials.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB är en nätverksvideoplattform baserad på GB28181-standarden. Den stöder NAT-penetration och stöder IPC, NVR, DVR-åtkomst av märken som Hikvision, Dahua och Uniview. Den stöder videoströmning och vidarebefordran som rtsp/rtmp. Go till den nationella standardplattformen.";
+"推荐 MediaGB"    = "Rekommendera MediaGB";
+"Learn More"    = "mer";
+"（已发版）"    = "(släppt)";
+"（研发中）"    = "(under utveckling)";
+"Workpieces 官方开发社区和组织仓库"    = "Workpieces Official Development Community and Organization Repository";
+"Workpieces LLC 官网"    = "Workpieces LLC officiella webbplats";
+    
+//    //
+    
+"访问官网"    = "Besök den officiella webbplatsen";
+"意见反馈"    ="Feedback";
+"粘贴"    = "Klistra in";
+"键值操作"    = "Nyckel-värde operation";
+"集群状态"    = "Klusterstatus";
+"查看键值详情"    = "Visa nyckel-värde detaljer";
+"复制key值"    = "Kopiera nyckelvärde";
+"删除键值"    = "Ta bort nyckelvärde";
+"更新键值"    = "Uppdatera nyckelvärde";
+"复制value值"    = "Kopiera värde";
+"Promotes集群成员"    = "Främjar klustermedlem";
+"上一页"    = "Föregående sida";
+"下一页"    = "Nästa sida";
+"键值不能输入为空"    = "Nyckelvärde kan inte anges som tomt";
+"复制成员"    = "Kopiera medlem";
+"删除成员"    = "Ta bort medlem";
+"成员id输入有误"    = "Medlems-ID har angetts felaktigt";
+"提升成员"    = "Främja medlem";
+"成员（Members）"    = "Medlemmar";
+"成员地址输入有误"    = "Medlemsadressen har angetts felaktigt";
+"链接状态: 正常"    = "Länkstatus: OK";
+"链接状态: 异常"    = "Länkstatus: Undantag";
+"刷新加载"    = "Uppdatera laddning";
+"清空键值"    ="Rensa nyckelvärde";
+"查询"    = "Fråga";
+"确定"    = "OK";
+"平铺结构"    = "kakelstruktur";
+"树形结构"    = "trädstruktur";
+"创建成员"    = "Skapa medlem";
+"修改成员"    = "Ändra medlem";
+"创建键值"    = "Skapa nyckelvärde";
+"键值前缀删除"    = "Ta bort nyckelvärdesprefix";
+"租约管理"    = "Leasinghantering";
+"角色管理"    = "rollhantering";
+"用户管理"    = "Användarhantering";
+"开启认证"    = "Aktivera autentisering";
+    
+//    //
+"请输入键值前缀"    = "Vänligen ange ett nyckelprefix";
+"请输入前缀key"    = "Vänligen ange prefixnyckeln";
+"创建角色"    = "Skapa roll";
+"请输入角色"    ="Vänligen ange en roll";
+"关闭"    = "stäng";
+"移除"    = "Ta bort";
+"存活一次"    = "överleva en gång";
+"请输入key"    = "Vänligen skriv in nyckel";
+    
+"请输入时间"    = "Vänligen ange tiden";
+"请输入Value"    = "Vänligen ange värde";
+"输入时间错误，请重新输入"    = "Felaktig tid, försök igen";
+"创建用户"    = "Skapa användare";
+"创建密码"    = "Skapa lösenord";
+"请输入密码"    = "Vänligen ange ditt lösenord";
+"用户操作错误"    = "Användarfunktionsfel";
+    
+//    //
+"创建集群成员"    = "Skapa klustermedlem";
+"更新集群成员"    = "Uppdatera klustermedlemmar";
+"修改后节点地址:"    = "Ändrad nodadress:";
+"节点地址: "    = "Nodadress: ";
+"修改前节点id: "    = "Nod-id före ändring: ";
+"节点id: "    = "nod-id: ";
+    
+    
+"当前页: %lld "    = "Aktuell sida: %lld ";
+"成员总数: %lld "    = "Totalt antal medlemmar: %lld ";
+"服务地址：%@"    = "Tjänstens adress: %@ ";
+"总数: %lld "    = "Totalt: %lld ";
+"客户端： %@"    = "Klient: %@";
+"节点： %@"    = "Nod: %@";
+"名称： %@"    = "Namn: %@";

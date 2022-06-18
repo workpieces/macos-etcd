@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      Strings.localizáveis
+etcdWP      etcdWP
+    
+    
+      
+*/
+"批量导出"    = "Exportação em lote";
+"批量导入"    = "Importação em massa";
+"关闭服务"    = "Fechar serviço";
+"开启服务"    = "Ativar serviço";
+"保存目录不能为空"    = "O diretório de salvamento não pode estar vazio";
+    
+    
+"创建ETCD客户端"    = "Criar cliente ETCD";
+"Home"    = "Casa";
+"About"    = "Sobre";
+    
+    
+//Tip    //Dica
+"开启认证失败"    = "Falha ao habilitar a autenticação";
+"The network connection is abnormal, please check the relevant configuration ?"    = "A conexão de rede está anormal, verifique a configuração relevante?";
+"保存失败"    = "Falha ao salvar";
+"输入错误，请重新输入"    = "Inserção incorreta, tente novamente";
+"操作角色错误"    = "Erro de função de operação";
+"操作租约错误"    = "Erro de concessão da operação";
+"操作用户错误"    = "Erro do usuário da operação";
+    
+//配置    //configura
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Configurações gerais";
+"Cancel"    = "Cancelar";
+"Default User Information Configuration："    = "Configuração padrão das informações do usuário:";
+"Client Name："    = "Nome do cliente:";
+"User Name："    = "Nome de usuário: ";
+"Password："    = "Senha:";
+"Cluster Network Configuration："    = "Configuração de rede:";
+"Network Protocol："    = "Protocolo de rede:";
+"Cluster Endpoint："    = "Nó do Cluster:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: Nenhum arquivo selecionado";
+"KeyFile: 未选择任何文件"    = "KeyFile: Nenhum arquivo selecionado";
+"CertFile: 未选择任何文件"    = "CertFile: Nenhum arquivo selecionado";
+    
+"Timeout Setting Configuration (seconds)："    = "Configuração de configuração de tempo limite (segundos):";
+"Request Timeout："    = "A solicitação expirou:";
+"Dial Timeout："    = "Tempo limite: ";
+"Dial Keep Alive Time："    = "Manter tempo vivo:";
+"Dial Keep Alive Timeout："    = "Tempo limite para manter ativo: ";
+"Auto Sync Interval："    = "Intervalo de sincronização automática:";
+"Miscellaneous："    = "Outra configuração: ";
+"Auto create client name?"    = "Criar nome de cliente automaticamente?";
+"Reschedule Pings？"    = "re-ping";
+"Clean Session?"    = "Sessão de limpeza?";
+"Auto connect on app launch?"    = "Conectar automaticamente quando o aplicativo for iniciado?";
+    
+    
+    
+    
+//home    //casa
+"服务名称"    = "Nome do serviço";
+"节点地址"    = "Endereço do Nó";
+"连接状态"    = "Status da conexão";
+"Scuess"    = "Sucesso";
+"Failed"    = "falha";
+"Delete"    = "excluir";
+"Cancle"    = "Cancelar";
+"The connection to the server was lost."    = "A conexão com o servidor foi perdida.";
+"Want to modify etcd service data?"    = "Deseja modificar os dados do serviço etcd?";
+    
+// about    // cerca de
+"Contact Us"    = "Fale Conosco";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Se você tiver uma solicitação de recurso, solicitação de aplicativo personalizado ou bug, entre em contato conosco:";
+"Download"    = "baixar";
+"App for Mac,Window and Linux"    = "Aplicativos para Mac";
+"Documentation"    = "Documentação";
+"Learn more about etcdWp features and turorials."    = "Saiba mais sobre os recursos e tutoriais do etcdWp.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "MediaGB é uma plataforma de vídeo em rede baseada no padrão GB28181. Suporta penetração NAT e acesso IPC, NVR, DVR de marcas como Hikvision, Dahua e Uniview. Suporta streaming e encaminhamento de vídeo como rtsp/rtmp. Go para a plataforma padrão nacional.";
+"推荐 MediaGB"    = "Recomendar MediaGB";
+"Learn More"    = "mais";
+"（已发版）"    = "(lançado)";
+"（研发中）"    = "(em desenvolvimento)";
+"Workpieces 官方开发社区和组织仓库"    = "Repositório Oficial da Comunidade e Organização de Desenvolvimento de Peças de Trabalho";
+"Workpieces LLC 官网"    = "Site oficial da Workpieces LLC";
+    
+//    //
+    
+"访问官网"    = "Visite o site oficial";
+"意见反馈"    ="Comentários";
+"粘贴"    = "Colar";
+"键值操作"    = "Operação de valor-chave";
+"集群状态"    = "Status do cluster";
+"查看键值详情"    = "Ver detalhes do valor-chave";
+"复制key值"    = "Copiar valor da chave";
+"删除键值"    = "Excluir valor da chave";
+"更新键值"    = "Atualizar valor da chave";
+"复制value值"    = "Copiar valor";
+"Promotes集群成员"    = "Promove membro do cluster";
+"上一页"    = "Página anterior";
+"下一页"    = "Próxima página";
+"键值不能输入为空"    = "O valor da chave não pode ser inserido como vazio";
+"复制成员"    = "Copiar Membro";
+"删除成员"    = "Remover membro";
+"成员id输入有误"    = "ID de membro inserido incorretamente";
+"提升成员"    = "Promover membro";
+"成员（Members）"    = "Membros";
+"成员地址输入有误"    = "Endereço de membro digitado incorretamente";
+"链接状态: 正常"    = "Status do link: OK";
+"链接状态: 异常"    = "Status do link: exceção";
+"刷新加载"    = "Atualizar carga";
+"清空键值"    ="Limpar valor da chave";
+"查询"    = "Consulta";
+"确定"    = "OK";
+"平铺结构"    = "estrutura de ladrilhos";
+"树形结构"    = "estrutura em árvore";
+"创建成员"    = "Criar membro";
+"修改成员"    = "Modificar membro";
+"创建键值"    = "Criar valor de chave";
+"键值前缀删除"    = "Exclusão do prefixo do valor da chave";
+"租约管理"    = "Gestão de Arrendamento";
+"角色管理"    = "gerenciamento de funções";
+"用户管理"    = "Gerenciamento de usuários";
+"开启认证"    = "Ativar autenticação";
+    
+//    //
+"请输入键值前缀"    = "Por favor, digite um prefixo de chave";
+"请输入前缀key"    = "Por favor, digite a chave de prefixo";
+"创建角色"    = "Criar função";
+"请输入角色"    ="Por favor, insira uma função";
+"关闭"    = "fechar";
+"移除"    = "Remover";
+"存活一次"    = "sobreviver uma vez";
+"请输入key"    = "Por favor, digite a chave";
+    
+"请输入时间"    = "Por favor, digite a hora";
+"请输入Value"    = "Por favor, insira o valor";
+"输入时间错误，请重新输入"    = "Hora incorreta, tente novamente";
+"创建用户"    = "Criar usuário";
+"创建密码"    = "Criar senha";
+"请输入密码"    = "Por favor, digite sua senha";
+"用户操作错误"    = "Erro na operação do usuário";
+    
+//    //
+"创建集群成员"    = "Criar membro do cluster";
+"更新集群成员"    = "Atualizar membros do cluster";
+"修改后节点地址:"    = "Endereço do nó modificado:";
+"节点地址: "    = "Endereço do nó: ";
+"修改前节点id: "    = "ID do nó antes da modificação: ";
+"节点id: "    = "ID do nó: ";
+    
+    
+"当前页: %lld "    = "Página atual: %lld ";
+"成员总数: %lld "    = "Total de membros: %lld";
+"服务地址：%@"    = "Endereço do Serviço: %@ ";
+"总数: %lld "    = "Total: %lld";
+"客户端： %@"    = "Cliente: %@";
+"节点： %@"    = "Nó: %@";
+"名称： %@"    = "Nome: %@";

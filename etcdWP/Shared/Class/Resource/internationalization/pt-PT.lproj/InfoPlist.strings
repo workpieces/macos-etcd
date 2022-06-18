@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  etcdWP
+
+  Created by FaceBook on 2022/4/26.
+  
+*/
+
+"CFBundleName" = "etcdWP";
+
+/* Bundle display name */
+"CFBundleDisplayName" = "etcdWP";
+
+/* Copyright (human-readable) */
+//"NSHumanReadableCopyright" = "";
+
