@@ -19,8 +19,12 @@ struct ETCDKeyListContentView: View {
                 ETCDKeyListContentListView()
                 ETCDKeyListContentPageView()
             }else{
-                ETCDKeyListContentTreeListView()
-                ETCDKeyTreeListContentPageView()
+                if ((storeObj.treeItem()?.children?.isEmpty) != nil) {
+                    ETCDKeyListContentTreeListView()
+                    ETCDKeyTreeListContentPageView()
+                }else{
+                    EmptyView().frame(width: 280, height: 320)
+                }
             }
             ETCDKeyContentMembersListView()
         }.onAppear(perform: {
