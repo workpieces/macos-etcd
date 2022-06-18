@@ -166,7 +166,7 @@ struct ETCDConfigView: View {
             
             Spacer()
         }
-        .popup(isPresented: $isToast, type: .toast, position: .top, animation: .spring(), autohideIn: 3) {
+        .popup(isPresented: $isToast, type: .toast, position: .top, animation: .spring(), autohideIn: 2) {
             TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
         }
     }
