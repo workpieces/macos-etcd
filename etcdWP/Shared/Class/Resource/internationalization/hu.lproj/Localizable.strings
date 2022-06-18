@@ -1,0 +1,157 @@
+/*    /*
+Localizable.strings      Lokalizálható.karakterláncok
+etcdWP      etcdWP
+    
+    
+      
+*/
+"批量导出"    = "Kötegelt export";
+"批量导入"    = "Tömeges import";
+"关闭服务"    = "Szolgáltatás bezárása";
+"开启服务"    = "Szolgáltatás engedélyezése";
+"保存目录不能为空"    = "A mentési könyvtár nem lehet üres";
+    
+    
+"创建ETCD客户端"    = "ETCD kliens létrehozása";
+"Home"    = "Otthon";
+"About"    = "Körülbelül";
+    
+    
+//Tip    //Tipp
+"开启认证失败"    = "Nem sikerült engedélyezni a hitelesítést";
+"The network connection is abnormal, please check the relevant configuration ?"    = "A hálózati kapcsolat hibás, kérjük ellenőrizze a megfelelő konfigurációt?";
+"保存失败"    = "A mentés nem sikerült";
+"输入错误，请重新输入"    = "Hibás bevitel, kérjük próbálja újra";
+"操作角色错误"    = "Műveleti szerephiba";
+"操作租约错误"    = "Üzemeltetési bérleti hiba";
+"操作用户错误"    = "Művelet felhasználói hiba";
+    
+//配置    //Beállítás
+"ETCD CLUSTER V3"    = "ETCD CLUSTER V3";
+"通用设置"    = "Általános beállítások";
+"Cancel"    = "Mégse";
+"Default User Information Configuration："    = "Alapértelmezett felhasználói információ konfiguráció:";
+"Client Name："    = "Ügyfél neve:";
+"User Name："    = "Felhasználónév: ";
+"Password："    = "Jelszó:";
+"Cluster Network Configuration："    = "Hálózati konfiguráció:";
+"Network Protocol："    = "Hálózati protokoll:";
+"Cluster Endpoint："    = "Cluster csomópont:";
+"TrustedCAFile: 未选择任何文件"    = "TrustedCAFile: nincs kiválasztva fájl";
+"KeyFile: 未选择任何文件"    = "KeyFile: nincs kiválasztva fájl";
+"CertFile: 未选择任何文件"    = "CertFile: nincs kiválasztva fájl";
+    
+"Timeout Setting Configuration (seconds)："    = "Időtúllépési beállítás konfigurációja (másodperc):";
+"Request Timeout："    = "A kérés időtúllépése:";
+"Dial Timeout："    = "Időtúllépés: ";
+"Dial Keep Alive Time："    = "Élet tartás ideje:";
+"Dial Keep Alive Timeout："    = "Életben tartás időtúllépés: ";
+"Auto Sync Interval："    = "Automatikus szinkronizálási időköz:";
+"Miscellaneous："    = "Egyéb konfiguráció: ";
+"Auto create client name?"    = "Automatikusan létrehozza az ügyfél nevét?";
+"Reschedule Pings？"    = "újra ping";
+"Clean Session?"    = "Takarítási munkamenet?";
+"Auto connect on app launch?"    = "Automatikus csatlakozás az alkalmazás indításakor?";
+    
+    
+    
+    
+//home    //itthon
+"服务名称"    = "Szolgáltatás neve";
+"节点地址"    = "Csomópont címe";
+"连接状态"    = "Kapcsolat állapota";
+"Scuess"    = "Siker";
+"Failed"    = "kudarc";
+"Delete"    = "törlés";
+"Cancle"    = "Mégse";
+"The connection to the server was lost."    = "A kapcsolat a szerverrel megszakadt.";
+"Want to modify etcd service data?"    = "Szeretné módosítani az etcd szolgáltatás adatait?";
+    
+// about    // ról ről
+"Contact Us"    = "Kapcsolatfelvétel";
+"If you have feature requests, custom app requirements or bugs, contact us :"    = "Ha szolgáltatáskérelme, egyéni alkalmazáskérelme vagy programhibája van, kérjük, lépjen kapcsolatba velünk:";
+"Download"    = "letöltés";
+"App for Mac,Window and Linux"    = "Alkalmazások Mac-hez";
+"Documentation"    = "Dokumentáció";
+"Learn more about etcdWp features and turorials."    = "További információ az etcdWp szolgáltatásairól és bemutatóiról.";
+"MediaGB是一个基于GB28181标准实现的网络视频平台，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR、DVR接入。支持rtsp/rtmp等视频推流、流转发到国标平台。"    = "A MediaGB a GB28181 szabványon alapuló hálózati videoplatform. Támogatja a NAT penetrációt, és támogatja az olyan márkák IPC, NVR, DVR hozzáférését, mint a Hikvision, Dahua és Uniview. Támogatja a videó streaminget és továbbítást, például az rtsp/rtmp. Go a nemzeti szabvány platformra.";
+"推荐 MediaGB"    = "A MediaGB ajánlása";
+"Learn More"    = "több";
+"（已发版）"    = "(megjelent)";
+"（研发中）"    = "(fejlesztés alatt)";
+"Workpieces 官方开发社区和组织仓库"    = "Munkadarabok Hivatalos Fejlesztési Közösségi és Szervezeti Tár";
+"Workpieces LLC 官网"    = "Workpieces LLC hivatalos honlapja";
+    
+//    //
+    
+"访问官网"    = "Látogassa meg a hivatalos webhelyet";
+"意见反馈"    ="Visszajelzés";
+"粘贴"    = "Beillesztés";
+"键值操作"    = "Kulcsérték művelet";
+"集群状态"    = "Cluster állapota";
+"查看键值详情"    = "A kulcsérték részleteinek megtekintése";
+"复制key值"    = "Kulcsérték másolása";
+"删除键值"    = "Kulcsérték törlése";
+"更新键值"    = "Kulcsérték frissítése";
+"复制value值"    = "Érték másolása";
+"Promotes集群成员"    = "Klasztertag előléptetése";
+"上一页"    = "Előző oldal";
+"下一页"    = "Következő oldal";
+"键值不能输入为空"    = "A kulcs értéke nem adható meg üresen";
+"复制成员"    = "Tag másolása";
+"删除成员"    = "Tag eltávolítása";
+"成员id输入有误"    = "A tagazonosító hibásan lett megadva";
+"提升成员"    = "Tag előléptetése";
+"成员（Members）"    = "Tagok";
+"成员地址输入有误"    = "A tag címe hibásan lett megadva";
+"链接状态: 正常"    = "Link állapota: OK";
+"链接状态: 异常"    = "Link állapota: Kivétel";
+"刷新加载"    = "Betöltés frissítése";
+"清空键值"    ="Kulcsérték törlése";
+"查询"    = "Lekérdezés";
+"确定"    = "OK";
+"平铺结构"    = "csempe szerkezet";
+"树形结构"    = "fa szerkezet";
+"创建成员"    = "Tag létrehozása";
+"修改成员"    = "Tag módosítása";
+"创建键值"    = "Kulcsérték létrehozása";
+"键值前缀删除"    = "Kulcsérték előtag törlése";
+"租约管理"    = "Lízingkezelés";
+"角色管理"    = "szerepvezetés";
+"用户管理"    = "Felhasználókezelés";
+"开启认证"    = "Hitelesítés engedélyezése";
+    
+//    //
+"请输入键值前缀"    = "Kérjük, írjon be egy kulcs előtagot";
+"请输入前缀key"    = "Kérjük, adja meg az előtag kulcsát";
+"创建角色"    = "Szerepkör létrehozása";
+"请输入角色"    ="Kérjük, adjon meg egy szerepet";
+"关闭"    = "bezárás";
+"移除"    = "Eltávolítás";
+"存活一次"    = "egyszer túlélni";
+"请输入key"    = "Kérjük, adja meg a kulcsot";
+    
+"请输入时间"    = "Kérjük, adja meg az időt";
+"请输入Value"    = "Kérjük, adja meg az értéket";
+"输入时间错误，请重新输入"    = "Hibás idő, próbáld újra";
+"创建用户"    = "Felhasználó létrehozása";
+"创建密码"    = "Jelszó létrehozása";
+"请输入密码"    = "Kérjük, adja meg jelszavát";
+"用户操作错误"    = "Felhasználói működési hiba";
+    
+//    //
+"创建集群成员"    = "Clustertag létrehozása";
+"更新集群成员"    = "Clustertagok frissítése";
+"修改后节点地址:"    = "Módosított csomópont címe:";
+"节点地址: "    = "Csomópont címe: ";
+"修改前节点id: "    = "Csomópont azonosítója a módosítás előtt: ";
+"节点id: "    = "csomópont azonosítója: ";
+    
+    
+"当前页: %lld "    = "Jelenlegi oldal: %lld ";
+"成员总数: %lld "    = "Összes tag: %lld ";
+"服务地址：%@"    = "Szolgáltatás címe: %@ ";
+"总数: %lld "    = "Összesen: %lld";
+"客户端： %@"    = "Ügyfél: %@";
+"节点： %@"    = "Csomópont: %@";
+"名称： %@"    = "Név: %@";
