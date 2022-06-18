@@ -29,15 +29,20 @@ struct ETCDKeyListContentTreeListView: View {
                 .frame(height:60)
                 .background(Color(hex: "#221C27"))
             Divider().background(Color.white.opacity(0.15))
-            ETCDNodeOutlineGroup( callback: { newValue, index , text in
-                if !text.isEmpty {
-                    self.textValue = text
-                }
-                
-                self.isShowingUpdatePopover = newValue
-                self.isDefaultSelectType = index
-                
-            },node: storeObj.treeItem()!, childKeyPath:  \.children)
+            if ((storeObj.treeItem()?.children?.isEmpty) != nil) {
+                ETCDNodeOutlineGroup( callback: { newValue, index , text in
+                    if !text.isEmpty {
+                        self.textValue = text
+                    }
+                    
+                    self.isShowingUpdatePopover = newValue
+                    self.isDefaultSelectType = index
+                    
+                },node: storeObj.treeItem()!, childKeyPath:  \.children)
+            }else{
+                EmptyView()
+            }
+
             Spacer()
         }.background(Color(hex: "#221C27"))
             .popover(isPresented: $isShowingUpdatePopover,arrowEdge: .trailing) {
