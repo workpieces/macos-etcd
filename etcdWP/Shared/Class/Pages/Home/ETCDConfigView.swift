@@ -153,15 +153,12 @@ struct ETCDConfigView: View {
                     .cornerRadius(10.0)
                     .onTapGesture {
                         do{
-                            Task{
-                                self.homeData.Append(data: config)
-                                navigator.goBack()
-                                try await self.homeData.Register(item: config)
-                            }
-
-                        }catch let error  as  NSError {
-                            self.isToast.toggle()
+                            try self.homeData.Register(item: config)
+                            self.homeData.Append(data: config)
                             navigator.goBack()
+                        }catch let error  as  NSError {
+                            print("\(error)")
+                            self.isToast.toggle()
                         }
                     }
                 }

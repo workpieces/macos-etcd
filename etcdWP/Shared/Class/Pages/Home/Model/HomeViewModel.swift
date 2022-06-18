@@ -85,6 +85,11 @@ class HomeViewModel: ObservableObject {
                                              item.dialKeepAliveTimeout ,
                                              item.autoSyncInterval ,
                                              &self.error)
+                    
+                    if (c != nil) {
+                        error = nil
+                    }
+                    
                     if c == nil || self.error != nil{
                         self.reload   =  false
                         throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
@@ -129,6 +134,9 @@ class HomeViewModel: ObservableObject {
                                          item.dialKeepAliveTimeout ,
                                          item.autoSyncInterval ,
                                          &self.error)
+                if (c != nil) {
+                    error = nil
+                }
                 if c == nil || error != nil{
                     self.reload = false
                     throw NSError.init(domain: "\(item.clientName)开启服务异常", code: 400)
@@ -152,9 +160,8 @@ class HomeViewModel: ObservableObject {
     }
     
     // 注册服务
-    @MainActor
-    func Register(item : EtcdClientOption) async throws {
-        async let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
+    func Register(item : EtcdClientOption)  throws {
+         let c =  EtcdNewKVClient(item.endpoints.joined(separator: ","),
                                        item.username,
                                        item.password,
                                        item.certFile,
@@ -166,15 +173,16 @@ class HomeViewModel: ObservableObject {
                                        item.dialKeepAliveTimeout ,
                                        item.autoSyncInterval ,
                                        &error)
-        
-        
-        
-        if await c == nil || error != nil {
+        if (c != nil) {
+            error = nil
+        }
+    
+        if   c == nil || error != nil {
             self.reload = false;
             throw NSError.init(domain: "服务连接异常", code: 400)
             
         }
-        let ping =  await self.Ping(c: c!)
+        let ping =   self.Ping(c: c!)
         
         if !ping {
             self.reload = false;
@@ -203,6 +211,10 @@ class HomeViewModel: ObservableObject {
                                                  item.dialKeepAliveTimeout ,
                                                  item.autoSyncInterval ,
                                                  &error)
+                if await (c != nil) {
+                    error = nil
+                }
+                
                 if await c != nil  && error == nil {
                     self.reload = true;
                     // todo 卡顿，为什么这里会不卡呢，因为c创建成功，认为服务是正常的
