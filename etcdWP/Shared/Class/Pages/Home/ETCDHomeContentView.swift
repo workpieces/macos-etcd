@@ -19,10 +19,10 @@ struct ETCDHomeContentView: View {
                 ETCDTabBarContentView().environmentObject(ItemStore.init(c:user))
             }
             Route("create") {
-                ETCDConfigView().frame(maxWidth: screen.width - DefaultTabbarButtonHeight)
+                ETCDConfigView()
             }
             Route(content: ETCDHomeContentItemView())
-        }
+        }.frame(maxWidth: screen.width - DefaultTabbarButtonHeight)
     }
     private func findUser(route: RouteInformation) -> EtcdClientOption? {
         if let parameter = route.parameters["id"],
