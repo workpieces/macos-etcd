@@ -46,18 +46,25 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct etcdWPApp: App {
+    
     @StateObject var homeData = HomeViewModel()
     @EnvironmentObject private var navigator: Navigator
 #if os(macOS)
+    var screen = NSScreen.main!.visibleFrame
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
 #endif
     var body: some Scene {
         WindowGroup {
             Router {
                 ETCDHomeContentView()
+                #if os(macOS)
+                .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
+                #endif
             }.environmentObject(homeData)
+            .ignoresSafeArea(.all,edges: .all)
             .preferredColorScheme(.dark)
         }
+  
 #if os(macOS)
         .windowStyle(.hiddenTitleBar)
 #endif

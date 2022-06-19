@@ -68,8 +68,6 @@ struct ETCDHomeContentItemView: View {
                     default: HomeMainView() }
             }
         }.buttonStyle(.plain)
-         .ignoresSafeArea(.all,edges: .all)
-         .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
         .navigationViewStyle(.automatic)
         .environmentObject(tableData)
     }
