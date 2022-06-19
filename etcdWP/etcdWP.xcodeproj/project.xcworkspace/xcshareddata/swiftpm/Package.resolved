@@ -55,15 +55,6 @@
       }
     },
     {
-      "identity" : "swiftui-navigation-stack",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/matteopuc/swiftui-navigation-stack",
-      "state" : {
-        "revision" : "be0db68ed0d84ed543bf8f7600a1f84de015f753",
-        "version" : "1.0.4"
-      }
-    },
-    {
       "identity" : "swiftuirouter",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/frzi/SwiftUIRouter.git",

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import AppKit
-import NavigationStack
 import SwiftUIRouter
 
 var screen = NSScreen.main!.visibleFrame

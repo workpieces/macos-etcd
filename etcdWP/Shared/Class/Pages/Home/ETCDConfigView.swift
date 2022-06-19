@@ -7,7 +7,6 @@
 
 import SwiftUI
 import PopupView
-import NavigationStack
 import FilePicker
 import SwiftUIRouter
 
@@ -123,43 +122,39 @@ struct ETCDConfigView: View {
             .padding(.bottom,44.0)
             
             HStack(spacing: 44.0) {
-                PopView {
-                    VStack{
-                        Text("Cancel")
-                            .fontWeight(.semibold)
-                            .font(.system(size: 18))
-                            .foregroundColor(.white)
-                            .padding()
-                    }
-                    .frame(width: 120.0,height: 44.0)
-                    .buttonStyle(PlainButtonStyle())
-                    .background(Color.red).opacity(0.75)
-                    .cornerRadius(10.0)
-                    .onTapGesture {
-                        navigator.goBack()
-                    }
+                VStack{
+                    Text("Cancel")
+                        .fontWeight(.semibold)
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .padding()
                 }
-                PopView {
-                    VStack{
-                        Text("Save")
-                            .fontWeight(.semibold)
-                            .font(.system(size: 18))
-                            .foregroundColor(.white)
-                            .padding()
-                    }
-                    .frame(width: 120.0,height: 44.0)
-                    .buttonStyle(PlainButtonStyle())
-                    .background(Color(hex:"#00FFFF").opacity(0.75))
-                    .cornerRadius(10.0)
-                    .onTapGesture {
-                        do{
-                            try self.homeData.Register(item: config)
-                            self.homeData.Append(data: config)
-                            navigator.goBack()
-                        }catch let error  as  NSError {
-                            print("\(error)")
-                            self.isToast.toggle()
-                        }
+                .frame(width: 120.0,height: 44.0)
+                .buttonStyle(PlainButtonStyle())
+                .background(Color.red).opacity(0.75)
+                .cornerRadius(10.0)
+                .onTapGesture {
+                    navigator.goBack()
+                }
+                VStack{
+                    Text("Save")
+                        .fontWeight(.semibold)
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                .frame(width: 120.0,height: 44.0)
+                .buttonStyle(PlainButtonStyle())
+                .background(Color(hex:"#00FFFF").opacity(0.75))
+                .cornerRadius(10.0)
+                .onTapGesture {
+                    do{
+                        try self.homeData.Register(item: config)
+                        self.homeData.Append(data: config)
+                        navigator.goBack()
+                    }catch let error  as  NSError {
+                        print("\(error)")
+                        self.isToast.toggle()
                     }
                 }
             }
