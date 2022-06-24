@@ -84,3 +84,33 @@ struct EtcdClientOption: Identifiable,Codable,Equatable,Hashable {
             
     }
 }
+
+
+
+
+class ETCDConfigModel: ObservableObject {
+   
+    var id = UUID()
+    var endpoints: [String] = ["127.0.0.1:2379"]
+    var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
+    var username: String = ""
+    var password: String = ""
+    var certFile: String = ""
+    var keyFile: String = ""
+    var caFile:  String = ""
+    var requestTimeout: Int = 5
+    var dialTimeout: Int = 5
+    var dialKeepAliveTime: Int = 10
+    var dialKeepAliveTimeout: Int = 3
+    var autoSyncInterval:Int = 5
+    var autoPing: Bool = true
+    var autoName: Bool = true
+    var autoSession: Bool = true
+    var autoConnect: Bool = true
+    var createAt: Date = Date()
+    var updateAt: Date = Date()
+    var status: Bool = false
+    var etcdClient: EtcdKVClient?
+    var checked:Bool = false
+    
+}

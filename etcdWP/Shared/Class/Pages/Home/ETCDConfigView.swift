@@ -12,7 +12,7 @@ import SwiftUIRouter
 
 // 默认用户配置表单
 struct UserConfigFormView: View {
-    @Binding var config : EtcdClientOption
+    @StateObject var config : ETCDConfigModel
     var body: some View {
         Section(header: Text("Default User Information Configuration：")) {
             TextField("Client Name：", text: $config.clientName)
@@ -25,7 +25,7 @@ struct UserConfigFormView: View {
 // 集群网络表单
 struct ClusterNetworkConfigFormView: View {
     @State private var networkInputUnit = 0
-    @Binding var config : EtcdClientOption
+    @StateObject var config : ETCDConfigModel
     var networks = ["HTTP","HTTPS"]
     var body: some View {
         Section(header: Text("Cluster Network Configuration：")) {
@@ -48,6 +48,7 @@ struct ClusterNetworkConfigFormView: View {
                 
                 FilePicker(types: [.item], allowMultiple: true) { urls in
                     self.config.keyFile = urls[0].path
+                    
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
@@ -72,7 +73,7 @@ struct ClusterNetworkConfigFormView: View {
 
 // 相关超时设置表单
 struct ClusterTimeConfigFormView: View {
-    @Binding var config : EtcdClientOption
+    @StateObject var config : ETCDConfigModel
     var body: some View {
         Section(header: Text("Timeout Setting Configuration (seconds)：")) {
             TextField("Request Timeout：",value:$config.requestTimeout, formatter: NumberFormatter())
@@ -85,7 +86,7 @@ struct ClusterTimeConfigFormView: View {
 }
 
 struct OtherConfigFormView: View {
-    @Binding var config : EtcdClientOption
+    @StateObject var config : ETCDConfigModel
     var body: some View {
         Section(header: Text("Miscellaneous：")) {
             Toggle("Auto create client name?", isOn: $config.autoName)
@@ -101,7 +102,7 @@ struct OtherConfigFormView: View {
 }
 struct ETCDConfigView: View {
     @EnvironmentObject var homeData: HomeViewModel
-    @State private var config = EtcdClientOption()
+    @StateObject private var config = ETCDConfigModel()
     @EnvironmentObject private var navigator: Navigator
     @State private var isToast = false
     
@@ -112,10 +113,10 @@ struct ETCDConfigView: View {
                 .padding(.leading ,20)
             
             Form {
-                UserConfigFormView(config: $config)
-                ClusterNetworkConfigFormView(config: $config)
-                ClusterTimeConfigFormView(config: $config)
-                OtherConfigFormView(config: $config)
+                UserConfigFormView(config: config)
+                ClusterNetworkConfigFormView(config: config)
+                ClusterTimeConfigFormView(config: config)
+                OtherConfigFormView(config: config)
             }
             .padding(.leading,44)
             .padding(.trailing ,44)
@@ -148,9 +149,26 @@ struct ETCDConfigView: View {
                 .background(Color(hex:"#00FFFF").opacity(0.75))
                 .cornerRadius(10.0)
                 .onTapGesture {
+                    let etcdClient  =   EtcdClientOption.init(id: config.id, endpoints: config.endpoints, clientName: config.clientName, username: config.username, password: config.password, certFile: config.certFile, keyFile: config.keyFile, caFile: config.caFile,
+                                                              requestTimeout: config.requestTimeout,
+                                                              dialTimeout: config.dialTimeout, dialKeepAliveTime: config.dialKeepAliveTime,
+                                                              dialKeepAliveTimeout: config.dialKeepAliveTimeout,
+                                                              autoSyncInterval: config.autoSyncInterval,
+                                                              autoPing: config.autoPing,
+                                                              autoName: config.autoName,
+                                                              autoSession: config.autoSession,
+                                                              autoConnect: config.autoConnect,
+                                                              createAt: config.createAt,
+                                                              updateAt: config.updateAt,
+                                                              status: config.status,
+                                                              etcdClient: config.etcdClient,
+                                                              checked: config.checked)
+                    
+                    
                     do{
-                        try self.homeData.Register(item: config)
-                        self.homeData.Append(data: config)
+                        try self.homeData.Register(item: etcdClient)
+                        self.homeData.Append(data: etcdClient)
+                        print("-------\(config)")
                         navigator.goBack()
                     }catch let error  as  NSError {
                         print("\(error)")

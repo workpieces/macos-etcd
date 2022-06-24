@@ -18,7 +18,7 @@ struct ETCDHomeContentView: View {
             Route(":id/*", validator: findUser) { user in
                 ETCDTabBarContentView().environmentObject(ItemStore.init(c:user))
             }
-            Route("create") {
+            Route("create/*") {
                 ETCDConfigView()
             }
             Route(content: ETCDHomeContentItemView())
