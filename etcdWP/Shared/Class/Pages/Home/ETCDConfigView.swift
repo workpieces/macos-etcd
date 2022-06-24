@@ -163,12 +163,9 @@ struct ETCDConfigView: View {
                                                               status: config.status,
                                                               etcdClient: config.etcdClient,
                                                               checked: config.checked)
-                    
-                    
                     do{
                         try self.homeData.Register(item: etcdClient)
                         self.homeData.Append(data: etcdClient)
-                        print("-------\(config)")
                         navigator.goBack()
                     }catch let error  as  NSError {
                         print("\(error)")

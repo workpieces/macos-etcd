@@ -90,27 +90,27 @@ struct EtcdClientOption: Identifiable,Codable,Equatable,Hashable {
 
 class ETCDConfigModel: ObservableObject {
    
-    var id = UUID()
-    var endpoints: [String] = ["127.0.0.1:2379"]
-    var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
-    var username: String = ""
-    var password: String = ""
-    var certFile: String = ""
-    var keyFile: String = ""
-    var caFile:  String = ""
-    var requestTimeout: Int = 5
-    var dialTimeout: Int = 5
-    var dialKeepAliveTime: Int = 10
-    var dialKeepAliveTimeout: Int = 3
-    var autoSyncInterval:Int = 5
-    var autoPing: Bool = true
-    var autoName: Bool = true
-    var autoSession: Bool = true
-    var autoConnect: Bool = true
-    var createAt: Date = Date()
-    var updateAt: Date = Date()
-    var status: Bool = false
-    var etcdClient: EtcdKVClient?
-    var checked:Bool = false
+    @Published var id = UUID()
+    @Published var endpoints: [String] = ["127.0.0.1:2379"]
+    @Published var clientName: String = "etcd-wp-\(UUID().uuidString.suffix(6))"
+    @Published var username: String = ""
+    @Published var password: String = ""
+    @Published var certFile: String = ""
+    @Published var keyFile: String = ""
+    @Published var caFile:  String = ""
+    @Published var requestTimeout: Int = 5
+    @Published var dialTimeout: Int = 5
+    @Published var dialKeepAliveTime: Int = 10
+    @Published var dialKeepAliveTimeout: Int = 3
+    @Published var autoSyncInterval:Int = 5
+    @Published var autoPing: Bool = true
+    @Published var autoName: Bool = true
+    @Published var autoSession: Bool = true
+    @Published var autoConnect: Bool = true
+    @Published var createAt: Date = Date()
+    @Published var updateAt: Date = Date()
+    @Published var status: Bool = false
+    @Published var etcdClient: EtcdKVClient?
+    @Published var checked:Bool = false
     
 }
