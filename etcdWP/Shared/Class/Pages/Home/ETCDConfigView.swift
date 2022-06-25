@@ -9,6 +9,7 @@ import SwiftUI
 import PopupView
 import FilePicker
 import SwiftUIRouter
+import Combine
 
 // 默认用户配置表单
 struct UserConfigFormView: View {
@@ -25,7 +26,7 @@ struct UserConfigFormView: View {
 // 集群网络表单
 struct ClusterNetworkConfigFormView: View {
     @State private var networkInputUnit = 0
-    @StateObject var config : ETCDConfigModel
+    @State var config : ETCDConfigModel
     var networks = ["HTTP","HTTPS"]
     var body: some View {
         Section(header: Text("Cluster Network Configuration：")) {
@@ -33,7 +34,9 @@ struct ClusterNetworkConfigFormView: View {
                 ForEach(networks.indices,id: \.self) {
                     Text("\(networks[$0])")
                 }
-            }
+            }.onChange(of: networkInputUnit, perform: { newValue in
+                config = ETCDConfigModel()
+            })
             .pickerStyle(SegmentedPickerStyle())
             
             if networkInputUnit == 1 {
