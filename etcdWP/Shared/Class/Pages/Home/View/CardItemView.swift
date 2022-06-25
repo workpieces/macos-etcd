@@ -26,7 +26,7 @@ struct CardItemView: View {
         }
     }
     var body: some View {
-        NavLink(to: options.id.uuidString ){
+        NavLink(to: options.id.uuidString ,replace: true){
             VStack {
                 HStack(alignment: .top) {
                     Button {

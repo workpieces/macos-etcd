@@ -27,7 +27,7 @@ struct MakeMemberPopoverContent: View {
             switch currentModel.type {
             case 0:
                 Section(header: Text("创建集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点地址: ",value: $textVauleModel.peerAddress, formatter: NumberFormatter())
+                    TextField("节点地址: ",text: $textVauleModel.peerAddress)
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                     Toggle("IsLearner", isOn: $textVauleModel.isLearner)
@@ -39,10 +39,10 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             case 1:
                 Section(header: Text("更新集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("修改前节点id: ",value: $textVauleModel.update_member_id_old, formatter: NumberFormatter())
+                    TextField("修改前节点id: ",text: $textVauleModel.update_member_id_old)
                         .foregroundColor(.white)
                         .font(.system(size: 12))
-                    TextField("修改后节点地址: ",value: $textVauleModel.update_member_peer_address_new, formatter: NumberFormatter())
+                    TextField("修改后节点地址: ",text: $textVauleModel.update_member_peer_address_new)
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                 }
@@ -51,7 +51,7 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             case 2:
                 Section(header: Text("Promotes集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点id: ",value: $textVauleModel.promotes_member_id, formatter: NumberFormatter())
+                    TextField("节点id: ",text: $textVauleModel.promotes_member_id)
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                 }
@@ -60,7 +60,7 @@ struct MakeMemberPopoverContent: View {
                 Spacer()
             default:
                 Section(header: Text("创建集群成员").foregroundColor(.white).font(.system(size: 12))) {
-                    TextField("节点地址: ",value: $textVauleModel.peerAddress, formatter: NumberFormatter())
+                    TextField("节点地址: ",text: $textVauleModel.peerAddress)
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                     Toggle("IsLearner", isOn: $textVauleModel.isLearner)

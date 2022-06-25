@@ -46,7 +46,7 @@ struct DefaultAddButtonViewModifier: ViewModifier{
     var imageName: String
     var title: String
     func body(content: Content) -> some View {
-        NavLink(to: "create") {
+        NavLink(to: "create",replace: true) {
             HStack {
                 Spacer()
                 HStack {

@@ -46,9 +46,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct etcdWPApp: App {
-    
     @StateObject var homeData = HomeViewModel()
-    @EnvironmentObject private var navigator: Navigator
 #if os(macOS)
     var screen = NSScreen.main!.visibleFrame
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
