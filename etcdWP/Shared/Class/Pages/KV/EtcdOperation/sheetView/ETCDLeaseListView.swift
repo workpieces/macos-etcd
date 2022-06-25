@@ -92,7 +92,7 @@ extension ETCDLeaseListView {
     func deleFunc(item:KVData) {
         let reuslt = storeObj.LeaseRevoke(leaseid: String(item.ttlid!))
         items =  storeObj.LeaseList()?.datas ?? []
-        if reuslt?.status != 200{
+        if reuslt?.status != 200 && reuslt != nil {
             self.isShowToast.toggle()
         }else{
             self.isShowToast = false;
@@ -101,7 +101,7 @@ extension ETCDLeaseListView {
     
     func LiveOnceFunction(item:KVData) {
         let reuslt = storeObj.keepAliveOnce(leaseid: Int(item.ttlid!))
-        if reuslt?.status != 200{
+        if reuslt?.status != 200 && reuslt != nil {
             self.isShowToast.toggle()
         }else{
             self.isShowToast = false;

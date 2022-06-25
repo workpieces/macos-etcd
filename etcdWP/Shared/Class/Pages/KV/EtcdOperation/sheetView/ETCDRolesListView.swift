@@ -84,8 +84,10 @@ extension ETCDRolesListView {
     func deleFunc(item:KVData) {
         let reuslt = storeObj.removeRole(roleId: item.role!)
         items =   storeObj.RolesList() ?? []
-        if reuslt?.status != 200{
+        if reuslt?.status != 200 && reuslt != nil{
             self.isShowToast.toggle()
+        }else{
+            self.isShowToast = false;
         }
     }
     
