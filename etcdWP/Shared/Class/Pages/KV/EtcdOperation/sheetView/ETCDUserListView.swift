@@ -111,6 +111,7 @@ extension ETCDUserListView {
     
     func deleFunc(item:KVData) {
         let reuslt = storeObj.removeUser(user: item.user!)
+        items = storeObj.UsersList() ?? []
         if reuslt?.status != 200{
             self.isShowToast.toggle()
         }

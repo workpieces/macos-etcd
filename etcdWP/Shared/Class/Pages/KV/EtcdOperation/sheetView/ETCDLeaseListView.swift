@@ -41,6 +41,10 @@ struct ETCDLeaseListView: View {
                     let  numStrin  =  timeText.trimmingCharacters(in: .decimalDigits)
                     if numStrin.isEmpty {
                         let time = Int(timeText)
+                        if time == nil {
+                            self.isShowToast.toggle()
+                            return
+                        }
                         if time != times{
                             let  result   =  storeObj.LeaseGrant(ttl:time!)
                             if result?.status != 200 {
@@ -72,7 +76,7 @@ struct ETCDLeaseListView: View {
             leaseListView
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
-        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 2) {
             TopToastView(title:"操作租约错误")
         }
         
@@ -85,6 +89,7 @@ extension ETCDLeaseListView {
     
     func deleFunc(item:KVData) {
         let reuslt = storeObj.LeaseRevoke(leaseid: String(item.ttlid!))
+        items =  storeObj.LeaseList()?.datas ?? []
         if reuslt?.status != 200{
             self.isShowToast.toggle()
         }
