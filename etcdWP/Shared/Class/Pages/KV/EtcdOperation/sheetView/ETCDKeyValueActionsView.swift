@@ -93,6 +93,7 @@ struct ETCDKeyValueActionsView: View {
                             self.isShowToast.toggle()
                             return
                         }
+                        self.isShowToast = false
                     }
                     
                     let result = storeObj.PutWithTTL(key: keyText, value: valueText, ttl: timeText.toInt() ?? 0)
@@ -101,7 +102,7 @@ struct ETCDKeyValueActionsView: View {
                         self.isShowToast.toggle()
                         return
                     }
-                    
+                    self.isShowToast = false
                     presentationMode.wrappedValue.dismiss()
                     
                 } label: {

@@ -65,6 +65,7 @@ struct ETCDUserListView: View {
                         self.isShowToast.toggle()
                         return
                     }
+                    self.isShowToast = false
                     
                     if userText != user{
                         let  result   =  storeObj.addUser(user: userText, password: passWordText)
@@ -74,6 +75,7 @@ struct ETCDUserListView: View {
                         }else{
                             items =  storeObj.UsersList() ?? []
 //                            presentationMode.wrappedValue.dismiss()
+                            self.isShowToast = false
                         }
                         user = userText
                         
@@ -114,6 +116,8 @@ extension ETCDUserListView {
         items = storeObj.UsersList() ?? []
         if reuslt?.status != 200{
             self.isShowToast.toggle()
+        }else{
+            self.isShowToast = false
         }
     }
 }

@@ -45,6 +45,7 @@ struct ETCDLeaseListView: View {
                             self.isShowToast.toggle()
                             return
                         }
+                        self.isShowToast = false
                         if time != times{
                             let  result   =  storeObj.LeaseGrant(ttl:time!)
                             if result?.status != 200 {
@@ -52,6 +53,7 @@ struct ETCDLeaseListView: View {
                             }else{
                                 items =  storeObj.LeaseList()?.datas ?? []
 //                                presentationMode.wrappedValue.dismiss()
+                                self.isShowToast = false
                             }
                         }
                     }
@@ -92,6 +94,8 @@ extension ETCDLeaseListView {
         items =  storeObj.LeaseList()?.datas ?? []
         if reuslt?.status != 200{
             self.isShowToast.toggle()
+        }else{
+            self.isShowToast = false;
         }
     }
     
@@ -99,6 +103,8 @@ extension ETCDLeaseListView {
         let reuslt = storeObj.keepAliveOnce(leaseid: Int(item.ttlid!))
         if reuslt?.status != 200{
             self.isShowToast.toggle()
+        }else{
+            self.isShowToast = false;
         }
     }
     

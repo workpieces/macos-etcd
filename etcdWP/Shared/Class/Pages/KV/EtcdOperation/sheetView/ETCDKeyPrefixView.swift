@@ -44,12 +44,17 @@ struct ETCDKeyPrefixView: View {
                     if  keyPrefixText.isEmpty {
                         self.isShowToast.toggle()
                         return
+                    }else{
+                        self.isShowToast = false
                     }
                     let result = storeObj.DeletePrefix(key: keyPrefixText)
                     if result?.status  != 200 {
                         self.isSucceful.toggle()
                         self.isShowToast.toggle()
                         return
+                    }else{
+                        self.isShowToast = false
+                        self.isSucceful =  false
                     }
                     
                     presentationMode.wrappedValue.dismiss()
