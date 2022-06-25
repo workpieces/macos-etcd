@@ -35,7 +35,9 @@ struct ClusterNetworkConfigFormView: View {
                     Text("\(networks[$0])")
                 }
             }.onChange(of: networkInputUnit, perform: { newValue in
-                config = ETCDConfigModel()
+                config.keyFile = ""
+                config.certFile = ""
+                config.caFile = ""
             })
             .pickerStyle(SegmentedPickerStyle())
             

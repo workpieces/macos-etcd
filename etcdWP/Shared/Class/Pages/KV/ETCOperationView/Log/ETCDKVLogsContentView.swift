@@ -10,7 +10,7 @@ import SwiftUI
 struct ETCDKVLogsContentView: View {
     @StateObject private var logs = ETCDLogsObservable()
     var body: some View {
-        List(logs.items,id:\.self){ item in
+        List(logs.items.reversed(),id:\.self){ item in
             HStack{
                 Text(item.formatTime())
                     .font(.subheadline)
