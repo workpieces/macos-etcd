@@ -17,6 +17,7 @@ struct ETCDKeyListContentTreeListView: View {
     fileprivate func Reaload() {
         Task{
             await  storeObj.KVReaload(false)
+            treeModel = try?  await storeObj.treeItem()
         }
     }
     

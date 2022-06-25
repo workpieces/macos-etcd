@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-
+import Combine
 struct ETCDNodeOutlineGroup: View {
     
     @EnvironmentObject var storeObj : ItemStore
     var callback:(_ newValue: Bool,_ index:Int,_ text:String) -> Void
-    let node: KVData
+    @State var node: KVData
     let childKeyPath: KeyPath<KVData, [KVData]?>
     @State fileprivate var isShowingUpdatePopover = false
     @State fileprivate var textValue: String = ""
