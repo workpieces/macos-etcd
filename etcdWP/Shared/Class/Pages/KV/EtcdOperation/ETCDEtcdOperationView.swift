@@ -30,7 +30,7 @@ struct ETCDEtcdOperationView :View {
                                 .frame(maxHeight: 44.0)
                             if item.type == 5 {
                                 ETCDCheckBoxView(IsChoice: $isEnable) {  newValue in
-                                    let keyValue =  storeObj.authEnable(enble: newValue)
+                                    let keyValue =  storeObj.authEnable(enble: !newValue)
                                     if keyValue?.status != 200{
                                         self.isShowToast.toggle()
                                     }
