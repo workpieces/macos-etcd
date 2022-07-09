@@ -110,6 +110,8 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
+		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
+		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
 		D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
 		D0690EB12837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
 		D0690EB32837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */; };
@@ -239,6 +241,7 @@
 		D02C9CF528471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D02C9CF628471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
 		D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVOperateContentView.swift; sourceTree = "<group>"; };
 		D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVGridContentView.swift; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
+				D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */,
+				D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */,
 				D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +465,7 @@
 				D021EFB9281F5AB700992294 /* Tests iOS */,
 				D021EFC5281F5AB700992294 /* Tests macOS */,
 				D021EFAA281F5AB700992294 /* Products */,
+				D05C11D12879D32A00E3C197 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -711,9 +717,17 @@
 		D021F0AF281FFCB200992294 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */,
 				D091D0D428791C9C00DDD095 /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		D05C11D12879D32A00E3C197 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D0690EB92837CCD40010C8A3 /* ETCOperationView */ = {
@@ -781,6 +795,7 @@
 				D0FC0885282002D000A74D43 /* Alamofire */,
 				D0FC088B282002F300A74D43 /* SnapKit */,
 				44ADC8BB284F9331003B32C3 /* SwiftUIRouter */,
+				D05C11D22879D32A00E3C197 /* FilePicker */,
 			);
 			productName = "etcdWP (iOS)";
 			productReference = D021EFA9281F5AB700992294 /* etcdWP.app */;
@@ -1518,7 +1533,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = 93C2552H5C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1535,7 +1550,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.etcdwp.app;
 				PRODUCT_NAME = etcdWP;
 				SDKROOT = macosx;
@@ -1552,7 +1567,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = 93C2552H5C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1569,7 +1584,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.etcdwp.app;
 				PRODUCT_NAME = etcdWP;
 				SDKROOT = macosx;
@@ -1911,6 +1926,11 @@
 			productName = FilePicker;
 		};
 		D021F0AA281FFB3400992294 /* FilePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */;
+			productName = FilePicker;
+		};
+		D05C11D22879D32A00E3C197 /* FilePicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */;
 			productName = FilePicker;

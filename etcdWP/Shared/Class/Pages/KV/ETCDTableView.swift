@@ -6,8 +6,37 @@
 //
 
 import Foundation
-import Cocoa
+
 import SnapKit
+#if os(macOS)
+import Cocoa
+struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable
+{
+    @EnvironmentObject var storeObj : ItemStore
+    
+    func makeNSView(context: Context) -> ETCDTableView {
+        let  etcdViewController  = ETCDTableView()
+        return etcdViewController;
+    }
+    
+    func updateNSView(_ nsView: ETCDTableView, context: Context) {
+        Task{
+            await  nsView.reloadData(storeObj)
+        }
+    }
+    
+    typealias NSViewType = ETCDTableView
+    
+    
+    func makeCoordinator() -> ETCDCoordinator {
+      return ETCDCoordinator()
+    }
+
+    class ETCDCoordinator: NSObject {
+        
+    }
+}
+    
 class ETCDTableView: NSView
 {
     fileprivate var scrollView : NSScrollView!
@@ -92,7 +121,7 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
                 text.textColor = NSColor.red.withAlphaComponent(0.9)
                 text.stringValue = "false"
             }
-        }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("isLearnerColumn") {       
+        }else if tableColumn?.identifier == NSUserInterfaceItemIdentifier("isLearnerColumn") {
             let ok  = item.status?.is_learner ?? false
            if ok  {
                text.stringValue = "true"
@@ -128,3 +157,7 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
         return rowView
     }
 }
+
+#else
+
+#endif

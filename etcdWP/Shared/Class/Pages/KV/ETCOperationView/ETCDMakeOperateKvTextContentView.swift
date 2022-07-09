@@ -6,7 +6,11 @@
 //
 
 import SwiftUI
+#if os(macOS)
 import TextSourceful
+#else
+
+#endif
 import Combine
 
 struct ETCDMakeOperateKvTextContentView: View {
@@ -15,6 +19,7 @@ struct ETCDMakeOperateKvTextContentView: View {
     var body: some View {
         GeometryReader {  g in
             HStack {
+#if os(macOS)
                 TextSourceCodeTextEditor(text: $text)
                     .lineLimit(nil)
                     .foregroundColor(.secondary)
@@ -28,6 +33,9 @@ struct ETCDMakeOperateKvTextContentView: View {
                             copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                         })
                     }))
+#else
+TextEditor
+#endif
                 Spacer()
                 VStack {
                     Button {

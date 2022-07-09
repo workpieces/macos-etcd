@@ -6,7 +6,12 @@
 //
 
 import SwiftUI
+#if os(macOS)
 import AppKit
+#else
+
+#endif
+
 import SwiftUIRouter
 
 var screen = NSScreen.main!.visibleFrame

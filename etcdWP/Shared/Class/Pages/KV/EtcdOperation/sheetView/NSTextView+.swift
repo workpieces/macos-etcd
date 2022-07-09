@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if os(macOS)
 import Cocoa
+import UIKit
 extension NSTextView {
     open override var frame: CGRect {
         didSet {
@@ -14,3 +16,15 @@ extension NSTextView {
         }
     }
 }
+#else
+
+extension UITextView {
+    open override var frame: CGRect {
+        didSet {
+            backgroundColor = .clear
+        }
+    }
+}
+
+#endif
+

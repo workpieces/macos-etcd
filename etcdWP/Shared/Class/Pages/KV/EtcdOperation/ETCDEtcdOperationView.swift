@@ -33,6 +33,7 @@ struct ETCDEtcdOperationView :View {
                                     let keyValue =  storeObj.authEnable(enble: !newValue)
                                     if keyValue?.status != 200{
                                         self.isShowToast.toggle()
+                                        isEnable = false
                                     }
                                 }
                             }

@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-import Cocoa
 
+#if os(macOS)
+import Cocoa
 struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable
 {
     @EnvironmentObject var storeObj : ItemStore
@@ -35,3 +36,6 @@ struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable
     }
 }
     
+#else
+
+#endif
