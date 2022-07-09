@@ -42,6 +42,7 @@ struct ETCDUserPasswordView: View {
                         self.isShowToast.toggle()
                     }else{
                         self.isShowToast = false
+                        presentationMode.wrappedValue.dismiss()
                     }
                     
                 } label: {
