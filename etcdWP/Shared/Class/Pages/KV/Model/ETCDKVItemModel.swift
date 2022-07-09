@@ -583,11 +583,23 @@ extension ItemStore {
     
     
     func addUser(user: String,password:String) -> ETCDKeyValue?{
-        
         let result = c.etcdClient?.userAdd(user, password: password)
         guard result == nil || ((result?.isEmpty) == nil) else {
             let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
             let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "USER")
+            ETCDLogsObject.shared.logSubjec.send(lg)
+            return resp
+        }
+        return nil
+    }
+    
+    
+    
+    func resetPassword(user: String,password:String) -> ETCDKeyValue?{
+        let result = c.etcdClient?.userAdd(user, password: password)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "resetpassworld")
             ETCDLogsObject.shared.logSubjec.send(lg)
             return resp
         }

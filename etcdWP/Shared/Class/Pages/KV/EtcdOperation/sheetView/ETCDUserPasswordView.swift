@@ -11,11 +11,16 @@ struct ETCDUserPasswordView: View {
     @State var currentKv :KVData?
     @State var passWordText: String = ""
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
     var body: some View {
         VStack{
-            Text(LocalizedStringKey(currentKv?.user ?? ""))
+            Text(LocalizedStringKey("修改密码"))
                 .padding(.top,10)
+                .padding(.trailing,10)
+                .padding(.leading,10)
+            Text("id:\(currentKv?.user ?? "")")
+                .padding(.top,5)
                 .padding(.trailing,10)
                 .padding(.leading,10)
                 .padding(.bottom,5)
@@ -23,10 +28,21 @@ struct ETCDUserPasswordView: View {
                 .textFieldStyle(.roundedBorder)
                 .padding(.leading,10)
                 .padding(.trailing,5)
-                .padding(.top,8)
+                .padding(.top,10)
+            Spacer()
             HStack{
                 Button {
                     
+                    guard  !passWordText.isEmpty else{
+                        self.isShowToast .toggle()
+                        return
+                    }
+                    let  result   =  storeObj.resetPassword(user: currentKv?.user ?? "", password: passWordText)
+                    if result?.status != 200 {
+                        self.isShowToast.toggle()
+                    }else{
+                        self.isShowToast = false
+                    }
                     
                 } label: {
                     Text("确定")
@@ -43,7 +59,7 @@ struct ETCDUserPasswordView: View {
                         .foregroundColor(.white)
                 }.padding(10)
             }
-        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 100, maxHeight: .infinity,alignment: .top)
+        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity,alignment: .top)
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
                 TopToastView(title:"用户操作错误")
             }
