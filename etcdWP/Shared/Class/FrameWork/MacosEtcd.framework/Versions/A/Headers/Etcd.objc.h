@@ -44,7 +44,7 @@
 - (NSData* _Nullable)memberList;
 - (NSData* _Nullable)memberRemove:(NSString* _Nullable)id_;
 - (NSData* _Nullable)memberUpdate:(NSString* _Nullable)id_ peerUrl:(NSString* _Nullable)peerUrl;
-- (BOOL)permission:(NSString* _Nullable)role key:(NSString* _Nullable)key end:(NSString* _Nullable)end error:(NSError* _Nullable* _Nullable)error;
+- (BOOL)permission:(NSString* _Nullable)role key:(NSString* _Nullable)key rolePermPrefix:(BOOL)rolePermPrefix rolePermFromKey:(BOOL)rolePermFromKey readWrite:(long)readWrite error:(NSError* _Nullable* _Nullable)error;
 - (BOOL)ping;
 - (NSData* _Nullable)promotes:(NSString* _Nullable)id_;
 - (NSData* _Nullable)put:(NSString* _Nullable)key value:(NSString* _Nullable)value;
@@ -52,6 +52,7 @@
 - (NSData* _Nullable)putKeyWithLease:(NSString* _Nullable)key value:(NSString* _Nullable)value leaseid:(long)leaseid;
 - (NSData* _Nullable)putWithTTL:(NSString* _Nullable)key value:(NSString* _Nullable)value ttl:(long)ttl;
 - (NSData* _Nullable)puts:(NSString* _Nullable)key value:(NSString* _Nullable)value leasid:(long)leasid putPrevKV:(BOOL)putPrevKV putIgnoreVal:(BOOL)putIgnoreVal putIgnoreLease:(BOOL)putIgnoreLease;
+- (BOOL)revokePermission:(NSString* _Nullable)role key:(NSString* _Nullable)key rolePermPrefix:(BOOL)rolePermPrefix rolePermFromKey:(BOOL)rolePermFromKey error:(NSError* _Nullable* _Nullable)error;
 - (NSData* _Nullable)revokes:(NSString* _Nullable)username rolename:(NSString* _Nullable)rolename;
 - (NSData* _Nullable)roleAdd:(NSString* _Nullable)role;
 - (NSData* _Nullable)roles;
