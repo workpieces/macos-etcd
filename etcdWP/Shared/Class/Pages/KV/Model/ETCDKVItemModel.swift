@@ -69,9 +69,9 @@ class ItemStore: ObservableObject {
     @Published var c : EtcdClientOption
     @Published var realeadData: KVRealoadData
     @Published var showFormat: ShowFormat = .List
+    @Published var currentKvc : KVData?
     init(c: EtcdClientOption) {
         self.c = c
-
         self.realeadData = KVRealoadData.init(ks: [], mms: [],currentKv: nil)
     }
 }

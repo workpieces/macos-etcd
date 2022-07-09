@@ -14,7 +14,6 @@
 		44AD32842850EF5A00B66261 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD32822850EF5A00B66261 /* View+.swift */; };
 		44ADC8B9284F9321003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8B8284F9321003B32C3 /* SwiftUIRouter */; };
 		44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8BB284F9331003B32C3 /* SwiftUIRouter */; };
-		5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C649ABD282FB8A90073F885 /* MacosEtcd.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
 		D021EFC7281F5AB700992294 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFC6281F5AB700992294 /* Tests_macOS.swift */; };
@@ -135,6 +134,9 @@
 		D0690ED42837D7050010C8A3 /* ETCDKeyListContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED22837D7050010C8A3 /* ETCDKeyListContentListView.swift */; };
 		D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
 		D0690ED72837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
+		D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D091D0D428791C9C00DDD095 /* MacosEtcd.framework */; };
+		D091D0D72879264200DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
+		D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
 		D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0BBCE7428391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
@@ -168,7 +170,6 @@
 		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44B5CCBE2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44B5CCBF2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "es-MX"; path = "es-MX.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
-		5C649ABD282FB8A90073F885 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D021EFA2281F5AB600992294 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D021EFA9281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021EFAF281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +263,8 @@
 		D06C1734283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D06C1735283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D06C1736283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "en-GB"; path = "en-GB.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D091D0D428791C9C00DDD095 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
+		D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserPasswordView.swift; sourceTree = "<group>"; };
 		D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemView.swift; sourceTree = "<group>"; };
 		D0A15B0F28476541004B6134 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0A15B1028476541004B6134 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -380,7 +383,6 @@
 				44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */,
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
-				5C649ABE282FB8A90073F885 /* MacosEtcd.framework in Frameworks */,
 				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
@@ -402,6 +404,7 @@
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
 				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
+				D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +637,7 @@
 				D021F00A281FF8E600992294 /* ETCDKeyValueActionsView.swift */,
 				D021F00B281FF8E600992294 /* ETCDUserListView.swift */,
 				D021F00C281FF8E600992294 /* NSTextView+.swift */,
+				D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -707,7 +711,7 @@
 		D021F0AF281FFCB200992294 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				5C649ABD282FB8A90073F885 /* MacosEtcd.framework */,
+				D091D0D428791C9C00DDD095 /* MacosEtcd.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
@@ -1055,6 +1059,7 @@
 				D021F062281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
+				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1115,6 +1120,7 @@
 				D021F063281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
 				D021F05B281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F027281FF8E600992294 /* Carousel.swift in Sources */,
+				D091D0D72879264200DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED72837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

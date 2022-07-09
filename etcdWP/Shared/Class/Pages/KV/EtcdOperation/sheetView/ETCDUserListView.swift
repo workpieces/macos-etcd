@@ -16,6 +16,7 @@ struct ETCDUserListView: View {
     @State var user :String = ""
     @State var toastText :String = "操作用户错误"
     @Binding var currentModel  : KVOperateModel
+    @State var password:Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -74,7 +75,6 @@ struct ETCDUserListView: View {
                             self.isShowToast.toggle()
                         }else{
                             items =  storeObj.UsersList() ?? []
-//                            presentationMode.wrappedValue.dismiss()
                             self.isShowToast = false
                         }
                         user = userText
@@ -97,7 +97,9 @@ struct ETCDUserListView: View {
                 }.padding(10)
                 
             }
-            leaseListView
+            leaseListView.sheet(isPresented: $password) {
+                ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
+            }
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
@@ -125,7 +127,6 @@ extension ETCDUserListView {
 
 //列表
 extension ETCDUserListView {
-    
     private var leaseListView : some View {
         List(items){ item in
             HStack(){
@@ -139,6 +140,10 @@ extension ETCDUserListView {
                         })
                         Button("移除", action: {
                             deleFunc(item: item)
+                        })
+                        Button("修改密码", action: {
+                            self.storeObj.currentKvc = item
+                            self.password.toggle()
                         })
                     }))
                 Spacer()
@@ -156,9 +161,16 @@ extension ETCDUserListView {
                         .font(.system(size: 10.0))
                         .foregroundColor(.white)
                 }
+                Button {
+                    self.storeObj.currentKvc = item
+                    self.password.toggle()
+                } label: {
+                    Text("修改密码")
+                        .font(.system(size: 10.0))
+                        .foregroundColor(.white)
+                }
             }
         }
-        
     }
     
 }
