@@ -28,7 +28,7 @@ struct ETCDUserAssociatedView: View {
                     .padding(.leading,5)
                     .padding(.bottom,5)
                 List(storeObj.RolesList() ?? []){ item in
-                    ETCDUserAssociatedItemView(item: item,state: item.roles_status) { newValue in
+                    ETCDUserAssociatedItemView(item: item) { newValue in
                         if newValue {
                             selectedItems.append(item)
                         }else{
@@ -71,7 +71,6 @@ struct ETCDUserAssociatedView: View {
 struct ETCDUserAssociatedItemView: View {
     @State var choose :Bool = false
     @State var item :KVData
-    @State var state:Bool = false
     var callback:(_ newValue: Bool) -> Void
     var body: some View {
         HStack(){
@@ -81,7 +80,7 @@ struct ETCDUserAssociatedItemView: View {
             .padding(.trailing,5)
             .padding(.leading,5)
             .opacity(0.75)
-            if (!state){
+            if ((item.roles_status?.count) == nil){
                 Toggle(""  , isOn: $choose)
                     .toggleStyle(.checkbox)
                     .padding(.bottom,3)
