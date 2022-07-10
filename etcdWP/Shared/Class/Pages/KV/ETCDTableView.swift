@@ -8,11 +8,11 @@
 import Foundation
 import SwiftUI
 import SnapKit
+
 #if os(macOS)
 import Cocoa
 
-struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable
-{
+struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable{
     @EnvironmentObject var storeObj : ItemStore
     
     func makeNSView(context: Context) -> ETCDTableView {
@@ -160,9 +160,11 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
 }
 
 #else
-struct ETCDTableViewRepresentableBootcamp: View {
+
+struct ETCDTableViewRepresentableMobileBootcamp: View {
     var body: some View {
        Text("text")
     }
 }
+
 #endif

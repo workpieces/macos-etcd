@@ -13,12 +13,20 @@ struct ETCDKVGridContentView: View {
         ZStack(alignment: .topLeading){
             VStack(alignment: .leading,spacing: 10.0){
                 Section {
-                    
+#if os(macOS)
                     ETCDTableViewRepresentableBootcamp()
                         .padding(.leading,10)
                         .padding(.trailing,10)
                         .cornerRadius(10.0)
                         .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+#else
+                    ETCDTableViewRepresentableMobileBootcamp()
+                        .padding(.leading,10)
+                        .padding(.trailing,10)
+                        .cornerRadius(10.0)
+                        .border(Color(hex: "#5B9BD4").opacity(0.30),width: 0.5)
+#endif
+
                 } header: {
                     HStack {
                         Text("集群状态")
