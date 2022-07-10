@@ -34,7 +34,23 @@ struct ETCDMakeOperateKvTextContentView: View {
                         })
                     }))
 #else
-TextEditor
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        Spacer()
+                        Text(storeObj.realeadData.currentKv?.value ?? "")
+                            .lineLimit(nil)
+                            .foregroundColor(.secondary)
+                            .font(.system(size: 12))
+                            .lineSpacing(4)
+                            .multilineTextAlignment(TextAlignment.leading)
+                            .contextMenu(ContextMenu(menuItems: {
+                                Button("粘贴", action: {
+                                    copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
+                                })
+                            }))
+                        Spacer()
+                    }
+                }
 #endif
                 Spacer()
                 VStack {

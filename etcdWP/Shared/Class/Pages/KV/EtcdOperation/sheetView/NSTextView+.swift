@@ -8,7 +8,7 @@
 import Foundation
 #if os(macOS)
 import Cocoa
-import UIKit
+
 extension NSTextView {
     open override var frame: CGRect {
         didSet {
@@ -17,7 +17,7 @@ extension NSTextView {
     }
 }
 #else
-
+import UIKit
 extension UITextView {
     open override var frame: CGRect {
         didSet {

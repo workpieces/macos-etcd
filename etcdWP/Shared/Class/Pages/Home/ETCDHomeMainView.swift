@@ -17,7 +17,11 @@ struct HomeMainView: View {
 
 struct HomeListView: View {
     @EnvironmentObject var homeData: HomeViewModel
+#if os(macOS)
     let closePublisher = NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)
+#else
+    let closePublisher = NotificationCenter.default.publisher(for: UIApplication.willTerminateNotification)
+#endif
     @State private var seletcd = false
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -26,7 +30,10 @@ struct HomeListView: View {
             HStack(){
                 Spacer()
                 Toggle("全选"  , isOn: $seletcd)
+#if os(macOS)
                     .toggleStyle(.checkbox)
+#endif
+
                     .padding(.bottom,3)
                     .onChange(of: seletcd) { newValue in
                         homeData.selectedItems.removeAll()

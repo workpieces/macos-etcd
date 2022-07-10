@@ -77,8 +77,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:workpieces/TextSourceful.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "fcbfaa24ec4e5e7378a8fa0b5c0a4977023d0b35"
+        "revision" : "fcbfaa24ec4e5e7378a8fa0b5c0a4977023d0b35",
+        "version" : "1.0.2"
       }
     }
   ],

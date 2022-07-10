@@ -95,13 +95,22 @@ struct OtherConfigFormView: View {
     var body: some View {
         Section(header: Text("Miscellaneous：")) {
             Toggle("Auto create client name?", isOn: $config.autoName)
+#if os(macOS)
                 .toggleStyle(.checkbox)
+#endif
+
             Toggle("Reschedule Pings？", isOn: $config.autoPing)
+#if os(macOS)
                 .toggleStyle(.checkbox)
+#endif
             Toggle("Clean Session?", isOn: $config.autoSession)
+#if os(macOS)
                 .toggleStyle(.checkbox)
+#endif
             Toggle("Auto connect on app launch?", isOn: $config.autoConnect)
+#if os(macOS)
                 .toggleStyle(.checkbox)
+#endif
         }
     }
 }

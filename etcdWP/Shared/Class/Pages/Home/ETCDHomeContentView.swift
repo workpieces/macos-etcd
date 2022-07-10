@@ -13,8 +13,11 @@ import AppKit
 #endif
 
 import SwiftUIRouter
-
+#if os(macOS)
 var screen = NSScreen.main!.visibleFrame
+#else
+var screen = UIScreen.main.bounds
+#endif
 
 struct ETCDHomeContentView: View {
     @EnvironmentObject var homeData:HomeViewModel

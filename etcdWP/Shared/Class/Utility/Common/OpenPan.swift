@@ -11,6 +11,7 @@ import SwiftUI
 
 // 打开文件目录
 func showOpenPanel() -> URL? {
+#if os(macOS)
     let openPanel = NSOpenPanel()
     openPanel.allowsMultipleSelection = false
     openPanel.canChooseDirectories = true
@@ -18,12 +19,23 @@ func showOpenPanel() -> URL? {
     openPanel.canChooseFiles = false
     let response = openPanel.runModal()
     return response == .OK ? openPanel.url : nil
+#else
+    return nil
+#endif
+ 
 }
 
 func copyToClipBoard(textToCopy: String) {
+#if os(macOS)
     let pasteBoard = NSPasteboard.general
     pasteBoard.clearContents()
     pasteBoard.setString(textToCopy, forType: .string)
+#else
+    let pasteBoard = UIPasteboard.general
+    pasteBoard.string = textToCopy
+#endif
+
+
 }
 
 extension String {

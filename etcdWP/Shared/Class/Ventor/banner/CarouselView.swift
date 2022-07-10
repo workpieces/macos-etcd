@@ -38,7 +38,15 @@ public struct CarouselView: View {
     @State private var lastOffset: CGPoint = .zero
     @State private var index: Int = 0
     @State private var draggingTime = Date()
-    private let screenWidth: CGFloat = NSScreen.main!.visibleFrame.width
+    
+    private var screenWidth : CGFloat = 0
+    
+#if os(macOS)
+    var screenWidth = NSScreen.main!.visibleFrame.width
+#else
+//    var screenWidth  = UIScreen.main.bounds.width
+#endif
+
     
     public init(items: Binding<[String]>,
                 isAutoChangeSlide: Bool = true,

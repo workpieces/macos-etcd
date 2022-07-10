@@ -38,14 +38,23 @@ struct ETCDTabBarContentView: View {
                 HStack(spacing: 20.0){
                     Spacer()
                     Button(action: {
+#if os(macOS)
                         NSWorkspace.shared.open(URL.init(string: DefaultOfficialWebsite)!)
+#else
+                        UIApplication.shared.open(URL.init(string: DefaultOfficialWebsite)!)
+#endif
                     }, label: {
                         Text("访问官网")
                             .font(.system(size: 12))
                             .foregroundColor(.secondary)
                     })
                     Button {
+#if os(macOS)
                         NSWorkspace.shared.open(URL.init(string: DefaultFeedback)!)
+#else
+                        UIApplication.shared.open(URL.init(string: DefaultFeedback)!)
+#endif
+  
                     } label: {
                         Text("意见反馈")
                             .font(.system(size: 12))

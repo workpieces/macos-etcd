@@ -6,10 +6,11 @@
 //
 
 import Foundation
-
+import SwiftUI
 import SnapKit
 #if os(macOS)
 import Cocoa
+
 struct ETCDTableViewRepresentableBootcamp : NSViewRepresentable
 {
     @EnvironmentObject var storeObj : ItemStore
@@ -159,5 +160,9 @@ extension ETCDTableView : NSTableViewDelegate,NSTableViewDataSource {
 }
 
 #else
-
+struct ETCDTableViewRepresentableBootcamp: View {
+    var body: some View {
+       Text("text")
+    }
+}
 #endif

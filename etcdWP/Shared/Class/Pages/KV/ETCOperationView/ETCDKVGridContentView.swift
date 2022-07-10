@@ -13,6 +13,7 @@ struct ETCDKVGridContentView: View {
         ZStack(alignment: .topLeading){
             VStack(alignment: .leading,spacing: 10.0){
                 Section {
+                    
                     ETCDTableViewRepresentableBootcamp()
                         .padding(.leading,10)
                         .padding(.trailing,10)

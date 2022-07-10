@@ -68,7 +68,11 @@ struct CardItemView: View {
                             Text("服务名称")
                                 .withDefaultContentTitle(fontColor: .white)
                             Toggle("", isOn: $selected)
+#if os(macOS)
                                 .toggleStyle(.checkbox)
+#else
+#endif
+
                                 .padding(.bottom,3)
                                 .onChange(of:selected) { newValue in
                                     homeData.ectdClientList[idx].checked = newValue
