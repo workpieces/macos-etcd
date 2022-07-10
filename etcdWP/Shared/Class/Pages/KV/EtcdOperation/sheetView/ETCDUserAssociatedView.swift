@@ -13,6 +13,7 @@ struct ETCDUserAssociatedView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
+    @State var selectedItems:[KVData] = []
     var body: some View {
         VStack{
             Text(LocalizedStringKey("用户关联角色"))
@@ -27,24 +28,20 @@ struct ETCDUserAssociatedView: View {
                     .padding(.leading,5)
                     .padding(.bottom,5)
                 List(storeObj.RolesList() ?? []){ item in
-                    ETCDUserAssociatedItemView(item: item)
+                    ETCDUserAssociatedItemView(item: item,state: true) { newValue in
+                        if newValue {
+                            selectedItems.append(item)
+                        }else{
+                            selectedItems.remove(at:selectedItems.firstIndex(of: item)!)
+                        }
+                    }
                 }
             }
             Spacer()
             HStack{
                 Button {
                     
-                    guard  !passWordText.isEmpty else{
-                        self.isShowToast .toggle()
-                        return
-                    }
-                    let  result   =  storeObj.resetPassword(user: currentKv?.user ?? "", password: passWordText)
-                    if result?.status != 200 {
-                        self.isShowToast.toggle()
-                    }else{
-                        self.isShowToast = false
-                        presentationMode.wrappedValue.dismiss()
-                    }
+                    print("\(selectedItems)")
                     
                 } label: {
                     Text("确定")
@@ -74,6 +71,8 @@ struct ETCDUserAssociatedView: View {
 struct ETCDUserAssociatedItemView: View {
     @State var choose :Bool = false
     @State var item :KVData
+    @State var state:Bool = false
+    var callback:(_ newValue: Bool) -> Void
     var body: some View {
         HStack(){
         Text("角色 id：\(item.role ?? "" )")
@@ -82,15 +81,15 @@ struct ETCDUserAssociatedItemView: View {
             .padding(.trailing,5)
             .padding(.leading,5)
             .opacity(0.75)
-            .contextMenu(ContextMenu(menuItems: {
-                
-            }))
-        Toggle(""  , isOn: $choose)
-            .toggleStyle(.checkbox)
-            .padding(.bottom,3)
-            .onChange(of: choose) { newValue in
-                
+            if (!state){
+                Toggle(""  , isOn: $choose)
+                    .toggleStyle(.checkbox)
+                    .padding(.bottom,3)
+                    .onChange(of: choose) { newValue in
+                        callback(newValue)
+                    }
             }
+
         }
     }
 }

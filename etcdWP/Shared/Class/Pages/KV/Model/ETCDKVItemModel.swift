@@ -526,6 +526,19 @@ extension ItemStore {
         return []
     }
     
+    
+    func RolesAssociatedList()-> [KVData]?{
+        let result = c.etcdClient?.getUserRoles()
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            if resp?.status != 200 {
+                return []
+            }
+            return resp?.datas
+        }
+        return []
+    }
+    
     func removeRole(roleId: String) -> ETCDKeyValue? {
         let result = c.etcdClient?.deleteRole(roleId)
         guard result == nil || ((result?.isEmpty) == nil) else {

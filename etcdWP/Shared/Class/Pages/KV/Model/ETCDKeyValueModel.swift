@@ -27,7 +27,7 @@ struct ETCDKeyValue: Codable {
     }
 }
 
-struct KVData: Codable, Identifiable,CustomStringConvertible{
+struct KVData: Codable, Identifiable,CustomStringConvertible,Equatable{
     var description: String = UUID().uuidString
     var id = UUID()
     var seletcd:Bool = false
@@ -62,6 +62,8 @@ struct KVData: Codable, Identifiable,CustomStringConvertible{
     let members: KVMember?
     // roles list
     let role: String?
+    // roles list
+    let roles: [String]?
     // user list
     let user: String?
     // children list.
@@ -82,9 +84,14 @@ struct KVData: Codable, Identifiable,CustomStringConvertible{
         case status
         case members
         case role
+        case roles
         case user
         case children
     }
+    static func == (lhs: Self, rhs: Self) -> Bool{
+        lhs.id == rhs.id
+    }
+    
 }
 
 struct KVStatus: Codable, Identifiable {
