@@ -28,7 +28,7 @@ struct ETCDUserAssociatedView: View {
                     .padding(.leading,5)
                     .padding(.bottom,5)
                 List(storeObj.RolesList() ?? []){ item in
-                    ETCDUserAssociatedItemView(item: item,state: true) { newValue in
+                    ETCDUserAssociatedItemView(item: item,state: item.roles_status) { newValue in
                         if newValue {
                             selectedItems.append(item)
                         }else{

@@ -64,6 +64,7 @@ struct KVData: Codable, Identifiable,CustomStringConvertible,Equatable{
     let role: String?
     // roles list
     let roles: [String]?
+    let roles_status:Bool
     // user list
     let user: String?
     // children list.
@@ -87,6 +88,7 @@ struct KVData: Codable, Identifiable,CustomStringConvertible,Equatable{
         case roles
         case user
         case children
+        case roles_status
     }
     static func == (lhs: Self, rhs: Self) -> Bool{
         lhs.id == rhs.id

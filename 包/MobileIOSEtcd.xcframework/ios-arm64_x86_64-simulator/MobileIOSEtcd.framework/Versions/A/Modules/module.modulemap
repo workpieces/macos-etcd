@@ -1,0 +1,8 @@
+framework module "MobileIOSEtcd" {
+	header "ref.h"
+    header "Etcd.objc.h"
+    header "Universe.objc.h"
+    header "MobileIOSEtcd.h"
+
+    export *
+}
