@@ -17,6 +17,7 @@ struct ETCDUserListView: View {
     @State var toastText :String = "操作用户错误"
     @Binding var currentModel  : KVOperateModel
     @State var password:Bool = false
+    @State var associated:Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -97,8 +98,11 @@ struct ETCDUserListView: View {
                 }.padding(10)
                 
             }
-            leaseListView.sheet(isPresented: $password) {
+            leaseListView
+                .sheet(isPresented: $password) {
                 ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
+            }.sheet(isPresented: $associated) {
+                ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
             }
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
@@ -145,6 +149,10 @@ extension ETCDUserListView {
                             self.storeObj.currentKvc = item
                             self.password.toggle()
                         })
+                        Button("关联角色", action: {
+                            self.storeObj.currentKvc = item
+                            self.associated.toggle()
+                        })
                     }))
                 Spacer()
                 Button {
@@ -166,6 +174,14 @@ extension ETCDUserListView {
                     self.password.toggle()
                 } label: {
                     Text("修改密码")
+                        .font(.system(size: 10.0))
+                        .foregroundColor(.white)
+                }
+                Button {
+                    self.storeObj.currentKvc = item
+                    self.associated.toggle()
+                } label: {
+                    Text("关联角色")
                         .font(.system(size: 10.0))
                         .foregroundColor(.white)
                 }

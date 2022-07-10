@@ -65,7 +65,6 @@ struct ETCDRolesListView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(10)
-                
             }
             leaseListView
         }
@@ -113,6 +112,9 @@ extension ETCDRolesListView {
                         Button("移除", action: {
                             deleFunc(item: item)
                         })
+                        Button("授权", action: {
+                           
+                        })
                     }))
                 Spacer()
                 Button {
@@ -129,6 +131,14 @@ extension ETCDRolesListView {
                         .font(.system(size: 10.0))
                         .foregroundColor(.white)
                 }
+                Button {
+                    
+                } label: {
+                    Text("授权")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }.padding(10)
             }
         }
         
