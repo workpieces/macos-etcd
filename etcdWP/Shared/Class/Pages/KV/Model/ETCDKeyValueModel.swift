@@ -30,7 +30,7 @@ struct ETCDKeyValue: Codable {
 struct KVData: Codable, Identifiable,CustomStringConvertible{
     var description: String = UUID().uuidString
     var id = UUID()
-    
+    var seletcd:Bool = false
     // ttlid is lease id.
     let ttlid : Int64?
     // lease ttl default time to expire.

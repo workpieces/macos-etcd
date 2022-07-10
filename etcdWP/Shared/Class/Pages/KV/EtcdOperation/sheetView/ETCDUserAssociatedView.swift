@@ -19,16 +19,17 @@ struct ETCDUserAssociatedView: View {
                 .padding(.top,10)
                 .padding(.trailing,10)
                 .padding(.leading,10)
-            Text("id:\(currentKv?.user ?? "")")
-                .padding(.top,5)
-                .padding(.trailing,10)
-                .padding(.leading,10)
-                .padding(.bottom,5)
-            TextField.init("请输入密码", text: $passWordText)
-                .textFieldStyle(.roundedBorder)
-                .padding(.leading,10)
-                .padding(.trailing,5)
-                .padding(.top,10)
+            HStack{
+                Text("当前用户 id:\(currentKv?.user ?? "")")
+                    .font(.subheadline)
+                    .padding(.top,5)
+                    .padding(.trailing,5)
+                    .padding(.leading,5)
+                    .padding(.bottom,5)
+                List(storeObj.RolesList() ?? []){ item in
+                    ETCDUserAssociatedItemView(item: item)
+                }
+            }
             Spacer()
             HStack{
                 Button {
@@ -60,15 +61,36 @@ struct ETCDUserAssociatedView: View {
                         .foregroundColor(.white)
                 }.padding(10)
             }
-        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity,alignment: .top)
+        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity,alignment: .top)
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
                 TopToastView(title:"用户操作错误")
             }
     }
 }
 
-struct ETCDUserAssociatedView_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDUserAssociatedView()
+
+
+
+struct ETCDUserAssociatedItemView: View {
+    @State var choose :Bool = false
+    @State var item :KVData
+    var body: some View {
+        HStack(){
+        Text("角色 id：\(item.role ?? "" )")
+            .font(.subheadline)
+            .foregroundColor(.white)
+            .padding(.trailing,5)
+            .padding(.leading,5)
+            .opacity(0.75)
+            .contextMenu(ContextMenu(menuItems: {
+                
+            }))
+        Toggle(""  , isOn: $choose)
+            .toggleStyle(.checkbox)
+            .padding(.bottom,3)
+            .onChange(of: choose) { newValue in
+                
+            }
+        }
     }
 }
