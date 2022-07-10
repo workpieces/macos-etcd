@@ -142,6 +142,7 @@
 "输入时间错误，请重新输入"                                = "Error entering time, please re-enter";
 "创建用户"                                = "Create User";
 "创建密码"                                = "Create password";
+"修改密码"                                = "changer le mot de passe";
 "请输入密码"                                = "Please input a password";
 "用户操作错误"                                = "User operation error";
 

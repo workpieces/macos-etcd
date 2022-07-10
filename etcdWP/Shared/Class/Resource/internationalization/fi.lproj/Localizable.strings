@@ -139,6 +139,7 @@
 "输入时间错误，请重新输入"    = "Väärä aika, yritä uudelleen";
 "创建用户"    = "Luo käyttäjä";
 "创建密码"    = "Luo salasana";
+"修改密码"    = "Vaihda salasana";
 "请输入密码"    = "Anna salasanasi";
 "用户操作错误"    = "Käyttäjän toimintavirhe";
     

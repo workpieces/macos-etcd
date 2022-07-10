@@ -136,6 +136,7 @@ etcdWP      vbdWP
 "输入时间错误，请重新输入"    = "Yanlış zaman, lütfen tekrar deneyin";
 "创建用户"    = "Kullanıcı Oluştur";
 "创建密码"    = "Şifre Oluştur";
+"修改密码"    = "şifre değiştir";
 "请输入密码"    = "Lütfen şifrenizi giriniz";
 "用户操作错误"    = "Kullanıcı işlem hatası";
     

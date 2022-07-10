@@ -136,6 +136,7 @@ etcdWP      etcdWP
 "输入时间错误，请重新输入"    = "Feil tid, prøv igjen";
 "创建用户"    = "Opprett bruker";
 "创建密码"    = "Opprett passord";
+"修改密码"    = "Bytt passord";
 "请输入密码"    = "Vennligst skriv inn passordet ditt";
 "用户操作错误"    = "Brukeroperasjonsfeil";
     

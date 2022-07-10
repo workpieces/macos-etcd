@@ -137,6 +137,7 @@
 "输入时间错误，请重新输入"    = "Netočno vrijeme, pokušajte ponovo";
 "创建用户"    = "Stvori korisnika";
 "创建密码"    = "Kreiraj lozinku";
+"修改密码"    = "promijeniti lozinku";
 "请输入密码"    = "Molimo unesite svoju lozinku";
 "用户操作错误"    = "Pogreška u radu korisnika";
     

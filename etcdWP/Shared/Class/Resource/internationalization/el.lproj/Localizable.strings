@@ -139,6 +139,7 @@
 "输入时间错误，请重新输入"    = "Heure incorrecte, veuillez réessayer";
 "创建用户"    = "Créer un utilisateur";
 "创建密码"    = "Créer un mot de passe";
+"修改密码"    = "Άλλαξε κωδικό";
 "请输入密码"    = "Veuillez saisir votre mot de passe";
 "用户操作错误"    = "Erreur d'opération utilisateur";
     

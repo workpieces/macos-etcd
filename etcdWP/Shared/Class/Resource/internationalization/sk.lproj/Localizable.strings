@@ -136,6 +136,7 @@ etcdWP      atďdWP
 "输入时间错误，请重新输入"    = "Nesprávny čas, skúste to znova";
 "创建用户"    = "Vytvoriť používateľa";
 "创建密码"    = "Vytvoriť heslo";
+"修改密码"    = "zmeniť heslo";
 "请输入密码"    = "Zadajte svoje heslo";
 "用户操作错误"    = "Chyba obsluhy používateľa";
     

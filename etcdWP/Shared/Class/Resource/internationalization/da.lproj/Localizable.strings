@@ -138,6 +138,7 @@
 "输入时间错误，请重新输入"    = "Forkert tidspunkt, prøv venligst igen";
 "创建用户"    = "Opret bruger";
 "创建密码"    = "Opret adgangskode";
+"修改密码"    = "skift kodeord";
 "请输入密码"    = "Indtast venligst din adgangskode";
 "用户操作错误"    = "Brugerbetjeningsfejl";
     
