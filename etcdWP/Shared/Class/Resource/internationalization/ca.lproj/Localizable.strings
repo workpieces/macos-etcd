@@ -137,6 +137,7 @@
 "输入时间错误，请重新输入"    = "Hora incorrecta, si us plau, torna-ho a provar";
 "创建用户"    = "Crea un usuari";
 "创建密码"    = "Crear contrasenya";
+"修改密码"    = "canviar la contrasenya";
 "请输入密码"    = "Si us plau, introduïu la vostra contrasenya";
 "用户操作错误"    = "Error de funcionament de l'usuari";
     

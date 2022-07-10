@@ -137,6 +137,7 @@
 "输入时间错误，请重新输入"    = "Nesprávný čas, zkuste to prosím znovu";
 "创建用户"    = "Vytvořit uživatele";
 "创建密码"    = "Vytvořit heslo";
+"修改密码"    = "změnit heslo";
 "请输入密码"    = "Zadejte prosím své heslo";
 "用户操作错误"    = "Chyba uživatelské operace";
     

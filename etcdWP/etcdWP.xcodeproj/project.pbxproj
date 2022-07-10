@@ -136,6 +136,8 @@
 		D0690ED42837D7050010C8A3 /* ETCDKeyListContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED22837D7050010C8A3 /* ETCDKeyListContentListView.swift */; };
 		D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
 		D0690ED72837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
+		D08CC82A287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */; };
+		D08CC82B287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */; };
 		D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D091D0D428791C9C00DDD095 /* MacosEtcd.framework */; };
 		D091D0D72879264200DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
 		D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
@@ -266,6 +268,7 @@
 		D06C1734283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D06C1735283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D06C1736283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "en-GB"; path = "en-GB.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserAssociatedView.swift; sourceTree = "<group>"; };
 		D091D0D428791C9C00DDD095 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserPasswordView.swift; sourceTree = "<group>"; };
 		D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemView.swift; sourceTree = "<group>"; };
@@ -644,6 +647,7 @@
 				D021F00B281FF8E600992294 /* ETCDUserListView.swift */,
 				D021F00C281FF8E600992294 /* NSTextView+.swift */,
 				D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */,
+				D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */,
 			);
 			path = sheetView;
 			sourceTree = "<group>";
@@ -1072,6 +1076,7 @@
 				D021F02A281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F046281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
 				D021F062281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
+				D08CC82A287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
@@ -1133,6 +1138,7 @@
 				D021F02B281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F047281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
 				D021F063281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
+				D08CC82B287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */,
 				D021F05B281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F027281FF8E600992294 /* Carousel.swift in Sources */,
 				D091D0D72879264200DDD095 /* ETCDUserPasswordView.swift in Sources */,

@@ -136,6 +136,7 @@ etcdWP      etcdWP
 "输入时间错误，请重新输入"    = "Hibás idő, próbáld újra";
 "创建用户"    = "Felhasználó létrehozása";
 "创建密码"    = "Jelszó létrehozása";
+"修改密码"    = "Jelszó módosítása";
 "请输入密码"    = "Kérjük, adja meg jelszavát";
 "用户操作错误"    = "Felhasználói működési hiba";
     

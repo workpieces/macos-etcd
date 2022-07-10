@@ -132,6 +132,7 @@
 "输入时间错误，请重新输入"    = "Thời gian không chính xác, vui lòng thử lại";
 "创建用户"    = "Tạo người dùng";
 "创建密码"    = "Tạo mật khẩu";
+"修改密码"     = "đổi mật khẩu";
 "请输入密码"    = "Vui lòng nhập mật khẩu của bạn";
 "用户操作错误"    = "Lỗi thao tác của người dùng";
 "创建集群成员"    = "Tạo thành viên cụm";

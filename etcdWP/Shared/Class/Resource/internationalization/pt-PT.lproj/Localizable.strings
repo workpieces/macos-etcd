@@ -136,6 +136,7 @@ etcdWP      etcdWP
 "输入时间错误，请重新输入"    = "Hora incorreta, tente novamente";
 "创建用户"    = "Criar usuário";
 "创建密码"    = "Criar senha";
+"修改密码"    = "alterar a senha";
 "请输入密码"    = "Por favor, digite sua senha";
 "用户操作错误"    = "Erro na operação do usuário";
     

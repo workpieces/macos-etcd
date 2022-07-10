@@ -136,6 +136,7 @@ etcdWP      dlldWP
 "输入时间错误，请重新输入"    = "Waktunya salah, silakan coba lagi";
 "创建用户"    = "Buat Pengguna";
 "创建密码"    = "Buat Kata Sandi";
+"修改密码"    = "ganti kata sandi";
 "请输入密码"    = "Silakan masukkan kata sandi Anda";
 "用户操作错误"    = "Kesalahan operasi pengguna";
     
