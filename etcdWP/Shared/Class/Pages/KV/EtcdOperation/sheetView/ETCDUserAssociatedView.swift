@@ -15,20 +15,12 @@ struct ETCDUserAssociatedView: View {
     @State var isShowToast: Bool = false
     var body: some View {
         VStack{
-            Text(LocalizedStringKey("用户关联角色"))
-                .padding(.top,10)
-                .padding(.trailing,10)
-                .padding(.leading,10)
             HStack{
-                Text("当前用户 id:\(currentKv?.user ?? "")")
-                    .font(.subheadline)
-                    .padding(.top,5)
-                    .padding(.trailing,5)
-                    .padding(.leading,5)
-                    .padding(.bottom,5)
-                List(storeObj.RolesList() ?? []){ item in
-                    ETCDUserAssociatedItemView(item: item,currentUser: currentKv)
-                }
+                Spacer()
+                Text(LocalizedStringKey("用户关联角色"))
+                    .padding(.top,10)
+                    .padding(.trailing,10)
+                    .padding(.leading,10)
                 Spacer()
                 Button {
                     presentationMode.wrappedValue.dismiss()
@@ -37,12 +29,23 @@ struct ETCDUserAssociatedView: View {
                         .font(.system(size: 12))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
-                }.padding(10)
-            }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity,alignment: .top)
-                .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-                    TopToastView(title:"用户操作错误")
-                }
-        }
+                }.padding(.top,20)
+                .padding(.trailing,10)
+                .padding(.leading,10)
+            }
+            Text("当前用户 id:\(currentKv?.user ?? "")")
+                .font(.subheadline)
+                .padding(.top,5)
+                .padding(.trailing,5)
+                .padding(.leading,5)
+                .padding(.bottom,5)
+            List(storeObj.RolesList() ?? []){ item in
+                ETCDUserAssociatedItemView(item: item,currentUser: currentKv)
+            }
+        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity,alignment: .top)
+         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+                TopToastView(title:"用户操作错误")
+            }
     }
 }
 
