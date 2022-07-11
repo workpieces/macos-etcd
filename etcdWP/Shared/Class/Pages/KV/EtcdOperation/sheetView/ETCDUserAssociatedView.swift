@@ -13,7 +13,6 @@ struct ETCDUserAssociatedView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var storeObj : ItemStore
     @State var isShowToast: Bool = false
-    @State var selectedItems:[KVData] = []
     var body: some View {
         VStack{
             Text(LocalizedStringKey("用户关联角色"))
@@ -28,35 +27,9 @@ struct ETCDUserAssociatedView: View {
                     .padding(.leading,5)
                     .padding(.bottom,5)
                 List(storeObj.RolesList() ?? []){ item in
-                    ETCDUserAssociatedItemView(item: item) { newValue in
-                        if newValue {
-                            selectedItems.append(item)
-                        }else{
-                            selectedItems.remove(at:selectedItems.firstIndex(of: item)!)
-                        }
-                    }
+                    ETCDUserAssociatedItemView(item: item,currentUser: currentKv)
                 }
-            }
-            Spacer()
-            HStack{
-                Button {
-                    guard !selectedItems.isEmpty else{
-                        self.isShowToast.toggle()
-                        return
-                    }
-                    var strings:[String] = []
-                    selectedItems.forEach { item in
-                        strings.append(item.role ?? "")
-                    }
-                    let role = strings.joined(separator:",")
-                    let  _ = storeObj.grantUserRole(user:currentKv?.user, role: role)
-                    
-                } label: {
-                    Text("确定")
-                        .font(.system(size: 12))
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                }.padding(10)
+                Spacer()
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
@@ -65,21 +38,20 @@ struct ETCDUserAssociatedView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(10)
-            }
-        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity,alignment: .top)
-            .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-                TopToastView(title:"用户操作错误")
-            }
+            }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity,alignment: .top)
+                .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+                    TopToastView(title:"用户操作错误")
+                }
+        }
     }
 }
-
-
 
 
 struct ETCDUserAssociatedItemView: View {
     @State var choose :Bool = false
     @State var item :KVData
-    var callback:(_ newValue: Bool) -> Void
+    @State var currentUser :KVData?
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         HStack(){
             Text("角色 id：\(item.role ?? "" )")
@@ -89,11 +61,26 @@ struct ETCDUserAssociatedItemView: View {
                 .padding(.leading,5)
                 .opacity(0.75)
             if ((item.roles_status?.count) == nil){
-                Toggle(""  , isOn: $choose)
+                Toggle("关联"  , isOn: $choose)
                     .toggleStyle(.checkbox)
                     .padding(.bottom,3)
                     .onChange(of: choose) { newValue in
-                        callback(newValue)
+                        if newValue {
+                            let  _ =  storeObj.grantUserRole(user: currentUser?.user, role: item.role)
+                        }else{
+                            let  _ =  storeObj.revokesRole(user: currentUser?.user, role: item.role)
+                        }
+                    }
+            }else{
+                Toggle("解除关联"  , isOn: $choose)
+                    .toggleStyle(.checkbox)
+                    .padding(.bottom,3)
+                    .onChange(of: choose) { newValue in
+                        if newValue {
+                            let  _ =  storeObj.grantUserRole(user: currentUser?.user, role: item.role)
+                        }else{
+                            let  _ =  storeObj.revokesRole(user: currentUser?.user, role: item.role)
+                        }
                     }
             }
             
