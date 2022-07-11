@@ -40,8 +40,16 @@ struct ETCDUserAssociatedView: View {
             Spacer()
             HStack{
                 Button {
-                    
-                    print("\(selectedItems)")
+                    guard !selectedItems.isEmpty else{
+                        self.isShowToast.toggle()
+                        return
+                    }
+                    var strings:[String] = []
+                    selectedItems.forEach { item in
+                        strings.append(item.role ?? "")
+                    }
+                    let role = strings.joined(separator:",")
+                    let  _ = storeObj.grantUserRole(user:currentKv?.user, role: role)
                     
                 } label: {
                     Text("确定")
@@ -59,7 +67,7 @@ struct ETCDUserAssociatedView: View {
                 }.padding(10)
             }
         }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity,alignment: .top)
-        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+            .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
                 TopToastView(title:"用户操作错误")
             }
     }
@@ -74,12 +82,12 @@ struct ETCDUserAssociatedItemView: View {
     var callback:(_ newValue: Bool) -> Void
     var body: some View {
         HStack(){
-        Text("角色 id：\(item.role ?? "" )")
-            .font(.subheadline)
-            .foregroundColor(.white)
-            .padding(.trailing,5)
-            .padding(.leading,5)
-            .opacity(0.75)
+            Text("角色 id：\(item.role ?? "" )")
+                .font(.subheadline)
+                .foregroundColor(.white)
+                .padding(.trailing,5)
+                .padding(.leading,5)
+                .opacity(0.75)
             if ((item.roles_status?.count) == nil){
                 Toggle(""  , isOn: $choose)
                     .toggleStyle(.checkbox)
@@ -88,7 +96,7 @@ struct ETCDUserAssociatedItemView: View {
                         callback(newValue)
                     }
             }
-
+            
         }
     }
 }

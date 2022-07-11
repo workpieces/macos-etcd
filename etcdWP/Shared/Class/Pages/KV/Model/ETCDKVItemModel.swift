@@ -539,6 +539,19 @@ extension ItemStore {
         return []
     }
     
+    
+    func grantUserRole(user: String? ,role:String? ) -> ETCDKeyValue? {
+        let result = c.etcdClient?.grantUserRole(user, role: role)
+        guard result == nil || ((result?.isEmpty) == nil) else {
+            let resp = try? JSONDecoder().decode(ETCDKeyValue.self, from: result!)
+            let lg = KVOperateLog.init(status: resp?.status ?? 200, message: resp?.message ?? "OK", operate: resp?.operate ?? "grantUser")
+            ETCDLogsObject.shared.logSubjec.send(lg)
+            
+            return resp
+        }
+        return nil
+    }
+    
     func removeRole(roleId: String) -> ETCDKeyValue? {
         let result = c.etcdClient?.deleteRole(roleId)
         guard result == nil || ((result?.isEmpty) == nil) else {
