@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ETCDUserAssociatedView: View {
     @State var currentKv :KVData?
@@ -55,6 +56,20 @@ struct ETCDUserAssociatedItemView: View {
     @State var item :KVData
     @State var currentUser :KVData?
     @EnvironmentObject var storeObj : ItemStore
+    
+    private func didModify() {
+      let roles = item.roles_status?.filter({ roles in
+          return  roles.role  == item.role && roles.link == true
+        });
+        
+        print("--------------roles_status:\(item.roles_status)")
+        if (roles != nil ){
+            self.choose = true
+        }else{
+            self.choose = false
+        }
+    }
+    
     var body: some View {
         HStack(){
             Text("角色 id：\(item.role ?? "" )")
@@ -63,30 +78,18 @@ struct ETCDUserAssociatedItemView: View {
                 .padding(.trailing,5)
                 .padding(.leading,5)
                 .opacity(0.75)
-            if ((item.roles_status?.count) == nil){
-                Toggle("关联"  , isOn: $choose)
-                    .toggleStyle(.checkbox)
-                    .padding(.bottom,3)
-                    .onChange(of: choose) { newValue in
-                        if newValue {
-                            let  _ =  storeObj.grantUserRole(user: currentUser?.user, role: item.role)
-                        }else{
-                            let  _ =  storeObj.revokesRole(user: currentUser?.user, role: item.role)
-                        }
+            Toggle("关联"  , isOn: $choose)
+                .toggleStyle(.checkbox)
+                .padding(.bottom,3)
+                .onChange(of: choose) { newValue in
+                    if newValue {
+                        let  _ =  storeObj.grantUserRole(user: currentUser?.user, role: item.role)
+                    }else{
+                        let  _ =  storeObj.revokesRole(user: currentUser?.user, role: item.role)
                     }
-            }else{
-                Toggle("解除关联"  , isOn: $choose)
-                    .toggleStyle(.checkbox)
-                    .padding(.bottom,3)
-                    .onChange(of: choose) { newValue in
-                        if newValue {
-                            let  _ =  storeObj.grantUserRole(user: currentUser?.user, role: item.role)
-                        }else{
-                            let  _ =  storeObj.revokesRole(user: currentUser?.user, role: item.role)
-                        }
-                    }
-            }
-            
+                }.onReceive(Just(choose)) { selection in
+                    self.didModify()
+                }
         }
     }
 }
