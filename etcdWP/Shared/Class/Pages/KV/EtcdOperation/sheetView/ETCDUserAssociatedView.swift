@@ -58,11 +58,15 @@ struct ETCDUserAssociatedItemView: View {
     @EnvironmentObject var storeObj : ItemStore
     
     private func didModify() {
-      let roles = item.roles_status?.filter({ roles in
+        
+        guard  currentUser != nil else{
+            return
+        }
+        let roles = currentUser!.roles_status?.filter({ roles in
           return  roles.role  == item.role && roles.link == true
         });
         
-        print("--------------roles_status:\(item.roles_status)")
+        print("--------------roles_status:\(currentUser!.roles_status)")
         if (roles != nil ){
             self.choose = true
         }else{
@@ -84,6 +88,7 @@ struct ETCDUserAssociatedItemView: View {
                 .onChange(of: choose) { newValue in
                     if newValue {
                         let  _ =  storeObj.grantUserRole(user: currentUser?.user, role: item.role)
+                        
                     }else{
                         let  _ =  storeObj.revokesRole(user: currentUser?.user, role: item.role)
                     }
