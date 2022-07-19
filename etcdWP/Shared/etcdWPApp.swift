@@ -7,14 +7,12 @@
 
 import SwiftUI
 import SwiftUIRouter
-#if TARGET_OS_MAC
+
+#if os(macOS)
 import AppKit
-import GoogleMobileAds
 #else
-
+import GoogleMobileAds
 #endif
-
-
 // App icon: https://appicon.co/
 // Macos Icon https://icons8.com/icons/set/mac-app
 // SwiftUI基础知识：https://www.jianshu.com/u/c505aa9e47c2
@@ -38,7 +36,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 #else
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
-    
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        return true
+      }
 }
 #endif
 
@@ -50,13 +52,19 @@ struct etcdWPApp: App {
 #if os(macOS)
     var screen = NSScreen.main!.visibleFrame
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
+#else
+    var screen = UIScreen.main.bounds
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
 #endif
+    
     var body: some Scene {
         WindowGroup {
             Router {
-                ETCDHomeContentView()
                 #if os(macOS)
+                ETCDHomeContentView()
                 .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
+                #else
+                ETCDRootViewControllView()
                 #endif
             }.environmentObject(homeData)
             .ignoresSafeArea(.all,edges: .all)

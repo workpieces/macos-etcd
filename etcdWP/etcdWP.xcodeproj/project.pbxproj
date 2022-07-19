@@ -14,6 +14,8 @@
 		44AD32842850EF5A00B66261 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD32822850EF5A00B66261 /* View+.swift */; };
 		44ADC8B9284F9321003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8B8284F9321003B32C3 /* SwiftUIRouter */; };
 		44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8BB284F9331003B32C3 /* SwiftUIRouter */; };
+		7CBFE6D319196CB7E29AB8C8 /* Pods_etcdWP__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */; };
+		AD9B7E497427F5B15D85E2CD /* Pods_etcdWP__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
 		D021EFC7281F5AB700992294 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFC6281F5AB700992294 /* Tests_macOS.swift */; };
@@ -110,6 +112,13 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
+		D02374622886E24700BAF0B0 /* ETCDMenuDrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374612886E24700BAF0B0 /* ETCDMenuDrawModel.swift */; };
+		D02374642886E4E800BAF0B0 /* ETCDDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374632886E4E800BAF0B0 /* ETCDDrawerView.swift */; };
+		D02374662886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374652886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift */; };
+		D02374682886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374672886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift */; };
+		D023746A2886E7E500BAF0B0 /* ETCDRootViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374692886E7E500BAF0B0 /* ETCDRootViewControllView.swift */; };
+		D023746C2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */; };
+		D023746F2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */; };
 		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
 		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
 		D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
@@ -169,11 +178,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07474CCF146505889AE12416 /* Pods-etcdWP (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (macOS).release.xcconfig"; path = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		124093C1360280498D7ABBD1 /* Pods-etcdWP (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (macOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
 		44AD32822850EF5A00B66261 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44B5CCBE2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44B5CCBF2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "es-MX"; path = "es-MX.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		4FB8241CF06C3A50516A5274 /* Pods-etcdWP (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (iOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021EFA2281F5AB600992294 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D021EFA9281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021EFAF281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +242,13 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D02374612886E24700BAF0B0 /* ETCDMenuDrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMenuDrawModel.swift; sourceTree = "<group>"; };
+		D02374632886E4E800BAF0B0 /* ETCDDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDrawerView.swift; sourceTree = "<group>"; };
+		D02374652886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDrawerCloseButton.swift; sourceTree = "<group>"; };
+		D02374672886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDrawerMenuButton.swift; sourceTree = "<group>"; };
+		D02374692886E7E500BAF0B0 /* ETCDRootViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRootViewControllView.swift; sourceTree = "<group>"; };
+		D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeViewControlleView.swift; sourceTree = "<group>"; };
+		D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDAboutViewControlleView.swift; sourceTree = "<group>"; };
 		D02C9CE92847097C001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D02C9CEA2847097D001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CEB2847097D001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ko; path = ko.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -379,6 +400,7 @@
 		D0F9F33F285DD5BD00C34EB7 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0F9F340285DD5BD00C34EB7 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0F9F341285DD5BD00C34EB7 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = th; path = th.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		EEB6A5DEC70F28E91229F62E /* Pods-etcdWP (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (iOS).release.xcconfig"; path = "Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +417,7 @@
 				D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */,
 				D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */,
 				D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */,
+				7CBFE6D319196CB7E29AB8C8 /* Pods_etcdWP__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +436,7 @@
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
 				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
 				D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */,
+				AD9B7E497427F5B15D85E2CD /* Pods_etcdWP__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +482,17 @@
 			path = LocalizedStringKey;
 			sourceTree = "<group>";
 		};
+		57D7102A2E6E0A2D05EF54DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FB8241CF06C3A50516A5274 /* Pods-etcdWP (iOS).debug.xcconfig */,
+				EEB6A5DEC70F28E91229F62E /* Pods-etcdWP (iOS).release.xcconfig */,
+				124093C1360280498D7ABBD1 /* Pods-etcdWP (macOS).debug.xcconfig */,
+				07474CCF146505889AE12416 /* Pods-etcdWP (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D021EF9C281F5AB500992294 = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +504,7 @@
 				D021EFC5281F5AB700992294 /* Tests macOS */,
 				D021EFAA281F5AB700992294 /* Products */,
 				D05C11D12879D32A00E3C197 /* Frameworks */,
+				57D7102A2E6E0A2D05EF54DF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -521,6 +557,7 @@
 		D021EFE0281FF8E500992294 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				D02374592886E1E600BAF0B0 /* iOS */,
 				D021F0AF281FFCB200992294 /* FrameWork */,
 				D021EFF4281FF8E500992294 /* Pages */,
 				D021EFE8281FF8E500992294 /* Resource */,
@@ -727,9 +764,89 @@
 			path = FrameWork;
 			sourceTree = "<group>";
 		};
+		D02374592886E1E600BAF0B0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D023745A2886E1E600BAF0B0 /* Pages */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D023745A2886E1E600BAF0B0 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D023746D2886E89200BAF0B0 /* About */,
+				D023745B2886E1E600BAF0B0 /* Home */,
+				D023745E2886E1E600BAF0B0 /* KV */,
+				D023745F2886E1E600BAF0B0 /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		D023745B2886E1E600BAF0B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D023745C2886E1E600BAF0B0 /* Model */,
+				D023745D2886E1E600BAF0B0 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D023745C2886E1E600BAF0B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D023745D2886E1E600BAF0B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D023745E2886E1E600BAF0B0 /* KV */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KV;
+			sourceTree = "<group>";
+		};
+		D023745F2886E1E600BAF0B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D02374602886E20900BAF0B0 /* draw */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D02374602886E20900BAF0B0 /* draw */ = {
+			isa = PBXGroup;
+			children = (
+				D02374612886E24700BAF0B0 /* ETCDMenuDrawModel.swift */,
+				D02374632886E4E800BAF0B0 /* ETCDDrawerView.swift */,
+				D02374652886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift */,
+				D02374672886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift */,
+				D02374692886E7E500BAF0B0 /* ETCDRootViewControllView.swift */,
+			);
+			path = draw;
+			sourceTree = "<group>";
+		};
+		D023746D2886E89200BAF0B0 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		D05C11D12879D32A00E3C197 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */,
+				79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -782,9 +899,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D021EFD2281F5AB700992294 /* Build configuration list for PBXNativeTarget "etcdWP (iOS)" */;
 			buildPhases = (
+				58C08A8B44E1E61E89D769D6 /* [CP] Check Pods Manifest.lock */,
 				D021EFA5281F5AB700992294 /* Sources */,
 				D021EFA6281F5AB700992294 /* Frameworks */,
 				D021EFA7281F5AB700992294 /* Resources */,
+				AC9428996A848E749F53BA7F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -809,6 +928,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D021EFD5281F5AB700992294 /* Build configuration list for PBXNativeTarget "etcdWP (macOS)" */;
 			buildPhases = (
+				9B7F4BE6345BE65FECDF28F4 /* [CP] Check Pods Manifest.lock */,
 				D021EFAB281F5AB700992294 /* Sources */,
 				D021EFAC281F5AB700992294 /* Frameworks */,
 				D021EFAD281F5AB700992294 /* Resources */,
@@ -1021,11 +1141,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58C08A8B44E1E61E89D769D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etcdWP (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B7F4BE6345BE65FECDF28F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etcdWP (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC9428996A848E749F53BA7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D021EFA5281F5AB700992294 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02374642886E4E800BAF0B0 /* ETCDDrawerView.swift in Sources */,
 				D021F070281FF8E600992294 /* Button.swift in Sources */,
 				D021F048281FF8E600992294 /* ETCDEtcdOperationView.swift in Sources */,
 				D021F060281FF8E600992294 /* ETCDKVItemModel.swift in Sources */,
@@ -1036,11 +1221,14 @@
 				D021F066281FF8E600992294 /* AboutView.swift in Sources */,
 				D0690EC02837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */,
 				D021F054281FF8E600992294 /* ETCDUserListView.swift in Sources */,
+				D02374662886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift in Sources */,
 				D021F038281FF8E600992294 /* ETCDHomeMainView.swift in Sources */,
 				D0690ECA2837D18D0010C8A3 /* ETCDKeyListContentPageView.swift in Sources */,
 				D021F04E281FF8E600992294 /* ETCDLeaseListView.swift in Sources */,
 				D021F056281FF8E600992294 /* NSTextView+.swift in Sources */,
+				D02374622886E24700BAF0B0 /* ETCDMenuDrawModel.swift in Sources */,
 				D021F028281FF8E600992294 /* CarouselItemlView.swift in Sources */,
+				D023746F2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift in Sources */,
 				D021F03E281FF8E600992294 /* ETCDTabarModel.swift in Sources */,
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
 				D021F05E281FF8E600992294 /* ETCDRoleModel.swift in Sources */,
@@ -1048,6 +1236,7 @@
 				D021F068281FF8E600992294 /* AboutModel.swift in Sources */,
 				D021F06C281FF8E600992294 /* Content.swift in Sources */,
 				D0690EBC2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */,
+				D023746A2886E7E500BAF0B0 /* ETCDRootViewControllView.swift in Sources */,
 				D021F036281FF8E600992294 /* ETCDHomeContentView.swift in Sources */,
 				D021F044281FF8E600992294 /* TopToastView.swift in Sources */,
 				D021F058281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
@@ -1079,8 +1268,10 @@
 				D08CC82A287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
+				D023746C2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
+				D02374682886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1460,6 +1651,7 @@
 		};
 		D021EFD3281F5AB700992294 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FB8241CF06C3A50516A5274 /* Pods-etcdWP (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1496,6 +1688,7 @@
 		};
 		D021EFD4281F5AB700992294 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB6A5DEC70F28E91229F62E /* Pods-etcdWP (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1533,6 +1726,7 @@
 		};
 		D021EFD6281F5AB700992294 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 124093C1360280498D7ABBD1 /* Pods-etcdWP (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1567,6 +1761,7 @@
 		};
 		D021EFD7281F5AB700992294 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07474CCF146505889AE12416 /* Pods-etcdWP (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

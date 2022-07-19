@@ -1,0 +1,6 @@
+framework module Pods_etcdWP__iOS_ {
+  umbrella header "Pods-etcdWP (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}
