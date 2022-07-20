@@ -58,7 +58,7 @@ struct AboutView: View {
                                 Spacer()
                             }
                             .cornerRadius(10)
-                            .frame(height: 210)
+                            .frame(height: 220)
                             .onTapGesture {
 #if os(macOS)
                                 NSWorkspace.shared.open(URL.init(string: item.link)!)

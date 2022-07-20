@@ -21,21 +21,20 @@ struct ETCDDrawerMenuButton: View {
                 selectedMenu = name
             }
         }, label: {
-            HStack(spacing: 15) {
+            HStack() {
                 Image(systemName: image)
                     .font(.title2)
-                    .foregroundColor(selectedMenu == name ? .black : .white)
-                
+                    .foregroundColor(selectedMenu == name ? .white : .gray)
                 Text(LocalizedStringKey(name))
-                    .foregroundColor(selectedMenu == name ? .black : .white)
+                    .foregroundColor(selectedMenu == name ? .white : .gray)
             }
             .padding(.horizontal)
             .padding(.vertical, 12)
-            .frame(width: 200, alignment: .leading)
+            .frame(width: 120, alignment: .leading)
             .background(
                 ZStack {
                     if selectedMenu == name {
-                        Color.white
+                        Color.primary.opacity(0.15)
                             .cornerRadius(10)
                             .matchedGeometryEffect(id: "TabMenu", in: animation)
                     } else {
