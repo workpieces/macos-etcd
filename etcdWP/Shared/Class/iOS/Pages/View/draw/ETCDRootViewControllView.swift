@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ETCDRootViewControllView: View {
-    
     init() {
         UITabBar.appearance().isHidden = true
     }
