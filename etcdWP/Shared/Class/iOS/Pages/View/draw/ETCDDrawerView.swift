@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ETCDDrawerView: View {
     @EnvironmentObject var menuData: ETCDMenuDrawModel
+    @StateObject var  tableData = HomeTabSelectModel()
     // Animation
     var animation: Namespace.ID
     var body: some View {
@@ -39,6 +40,10 @@ struct ETCDDrawerView: View {
             .padding(.leading,20)
             .padding(.top, 30)
             Spacer()
+            Text("Version: \(tableData.getVersion())")
+                .withDefaultContentTitle()
+                .padding(.bottom,44)
+                .padding(.leading,20)
         }
         .frame(width:180,height: UIScreen.main.bounds.height - 88)
         .background(

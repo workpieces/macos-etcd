@@ -23,9 +23,9 @@ struct ETCDRootViewControllView: View {
                 ETCDAboutViewControlleView()
                     .tag("About")
             }
+            .offset(x:menuData.showDrawer ? 0 :40)
             .frame(width: UIScreen.main.bounds.width)
         }
-
         .frame(width: UIScreen.main.bounds.width)
         .offset(x: menuData.showDrawer ? 125 : -125)
         .overlay(
@@ -34,6 +34,7 @@ struct ETCDRootViewControllView: View {
                     ETCDDrawerCloseButton(animation: animation)
                         .padding()
                 }
+                
             }, alignment: .topLeading
         ).padding(.top, 44)
         .environmentObject(menuData)

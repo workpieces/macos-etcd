@@ -16,7 +16,6 @@ struct AboutView: View {
                 Spacer()
             }
             .padding(.top,NavagationPaddingHeight)
-            
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 1), alignment: .center, spacing: GriditemPaddingSpace) {

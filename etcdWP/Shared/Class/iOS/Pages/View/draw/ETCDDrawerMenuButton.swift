@@ -12,9 +12,7 @@ struct ETCDDrawerMenuButton: View {
     var name: String
     var image: String
     @Binding var selectedMenu: String
-    
     var animation: Namespace.ID
-    
     var body: some View {
         Button(action: {
             withAnimation(.spring()) {
