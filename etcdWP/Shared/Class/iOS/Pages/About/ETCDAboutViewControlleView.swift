@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ETCDAboutViewControlleView: View {
     var body: some View {
-        AboutView()
+        VStack{
+            AboutView()
+        }
     }
 }
