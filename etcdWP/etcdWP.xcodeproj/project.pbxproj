@@ -115,6 +115,7 @@
 		D04A38E8288BF84C00361633 /* ETCDRootViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */; };
 		D04A38EB288BF9EC00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38EA288BF9EC00361633 /* AxisTabView */; };
 		D04A38EE288BF9FD00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38ED288BF9FD00361633 /* AxisTabView */; };
+		D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */; };
 		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
 		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
 		D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
@@ -256,6 +257,7 @@
 		D02C9CF628471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRootViewControllView.swift; sourceTree = "<group>"; };
+		D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerView.swift; sourceTree = "<group>"; };
 		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
 		D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVOperateContentView.swift; sourceTree = "<group>"; };
@@ -767,6 +769,7 @@
 		D023745A2886E1E600BAF0B0 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D05645CA288C0C9700911761 /* AD */,
 				D023746D2886E89200BAF0B0 /* About */,
 				D023745B2886E1E600BAF0B0 /* Home */,
 				D023745E2886E1E600BAF0B0 /* KV */,
@@ -820,6 +823,14 @@
 				D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		D05645CA288C0C9700911761 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */,
+			);
+			path = AD;
 			sourceTree = "<group>";
 		};
 		D05C11D12879D32A00E3C197 /* Frameworks */ = {
@@ -1234,6 +1245,7 @@
 				D021F050281FF8E600992294 /* ETCDSheetView.swift in Sources */,
 				D021F076281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */,
+				D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */,
 				D021F034281FF8E600992294 /* ETCDConfigView.swift in Sources */,
 				D0690ED02837D5A90010C8A3 /* ETCDKeyListContentHeadView.swift in Sources */,
 				D0690EC72837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift in Sources */,

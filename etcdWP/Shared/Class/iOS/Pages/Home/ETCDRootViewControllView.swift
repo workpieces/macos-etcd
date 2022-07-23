@@ -21,7 +21,7 @@ struct ETCDRootViewControllView: View {
             } content: {
                 ETCDControlView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color,name: "Home", tag: 0, systemName: "house", safeArea: proxy.safeAreaInsets)
                 ETCDControlView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color,tag: 2, systemName: "plus.circle.fill", safeArea: proxy.safeAreaInsets)
-                ETCDControlView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color,name: "About", tag: 3, systemName: "info.circle", safeArea: proxy.safeAreaInsets)
+                ETCDControlView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color,name: "About", tag: 1, systemName: "info.circle", safeArea: proxy.safeAreaInsets)
             }
         }
         .animation(.easeInOut, value: radius)
@@ -41,17 +41,17 @@ struct ETCDControlView: View {
     let tag: Int
     let systemName: String
     let safeArea: EdgeInsets
-    
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(Color(hex:"#262626"))
                 .ignoresSafeArea()
-            if name  == "About" {
+            switch tag {
+            case 1:
                 ETCDAboutViewControlleView()
                     .padding()
                     .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
-            }else{
+            default:
                 ScrollView {
                     Text("text")
                         .padding()
