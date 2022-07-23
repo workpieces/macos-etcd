@@ -14,6 +14,7 @@
 		44AD32842850EF5A00B66261 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD32822850EF5A00B66261 /* View+.swift */; };
 		44ADC8B9284F9321003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8B8284F9321003B32C3 /* SwiftUIRouter */; };
 		44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8BB284F9331003B32C3 /* SwiftUIRouter */; };
+		44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */; };
 		7CBFE6D319196CB7E29AB8C8 /* Pods_etcdWP__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */; };
 		AD9B7E497427F5B15D85E2CD /* Pods_etcdWP__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
@@ -182,6 +183,7 @@
 		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44B5CCBE2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44B5CCBF2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "es-MX"; path = "es-MX.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDReachability.swift; sourceTree = "<group>"; };
 		4FB8241CF06C3A50516A5274 /* Pods-etcdWP (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (iOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -474,6 +476,14 @@
 				44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */,
 			);
 			path = LocalizedStringKey;
+			sourceTree = "<group>";
+		};
+		44D2BA42288C3EA700151AD7 /* until */ = {
+			isa = PBXGroup;
+			children = (
+				44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */,
+			);
+			path = until;
 			sourceTree = "<group>";
 		};
 		57D7102A2E6E0A2D05EF54DF /* Pods */ = {
@@ -769,6 +779,7 @@
 		D023745A2886E1E600BAF0B0 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				44D2BA42288C3EA700151AD7 /* until */,
 				D05645CA288C0C9700911761 /* AD */,
 				D023746D2886E89200BAF0B0 /* About */,
 				D023745B2886E1E600BAF0B0 /* Home */,
@@ -1243,6 +1254,7 @@
 				D0690EB62837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */,
 				D04A38E8288BF84C00361633 /* ETCDRootViewControllView.swift in Sources */,
 				D021F050281FF8E600992294 /* ETCDSheetView.swift in Sources */,
+				44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */,
 				D021F076281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */,
 				D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */,

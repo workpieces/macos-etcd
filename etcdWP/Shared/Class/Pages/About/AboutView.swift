@@ -21,7 +21,7 @@ struct AboutView: View {
             ZStack(alignment: .topLeading){
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 1), alignment: .center, spacing: GriditemPaddingSpace) {
-                        ETCDADBannerView(adPosition: .top,adBannerId: "ca-app-pub-3308202349970955~2114712586")
+                        ETCDADBannerView(adPosition: .top,adBannerId: "ca-app-pub-3308202349970955/5975577682")
                             .frame(height:180)
                         ForEach(abouts) { item in
                             ZStack {

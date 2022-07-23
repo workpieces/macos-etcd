@@ -12,6 +12,7 @@ import SwiftUIRouter
 import AppKit
 #else
 import GoogleMobileAds
+import Alamofire
 #endif
 // App icon: https://appicon.co/
 // Macos Icon https://icons8.com/icons/set/mac-app
@@ -39,6 +40,10 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        ETCDReachabilityManage.mannger.netWorkReachability { stats in
+            print("stats---------\(stats)")
+        }
         return true
     }
 }
