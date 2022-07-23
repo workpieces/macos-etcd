@@ -31,7 +31,6 @@ struct ETCDHomeViewiPhoneContentView: View {
         VStack(spacing: 0) {
             HStack {
                 Spacer()
-               v
 
             }.padding(.trailing,18)
             

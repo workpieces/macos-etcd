@@ -100,8 +100,6 @@
 		D021F075281FF8E600992294 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F022281FF8E600992294 /* Constant.swift */; };
 		D021F076281FF8E600992294 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F023281FF8E600992294 /* OpenPan.swift */; };
 		D021F077281FF8E600992294 /* OpenPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F023281FF8E600992294 /* OpenPan.swift */; };
-		D021F090281FFA5100992294 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F08F281FFA5100992294 /* AxisTabView */; };
-		D021F093281FFA5E00992294 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F092281FFA5E00992294 /* AxisTabView */; };
 		D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D021F095281FFA7B00992294 /* ObjectMapper */; };
 		D021F099281FFA8600992294 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D021F098281FFA8600992294 /* ObjectMapper */; };
 		D021F09C281FFA9F00992294 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D021F09B281FFA9F00992294 /* PopupView */; };
@@ -112,13 +110,11 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
-		D02374622886E24700BAF0B0 /* ETCDMenuDrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374612886E24700BAF0B0 /* ETCDMenuDrawModel.swift */; };
-		D02374642886E4E800BAF0B0 /* ETCDDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374632886E4E800BAF0B0 /* ETCDDrawerView.swift */; };
-		D02374662886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374652886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift */; };
-		D02374682886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374672886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift */; };
-		D023746A2886E7E500BAF0B0 /* ETCDRootViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02374692886E7E500BAF0B0 /* ETCDRootViewControllView.swift */; };
 		D023746C2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */; };
 		D023746F2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */; };
+		D04A38E8288BF84C00361633 /* ETCDRootViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */; };
+		D04A38EB288BF9EC00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38EA288BF9EC00361633 /* AxisTabView */; };
+		D04A38EE288BF9FD00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38ED288BF9FD00361633 /* AxisTabView */; };
 		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
 		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
 		D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
@@ -242,11 +238,6 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D02374612886E24700BAF0B0 /* ETCDMenuDrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMenuDrawModel.swift; sourceTree = "<group>"; };
-		D02374632886E4E800BAF0B0 /* ETCDDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDrawerView.swift; sourceTree = "<group>"; };
-		D02374652886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDrawerCloseButton.swift; sourceTree = "<group>"; };
-		D02374672886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDrawerMenuButton.swift; sourceTree = "<group>"; };
-		D02374692886E7E500BAF0B0 /* ETCDRootViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRootViewControllView.swift; sourceTree = "<group>"; };
 		D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeViewControlleView.swift; sourceTree = "<group>"; };
 		D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDAboutViewControlleView.swift; sourceTree = "<group>"; };
 		D02C9CE92847097C001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -264,6 +255,7 @@
 		D02C9CF528471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D02C9CF628471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRootViewControllView.swift; sourceTree = "<group>"; };
 		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
 		D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVOperateContentView.swift; sourceTree = "<group>"; };
@@ -410,8 +402,8 @@
 			files = (
 				44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */,
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
+				D04A38EB288BF9EC00361633 /* AxisTabView in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
-				D021F090281FFA5100992294 /* AxisTabView in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
 				D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */,
@@ -431,7 +423,7 @@
 				D021F0A5281FFADD00992294 /* SwiftyJSON in Frameworks */,
 				4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */,
 				D021F09F281FFAAB00992294 /* PopupView in Frameworks */,
-				D021F093281FFA5E00992294 /* AxisTabView in Frameworks */,
+				D04A38EE288BF9FD00361633 /* AxisTabView in Frameworks */,
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
 				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
@@ -788,6 +780,7 @@
 			children = (
 				D023745C2886E1E600BAF0B0 /* Model */,
 				D023745D2886E1E600BAF0B0 /* View */,
+				D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -817,21 +810,8 @@
 		D023745F2886E1E600BAF0B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D02374602886E20900BAF0B0 /* draw */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D02374602886E20900BAF0B0 /* draw */ = {
-			isa = PBXGroup;
-			children = (
-				D02374612886E24700BAF0B0 /* ETCDMenuDrawModel.swift */,
-				D02374632886E4E800BAF0B0 /* ETCDDrawerView.swift */,
-				D02374652886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift */,
-				D02374672886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift */,
-				D02374692886E7E500BAF0B0 /* ETCDRootViewControllView.swift */,
-			);
-			path = draw;
 			sourceTree = "<group>";
 		};
 		D023746D2886E89200BAF0B0 /* About */ = {
@@ -911,7 +891,6 @@
 			);
 			name = "etcdWP (iOS)";
 			packageProductDependencies = (
-				D021F08F281FFA5100992294 /* AxisTabView */,
 				D021F095281FFA7B00992294 /* ObjectMapper */,
 				D021F09B281FFA9F00992294 /* PopupView */,
 				D021F0A1281FFAD200992294 /* SwiftyJSON */,
@@ -919,6 +898,7 @@
 				D0FC088B282002F300A74D43 /* SnapKit */,
 				44ADC8BB284F9331003B32C3 /* SwiftUIRouter */,
 				D05C11D22879D32A00E3C197 /* FilePicker */,
+				D04A38EA288BF9EC00361633 /* AxisTabView */,
 			);
 			productName = "etcdWP (iOS)";
 			productReference = D021EFA9281F5AB700992294 /* etcdWP.app */;
@@ -939,7 +919,6 @@
 			);
 			name = "etcdWP (macOS)";
 			packageProductDependencies = (
-				D021F092281FFA5E00992294 /* AxisTabView */,
 				D021F098281FFA8600992294 /* ObjectMapper */,
 				D021F09E281FFAAB00992294 /* PopupView */,
 				D021F0A4281FFADD00992294 /* SwiftyJSON */,
@@ -949,6 +928,7 @@
 				D0FC088E282002FF00A74D43 /* SnapKit */,
 				4454E4C6284E4AED0075986A /* TextSourceful */,
 				44ADC8B8284F9321003B32C3 /* SwiftUIRouter */,
+				D04A38ED288BF9FD00361633 /* AxisTabView */,
 			);
 			productName = "etcdWP (macOS)";
 			productReference = D021EFAF281F5AB700992294 /* etcdWP.app */;
@@ -1072,8 +1052,6 @@
 			);
 			mainGroup = D021EF9C281F5AB500992294;
 			packageReferences = (
-				D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */,
-				D021F091281FFA5E00992294 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D021F094281FFA7B00992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				D021F097281FFA8600992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				D021F09A281FFA9F00992294 /* XCRemoteSwiftPackageReference "PopupView" */,
@@ -1089,6 +1067,8 @@
 				4454E4C5284E4AED0075986A /* XCRemoteSwiftPackageReference "TextSourceful" */,
 				44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
 				44ADC8BA284F9331003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+				D04A38E9288BF9EC00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */,
+				D04A38EC288BF9FD00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -1210,7 +1190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02374642886E4E800BAF0B0 /* ETCDDrawerView.swift in Sources */,
 				D021F070281FF8E600992294 /* Button.swift in Sources */,
 				D021F048281FF8E600992294 /* ETCDEtcdOperationView.swift in Sources */,
 				D021F060281FF8E600992294 /* ETCDKVItemModel.swift in Sources */,
@@ -1221,12 +1200,10 @@
 				D021F066281FF8E600992294 /* AboutView.swift in Sources */,
 				D0690EC02837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */,
 				D021F054281FF8E600992294 /* ETCDUserListView.swift in Sources */,
-				D02374662886E55A00BAF0B0 /* ETCDDrawerCloseButton.swift in Sources */,
 				D021F038281FF8E600992294 /* ETCDHomeMainView.swift in Sources */,
 				D0690ECA2837D18D0010C8A3 /* ETCDKeyListContentPageView.swift in Sources */,
 				D021F04E281FF8E600992294 /* ETCDLeaseListView.swift in Sources */,
 				D021F056281FF8E600992294 /* NSTextView+.swift in Sources */,
-				D02374622886E24700BAF0B0 /* ETCDMenuDrawModel.swift in Sources */,
 				D021F028281FF8E600992294 /* CarouselItemlView.swift in Sources */,
 				D023746F2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift in Sources */,
 				D021F03E281FF8E600992294 /* ETCDTabarModel.swift in Sources */,
@@ -1236,7 +1213,6 @@
 				D021F068281FF8E600992294 /* AboutModel.swift in Sources */,
 				D021F06C281FF8E600992294 /* Content.swift in Sources */,
 				D0690EBC2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */,
-				D023746A2886E7E500BAF0B0 /* ETCDRootViewControllView.swift in Sources */,
 				D021F036281FF8E600992294 /* ETCDHomeContentView.swift in Sources */,
 				D021F044281FF8E600992294 /* TopToastView.swift in Sources */,
 				D021F058281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
@@ -1254,6 +1230,7 @@
 				D021F072281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,
 				D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */,
 				D0690EB62837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */,
+				D04A38E8288BF84C00361633 /* ETCDRootViewControllView.swift in Sources */,
 				D021F050281FF8E600992294 /* ETCDSheetView.swift in Sources */,
 				D021F076281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */,
@@ -1271,7 +1248,6 @@
 				D023746C2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
-				D02374682886E5B900BAF0B0 /* ETCDDrawerMenuButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,22 +1931,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jasudev/AxisTabView";
-			requirement = {
-				kind = exactVersion;
-				version = 0.5.1;
-			};
-		};
-		D021F091281FFA5E00992294 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jasudev/AxisTabView";
-			requirement = {
-				kind = exactVersion;
-				version = 0.5.1;
-			};
-		};
 		D021F094281FFA7B00992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
@@ -2035,6 +1995,22 @@
 				version = 1.0.1;
 			};
 		};
+		D04A38E9288BF9EC00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AxisTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
+		D04A38EC288BF9FD00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AxisTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 		D0FC0884282002D000A74D43 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -2085,16 +2061,6 @@
 			package = 44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
 		};
-		D021F08F281FFA5100992294 /* AxisTabView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */;
-			productName = AxisTabView;
-		};
-		D021F092281FFA5E00992294 /* AxisTabView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D021F08E281FFA5100992294 /* XCRemoteSwiftPackageReference "AxisTabView" */;
-			productName = AxisTabView;
-		};
 		D021F095281FFA7B00992294 /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D021F094281FFA7B00992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
@@ -2134,6 +2100,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D021F0A6281FFB2800992294 /* XCRemoteSwiftPackageReference "FilePicker" */;
 			productName = FilePicker;
+		};
+		D04A38EA288BF9EC00361633 /* AxisTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D04A38E9288BF9EC00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */;
+			productName = AxisTabView;
+		};
+		D04A38ED288BF9FD00361633 /* AxisTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D04A38E9288BF9EC00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */;
+			productName = AxisTabView;
 		};
 		D05C11D22879D32A00E3C197 /* FilePicker */ = {
 			isa = XCSwiftPackageProductDependency;

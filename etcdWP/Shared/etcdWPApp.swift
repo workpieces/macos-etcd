@@ -31,7 +31,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         print("Application Should Terminate After Last WindowClosed")
         return true
     }
-
+    
 }
 #else
 
@@ -40,7 +40,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
-      }
+    }
 }
 #endif
 
@@ -60,18 +60,20 @@ struct etcdWPApp: App {
     var body: some Scene {
         WindowGroup {
             Router {
-                #if os(macOS)
-                ETCDHomeContentView()
-                .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
-                #else
-                ETCDRootViewControllView()
-                #endif
-            }.environmentObject(homeData)
-            .ignoresSafeArea(.all,edges: .all)
-            .preferredColorScheme(.dark)
-        }
-  
 #if os(macOS)
+                ETCDHomeContentView()
+                    .frame(minWidth: screen.width/1.8, minHeight: screen.height/1.2)
+#else
+                ETCDRootViewControllView()
+#endif
+            }.environmentObject(homeData)
+#if os(macOS)
+                .ignoresSafeArea(.all,edges: .all)
+#endif
+                .preferredColorScheme(.dark)
+        }
+#if os(macOS)
+        
         .windowStyle(.hiddenTitleBar)
 #endif
         .commands {

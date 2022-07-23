@@ -15,9 +15,11 @@ struct AboutView: View {
                     .withDefaultNavagationTitle()
                 Spacer()
             }
+#if os(macOS)
             .padding(.top,NavagationPaddingHeight)
+#endif
             ZStack(alignment: .topLeading){
-                ScrollView(.vertical, showsIndicators: true) {
+                ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 1), alignment: .center, spacing: GriditemPaddingSpace) {
                         ForEach(abouts) { item in
                             ZStack {
