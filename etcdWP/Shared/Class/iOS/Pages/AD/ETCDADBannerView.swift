@@ -8,19 +8,16 @@
 import SwiftUI
 import GoogleMobileAds
 
+
 struct ETCDADBannerView: View {
     
-    @State var height: CGFloat = 0
+    @State var height: CGFloat
     
-    @State var width: CGFloat = 0
+    @State var width: CGFloat
     
     @State var adPosition: ETCDAdBannerPosition
     
     let adBannerId: String
-    public init(adPosition: ETCDAdBannerPosition, adBannerId: String) {
-        self.adPosition = adPosition
-        self.adBannerId = adBannerId
-    }
     public enum ETCDAdBannerPosition {
         case top
         case bottom
@@ -33,6 +30,7 @@ struct ETCDADBannerView: View {
             ETCDADBannerSubView(adBannerId:adBannerId)
                 .frame(width: width, height: height, alignment: .center)
                 .onAppear {
+                    
                     setFrame()
                 }
                 .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
@@ -43,6 +41,7 @@ struct ETCDADBannerView: View {
             }
         }
     }
+    
     func setFrame() {
         let safeAreaInsets = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.safeAreaInsets ?? .zero
         let frame = UIScreen.main.bounds.inset(by: safeAreaInsets)
@@ -54,8 +53,9 @@ struct ETCDADBannerView: View {
     }
 }
 
-class ETCDBannerAdViewController: UIViewController {
+class ETCDBannerAdViewController: UIViewController,GADBannerViewDelegate{
     let adBannerId: String
+    
     init(adBannerId: String) {
         self.adBannerId = adBannerId
         super.init(nibName: nil, bundle: nil)
@@ -87,15 +87,48 @@ class ETCDBannerAdViewController: UIViewController {
     func loadBannerAd() {
         let frame = view.frame.inset(by: view.safeAreaInsets)
         let viewWidth = frame.size.width
-        bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
-        bannerView.load(GADRequest())
+        bannerView.adSize = GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+        let adRequest = GADRequest()
+        bannerView.load(adRequest)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [GADSimulatorID]
     }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+  
+      }
+      // Called when an ad request failed.
+      func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: NSError) {
+     
+      }
+
+      // Called just before presenting the user a full screen view, such as a browser, in response to
+      // clicking on an ad.
+      func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+  
+      }
+
+      // Called just before dismissing a full screen view.
+      func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+
+      }
+
+      // Called just after dismissing a full screen view.
+      func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+
+      }
+
+      // Called just before the application will background or exit because the user clicked on an
+      // ad that will launch another application (such as the App Store).
+      func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+
+      }
 }
 
 struct ETCDADBannerSubView :UIViewControllerRepresentable {
 
     let adBannerId: String
-    
+
+
     init(adBannerId: String) {
         self.adBannerId = adBannerId
     }
@@ -104,7 +137,7 @@ struct ETCDADBannerSubView :UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: ETCDBannerAdViewController, context: Context) {
-        
+        uiViewController.loadBannerAd()
     }
     typealias UIViewControllerType = ETCDBannerAdViewController
 }

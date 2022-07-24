@@ -48,13 +48,19 @@ struct ETCDControlView: View {
                 .ignoresSafeArea()
             switch tag {
             case 1:
-                ETCDAboutViewControlleView()
-                    .padding()
-                    .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                ScrollView {
+                    ETCDAboutViewControlleView()
+                        .padding()
+                        .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                }
+            case 2:
+                ScrollView {
+                    ETCDPushController()
+                        .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                }
             default:
                 ScrollView {
-                    Text("text")
-                        .padding()
+                    ETCDHomeViewControlleView()
                         .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
                 }
             }

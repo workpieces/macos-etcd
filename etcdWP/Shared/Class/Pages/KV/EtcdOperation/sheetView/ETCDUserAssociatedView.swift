@@ -83,7 +83,9 @@ struct ETCDUserAssociatedItemView: View {
                 .padding(.leading,5)
                 .opacity(0.75)
             Toggle("关联"  , isOn: $choose)
+#if os(macOS)
                 .toggleStyle(.checkbox)
+#endif
                 .padding(.bottom,3)
                 .onChange(of: choose) { newValue in
                     if newValue {

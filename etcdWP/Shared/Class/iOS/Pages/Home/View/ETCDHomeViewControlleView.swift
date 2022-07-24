@@ -9,19 +9,6 @@ import SwiftUI
 import SwiftUIRouter
 
 struct ETCDHomeViewControlleView: View {
-    var body: some View {
-        SwitchRoutes {
-            Route("create/*") {
-                ETCDConfigView()
-            }
-            Route(content: ETCDHomeContentItemView())
-        }
-    }
-}
-
-
-
-struct ETCDHomeViewiPhoneContentView: View {
     
     @EnvironmentObject var homeData: HomeViewModel
     let closePublisher = NotificationCenter.default.publisher(for: UIApplication.willTerminateNotification)
@@ -29,11 +16,9 @@ struct ETCDHomeViewiPhoneContentView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Spacer()
-
-            }.padding(.trailing,18)
-            
+            ETCDADBannerTipView()
+                .padding(.leading,15)
+                .padding(.top,20)
             List(self.homeData.ectdClientList.indices,id: \.self) { index in
                 CardItemView(options:homeData.ectdClientList[index],idx: index)
             } .onReceive(timer, perform: {_ in
@@ -53,3 +38,6 @@ struct ETCDHomeViewiPhoneContentView: View {
         }
     }
 }
+
+
+

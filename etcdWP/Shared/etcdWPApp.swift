@@ -39,7 +39,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        GADMobileAds.sharedInstance().start { status in
+            print("GADMODEL = \(status)")
+        }
         
         ETCDReachabilityManage.mannger.netWorkReachability { stats in
             print("stats---------\(stats)")
