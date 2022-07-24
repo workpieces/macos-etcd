@@ -14,14 +14,10 @@ struct ETCDPushController: View {
     var body: some View {
         VStack {            
             Form {
-                UserConfigFormView(config: config)
-                ClusterNetworkConfigFormView(config: config)
-                ClusterTimeConfigFormView(config: config)
-                OtherConfigFormView(config: config)
+                ETCDUserConfigFormView(config: config)
             }
             .padding(.leading,44)
             .padding(.trailing ,44)
-            .padding(.bottom,44.0)
             
             HStack(spacing: 44.0) {
                 VStack{
@@ -74,8 +70,6 @@ struct ETCDPushController: View {
                     }
                 }
             }
-            
-            Spacer()
         }
         .popup(isPresented: $isToast, type: .toast, position: .top, animation: .spring(), autohideIn: 2) {
             TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
