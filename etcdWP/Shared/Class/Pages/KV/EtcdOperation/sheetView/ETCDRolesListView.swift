@@ -138,7 +138,7 @@ extension ETCDRolesListView {
                         .font(.system(size: 12))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
-                }.padding(10)
+                }
             }
         }
         

@@ -27,10 +27,29 @@ struct ETCDKeyValue: Codable {
     }
 }
 
-struct KVData: Codable, Identifiable,CustomStringConvertible{
+
+struct KVDataRoles:Codable, Identifiable,CustomStringConvertible,Equatable{
+    var id = UUID()
+    var description: String = UUID().uuidString
+    
+    let role: String?
+    // roles list
+    let link: Bool
+    enum CodingKeys: String, CodingKey {
+        case link
+        case role
+    }
+    static func == (lhs: Self, rhs: Self) -> Bool{
+        lhs.id == rhs.id
+    }
+}
+
+
+
+struct KVData: Codable, Identifiable,CustomStringConvertible,Equatable{
     var description: String = UUID().uuidString
     var id = UUID()
-    
+    var seletcd:Bool = false
     // ttlid is lease id.
     let ttlid : Int64?
     // lease ttl default time to expire.
@@ -62,6 +81,9 @@ struct KVData: Codable, Identifiable,CustomStringConvertible{
     let members: KVMember?
     // roles list
     let role: String?
+    // roles list
+    let roles: [String]?
+    let roles_status: [KVDataRoles]?
     // user list
     let user: String?
     // children list.
@@ -82,9 +104,15 @@ struct KVData: Codable, Identifiable,CustomStringConvertible{
         case status
         case members
         case role
+        case roles
         case user
         case children
+        case roles_status
     }
+    static func == (lhs: Self, rhs: Self) -> Bool{
+        lhs.id == rhs.id
+    }
+    
 }
 
 struct KVStatus: Codable, Identifiable {
