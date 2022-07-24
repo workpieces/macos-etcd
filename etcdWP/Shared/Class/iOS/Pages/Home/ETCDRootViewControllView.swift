@@ -56,7 +56,7 @@ struct ETCDControlView: View {
                     ScrollView {
                         ETCDAboutViewControlleView()
                             .padding()
-                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom+20)
                     }
                 }
             case 2:
