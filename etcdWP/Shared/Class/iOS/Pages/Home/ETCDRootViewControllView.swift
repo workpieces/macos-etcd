@@ -48,20 +48,39 @@ struct ETCDControlView: View {
                 .ignoresSafeArea()
             switch tag {
             case 1:
-                ScrollView {
-                    ETCDAboutViewControlleView()
-                        .padding()
-                        .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                VStack{
+                    HStack{
+                        Text(LocalizedStringKey("About"))
+                            .withDefaultContentTitle(fontSize: 30.0)
+                    }.frame(height: 44)
+                    ScrollView {
+                        ETCDAboutViewControlleView()
+                            .padding()
+                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                    }
                 }
             case 2:
-                ScrollView {
-                    ETCDPushController()
-                        .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                VStack{
+                    HStack{
+                        Text(LocalizedStringKey("通用设置"))
+                            .withDefaultContentTitle(fontSize: 30.0)
+                    }.frame(height: 44)
+                    ScrollView {
+                        ETCDPushController()
+                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                    }
                 }
+                
             default:
-                ScrollView {
-                    ETCDHomeViewControlleView()
-                        .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                VStack{
+                    HStack{
+                        Text(LocalizedStringKey("Home"))
+                            .withDefaultContentTitle(fontSize: 30.0)
+                    }.frame(height: 44)
+                    ScrollView {
+                        ETCDHomeViewControlleView()
+                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                    }
                 }
             }
         }

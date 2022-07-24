@@ -10,8 +10,8 @@ import SwiftUI
 struct ETCDADBannerTipView: View {
     var body: some View {
         GeometryReader(content: { geometry in
-        ETCDADBannerView(height:50,width:geometry.size.width - 20,adPosition: .top,adBannerId:adBannderID)
-                .frame(width:geometry.size.width-20,height: 50,alignment: .center)
+        ETCDADBannerView(height:60,width:geometry.size.width - 20,adPosition: .top,adBannerId:adBannderID)
+                .frame(width:geometry.size.width-20,height: 60,alignment: .center)
             .cornerRadius(10)
         })
     }
