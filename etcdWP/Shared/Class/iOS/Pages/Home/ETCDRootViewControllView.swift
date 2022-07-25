@@ -42,47 +42,45 @@ struct ETCDControlView: View {
     let systemName: String
     let safeArea: EdgeInsets
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color(hex:"#262626"))
-                .ignoresSafeArea()
-            switch tag {
-            case 1:
-                VStack{
-                    HStack{
-                        Text(LocalizedStringKey("About"))
-                            .withDefaultContentTitle(fontSize: 30.0)
-                    }.frame(height: 44)
-                    ScrollView {
-                        ETCDAboutViewControlleView()
-                            .padding()
-                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom+20)
+        GeometryReader { proxy in
+            ZStack {
+                switch tag {
+                case 1:
+                    VStack{
+                        HStack{
+                            Text(LocalizedStringKey("About"))
+                                .withDefaultContentTitle(fontSize: 30.0)
+                        }.frame(height: 44)
+                        ScrollView {
+                            ETCDAboutViewControlleView()
+                                .padding()
+                                .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom+20)
+                        }
                     }
-                }
-            case 2:
-                VStack{
-                    HStack{
+                case 2:
+                    VStack{
                         Text(LocalizedStringKey("通用设置"))
-                            .withDefaultContentTitle(fontSize: 30.0)
-                    }.frame(height: 44)
-                    ScrollView {
-                        ETCDPushController()
-                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                            .withDefaultContentTitle(fontSize: 30.0).frame(height: 44)
+                        ScrollView {
+                            ETCDPushController()
+                                .frame(height: proxy.size.height)
+                                .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                        }
+                    }
+                    
+                default:
+                    VStack{
+                        HStack{
+                            Text(LocalizedStringKey("Home"))
+                                .withDefaultContentTitle(fontSize: 30.0)
+                        }.frame(height: 44)
+                        ScrollView {
+                            ETCDHomeViewControlleView()
+                                .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
+                        }
                     }
                 }
-                
-            default:
-                VStack{
-                    HStack{
-                        Text(LocalizedStringKey("Home"))
-                            .withDefaultContentTitle(fontSize: 30.0)
-                    }.frame(height: 44)
-                    ScrollView {
-                        ETCDHomeViewControlleView()
-                            .padding(.bottom,constant.tab.normalSize.height + safeArea.bottom)
-                    }
-                }
-            }
+            }.background(Color(hex: "#262626").ignoresSafeArea())
         }
         .tabItem(tag: tag, normal: {
             ETCDTabButton(selection: $selection, tag: tag, isSelection: false, systemName: systemName,name: name,constant: $constant)
