@@ -18,7 +18,7 @@ struct ETCDRootViewControllView: View {
             } content: {
                 
                 ETCDTabBarContenView(constant:constant,name: "Home",  systemName: "house",tag: 0, safeArea: proxy.safeAreaInsets, content: {
-                    SwiftUILearningCapacityHomeController()
+                    ETCDHomeController()
                 })
                 
                 ETCDTabBarContenView(constant:constant,  systemName: "plus.circle.fill",tag:  2, safeArea: proxy.safeAreaInsets, content: {

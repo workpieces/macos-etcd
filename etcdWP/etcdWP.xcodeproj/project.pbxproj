@@ -150,7 +150,7 @@
 		D06B2EB728941529007DA616 /* ETCDOtherConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB228941529007DA616 /* ETCDOtherConfigFormView.swift */; };
 		D06B2EB828941529007DA616 /* ETCDNetworkConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB328941529007DA616 /* ETCDNetworkConfigFormView.swift */; };
 		D06B2EB928941529007DA616 /* ETCDUserConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB428941529007DA616 /* ETCDUserConfigFormView.swift */; };
-		D06B2EBB2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBA2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift */; };
+		D06B2EBB2894159B007DA616 /* ETCDHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBA2894159B007DA616 /* ETCDHomeController.swift */; };
 		D06B2EBD28941604007DA616 /* ETCDiPhoneAboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBC28941604007DA616 /* ETCDiPhoneAboutController.swift */; };
 		D06B2EBF28941652007DA616 /* ETCDView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBE28941652007DA616 /* ETCDView+.swift */; };
 		D08CC82B287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */; };
@@ -288,7 +288,7 @@
 		D06B2EB228941529007DA616 /* ETCDOtherConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDOtherConfigFormView.swift; sourceTree = "<group>"; };
 		D06B2EB328941529007DA616 /* ETCDNetworkConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDNetworkConfigFormView.swift; sourceTree = "<group>"; };
 		D06B2EB428941529007DA616 /* ETCDUserConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDUserConfigFormView.swift; sourceTree = "<group>"; };
-		D06B2EBA2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUILearningCapacityHomeController.swift; sourceTree = "<group>"; };
+		D06B2EBA2894159B007DA616 /* ETCDHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDHomeController.swift; sourceTree = "<group>"; };
 		D06B2EBC28941604007DA616 /* ETCDiPhoneAboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDiPhoneAboutController.swift; sourceTree = "<group>"; };
 		D06B2EBE28941652007DA616 /* ETCDView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ETCDView+.swift"; sourceTree = "<group>"; };
 		D06C172B283A82720033CBD9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -841,7 +841,7 @@
 		D023745D2886E1E600BAF0B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D06B2EBA2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift */,
+				D06B2EBA2894159B007DA616 /* ETCDHomeController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1287,7 +1287,7 @@
 				D021F036281FF8E600992294 /* ETCDHomeContentView.swift in Sources */,
 				D021F044281FF8E600992294 /* TopToastView.swift in Sources */,
 				D021F058281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
-				D06B2EBB2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift in Sources */,
+				D06B2EBB2894159B007DA616 /* ETCDHomeController.swift in Sources */,
 				D0690EC32837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */,
 				44AD32802850EF4600B66261 /* LocalizedStringKey+.swift in Sources */,
 				D021F040281FF8E600992294 /* ETCDConfigModel.swift in Sources */,

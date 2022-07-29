@@ -1,13 +1,13 @@
 //
-//  SwiftUILearningCapacityHomeController.swift
-//  SwiftUILearningCapacity_All (iOS)
+//  ETCDHomeController.swift
+//  etcdWP (iOS)
 //
 //  Created by FaceBook on 2022/7/27.
 //
 
 import SwiftUI
 
-struct SwiftUILearningCapacityHomeController: View {
+struct ETCDHomeController: View {
     var body: some View {
         GeometryReader { proxy in
             ZStack{
@@ -53,6 +53,6 @@ struct SwiftUILearningCapacityHomeController: View {
 
 struct SwiftUILearningCapacityHomeController_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUILearningCapacityHomeController()
+        ETCDHomeController()
     }
 }
