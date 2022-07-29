@@ -14,7 +14,7 @@ struct ETCDRootViewControllView: View {
     var body: some View {
         GeometryReader { proxy in
             AxisTabView(selection: $selection, constant: constant) { state in
-                SwiftUILearningCapacityTabBarCustomCenterStyle(state, color: Color(hex:"#262626"), radius: 70, depth: 0.85)
+                ETCDTabBarCustomCenterStyle(state, color: Color(hex:"#262626"), radius: 70, depth: 0.85)
             } content: {
                 
                 ETCDTabBarContenView(constant:constant,name: "Home",  systemName: "house",tag: 0, safeArea: proxy.safeAreaInsets, content: {

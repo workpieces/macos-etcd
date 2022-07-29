@@ -20,7 +20,7 @@ struct ETCDHomeController: View {
                             .padding(10)
                             .frame(width: 45, height: 45)
                         Spacer()
-                        Text("study swiftui ")
+                        Text("Services")
                             .font(.title)
                             .fontWeight(.semibold)
                         Spacer()
@@ -32,6 +32,9 @@ struct ETCDHomeController: View {
                             .frame(width: 45, height: 45)
                     }.frame(height:proxy.safeAreaInsets.top)
                     ScrollView(showsIndicators:false){
+                        ETCDADBannerTipView()
+                            .frame( height: proxy.safeAreaInsets.top)
+                            .padding(.bottom,15)
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],spacing: 5){
                             ForEach(0 ..< 100){ idx in
                                 RoundedRectangle(cornerRadius: 5)
@@ -39,6 +42,9 @@ struct ETCDHomeController: View {
                                 .frame(height: 120)
                             }
                         }
+                        ETCDADBannerTipView()
+                            .frame(height: proxy.safeAreaInsets.top)
+                            .padding(.bottom,40)
                     }
                     .padding(.trailing,10)
                     .padding(.leading,10)

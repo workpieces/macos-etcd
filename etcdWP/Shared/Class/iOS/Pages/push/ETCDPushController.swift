@@ -66,6 +66,8 @@ struct ETCDPushController: View {
                     }.frame(height:proxy.safeAreaInsets.top)
                     
                     List{
+                        ETCDADBannerTipView()
+                            .padding(.bottom,40)
                         ETCDUserConfigFormView()
                             .padding(.bottom,20)
                             .padding(.leading,10)
@@ -88,6 +90,8 @@ struct ETCDPushController: View {
                             .padding(.bottom,20)
                             .padding(.leading,10)
                             .padding(.trailing,10)
+                        ETCDADBannerTipView()
+                            .padding(.bottom,40)
                     }
                 }
                 

@@ -42,7 +42,7 @@ struct ETCDTabBarItemView: View {
 }
 
 
-struct SwiftUILearningCapacityTabBarCustomCenterStyle: ATBackgroundStyle {
+struct ETCDTabBarCustomCenterStyle: ATBackgroundStyle {
     public var state: ATTabState
     public var color: Color = Color(hex:"#262626")
     public var radius: CGFloat = 80
