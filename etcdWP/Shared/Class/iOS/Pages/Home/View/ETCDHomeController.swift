@@ -84,9 +84,12 @@ struct ETCDHomeController: View {
                                 CardItemView(options:homeData.ectdClientList[index],idx: index)
                             }
                         }
-                        ETCDADBannerTipView()
-                            .frame(height: proxy.safeAreaInsets.top)
-                            .padding(.bottom,40)
+                        if(self.homeData.ectdClientList.count >= 5){
+                            ETCDADBannerTipView()
+                                .frame(height: proxy.safeAreaInsets.top)
+                                .padding(.bottom,40)
+                        }
+
                     }
                     .padding(.trailing,10)
                     .padding(.leading,10)
