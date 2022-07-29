@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 4454E4C6284E4AED0075986A /* TextSourceful */; };
 		445CC0AB288D80B100CFF065 /* ETCDADBannerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445CC0AA288D80B100CFF065 /* ETCDADBannerTipView.swift */; };
-		445CC0AE288D840500CFF065 /* ETCDPushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445CC0AD288D840500CFF065 /* ETCDPushController.swift */; };
-		445CC0B0288D8D3400CFF065 /* ETCDUserConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445CC0AF288D8D3400CFF065 /* ETCDUserConfigFormView.swift */; };
 		44AD32802850EF4600B66261 /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */; };
 		44AD32812850EF4600B66261 /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */; };
 		44AD32832850EF5A00B66261 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD32822850EF5A00B66261 /* View+.swift */; };
@@ -115,9 +113,6 @@
 		D021F0AB281FFB3400992294 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D021F0AA281FFB3400992294 /* FilePicker */; };
 		D021F0AD281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
 		D021F0AE281FFC0F00992294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F0AC281FFC0F00992294 /* Assets.xcassets */; };
-		D023746C2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */; };
-		D023746F2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */; };
-		D04A38E8288BF84C00361633 /* ETCDRootViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */; };
 		D04A38EB288BF9EC00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38EA288BF9EC00361633 /* AxisTabView */; };
 		D04A38EE288BF9FD00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38ED288BF9FD00361633 /* AxisTabView */; };
 		D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */; };
@@ -147,6 +142,17 @@
 		D0690ED42837D7050010C8A3 /* ETCDKeyListContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED22837D7050010C8A3 /* ETCDKeyListContentListView.swift */; };
 		D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
 		D0690ED72837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */; };
+		D06B2EAD2894151B007DA616 /* ETCDRootViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EAA2894151B007DA616 /* ETCDRootViewControllView.swift */; };
+		D06B2EAE2894151B007DA616 /* ETCDTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EAB2894151B007DA616 /* ETCDTabBarItemView.swift */; };
+		D06B2EAF2894151B007DA616 /* ETCDTabBarContenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EAC2894151B007DA616 /* ETCDTabBarContenView.swift */; };
+		D06B2EB528941529007DA616 /* ETCDPushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB028941529007DA616 /* ETCDPushController.swift */; };
+		D06B2EB628941529007DA616 /* ETCDClusterNetworkConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB128941529007DA616 /* ETCDClusterNetworkConfigFormView.swift */; };
+		D06B2EB728941529007DA616 /* ETCDOtherConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB228941529007DA616 /* ETCDOtherConfigFormView.swift */; };
+		D06B2EB828941529007DA616 /* ETCDNetworkConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB328941529007DA616 /* ETCDNetworkConfigFormView.swift */; };
+		D06B2EB928941529007DA616 /* ETCDUserConfigFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EB428941529007DA616 /* ETCDUserConfigFormView.swift */; };
+		D06B2EBB2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBA2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift */; };
+		D06B2EBD28941604007DA616 /* ETCDiPhoneAboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBC28941604007DA616 /* ETCDiPhoneAboutController.swift */; };
+		D06B2EBF28941652007DA616 /* ETCDView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBE28941652007DA616 /* ETCDView+.swift */; };
 		D08CC82B287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */; };
 		D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D091D0D428791C9C00DDD095 /* MacosEtcd.framework */; };
 		D091D0D72879264200DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
@@ -182,8 +188,6 @@
 		07474CCF146505889AE12416 /* Pods-etcdWP (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (macOS).release.xcconfig"; path = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		124093C1360280498D7ABBD1 /* Pods-etcdWP (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (macOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		445CC0AA288D80B100CFF065 /* ETCDADBannerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerTipView.swift; sourceTree = "<group>"; };
-		445CC0AD288D840500CFF065 /* ETCDPushController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDPushController.swift; sourceTree = "<group>"; };
-		445CC0AF288D8D3400CFF065 /* ETCDUserConfigFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserConfigFormView.swift; sourceTree = "<group>"; };
 		44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
 		44AD32822850EF5A00B66261 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -247,8 +251,6 @@
 		D021F022281FF8E600992294 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D021F023281FF8E600992294 /* OpenPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPan.swift; sourceTree = "<group>"; };
 		D021F0AC281FFC0F00992294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeViewControlleView.swift; sourceTree = "<group>"; };
-		D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDAboutViewControlleView.swift; sourceTree = "<group>"; };
 		D02C9CE92847097C001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D02C9CEA2847097D001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CEB2847097D001B838A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ko; path = ko.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -264,7 +266,6 @@
 		D02C9CF528471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D02C9CF628471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDRootViewControllView.swift; sourceTree = "<group>"; };
 		D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerView.swift; sourceTree = "<group>"; };
 		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
@@ -279,6 +280,17 @@
 		D0690ECF2837D5A90010C8A3 /* ETCDKeyListContentHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyListContentHeadView.swift; sourceTree = "<group>"; };
 		D0690ED22837D7050010C8A3 /* ETCDKeyListContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyListContentListView.swift; sourceTree = "<group>"; };
 		D0690ED52837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyListContentTreeListView.swift; sourceTree = "<group>"; };
+		D06B2EAA2894151B007DA616 /* ETCDRootViewControllView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDRootViewControllView.swift; sourceTree = "<group>"; };
+		D06B2EAB2894151B007DA616 /* ETCDTabBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarItemView.swift; sourceTree = "<group>"; };
+		D06B2EAC2894151B007DA616 /* ETCDTabBarContenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDTabBarContenView.swift; sourceTree = "<group>"; };
+		D06B2EB028941529007DA616 /* ETCDPushController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDPushController.swift; sourceTree = "<group>"; };
+		D06B2EB128941529007DA616 /* ETCDClusterNetworkConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDClusterNetworkConfigFormView.swift; sourceTree = "<group>"; };
+		D06B2EB228941529007DA616 /* ETCDOtherConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDOtherConfigFormView.swift; sourceTree = "<group>"; };
+		D06B2EB328941529007DA616 /* ETCDNetworkConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDNetworkConfigFormView.swift; sourceTree = "<group>"; };
+		D06B2EB428941529007DA616 /* ETCDUserConfigFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDUserConfigFormView.swift; sourceTree = "<group>"; };
+		D06B2EBA2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUILearningCapacityHomeController.swift; sourceTree = "<group>"; };
+		D06B2EBC28941604007DA616 /* ETCDiPhoneAboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDiPhoneAboutController.swift; sourceTree = "<group>"; };
+		D06B2EBE28941652007DA616 /* ETCDView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ETCDView+.swift"; sourceTree = "<group>"; };
 		D06C172B283A82720033CBD9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D06C172C283A82720033CBD9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D06C172D283A82720033CBD9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ja; path = ja.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -462,8 +474,11 @@
 		445CC0AC288D83EE00CFF065 /* push */ = {
 			isa = PBXGroup;
 			children = (
-				445CC0AD288D840500CFF065 /* ETCDPushController.swift */,
-				445CC0AF288D8D3400CFF065 /* ETCDUserConfigFormView.swift */,
+				D06B2EB128941529007DA616 /* ETCDClusterNetworkConfigFormView.swift */,
+				D06B2EB328941529007DA616 /* ETCDNetworkConfigFormView.swift */,
+				D06B2EB228941529007DA616 /* ETCDOtherConfigFormView.swift */,
+				D06B2EB028941529007DA616 /* ETCDPushController.swift */,
+				D06B2EB428941529007DA616 /* ETCDUserConfigFormView.swift */,
 			);
 			path = push;
 			sourceTree = "<group>";
@@ -496,6 +511,7 @@
 		44D2BA42288C3EA700151AD7 /* until */ = {
 			isa = PBXGroup;
 			children = (
+				D06B2EBE28941652007DA616 /* ETCDView+.swift */,
 				44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */,
 			);
 			path = until;
@@ -794,6 +810,7 @@
 		D023745A2886E1E600BAF0B0 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D06B2EA92894151B007DA616 /* Root */,
 				445CC0AC288D83EE00CFF065 /* push */,
 				44D2BA42288C3EA700151AD7 /* until */,
 				D05645CA288C0C9700911761 /* AD */,
@@ -810,7 +827,6 @@
 			children = (
 				D023745C2886E1E600BAF0B0 /* Model */,
 				D023745D2886E1E600BAF0B0 /* View */,
-				D04A38E7288BF84C00361633 /* ETCDRootViewControllView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -825,7 +841,7 @@
 		D023745D2886E1E600BAF0B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D023746B2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift */,
+				D06B2EBA2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -847,7 +863,7 @@
 		D023746D2886E89200BAF0B0 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				D023746E2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift */,
+				D06B2EBC28941604007DA616 /* ETCDiPhoneAboutController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -909,6 +925,16 @@
 				D0690EC62837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift */,
 			);
 			path = ETCDKVTabBarContentHeadView;
+			sourceTree = "<group>";
+		};
+		D06B2EA92894151B007DA616 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D06B2EAA2894151B007DA616 /* ETCDRootViewControllView.swift */,
+				D06B2EAB2894151B007DA616 /* ETCDTabBarItemView.swift */,
+				D06B2EAC2894151B007DA616 /* ETCDTabBarContenView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1230,33 +1256,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				D021F070281FF8E600992294 /* Button.swift in Sources */,
+				D06B2EAF2894151B007DA616 /* ETCDTabBarContenView.swift in Sources */,
 				D021F048281FF8E600992294 /* ETCDEtcdOperationView.swift in Sources */,
+				D06B2EBD28941604007DA616 /* ETCDiPhoneAboutController.swift in Sources */,
 				D021F060281FF8E600992294 /* ETCDKVItemModel.swift in Sources */,
 				D021F04C281FF8E600992294 /* ETCDRolesListView.swift in Sources */,
 				D0690ECD2837D2DF0010C8A3 /* ETCDKeyContentMembersListView.swift in Sources */,
 				D021F052281FF8E600992294 /* ETCDKeyValueActionsView.swift in Sources */,
 				D021F074281FF8E600992294 /* Constant.swift in Sources */,
 				D021F066281FF8E600992294 /* AboutView.swift in Sources */,
+				D06B2EB728941529007DA616 /* ETCDOtherConfigFormView.swift in Sources */,
 				D0690EC02837CD690010C8A3 /* ETCDKeyListContentView.swift in Sources */,
 				D021F038281FF8E600992294 /* ETCDHomeMainView.swift in Sources */,
 				D0690ECA2837D18D0010C8A3 /* ETCDKeyListContentPageView.swift in Sources */,
+				D06B2EB828941529007DA616 /* ETCDNetworkConfigFormView.swift in Sources */,
 				D021F04E281FF8E600992294 /* ETCDLeaseListView.swift in Sources */,
-				445CC0B0288D8D3400CFF065 /* ETCDUserConfigFormView.swift in Sources */,
 				445CC0AB288D80B100CFF065 /* ETCDADBannerTipView.swift in Sources */,
 				D021F056281FF8E600992294 /* NSTextView+.swift in Sources */,
 				D021F028281FF8E600992294 /* CarouselItemlView.swift in Sources */,
-				D023746F2886E8A100BAF0B0 /* ETCDAboutViewControlleView.swift in Sources */,
+				D06B2EAE2894151B007DA616 /* ETCDTabBarItemView.swift in Sources */,
 				D021F03E281FF8E600992294 /* ETCDTabarModel.swift in Sources */,
+				D06B2EB528941529007DA616 /* ETCDPushController.swift in Sources */,
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
 				D021F05E281FF8E600992294 /* ETCDRoleModel.swift in Sources */,
+				D06B2EB628941529007DA616 /* ETCDClusterNetworkConfigFormView.swift in Sources */,
 				D021F04A281FF8E600992294 /* ETCDKeyPrefixView.swift in Sources */,
 				D021F068281FF8E600992294 /* AboutModel.swift in Sources */,
-				445CC0AE288D840500CFF065 /* ETCDPushController.swift in Sources */,
 				D021F06C281FF8E600992294 /* Content.swift in Sources */,
 				D0690EBC2837CD090010C8A3 /* ETCDKVLogsContentView.swift in Sources */,
 				D021F036281FF8E600992294 /* ETCDHomeContentView.swift in Sources */,
 				D021F044281FF8E600992294 /* TopToastView.swift in Sources */,
 				D021F058281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
+				D06B2EBB2894159B007DA616 /* SwiftUILearningCapacityHomeController.swift in Sources */,
 				D0690EC32837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */,
 				44AD32802850EF4600B66261 /* LocalizedStringKey+.swift in Sources */,
 				D021F040281FF8E600992294 /* ETCDConfigModel.swift in Sources */,
@@ -1271,12 +1302,13 @@
 				D021F072281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,
 				D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */,
 				D0690EB62837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */,
-				D04A38E8288BF84C00361633 /* ETCDRootViewControllView.swift in Sources */,
+				D06B2EBF28941652007DA616 /* ETCDView+.swift in Sources */,
 				D021F050281FF8E600992294 /* ETCDSheetView.swift in Sources */,
 				44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */,
 				D021F076281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */,
 				D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */,
+				D06B2EB928941529007DA616 /* ETCDUserConfigFormView.swift in Sources */,
 				44AF00C5288CD7DD004D274B /* ETCDUserAssociatedView.swift in Sources */,
 				44AF00C4288CD788004D274B /* ETCDUserListView.swift in Sources */,
 				D021F034281FF8E600992294 /* ETCDConfigView.swift in Sources */,
@@ -1286,10 +1318,10 @@
 				D0690ED32837D7050010C8A3 /* ETCDKeyListContentListView.swift in Sources */,
 				D021F02A281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F046281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
+				D06B2EAD2894151B007DA616 /* ETCDRootViewControllView.swift in Sources */,
 				D021F062281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
-				D023746C2886E86D00BAF0B0 /* ETCDHomeViewControlleView.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
 			);

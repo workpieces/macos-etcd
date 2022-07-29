@@ -39,13 +39,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        GADMobileAds.sharedInstance().start { status in
-            print("GADMODEL = \(status)")
-        }
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         ETCDReachabilityManage.mannger.netWorkReachability { stats in
-            print("stats---------\(stats)")
+   
         }
         return true
     }
@@ -79,6 +76,7 @@ struct etcdWPApp: App {
                 .ignoresSafeArea(.all,edges: .all)
 #endif
                 .preferredColorScheme(.dark)
+                 .background(Color(hex:"#262626").ignoresSafeArea())
         }
 #if os(macOS)
         
