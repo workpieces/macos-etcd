@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
@@ -26,6 +27,8 @@ extension UIColor {
 }
 
 struct ETCDPushController: View {
+    @EnvironmentObject var homeData: HomeViewModel
+    @StateObject private var config = ETCDConfigModel()
     @State private var isToast = false
      var callHander : () -> ()
     init(callHander:@escaping () -> Void) {
@@ -60,7 +63,27 @@ struct ETCDPushController: View {
                             .background(Color(hex:"#00FFFF").opacity(0.75))
                             .cornerRadius(10.0)
                             .onTapGesture {
-                                callHander()
+                                let etcdClient  =   EtcdClientOption.init(id: config.id, endpoints: config.endpoints, clientName: config.clientName, username: config.username, password: config.password, certFile: config.certFile, keyFile: config.keyFile, caFile: config.caFile,
+                                                                          requestTimeout: config.requestTimeout,
+                                                                          dialTimeout: config.dialTimeout, dialKeepAliveTime: config.dialKeepAliveTime,
+                                                                          dialKeepAliveTimeout: config.dialKeepAliveTimeout,
+                                                                          autoSyncInterval: config.autoSyncInterval,
+                                                                          autoPing: config.autoPing,
+                                                                          autoName: config.autoName,
+                                                                          autoSession: config.autoSession,
+                                                                          autoConnect: config.autoConnect,
+                                                                          createAt: config.createAt,
+                                                                          updateAt: config.updateAt,
+                                                                          status: config.status,
+                                                                          etcdClient: config.etcdClient,
+                                                                          checked: config.checked)
+                                do{
+                                    try self.homeData.Register(item: etcdClient)
+                                    self.homeData.Append(data: etcdClient)
+                                    callHander()
+                                }catch let error  as  NSError {
+                                    self.isToast.toggle()
+                                }
                             }
                         Divider().frame(width: 15)
                     }.frame(height:proxy.safeAreaInsets.top)
@@ -68,25 +91,25 @@ struct ETCDPushController: View {
                     List{
                         ETCDADBannerTipView()
                             .padding(.bottom,40)
-                        ETCDUserConfigFormView()
+                        ETCDUserConfigFormView(config: config)
                             .padding(.bottom,20)
                             .padding(.leading,10)
                             .padding(.trailing,10)
                             .onTapGesture {
                                 dissmissKeybord()
                             }
-                        ETCDNetworkConfigFormView()
+                        ETCDNetworkConfigFormView(config: config)
                             .padding(.bottom,20)
                             .padding(.leading,10)
                             .padding(.trailing,10)
-                        ETCDClusterNetworkConfigFormView()
+                        ETCDClusterNetworkConfigFormView(config: config)
                             .padding(.bottom,20)
                             .padding(.leading,10)
                             .padding(.trailing,10)
                             .onTapGesture {
                                 dissmissKeybord()
                             }
-                        ETCDOtherConfigFormView()
+                        ETCDOtherConfigFormView(config: config)
                             .padding(.bottom,20)
                             .padding(.leading,10)
                             .padding(.trailing,10)
@@ -96,6 +119,8 @@ struct ETCDPushController: View {
                 }
                 
             }
+        }.popup(isPresented: $isToast, type: .toast, position: .top, animation: .spring(), autohideIn: 2) {
+            TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
         }
         
     }

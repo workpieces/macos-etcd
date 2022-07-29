@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ETCDClusterNetworkConfigFormView: View {
     
+    @StateObject var config : ETCDConfigModel
+    
     @State var requestTimeout:Int = 5
     @State var dialTimeout:Int = 5
     @State var dialKeepAliveTime:Int = 5
@@ -21,7 +23,7 @@ struct ETCDClusterNetworkConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("Request Timeout：",value:$requestTimeout, formatter: NumberFormatter())
+                TextField("Request Timeout：",value:$config.requestTimeout, formatter: NumberFormatter())
                     .font(.system(size: 18))
                     .padding(.top,8)
             }
@@ -31,7 +33,7 @@ struct ETCDClusterNetworkConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("Dial Timeout：",value:$dialTimeout, formatter: NumberFormatter())
+                TextField("Dial Timeout：",value:$config.dialTimeout, formatter: NumberFormatter())
                     .font(.system(size: 18))
                     .padding(.top,8)
                 
@@ -41,7 +43,7 @@ struct ETCDClusterNetworkConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("Dial Keep Alive Time：",value:$dialKeepAliveTime, formatter: NumberFormatter())
+                TextField("Dial Keep Alive Time：",value:$config.dialKeepAliveTime, formatter: NumberFormatter())
                     .font(.system(size: 18))
                     .padding(.top,8)
                 
@@ -51,7 +53,7 @@ struct ETCDClusterNetworkConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("Dial Keep Alive Timeout：",value:$dialKeepAliveTime, formatter: NumberFormatter())
+                TextField("Dial Keep Alive Timeout：",value:$config.dialKeepAliveTimeout, formatter: NumberFormatter())
                     .font(.system(size: 18))
                     .padding(.top,8)
                 
@@ -61,10 +63,9 @@ struct ETCDClusterNetworkConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("Auto Sync Interval：",value:$autoSyncInterval, formatter: NumberFormatter())
+                TextField("Auto Sync Interval：",value:$config.autoSyncInterval, formatter: NumberFormatter())
                     .font(.system(size: 18))
                     .padding(.top,8)
-                
             }
             
         }

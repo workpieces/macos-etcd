@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct ETCDUserConfigFormView: View {
-    @State var clientName:String = ""
-    @State var username:String = ""
-    @State var password:String = ""
-    
+    @StateObject var config : ETCDConfigModel
     var textFieldBorder: some View {
            RoundedRectangle(cornerRadius: 5)
             .stroke(Color.white, lineWidth: 0.5)
@@ -23,7 +20,7 @@ struct ETCDUserConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("Client Name：", text:$clientName)
+                TextField("Client Name：", text: $config.clientName)
                     .font(.system(size: 18))
                     .padding(.top,8)
             }
@@ -33,7 +30,7 @@ struct ETCDUserConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                TextField("User Name：", text:$username)
+                TextField("User Name：", text:$config.username)
                     .font(.system(size: 18))
                     .padding(.top,8)
             }
@@ -42,7 +39,7 @@ struct ETCDUserConfigFormView: View {
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .padding(.top,8)
-                SecureField("Password：", text:$password)
+                SecureField("Password：", text:$config.password)
                     .font(.system(size: 18))
                     .padding(.top,8)
             }
