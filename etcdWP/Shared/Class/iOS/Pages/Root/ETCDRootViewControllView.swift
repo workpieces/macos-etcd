@@ -7,8 +7,29 @@
 
 import SwiftUI
 import AxisTabView
+import SwiftUIRouter
 
 struct ETCDRootViewControllView: View {
+    @EnvironmentObject var homeData:HomeViewModel
+    var body: some View {
+        SwitchRoutes {
+            Route(":id/*", validator: findUser) { user in
+                ETCDHomeDetailViewControllView().environmentObject(ItemStore.init(c:user))
+            }
+            Route(content: ETCDRootViewContentView())
+        }.navigationTransition()
+    }
+    private func findUser(route: RouteInformation) -> EtcdClientOption? {
+        if let parameter = route.parameters["id"],
+           let uuid = UUID(uuidString: parameter)
+        {
+            return homeData.ectdClientList.first { $0.id == uuid }
+        }
+        return nil
+    }
+}
+
+struct ETCDRootViewContentView: View {
     var constant = ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init())
     @State private var selection :Int = 0
     var body: some View {
@@ -34,3 +55,4 @@ struct ETCDRootViewControllView: View {
         }
     }
 }
+

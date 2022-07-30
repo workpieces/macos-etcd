@@ -28,7 +28,7 @@ private struct NavigationTransition: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .animation(.easeInOut, value: navigator.path)
+            .animation(.easeOut, value: navigator.path)
             .transition(transition(for: navigator.lastAction?.direction))
     }
 }

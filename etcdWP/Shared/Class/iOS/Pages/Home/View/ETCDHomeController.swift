@@ -6,6 +6,26 @@
 //
 
 import SwiftUI
+import SwiftUIRouter
+struct ETCDHomeRouterController: View {
+    @EnvironmentObject var homeData:HomeViewModel
+    var body: some View {
+        SwitchRoutes {
+            Route(":id/*", validator: findUser) { user in
+                ETCDHomeDetailViewControllView().environmentObject(ItemStore.init(c:user))
+            }
+            Route(content: ETCDHomeController())
+        }
+    }
+    private func findUser(route: RouteInformation) -> EtcdClientOption? {
+        if let parameter = route.parameters["id"],
+           let uuid = UUID(uuidString: parameter)
+        {
+            return homeData.ectdClientList.first { $0.id == uuid }
+        }
+        return nil
+    }
+}
 
 struct ETCDHomeController: View {
     @EnvironmentObject var homeData: HomeViewModel
@@ -73,6 +93,7 @@ struct ETCDHomeController: View {
                             .background(Color(hex:"#00FFFF").opacity(0.55))
                             .cornerRadius(5)
                             .clipped()
+                            .padding(.trailing,10)
                         }
                     }.frame(height:proxy.safeAreaInsets.top)
                     ScrollView(showsIndicators:false){
@@ -111,11 +132,5 @@ struct ETCDHomeController: View {
             }
         }
         
-    }
-}
-
-struct SwiftUILearningCapacityHomeController_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDHomeController()
     }
 }

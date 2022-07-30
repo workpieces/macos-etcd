@@ -71,7 +71,8 @@ struct etcdWPApp: App {
 #else
                 ETCDRootViewControllView()
 #endif
-            }.environmentObject(homeData)
+            }
+            .environmentObject(homeData)
 #if os(macOS)
                 .ignoresSafeArea(.all,edges: .all)
 #endif
