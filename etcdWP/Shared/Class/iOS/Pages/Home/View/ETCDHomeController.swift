@@ -79,9 +79,9 @@ struct ETCDHomeController: View {
                         ETCDADBannerTipView()
                             .frame( height: proxy.safeAreaInsets.top)
                             .padding(.bottom,15)
-                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],spacing: 5){
+                        LazyVGrid(columns: [GridItem(.flexible())],spacing: 5){
                             ForEach(Array(self.homeData.ectdClientList.indices),id: \.self) { index in
-                                CardItemView(options:homeData.ectdClientList[index],idx: index)
+                                ETCDHomeItemView(options:homeData.ectdClientList[index],idx: index)
                             }
                         }
                         if(self.homeData.ectdClientList.count >= 5){

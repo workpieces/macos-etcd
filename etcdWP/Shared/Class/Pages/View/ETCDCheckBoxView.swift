@@ -21,7 +21,7 @@ struct ETCDCheckBoxView: View {
             .foregroundColor(IsChoice ? self.checkedColor : self.uncheckedColor)
             .onTapGesture {
                 self.IsChoice.toggle()
-                callback(!IsChoice)
+                callback(IsChoice)
             }
     }
 }

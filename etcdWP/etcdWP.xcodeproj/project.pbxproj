@@ -118,6 +118,7 @@
 		D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */; };
 		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
 		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
+		D05E28C82894C40300C795C5 /* ETCDHomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */; };
 		D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
 		D0690EB12837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */; };
 		D0690EB32837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */; };
@@ -268,6 +269,7 @@
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerView.swift; sourceTree = "<group>"; };
 		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
+		D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeItemView.swift; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
 		D0690EB22837CB920010C8A3 /* ETCDKVOperateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVOperateContentView.swift; sourceTree = "<group>"; };
 		D0690EB52837CBE20010C8A3 /* ETCDKVGridContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVGridContentView.swift; sourceTree = "<group>"; };
@@ -825,6 +827,7 @@
 		D023745B2886E1E600BAF0B0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D05E28C62894C3ED00C795C5 /* item */,
 				D023745C2886E1E600BAF0B0 /* Model */,
 				D023745D2886E1E600BAF0B0 /* View */,
 			);
@@ -884,6 +887,14 @@
 				79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D05E28C62894C3ED00C795C5 /* item */ = {
+			isa = PBXGroup;
+			children = (
+				D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */,
+			);
+			path = item;
 			sourceTree = "<group>";
 		};
 		D0690EB92837CCD40010C8A3 /* ETCOperationView */ = {
@@ -1275,6 +1286,7 @@
 				D021F056281FF8E600992294 /* NSTextView+.swift in Sources */,
 				D021F028281FF8E600992294 /* CarouselItemlView.swift in Sources */,
 				D06B2EAE2894151B007DA616 /* ETCDTabBarItemView.swift in Sources */,
+				D05E28C82894C40300C795C5 /* ETCDHomeItemView.swift in Sources */,
 				D021F03E281FF8E600992294 /* ETCDTabarModel.swift in Sources */,
 				D06B2EB528941529007DA616 /* ETCDPushController.swift in Sources */,
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
