@@ -118,9 +118,9 @@ struct ETCDPushController: View {
                     }
                 }
                 
+            }.popup(isPresented: $isToast, type:.toast, position: .top, animation: .spring(), autohideIn: 2) {
+                TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
             }
-        }.popup(isPresented: $isToast, type: .toast, position: .bottom, animation: .spring(), autohideIn: 2) {
-            TopToastView(title: "The network connection is abnormal, please check the relevant configuration ?")
         }
         
     }
