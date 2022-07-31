@@ -11,7 +11,8 @@ struct ETCDDetialListView: View {
     @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         VStack(){
-            ETCDDetialHeadView()
+            ETCDDetialHeadView().frame(height: 70)
+            Divider().frame(height: 0.5)
             Spacer()
             
         }

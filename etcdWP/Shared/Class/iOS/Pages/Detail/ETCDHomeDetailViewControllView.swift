@@ -12,6 +12,7 @@ struct ETCDHomeDetailViewControllView: View {
         GeometryReader { proxy in
             VStack(){
                 ETCDHomeDetailNavigationView(title: "ETCD CLUSTER V3")
+                Divider().frame(height: 0.5)
                 ETCDDetialListView().frame(height: proxy.size.height  - proxy.safeAreaInsets.top)
             }
         }
