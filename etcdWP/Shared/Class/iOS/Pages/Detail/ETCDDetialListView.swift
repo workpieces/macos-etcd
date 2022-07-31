@@ -14,7 +14,7 @@ struct ETCDDetialListView: View {
             ETCDDetialHeadView().frame(height: 70)
             Divider().frame(height: 0.5)
             Spacer()
-            
+            ETCDDetialLogView().frame(height:180).background(Color.yellow)
         }
  
     }

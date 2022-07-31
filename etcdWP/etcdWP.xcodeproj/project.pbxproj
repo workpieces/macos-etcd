@@ -166,6 +166,7 @@
 		D0BBCE7528391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
 		D0D4212A2896B5F200443FC6 /* ETCDDetialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */; };
 		D0D4212C2896B79900443FC6 /* ETCDDetialHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */; };
+		D0D4212E2896BDB800443FC6 /* ETCDDetialLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4212D2896BDB800443FC6 /* ETCDDetialLogView.swift */; };
 		D0F05DD4289578BF001E01DB /* ETCDHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F05DD3289578BF001E01DB /* ETCDHelpView.swift */; };
 		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
 		D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0888282002DD00A74D43 /* Alamofire */; };
@@ -377,6 +378,7 @@
 		D0BBCE8428391718008C175D /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-HK"; path = "zh-HK.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetialListView.swift; sourceTree = "<group>"; };
 		D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetialHeadView.swift; sourceTree = "<group>"; };
+		D0D4212D2896BDB800443FC6 /* ETCDDetialLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetialLogView.swift; sourceTree = "<group>"; };
 		D0F05DD3289578BF001E01DB /* ETCDHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHelpView.swift; sourceTree = "<group>"; };
 		D0F9F312285D9B2000C34EB7 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0F9F313285D9B2000C34EB7 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -916,6 +918,7 @@
 				D00A820D2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift */,
 				D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */,
 				D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */,
+				D0D4212D2896BDB800443FC6 /* ETCDDetialLogView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1343,6 +1346,7 @@
 				D021F050281FF8E600992294 /* ETCDSheetView.swift in Sources */,
 				D05E28CB2894CA4E00C795C5 /* ETCDHomeDetailViewControllView.swift in Sources */,
 				44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */,
+				D0D4212E2896BDB800443FC6 /* ETCDDetialLogView.swift in Sources */,
 				D021F076281FF8E600992294 /* OpenPan.swift in Sources */,
 				D021EFCA281F5AB700992294 /* etcdWPApp.swift in Sources */,
 				D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */,
