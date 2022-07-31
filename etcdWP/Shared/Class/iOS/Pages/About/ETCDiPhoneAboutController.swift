@@ -14,7 +14,11 @@ struct ETCDiPhoneAboutController: View {
             VStack{
                 HStack(alignment: .center){
                     Text("About")
-                        .withDefaultNavagationTitle()
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(height: 40.0, alignment: .leading)
+                        .lineLimit(1)
                 }.frame(width:proxy.size.width,height:proxy.safeAreaInsets.top)
                 ScrollView(.vertical, showsIndicators: false) {
                     HStack{

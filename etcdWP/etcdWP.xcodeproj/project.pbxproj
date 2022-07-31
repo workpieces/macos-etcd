@@ -20,6 +20,7 @@
 		44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */; };
 		7CBFE6D319196CB7E29AB8C8 /* Pods_etcdWP__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */; };
 		AD9B7E497427F5B15D85E2CD /* Pods_etcdWP__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */; };
+		D00A820E2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A820D2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift */; };
 		D021EFBB281F5AB700992294 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBA281F5AB700992294 /* Tests_iOS.swift */; };
 		D021EFBD281F5AB700992294 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFBC281F5AB700992294 /* Tests_iOSLaunchTests.swift */; };
 		D021EFC7281F5AB700992294 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021EFC6281F5AB700992294 /* Tests_macOS.swift */; };
@@ -163,6 +164,9 @@
 		D0932630283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
 		D0BBCE7428391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
 		D0BBCE7528391400008C175D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D0BBCE7728391400008C175D /* Localizable.stringsdict */; };
+		D0D4212A2896B5F200443FC6 /* ETCDDetialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */; };
+		D0D4212C2896B79900443FC6 /* ETCDDetialHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */; };
+		D0F05DD4289578BF001E01DB /* ETCDHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F05DD3289578BF001E01DB /* ETCDHelpView.swift */; };
 		D0FC0886282002D000A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0885282002D000A74D43 /* Alamofire */; };
 		D0FC0889282002DD00A74D43 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC0888282002DD00A74D43 /* Alamofire */; };
 		D0FC088C282002F300A74D43 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0FC088B282002F300A74D43 /* SnapKit */; };
@@ -199,6 +203,7 @@
 		4FB8241CF06C3A50516A5274 /* Pods-etcdWP (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (iOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00A820D2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeDetailNavigationView.swift; sourceTree = "<group>"; };
 		D021EFA2281F5AB600992294 /* etcdWPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etcdWPApp.swift; sourceTree = "<group>"; };
 		D021EFA9281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021EFAF281F5AB700992294 /* etcdWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etcdWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +375,9 @@
 		D0BBCE8228391718008C175D /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D0BBCE8328391718008C175D /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D0BBCE8428391718008C175D /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-HK"; path = "zh-HK.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetialListView.swift; sourceTree = "<group>"; };
+		D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetialHeadView.swift; sourceTree = "<group>"; };
+		D0F05DD3289578BF001E01DB /* ETCDHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHelpView.swift; sourceTree = "<group>"; };
 		D0F9F312285D9B2000C34EB7 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0F9F313285D9B2000C34EB7 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0F9F314285D9B2000C34EB7 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -904,6 +912,10 @@
 			isa = PBXGroup;
 			children = (
 				D05E28CA2894CA4E00C795C5 /* ETCDHomeDetailViewControllView.swift */,
+				D0F05DD3289578BF001E01DB /* ETCDHelpView.swift */,
+				D00A820D2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift */,
+				D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */,
+				D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1302,6 +1314,7 @@
 				D06B2EB528941529007DA616 /* ETCDPushController.swift in Sources */,
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
 				D021F05E281FF8E600992294 /* ETCDRoleModel.swift in Sources */,
+				D00A820E2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift in Sources */,
 				D06B2EB628941529007DA616 /* ETCDClusterNetworkConfigFormView.swift in Sources */,
 				D021F04A281FF8E600992294 /* ETCDKeyPrefixView.swift in Sources */,
 				D021F068281FF8E600992294 /* AboutModel.swift in Sources */,
@@ -1322,6 +1335,7 @@
 				D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */,
 				D021F05C281FF8E600992294 /* ETCDTableView.swift in Sources */,
 				D021F03A281FF8E600992294 /* HomeViewModel.swift in Sources */,
+				D0D4212C2896B79900443FC6 /* ETCDDetialHeadView.swift in Sources */,
 				D021F072281FF8E600992294 /* LocalizedStringKey+.swift in Sources */,
 				D0690EB02837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift in Sources */,
 				D0690EB62837CBE20010C8A3 /* ETCDKVGridContentView.swift in Sources */,
@@ -1342,10 +1356,12 @@
 				D0690ED32837D7050010C8A3 /* ETCDKeyListContentListView.swift in Sources */,
 				D021F02A281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F046281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
+				D0F05DD4289578BF001E01DB /* ETCDHelpView.swift in Sources */,
 				D06B2EAD2894151B007DA616 /* ETCDRootViewControllView.swift in Sources */,
 				D021F062281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
+				D0D4212A2896B5F200443FC6 /* ETCDDetialListView.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
 			);
