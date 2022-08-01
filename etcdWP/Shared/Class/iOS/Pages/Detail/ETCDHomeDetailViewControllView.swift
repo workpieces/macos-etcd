@@ -13,15 +13,9 @@ struct ETCDHomeDetailViewControllView: View {
             VStack(){
                 ETCDHomeDetailNavigationView(title: "ETCD CLUSTER V3")
                 Divider().frame(height: 0.5)
-                ETCDDetialListView().frame(height: proxy.size.height  - proxy.safeAreaInsets.top)
+                ETCDDetialListView()
+                    .frame(width: proxy.size.width, height: proxy.size.height - proxy.safeAreaInsets.top)
             }
         }
-    }
-}
-
-
-struct ETCDHomeDetailViewControllView_Previews: PreviewProvider {
-    static var previews: some View {
-        ETCDHomeDetailViewControllView()
     }
 }
