@@ -76,6 +76,7 @@ struct etcdWPApp: App {
 #if os(macOS)
                 .ignoresSafeArea(.all,edges: .all)
 #endif
+                .buttonStyle(.plain)
                 .preferredColorScheme(.dark)
                  .background(Color(hex:"#262626").ignoresSafeArea())
         }

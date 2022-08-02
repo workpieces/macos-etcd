@@ -10,16 +10,18 @@ import SwiftUIRouter
 struct ETCDDetialMenuViewItemView: View {
     var menu:ETCDKVMenuModel
     var body: some View {
-        NavLink(to:ClusterLisRouterName) {
-            Text("study swiftui")
-                .font(.title)
-                .fontWeight(.semibold)
-                .frame(height: 40)
+        NavLink(to:menu.rounterName) {
+            Text(LocalizedStringKey(menu.title))
+                .font(.body)
+                .foregroundColor(.white)
+                .truncationMode(.middle)
+                .padding(.leading,5)
                 .padding(.trailing,8)
-                .padding(.leading,8)
-                .background(Color.red)
+                .frame(maxHeight: 30)
+                .background(Color.white.opacity(0.15))
                 .cornerRadius(5)
                 .listRowBackground(Color(hex: "#262626"))
+                .buttonStyle(.plain)
         }
 
     }
@@ -42,7 +44,9 @@ struct ETCDDetialMenuView: View {
                         ETCDDetialMenuViewItemView(menu:menuModels[index])
                     }
                 }
-            }.frame(height: 44)
+            }.frame(height: 30)
+             .padding(.leading,5)
+             .padding(.trailing,8)
         }
     }
     
