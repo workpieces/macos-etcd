@@ -1,17 +1,16 @@
 //
-//  ETCDKeyValueActionsListView .swift
+//  ETCDKeyValueDeleView.swift
 //  etcdWP (iOS)
 //
-//  Created by FaceBook on 2022/8/1.
+//  Created by Google on 2022/8/2.
 //
 
 import SwiftUI
-import SwiftUIRouter
 
-let KeyValueActionsRouterName = "/KeyValueActions"
+let KeyValueDeleRouterName = "/KeyValueDele"
 
 
-struct ETCDKeyValueActionsListView: View {
+struct ETCDKeyValueDeleView: View {
     var body: some View {
         GeometryReader { proxy in
             ZStack{
@@ -41,5 +40,11 @@ struct ETCDKeyValueActionsListView: View {
             }
         }
         
+    }
+}
+
+struct ETCDKeyValueDeleView_Previews: PreviewProvider {
+    static var previews: some View {
+        ETCDKeyValueDeleView()
     }
 }

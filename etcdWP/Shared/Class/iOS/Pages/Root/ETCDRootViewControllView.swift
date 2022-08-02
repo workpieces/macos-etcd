@@ -28,8 +28,12 @@ struct ETCDRootViewControllView: View {
                 Route(LeaseRouterName){
                     ETCDViewLeaseListView()
                 }
-                Route(KeyValueActionsRouterName){
-                    ETCDKeyValueActionsListView()
+                
+                Route(KeyValueCreateRouterName){
+                    ETCDKeyValueCreatView()
+                }
+                Route(KeyValueDeleRouterName){
+                    ETCDKeyValueDeleView()
                 }
                 Route(ClusterLisRouterName){
                     ETCDClusterListView()

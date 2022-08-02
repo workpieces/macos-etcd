@@ -21,9 +21,10 @@
 		44B0146128996C0B002EA901 /* ETCDViewUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145C28996C0B002EA901 /* ETCDViewUserListView.swift */; };
 		44B0146228996C0B002EA901 /* ETCDViewLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145D28996C0B002EA901 /* ETCDViewLeaseListView.swift */; };
 		44B0146328996C0B002EA901 /* ETCDViewRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */; };
-		44B0146428996C0B002EA901 /* ETCDKeyValueActionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145F28996C0B002EA901 /* ETCDKeyValueActionsListView.swift */; };
+		44B0146428996C0B002EA901 /* ETCDKeyValueCreatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145F28996C0B002EA901 /* ETCDKeyValueCreatView.swift */; };
 		44B0146728996E3B002EA901 /* ETCDKVMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0146628996E3B002EA901 /* ETCDKVMenuModel.swift */; };
 		44B0146A28997041002EA901 /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 44B0146928997041002EA901 /* TextSourceful */; };
+		44B0146C28997364002EA901 /* ETCDKeyValueDeleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0146B28997364002EA901 /* ETCDKeyValueDeleView.swift */; };
 		44C860A928996974008E77C7 /* ETCDDetialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C860A828996974008E77C7 /* ETCDDetialMenuView.swift */; };
 		44C860AB289969A0008E77C7 /* ETCDetialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C860AA289969A0008E77C7 /* ETCDetialContentView.swift */; };
 		44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */; };
@@ -210,8 +211,9 @@
 		44B0145C28996C0B002EA901 /* ETCDViewUserListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDViewUserListView.swift; sourceTree = "<group>"; };
 		44B0145D28996C0B002EA901 /* ETCDViewLeaseListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDViewLeaseListView.swift; sourceTree = "<group>"; };
 		44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDViewRolesListView.swift; sourceTree = "<group>"; };
-		44B0145F28996C0B002EA901 /* ETCDKeyValueActionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsListView.swift; sourceTree = "<group>"; };
+		44B0145F28996C0B002EA901 /* ETCDKeyValueCreatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueCreatView.swift; sourceTree = "<group>"; };
 		44B0146628996E3B002EA901 /* ETCDKVMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVMenuModel.swift; sourceTree = "<group>"; };
+		44B0146B28997364002EA901 /* ETCDKeyValueDeleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueDeleView.swift; sourceTree = "<group>"; };
 		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44B5CCBE2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44B5CCBF2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "es-MX"; path = "es-MX.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
@@ -548,7 +550,8 @@
 				44B0145C28996C0B002EA901 /* ETCDViewUserListView.swift */,
 				44B0145D28996C0B002EA901 /* ETCDViewLeaseListView.swift */,
 				44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */,
-				44B0145F28996C0B002EA901 /* ETCDKeyValueActionsListView.swift */,
+				44B0145F28996C0B002EA901 /* ETCDKeyValueCreatView.swift */,
+				44B0146B28997364002EA901 /* ETCDKeyValueDeleView.swift */,
 			);
 			path = OperationManagement;
 			sourceTree = "<group>";
@@ -1379,6 +1382,7 @@
 				44AD32802850EF4600B66261 /* LocalizedStringKey+.swift in Sources */,
 				D021F040281FF8E600992294 /* ETCDConfigModel.swift in Sources */,
 				D021F064281FF8E600992294 /* ETCDLogsObject.swift in Sources */,
+				44B0146C28997364002EA901 /* ETCDKeyValueDeleView.swift in Sources */,
 				44AD32832850EF5A00B66261 /* View+.swift in Sources */,
 				D0690EB32837CB920010C8A3 /* ETCDKVOperateContentView.swift in Sources */,
 				D021F06A281FF8E600992294 /* ETCDCheckBoxView.swift in Sources */,
@@ -1419,7 +1423,7 @@
 				D0D4212A2896B5F200443FC6 /* ETCDDetialListView.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
-				44B0146428996C0B002EA901 /* ETCDKeyValueActionsListView.swift in Sources */,
+				44B0146428996C0B002EA901 /* ETCDKeyValueCreatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
