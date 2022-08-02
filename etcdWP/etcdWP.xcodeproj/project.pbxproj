@@ -17,6 +17,15 @@
 		44ADC8BC284F9331003B32C3 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 44ADC8BB284F9331003B32C3 /* SwiftUIRouter */; };
 		44AF00C4288CD788004D274B /* ETCDUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021F00B281FF8E600992294 /* ETCDUserListView.swift */; };
 		44AF00C5288CD7DD004D274B /* ETCDUserAssociatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */; };
+		44B0146028996C0B002EA901 /* ETCDClusterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145B28996C0B002EA901 /* ETCDClusterListView.swift */; };
+		44B0146128996C0B002EA901 /* ETCDViewUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145C28996C0B002EA901 /* ETCDViewUserListView.swift */; };
+		44B0146228996C0B002EA901 /* ETCDViewLeaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145D28996C0B002EA901 /* ETCDViewLeaseListView.swift */; };
+		44B0146328996C0B002EA901 /* ETCDViewRolesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */; };
+		44B0146428996C0B002EA901 /* ETCDKeyValueActionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0145F28996C0B002EA901 /* ETCDKeyValueActionsListView.swift */; };
+		44B0146728996E3B002EA901 /* ETCDKVMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0146628996E3B002EA901 /* ETCDKVMenuModel.swift */; };
+		44B0146A28997041002EA901 /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 44B0146928997041002EA901 /* TextSourceful */; };
+		44C860A928996974008E77C7 /* ETCDDetialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C860A828996974008E77C7 /* ETCDDetialMenuView.swift */; };
+		44C860AB289969A0008E77C7 /* ETCDetialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C860AA289969A0008E77C7 /* ETCDetialContentView.swift */; };
 		44D2BA44288C3EC000151AD7 /* ETCDReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */; };
 		7CBFE6D319196CB7E29AB8C8 /* Pods_etcdWP__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EBB2A5A53C057B0B544221 /* Pods_etcdWP__iOS_.framework */; };
 		AD9B7E497427F5B15D85E2CD /* Pods_etcdWP__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */; };
@@ -197,9 +206,17 @@
 		445CC0AA288D80B100CFF065 /* ETCDADBannerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerTipView.swift; sourceTree = "<group>"; };
 		44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
 		44AD32822850EF5A00B66261 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		44B0145B28996C0B002EA901 /* ETCDClusterListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDClusterListView.swift; sourceTree = "<group>"; };
+		44B0145C28996C0B002EA901 /* ETCDViewUserListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDViewUserListView.swift; sourceTree = "<group>"; };
+		44B0145D28996C0B002EA901 /* ETCDViewLeaseListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDViewLeaseListView.swift; sourceTree = "<group>"; };
+		44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDViewRolesListView.swift; sourceTree = "<group>"; };
+		44B0145F28996C0B002EA901 /* ETCDKeyValueActionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCDKeyValueActionsListView.swift; sourceTree = "<group>"; };
+		44B0146628996E3B002EA901 /* ETCDKVMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVMenuModel.swift; sourceTree = "<group>"; };
 		44B5CCBD2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44B5CCBE2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44B5CCBF2854BCA400FE49AF /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "es-MX"; path = "es-MX.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		44C860A828996974008E77C7 /* ETCDDetialMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDDetialMenuView.swift; sourceTree = "<group>"; };
+		44C860AA289969A0008E77C7 /* ETCDetialContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDetialContentView.swift; sourceTree = "<group>"; };
 		44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDReachability.swift; sourceTree = "<group>"; };
 		4FB8241CF06C3A50516A5274 /* Pods-etcdWP (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (iOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (iOS)/Pods-etcdWP (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		79D415BD17A4CD1F29937A61 /* Pods_etcdWP__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etcdWP__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -440,6 +457,7 @@
 				D021F0A2281FFAD200992294 /* SwiftyJSON in Frameworks */,
 				D04A38EB288BF9EC00361633 /* AxisTabView in Frameworks */,
 				D021F09C281FFA9F00992294 /* PopupView in Frameworks */,
+				44B0146A28997041002EA901 /* TextSourceful in Frameworks */,
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
 				D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */,
@@ -520,6 +538,27 @@
 				44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */,
 			);
 			path = LocalizedStringKey;
+			sourceTree = "<group>";
+		};
+		44B0145A28996C0B002EA901 /* OperationManagement */ = {
+			isa = PBXGroup;
+			children = (
+				44B0146528996DD0002EA901 /* model */,
+				44B0145B28996C0B002EA901 /* ETCDClusterListView.swift */,
+				44B0145C28996C0B002EA901 /* ETCDViewUserListView.swift */,
+				44B0145D28996C0B002EA901 /* ETCDViewLeaseListView.swift */,
+				44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */,
+				44B0145F28996C0B002EA901 /* ETCDKeyValueActionsListView.swift */,
+			);
+			path = OperationManagement;
+			sourceTree = "<group>";
+		};
+		44B0146528996DD0002EA901 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				44B0146628996E3B002EA901 /* ETCDKVMenuModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		44D2BA42288C3EA700151AD7 /* until */ = {
@@ -824,6 +863,7 @@
 		D023745A2886E1E600BAF0B0 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				44B0145A28996C0B002EA901 /* OperationManagement */,
 				D05E28C92894CA3A00C795C5 /* Detail */,
 				D06B2EA92894151B007DA616 /* Root */,
 				445CC0AC288D83EE00CFF065 /* push */,
@@ -919,6 +959,8 @@
 				D0D421292896B5F200443FC6 /* ETCDDetialListView.swift */,
 				D0D4212B2896B79900443FC6 /* ETCDDetialHeadView.swift */,
 				D0D4212D2896BDB800443FC6 /* ETCDDetialLogView.swift */,
+				44C860A828996974008E77C7 /* ETCDDetialMenuView.swift */,
+				44C860AA289969A0008E77C7 /* ETCDetialContentView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1001,6 +1043,7 @@
 				44ADC8BB284F9331003B32C3 /* SwiftUIRouter */,
 				D05C11D22879D32A00E3C197 /* FilePicker */,
 				D04A38EA288BF9EC00361633 /* AxisTabView */,
+				44B0146928997041002EA901 /* TextSourceful */,
 			);
 			productName = "etcdWP (iOS)";
 			productReference = D021EFA9281F5AB700992294 /* etcdWP.app */;
@@ -1171,6 +1214,7 @@
 				44ADC8BA284F9331003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
 				D04A38E9288BF9EC00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				D04A38EC288BF9FD00361633 /* XCRemoteSwiftPackageReference "AxisTabView" */,
+				44B0146828997041002EA901 /* XCRemoteSwiftPackageReference "TextSourceful" */,
 			);
 			productRefGroup = D021EFAA281F5AB700992294 /* Products */;
 			projectDirPath = "";
@@ -1292,8 +1336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C860AB289969A0008E77C7 /* ETCDetialContentView.swift in Sources */,
 				D021F070281FF8E600992294 /* Button.swift in Sources */,
 				D06B2EAF2894151B007DA616 /* ETCDTabBarContenView.swift in Sources */,
+				44B0146728996E3B002EA901 /* ETCDKVMenuModel.swift in Sources */,
 				D021F048281FF8E600992294 /* ETCDEtcdOperationView.swift in Sources */,
 				D06B2EBD28941604007DA616 /* ETCDiPhoneAboutController.swift in Sources */,
 				D021F060281FF8E600992294 /* ETCDKVItemModel.swift in Sources */,
@@ -1318,6 +1364,7 @@
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
 				D021F05E281FF8E600992294 /* ETCDRoleModel.swift in Sources */,
 				D00A820E2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift in Sources */,
+				44B0146228996C0B002EA901 /* ETCDViewLeaseListView.swift in Sources */,
 				D06B2EB628941529007DA616 /* ETCDClusterNetworkConfigFormView.swift in Sources */,
 				D021F04A281FF8E600992294 /* ETCDKeyPrefixView.swift in Sources */,
 				D021F068281FF8E600992294 /* AboutModel.swift in Sources */,
@@ -1328,6 +1375,7 @@
 				D021F058281FF8E600992294 /* ETCDTableViewRepresentableBootcamp.swift in Sources */,
 				D06B2EBB2894159B007DA616 /* ETCDHomeController.swift in Sources */,
 				D0690EC32837CDB40010C8A3 /* ETCDNodeOutlineGroup.swift in Sources */,
+				44C860A928996974008E77C7 /* ETCDDetialMenuView.swift in Sources */,
 				44AD32802850EF4600B66261 /* LocalizedStringKey+.swift in Sources */,
 				D021F040281FF8E600992294 /* ETCDConfigModel.swift in Sources */,
 				D021F064281FF8E600992294 /* ETCDLogsObject.swift in Sources */,
@@ -1357,6 +1405,8 @@
 				D0690ED02837D5A90010C8A3 /* ETCDKeyListContentHeadView.swift in Sources */,
 				D0690EC72837CE780010C8A3 /* ETCDKVTabBarContentHeadView.swift in Sources */,
 				D021F03C281FF8E600992294 /* ETCDUserDefaultsModel.swift in Sources */,
+				44B0146028996C0B002EA901 /* ETCDClusterListView.swift in Sources */,
+				44B0146128996C0B002EA901 /* ETCDViewUserListView.swift in Sources */,
 				D0690ED32837D7050010C8A3 /* ETCDKeyListContentListView.swift in Sources */,
 				D021F02A281FF8E600992294 /* CarouselView.swift in Sources */,
 				D021F046281FF8E600992294 /* ETCDTabBarContentView.swift in Sources */,
@@ -1364,10 +1414,12 @@
 				D06B2EAD2894151B007DA616 /* ETCDRootViewControllView.swift in Sources */,
 				D021F062281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
+				44B0146328996C0B002EA901 /* ETCDViewRolesListView.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
 				D0D4212A2896B5F200443FC6 /* ETCDDetialListView.swift in Sources */,
 				D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */,
 				D0690ED62837DEB30010C8A3 /* ETCDKeyListContentTreeListView.swift in Sources */,
+				44B0146428996C0B002EA901 /* ETCDKeyValueActionsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2051,6 +2103,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		44B0146828997041002EA901 /* XCRemoteSwiftPackageReference "TextSourceful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/workpieces/TextSourceful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D021F094281FFA7B00992294 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
@@ -2180,6 +2240,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44ADC8B7284F9321003B32C3 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
+		};
+		44B0146928997041002EA901 /* TextSourceful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44B0146828997041002EA901 /* XCRemoteSwiftPackageReference "TextSourceful" */;
+			productName = TextSourceful;
 		};
 		D021F095281FFA7B00992294 /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -14,8 +14,18 @@ struct ETCDDetialListView: View {
             VStack(){
                 ETCDDetialHeadView().frame(height: 70)
                 Divider().frame(height: 0.5)
-                Text("fdasfdaf").frame(height:proxy.size.height * 0.6)
-                ETCDDetialLogView().frame(height:proxy.size.height * 0.3)
+                ScrollView{
+                    ETCDetialContentView()
+                        .frame(height: proxy.size.height * 0.65)
+                    ETCDDetialMenuView()
+                        .frame(height:60)
+                    ETCDDetialLogView()
+                        .frame(height:proxy.size.height * 0.3)
+                }
+            }.onAppear {
+                UITableView.appearance().separatorStyle = .none
+            }.onTapGesture {
+                dissmissKeybord()
             }
         }
 
