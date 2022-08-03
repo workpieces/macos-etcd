@@ -17,6 +17,7 @@ struct ETCDKVMenuModel: Identifiable,Hashable {
 
 let menuModels:[ETCDKVMenuModel] = [
     ETCDKVMenuModel.init(title: "创建键值",rounterName:KeyValueCreateRouterName),
+    ETCDKVMenuModel.init(title: "集群状态",rounterName:ClusterLisRouterName),
     ETCDKVMenuModel.init(title: "键值前缀删除",rounterName:KeyValueDeleRouterName),
     ETCDKVMenuModel.init(title: "租约管理",rounterName:LeaseRouterName),
     ETCDKVMenuModel.init(title: "角色管理",rounterName:RolesRouterName),

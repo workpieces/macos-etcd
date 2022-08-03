@@ -38,9 +38,6 @@ struct ETCDViewLeaseListView: View {
                             .padding(10)
                             .frame(width: 45, height: 45)
                     }.frame(height:proxy.safeAreaInsets.top)
-                    NavLink(to: "create",replace: true) {
-                        Text("Text").frame(maxWidth: .infinity, maxHeight: .infinity)
-                    }
                 }
                 
             }

@@ -35,7 +35,7 @@ struct ETCDClusterListView: View {
                                 navigator.goBack()
                             }
                         Spacer()
-                        Text("clusterList")
+                        Text(LocalizedStringKey("集群状态"))
                             .font(.title)
                             .fontWeight(.semibold)
                         Spacer()
@@ -46,6 +46,24 @@ struct ETCDClusterListView: View {
                             .padding(10)
                             .frame(width: 45, height: 45)
                     }.frame(height:proxy.safeAreaInsets.top)
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            ForEach(0 ..< 10){ idx in
+                                VStack{
+                                    Text("study swiftu\(idx)")
+                                        .font(.title)
+                                        .fontWeight(.semibold)
+                                    Text("study swiftu\(idx)")
+                                        .font(.subheadline)
+                                        .fontWeight(.semibold)
+                                }.padding(.leading,10)
+                                    .padding(.trailing,10)
+                                    .background(Color(.random()))
+                                    .cornerRadius(5)
+                            }
+                        }
+                    
+                    }
                 }
                 
             }
