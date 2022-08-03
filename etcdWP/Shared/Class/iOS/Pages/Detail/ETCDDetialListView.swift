@@ -23,12 +23,16 @@ struct ETCDDetialListView: View {
                     ETCDDetialLogView()
                         .frame(height:proxy.size.height * 0.3)
                 }
-            }.onAppear {
-                UITableView.appearance().separatorStyle = .none
             }.onTapGesture {
                 dissmissKeybord()
-            }
+            }.ignoresSafeArea()
+              .onAppear(perform: {
+                    UITableView.appearance().separatorStyle = .none
+                    Task{
+                        await  storeObj.KVReaload(false)
+                    }
+                })
         }
-
+        
     }
 }

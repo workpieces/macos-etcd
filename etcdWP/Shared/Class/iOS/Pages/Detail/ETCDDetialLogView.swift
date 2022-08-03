@@ -57,8 +57,6 @@ struct ETCDDetialLogView: View {
                     ETCDDetialLogViewItemiew(item: item)
                 }
             }.listStyle(.plain)
-             .padding(.top,5)
-             .padding(.bottom,5)
         }
     }
 }

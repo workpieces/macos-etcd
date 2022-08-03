@@ -12,7 +12,6 @@ struct ETCDKVMenuModel: Identifiable,Hashable {
     var id =  UUID()
     let title: String
     let rounterName:String
-
 }
 
 let menuModels:[ETCDKVMenuModel] = [
