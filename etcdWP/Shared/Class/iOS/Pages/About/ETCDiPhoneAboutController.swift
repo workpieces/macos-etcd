@@ -13,12 +13,16 @@ struct ETCDiPhoneAboutController: View {
         GeometryReader { proxy in
             VStack{
                 HStack(alignment: .center){
+                    ETCDHelpLeftView()
+                    Spacer()
                     Text("About")
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(height: 40.0, alignment: .leading)
                         .lineLimit(1)
+                    Spacer()
+                    ETCDHelpRightView()
                 }.frame(width:proxy.size.width,height:proxy.safeAreaInsets.top)
                 ScrollView(.vertical, showsIndicators: false) {
                     HStack{

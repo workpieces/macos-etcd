@@ -13,7 +13,7 @@ struct ETCDHelpRightView: View {
             UIApplication.shared.open(URL.init(string: DefaultOfficialWebsite)!)
         }, label: {
             Text("访问官网")
-                .font(.system(size: 12))
+                .font(.system(size: 16))
                 .foregroundColor(.secondary)
         }).padding(.trailing,20)
     }
@@ -21,26 +21,13 @@ struct ETCDHelpRightView: View {
 
 
 struct ETCDHelpLeftView: View {
-    @EnvironmentObject private var navigator: Navigator
     var body: some View {
         HStack{
-            Button {
-                navigator.goBack()
-            } label: {
-                Image(systemName: "arrow.backward")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(Color.white)
-                    .frame(width: 18,height: 18)
-                    .padding(.leading,15)
-            }
-            .buttonStyle(PlainButtonStyle())
-            
             Button {
                 UIApplication.shared.open(URL.init(string: DefaultFeedback)!)
             } label: {
                 Text("意见反馈")
-                    .font(.system(size: 12))
+                    .font(.system(size: 16))
                     .foregroundColor(.secondary)
             }.padding(.leading,5)
         }
