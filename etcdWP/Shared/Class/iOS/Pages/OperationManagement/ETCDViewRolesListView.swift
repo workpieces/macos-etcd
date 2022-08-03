@@ -11,23 +11,27 @@ let RolesRouterName = "/RolesList"
 
 
 struct ETCDViewRolesListView: View {
+    @EnvironmentObject private var navigator: Navigator
     var body: some View {
         GeometryReader { proxy in
             ZStack{
                 VStack{
                     HStack{
-                        Image(systemName: "")
+                        Image(systemName: "arrow.backward")
                             .resizable()
                             .scaledToFit()
                             .font(.system(size: 18))
                             .padding(10)
                             .frame(width: 45, height: 45)
+                            .onTapGesture {
+                                navigator.goBack()
+                            }
                         Spacer()
                         Text("study swiftui ")
                             .font(.title)
                             .fontWeight(.semibold)
                         Spacer()
-                        Image(systemName: "plus.circle.fill")
+                        Image(systemName: "")
                             .resizable()
                             .scaledToFit()
                             .font(.system(size: 18))

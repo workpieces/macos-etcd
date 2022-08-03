@@ -7,25 +7,6 @@
 
 import SwiftUI
 import SwiftUIRouter
-struct ETCDHomeRouterController: View {
-    @EnvironmentObject var homeData:HomeViewModel
-    var body: some View {
-        SwitchRoutes {
-            Route(":id/*", validator: findUser) { user in
-                ETCDHomeDetailViewControllView().environmentObject(ItemStore.init(c:user))
-            }
-            Route(content: ETCDHomeController())
-        }
-    }
-    private func findUser(route: RouteInformation) -> EtcdClientOption? {
-        if let parameter = route.parameters["id"],
-           let uuid = UUID(uuidString: parameter)
-        {
-            return homeData.ectdClientList.first { $0.id == uuid }
-        }
-        return nil
-    }
-}
 
 struct ETCDHomeController: View {
     @EnvironmentObject var homeData: HomeViewModel

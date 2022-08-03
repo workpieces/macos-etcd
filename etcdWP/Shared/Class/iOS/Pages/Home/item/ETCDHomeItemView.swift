@@ -24,7 +24,7 @@ struct ETCDHomeItemView: View {
         }
     }
     var body: some View {
-        NavLink(to: options.id.uuidString ){
+        NavLink(to:options.id.uuidString){
             VStack {
                 HStack(alignment: .top) {
                     Button {
