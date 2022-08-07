@@ -34,22 +34,37 @@ struct ETCDHomeDetailNavigationView: View {
                     .lineLimit(1)
                 Spacer()
                 Menu {
-                    Text("study swiftui ")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    Text("study swiftui ")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    Text("study swiftui ")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    Text("study swiftui ")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    Text("study swiftui ")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    
+                    Button(action: {
+                        print("-----")
+                    }) {
+                        Text("开启服务")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                    }
+                    Button(action: {
+                        print("---1--")
+                    }) {
+                        Text("关闭服务")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    Button(action: {
+                        print("---2--")
+                    }) {
+                        Text("批量导入")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                        
+                    }
+                    Button(action: {
+                        print("---3--")
+                    }) {
+                        Text("批量导出")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
                 } label: {
                     Text(LocalizedStringKey("Services"))
                         .foregroundColor(.white)
@@ -60,7 +75,8 @@ struct ETCDHomeDetailNavigationView: View {
                         .cornerRadius(5)
                         .buttonStyle(.plain)
                 }.padding(.trailing ,15)
-
+                
+                
             }.frame(width:proxy.size.width,height:proxy.safeAreaInsets.top)
             
         }
