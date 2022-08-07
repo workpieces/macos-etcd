@@ -66,6 +66,7 @@ struct OutKvModel: Codable {
 
 // 状态管理类型
 class ItemStore: ObservableObject {
+    //不在主线，Property 'c' isolated to global actor 'MainActor' can not be mutated from a non-isolated c
     @Published var c : EtcdClientOption
     @Published var realeadData: KVRealoadData
     @Published var showFormat: ShowFormat = .List
@@ -77,7 +78,8 @@ class ItemStore: ObservableObject {
 }
 
 // 分页刷新管理状态
-struct KVRealoadData {
+struct KVRealoadData{
+    var id = UUID()
     var  kvs : [KVData]
     var  currentKv: KVData?
     var  members : [KVData]

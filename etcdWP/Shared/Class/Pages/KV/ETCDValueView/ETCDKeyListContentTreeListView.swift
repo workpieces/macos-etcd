@@ -46,7 +46,7 @@ struct ETCDKeyListContentTreeListView: View {
             
             Spacer()
         }.background(Color(hex: "#221C27"))
-            .onAppear{
+         .onAppear{
                 Task{
                     treeModel = try?  await storeObj.treeItem()
                 }

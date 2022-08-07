@@ -51,21 +51,115 @@ struct ETCDDetiaContentTextView: View {
     }
 }
 
+struct ETCDDetialContentPageView: View {
+    @EnvironmentObject var storeObj: ItemStore
+    var body: some View {
+        HStack {
+            Spacer()
+            Text("当前页:  \(storeObj.realeadData.GetCurrentPage())  ")
+                .foregroundColor(.secondary)
+                .font(.caption)
+            Spacer()
+            Button {
+                storeObj.Last()
+            } label: {
+                Text("上一页")
+                    .font(.caption)
+                    .foregroundColor(.white)
+            }
+            Spacer()
+            Button {
+                storeObj.Next()
+            } label: {
+                Text("下一页")
+                    .font(.caption)
+                    .foregroundColor(.white)
+            }
+            Spacer()
+            Text("总数:  \(storeObj.realeadData.GetKvCount())  ")
+                .foregroundColor(.secondary)
+                .font(.caption)
+            Spacer()
+        }
+    }
+}
+
+
+struct ETCDDetialContentTreeListPageView: View {
+    @EnvironmentObject var storeObj: ItemStore
+    var body: some View {
+        HStack () {
+            Spacer()
+            Text("总数:  \(storeObj.realeadData.GetKvCount())  ")
+                .foregroundColor(.secondary)
+                .font(.caption)
+                .padding(10)
+            Spacer()
+        }.frame( height: 26)
+    }
+}
+
+struct ETCDDetialContentViewListView: View {
+    @EnvironmentObject var storeObj: ItemStore
+    var body: some View {
+        List(storeObj.realeadData.kvs){ item in
+            ETCDKVItemView(item: item)
+                .onTapGesture(perform: {
+                    self.storeObj.realeadData.currentKv = item
+                })
+                .buttonStyle(PlainButtonStyle())
+        }
+    }
+}
+
+struct ETCDDetialContentViewTreeListView: View {
+    @EnvironmentObject var storeObj: ItemStore
+    @State var treeModel :KVData?
+    @State fileprivate var isDefaultSelectType: Int = 0
+    @State fileprivate var isShowingUpdatePopover = false
+    @State fileprivate var textValue: String = ""
+    var body: some View {
+        VStack{
+            if ((treeModel?.children?.isEmpty) != nil) {
+                ETCDNodeOutlineGroup( callback: { newValue, index , text in
+                    if !text.isEmpty {
+                        self.textValue = text
+                    }
+                    self.isDefaultSelectType = index
+                    
+                },node: treeModel!, childKeyPath:  \.children)
+            }else{
+                EmptyView()
+            }
+        } .onAppear{
+            Task{
+                treeModel = try?  await storeObj.treeItem()
+            }
+        }
+        
+    }
+}
+
 
 struct ETCDDetiaContentListView: View {
+    @EnvironmentObject var storeObj: ItemStore
     var body: some View {
         GeometryReader { proxy in
             VStack(alignment: .leading){
-                Text("日志")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .lineLimit(1)
-                    .opacity(0.75)
-                    .padding(.leading,20)
-                    .padding(.top,10)
-                    .frame(alignment: .leading)
-                Divider().frame(height:0.5)
-            }
+                if storeObj.showFormat == .List{
+                    ETCDDetialContentPageView().frame(height: 40)
+                    Divider().frame(height:0.5)
+                    ETCDDetialContentViewListView()
+                }else{
+                    ETCDDetialContentTreeListPageView().frame(height: 40)
+                    Divider().frame(height:0.5)
+                    ETCDDetialContentViewTreeListView()
+                }
+            }.onAppear(perform: {
+                Task{
+                    await  storeObj.KVReaload(false)
+                }
+            })
         }
         
     }
@@ -75,9 +169,11 @@ struct ETCDDetiaContentListView: View {
 struct ETCDetialContentView: View {
     var body: some View {
         GeometryReader { proxy in
-            HStack{
-                ETCDDetiaContentListView().frame(width: proxy.size.width * 0.5)
-                ETCDDetiaContentTextView().frame(width: proxy.size.width * 0.5)
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ETCDDetiaContentListView().frame(width: proxy.size.width * 0.8)
+                    ETCDDetiaContentTextView().frame(width: proxy.size.width * 0.5)
+                }
             }
         }
     }

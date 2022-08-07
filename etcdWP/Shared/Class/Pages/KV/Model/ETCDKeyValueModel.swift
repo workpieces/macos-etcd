@@ -45,7 +45,6 @@ struct KVDataRoles:Codable, Identifiable,CustomStringConvertible,Equatable{
 }
 
 
-
 struct KVData: Codable, Identifiable,CustomStringConvertible,Equatable{
     var description: String = UUID().uuidString
     var id = UUID()

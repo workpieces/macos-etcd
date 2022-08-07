@@ -34,8 +34,6 @@ struct ETCDDetialLogViewItemiew: View {
 }
 
 
-
-
 struct ETCDDetialLogView: View {
     @StateObject private var logs = ETCDLogsObservable()
     var body: some View {
@@ -46,7 +44,7 @@ struct ETCDDetialLogView: View {
                 .lineLimit(1)
                 .opacity(0.75)
                 .padding(.leading,20)
-                .padding(.top,10)
+                .padding(.top,20)
                 .frame(alignment: .leading)
             Divider().frame(height:0.5)
             List(logs.items.reversed(),id:\.self){ item in

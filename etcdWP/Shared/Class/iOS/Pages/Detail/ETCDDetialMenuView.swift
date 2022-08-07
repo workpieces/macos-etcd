@@ -40,6 +40,7 @@ struct ETCDDetialMenuView: View {
                 .lineLimit(1)
                 .opacity(0.75)
                 .padding(.leading,20)
+                .padding(.top,10)
                 .frame(alignment: .leading)
             Divider().frame(height:0.5)
             ScrollView(.horizontal, showsIndicators: false){
