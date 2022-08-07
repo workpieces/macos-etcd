@@ -7,9 +7,11 @@
 
 import SwiftUI
 import SwiftUIRouter
+import FilePicker
 
 struct ETCDHomeDetailNavigationView: View {
     let title:String
+    @EnvironmentObject var storeObj : ItemStore
     @EnvironmentObject private var navigator: Navigator
     var body: some View {
         GeometryReader { proxy in
@@ -35,7 +37,13 @@ struct ETCDHomeDetailNavigationView: View {
                 Spacer()
                 Menu {
                     Button(action: {
-                        print("-----")
+                        Task{
+                            do {
+                                try await storeObj.Open()
+                            }catch let error as NSError {
+                                print(error.localizedDescription)
+                            }
+                        }
                     }) {
                         Text("开启服务")
                             .font(.title)
@@ -43,23 +51,60 @@ struct ETCDHomeDetailNavigationView: View {
                         
                     }
                     Button(action: {
-                        print("---1--")
+                        do {
+                            try storeObj.Close()
+                        }catch{
+                            print(error.localizedDescription)
+                        }
                     }) {
                         Text("关闭服务")
                             .font(.title)
                             .fontWeight(.semibold)
                     }
-                    Button(action: {
-                        print("---2--")
-                    }) {
+                    FilePicker(types:[.plainText,.text,.json], allowMultiple: true) { urls in
+                        do {
+                            let data = try Data(contentsOf: urls[0])
+                            let decoder = JSONDecoder()
+                            let outs = try decoder.decode([OutKvModel].self, from: data)
+                            for item in outs {
+                                let resp = storeObj.Put(key: item.key, value: item.value)
+                                if resp?.status != 200 {
+                                    throw NSError.init(domain: resp?.message ?? "", code: resp?.status ?? 500)
+                                }
+                            }
+                            Task{
+                                await   storeObj.KVReaload(false)
+                            }
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    } label: {
                         Text("批量导入")
                             .font(.title)
                             .fontWeight(.semibold)
-                        
-                        
                     }
                     Button(action: {
-                        print("---3--")
+                        do {
+                            let path  = showOpenPanel()
+                            guard  path?.path.isEmpty != nil else {
+                                throw NSError.init(domain: "保存目录不能为空", code: 500)
+                            }
+                            var outs = [OutKvModel]()
+                            for item in storeObj.realeadData.temp {
+                                if  !item.key!.isEmpty && !item.value!.isEmpty {
+                                    let key = item.key ?? ""
+                                    let value = item.value ?? ""
+                                    outs.append(OutKvModel.init(key: key, value: value))
+                                }
+                            }
+                            let encoder = JSONEncoder()
+                            encoder.outputFormatting = .prettyPrinted
+                            let data = try encoder.encode(outs)
+                            let current_url  =  path!.appendingPathComponent("etcdwp.json")
+                            try data.write(to: current_url)
+                        } catch {
+                            print(error.localizedDescription)
+                        }
                     }) {
                         Text("批量导出")
                             .font(.title)

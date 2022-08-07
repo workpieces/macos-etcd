@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftUIRouter
+import PopupView
+
 struct ETCDDetialMenuViewItemView: View {
     var menu:ETCDKVMenuModel
     var body: some View {
@@ -27,8 +29,9 @@ struct ETCDDetialMenuViewItemView: View {
 }
 
 struct ETCDDetialMenuView: View {
-    @State isEnble:Bool = false
+    @State var isEnble:Bool = false
     @EnvironmentObject var storeObj : ItemStore
+    @State var isShowToast:Bool = false
     var body: some View {
         VStack(alignment: .leading){
             Text("操作")
@@ -43,11 +46,11 @@ struct ETCDDetialMenuView: View {
                 HStack {
                     ForEach(0 ..< menuModels.count){ index in
                         if menuModels[index].rounterName.count == 0 {
-                            ETCDCheckBoxView(IsChoice: $isEnable) {  newValue in
+                            ETCDCheckBoxView(IsChoice: $isEnble) {  newValue in
                                 let keyValue =  storeObj.authEnable(enble: !newValue)
                                 if keyValue?.status != 200{
                                     self.isShowToast.toggle()
-                                    isEnable = false
+                                    isEnble = false
                                 }
                             }
                         }else {
@@ -58,6 +61,9 @@ struct ETCDDetialMenuView: View {
             }.frame(height: 30)
              .padding(.leading,5)
              .padding(.trailing,8)
+             .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+                 TopToastView(title:"开启认证失败")
+             }
         }
     }
     
