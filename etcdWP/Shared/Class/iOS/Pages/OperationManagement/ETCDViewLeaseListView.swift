@@ -8,15 +8,9 @@
 import SwiftUI
 import SwiftUIRouter
 let LeaseRouterName = "/LeaseList"
-
-
 struct ETCDViewLeaseListView: View {
     @EnvironmentObject private var navigator: Navigator
-    @State var items :[KVData]
     @EnvironmentObject var storeObj : ItemStore
-    @State var isShowToast: Bool = false
-    @State var timeText: String = ""
-    @State var times :Int = 0
     var body: some View {
         GeometryReader { proxy in
             ZStack{
@@ -32,7 +26,7 @@ struct ETCDViewLeaseListView: View {
                                 navigator.goBack()
                             }
                         Spacer()
-                        Text(LocalizedStringKey(currentModel.name))
+                        Text(LocalizedStringKey("租约管理"))
                             .font(.title)
                             .fontWeight(.semibold)
                         Spacer()
@@ -43,6 +37,7 @@ struct ETCDViewLeaseListView: View {
                             .padding(10)
                             .frame(width: 45, height: 45)
                     }.frame(height:proxy.safeAreaInsets.top)
+                    ETCDViewLeaseListContentView(items:storeObj.LeaseList()?.datas ?? [])
                 }
                 
             }
@@ -51,17 +46,15 @@ struct ETCDViewLeaseListView: View {
     }
 }
 
-
-struct ETCDLeaseListView: View {
-   
-    
+struct ETCDViewLeaseListContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
+    @EnvironmentObject private var navigator: Navigator
+    @State var items :[KVData]
+    @State var isShowToast: Bool = false
+    @State var timeText: String = ""
+    @State var times :Int = 0
     var body: some View {
         VStack(){
-            Text(LocalizedStringKey(currentModel.name))
-                .padding(.top,10)
-                .padding(.trailing,10)
-                .padding(.leading,10)
-                .padding(.bottom,5)
             HStack(){
                 Text("创建租约")
                     .font(.system(size: 12))
@@ -105,7 +98,7 @@ struct ETCDLeaseListView: View {
                         .foregroundColor(.white)
                 }.padding(6)
                 Button {
-                    presentationMode.wrappedValue.dismiss()
+                    navigator.canGoBack
                 } label: {
                     Text("关闭")
                         .font(.system(size: 12))
@@ -116,7 +109,6 @@ struct ETCDLeaseListView: View {
             }
             leaseListView
         }
-        .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 2) {
             TopToastView(title:"操作租约错误")
         }
@@ -124,9 +116,8 @@ struct ETCDLeaseListView: View {
     }
 }
 
-
 //方法
-extension ETCDLeaseListView {
+extension ETCDViewLeaseListContentView {
     
     func deleFunc(item:KVData) {
         let reuslt = storeObj.LeaseRevoke(leaseid: String(item.ttlid!))
@@ -152,10 +143,9 @@ extension ETCDLeaseListView {
 
 
 //列表
-extension ETCDLeaseListView {
+extension ETCDViewLeaseListContentView {
     
     private var leaseListView : some View {
-        
         List(items.reversed()){ item in
             HStack(){
                 Text(String(format: "ID：%ld", item.ttlid!))
