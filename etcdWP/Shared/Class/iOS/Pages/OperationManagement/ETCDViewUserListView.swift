@@ -28,7 +28,7 @@ struct ETCDViewUserListView: View {
                                 navigator.goBack()
                             }
                         Spacer()
-                        Text(LocalizedStringKey("角色管理"))
+                        Text(LocalizedStringKey("用户管理"))
                             .font(.title)
                             .fontWeight(.semibold)
                         Spacer()
