@@ -98,7 +98,7 @@ struct ETCDViewLeaseListContentView: View {
                         .foregroundColor(.white)
                 }.padding(6)
                 Button {
-                    navigator.canGoBack
+               let  _ =  navigator.goBack()
                 } label: {
                     Text("关闭")
                         .font(.system(size: 12))
