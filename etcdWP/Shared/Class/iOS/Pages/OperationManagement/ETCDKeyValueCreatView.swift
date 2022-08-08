@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIRouter
 
-let KeyValueCreateRouterName = "/KeyValueCreat"
+let KeyValueCreateRouterName = "KeyValueCreat"
 
 struct ETCDKeyValueCreatView: View {
     @EnvironmentObject private var navigator: Navigator

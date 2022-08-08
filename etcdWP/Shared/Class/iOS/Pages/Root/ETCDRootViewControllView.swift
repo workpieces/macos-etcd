@@ -17,27 +17,6 @@ struct ETCDRootViewControllView: View {
                 Route(":id/*", validator: findUser) { user in
                     ETCDHomeDetailViewControllView().environmentObject(ItemStore.init(c:user))
                 }
-                Route(UserRouterName){
-                    ETCDViewUserListView()
-                }
-                
-                Route(RolesRouterName){
-                    ETCDViewRolesListView()
-                }
-                
-                Route(LeaseRouterName){
-                    ETCDViewLeaseListView()
-                }
-                
-                Route(KeyValueCreateRouterName){
-                    ETCDKeyValueCreatView()
-                }
-                Route(KeyValueDeleRouterName){
-                    ETCDKeyValueDeleView()
-                }
-                Route(ClusterLisRouterName){
-                    ETCDClusterListView()
-                }
                 Route(content: ETCDRootViewContentView())
             }.navigationTransition()
         }

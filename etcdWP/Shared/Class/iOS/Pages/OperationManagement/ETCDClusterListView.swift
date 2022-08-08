@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIRouter
 
-let ClusterLisRouterName = "/clusterLis"
+let ClusterLisRouterName = "clusterLis"
 
 struct ETCDClusterListItemView {
     var body: some View {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftUIRouter
-let UserRouterName = "/User"
+let UserRouterName = "User"
 
 
 struct ETCDViewUserListView: View {

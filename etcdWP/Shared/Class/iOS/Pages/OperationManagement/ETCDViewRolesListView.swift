@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftUIRouter
-let RolesRouterName = "/RolesList"
+let RolesRouterName = "RolesList"
 
 
 struct ETCDViewRolesListView: View {

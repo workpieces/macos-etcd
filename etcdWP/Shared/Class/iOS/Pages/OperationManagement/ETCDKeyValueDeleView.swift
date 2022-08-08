@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftUIRouter
-let KeyValueDeleRouterName = "/KeyValueDele"
+let KeyValueDeleRouterName = "KeyValueDele"
 struct ETCDKeyValueDeleView: View {
     @EnvironmentObject private var navigator: Navigator
     var body: some View {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftUIRouter
-let LeaseRouterName = "/LeaseList"
+let LeaseRouterName = "LeaseList"
 struct ETCDViewLeaseListView: View {
     @EnvironmentObject private var navigator: Navigator
     @EnvironmentObject var storeObj : ItemStore
