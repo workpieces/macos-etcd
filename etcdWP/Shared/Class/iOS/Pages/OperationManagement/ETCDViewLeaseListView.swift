@@ -201,8 +201,9 @@ extension ETCDViewLeaseListContentView {
                         .font(.system(size: 10.0))
                         .foregroundColor(.white)
                 }
-            }
-        }
+            }.listRowBackground(Color.black.opacity(0.2).ignoresSafeArea())
+        }.listStyle(.plain)
+            .buttonStyle(.plain)
         
     }
     

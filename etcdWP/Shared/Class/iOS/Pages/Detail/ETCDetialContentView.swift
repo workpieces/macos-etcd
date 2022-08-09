@@ -106,7 +106,7 @@ struct ETCDDetialContentViewListView: View {
             ETCDKVItemView(item: item)
                 .onTapGesture(perform: {
                     self.storeObj.realeadData.currentKv = item
-                })
+                }).listRowBackground(Color.clear)
                 .buttonStyle(PlainButtonStyle())
         }
     }
@@ -121,7 +121,7 @@ struct ETCDDetialContentViewTreeListView: View {
     var body: some View {
         VStack{
             if ((treeModel?.children?.isEmpty) != nil) {
-                ETCDNodeOutlineGroup( callback: { newValue, index , text in
+                ETCDNodeOutLineGroopDetail( callback: { newValue, index , text in
                     if !text.isEmpty {
                         self.textValue = text
                     }
@@ -150,10 +150,13 @@ struct ETCDDetiaContentListView: View {
                     ETCDDetialContentPageView().frame(height: 40)
                     Divider().frame(height:0.5)
                     ETCDDetialContentViewListView()
+                        .listStyle(.plain)
+                        .buttonStyle(.plain)
                 }else{
                     ETCDDetialContentTreeListPageView().frame(height: 40)
                     Divider().frame(height:0.5)
-                    ETCDDetialContentViewTreeListView()
+                    ETCDDetialContentViewTreeListView().listStyle(.plain)
+                        .buttonStyle(.plain)
                 }
             }.onAppear(perform: {
                 Task{
