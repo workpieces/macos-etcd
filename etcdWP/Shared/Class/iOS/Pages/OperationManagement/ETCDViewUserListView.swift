@@ -13,6 +13,9 @@ let UserRouterName = "User"
 struct ETCDViewUserListView: View {
     @EnvironmentObject private var navigator: Navigator
     @EnvironmentObject var storeObj : ItemStore
+    init() {
+           UITextField.appearance().backgroundColor = .clear
+       }
     var body: some View {
         GeometryReader { proxy in
             ZStack{
@@ -59,89 +62,97 @@ struct ETCDViewUserContentListView: View {
     @State var toastText :String = "操作用户错误"
     @State var password:Bool = false
     @State var associated:Bool = false
-    @Environment(\.presentationMode) var presentationMode
-    
+    @EnvironmentObject private var navigator: Navigator
+
     var body: some View {
         VStack(){
-            HStack(){
-                VStack(){
-                    HStack(){
-                        Text("创建用户")
-                            .font(.system(size: 12))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.trailing,8)
-                            .padding(.leading,10)
-                        TextField.init("请输入用户", text: $userText)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.leading,10)
-                            .padding(.trailing,5)
-                    }
-                    HStack(){
-                        Text("创建密码")
-                            .font(.system(size: 12))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.trailing,8)
-                            .padding(.leading,10)
-                        TextField.init("请输入密码", text: $passWordText)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.leading,10)
-                            .padding(.trailing,5)
-                    }
+            VStack(){
+                HStack(){
+                    Text("创建用户")
+                        .font(.system(size: 14))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                        .padding(.trailing,8)
+                        .padding(.leading,10)
+                    TextField.init("请输入用户", text: $userText)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.leading,10)
+                        .padding(.trailing,5)
                 }
-                Button {
-                    
-                    guard !userText.isEmpty else {
-                        self.toastText = "用户操作错误"
-                        self.isShowToast.toggle()
-                        return
-                    }
-                    
-                    guard !passWordText.isEmpty else {
-                        self.toastText = "请输入密码"
-                        self.isShowToast.toggle()
-                        return
-                    }
-                    self.isShowToast = false
-                    
-                    if userText != user{
-                        let  result   =  storeObj.addUser(user: userText, password: passWordText)
-                        if result?.status != 200 {
-                            self.toastText = result?.message ?? "用户操作错误"
-                            self.isShowToast.toggle()
-                        }else{
-                            items =  storeObj.UsersList() ?? []
-                            self.isShowToast = false
-                        }
-                        user = userText
+                HStack(){
+                    Text("创建密码")
+                        .font(.system(size: 14))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                        .padding(.trailing,8)
+                        .padding(.leading,10)
+                    TextField.init("请输入密码", text: $passWordText)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.leading,10)
+                        .padding(.trailing,5)
+                }
+                HStack{
+                    Button {
                         
-                    }
-                    
-                } label: {
-                    Text("确定")
-                        .font(.system(size: 12))
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                }.padding(6)
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Text("关闭")
-                        .font(.system(size: 12))
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                }.padding(10)
-                
+                        guard !userText.isEmpty else {
+                            self.toastText = "用户操作错误"
+                            self.isShowToast.toggle()
+                            return
+                        }
+                        
+                        guard !passWordText.isEmpty else {
+                            self.toastText = "请输入密码"
+                            self.isShowToast.toggle()
+                            return
+                        }
+                        self.isShowToast = false
+                        
+                        if userText != user{
+                            let  result   =  storeObj.addUser(user: userText, password: passWordText)
+                            if result?.status != 200 {
+                                self.toastText = result?.message ?? "用户操作错误"
+                                self.isShowToast.toggle()
+                            }else{
+                                items =  storeObj.UsersList() ?? []
+                                self.isShowToast = false
+                            }
+                            user = userText
+                            
+                        }
+                        
+                    } label: {
+                        Text("确定")
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                    }.padding(6)
+                    Text("").frame(width: 40)
+                    Button {
+                        navigator.goBack()
+                    } label: {
+                        Text("关闭")
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                    }.padding(10)
+                }
             }
-            leaseListView
-                .sheet(isPresented: $password) {
-                ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
-            }.sheet(isPresented: $associated) {
-                ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
+            if #available(iOS 15.0, *) {
+                leaseListView
+                    .listRowSeparator(.hidden)
+                    .sheet(isPresented: $password) {
+                        ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
+                    }.sheet(isPresented: $associated) {
+                        ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
+                    }
+            } else {
+                leaseListView.sheet(isPresented: $password) {
+                    ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
+                }.sheet(isPresented: $associated) {
+                    ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
+                }
             }
         }
-        .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
             TopToastView(title:"操作用户错误")
         }
@@ -163,7 +174,6 @@ extension ETCDViewUserContentListView {
         }
     }
 }
-
 
 //列表
 extension ETCDViewUserContentListView {
@@ -221,8 +231,9 @@ extension ETCDViewUserContentListView {
                         .font(.system(size: 10.0))
                         .foregroundColor(.white)
                 }
-            }
-        }
+            }.listRowBackground(Color.black.opacity(0.2).ignoresSafeArea())
+        }.listStyle(.plain)
+        .buttonStyle(.plain)
     }
     
 }

@@ -11,6 +11,9 @@ let LeaseRouterName = "LeaseList"
 struct ETCDViewLeaseListView: View {
     @EnvironmentObject private var navigator: Navigator
     @EnvironmentObject var storeObj : ItemStore
+    init() {
+           UITextField.appearance().backgroundColor = .clear
+       }
     var body: some View {
         GeometryReader { proxy in
             ZStack{
@@ -57,7 +60,7 @@ struct ETCDViewLeaseListContentView: View {
         VStack(){
             HStack(){
                 Text("创建租约")
-                    .font(.system(size: 12))
+                    .font(.system(size: 14))
                     .fontWeight(.medium)
                     .foregroundColor(.white)
                     .padding(.trailing,8)
@@ -84,7 +87,7 @@ struct ETCDViewLeaseListContentView: View {
                                 self.isShowToast.toggle()
                             }else{
                                 items =  storeObj.LeaseList()?.datas ?? []
-//                                presentationMode.wrappedValue.dismiss()
+                                //                                presentationMode.wrappedValue.dismiss()
                                 self.isShowToast = false
                             }
                         }
@@ -93,15 +96,15 @@ struct ETCDViewLeaseListContentView: View {
                     // presentationMode.wrappedValue.dismiss()  todo 丢弃
                 } label: {
                     Text("确定")
-                        .font(.system(size: 12))
+                        .font(.system(size: 14))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(6)
                 Button {
-               let  _ =  navigator.goBack()
+                    let  _ =  navigator.goBack()
                 } label: {
                     Text("关闭")
-                        .font(.system(size: 12))
+                        .font(.system(size: 14))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(10)

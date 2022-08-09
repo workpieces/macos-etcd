@@ -10,6 +10,9 @@ import SwiftUIRouter
 let KeyValueDeleRouterName = "KeyValueDele"
 struct ETCDKeyValueDeleView: View {
     @EnvironmentObject private var navigator: Navigator
+    init() {
+        UITextField.appearance().backgroundColor = .clear
+    }
     var body: some View {
         GeometryReader { proxy in
             ZStack{

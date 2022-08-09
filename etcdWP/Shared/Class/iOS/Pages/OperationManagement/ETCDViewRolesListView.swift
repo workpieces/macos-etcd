@@ -12,6 +12,9 @@ let RolesRouterName = "RolesList"
 struct ETCDViewRolesListView: View {
     @EnvironmentObject private var navigator: Navigator
     @EnvironmentObject var storeObj : ItemStore
+    init() {
+           UITextField.appearance().backgroundColor = .clear
+       }
     var body: some View {
         GeometryReader { proxy in
             ZStack{
@@ -37,7 +40,7 @@ struct ETCDViewRolesListView: View {
                             .font(.system(size: 18))
                             .padding(10)
                             .frame(width: 45, height: 45)
-                    }.frame(height:proxy.safeAreaInsets.top)
+                    }.frame(width:proxy.size.width,height:proxy.safeAreaInsets.top)
                     ETCDViewRolesContentListView(items: storeObj.RolesList() ?? [])
                 }
                 
@@ -86,7 +89,7 @@ struct ETCDViewRolesContentListView: View {
                     
                 } label: {
                     Text("确定")
-                        .font(.system(size: 12))
+                        .font(.system(size: 14))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(6)
@@ -94,14 +97,13 @@ struct ETCDViewRolesContentListView: View {
                     let  _ =  navigator.goBack()
                 } label: {
                     Text("关闭")
-                        .font(.system(size: 12))
+                        .font(.system(size: 14))
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(10)
             }
             leaseListView
         }
-        .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
             TopToastView(title:"操作角色错误")
         }
