@@ -69,8 +69,9 @@ struct ETCDViewRolesContentListView: View {
                 TextField.init("请输入角色", text: $roleText)
                     .textFieldStyle(.roundedBorder)
                     .padding(10)
+            }
+            HStack{
                 Button {
-                    
                     guard !roleText.isEmpty else{
                         return
                     }
@@ -93,6 +94,7 @@ struct ETCDViewRolesContentListView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(6)
+                Text("").frame(width: 40)
                 Button {
                     let  _ =  navigator.goBack()
                 } label: {
@@ -102,7 +104,19 @@ struct ETCDViewRolesContentListView: View {
                         .foregroundColor(.white)
                 }.padding(10)
             }
-            leaseListView
+            ETCDADBannerTipView()
+                .frame( height:44)
+            if #available(iOS 15.0, *) {
+                leaseListView.listRowSeparator(.hidden)
+            } else {
+                leaseListView
+            }
+            if items.count >= 5 {
+                ETCDADBannerTipView()
+                    .frame( height:44)
+                Text("").frame(height: 0)
+            }
+
         }
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
             TopToastView(title:"操作角色错误")
@@ -175,7 +189,9 @@ extension ETCDViewRolesContentListView {
                         .foregroundColor(.white)
                 }
             }
-        }
+            .listRowBackground(Color.black.opacity(0.2).ignoresSafeArea())
+        }.listStyle(.plain)
+            .buttonStyle(.plain)
         
     }
     

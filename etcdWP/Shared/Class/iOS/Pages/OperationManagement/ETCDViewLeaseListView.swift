@@ -68,6 +68,8 @@ struct ETCDViewLeaseListContentView: View {
                 TextField.init("请输入时间", text: $timeText)
                     .textFieldStyle(.roundedBorder)
                     .padding(10)
+            }
+            HStack{
                 Button {
                     
                     guard !timeText.isEmpty else{
@@ -100,6 +102,7 @@ struct ETCDViewLeaseListContentView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(6)
+                Text("").frame(width: 40)
                 Button {
                     let  _ =  navigator.goBack()
                 } label: {
@@ -108,9 +111,19 @@ struct ETCDViewLeaseListContentView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                 }.padding(10)
-                
             }
-            leaseListView
+            ETCDADBannerTipView()
+                .frame( height:44)
+            if #available(iOS 15.0, *) {
+                leaseListView.listRowSeparator(.hidden)
+            } else {
+                leaseListView
+            }
+            if items.count >= 5 {
+                ETCDADBannerTipView()
+                    .frame( height:44)
+                Text("").frame(height: 0)
+            }
         }
         .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 2) {
             TopToastView(title:"操作租约错误")

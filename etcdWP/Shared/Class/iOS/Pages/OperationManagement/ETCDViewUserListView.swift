@@ -63,9 +63,8 @@ struct ETCDViewUserContentListView: View {
     @State var password:Bool = false
     @State var associated:Bool = false
     @EnvironmentObject private var navigator: Navigator
-
     var body: some View {
-        VStack(){
+        GeometryReader { proxy in
             VStack(){
                 HStack(){
                     Text("创建用户")
@@ -136,27 +135,34 @@ struct ETCDViewUserContentListView: View {
                             .foregroundColor(.white)
                     }.padding(10)
                 }
-            }
-            if #available(iOS 15.0, *) {
-                leaseListView
-                    .listRowSeparator(.hidden)
-                    .sheet(isPresented: $password) {
+                ETCDADBannerTipView()
+                    .frame(height:44)
+                if #available(iOS 15.0, *) {
+                    leaseListView
+                        .listRowSeparator(.hidden)
+                        .sheet(isPresented: $password) {
+                            ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
+                        }.sheet(isPresented: $associated) {
+                            ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
+                        }
+                } else {
+                    leaseListView.sheet(isPresented: $password) {
                         ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
                     }.sheet(isPresented: $associated) {
                         ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
                     }
-            } else {
-                leaseListView.sheet(isPresented: $password) {
-                    ETCDUserPasswordView(currentKv: self.storeObj.currentKvc)
-                }.sheet(isPresented: $associated) {
-                    ETCDUserAssociatedView(currentKv: self.storeObj.currentKvc)
                 }
+                if items.count >= 5 {
+                    ETCDADBannerTipView()
+                        .frame( height:44)
+                    Text("").frame(height: 0)
+                }
+                
+            }
+            .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+                TopToastView(title:"操作用户错误")
             }
         }
-        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-            TopToastView(title:"操作用户错误")
-        }
-        
     }
 }
 
