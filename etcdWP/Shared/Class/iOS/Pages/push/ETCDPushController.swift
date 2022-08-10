@@ -48,7 +48,7 @@ struct ETCDPushController: View {
                             .padding(10)
                             .frame(width: 60, height: 45)
                         Spacer()
-                        Text("plus.circle.fill")
+                        Text(LocalizedStringKey("通用设置"))
                             .font(.title)
                             .fontWeight(.semibold)
                         Spacer()
