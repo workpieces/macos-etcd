@@ -175,7 +175,7 @@ struct ETCDetialContentView: View {
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
                     ETCDDetiaContentListView().frame(width: proxy.size.width * 0.8)
-                    ETCDDetiaContentTextView().frame(width: proxy.size.width * 0.5)
+                    ETCDDetiaContentTextView().frame(width: proxy.size.width * 0.6)
                 }
             }
         }
