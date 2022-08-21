@@ -17,9 +17,6 @@ struct ETCDDetialListView: View {
                 ScrollView{
                     ETCDetialContentView()
                         .frame(height: proxy.size.height * 0.65)
-                    ETCDDetialMenuView()
-                        .frame(width:proxy.size.width,height: 30)
-                        .padding(.bottom,8)
                     ETCDDetialLogView()
                         .frame(height:proxy.size.height * 0.3)
                 }

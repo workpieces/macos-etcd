@@ -85,6 +85,7 @@ struct ETCDKeyValueDeleView: View {
                     }
                     ETCDADBannerTipView()
                         .frame( height:44)
+                    Spacer()
                 }.popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
                     TopToastView(title:self.isSucceful ? "保存失败" : "输入错误，请重新输入")
                 }

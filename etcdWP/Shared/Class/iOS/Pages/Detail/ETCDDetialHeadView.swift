@@ -86,14 +86,6 @@ struct ETCDDetialHeadView: View {
                 }.background(Color.white.opacity(0.15))
                     .cornerRadius(10)
                 Spacer()
-                Button {} label: {
-                    Text("查询")
-                        .font(.caption)
-                        .foregroundColor(.white)
-                        .padding(8)
-                        .frame(height: 25)
-                }.background(Color.white.opacity(0.15))
-                    .cornerRadius(10)
             }.padding(.all,4.0)
         }
     }
