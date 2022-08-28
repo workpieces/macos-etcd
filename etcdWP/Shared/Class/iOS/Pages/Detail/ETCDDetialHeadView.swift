@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
-
+import SwiftUIRouter
+import PopupView
 struct ETCDDetialHeadView: View {
     
     @EnvironmentObject var storeObj : ItemStore
+    @State var isEnble:Bool = false
+    @State var isShowToast:Bool = false
     fileprivate func Reaload() {
         Task{
             await  storeObj.KVReaload(false)
@@ -56,8 +59,6 @@ struct ETCDDetialHeadView: View {
                 }.background(Color.white.opacity(0.15))
                     .cornerRadius(10)
                 
-                
-                
                 Button {
                     do {
                         try self.DeleteALL()
@@ -86,7 +87,56 @@ struct ETCDDetialHeadView: View {
                 }.background(Color.white.opacity(0.15))
                     .cornerRadius(10)
                 Spacer()
+                Menu {
+                    NavLink(to:menuModels[1].rounterName) {
+                        Text(menuModels.first!.title)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    
+                    NavLink(to:menuModels[1].rounterName) {
+                        Text(menuModels.first!.title)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    
+                    NavLink(to:menuModels[2].rounterName) {
+                        Text(menuModels[2].title)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    
+                    NavLink(to:menuModels[3].rounterName) {
+                        Text(menuModels[3].title)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    
+                    NavLink(to:menuModels[4].rounterName) {
+                        Text(menuModels[4].title)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    NavLink(to:menuModels[5].rounterName) {
+                        Text(menuModels[5].title)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    
+                } label: {
+                    Text(LocalizedStringKey("键值操作"))
+                        .foregroundColor(.white)
+                        .font(.system(size: 15))
+                        .padding(8)
+                        .frame(maxHeight: 25)
+                        .background(Color.white.opacity(0.15))
+                        .cornerRadius(10)
+                        .buttonStyle(.plain)
+                }.padding(.trailing ,15)
             }.padding(.all,4.0)
+        }
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+            TopToastView(title:"开启认证失败")
         }
     }
 }

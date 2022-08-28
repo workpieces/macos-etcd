@@ -105,6 +105,7 @@ struct ETCDDetialContentViewListView: View {
             ETCDKVItemView(item: item)
                 .onTapGesture(perform: {
                     self.storeObj.realeadData.currentKv = item
+                    print("-----------\(self.storeObj.realeadData.currentKv?.value)")
                 }).listRowBackground(Color.clear)
                 .buttonStyle(PlainButtonStyle())
         }
@@ -178,6 +179,8 @@ struct ETCDetialContentView: View {
                     ETCDDetiaContentTextView(text: storeObj.realeadData.currentKv?.value ?? "").frame(width: proxy.size.width * 0.6)
                 }
             }
+        }.onAppear{
+            print("valuevaluevaluevaluevaluevalue+\(storeObj.realeadData.currentKv?.value)")
         }
     }
 }
