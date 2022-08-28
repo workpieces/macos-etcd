@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import PopupView
 struct ETCDDetialLogViewItemiew: View {
    @State var  item:KVOperateLog;
     var body: some View {
@@ -35,17 +35,37 @@ struct ETCDDetialLogViewItemiew: View {
 
 
 struct ETCDDetialLogView: View {
+    @State var isEnble:Bool = false
+    @EnvironmentObject var storeObj : ItemStore
+    @State var isShowToast:Bool = false
     @StateObject private var logs = ETCDLogsObservable()
     var body: some View {
         VStack(alignment: .leading){
-            Text("日志")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .lineLimit(1)
-                .opacity(0.75)
-                .padding(.leading,20)
-                .padding(.top,5)
-                .frame(alignment: .leading)
+            HStack{
+                Text("日志")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .lineLimit(1)
+                    .opacity(0.75)
+                    .padding(.leading,20)
+                    .padding(.top,5)
+                    .frame(alignment: .leading)
+                Spacer()
+                Text(menuModels[6].title)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .opacity(0.75)
+                    .padding(.trailing,5)
+                    .padding(.leading,8)
+                ETCDCheckBoxView(IsChoice: $isEnble) {  newValue in
+                    let keyValue =  storeObj.authEnable(enble: !newValue)
+                    if keyValue?.status != 200{
+                        self.isShowToast.toggle()
+                        isEnble = false
+                    }
+                }.padding(.trailing,10)
+                
+            }
             Divider().frame(height:0.5)
             List(logs.items.reversed(),id:\.self){ item in
                 if #available(iOS 15.0, *) {
@@ -55,6 +75,9 @@ struct ETCDDetialLogView: View {
                     ETCDDetialLogViewItemiew(item: item)
                 }
             }.listStyle(.plain)
+        }
+        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
+            TopToastView(title:"开启认证失败")
         }
     }
 }

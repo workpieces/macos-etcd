@@ -9,10 +9,7 @@ import SwiftUI
 import SwiftUIRouter
 import PopupView
 struct ETCDDetialHeadView: View {
-    
     @EnvironmentObject var storeObj : ItemStore
-    @State var isEnble:Bool = false
-    @State var isShowToast:Bool = false
     fileprivate func Reaload() {
         Task{
             await  storeObj.KVReaload(false)
@@ -134,9 +131,6 @@ struct ETCDDetialHeadView: View {
                         .buttonStyle(.plain)
                 }.padding(.trailing ,15)
             }.padding(.all,4.0)
-        }
-        .popup(isPresented: $isShowToast, type: .toast, position: .top, animation: .spring(), autohideIn: 5) {
-            TopToastView(title:"开启认证失败")
         }
     }
 }
