@@ -9,8 +9,8 @@ import SwiftUI
 import TextSourceful
 
 struct ETCDDetiaContentTextView: View {
-    @State var text:String = ""
-    
+    @State var text:String
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -23,7 +23,7 @@ struct ETCDDetiaContentTextView: View {
                     .frame(alignment: .leading)
                 Spacer()
                 Button {
-                    
+                    copyToClipBoard(textToCopy: storeObj.realeadData.currentKv?.value ?? "")
                 } label: {
                     Text("粘贴")
                         .font(.caption)
@@ -83,7 +83,6 @@ struct ETCDDetialContentPageView: View {
         }
     }
 }
-
 
 struct ETCDDetialContentTreeListPageView: View {
     @EnvironmentObject var storeObj: ItemStore
@@ -170,12 +169,13 @@ struct ETCDDetiaContentListView: View {
 
 
 struct ETCDetialContentView: View {
+    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         GeometryReader { proxy in
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
                     ETCDDetiaContentListView().frame(width: proxy.size.width * 0.8)
-                    ETCDDetiaContentTextView().frame(width: proxy.size.width * 0.6)
+                    ETCDDetiaContentTextView(text: storeObj.realeadData.currentKv?.value ?? "").frame(width: proxy.size.width * 0.6)
                 }
             }
         }

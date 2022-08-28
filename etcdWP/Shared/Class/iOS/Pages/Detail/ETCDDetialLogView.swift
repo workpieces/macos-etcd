@@ -44,7 +44,7 @@ struct ETCDDetialLogView: View {
                 .lineLimit(1)
                 .opacity(0.75)
                 .padding(.leading,20)
-                .padding(.top,20)
+                .padding(.top,5)
                 .frame(alignment: .leading)
             Divider().frame(height:0.5)
             List(logs.items.reversed(),id:\.self){ item in

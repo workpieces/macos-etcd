@@ -16,9 +16,9 @@ struct ETCDDetialListView: View {
                 Divider().frame(height: 0.5)
                 ScrollView{
                     ETCDetialContentView()
-                        .frame(height: proxy.size.height * 0.65)
+                        .frame(height: proxy.size.height * 0.7)
                     ETCDDetialLogView()
-                        .frame(height:proxy.size.height * 0.3)
+                        .frame(height:proxy.size.height * 0.4)
                 }
             }.onTapGesture {
                 dissmissKeybord()
