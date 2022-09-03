@@ -254,6 +254,8 @@ struct ETCDMembersDetialListContentView: View {
                     Spacer()
                 }
             }
+        }.onAppear{
+            print("membersmembersmembersmembersmembersmembersmembers:\(storeObj.realeadData.members)")
         }
     }
 }

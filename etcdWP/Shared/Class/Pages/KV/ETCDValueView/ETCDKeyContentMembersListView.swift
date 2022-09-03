@@ -129,8 +129,6 @@ struct ETCDKeyContentMembersListView: View {
                             .foregroundColor(.secondary)
                     })
                     .padding(.all,4.0)
-                    
-                    // Create Members / Delete Members / Update Members
                     LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 3), alignment: .center) {
                         ForEach(KVMemberModel.getMembers()) { item in
                             Button {
