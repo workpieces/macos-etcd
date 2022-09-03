@@ -57,8 +57,8 @@ struct ETCDClusterListView: View {
                                     Text(LocalizedStringKey(idx))
                                         .fontWeight(.semibold)
                                         .font(.system(size: 14))
-                                    if ((storeObj.EndpointStatus()?.count) != nil) {
-                                        ForEach(storeObj.EndpointStatus()!){ item in
+                                    if ((storeObj.EndpointStatus().count) != nil) {
+                                        ForEach(storeObj.EndpointStatus()){ item in
                                             VStack{
                                                 switch idx {
                                                 case "id":
