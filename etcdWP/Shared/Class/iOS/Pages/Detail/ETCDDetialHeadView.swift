@@ -85,14 +85,14 @@ struct ETCDDetialHeadView: View {
                     .cornerRadius(10)
                 Spacer()
                 Menu {
-                    NavLink(to:menuModels[1].rounterName) {
+                    NavLink(to:menuModels[0].rounterName) {
                         Text(menuModels.first!.title)
                             .font(.title)
                             .fontWeight(.semibold)
                     }
                     
                     NavLink(to:menuModels[1].rounterName) {
-                        Text(menuModels.first!.title)
+                        Text(menuModels[1].title)
                             .font(.title)
                             .fontWeight(.semibold)
                     }
