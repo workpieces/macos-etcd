@@ -180,7 +180,6 @@ struct ETCDetialContentView: View {
                 }
             }
         }.onAppear{
-            print("valuevaluevaluevaluevaluevalue+\(storeObj.realeadData.currentKv?.value)")
         }
     }
 }

@@ -36,6 +36,9 @@ struct ETCDHomeDetailViewControllView: View {
                 Route(ClusterLisRouterName){
                     ETCDClusterListView()
                 }
+                Route(MembersDetialListRouterName){
+                    ETCDMembersDetialListView()
+                }
                 Route(content: ETCDHomeDetailContentVieWControllView())
             }.navigationTransition()
         }

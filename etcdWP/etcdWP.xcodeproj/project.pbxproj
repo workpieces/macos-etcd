@@ -128,6 +128,7 @@
 		D04A38EB288BF9EC00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38EA288BF9EC00361633 /* AxisTabView */; };
 		D04A38EE288BF9FD00361633 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = D04A38ED288BF9FD00361633 /* AxisTabView */; };
 		D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */; };
+		D056B89E28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B89D28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift */; };
 		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
 		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
 		D05E28C82894C40300C795C5 /* ETCDHomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */; };
@@ -295,6 +296,7 @@
 		D02C9CF628471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerView.swift; sourceTree = "<group>"; };
+		D056B89D28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMembersDetialListView.swift; sourceTree = "<group>"; };
 		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
 		D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeItemView.swift; sourceTree = "<group>"; };
 		D05E28CA2894CA4E00C795C5 /* ETCDHomeDetailViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeDetailViewControllView.swift; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 				44B0145E28996C0B002EA901 /* ETCDViewRolesListView.swift */,
 				44B0145F28996C0B002EA901 /* ETCDKeyValueCreatView.swift */,
 				44B0146B28997364002EA901 /* ETCDKeyValueDeleView.swift */,
+				D056B89D28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift */,
 			);
 			path = OperationManagement;
 			sourceTree = "<group>";
@@ -1366,6 +1369,7 @@
 				D05E28C82894C40300C795C5 /* ETCDHomeItemView.swift in Sources */,
 				D021F03E281FF8E600992294 /* ETCDTabarModel.swift in Sources */,
 				D06B2EB528941529007DA616 /* ETCDPushController.swift in Sources */,
+				D056B89E28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift in Sources */,
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
 				D021F05E281FF8E600992294 /* ETCDRoleModel.swift in Sources */,
 				D00A820E2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift in Sources */,

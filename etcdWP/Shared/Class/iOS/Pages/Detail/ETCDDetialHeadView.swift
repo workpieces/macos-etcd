@@ -85,40 +85,14 @@ struct ETCDDetialHeadView: View {
                     .cornerRadius(10)
                 Spacer()
                 Menu {
-                    NavLink(to:menuModels[0].rounterName) {
-                        Text(menuModels.first!.title)
-                            .font(.title)
-                            .fontWeight(.semibold)
+                    ForEach(menuModels) { index in
+                        NavLink(to:index.rounterName) {
+                            Text(index.title)
+                                .font(.title)
+                                .fontWeight(.semibold)
+                        }
                     }
-                    
-                    NavLink(to:menuModels[1].rounterName) {
-                        Text(menuModels[1].title)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                    }
-                    
-                    NavLink(to:menuModels[2].rounterName) {
-                        Text(menuModels[2].title)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                    }
-                    
-                    NavLink(to:menuModels[3].rounterName) {
-                        Text(menuModels[3].title)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                    }
-                    
-                    NavLink(to:menuModels[4].rounterName) {
-                        Text(menuModels[4].title)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                    }
-                    NavLink(to:menuModels[5].rounterName) {
-                        Text(menuModels[5].title)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                    }
+
                     
                 } label: {
                     Text(LocalizedStringKey("键值操作"))
