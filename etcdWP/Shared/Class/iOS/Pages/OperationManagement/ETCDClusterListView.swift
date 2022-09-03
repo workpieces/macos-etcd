@@ -82,13 +82,13 @@ struct ETCDClusterListView: View {
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                 case "leader":
-                                                    Text(String(item.status?.is_leader) ?? "false")
+                                                    Text(String(item.status?.is_leader ?? "false"))
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                         .foregroundColor(item.status?.is_leader ?? false  ? Color.green.opacity(0.9) : Color.red.opacity(0.9))
                                                     
                                                 case "isLearner":
-                                                    Text(String(item.status?.is_learner) ?? "false")
+                                                    Text(String(item.status?.is_learner ?? "false" ) )
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                         .foregroundColor(item.status?.is_leader ?? false  ? Color.green.opacity(0.9) : Color.red.opacity(0.9))
