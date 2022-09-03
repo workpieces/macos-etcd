@@ -82,32 +82,32 @@ struct ETCDClusterListView: View {
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                 case "leader":
-                                                    Text(item.status?.is_leader ?? false)
+                                                    Text(String(item.status?.is_leader) ?? "false")
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
-                                                        .foregroundColor(item.status?.is_leader?? false  ? Color.green.opacity(0.9) : Color.red.opacity(0.9))
+                                                        .foregroundColor(item.status?.is_leader ?? false  ? Color.green.opacity(0.9) : Color.red.opacity(0.9))
                                                     
                                                 case "isLearner":
-                                                    Text(item.status?.is_learner ?? false)
+                                                    Text(String(item.status?.is_learner) ?? "false")
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
-                                                        .foregroundColor(item.status?.is_leader?? false  ? Color.green.opacity(0.9) : Color.red.opacity(0.9))
+                                                        .foregroundColor(item.status?.is_leader ?? false  ? Color.green.opacity(0.9) : Color.red.opacity(0.9))
                                                     
                                                 case "raftTerm":
-                                                    Text(item.status?.raft_term?? "0")
+                                                    Text(item.status?.raft_term ?? "0")
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                 case "raftIndex":
-                                                    Text( item.status?.raft_index??"0")
+                                                    Text( item.status?.raft_index ?? "0")
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                     
                                                 case "raftAppliedIndex":
-                                                    Text( item.status?.raft_applied_index??"0")
+                                                    Text( item.status?.raft_applied_index ?? "0")
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                 case "errors":
-                                                    Text( item.status?.errors??"none")
+                                                    Text( item.status?.errors ?? "none")
                                                         .font(.subheadline)
                                                         .fontWeight(.semibold)
                                                 default:
@@ -125,10 +125,10 @@ struct ETCDClusterListView: View {
                                     }
                                     
                                 }.padding(.leading,5)
-                                 .padding(.trailing,5)
+                                    .padding(.trailing,5)
                             }
                         }
-                    
+                        
                     }
                 }
                 
