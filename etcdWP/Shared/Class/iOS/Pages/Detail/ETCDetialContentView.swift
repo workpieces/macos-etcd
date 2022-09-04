@@ -7,10 +7,18 @@
 
 import SwiftUI
 import TextSourceful
+import Combine
 
 struct ETCDDetiaContentTextView: View {
     @State var text:String
     @EnvironmentObject var storeObj : ItemStore
+    private func Reaload() {
+        Task{
+            await   storeObj.KVReaload(false)
+            text = self.storeObj.realeadData.currentKv?.value ?? ""
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -47,6 +55,10 @@ struct ETCDDetiaContentTextView: View {
                     .padding(.trailing,10)
                     .multilineTextAlignment(TextAlignment.leading)
             }
+        }.onAppear{
+            Reaload()
+        }.onReceive(Just(storeObj.realeadData.currentKv?.value ?? "")) { value in
+            text =  value
         }
     }
 }
@@ -105,7 +117,7 @@ struct ETCDDetialContentViewListView: View {
             ETCDKVItemView(item: item)
                 .onTapGesture(perform: {
                     self.storeObj.realeadData.currentKv = item
-                    print("-----------\(self.storeObj.realeadData.currentKv?.value)")
+                    print("----realeadData----\(String(describing: self.storeObj.realeadData.currentKv?.value))--------item\(item.value)")
                 }).listRowBackground(Color.clear)
                 .buttonStyle(PlainButtonStyle())
         }
@@ -171,6 +183,11 @@ struct ETCDDetiaContentListView: View {
 
 struct ETCDetialContentView: View {
     @EnvironmentObject var storeObj : ItemStore
+    private func Reaload() {
+        Task{
+            await   storeObj.KVReaload(false)
+        }
+    }
     var body: some View {
         GeometryReader { proxy in
             ScrollView(.horizontal, showsIndicators: false){
@@ -180,6 +197,7 @@ struct ETCDetialContentView: View {
                 }
             }
         }.onAppear{
+            Reaload()
         }
     }
 }
