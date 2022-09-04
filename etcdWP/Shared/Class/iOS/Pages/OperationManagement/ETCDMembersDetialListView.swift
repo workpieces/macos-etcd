@@ -246,9 +246,15 @@ struct ETCDMembersDetialListContentView: View {
                     .background(Color.secondary.opacity(0.25))
                     .cornerRadius(8.0)
                     .shadow(radius: 8.0,x: 0.0,y: 8.0)
+                    .listRowBackground(Color.black.opacity(0.2).ignoresSafeArea())
+                    .buttonStyle(.plain)
                 }
-            }
-            
+            }.listStyle(.plain)
+                .listRowBackground(Color.black.opacity(0.2).ignoresSafeArea())
+                .buttonStyle(.plain)
+        }
+        .onAppear{
+            Reaload()
         }
     }
 }

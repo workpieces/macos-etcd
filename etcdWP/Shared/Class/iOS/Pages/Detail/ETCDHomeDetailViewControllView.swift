@@ -11,7 +11,6 @@ import SwiftUIRouter
 
 struct ETCDHomeDetailViewControllView: View {
     @EnvironmentObject var homeData:HomeViewModel
-    @EnvironmentObject var storeObj : ItemStore
     var body: some View {
         GeometryReader { _ in
             SwitchRoutes {
