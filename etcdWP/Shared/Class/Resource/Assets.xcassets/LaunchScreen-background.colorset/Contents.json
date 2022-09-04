@@ -1,0 +1,1545 @@
+{
+  "colors" : [
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ar"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ar"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ca"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ca"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-HK"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-HK"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans-CN"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans-CN"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans-HK"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans-HK"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans-MO"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hans-MO"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hant"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hant"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hant-HK"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hant-HK"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hant-TW"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "zh-Hant-TW"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "hr"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "hr"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "cs"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "cs"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "da"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "da"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "nl"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "nl"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-AL"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-AL"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-AU"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-AU"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "vi"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "vi"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "uk"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "uk"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "tr"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "tr"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "th"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "th"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "sv"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "sv"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "es-MX"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "es-MX"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "es-419"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "es-419"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "es"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "es"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "sk"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "sk"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ru"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ru"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ro"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ro"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "pt-PT"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "pt-PT"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "pt-BR"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "pt-BR"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "pl"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "pl"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "nb"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "nb"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ms"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ms"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ko"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ko"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ja"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "ja"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "it"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "it"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "id"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "id"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "hu"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "hu"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "hi"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "hi"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "he"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "he"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "el"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "el"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "de"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "de"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "fr-CA"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "fr-CA"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "fr"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "fr"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "fi"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "fi"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-GB"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-GB"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-IN"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.494",
+          "green" : "0.357",
+          "red" : "0.216"
+        }
+      },
+      "idiom" : "universal",
+      "locale" : "en-IN"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}
