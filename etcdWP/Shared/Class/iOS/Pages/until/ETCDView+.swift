@@ -30,5 +30,20 @@ extension UIColor {
     }
 }
 
+extension UIDevice {
+    
+    public class func isPad() -> Bool {
+        
+        return UIDevice.current.userInterfaceIdiom == .pad
+        
+    }
+    
+    public class func isPhone() -> Bool {
+        
+        return UIDevice.current.userInterfaceIdiom == .phone
+        
+    }
+    
+}
 
 #endif

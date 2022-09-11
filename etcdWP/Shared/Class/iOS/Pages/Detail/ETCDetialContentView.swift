@@ -8,6 +8,7 @@
 import SwiftUI
 import TextSourceful
 import Combine
+import UIKit
 
 struct ETCDDetiaContentTextView: View {
     @State var text:String
@@ -192,8 +193,8 @@ struct ETCDetialContentView: View {
         GeometryReader { proxy in
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
-                    ETCDDetiaContentListView().frame(width: proxy.size.width * 0.8)
-                    ETCDDetiaContentTextView(text: storeObj.realeadData.currentKv?.value ?? "").frame(width: proxy.size.width * 0.6)
+                    ETCDDetiaContentListView().frame(width: UIDevice.isPad() ? proxy.size.width * 0.5: proxy.size.width * 0.8)
+                    ETCDDetiaContentTextView(text: storeObj.realeadData.currentKv?.value ?? "").frame(width:  UIDevice.isPad() ? proxy.size.width * 0.5 : proxy.size.width * 0.6)
                 }
             }
         }.onAppear{

@@ -8,6 +8,7 @@
 import SwiftUI
 import AxisTabView
 import SwiftUIRouter
+import UIKit
 
 struct ETCDRootViewControllView: View {
     @EnvironmentObject var homeData:HomeViewModel
@@ -33,7 +34,8 @@ struct ETCDRootViewControllView: View {
 }
 
 struct ETCDRootViewContentView: View {
-    var constant = ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init())
+    var constant = UIDevice.isPad() ? ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init(normalSize:CGSize.init(width: 80, height: 88))) :ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init())
+    
     @State private var selection :Int = 0
     var body: some View {
         GeometryReader { proxy in

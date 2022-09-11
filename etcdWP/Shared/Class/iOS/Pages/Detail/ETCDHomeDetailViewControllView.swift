@@ -51,7 +51,7 @@ struct ETCDHomeDetailContentVieWControllView: View {
                 ETCDHomeDetailNavigationView(title: "ETCD CLUSTER V3")
                 Divider().frame(height: 0.5)
                 ETCDDetialListView()
-                    .frame(width: proxy.size.width, height: proxy.size.height - proxy.safeAreaInsets.top)
+                    .frame(width: proxy.size.width, height: proxy.size.height - (UIDevice.isPad() ?  proxy.safeAreaInsets.top + 44 : proxy.safeAreaInsets.top))
             }
         }
     }

@@ -39,7 +39,7 @@ struct ETCDViewLeaseListView: View {
                             .font(.system(size: 18))
                             .padding(10)
                             .frame(width: 45, height: 45)
-                    }.frame(height:proxy.safeAreaInsets.top)
+                    }.frame(height: UIDevice.isPad() ?  proxy.safeAreaInsets.top + 44 : proxy.safeAreaInsets.top)
                     ETCDViewLeaseListContentView(items:storeObj.LeaseList()?.datas ?? [])
                 }
                 
