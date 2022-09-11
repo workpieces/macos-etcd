@@ -16,8 +16,8 @@
 "About"                     = "About";
 "全部删除"                     = "Delete All";
 "全选"                     = "select all";
-"创建租约" =                = "Create a lease";
-"成员管理" =                = "Member management";
+"创建租约"           = "Create a lease";
+"成员管理"             = "Member management";
 //Tip
 "开启认证失败"                     = "Failed to open authentication";
 "The network connection is abnormal, please check the relevant configuration ?"                     = "The network connection is abnormal, please check the relevant configuration ?";

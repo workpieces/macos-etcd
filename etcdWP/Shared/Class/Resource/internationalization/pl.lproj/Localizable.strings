@@ -17,8 +17,8 @@ etcdWP      etcdWP
 "About"    = "O";
 "全部删除"                     = "Usuń wszystko";
 "全选"                     = "Zaznacz wszystko";
-"创建租约" =                = "Utwórz dzierżawę";
-"成员管理" =                = "Zarządzanie członkami";
+"创建租约"              = "Utwórz dzierżawę";
+"成员管理"              = "Zarządzanie członkami";
     
 //Tip    //Wskazówka
 "开启认证失败"    = "Nie udało się włączyć uwierzytelniania";

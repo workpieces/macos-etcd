@@ -17,8 +17,8 @@ etcdWP      etcdWP
 "About"    = "Körülbelül";
 "全部删除"                     = "mindet törölni";
 "全选"                     = "mindet kiválaszt";
-"创建租约" =                = "Hozzon létre bérleti szerződést";
-"成员管理" =                = "Tagmenedzsment";
+"创建租约"              = "Hozzon létre bérleti szerződést";
+"成员管理"              = "Tagmenedzsment";
     
 //Tip    //Tipp
 "开启认证失败"    = "Nem sikerült engedélyezni a hitelesítést";

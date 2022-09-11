@@ -17,8 +17,8 @@ etcdWP      vbdWP
 "About"    = "Hakkında";
 "全部删除"                     = "hepsini sil";
 "全选"                     = "hepsini seç";
-"创建租约" =                = "Bir kiralama oluşturun";
-"成员管理" =                = "Üye yönetimi";
+"创建租约"              = "Bir kiralama oluşturun";
+"成员管理"              = "Üye yönetimi";
     
     
 //Tip    //Uç
