@@ -17,8 +17,8 @@ etcdWP      eccdWP
 "About"    = "Informazioni";
 "全部删除"                     = "cancella tutto";
 "全选"                     = "seleziona tutto";
-"创建租约" =                = "Crea un contratto di locazione"
-"成员管理" =                = "Gestione dei membri"
+"创建租约" =                = "Crea un contratto di locazione";
+"成员管理" =                = "Gestione dei membri";
     
 //Tip    //Mancia
 "开启认证失败"    = "Impossibile abilitare l'autenticazione";

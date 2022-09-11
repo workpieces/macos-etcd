@@ -17,8 +17,8 @@ etcdWP      etcdWP
 "About"    = "Sobre";
 "全部删除"                     = "excluir tudo";
 "全选"                     = "selecionar tudo";
-"创建租约" =                = "Criar um arrendamento"
-"成员管理" =                = "Gerenciamento de membros"
+"创建租约" =                = "Criar um arrendamento";
+"成员管理" =                = "Gerenciamento de membros";
     
     
 //Tip    //Dica

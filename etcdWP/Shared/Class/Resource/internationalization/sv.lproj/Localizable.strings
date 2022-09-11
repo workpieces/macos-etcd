@@ -17,8 +17,8 @@ etcdWP      etcdWP
 "About"    = "Om";
 "全部删除"                     = "radera allt";
 "全选"                     = "Välj alla";
-"创建租约" =                = "Skapa ett hyresavtal"
-"成员管理" =                = "Medlemshantering"
+"创建租约" =                = "Skapa ett hyresavtal";
+"成员管理" =                = "Medlemshantering";
     
     
 //Tip    //Dricks

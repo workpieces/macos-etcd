@@ -17,8 +17,8 @@
 "About"    = "Giới thiệu";
 "全部删除"                     = "xóa hết";
 "全选"                     = "chọn tất cả";
-"创建租约" =                = "Tạo hợp đồng thuê"
-"成员管理" =                = "Quản lý thành viên"
+"创建租约" =                = "Tạo hợp đồng thuê";
+"成员管理" =                = "Quản lý thành viên";
 //Tip    //Mẹo
 "开启认证失败"    = "Không thể kích hoạt xác thực";
 "The network connection is abnormal, please check the relevant configuration ?"    = "Kết nối mạng không bình thường, vui lòng kiểm tra cấu hình liên quan?";

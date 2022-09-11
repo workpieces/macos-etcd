@@ -17,8 +17,8 @@
 "About"    = "Over";
 "全部删除"                     = "slet alt";
 "全选"                     = "selecteer alles";
-"创建租约" =                = "Maak een lease"
-"成员管理" =                = "Ledenbeheer"
+"创建租约" =                = "Maak een lease";
+"成员管理" =                = "Ledenbeheer";
 
 //Tip    //Tip
 "开启认证失败"    = "Kan authenticatie niet inschakelen";

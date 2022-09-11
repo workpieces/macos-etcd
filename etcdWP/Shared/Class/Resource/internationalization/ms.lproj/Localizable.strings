@@ -17,8 +17,8 @@ etcdWP      etcdWP
 "About"    = "Mengenai";
 "全部删除"                     = "memadam semua";
 "全选"                     = "pilih semua";
-"创建租约" =                = "Buat pajakan"
-"成员管理" =                = "Pengurusan ahli"
+"创建租约" =                = "Buat pajakan";
+"成员管理" =                = "Pengurusan ahli";
     
 //Tip    //Petua
 "开启认证失败"    = "Gagal mendayakan pengesahan";

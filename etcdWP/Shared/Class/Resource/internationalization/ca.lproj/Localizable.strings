@@ -17,8 +17,8 @@
 "About"    = "Quant a";
 "全部删除"                     = "eliminar tots";
 "全选"                     = "seleccionar tot";
-"创建租约" =                = "Crear un contracte d'arrendament"
-"成员管理" =                = "Gestió de membres"
+"创建租约" =                = "Crear un contracte d'arrendament";
+"成员管理" =                = "Gestió de membres";
 
 //Tip    // Consell
 "开启认证失败"    = "No s'ha pogut habilitar l'autenticació";

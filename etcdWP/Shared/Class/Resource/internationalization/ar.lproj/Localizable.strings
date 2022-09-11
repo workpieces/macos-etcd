@@ -16,8 +16,8 @@
 "About"                     = "About";
 "全部删除"                     = "Delete All";
 "全选"                     = "select all";
-"创建租约" =                = "Erstellen Sie einen Mietvertrag"
-"成员管理" =                = "Mitgliederverwaltung"
+"创建租约" =                = "Erstellen Sie einen Mietvertrag";
+"成员管理" =                = "Mitgliederverwaltung";
 
 //Tip
 "开启认证失败"                     = "Failed to open authentication";

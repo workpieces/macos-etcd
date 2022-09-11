@@ -17,8 +17,8 @@
 "About"                      = "关于";
 "全部删除"                     = "全部删除";
 "全选"                     = "全选";
-"创建租约" =                = "创建租约"
-"成员管理" =                = "成员管理"
+"创建租约" =                = "创建租约";
+"成员管理" =                = "成员管理";
 //Tip
 "开启认证失败"                     = "开启认证失败";
 "The network connection is abnormal, please check the relevant configuration ?"                     = "网络连接异常，请检查相关配置？";
