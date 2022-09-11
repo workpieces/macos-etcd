@@ -8,7 +8,7 @@
 import SwiftUI
 import TextSourceful
 import Combine
-import UIKit
+
 
 struct ETCDDetiaContentTextView: View {
     @State var text:String
