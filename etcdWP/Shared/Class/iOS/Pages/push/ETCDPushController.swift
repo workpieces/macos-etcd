@@ -86,7 +86,7 @@ struct ETCDPushController: View {
                                 }
                             }
                         Divider().frame(width: 15)
-                    }.frame(height:proxy.safeAreaInsets.top)
+                    }.frame(height:UIDevice.isPad() ?  proxy.safeAreaInsets.top + 44 :proxy.safeAreaInsets.top)
                     
                     List{
                         ETCDADBannerTipView()
