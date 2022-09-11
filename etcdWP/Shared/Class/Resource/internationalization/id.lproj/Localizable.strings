@@ -5,6 +5,12 @@ etcdWP      dlldWP
     
       
 */
+
+"当前用户 id:%@"                                = "Pengguna saat ini id:%@";
+"用户关联角色"                                = "Peran terkait pengguna";
+"关联角色"                                = "peran terkait";
+
+
 "批量导出"    = "Ekspor Batch";
 "批量导入"    = "Impor Massal";
 "关闭服务"    = "Tutup layanan";

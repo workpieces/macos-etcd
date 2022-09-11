@@ -5,6 +5,12 @@ etcdWP      vbdWP
     
       
 */
+
+"当前用户 id:%@"                                = "Şu anki kullanıcı id:%@";
+"用户关联角色"                                = "Kullanıcıyla ilişkili rol";
+"关联角色"                                = "ilişkili rol";
+
+
 "批量导出"    = "Toplu Dışa Aktarma";
 "批量导入"    = "Toplu İçe Aktarma";
 "关闭服务"    = "Hizmeti kapat";

@@ -5,6 +5,12 @@ etcdWP      etcdWP
     
       
 */
+
+"当前用户 id:%@"                                = "Usuário atual id:%@";
+"用户关联角色"                                = "Função associada ao usuário";
+"关联角色"                                = "papel associado";
+
+
 "批量导出"    = "Exportação em lote";
 "批量导入"    = "Importação em massa";
 "关闭服务"    = "Fechar serviço";

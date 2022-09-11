@@ -4,7 +4,14 @@
 
   Created by FaceBook on 2022/4/26.
   
+ 
 */
+
+"当前用户 id:%@"                                = "Současný uživatel id:%@";
+"用户关联角色"                                = "Role spojená s uživatelem";
+"关联角色"                                = "přidružená role";
+
+
 "批量导出"    = "Dávkový export";
 "批量导入"    = "Hromadný import";
 "关闭服务"    = "Ukončit službu";

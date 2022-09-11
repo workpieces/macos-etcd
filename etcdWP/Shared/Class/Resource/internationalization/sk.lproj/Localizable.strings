@@ -5,6 +5,11 @@ etcdWP      atďdWP
     
       
 */
+
+"当前用户 id:%@"                                = "Súčasný užívateľ id:%@";
+"用户关联角色"                                = "Rola spojená s používateľom";
+"关联角色"                                = "pridruženú rolu";
+
 "批量导出"    = "Dávkový export";
 "批量导入"    = "Hromadný import";
 "关闭服务"    = "Zatvoriť službu";

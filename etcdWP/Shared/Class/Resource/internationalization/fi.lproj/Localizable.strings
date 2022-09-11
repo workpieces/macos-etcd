@@ -5,6 +5,12 @@
   Created by FaceBook on 2022/4/26.
   
 */
+
+"当前用户 id:%@"                                = "Nykyinen käyttäjä id:%@";
+"用户关联角色"                                = "Käyttäjäin liittyvä rooli";
+"关联角色"                                = "liittyvä rooli";
+
+
 "批量导出"    = "Erävienti";
 "批量导入"    = "Joukkotuonti";
 "关闭服务"    = "Sulje palvelu";

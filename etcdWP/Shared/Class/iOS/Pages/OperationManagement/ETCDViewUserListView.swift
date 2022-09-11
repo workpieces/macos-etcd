@@ -201,7 +201,7 @@ extension ETCDViewUserContentListView {
                             self.storeObj.currentKvc = item
                             self.password.toggle()
                         })
-                        Button("关联角色", action: {
+                        Button(LocalizedStringKey("关联角色"), action: {
                             self.storeObj.currentKvc = item
                             self.associated.toggle()
                         })
@@ -233,7 +233,7 @@ extension ETCDViewUserContentListView {
                     self.storeObj.currentKvc = item
                     self.associated.toggle()
                 } label: {
-                    Text("关联角色")
+                    Text(LocalizedStringKey("关联角色"))
                         .font(.system(size: 10.0))
                         .foregroundColor(.white)
                 }

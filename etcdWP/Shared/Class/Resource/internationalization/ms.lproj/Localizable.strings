@@ -5,6 +5,11 @@ etcdWP      etcdWP
     
       
 */
+
+"当前用户 id:%@"                                = "Pengguna semasa id:%@";
+"用户关联角色"                                = "Peranan berkaitan pengguna";
+"关联角色"                                = "peranan yang berkaitan";
+
 "批量导出"    = "Eksport Kelompok";
 "批量导入"    = "Import Pukal";
 "关闭服务"    = "Tutup perkhidmatan";

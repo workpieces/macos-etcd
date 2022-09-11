@@ -5,6 +5,11 @@ etcdWP      etcdWP
     
       
 */
+
+"当前用户 id:%@"                                = "Nuvarande användaren id:%@";
+"用户关联角色"                                = "Användarassocierad roll";
+"关联角色"                                = "tillhörande roll";
+
 "批量导出"    = "Satsexport";
 "批量导入"    = "Massimport";
 "关闭服务"    = "Stäng tjänst";

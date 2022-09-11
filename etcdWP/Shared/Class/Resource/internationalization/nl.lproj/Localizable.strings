@@ -5,6 +5,12 @@
   Created by FaceBook on 2022/4/26.
   
 */
+
+"当前用户 id:%@"                                = "Huidige gebruiker id:%@";
+"用户关联角色"                                = "Aan gebruiker gekoppelde rol";
+"关联角色"                                = "bijbehorende rol";
+
+
 "批量导出"    = "Batch-export";
 "批量导入"    = "Bulkimport";
 "关闭服务"    = "Service sluiten";

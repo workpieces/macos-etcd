@@ -5,6 +5,12 @@ etcdWP      etcdWP
     
       
 */
+
+"当前用户 id:%@"                                = "Jelenlegi felhasználó id:%@";
+"用户关联角色"                                = "Felhasználóhoz társított szerepkör";
+"关联角色"                                = "kapcsolódó szerepet";
+
+
 "批量导出"    = "Kötegelt export";
 "批量导入"    = "Tömeges import";
 "关闭服务"    = "Szolgáltatás bezárása";
