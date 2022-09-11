@@ -15,7 +15,10 @@ etcdWP      dlldWP
 "创建ETCD客户端"    = "Buat klien ETCD";
 "Home"    = "Rumah";
 "About"    = "Tentang";
-    
+"全部删除"                     = "Pilih Semua";
+"全选"                     = "Hapus semua";
+"创建租约" =                = "Buat sewa"
+"成员管理" =                = "Manajemen anggota"
     
 //Tip    //Tip
 "开启认证失败"    = "Gagal mengaktifkan otentikasi";

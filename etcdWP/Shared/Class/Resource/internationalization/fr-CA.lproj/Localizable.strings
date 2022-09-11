@@ -17,6 +17,8 @@
 "About"    = "À propos";
 "全部删除"                     = "supprimer tout";
 "全选"                     = "tout sélectionner";
+"创建租约" =                = "Créer un bail"
+"成员管理" =                = "Gestion des membres"
 
 //Tip    //Pointe
 "开启认证失败"    = "Impossible d'activer l'authentification";

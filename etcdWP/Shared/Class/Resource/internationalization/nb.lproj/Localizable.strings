@@ -15,7 +15,10 @@ etcdWP      etcdWP
 "创建ETCD客户端"    = "Opprett ETCD-klient";
 "Home"    = "Hjem";
 "About"    = "Om";
-    
+"全部删除"                     = "slette alle";
+"全选"                     = "Velg alle";
+"创建租约" =                = "Opprett en leiekontrakt"
+"成员管理" =                = "Medlemsstyring"
     
 //Tip    //Tips
 "开启认证失败"    = "Kunne ikke aktivere autentisering";

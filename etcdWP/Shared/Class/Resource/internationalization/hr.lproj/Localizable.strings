@@ -17,6 +17,9 @@
 "About"    = "O";
 "全部删除"                     = "izbrisati sve";
 "全选"                     = "Odaberi sve";
+"创建租约" =                = "Stvorite ugovor o najmu"
+"成员管理" =                = "Upravljanje članovima"
+
 
 //Tip    //Savjet
 "开启认证失败"    = "Omogućavanje provjere autentičnosti nije uspjelo";

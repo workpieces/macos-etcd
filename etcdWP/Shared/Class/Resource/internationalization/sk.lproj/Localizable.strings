@@ -15,6 +15,10 @@ etcdWP      atďdWP
 "创建ETCD客户端"    = "Vytvoriť klienta ETCD";
 "Home"    = "Domov";
 "About"    = "O";
+"全部删除"                     = "vymazať všetko";
+"全选"                     = "vybrať všetko";
+"创建租约" =                = "Vytvorte nájomnú zmluvu"
+"成员管理" =                = "Vedenie členov"
     
     
 //Tip    //Tip

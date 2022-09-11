@@ -29,7 +29,7 @@ struct ETCDDetialHeadView: View {
     }
     
     var body: some View {
-        VStack{
+        ScrollView(.horizontal,showsIndicators: false){
             HStack{
                 Text("服务地址：\(storeObj.c.endpoints.first ?? "127.0.0.1:2379")")
                     .font(.caption)
@@ -63,7 +63,7 @@ struct ETCDDetialHeadView: View {
                         print(error.localizedDescription)
                     }
                 } label: {
-                    Text("清空键值")
+                    Text(LocalizedStringKey("清空键值"))
                         .font(.caption)
                         .foregroundColor(.white)
                         .padding(8)
@@ -87,13 +87,11 @@ struct ETCDDetialHeadView: View {
                 Menu {
                     ForEach(menuModels) { index in
                         NavLink(to:index.rounterName) {
-                            Text(index.title)
+                            Text(LocalizedStringKey(index.title))
                                 .font(.title)
                                 .fontWeight(.semibold)
                         }
                     }
-
-                    
                 } label: {
                     Text(LocalizedStringKey("键值操作"))
                         .foregroundColor(.white)

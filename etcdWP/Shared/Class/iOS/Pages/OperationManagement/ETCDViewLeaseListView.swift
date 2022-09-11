@@ -59,7 +59,7 @@ struct ETCDViewLeaseListContentView: View {
     var body: some View {
         VStack(){
             HStack(){
-                Text("创建租约")
+                Text(LocalizedStringKey("创建租约"))
                     .font(.system(size: 14))
                     .fontWeight(.medium)
                     .foregroundColor(.white)

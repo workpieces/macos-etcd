@@ -17,7 +17,8 @@
 "About"                      = "關於";
 "全部删除"                     = "全部刪除";
 "全选"                     = "全選";
-
+"创建租约" =                = "創建租約"
+"成员管理" =                = "成員管理"
 //Tip
 "开启认证失败"                     = "開啟認證失敗";
 "The network connection is abnormal, please check the relevant configuration ?"                     = "網絡連接異常，請檢查相關配置？";

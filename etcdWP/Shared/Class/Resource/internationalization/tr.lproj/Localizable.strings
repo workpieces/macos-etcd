@@ -15,6 +15,10 @@ etcdWP      vbdWP
 "创建ETCD客户端"    = "ETCD istemcisi oluştur";
 "Home"    = "Ev";
 "About"    = "Hakkında";
+"全部删除"                     = "hepsini sil";
+"全选"                     = "hepsini seç";
+"创建租约" =                = "Bir kiralama oluşturun"
+"成员管理" =                = "Üye yönetimi"
     
     
 //Tip    //Uç

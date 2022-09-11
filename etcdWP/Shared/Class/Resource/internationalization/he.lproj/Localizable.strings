@@ -1,10 +1,3 @@
-/* 
- Localizable.strings
- etcdWP
- 
- Created by FaceBook on 2022/4/26.
- 
- */
 "批量导出"                   = "Batch Export";
 "批量导入"                   = "Batch Import";
 "关闭服务"                   = "Shut Down Services";
@@ -14,11 +7,10 @@
 "创建ETCD客户端"              = "Create ETCD Client";
 "Home"                      = "Home";
 "About"                     = "About";
-"全部删除"                     = "delete all";
+"全部删除"                     = "Delete All";
 "全选"                     = "select all";
-
-
-
+"创建租约" =                = "Create a lease"
+"成员管理" =                = "Member management"
 //Tip
 "开启认证失败"                     = "Failed to open authentication";
 "The network connection is abnormal, please check the relevant configuration ?"                     = "The network connection is abnormal, please check the relevant configuration ?";
@@ -142,7 +134,7 @@
 "输入时间错误，请重新输入"                                = "Error entering time, please re-enter";
 "创建用户"                                = "Create User";
 "创建密码"                                = "Create password";
-"修改密码"                                = "changer le mot de passe";
+"修改密码"                                = "change Password";
 "请输入密码"                                = "Please input a password";
 "用户操作错误"                                = "User operation error";
 

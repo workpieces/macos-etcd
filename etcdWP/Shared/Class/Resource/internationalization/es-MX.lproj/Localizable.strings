@@ -17,7 +17,8 @@
 "About"    = "Acerca de";
 "全部删除"                     = "eliminar todos";
 "全选"                     = "seleccionar todo";
-
+"创建租约" =                = "Crear un contrato de arrendamiento"
+"成员管理" =                = "Gestión de miembros"
 //Tip    //Consejo
 "开启认证失败"    = "Error al habilitar la autenticación";
 "The network connection is abnormal, please check the relevant configuration ?"    = "La conexión de red es anormal, verifique la configuración correspondiente?";
@@ -137,7 +138,7 @@
 "输入时间错误，请重新输入"    = "Hora incorrecta, inténtalo de nuevo";
 "创建用户"    = "Crear Usuario";
 "创建密码"    = "Crear contraseña";
-"修改密码"    = "cambiar la contraseña";
+"修改密码"     = "cambiar la contraseña";
 "请输入密码"    = "Por favor ingrese su contraseña";
 "用户操作错误"    = "Error de operación del usuario";
     

@@ -42,7 +42,7 @@ struct ETCDDetialLogView: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack{
-                Text("日志")
+                Text("Log")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .lineLimit(1)
@@ -51,7 +51,7 @@ struct ETCDDetialLogView: View {
                     .padding(.top,5)
                     .frame(alignment: .leading)
                 Spacer()
-                Text(menuModels[6].title)
+                Text(LocalizedStringKey("开启认证"))
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .opacity(0.75)

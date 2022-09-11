@@ -18,7 +18,8 @@
 "About"    = "정보";
 "全部删除"                     = "모두 삭제";
 "全选"                     = "모두 선택";
-
+"创建租约" =                = "임대 만들기"
+"成员管理" =                = "회원관리"
 //Tip    //팁
 "开启认证失败"    = "인증 활성화 실패";
 "The network connection is abnormal, please check the relevant configuration ?"    = "네트워크 연결이 비정상입니다. 관련 구성을 확인하시겠습니까?";

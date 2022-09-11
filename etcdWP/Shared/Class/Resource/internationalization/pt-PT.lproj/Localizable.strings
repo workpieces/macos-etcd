@@ -15,6 +15,10 @@ etcdWP      etcdWP
 "创建ETCD客户端"    = "Criar cliente ETCD";
 "Home"    = "Casa";
 "About"    = "Sobre";
+"全部删除"                     = "excluir tudo";
+"全选"                     = "selecionar tudo";
+"创建租约" =                = "Criar um arrendamento"
+"成员管理" =                = "Gerenciamento de membros"
     
     
 //Tip    //Dica

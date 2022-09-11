@@ -15,7 +15,10 @@ etcdWP      etcdWP
 "创建ETCD客户端"    = "Creează client ETCD";
 "Home"    = "Acasă";
 "About"    = "Despre";
-    
+"全部删除"                     = "sterge tot";
+"全选"                     = "selectează tot";
+"创建租约" =                = "Creați un contract de închiriere"
+"成员管理" =                = "Managementul membrilor"
     
 //Tip    //Bacsis
 "开启认证失败"    = "Activarea autentificarea a eșuat";
