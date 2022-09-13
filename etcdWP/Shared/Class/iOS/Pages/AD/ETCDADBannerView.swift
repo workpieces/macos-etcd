@@ -88,9 +88,10 @@ class ETCDBannerAdViewController: UIViewController,GADBannerViewDelegate{
         let frame = view.frame.inset(by: view.safeAreaInsets)
         let viewWidth = frame.size.width
         bannerView.adSize = GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+        bannerView.adUnitID = adBannderID;
         let adRequest = GADRequest()
         bannerView.load(adRequest)
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [GADSimulatorID]
+//        GADMobileAds.sharedInstance().requestConfiguration.adUnitID = GADSimulatorID
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
