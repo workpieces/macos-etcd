@@ -35,7 +35,6 @@
 - (NSData* _Nullable)getRev:(NSString* _Nullable)key getRev:(int64_t)getRev;
 - (NSData* _Nullable)getSortPrefix:(NSString* _Nullable)prefix getsortOrder:(NSString* _Nullable)getsortOrder getsortTarget:(NSString* _Nullable)getsortTarget;
 - (NSData* _Nullable)getUser:(NSString* _Nullable)name;
-- (NSData* _Nullable)getUserRoles;
 - (NSData* _Nullable)grant:(long)ttl;
 - (NSData* _Nullable)grantUserRole:(NSString* _Nullable)user role:(NSString* _Nullable)role;
 - (NSData* _Nullable)keepAliveOnce:(long)leaseid;

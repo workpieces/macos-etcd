@@ -13,8 +13,7 @@ import AppKit
 #else
 import GoogleMobileAds
 import Alamofire
-import AdSupport
-import AppTrackingTransparency
+
 #endif
 // App icon: https://appicon.co/
 // Macos Icon https://icons8.com/icons/set/mac-app
@@ -42,34 +41,13 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
-        if #available(iOS 14.0, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                if (status == .authorized) {
-                    let idfa =  ASIdentifierManager.shared().advertisingIdentifier.uuidString
-                    print("隐私\(idfa)");
-                } else {
-                    print("请在设置-隐私-广告中打开广告跟踪功能")
-                }
-            }
-
-        } else {
-            // iOS14以下版本依然使用老方法
-            // 判断在设置-隐私里用户是否打开了广告跟踪
-            if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
-                let idfa =  ASIdentifierManager.shared().advertisingIdentifier.uuidString
-                print("隐私\(idfa)");
-            } else {
-            print("请在设置-隐私-广告中打开广告跟踪功能")
-            }
-        }
-
         ETCDReachabilityManage.mannger.netWorkReachability { stats in
    
         }
         return true
     }
 }
+
 #endif
 
 
