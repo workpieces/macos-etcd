@@ -90,7 +90,7 @@ class ETCDBannerAdViewController: UIViewController,GADBannerViewDelegate{
         bannerView.adSize = GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
 //        bannerView.adUnitID = adBannderID;
         let adRequest = GADRequest()
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [GADSimulatorID]
+//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [GADSimulatorID]
         bannerView.load(adRequest)
     }
     
