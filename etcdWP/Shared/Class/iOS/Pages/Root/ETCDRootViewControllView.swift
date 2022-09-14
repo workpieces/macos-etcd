@@ -11,6 +11,8 @@ import SwiftUIRouter
 import UIKit
 import AdSupport
 import AppTrackingTransparency
+import GoogleMobileAds
+
 struct ETCDRootViewControllView: View {
     @EnvironmentObject var homeData:HomeViewModel
     var body: some View {
@@ -22,28 +24,26 @@ struct ETCDRootViewControllView: View {
                 Route(content: ETCDRootViewContentView())
             }.navigationTransition()
                 .onAppear{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        if #available(iOS 14.0, *) {
-                            ATTrackingManager.requestTrackingAuthorization { status in
-                                if (status == .authorized) {
-                                    let idfa =  ASIdentifierManager.shared().advertisingIdentifier.uuidString
-                                    print("隐私\(idfa)");
-                                } else {
-                                    print("请在设置-隐私-广告中打开广告跟踪功能")
-                                }
-                            }
-
-                        } else {
-                            if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
-                                let idfa =  ASIdentifierManager.shared().advertisingIdentifier.uuidString
-                                print("隐私\(idfa)");
-                            } else {
-                            print("请在设置-隐私-广告中打开广告跟踪功能")
-                            }
-                        }
-                    }
-                  
-                    
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                        if #available(iOS 14.0, *) {
+//                            ATTrackingManager.requestTrackingAuthorization { status in
+//                                if (status == .authorized) {
+//                                    let idfa =  ASIdentifierManager.shared().advertisingIdentifier.uuidString
+//                                    print("隐私\(idfa)");
+//                                } else {
+//                                    print("请在设置-隐私-广告中打开广告跟踪功能")
+//                                }
+//                            }
+//
+//                        } else {
+//                            if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
+//                                let idfa =  ASIdentifierManager.shared().advertisingIdentifier.uuidString
+//                                print("隐私\(idfa)");
+//                            } else {
+//                            print("请在设置-隐私-广告中打开广告跟踪功能")
+//                            }
+//                        }
+//                    }
                 }
         }
     }
