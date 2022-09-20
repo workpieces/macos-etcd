@@ -59,7 +59,7 @@ struct ETCDRootViewControllView: View {
 }
 
 struct ETCDRootViewContentView: View {
-    var constant = UIDevice.isPad() ? ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init(normalSize:CGSize.init(width: 80, height: 88))) :ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init())
+    @State  var constant = UIDevice.isPad() ? ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init(normalSize:CGSize.init(width: 80, height: 88))) :ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init())
     
     @State private var selection :Int = 0
     var body: some View {
@@ -67,20 +67,18 @@ struct ETCDRootViewContentView: View {
             AxisTabView(selection: $selection, constant: constant) { state in
                 ETCDTabBarCustomCenterStyle(state, color: Color(hex:"#262626"), radius: 70, depth: 0.85)
             } content: {
-                
-                ETCDTabBarContenView(constant:constant,name: "Home",  systemName: "house",tag: 0, safeArea: proxy.safeAreaInsets, content: {
+                ETCDTabBarContenView(selection:$selection,constant:constant,name: "Home",  systemName: "house",tag: 0, safeArea: proxy.safeAreaInsets, content: {
                     ETCDHomeController()
                 })
-                
-                ETCDTabBarContenView(constant:constant,  systemName: "plus.circle.fill",tag:  2, safeArea: proxy.safeAreaInsets, content: {
-                    
+                ETCDTabBarContenView(selection:$selection,constant:constant,  systemName: "plus.circle.fill",tag:  2, safeArea: proxy.safeAreaInsets, content: {
                     ETCDPushController {
                         selection = 0
                     }
                 })
-                ETCDTabBarContenView(constant:constant,name: "About",  systemName: "info.circle",tag: 1, safeArea: proxy.safeAreaInsets, content: {
+                ETCDTabBarContenView(selection:$selection,constant:constant,name: "About",  systemName: "info.circle",tag: 1, safeArea: proxy.safeAreaInsets, content: {
                     ETCDiPhoneAboutController()
                 })
+            } onTapReceive: { selectionTap in
             }
         }
     }

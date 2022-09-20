@@ -12,6 +12,7 @@ struct ETCDTabBarItemView: View {
     let isSelection: Bool
     let systemName: String
     let name:String
+    @Binding var selection: Int
     var body: some View {
         if  (systemName == "plus.circle.fill"){
             ZStack(alignment: .leading) {
