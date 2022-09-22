@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44446CE628DCA7F400D9E3BE /* ETCDExtensionDate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44446CE528DCA7F400D9E3BE /* ETCDExtensionDate+.swift */; };
+		44446CE828DCA86300D9E3BE /* ETCDGoogleAdsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44446CE728DCA86300D9E3BE /* ETCDGoogleAdsModel.swift */; };
+		44446CEA28DCA89900D9E3BE /* ETCDGoogleDBManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44446CE928DCA89900D9E3BE /* ETCDGoogleDBManger.swift */; };
+		44446CEC28DCAA2300D9E3BE /* ETCDCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44446CEB28DCAA2300D9E3BE /* ETCDCommonDefine.swift */; };
 		4454E4C7284E4AED0075986A /* TextSourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 4454E4C6284E4AED0075986A /* TextSourceful */; };
 		445CC0AB288D80B100CFF065 /* ETCDADBannerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445CC0AA288D80B100CFF065 /* ETCDADBannerTipView.swift */; };
 		44AD32802850EF4600B66261 /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */; };
@@ -200,6 +204,10 @@
 /* Begin PBXFileReference section */
 		07474CCF146505889AE12416 /* Pods-etcdWP (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (macOS).release.xcconfig"; path = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		124093C1360280498D7ABBD1 /* Pods-etcdWP (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etcdWP (macOS).debug.xcconfig"; path = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		44446CE528DCA7F400D9E3BE /* ETCDExtensionDate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ETCDExtensionDate+.swift"; sourceTree = "<group>"; };
+		44446CE728DCA86300D9E3BE /* ETCDGoogleAdsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDGoogleAdsModel.swift; sourceTree = "<group>"; };
+		44446CE928DCA89900D9E3BE /* ETCDGoogleDBManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDGoogleDBManger.swift; sourceTree = "<group>"; };
+		44446CEB28DCAA2300D9E3BE /* ETCDCommonDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDCommonDefine.swift; sourceTree = "<group>"; };
 		445CC0AA288D80B100CFF065 /* ETCDADBannerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerTipView.swift; sourceTree = "<group>"; };
 		44AB964C28A2B90000FB96B4 /* ETCDNodeOutLineGroopDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDNodeOutLineGroopDetail.swift; sourceTree = "<group>"; };
 		44AD327F2850EF4600B66261 /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
@@ -567,6 +575,8 @@
 			children = (
 				D06B2EBE28941652007DA616 /* ETCDView+.swift */,
 				44D2BA43288C3EC000151AD7 /* ETCDReachability.swift */,
+				44446CE528DCA7F400D9E3BE /* ETCDExtensionDate+.swift */,
+				44446CEB28DCAA2300D9E3BE /* ETCDCommonDefine.swift */,
 			);
 			path = until;
 			sourceTree = "<group>";
@@ -929,6 +939,8 @@
 			children = (
 				D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */,
 				445CC0AA288D80B100CFF065 /* ETCDADBannerTipView.swift */,
+				44446CE728DCA86300D9E3BE /* ETCDGoogleAdsModel.swift */,
+				44446CE928DCA89900D9E3BE /* ETCDGoogleDBManger.swift */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -1345,6 +1357,7 @@
 				D021F060281FF8E600992294 /* ETCDKVItemModel.swift in Sources */,
 				D021F04C281FF8E600992294 /* ETCDRolesListView.swift in Sources */,
 				D0690ECD2837D2DF0010C8A3 /* ETCDKeyContentMembersListView.swift in Sources */,
+				44446CEA28DCA89900D9E3BE /* ETCDGoogleDBManger.swift in Sources */,
 				D021F052281FF8E600992294 /* ETCDKeyValueActionsView.swift in Sources */,
 				D021F074281FF8E600992294 /* Constant.swift in Sources */,
 				D021F066281FF8E600992294 /* AboutView.swift in Sources */,
@@ -1358,12 +1371,14 @@
 				D021F028281FF8E600992294 /* CarouselItemlView.swift in Sources */,
 				D06B2EAE2894151B007DA616 /* ETCDTabBarItemView.swift in Sources */,
 				D05E28C82894C40300C795C5 /* ETCDHomeItemView.swift in Sources */,
+				44446CE828DCA86300D9E3BE /* ETCDGoogleAdsModel.swift in Sources */,
 				D021F03E281FF8E600992294 /* ETCDTabarModel.swift in Sources */,
 				D06B2EB528941529007DA616 /* ETCDPushController.swift in Sources */,
 				D056B89E28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift in Sources */,
 				D021F06E281FF8E600992294 /* ColorHex.swift in Sources */,
 				D021F05E281FF8E600992294 /* ETCDRoleModel.swift in Sources */,
 				D00A820E2896B21F003F4F70 /* ETCDHomeDetailNavigationView.swift in Sources */,
+				44446CE628DCA7F400D9E3BE /* ETCDExtensionDate+.swift in Sources */,
 				44B0146228996C0B002EA901 /* ETCDViewLeaseListView.swift in Sources */,
 				D06B2EB628941529007DA616 /* ETCDClusterNetworkConfigFormView.swift in Sources */,
 				D021F04A281FF8E600992294 /* ETCDKeyPrefixView.swift in Sources */,
@@ -1412,6 +1427,7 @@
 				D021F062281FF8E600992294 /* ETCDKeyValueModel.swift in Sources */,
 				D021F05A281FF8E600992294 /* ETCDKVSubContentView.swift in Sources */,
 				44B0146328996C0B002EA901 /* ETCDViewRolesListView.swift in Sources */,
+				44446CEC28DCAA2300D9E3BE /* ETCDCommonDefine.swift in Sources */,
 				D021F026281FF8E600992294 /* Carousel.swift in Sources */,
 				44D2761D28CE04A9006ADE4F /* ETCDetialContentView.swift in Sources */,
 				D0D4212A2896B5F200443FC6 /* ETCDDetialListView.swift in Sources */,

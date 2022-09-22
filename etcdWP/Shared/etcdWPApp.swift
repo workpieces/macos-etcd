@@ -19,6 +19,7 @@ import Alamofire
 // Macos Icon https://icons8.com/icons/set/mac-app
 // SwiftUI基础知识：https://www.jianshu.com/u/c505aa9e47c2
 
+
 struct EtcdCommands: Commands {
     var body: some Commands {
         SidebarCommands()
@@ -44,6 +45,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         ETCDReachabilityManage.mannger.netWorkReachability { stats in
    
         }
+        ETCDGoogleDBManger.share.createTable(table: ETCD_GOOGLE_ADS_TABLE_NAME, of:ETCDGoogleAdsModel.self)
         return true
     }
 }

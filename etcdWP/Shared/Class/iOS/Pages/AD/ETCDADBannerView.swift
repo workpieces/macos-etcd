@@ -67,6 +67,7 @@ class ETCDBannerAdViewController: UIViewController,GADBannerViewDelegate{
     override func viewDidLoad() {
         bannerView.adUnitID = adBannerId
         bannerView.rootViewController = self
+        bannerView.delegate = self
         view.addSubview(bannerView)
     }
     
@@ -92,35 +93,93 @@ class ETCDBannerAdViewController: UIViewController,GADBannerViewDelegate{
         bannerView.load(adRequest)
     }
     
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-  
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        guard bannerView.responseInfo?.adNetworkInfoArray != nil else{
+            return
+        }
+        let adSouruceID = String(format:  bannerView.responseInfo?.adNetworkInfoArray.first?.value(forKeyPath: "adSourceID") as! String)
+        
+        let goodAds: [ETCDGoogleAdsModel]? = ETCDGoogleDBManger.share.getValue(on: ETCDGoogleAdsModel.Properties.all, fromTable: ETCD_GOOGLE_ADS_TABLE_NAME, where: ETCDGoogleAdsModel.Properties.adSourceID.like("%\(adSouruceID)%"))
+        if(goodAds != nil && goodAds!.count > 0 ){
+            let model = goodAds!.first
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateformatter.timeZone = TimeZone.current
+            let date =  dateformatter.date(from: model!.timeFormat!)
+            if(date!.isToday() && model!.hitCount == 1){
+                
+                bannerView.isUserInteractionEnabled = false
+            }else{
+                bannerView.isUserInteractionEnabled = true
+            }
+            return
+        }
+        bannerView.isUserInteractionEnabled = true
       }
-      // Called when an ad request failed.
-      func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: NSError) {
-     
-      }
+    
+    func bannerViewDidRecordClick(_ bannerView: GADBannerView) {
+        let adSouruceID = String(format:  bannerView.responseInfo?.adNetworkInfoArray.first?.value(forKeyPath: "adSourceID") as! String)
 
-      // Called just before presenting the user a full screen view, such as a browser, in response to
-      // clicking on an ad.
-      func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-  
-      }
-
-      // Called just before dismissing a full screen view.
-      func adViewWillDismissScreen(_ bannerView: GADBannerView) {
-
-      }
-
-      // Called just after dismissing a full screen view.
-      func adViewDidDismissScreen(_ bannerView: GADBannerView) {
-
-      }
-
-      // Called just before the application will background or exit because the user clicked on an
-      // ad that will launch another application (such as the App Store).
-      func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-
-      }
+        let goodAds: [ETCDGoogleAdsModel]? = ETCDGoogleDBManger.share.getValue(on: ETCDGoogleAdsModel.Properties.all, fromTable: ETCD_GOOGLE_ADS_TABLE_NAME, where: ETCDGoogleAdsModel.Properties.adSourceID.like("%\(adSouruceID)%"))
+        if(goodAds != nil && goodAds!.count > 0 ){
+            let model = goodAds!.first
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateformatter.timeZone = TimeZone.current
+            let date =  dateformatter.date(from: model!.timeFormat!)
+            if(date!.isToday() && model!.hitCount == 1){
+                
+                bannerView.isUserInteractionEnabled = false
+            }else{
+                bannerView.isUserInteractionEnabled = true
+                
+                let date = Date()
+                let googleAds = ETCDGoogleAdsModel()
+                googleAds.adSourceID = adSouruceID
+                googleAds.time = date.timeIntervalSince1970
+                let dateformatter = DateFormatter()
+                model?.hitCount = 1;
+                dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                googleAds.timeFormat = dateformatter.string(from: date)
+                ETCDGoogleDBManger.share.updateToDb(table: ETCD_GOOGLE_ADS_TABLE_NAME, on: ETCDGoogleAdsModel.Properties.all, with: googleAds)
+            }
+            return
+        }
+        bannerView.isUserInteractionEnabled = true
+        
+        let date = Date()
+        let googleAds = ETCDGoogleAdsModel()
+        googleAds.adSourceID = adSouruceID
+        googleAds.time = date.timeIntervalSince1970
+        let dateformatter = DateFormatter()
+        googleAds.hitCount = 1;
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        googleAds.timeFormat = dateformatter.string(from: date)
+        ETCDGoogleDBManger.share.insertToDb(objects: [googleAds], intoTable:ETCD_GOOGLE_ADS_TABLE_NAME)
+        
+    }
+    
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+    
+    }
+    
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+        
+    }
+    
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+        
+    }
+    
+    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+        
+    }
+    
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        
+    }
+    
+    
 }
 
 struct ETCDADBannerSubView :UIViewControllerRepresentable {
