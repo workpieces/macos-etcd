@@ -1,11 +1,19 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:workpieces/workpiecesRepo.git'
+inhibit_all_warnings!  # 关闭所有警告
+install! 'cocoapods',
+      :generate_multiple_pod_projects => true,
+      :incremental_installation => true
+project 'etcdWP.xcodeproj'
 
 target 'etcdWP (iOS)' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Google-Mobile-Ads-SDK'
   pod 'WCDB.swift'
+  pod  'etcdWpModule/iosModule'
   # Pods for etcdWP (iOS)
 
 end
@@ -13,7 +21,7 @@ end
 target 'etcdWP (macOS)' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+ pod  'etcdWpModule/macOSModule'
   # Pods for etcdWP (macOS)
 
 end
