@@ -1,8 +1,0 @@
-framework module "MacosEtcd" {
-	header "ref.h"
-    header "Etcd.objc.h"
-    header "Universe.objc.h"
-    header "MacosEtcd.h"
-
-    export *
-}

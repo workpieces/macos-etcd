@@ -130,7 +130,6 @@
 		D050262B28D05247009E7EEC /* ETCDNodeOutLineGroopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB964C28A2B90000FB96B4 /* ETCDNodeOutLineGroopDetail.swift */; };
 		D05645CC288C0CBB00911761 /* ETCDADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */; };
 		D056B89E28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B89D28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift */; };
-		D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */; };
 		D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = D05C11D22879D32A00E3C197 /* FilePicker */; };
 		D05E28C82894C40300C795C5 /* ETCDHomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */; };
 		D05E28CB2894CA4E00C795C5 /* ETCDHomeDetailViewControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E28CA2894CA4E00C795C5 /* ETCDHomeDetailViewControllView.swift */; };
@@ -167,7 +166,6 @@
 		D06B2EBD28941604007DA616 /* ETCDiPhoneAboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBC28941604007DA616 /* ETCDiPhoneAboutController.swift */; };
 		D06B2EBF28941652007DA616 /* ETCDView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B2EBE28941652007DA616 /* ETCDView+.swift */; };
 		D08CC82B287AF99600B78E9F /* ETCDUserAssociatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */; };
-		D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D091D0D428791C9C00DDD095 /* MacosEtcd.framework */; };
 		D091D0D72879264200DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
 		D091D0D82879264A00DDD095 /* ETCDUserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */; };
 		D093262F283678CA0003A7D0 /* ETCDKVItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */; };
@@ -299,7 +297,6 @@
 		D02C9CF728471126001B838A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D05645CB288C0CBB00911761 /* ETCDADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDADBannerView.swift; sourceTree = "<group>"; };
 		D056B89D28C38AA2006A8CE6 /* ETCDMembersDetialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMembersDetialListView.swift; sourceTree = "<group>"; };
-		D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileIOSEtcd.framework; sourceTree = "<group>"; };
 		D05E28C72894C40300C795C5 /* ETCDHomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeItemView.swift; sourceTree = "<group>"; };
 		D05E28CA2894CA4E00C795C5 /* ETCDHomeDetailViewControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDHomeDetailViewControllView.swift; sourceTree = "<group>"; };
 		D0690EAF2837CB150010C8A3 /* ETCDMakeOperateKvTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDMakeOperateKvTextContentView.swift; sourceTree = "<group>"; };
@@ -338,7 +335,6 @@
 		D06C1735283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D06C1736283A88990033CBD9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "en-GB"; path = "en-GB.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		D08CC829287AF99600B78E9F /* ETCDUserAssociatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserAssociatedView.swift; sourceTree = "<group>"; };
-		D091D0D428791C9C00DDD095 /* MacosEtcd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MacosEtcd.framework; sourceTree = "<group>"; };
 		D091D0D62879264200DDD095 /* ETCDUserPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDUserPasswordView.swift; sourceTree = "<group>"; };
 		D093262E283678CA0003A7D0 /* ETCDKVItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCDKVItemView.swift; sourceTree = "<group>"; };
 		D0A15B0F28476541004B6134 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -468,7 +464,6 @@
 				D0FC088C282002F300A74D43 /* SnapKit in Frameworks */,
 				D0FC0886282002D000A74D43 /* Alamofire in Frameworks */,
 				D05C11D32879D32A00E3C197 /* FilePicker in Frameworks */,
-				D05C11D02879CFCB00E3C197 /* MobileIOSEtcd.framework in Frameworks */,
 				D021F096281FFA7B00992294 /* ObjectMapper in Frameworks */,
 				7CBFE6D319196CB7E29AB8C8 /* Pods_etcdWP__iOS_.framework in Frameworks */,
 			);
@@ -488,7 +483,6 @@
 				D021F099281FFA8600992294 /* ObjectMapper in Frameworks */,
 				D021F0AB281FFB3400992294 /* FilePicker in Frameworks */,
 				D0FC088F282002FF00A74D43 /* SnapKit in Frameworks */,
-				D091D0D528791C9C00DDD095 /* MacosEtcd.framework in Frameworks */,
 				AD9B7E497427F5B15D85E2CD /* Pods_etcdWP__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,7 +651,6 @@
 			isa = PBXGroup;
 			children = (
 				D02374592886E1E600BAF0B0 /* iOS */,
-				D021F0AF281FFCB200992294 /* FrameWork */,
 				D021EFF4281FF8E500992294 /* Pages */,
 				D021EFE8281FF8E500992294 /* Resource */,
 				D021F01D281FF8E600992294 /* Utility */,
@@ -851,15 +844,6 @@
 				D021F023281FF8E600992294 /* OpenPan.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		D021F0AF281FFCB200992294 /* FrameWork */ = {
-			isa = PBXGroup;
-			children = (
-				D05C11CF2879CFCB00E3C197 /* MobileIOSEtcd.framework */,
-				D091D0D428791C9C00DDD095 /* MacosEtcd.framework */,
-			);
-			path = FrameWork;
 			sourceTree = "<group>";
 		};
 		D02374592886E1E600BAF0B0 /* iOS */ = {
