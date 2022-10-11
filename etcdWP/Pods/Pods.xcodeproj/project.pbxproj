@@ -7,128 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01BA35615E2BFD6C67565FCCEEB21DFF /* Pods-etcdWP (macOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E30F1986CD0E98E852F3FF829BD78 /* Pods-etcdWP (macOS)-dummy.m */; };
-		265B0CC22E2A02FEADCED126BA3D7D53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */; };
-		3F6F6095390F310D0CAC1608B86E195F /* Pods-etcdWP (iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52C088B248817EF31067FE8C5C9F39 /* Pods-etcdWP (iOS)-dummy.m */; };
-		527CAC009855884F0C2E0B53BB807E2C /* Pods-etcdWP (macOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89669CA016E3157F45B9FC9DD493B26D /* Pods-etcdWP (macOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEEE8F2F8430C161FBA9F22AA1D37F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3261E5A5395F45780622405F504B2804 /* Foundation.framework */; };
-		D5D0231AFFA054FF19C5A82211AF040D /* Pods-etcdWP (iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A564E70393E877A86DE35F1D313197 /* Pods-etcdWP (iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0757A8DDBE51B4C4AD3990E01F74D0A3 /* Pods-etcdWP (iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52C088B248817EF31067FE8C5C9F39 /* Pods-etcdWP (iOS)-dummy.m */; };
+		226FE4E361E7794FD72BE2C3D131AFCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3261E5A5395F45780622405F504B2804 /* Foundation.framework */; };
+		5D9C2EBC5347107937B488D190B6D266 /* Pods-etcdWP (macOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89669CA016E3157F45B9FC9DD493B26D /* Pods-etcdWP (macOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DA7E63BC3EA2204BCD6BA143F72BAAE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */; };
+		B16DE8564F584C052D83C4F87593C815 /* Pods-etcdWP (iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A564E70393E877A86DE35F1D313197 /* Pods-etcdWP (iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3CAC064F4D579B2B8DB3D6A65001122 /* Pods-etcdWP (macOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761E30F1986CD0E98E852F3FF829BD78 /* Pods-etcdWP (macOS)-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0221B7EC094891019BB98AFCDD8AB10C /* PBXContainerItemProxy */ = {
+		35D7CF9FC8FD9BFAC8C7F1C16D4B1B48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D0D47DE07099276F2A95C2F56BEE059F /* Google-Mobile-Ads-SDK.xcodeproj */;
+			containerPortal = 01C68845F83891E8866C6394DF386C9E /* etcdWpModule.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 662B519EDA759B92F78065D8C998C86E;
-			remoteInfo = "Google-Mobile-Ads-SDK";
+			remoteGlobalIDString = E25906FD9742543BC67DEE0F0388AC04;
+			remoteInfo = "etcdWpModule-iosModule";
 		};
-		1B69C30C0BDCCF14290640E16D388C56 /* PBXContainerItemProxy */ = {
+		41523FDDB05F35D3EC6DF53C34A767DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F0AE61FBBB7629F29EC77624A5ADBE5C /* WCDB.swift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EAAAD4A9736C05D0B4707614E368B84;
-			remoteInfo = WCDB.swift;
-		};
-		67E16AD0D33539F0B1DC2C9F95466A32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5BE15CDB9467848B3241E60533CB24CA /* GoogleUserMessagingPlatform.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C10BE5F510FA3E8D6C3EC20B74B49FDA;
-			remoteInfo = GoogleUserMessagingPlatform;
-		};
-		9343A634268BD6029C418E83094E449F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E192CF8B50F1FD38F679EAD2CCCFD1DD /* WCDBOptimizedSQLCipher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8820E4661B26990965C45655F51ED18B;
-			remoteInfo = WCDBOptimizedSQLCipher;
-		};
-		984625EFA3037CDCDDB5E38EC06F2EC8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31E1DFFD6DE7E0220571C3560A19540A /* SQLiteRepairKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A6A317D19224BA6C654767A5DA5460D;
-			remoteInfo = SQLiteRepairKit;
-		};
-		A6A92F9281587CD496FB9A7DAD43BE23 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3446210217AA19C591567752820D36A8 /* GoogleAppMeasurement.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9677266E0E3834B96EA12E3394F9063D;
-			remoteInfo = GoogleAppMeasurement;
-		};
-		A9F034E019E68DEA292D0075BB2530C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CAC01B3DFA736A9D0A0445561FD5A5D /* nanopb.xcodeproj */;
+			containerPortal = B3096A7E470629FCE5F4E5FDD5DAB707 /* nanopb.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 052B66B57BF269A4B160A5659F7D46D4;
 			remoteInfo = nanopb;
 		};
-		E7C66D368A764EB812448B5CE5B486CC /* PBXContainerItemProxy */ = {
+		57089C755E085274BB5BA65E86DD4717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FF2F8BAAD47AA01D5F06AC1E5DED74D8 /* GoogleUtilities.xcodeproj */;
+			containerPortal = 01C68845F83891E8866C6394DF386C9E /* etcdWpModule.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F63EE83C33290B92FE7CB4361D0192AF;
+			remoteInfo = "etcdWpModule-macOSModule";
+		};
+		6BD94466FAA3E8AF703249847C0D6868 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69E4D304BEF02A7CF48A95D3840A1A8F /* GoogleUtilities.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 80B861CBFC18436AFD9A3703F00CEEC4;
 			remoteInfo = GoogleUtilities;
 		};
-		F65AC26E454BFAB13A0F9373876095A4 /* PBXContainerItemProxy */ = {
+		73CDA254EBD7D5C6B3E40F057E69AD18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9C5AF0635B2BB9789497D8EC05D9B66B /* PromisesObjC.xcodeproj */;
+			containerPortal = 8A0A2BBAA0EF7A3274454E390CD2227E /* WCDBOptimizedSQLCipher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8820E4661B26990965C45655F51ED18B;
+			remoteInfo = WCDBOptimizedSQLCipher;
+		};
+		82C27B5AD39D4E805F80C95B6B6EEC5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E5E7B91B0C758F4F45EAB90C6711ABD /* Google-Mobile-Ads-SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 662B519EDA759B92F78065D8C998C86E;
+			remoteInfo = "Google-Mobile-Ads-SDK";
+		};
+		863D492E783797D800A887AEE04E64DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F683E2855DE0A8C8DA8A13827CC10F0F /* GoogleAppMeasurement.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9677266E0E3834B96EA12E3394F9063D;
+			remoteInfo = GoogleAppMeasurement;
+		};
+		8D2670DCE7AA65E57D429BD6B9899155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31A3B1BA02D1AF866A6898E3AF2EAF53 /* GoogleUserMessagingPlatform.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C10BE5F510FA3E8D6C3EC20B74B49FDA;
+			remoteInfo = GoogleUserMessagingPlatform;
+		};
+		DE439373FDFBDDFA37B50BFA6ACE0487 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F98F213F07F35620EE2E5499583A8A13 /* SQLiteRepairKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A6A317D19224BA6C654767A5DA5460D;
+			remoteInfo = SQLiteRepairKit;
+		};
+		F70189BF7EEE0463C401DD69350E6A7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50ADE95EA99EF1679A5B214DB1B9156E /* PromisesObjC.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 615BB6D15EC37D16C898941802F0D251;
 			remoteInfo = PromisesObjC;
+		};
+		FFF152EE5F4202FE3015F81C9DE2890A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EAC4AED425168FD42F95F87B89A68CD /* WCDB.swift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EAAAD4A9736C05D0B4707614E368B84;
+			remoteInfo = WCDB.swift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		005AD9994A62430E6D923663C9A6677E /* Pods-etcdWP (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-etcdWP (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		01836EADD065F86FFBF26F649D67EE4C /* Pods-etcdWP (macOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-etcdWP (macOS)"; path = Pods_etcdWP__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C68845F83891E8866C6394DF386C9E /* etcdWpModule */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = etcdWpModule; path = etcdWpModule.xcodeproj; sourceTree = "<group>"; };
 		01D89C45C092DBA79742E89E2237B348 /* Pods-etcdWP (iOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-etcdWP (iOS)-Info.plist"; sourceTree = "<group>"; };
 		22F7CA6DA8B50365A49D8C62D49F7F9A /* Pods-etcdWP (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-etcdWP (iOS).debug.xcconfig"; sourceTree = "<group>"; };
-		31E1DFFD6DE7E0220571C3560A19540A /* SQLiteRepairKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLiteRepairKit; path = SQLiteRepairKit.xcodeproj; sourceTree = "<group>"; };
+		31A3B1BA02D1AF866A6898E3AF2EAF53 /* GoogleUserMessagingPlatform */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleUserMessagingPlatform; path = GoogleUserMessagingPlatform.xcodeproj; sourceTree = "<group>"; };
 		3261E5A5395F45780622405F504B2804 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3446210217AA19C591567752820D36A8 /* GoogleAppMeasurement */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleAppMeasurement; path = GoogleAppMeasurement.xcodeproj; sourceTree = "<group>"; };
 		3875C1389D243D45FDC0A333A51FB8B8 /* Pods-etcdWP (iOS)-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-etcdWP (iOS)-frameworks.sh"; sourceTree = "<group>"; };
-		3CAC01B3DFA736A9D0A0445561FD5A5D /* nanopb */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nanopb; path = nanopb.xcodeproj; sourceTree = "<group>"; };
 		3DE577FF930D2A676E6ED46115627AEC /* Pods-etcdWP (macOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-etcdWP (macOS)-Info.plist"; sourceTree = "<group>"; };
 		48B1A6578ED386B578D91FC928AFB744 /* Pods-etcdWP (iOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-etcdWP (iOS).modulemap"; sourceTree = "<group>"; };
+		4E5E7B91B0C758F4F45EAB90C6711ABD /* Google-Mobile-Ads-SDK */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Google-Mobile-Ads-SDK"; path = "Google-Mobile-Ads-SDK.xcodeproj"; sourceTree = "<group>"; };
+		4EAC4AED425168FD42F95F87B89A68CD /* WCDB.swift */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCDB.swift; path = WCDB.swift.xcodeproj; sourceTree = "<group>"; };
+		50ADE95EA99EF1679A5B214DB1B9156E /* PromisesObjC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromisesObjC; path = PromisesObjC.xcodeproj; sourceTree = "<group>"; };
 		5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		5BE15CDB9467848B3241E60533CB24CA /* GoogleUserMessagingPlatform */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleUserMessagingPlatform; path = GoogleUserMessagingPlatform.xcodeproj; sourceTree = "<group>"; };
 		5BF6EBE1C099DAC7060562E143006C0F /* Pods-etcdWP (iOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-etcdWP (iOS)"; path = Pods_etcdWP__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C8E2591500BDEE85122CB37D2F5BDA /* Pods-etcdWP (macOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-etcdWP (macOS).modulemap"; sourceTree = "<group>"; };
+		69E4D304BEF02A7CF48A95D3840A1A8F /* GoogleUtilities */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleUtilities; path = GoogleUtilities.xcodeproj; sourceTree = "<group>"; };
 		6F5A74537176009E593EFB942AF0DF23 /* Pods-etcdWP (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-etcdWP (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		761E30F1986CD0E98E852F3FF829BD78 /* Pods-etcdWP (macOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-etcdWP (macOS)-dummy.m"; sourceTree = "<group>"; };
 		826AEB0F1E5DA511C1A8D7CFDF1B052C /* Pods-etcdWP (iOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-etcdWP (iOS)-acknowledgements.plist"; sourceTree = "<group>"; };
 		8326CE2D04A5CCE5FD89B755DBA2B4BC /* Pods-etcdWP (iOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-etcdWP (iOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
 		89669CA016E3157F45B9FC9DD493B26D /* Pods-etcdWP (macOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-etcdWP (macOS)-umbrella.h"; sourceTree = "<group>"; };
-		9C5AF0635B2BB9789497D8EC05D9B66B /* PromisesObjC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromisesObjC; path = PromisesObjC.xcodeproj; sourceTree = "<group>"; };
+		8A0A2BBAA0EF7A3274454E390CD2227E /* WCDBOptimizedSQLCipher */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCDBOptimizedSQLCipher; path = WCDBOptimizedSQLCipher.xcodeproj; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B3096A7E470629FCE5F4E5FDD5DAB707 /* nanopb */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nanopb; path = nanopb.xcodeproj; sourceTree = "<group>"; };
 		C9A564E70393E877A86DE35F1D313197 /* Pods-etcdWP (iOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-etcdWP (iOS)-umbrella.h"; sourceTree = "<group>"; };
 		CF52C088B248817EF31067FE8C5C9F39 /* Pods-etcdWP (iOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-etcdWP (iOS)-dummy.m"; sourceTree = "<group>"; };
-		D0D47DE07099276F2A95C2F56BEE059F /* Google-Mobile-Ads-SDK */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Google-Mobile-Ads-SDK"; path = "Google-Mobile-Ads-SDK.xcodeproj"; sourceTree = "<group>"; };
 		DFBF89A684EFDA0A1A236A358BBF6418 /* Pods-etcdWP (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-etcdWP (macOS).release.xcconfig"; sourceTree = "<group>"; };
-		E192CF8B50F1FD38F679EAD2CCCFD1DD /* WCDBOptimizedSQLCipher */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCDBOptimizedSQLCipher; path = WCDBOptimizedSQLCipher.xcodeproj; sourceTree = "<group>"; };
 		E9647135612B6A4F8220CA14F5A30A6B /* Pods-etcdWP (macOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-etcdWP (macOS)-acknowledgements.plist"; sourceTree = "<group>"; };
 		E9AD74EC3335DCEF7572FC40B0672940 /* Pods-etcdWP (macOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-etcdWP (macOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F0AE61FBBB7629F29EC77624A5ADBE5C /* WCDB.swift */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCDB.swift; path = WCDB.swift.xcodeproj; sourceTree = "<group>"; };
-		FF2F8BAAD47AA01D5F06AC1E5DED74D8 /* GoogleUtilities */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleUtilities; path = GoogleUtilities.xcodeproj; sourceTree = "<group>"; };
+		F683E2855DE0A8C8DA8A13827CC10F0F /* GoogleAppMeasurement */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleAppMeasurement; path = GoogleAppMeasurement.xcodeproj; sourceTree = "<group>"; };
+		F98F213F07F35620EE2E5499583A8A13 /* SQLiteRepairKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLiteRepairKit; path = SQLiteRepairKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B00CB2417687AE41983F05AE4539C927 /* Frameworks */ = {
+		54C7E4A42249FCC007535628ED67221A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEE8F2F8430C161FBA9F22AA1D37F43 /* Foundation.framework in Frameworks */,
+				226FE4E361E7794FD72BE2C3D131AFCE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B71C6DDECD901F0074F6D1EEC29A64A0 /* Frameworks */ = {
+		9696A8FDDBF7A8EBB0458D0F4965BB91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265B0CC22E2A02FEADCED126BA3D7D53 /* Cocoa.framework in Frameworks */,
+				6DA7E63BC3EA2204BCD6BA143F72BAAE /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +192,23 @@
 			path = "Target Support Files/Pods-etcdWP (macOS)";
 			sourceTree = "<group>";
 		};
+		707AC6D349B61101AB36995B275FE280 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01C68845F83891E8866C6394DF386C9E /* etcdWpModule */,
+				4E5E7B91B0C758F4F45EAB90C6711ABD /* Google-Mobile-Ads-SDK */,
+				F683E2855DE0A8C8DA8A13827CC10F0F /* GoogleAppMeasurement */,
+				31A3B1BA02D1AF866A6898E3AF2EAF53 /* GoogleUserMessagingPlatform */,
+				69E4D304BEF02A7CF48A95D3840A1A8F /* GoogleUtilities */,
+				B3096A7E470629FCE5F4E5FDD5DAB707 /* nanopb */,
+				50ADE95EA99EF1679A5B214DB1B9156E /* PromisesObjC */,
+				F98F213F07F35620EE2E5499583A8A13 /* SQLiteRepairKit */,
+				4EAC4AED425168FD42F95F87B89A68CD /* WCDB.swift */,
+				8A0A2BBAA0EF7A3274454E390CD2227E /* WCDBOptimizedSQLCipher */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A353D8F59CA5F816F25EB46AD1A0A387 /* Pods-etcdWP (iOS) */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,28 +226,12 @@
 			path = "Target Support Files/Pods-etcdWP (iOS)";
 			sourceTree = "<group>";
 		};
-		C13F9AA907B1B231DEB544684BB7A98C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D0D47DE07099276F2A95C2F56BEE059F /* Google-Mobile-Ads-SDK */,
-				3446210217AA19C591567752820D36A8 /* GoogleAppMeasurement */,
-				5BE15CDB9467848B3241E60533CB24CA /* GoogleUserMessagingPlatform */,
-				FF2F8BAAD47AA01D5F06AC1E5DED74D8 /* GoogleUtilities */,
-				3CAC01B3DFA736A9D0A0445561FD5A5D /* nanopb */,
-				9C5AF0635B2BB9789497D8EC05D9B66B /* PromisesObjC */,
-				31E1DFFD6DE7E0220571C3560A19540A /* SQLiteRepairKit */,
-				F0AE61FBBB7629F29EC77624A5ADBE5C /* WCDB.swift */,
-				E192CF8B50F1FD38F679EAD2CCCFD1DD /* WCDBOptimizedSQLCipher */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				4EDC20B56A0B9A8564E1FCEA191C83C4 /* Frameworks */,
-				C13F9AA907B1B231DEB544684BB7A98C /* Pods */,
+				707AC6D349B61101AB36995B275FE280 /* Pods */,
 				E1FEE4C99F2C68FB21CF763BC59DE23F /* Products */,
 				327C20B0BD9B66B44C2D28204AB800CF /* Targets Support Files */,
 			);
@@ -241,19 +257,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		942A64E2A08E193247ECB2317CCB86F5 /* Headers */ = {
+		981CFCC927690D3F58B6946C82A859FB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527CAC009855884F0C2E0B53BB807E2C /* Pods-etcdWP (macOS)-umbrella.h in Headers */,
+				5D9C2EBC5347107937B488D190B6D266 /* Pods-etcdWP (macOS)-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8CC0995EE143F4E34A2434954E3F3CF /* Headers */ = {
+		DE6A3AE5B931B07B44D00B5B384C9C8D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D0231AFFA054FF19C5A82211AF040D /* Pods-etcdWP (iOS)-umbrella.h in Headers */,
+				B16DE8564F584C052D83C4F87593C815 /* Pods-etcdWP (iOS)-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,25 +278,26 @@
 /* Begin PBXNativeTarget section */
 		6473E4473B592DBA9115083F2794A5ED /* Pods-etcdWP (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54CF62ECD9E855C932BD89F8B97A08A1 /* Build configuration list for PBXNativeTarget "Pods-etcdWP (iOS)" */;
+			buildConfigurationList = DAC36EE583B1BEE6BB9BFE7742B09BD8 /* Build configuration list for PBXNativeTarget "Pods-etcdWP (iOS)" */;
 			buildPhases = (
-				F8CC0995EE143F4E34A2434954E3F3CF /* Headers */,
-				8516B6562640B1E2DD00B00C983FE14E /* Sources */,
-				B00CB2417687AE41983F05AE4539C927 /* Frameworks */,
-				A60A5FC4772ABCBFDE30E10AE7EEDC90 /* Resources */,
+				DE6A3AE5B931B07B44D00B5B384C9C8D /* Headers */,
+				6E20CA04CFB4C1F54D2DB788DB299BE3 /* Sources */,
+				54C7E4A42249FCC007535628ED67221A /* Frameworks */,
+				CC4B1872BBC08694FF38A740707D5400 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8E394F4CD1169CA20CAA78CFF4C5C260 /* PBXTargetDependency */,
-				9ED92D19D83B2F14D5B1CF57958B51B3 /* PBXTargetDependency */,
-				F45FE8EBDD60085F89A42025E9161FEE /* PBXTargetDependency */,
-				E907CEB92589339E31FFD538553A4E1A /* PBXTargetDependency */,
-				6C69B3D084DC0D59271231AA74DD545B /* PBXTargetDependency */,
-				2D034F726F66B65BFCF13243FD3D50BC /* PBXTargetDependency */,
-				04C1DDF32268E8E53B7D6481CAF52F2B /* PBXTargetDependency */,
-				68A4EB73EEA62F6E9A5152121B0DB78B /* PBXTargetDependency */,
-				BB97DBF86466E412433F7A11E16E6901 /* PBXTargetDependency */,
+				B34173B7BB64FA27311EC9CBE460BD20 /* PBXTargetDependency */,
+				A9BFDD4F937F98B9974D8EAB3D40E1FA /* PBXTargetDependency */,
+				7506226CCDAB3071766565C7FB40E2F4 /* PBXTargetDependency */,
+				596B6401BEAF3324AF7615940C5EE8BD /* PBXTargetDependency */,
+				E781B86A4BD7B5F2184DDA60E45D820A /* PBXTargetDependency */,
+				8C4A7E9AA6E8B0595C738A05FE950FB5 /* PBXTargetDependency */,
+				C9F1E5B913CAB01AC1EA1C4E7E8CE92A /* PBXTargetDependency */,
+				162ADF7DD43D98AD9EEFF359109E71FC /* PBXTargetDependency */,
+				A610A6F1F148652C8FE6D1AEC66431CE /* PBXTargetDependency */,
+				86A579C67A6C3290D5BDC26667C19454 /* PBXTargetDependency */,
 			);
 			name = "Pods-etcdWP (iOS)";
 			productName = Pods_etcdWP__iOS_;
@@ -289,16 +306,17 @@
 		};
 		92BE659BD42948414CA6D0B6F1AFDE8F /* Pods-etcdWP (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46DDADFFD6AD5B183F1E784D8CEBC745 /* Build configuration list for PBXNativeTarget "Pods-etcdWP (macOS)" */;
+			buildConfigurationList = C7C7CAD681BB22F0D874E582EB7BCADE /* Build configuration list for PBXNativeTarget "Pods-etcdWP (macOS)" */;
 			buildPhases = (
-				942A64E2A08E193247ECB2317CCB86F5 /* Headers */,
-				040EECAA8CA08096C5100FA6D2FE7F09 /* Sources */,
-				B71C6DDECD901F0074F6D1EEC29A64A0 /* Frameworks */,
-				7ED431275D0DBAAF47E6A6CD13FBB632 /* Resources */,
+				981CFCC927690D3F58B6946C82A859FB /* Headers */,
+				CC4A3B79D15F88749912116F01B893C7 /* Sources */,
+				9696A8FDDBF7A8EBB0458D0F4965BB91 /* Frameworks */,
+				B6F503F7EF48814870F58CA1200EDCC4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7212DBD613E65FE2DC6B715535780FB5 /* PBXTargetDependency */,
 			);
 			name = "Pods-etcdWP (macOS)";
 			productName = Pods_etcdWP__macOS_;
@@ -311,8 +329,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 11.4";
@@ -327,31 +345,34 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = D0D47DE07099276F2A95C2F56BEE059F /* Google-Mobile-Ads-SDK */;
+					ProjectRef = 4E5E7B91B0C758F4F45EAB90C6711ABD /* Google-Mobile-Ads-SDK */;
 				},
 				{
-					ProjectRef = 3446210217AA19C591567752820D36A8 /* GoogleAppMeasurement */;
+					ProjectRef = F683E2855DE0A8C8DA8A13827CC10F0F /* GoogleAppMeasurement */;
 				},
 				{
-					ProjectRef = 5BE15CDB9467848B3241E60533CB24CA /* GoogleUserMessagingPlatform */;
+					ProjectRef = 31A3B1BA02D1AF866A6898E3AF2EAF53 /* GoogleUserMessagingPlatform */;
 				},
 				{
-					ProjectRef = FF2F8BAAD47AA01D5F06AC1E5DED74D8 /* GoogleUtilities */;
+					ProjectRef = 69E4D304BEF02A7CF48A95D3840A1A8F /* GoogleUtilities */;
 				},
 				{
-					ProjectRef = 9C5AF0635B2BB9789497D8EC05D9B66B /* PromisesObjC */;
+					ProjectRef = 50ADE95EA99EF1679A5B214DB1B9156E /* PromisesObjC */;
 				},
 				{
-					ProjectRef = 31E1DFFD6DE7E0220571C3560A19540A /* SQLiteRepairKit */;
+					ProjectRef = F98F213F07F35620EE2E5499583A8A13 /* SQLiteRepairKit */;
 				},
 				{
-					ProjectRef = F0AE61FBBB7629F29EC77624A5ADBE5C /* WCDB.swift */;
+					ProjectRef = 4EAC4AED425168FD42F95F87B89A68CD /* WCDB.swift */;
 				},
 				{
-					ProjectRef = E192CF8B50F1FD38F679EAD2CCCFD1DD /* WCDBOptimizedSQLCipher */;
+					ProjectRef = 8A0A2BBAA0EF7A3274454E390CD2227E /* WCDBOptimizedSQLCipher */;
 				},
 				{
-					ProjectRef = 3CAC01B3DFA736A9D0A0445561FD5A5D /* nanopb */;
+					ProjectRef = 01C68845F83891E8866C6394DF386C9E /* etcdWpModule */;
+				},
+				{
+					ProjectRef = B3096A7E470629FCE5F4E5FDD5DAB707 /* nanopb */;
 				},
 			);
 			projectRoot = "";
@@ -363,14 +384,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7ED431275D0DBAAF47E6A6CD13FBB632 /* Resources */ = {
+		B6F503F7EF48814870F58CA1200EDCC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60A5FC4772ABCBFDE30E10AE7EEDC90 /* Resources */ = {
+		CC4B1872BBC08694FF38A740707D5400 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,113 +401,86 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		040EECAA8CA08096C5100FA6D2FE7F09 /* Sources */ = {
+		6E20CA04CFB4C1F54D2DB788DB299BE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BA35615E2BFD6C67565FCCEEB21DFF /* Pods-etcdWP (macOS)-dummy.m in Sources */,
+				0757A8DDBE51B4C4AD3990E01F74D0A3 /* Pods-etcdWP (iOS)-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8516B6562640B1E2DD00B00C983FE14E /* Sources */ = {
+		CC4A3B79D15F88749912116F01B893C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F6F6095390F310D0CAC1608B86E195F /* Pods-etcdWP (iOS)-dummy.m in Sources */,
+				D3CAC064F4D579B2B8DB3D6A65001122 /* Pods-etcdWP (macOS)-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		04C1DDF32268E8E53B7D6481CAF52F2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCDB.swift;
-			targetProxy = 1B69C30C0BDCCF14290640E16D388C56 /* PBXContainerItemProxy */;
-		};
-		2D034F726F66B65BFCF13243FD3D50BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SQLiteRepairKit;
-			targetProxy = 984625EFA3037CDCDDB5E38EC06F2EC8 /* PBXContainerItemProxy */;
-		};
-		68A4EB73EEA62F6E9A5152121B0DB78B /* PBXTargetDependency */ = {
+		162ADF7DD43D98AD9EEFF359109E71FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WCDBOptimizedSQLCipher;
-			targetProxy = 9343A634268BD6029C418E83094E449F /* PBXContainerItemProxy */;
+			targetProxy = 73CDA254EBD7D5C6B3E40F057E69AD18 /* PBXContainerItemProxy */;
 		};
-		6C69B3D084DC0D59271231AA74DD545B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PromisesObjC;
-			targetProxy = F65AC26E454BFAB13A0F9373876095A4 /* PBXContainerItemProxy */;
-		};
-		8E394F4CD1169CA20CAA78CFF4C5C260 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Google-Mobile-Ads-SDK";
-			targetProxy = 0221B7EC094891019BB98AFCDD8AB10C /* PBXContainerItemProxy */;
-		};
-		9ED92D19D83B2F14D5B1CF57958B51B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleAppMeasurement;
-			targetProxy = A6A92F9281587CD496FB9A7DAD43BE23 /* PBXContainerItemProxy */;
-		};
-		BB97DBF86466E412433F7A11E16E6901 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = nanopb;
-			targetProxy = A9F034E019E68DEA292D0075BB2530C4 /* PBXContainerItemProxy */;
-		};
-		E907CEB92589339E31FFD538553A4E1A /* PBXTargetDependency */ = {
+		596B6401BEAF3324AF7615940C5EE8BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
-			targetProxy = E7C66D368A764EB812448B5CE5B486CC /* PBXContainerItemProxy */;
+			targetProxy = 6BD94466FAA3E8AF703249847C0D6868 /* PBXContainerItemProxy */;
 		};
-		F45FE8EBDD60085F89A42025E9161FEE /* PBXTargetDependency */ = {
+		7212DBD613E65FE2DC6B715535780FB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "etcdWpModule-macOSModule";
+			targetProxy = 57089C755E085274BB5BA65E86DD4717 /* PBXContainerItemProxy */;
+		};
+		7506226CCDAB3071766565C7FB40E2F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUserMessagingPlatform;
-			targetProxy = 67E16AD0D33539F0B1DC2C9F95466A32 /* PBXContainerItemProxy */;
+			targetProxy = 8D2670DCE7AA65E57D429BD6B9899155 /* PBXContainerItemProxy */;
+		};
+		86A579C67A6C3290D5BDC26667C19454 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			targetProxy = 41523FDDB05F35D3EC6DF53C34A767DE /* PBXContainerItemProxy */;
+		};
+		8C4A7E9AA6E8B0595C738A05FE950FB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLiteRepairKit;
+			targetProxy = DE439373FDFBDDFA37B50BFA6ACE0487 /* PBXContainerItemProxy */;
+		};
+		A610A6F1F148652C8FE6D1AEC66431CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "etcdWpModule-iosModule";
+			targetProxy = 35D7CF9FC8FD9BFAC8C7F1C16D4B1B48 /* PBXContainerItemProxy */;
+		};
+		A9BFDD4F937F98B9974D8EAB3D40E1FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleAppMeasurement;
+			targetProxy = 863D492E783797D800A887AEE04E64DA /* PBXContainerItemProxy */;
+		};
+		B34173B7BB64FA27311EC9CBE460BD20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Google-Mobile-Ads-SDK";
+			targetProxy = 82C27B5AD39D4E805F80C95B6B6EEC5B /* PBXContainerItemProxy */;
+		};
+		C9F1E5B913CAB01AC1EA1C4E7E8CE92A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCDB.swift;
+			targetProxy = FFF152EE5F4202FE3015F81C9DE2890A /* PBXContainerItemProxy */;
+		};
+		E781B86A4BD7B5F2184DDA60E45D820A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromisesObjC;
+			targetProxy = F70189BF7EEE0463C401DD69350E6A7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05ADA7C5363BBFD71E8144DDA3B2B382 /* Debug */ = {
+		75D8A6526449E4206D4DC32EA8CA4C4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F5A74537176009E593EFB942AF0DF23 /* Pods-etcdWP (macOS).debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS)-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8C4869661BD92CB67B2DA6839F915205 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22F7CA6DA8B50365A49D8C62D49F7F9A /* Pods-etcdWP (iOS).debug.xcconfig */;
+			baseConfigurationReference = 005AD9994A62430E6D923663C9A6677E /* Pods-etcdWP (iOS).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -516,10 +510,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		92236969D2CAE522F4C49923D0CA0A98 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -651,7 +646,44 @@
 			};
 			name = Debug;
 		};
-		C60D5ACFD7DA138F3D6B5AA23D943725 /* Release */ = {
+		A8F13D2B73979B5BAB8A171911776C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F5A74537176009E593EFB942AF0DF23 /* Pods-etcdWP (macOS).debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS)-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-etcdWP (macOS)/Pods-etcdWP (macOS).modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB33AF5F8B3A7CDE82A03730B19BB40D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFBF89A684EFDA0A1A236A358BBF6418 /* Pods-etcdWP (macOS).release.xcconfig */;
 			buildSettings = {
@@ -688,9 +720,9 @@
 			};
 			name = Release;
 		};
-		D663AE27BECB59DADB2621A6B0D4764F /* Release */ = {
+		DDB8B0692F7B6AC90C78F6B14D0947E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 005AD9994A62430E6D923663C9A6677E /* Pods-etcdWP (iOS).release.xcconfig */;
+			baseConfigurationReference = 22F7CA6DA8B50365A49D8C62D49F7F9A /* Pods-etcdWP (iOS).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -720,24 +752,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46DDADFFD6AD5B183F1E784D8CEBC745 /* Build configuration list for PBXNativeTarget "Pods-etcdWP (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				05ADA7C5363BBFD71E8144DDA3B2B382 /* Debug */,
-				C60D5ACFD7DA138F3D6B5AA23D943725 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -747,11 +769,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54CF62ECD9E855C932BD89F8B97A08A1 /* Build configuration list for PBXNativeTarget "Pods-etcdWP (iOS)" */ = {
+		C7C7CAD681BB22F0D874E582EB7BCADE /* Build configuration list for PBXNativeTarget "Pods-etcdWP (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C4869661BD92CB67B2DA6839F915205 /* Debug */,
-				D663AE27BECB59DADB2621A6B0D4764F /* Release */,
+				A8F13D2B73979B5BAB8A171911776C78 /* Debug */,
+				BB33AF5F8B3A7CDE82A03730B19BB40D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC36EE583B1BEE6BB9BFE7742B09BD8 /* Build configuration list for PBXNativeTarget "Pods-etcdWP (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB8B0692F7B6AC90C78F6B14D0947E5 /* Debug */,
+				75D8A6526449E4206D4DC32EA8CA4C4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
