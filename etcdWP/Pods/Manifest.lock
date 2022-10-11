@@ -1,4 +1,6 @@
 PODS:
+  - etcdWpModule/iosModule (1.0.5)
+  - etcdWpModule/macOSModule (1.0.5)
   - Google-Mobile-Ads-SDK (9.7.0):
     - GoogleAppMeasurement (< 10.0, >= 7.0)
     - GoogleUserMessagingPlatform (>= 1.1)
@@ -54,10 +56,14 @@ PODS:
   - WCDBOptimizedSQLCipher (1.2.1)
 
 DEPENDENCIES:
+  - etcdWpModule/iosModule
+  - etcdWpModule/macOSModule
   - Google-Mobile-Ads-SDK
   - WCDB.swift
 
 SPEC REPOS:
+  "git@github.com:workpieces/workpiecesRepo.git":
+    - etcdWpModule
   trunk:
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
@@ -70,6 +76,7 @@ SPEC REPOS:
     - WCDBOptimizedSQLCipher
 
 SPEC CHECKSUMS:
+  etcdWpModule: e76385ee0495c92f99d07e0894eab80cce81050a
   Google-Mobile-Ads-SDK: 2685d6b3374b26de8a71f535614396e57cf80b13
   GoogleAppMeasurement: 7a33224321f975d58c166657260526775d9c6b1a
   GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
@@ -80,6 +87,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: 8f7be646be751b07a109303d32a2eb3964869d84
+PODFILE CHECKSUM: a96ca9a63096fffceaecc73aeecc8d6f938356f6
 
 COCOAPODS: 1.11.3
