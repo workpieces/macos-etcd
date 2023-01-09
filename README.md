@@ -1,3 +1,3 @@
 # macos-etcd
 
-Introduction: build the macos desktop of etcd.
+Macos desktop of etcd.
