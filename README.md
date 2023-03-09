@@ -1,3 +1,4 @@
 # macos-etcd
 
-Macos desktop of etcd.
+Macos-etcd is a free desktop etcd client based on gomobile and SwiftUI.
+
